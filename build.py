@@ -55,6 +55,18 @@ def yt(g):
 LOGO = '<svg width="28" height="28" viewBox="0 0 100 100" aria-hidden="true"><rect x="9" y="9" width="82" height="82" rx="9" fill="none" stroke="#111214" stroke-width="8"/><path d="M24 24L40 40M40 24L24 40" stroke="#111214" stroke-width="8" stroke-linecap="round"/><path d="M33 50C34 62 42 69 53 69" fill="none" stroke="#FF5A1F" stroke-width="6.5" stroke-linecap="round" stroke-dasharray="0 10.5"/><circle cx="68" cy="68" r="9.5" fill="none" stroke="#FF5A1F" stroke-width="7.5"/></svg>'
 FAVICON = "data:image/svg+xml," + quote_plus(LOGO.replace('width="28" height="28" ', '').replace('aria-hidden="true"', 'xmlns="http://www.w3.org/2000/svg"')).replace("+", "%20")
 
+def video_block(f):
+    v = f.get("video")
+    if not v:
+        return '<section class="card pad empty"><span class="tag gold">Our recap video</span><p style="margin:8px 0 0">The drawn recap posts to <a href="https://www.youtube.com/@boxandmotion" target="_blank" rel="noopener">@boxandmotion on YouTube</a>. It will play here once it\'s up.</p></section>'
+    return (f'<section class="card pad" style="display:flex;flex-wrap:wrap;gap:24px;align-items:center">'
+            f'<div style="flex:0 1 340px;width:100%;max-width:340px;aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:#111214">'
+            f'<iframe src="https://www.youtube.com/embed/{v}" title="Box &amp; Motion recap video" style="width:100%;height:100%;border:0" loading="lazy" '
+            f'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>'
+            f'<div class="sec" style="gap:10px;flex:1 1 240px"><span class="tag gold">Our recap video</span><b class="d" style="font-size:32px">The game in 66 seconds</b>'
+            f'<p class="dim" style="margin:0">Drawn play of the game, game flow, the star line and how it was won.</p>'
+            f'<a class="pill" style="align-self:flex-start" href="https://youtube.com/shorts/{v}" target="_blank" rel="noopener">▶ Watch on YouTube</a></div></section>')
+
 def page(path, title, body, active=None, desc="Every NBA game, explained in animation. Recaps, playoff odds and scouting reports.", band=""):
     depth = path.count("/"); R = "../" * depth
     nav = [("Teams", "teams/index.html"), ("Last Night", "last-night/index.html"), ("Deep Dives", "deep-dives/index.html"), ("Playoff Odds", "odds/index.html"), ("Newsletter", "newsletter/index.html")]
@@ -232,7 +244,7 @@ for g in GAMES:
         feat = f'''<section class="sec"><h2 class="h2">Three things that decided it</h2><div class="grid g3">{three}</div></section>
 <section class="grid g2"><div class="sec" style="gap:6px"><h2 class="h2">Where it was won</h2><div class="kv k" style="border:0"><span></span><span>{la}</span><span>{lb}</span></div>{battle}</div>
 <div class="sec" style="gap:6px"><h2 class="h2">Top performers</h2>{top}</div></section>
-<section class="card pad empty"><span class="tag gold">Our recap video</span><p style="margin:8px 0 0">The 60-second drawn recap posts to <a href="https://www.youtube.com/@boxandmotion" target="_blank" rel="noopener">@boxandmotion on YouTube</a>. It will play here once it's up.</p></section>'''
+{video_block(f)}'''
     lede = f'<p style="margin:0;font-size:22px;max-width:38em"><b>{E(f["headline"])}.</b> {E(f["dek"])}</p>' if f else f'<p style="margin:0;font-size:20px;max-width:38em">{E(auto)}</p>'
     def team_link(c): return f'<a href="{R}teams/{T[c]["slug"]}/index.html">{E(T[c]["name"])}</a>'
     meant = "".join(f'<div style="flex:1 1 240px"><b class="d" style="font-size:28px">{E(T[c]["name"])}: {O[c]["top6"]}%</b><p style="margin:4px 0 0;color:#d5d6d9">top-6 odds now · {seed(c)} at {rec(c)}</p></div>' for c in (w, l))
