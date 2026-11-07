@@ -43,7 +43,13 @@ if __name__ == "__main__":
     s = json.load(open("data/season.json"))
     now = {k: list(v) for k, v in s["standings"].items()}
     before = {k: list(v) for k, v in now.items()}
+    # "this week" = since Monday morning (US Eastern game dates) of the latest game's week
+    import datetime
+    last = datetime.date.fromisoformat(max(g[0] for g in s["games"]))
+    week_start = (last - datetime.timedelta(days=last.weekday())).isoformat()
     for d, a, sa, h, sh, _ in s["games"]:
+        if d < week_start:
+            continue
         win, lose = (a, h) if sa > sh else (h, a)
         before[win][0] -= 1
         before[lose][1] -= 1

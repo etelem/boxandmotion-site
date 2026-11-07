@@ -30,9 +30,14 @@ for d, a, sa, h, sh, ot in S["games"]:
     GAMES.append(dict(date=d, away=a, home=h, as_=sa, hs=sh, ot=ot, win=w, lose=l, key=key,
                       slug=f"{d}-{T[a]['slug']}-at-{T[h]['slug']}",
                       rec={a: f"{run[a][0]}–{run[a][1]}", h: f"{run[h][0]}–{run[h][1]}"},
-                      featured=key in S["featured"]))
+                      featured=key in S["featured"], video=None))
 LAST_DATE = max(g["date"] for g in GAMES)
 LAST = [g for g in GAMES if g["date"] == LAST_DATE]
+_ld = datetime.date.fromisoformat(LAST_DATE)
+WEEK_START = (_ld - datetime.timedelta(days=_ld.weekday())).isoformat()
+VIDEOS = S.get("videos", {})
+def video_id(key): return VIDEOS.get(key) or S["featured"].get(key, {}).get("video")
+for _g in GAMES: _g["video"] = video_id(_g["key"])
 
 def team_games(c): return [g for g in reversed(GAMES) if c in (g["away"], g["home"])]
 def next_game(c):
@@ -55,8 +60,7 @@ def yt(g):
 LOGO = '<svg width="28" height="28" viewBox="0 0 100 100" aria-hidden="true"><rect x="9" y="9" width="82" height="82" rx="9" fill="none" stroke="#111214" stroke-width="8"/><path d="M24 24L40 40M40 24L24 40" stroke="#111214" stroke-width="8" stroke-linecap="round"/><path d="M33 50C34 62 42 69 53 69" fill="none" stroke="#FF5A1F" stroke-width="6.5" stroke-linecap="round" stroke-dasharray="0 10.5"/><circle cx="68" cy="68" r="9.5" fill="none" stroke="#FF5A1F" stroke-width="7.5"/></svg>'
 FAVICON = "data:image/svg+xml," + quote_plus(LOGO.replace('width="28" height="28" ', '').replace('aria-hidden="true"', 'xmlns="http://www.w3.org/2000/svg"')).replace("+", "%20")
 
-def video_block(f):
-    v = f.get("video")
+def video_block(v):
     if not v:
         return '<section class="card pad empty"><span class="tag gold">Our recap video</span><p style="margin:8px 0 0">The drawn recap posts to <a href="https://www.youtube.com/@boxandmotion" target="_blank" rel="noopener">@boxandmotion on YouTube</a>. It will play here once it\'s up.</p></section>'
     return (f'<section class="card pad" style="display:flex;flex-wrap:wrap;gap:24px;align-items:center">'
@@ -103,12 +107,12 @@ def game_card(g, R, show_mine=True):
     lines = ""
     for c, sc in ((g["away"], g["as_"]), (g["home"], g["hs"])):
         lines += f'<div class="sline {"win" if c==w else "lose"}"><span>{E(T[c]["name"])} <span class="dim" style="font-size:13px;font-weight:500">{g["rec"][c]}</span></span><span>{sc}</span></div>'
-    tag = '<span class="tag gold">Featured recap</span>' if g["featured"] else ""
+    tag = '<span class="tag gold">▶ Recap video</span>' if g["video"] else ('<span class="tag gold">Featured recap</span>' if g["featured"] else "")
     return f'''<div class="card gcard" data-teams="{g['away']} {g['home']}">
 <a class="gtop" href="{R}games/{g['slug']}/index.html" style="background:radial-gradient(120% 140% at 100% 0%,{wt['c1']} 0%,{wt['dark']} 75%)">
 <span class="k">Final{' · OT' if g['ot'] else ''} · {WEEKDAY(g['date'])}</span><span class="d" style="font-size:30px">{E(wt['name'])} {max(g['as_'],g['hs'])}–{min(g['as_'],g['hs'])}</span></a>
 <div class="gbody"><div class="row" style="gap:6px">{'<span class="tag hot mine-tag hidden">Your team</span>' if show_mine else ''}{tag}</div>{lines}
-<div class="row" style="gap:8px;margin-top:6px"><a class="pill on sm" href="{R}games/{g['slug']}/index.html">Recap</a><a class="pill sm" href="{yt(g)}" target="_blank" rel="noopener">▶ Highlights</a></div></div></div>'''
+<div class="row" style="gap:8px;margin-top:6px"><a class="pill on sm" href="{R}games/{g['slug']}/index.html">{'▶ Watch recap' if g['video'] else 'Recap'}</a><a class="pill sm" href="{yt(g)}" target="_blank" rel="noopener">▶ Highlights</a></div></div></div>'''
 
 def star_btn(c, big=False, light=False):
     style = f"border-color:{T[c]['c2']};color:#fff" if light else ""
@@ -119,6 +123,7 @@ def team_band(c, kicker, extra=""):
     return f'<section class="band" style="background:radial-gradient(90% 140% at 85% 0%,{t["c1"]} 0%,{t["dark"]} 80%)"><div class="w">{kicker}{extra}</div></section>'
 
 # ---- data.js for client ----
+shutil.rmtree(OUT, ignore_errors=True)  # start clean so removed pages disappear
 os.makedirs(f"{OUT}/assets", exist_ok=True)
 client = {"teams": {c: {"name": T[c]["name"], "slug": T[c]["slug"], "c1": T[c]["c1"], "c2": T[c]["c2"], "dark": T[c]["dark"],
           "rec": rec(c), "seed": seed(c), "top6": O[c]["top6"], "chg": chg(O[c]["chg"]), "last": last_line(c)} for c in T}}
@@ -128,7 +133,8 @@ shutil.copy("src/site.css", f"{OUT}/assets/site.css"); shutil.copy("src/site.js"
 # ---- home ----
 R = ""
 movers = sorted(T, key=lambda c: -abs(O[c]["chg"]))[:1][0]
-gotw = next(g for g in GAMES if g["key"] == "2026-11-04-DAL-SAS")
+_gk = S.get("gotw") or max(S["featured"])
+gotw = next(g for g in GAMES if g["key"] == _gk)
 fz = S["featured"][gotw["key"]]
 risers = sorted(T, key=lambda c: -O[c]["chg"])[:3]; fallers = sorted(T, key=lambda c: O[c]["chg"])[:3]
 def mini(c): return f'<a href="{R}teams/{T[c]["slug"]}/index.html" style="display:flex;justify-content:space-between;padding:10px 0;border-top:1px solid var(--line);text-decoration:none"><span><b>{E(T[c]["name"])}</b> <span class="dim">{rec(c)}</span></span><span><b>{O[c]["top6"]}%</b> <span class="{chgcls(O[c]["chg"])}">{chg(O[c]["chg"])}</span></span></a>'
@@ -151,8 +157,8 @@ home = f'''
  <a href="last-night/index.html" style="font-weight:600">All of last night and earlier this week →</a>
 </section>
 <section class="card" style="overflow:hidden;display:flex;flex-wrap:wrap">
- <a href="games/{gotw['slug']}/index.html" style="flex:1 1 360px;min-height:260px;background:radial-gradient(120% 140% at 100% 0%,{T['SAS']['c1']} 0%,#111214 75%);color:#fff;padding:28px;display:flex;flex-direction:column;justify-content:flex-end;text-decoration:none">
-  <span class="k" style="color:#c4ced4">Game of the week · {WEEKDAY(gotw['date'])}</span><span class="d" style="font-size:clamp(40px,6vw,64px)">Spurs 112<br>Mavs 111</span></a>
+ <a href="games/{gotw['slug']}/index.html" style="flex:1 1 360px;min-height:260px;background:radial-gradient(120% 140% at 100% 0%,{T[gotw['win']]['c1']} 0%,#111214 75%);color:#fff;padding:28px;display:flex;flex-direction:column;justify-content:flex-end;text-decoration:none">
+  <span class="k" style="color:#c4ced4">Game of the week · {WEEKDAY(gotw['date'])}</span><span class="d" style="font-size:clamp(40px,6vw,64px)">{E(T[gotw['win']]['name'])} {max(gotw['as_'],gotw['hs'])}<br>{E(T[gotw['lose']]['name'])} {min(gotw['as_'],gotw['hs'])}</span></a>
  <div style="flex:1 1 360px;padding:28px;display:flex;flex-direction:column;gap:10px;justify-content:center">
   <span class="tag gold">Featured recap</span><b class="d" style="font-size:34px">{E(fz['headline'])}</b><p style="margin:0;font-size:18px">{E(fz['dek'])}</p>
   <a class="pill" style="align-self:flex-start" href="games/{gotw['slug']}/index.html">Read the recap →</a></div>
@@ -243,15 +249,30 @@ for g in GAMES:
         top = "".join(f'<div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-top:1px solid var(--line)"><span><b>{("<a href=" + chr(34) + R + "players/luka-doncic/index.html" + chr(34) + ">" + E(n) + "</a>") if n=="Luka Dončić" else E(n)}</b><br><span class="dim" style="font-size:14px">{tm} · {E(note)}</span></span><b class="d" style="font-size:34px;color:{T[tm]["c1"]}">{pts}</b></div>' for n, tm, note, pts in f["top"])
         feat = f'''<section class="sec"><h2 class="h2">Three things that decided it</h2><div class="grid g3">{three}</div></section>
 <section class="grid g2"><div class="sec" style="gap:6px"><h2 class="h2">Where it was won</h2><div class="kv k" style="border:0"><span></span><span>{la}</span><span>{lb}</span></div>{battle}</div>
-<div class="sec" style="gap:6px"><h2 class="h2">Top performers</h2>{top}</div></section>
-{video_block(f)}'''
+<div class="sec" style="gap:6px"><h2 class="h2">Top performers</h2>{top}</div></section>'''
     lede = f'<p style="margin:0;font-size:22px;max-width:38em"><b>{E(f["headline"])}.</b> {E(f["dek"])}</p>' if f else f'<p style="margin:0;font-size:20px;max-width:38em">{E(auto)}</p>'
     def team_link(c): return f'<a href="{R}teams/{T[c]["slug"]}/index.html">{E(T[c]["name"])}</a>'
     meant = "".join(f'<div style="flex:1 1 240px"><b class="d" style="font-size:28px">{E(T[c]["name"])}: {O[c]["top6"]}%</b><p style="margin:4px 0 0;color:#d5d6d9">top-6 odds now · {seed(c)} at {rec(c)}</p></div>' for c in (w, l))
-    body = f'''<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}last-night/index.html">Games</a><span>/</span>{team_link(a)}<span>at</span>{team_link(h)}</nav>
-<section class="sec" style="gap:18px"><p class="k">Final{' · OT' if g['ot'] else ''} · {WEEKDAY(g['date'])} · {E(city)}</p>
-<h1 class="h1" style="display:flex;flex-wrap:wrap;gap:4px 28px;font-size:clamp(48px,8vw,100px)"><span style="color:{'#111214' if w==a else '#8a8c92'}">{E(T[a]['name'])} {g['as_']}</span><span style="color:{'#111214' if w==h else '#8a8c92'}">{E(T[h]['name'])} {g['hs']}</span></h1>
-{lede}{lsh}</section>
+    crumbs = f'<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}last-night/index.html">Games</a><span>/</span>{team_link(a)}<span>at</span>{team_link(h)}</nav>'
+    kicker = f'<p class="k">Final{" · OT" if g["ot"] else ""} · {WEEKDAY(g["date"])} · {E(city)}</p>'
+    names = f'<span style="color:{"#111214" if w==a else "#8a8c92"}">{E(T[a]["name"])} {g["as_"]}</span><span style="color:{"#111214" if w==h else "#8a8c92"}">{E(T[h]["name"])} {g["hs"]}</span>'
+    v = g["video"]
+    if v:
+        # the recap video leads the page: video first, score and story beside it
+        hero = f'''<section style="display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start">
+<div style="flex:0 1 360px;width:100%;max-width:360px;aspect-ratio:9/16;border-radius:18px;overflow:hidden;background:#111214;box-shadow:0 10px 30px rgba(17,18,20,.18)">
+<iframe src="https://www.youtube.com/embed/{v}" title="Box &amp; Motion recap: {E(T[a]['name'])} at {E(T[h]['name'])}" style="width:100%;height:100%;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+<div class="sec" style="flex:1 1 320px;gap:16px"><span class="tag gold" style="align-self:flex-start">▶ Our recap video · 66 seconds</span>{kicker}
+<h1 class="h1" style="display:flex;flex-wrap:wrap;gap:4px 24px;font-size:clamp(40px,6vw,72px)">{names}</h1>
+{lede}{lsh}<a class="pill" style="align-self:flex-start" href="https://youtube.com/shorts/{v}" target="_blank" rel="noopener">▶ Watch on YouTube</a></div></section>'''
+    else:
+        hero = f'''<section class="sec" style="gap:18px">{kicker}
+<h1 class="h1" style="display:flex;flex-wrap:wrap;gap:4px 28px;font-size:clamp(48px,8vw,100px)">{names}</h1>
+{lede}{lsh}</section>'''
+    if f and not v:
+        feat += video_block(None)
+    body = f'''{crumbs}
+{hero}
 <section class="sec"><div class="sec" style="gap:6px"><h2 class="h2">Official video</h2><p class="dim" style="margin:0">We link to the official uploads on YouTube. We don't host or edit them.</p></div>
 <div class="row"><a class="pill on" href="{yt(g)}" target="_blank" rel="noopener">▶ Game highlights on the NBA's channel</a></div></section>
 {feat}
@@ -262,7 +283,7 @@ for g in GAMES:
 
 # ---- last night ----
 R = "../"
-earlier = sorted({g["date"] for g in GAMES if g["date"] != LAST_DATE}, reverse=True)
+earlier = sorted({g["date"] for g in GAMES if g["date"] != LAST_DATE and g["date"] >= WEEK_START}, reverse=True)
 ear = "".join(f'<section class="sec"><p class="k">{WEEKDAY(d)}</p><div class="grid g3" data-games>{"".join(game_card(g, R) for g in GAMES if g["date"]==d)}</div></section>' for d in earlier)
 body = f'''<div class="between"><div class="sec" style="gap:8px"><p class="k">{WEEKDAY(LAST_DATE)} · {len(LAST)} games</p><h1 class="h1">Last night</h1></div>
 <div class="tabs"><button class="pill" data-mode="mine">Your teams</button><button class="pill" data-mode="all">All games</button></div></div>
