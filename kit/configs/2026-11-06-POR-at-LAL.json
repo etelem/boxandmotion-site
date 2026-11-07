@@ -1,0 +1,125 @@
+{
+  "D": "  const D = {\n    date: 'Fri, Nov 6, 2026',\n    us: 124, them: 118, record: '8–2', usName: 'Lakers', themName: 'Blazers',\n    quarters: [[20, 29], [33, 31], [34, 15], [37, 43]],\n    leadUs: 16, leadThem: 16,\n    star: {name: 'Luka Dončić', stats: [['Points', 53, 60], ['Third-quarter points', 20, 25], ['Free throws made of 18', 14, 18]]},\n    scorers: [\n      {name: 'Luka Dončić', pts: 53, note: '17 of 33 · 14 of 18 FT · 20 in the 3rd'},\n      {name: 'Austin Reaves', pts: 25, note: '8 of 8 FT · 4 steals'},\n      {name: 'Walker Kessler', pts: 16, note: '12 rebounds · 7 of 10'},\n      {name: 'Ziaire Williams', pts: 8, note: '2 threes · 2 steals'},\n      {name: 'Sandro Mamukelashvili', pts: 7, note: 'off the bench · +19'},\n    ],\n    edges: [\n      {label: 'Points off turnovers', us: 28, them: 18},\n      {label: 'Points in the paint', us: 52, them: 32},\n      {label: 'Offensive rebounds', us: 17, them: 8},\n      {label: 'Steals', us: 15, them: 7},\n    ],\n    gaps: [\n      {label: 'Threes made', us: 11, them: 19},\n    ],\n    next: {opp: 'at Pistons', when: 'Sun, Nov 8, 6:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Dončić's jumper in the lane with 28 seconds left that put the Lakers up six. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "The dagger",
+    "subP": "Luka in the lane, 28 seconds left",
+    "subL": "Luka’s jumper in the lane with 28 seconds left",
+    "m0": "Lakers +4",
+    "m1": "Lakers +6",
+    "num": "77",
+    "cap1": "Luka had the dagger. Lakers by 6.",
+    "cap2": "Points 50 and 51 of his 53.",
+    "clock": [
+      36,
+      28
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Lakers vs Blazers Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Lakers 124, Blazers 118 · Nov 6, 2026</h1>"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Luka: 53, with 20 in', 'a 34–15 third quarter.'] : ['Luka scored 53, with 20 in a 34–15 third quarter.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Lakers improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Fourth straight win'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Down 7 at the half,', 'won the third 34–15'] : ['Down 7 at the half, won the third 34–15']"
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Luka: 53,', 'a season high'] : ['Luka: 53 points, a season high']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['20 in the third quarter,', '14 of 18 at the line.'] : ['20 in the third quarter, 14 of 18 at the line.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Luka and Reaves:', '78 of the 124'] : ['Luka and Reaves combined for 78 of 124']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 60;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it on turnovers', 'and inside'] : ['Won it on turnovers and inside']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Lakers in gold, Blazers in gray. Portland', 'turned it over 24 times.'] : ['Lakers in gold, Blazers in gray. Portland turned it over 24 times.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'First in the West'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Pistons’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '6–2';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['First Laker since Kobe (2012)', 'with four straight 40-point games.'] : ['First Laker since Kobe in 2012 with four straight 40-point games.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Lakers 124 · Blazers 118 · Nov 6'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'The dagger'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 60;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 170 : 200) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+2', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 120 * k, shotX + 80 * k, prog(lt, T_JAB, 1.4));"
+    ]
+  ],
+  "aria": "Animated recap of the Lakers' 124 to 118 home win over Portland: Luka Dončić's jumper in the lane with 28 seconds left, quarter-by-quarter scoring, his 53 points, the top scorers, how the Lakers won, and the next game at Detroit.",
+  "notes": [
+    "Box score from the Lakers' 124–118 home win over the Portland Trail Blazers on Nov 6, 2026, from the league's stats feed and StatMuse's full box score, with game details from the AP (via CBS Sports), Yahoo Sports, The Sporting Tribune and theScore. All 124 points are accounted for: the feed left out Quentin Grimes (2), which StatMuse lists. The Pistons' record and the Lakers' conference standing are from the same feed.",
+    "The play of the game is an original illustration of Luka Dončić's jumper in the lane with 28 seconds left (the AP's description; Yahoo Sports puts it at 27.7 seconds), which put the Lakers up six after Damian Lillard's free throws had cut it to four. The recaps don't describe how he got the shot, so it is drawn as a plain pull-up. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Los Angeles Lakers or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Dončić’s listed 6-foot-8 and 230 pounds, with arms scaled to his reported 6-foot-11 wingspan. It is an original silhouette with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "tall": 1.0256,
+    "ape": 1.0375,
+    "mass": 1.0213,
+    "label": "Luka Doncic, listed 6-8, 230 lb, reported 6-11 wingspan"
+  }
+}

@@ -37,7 +37,8 @@ _ld = datetime.date.fromisoformat(LAST_DATE)
 WEEK_START = (_ld - datetime.timedelta(days=_ld.weekday())).isoformat()
 VIDEOS = S.get("videos", {})
 def video_id(key): return VIDEOS.get(key) or S["featured"].get(key, {}).get("video")
-for _g in GAMES: _g["video"] = video_id(_g["key"])
+REELS = {d for d in (os.listdir("reels") if os.path.isdir("reels") else []) if os.path.isfile(f"reels/{d}/index.html")}
+for _g in GAMES: _g["video"] = video_id(_g["key"]); _g["reel"] = _g["key"] in REELS
 
 def team_games(c): return [g for g in reversed(GAMES) if c in (g["away"], g["home"])]
 def next_game(c):
@@ -107,12 +108,12 @@ def game_card(g, R, show_mine=True):
     lines = ""
     for c, sc in ((g["away"], g["as_"]), (g["home"], g["hs"])):
         lines += f'<div class="sline {"win" if c==w else "lose"}"><span>{E(T[c]["name"])} <span class="dim" style="font-size:13px;font-weight:500">{g["rec"][c]}</span></span><span>{sc}</span></div>'
-    tag = '<span class="tag gold">▶ Recap video</span>' if g["video"] else ('<span class="tag gold">Featured recap</span>' if g["featured"] else "")
+    tag = '<span class="tag gold">▶ Recap video</span>' if (g["video"] or g["reel"]) else ('<span class="tag gold">Featured recap</span>' if g["featured"] else "")
     return f'''<div class="card gcard" data-teams="{g['away']} {g['home']}">
 <a class="gtop" href="{R}games/{g['slug']}/index.html" style="background:radial-gradient(120% 140% at 100% 0%,{wt['c1']} 0%,{wt['dark']} 75%)">
 <span class="k">Final{' · OT' if g['ot'] else ''} · {WEEKDAY(g['date'])}</span><span class="d" style="font-size:30px">{E(wt['name'])} {max(g['as_'],g['hs'])}–{min(g['as_'],g['hs'])}</span></a>
 <div class="gbody"><div class="row" style="gap:6px">{'<span class="tag hot mine-tag hidden">Your team</span>' if show_mine else ''}{tag}</div>{lines}
-<div class="row" style="gap:8px;margin-top:6px"><a class="pill on sm" href="{R}games/{g['slug']}/index.html">{'▶ Watch recap' if g['video'] else 'Recap'}</a><a class="pill sm" href="{yt(g)}" target="_blank" rel="noopener">▶ Highlights</a></div></div></div>'''
+<div class="row" style="gap:8px;margin-top:6px"><a class="pill on sm" href="{R}games/{g['slug']}/index.html">{'▶ Watch recap' if (g['video'] or g['reel']) else 'Recap'}</a><a class="pill sm" href="{yt(g)}" target="_blank" rel="noopener">▶ Highlights</a></div></div></div>'''
 
 def star_btn(c, big=False, light=False):
     style = f"border-color:{T[c]['c2']};color:#fff" if light else ""
@@ -124,6 +125,7 @@ def team_band(c, kicker, extra=""):
 
 # ---- data.js for client ----
 shutil.rmtree(OUT, ignore_errors=True)  # start clean so removed pages disappear
+if os.path.isdir("reels"): shutil.copytree("reels", f"{OUT}/reels")
 os.makedirs(f"{OUT}/assets", exist_ok=True)
 client = {"teams": {c: {"name": T[c]["name"], "slug": T[c]["slug"], "c1": T[c]["c1"], "c2": T[c]["c2"], "dark": T[c]["dark"],
           "rec": rec(c), "seed": seed(c), "top6": O[c]["top6"], "chg": chg(O[c]["chg"]), "last": last_line(c)} for c in T}}
@@ -265,11 +267,19 @@ for g in GAMES:
 <div class="sec" style="flex:1 1 320px;gap:16px"><span class="tag gold" style="align-self:flex-start">▶ Our recap video · 66 seconds</span>{kicker}
 <h1 class="h1" style="display:flex;flex-wrap:wrap;gap:4px 24px;font-size:clamp(40px,6vw,72px)">{names}</h1>
 {lede}{lsh}<a class="pill" style="align-self:flex-start" href="https://youtube.com/shorts/{v}" target="_blank" rel="noopener">▶ Watch on YouTube</a></div></section>'''
+    elif g["reel"]:
+        # our drawn recap reel, hosted on this site, leads the page
+        hero = f'''<section style="display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start">
+<div style="flex:0 1 360px;width:100%;max-width:360px;aspect-ratio:9/14.4;border-radius:18px;overflow:hidden;background:#111214;box-shadow:0 10px 30px rgba(17,18,20,.18)">
+<iframe src="{R}reels/{g['key']}/index.html?embed=1" title="Box &amp; Motion recap: {E(T[a]['name'])} at {E(T[h]['name'])}" style="width:100%;height:100%;border:0" allow="autoplay"></iframe></div>
+<div class="sec" style="flex:1 1 320px;gap:16px"><span class="tag gold" style="align-self:flex-start">▶ Our recap · 66 seconds</span>{kicker}
+<h1 class="h1" style="display:flex;flex-wrap:wrap;gap:4px 24px;font-size:clamp(40px,6vw,72px)">{names}</h1>
+{lede}{lsh}<a class="pill" style="align-self:flex-start" href="{R}reels/{g['key']}/index.html" target="_blank" rel="noopener">Open full screen, with sound</a></div></section>'''
     else:
         hero = f'''<section class="sec" style="gap:18px">{kicker}
 <h1 class="h1" style="display:flex;flex-wrap:wrap;gap:4px 28px;font-size:clamp(48px,8vw,100px)">{names}</h1>
 {lede}{lsh}</section>'''
-    if f and not v:
+    if f and not v and not g["reel"]:
         feat += video_block(None)
     body = f'''{crumbs}
 {hero}

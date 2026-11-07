@@ -1,0 +1,110 @@
+{
+ "D": "  const D = {\n    date: 'Mon, Nov 2, 2026',\n    us: 138, them: 117, record: '6–2', usName: 'Lakers', themName: 'Heat',\n    quarters: [[37, 30], [42, 42], [32, 21], [27, 24]],\n    leadUs: 24, leadThem: 4,\n    star: {name: 'Luka Dončić', stats: [['Points', 42, 50], ['Assists', 13, 15], ['Threes made of 15', 6, 15]]},\n    scorers: [\n      {name: 'Luka Dončić', pts: 42, note: '13 ast · 7 reb · 14 of 24 · 16 in the 1st'},\n      {name: 'Austin Reaves', pts: 27, note: '10 of 15 · 4 of 5 from three'},\n      {name: 'Walker Kessler', pts: 15, note: '15 rebounds'},\n      {name: 'Sandro Mamukelashvili', pts: 13, note: 'off the bench · 2 threes'},\n      {name: 'Ziaire Williams', pts: 9, note: '3 threes · back from a foot injury'},\n    ],\n    edges: [\n      {label: 'Points in the paint', us: 60, them: 38},\n      {label: 'Assists', us: 39, them: 28},\n      {label: 'Threes made', us: 19, them: 16},\n      {label: 'Bench points', us: 41, them: 30},\n    ],\n    gaps: [\n      {label: 'Fast-break points', us: 6, them: 20},\n    ],\n    next: {opp: 'at Kings', when: 'Wed, Nov 4, 10:00 PM ET', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Dončić's three with 5:37 left for his 40th point, 128–106. An original illustration from written accounts; not traced from footage, not to scale.\n",
+  "head": "Number 40",
+  "subP": "A three, 5:37 left",
+  "subL": "A three with 5:37 left",
+  "m0": "Lakers +19",
+  "m1": "Lakers +22",
+  "num": "77",
+  "cap1": "Lakers by 22, 5:37 left.",
+  "cap2": "His 40th point of the night.",
+  "clock": [
+   345,
+   337
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Lakers vs Heat Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Lakers 138, Heat 117 · Nov 2, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Lakers vs.', 'Heat'] : ['Lakers vs. Heat']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Luka: 42 and 13.', 'L.A. led by as many as 24.'] : ['Luka scored 42 with 13 assists. L.A. led by as many as 24.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Lakers improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Second straight win'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['An 11–0 burst', 'opened the third'] : ['An 11–0 burst opened the third quarter']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Lakers ${D.leadUs}, Heat ${D.leadThem}"
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Luka: 42 and 13', 'on 24 shots'] : ['Luka: 42 points and 13 assists on 24 shots']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['Fifth straight game', 'with 37 or more.'] : ['His fifth straight game with 37 or more points.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Luka and Reaves:', '69 of the 138'] : ['Luka and Reaves combined for 69 of 138']"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it inside', 'and on the ball'] : ['Won it inside and on the ball']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Lakers in gold, Heat in gray. L.A.', 'shot 57% from the floor.'] : ['Lakers in gold, Heat in gray. L.A. shot 57% from the floor.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'Fourth in the West'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Kings’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '1–6';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['Model: 70% chance of a top-6 seed,', 'up 6 after this win.'] : ['Model: 70% chance of a top-6 seed, up 6 after this win.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Lakers 138 · Heat 117 · Nov 2'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Number 40'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 65;"
+  ]
+ ],
+ "aria": "Animated recap of the Lakers' 138 to 117 home win over Miami: Luka Dončić's three for his 40th point, quarter-by-quarter scoring, his 42 points and 13 assists, the top scorers, how the Lakers won, and the next game at Sacramento.",
+ "notes": [
+  "Box score from the Lakers' 138–117 home win over the Miami Heat on Nov 2, 2026, from the league's official stats feed, with game details from the AP (via NBC Miami), Reuters (via Deadspin) and the Miami Herald (via Yahoo Sports). The five scorers shown account for 106 of the 138 points; the rest came from the bench. The Kings' record and the Lakers' conference standing are from the same feed. The playoff odds are from the Box &amp; Motion model (preseason win totals plus results, 60,000 simulations).",
+  "The play of the game is an original illustration of Luka Dončić's three that gave him 40 points and put the Lakers up 128–106 with 5:37 left, as reported by Reuters. The recaps don't describe how he got the shot, so it is drawn as a plain pull-up. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page: 808 bass, claps, rolling hi-hats and a short plucked riff. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Los Angeles Lakers or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo."
+ ]
+}

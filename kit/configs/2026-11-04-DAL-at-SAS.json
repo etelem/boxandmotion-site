@@ -1,0 +1,154 @@
+{
+  "D": "  const D = {\n    date: 'Wed, Nov 4, 2026',\n    us: 112, them: 111, record: '6–2', usName: 'Spurs', themName: 'Mavericks',\n    quarters: [[32, 26], [36, 25], [22, 29], [22, 31]],\n    leadUs: 19, leadThem: 3,\n    star: {name: 'Victor Wembanyama', stats: [['Points', 52, 60], ['Rebounds', 24, 30], ['Blocks', 8, 10]]},\n    scorers: [\n      {name: 'Victor Wembanyama', pts: 52, note: '24 reb · 8 blk · 16 of 28 · 19 of 23 FT'},\n      {name: 'Dylan Harper', pts: 21, note: '9 of 15 from the floor'},\n      {name: 'Stephon Castle', pts: 17, note: '10 rebounds'},\n      {name: 'De’Aaron Fox', pts: 10, note: '4 assists · 4 of 4 FT'},\n      {name: 'Keldon Johnson', pts: 4, note: '5 rebounds'},\n    ],\n    edges: [\n      {label: 'Points in the paint', us: 62, them: 40},\n      {label: 'Free throws made', us: 33, them: 19},\n      {label: 'Rebounds', us: 70, them: 65},\n      {label: 'Blocks', us: 10, them: 4},\n    ],\n    gaps: [\n      {label: 'Threes made', us: 5, them: 14},\n    ],\n    next: {opp: 'at Portland', when: 'Sat, Nov 7, 10:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Wembanyama's free throw with 24.2 seconds left that broke a 111–111 tie. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "The winner",
+    "subP": "Wembanyama at the line, 24.2 left",
+    "subL": "Wembanyama at the line with 24.2 seconds left",
+    "m0": "Tied 111",
+    "m1": "Spurs +1",
+    "num": "1",
+    "cap1": "Wembanyama hits it. Spurs by 1.",
+    "cap2": "His 52nd point. Dallas missed at the end.",
+    "clock": [
+      32,
+      24
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Spurs vs Mavericks Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Spurs 112, Mavericks 111 · Nov 4, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Spurs vs.', 'Mavericks'] : ['Spurs vs. Mavericks']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Wemby: 52, 24 and 8.', 'Dallas missed at the end.'] : ['Wembanyama had 52, 24 rebounds and 8 blocks. Dallas missed at the end.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Spurs improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Sixth straight win'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Up 17 at the half,', 'held on by one'] : ['Up 17 at the half, then held on by one']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Spurs ${D.leadUs}, Mavericks ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Spurs’ margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Wemby: 52,', '24 and 8 blocks'] : ['Wemby: 52 points, 24 rebounds, 8 blocks']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['29 in the first half.', 'Career highs in points and boards.'] : ['29 in the first half. Career highs in points and rebounds.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Wemby and Harper:', '73 of the 112'] : ['Wemby and Harper combined for 73 of 112']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 55;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it inside', 'and at the line'] : ['Won it inside and at the line']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Spurs in silver, Mavericks in gray. S.A.', 'made just 5 of 36 threes.'] : ['Spurs in silver, Mavericks in gray. S.A. made just 5 of 36 threes.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'After an 0–2 start'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Blazers’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '6–2';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Since then: 124–109 at Sacramento,', 'their seventh straight win.'] : ['Since then: a 124–109 win at Sacramento, their seventh straight.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Spurs 112 · Mavericks 111 · Nov 4'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'The winner'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Wemby'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 75;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - 190 * k, startX = shotX;"
+    ],
+    [
+      "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+      "S('line', {x1: hoopX - 190 * k, x2: hoopX - 190 * k, y1: floor - 6, y2: floor + 14}, court),"
+    ],
+    [
+      "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+      "const tag = T(g, hoopX - 190 * k, floor + 56 * k + 10, 'Free-throw line',"
+    ],
+    [
+      "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+      "defender.g.style.opacity = 0;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+1', 'd w', 72, 'end');"
+    ],
+    [
+      "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+      "lift = lt < 6.3 ? 12 * up : 12 * (1 - down * down);"
+    ]
+  ],
+  "palette": "  --navy:#0b0c0e;--navy-mid:#1c1e22;--navy-lift:#3d3f45;\n  --ink:#f7f8f9;--muted:#a9adb4;--blue:#c4ced4;--blue-text:#e3e9ec;--red:#ff5a1f;--red-text:#ff8a5c;--silver:#6f747c;\n  --hairline:rgba(196,206,212,.24);--track:rgba(196,206,212,.16);",
+  "aria": "Animated recap of the Spurs' 112 to 111 home win over Dallas: Victor Wembanyama's deciding free throw with 24.2 seconds left, quarter-by-quarter scoring, his 52 points, 24 rebounds and 8 blocks, the top scorers, how the Spurs won, and the next game at Portland.",
+  "notes": [
+    "Box score from the Spurs' 112–111 home win over the Dallas Mavericks on Nov 4, 2026, from the league's stats feed and FantasyData's full box score, with game details from the AP (via KSAT and La Nación), Reuters/Field Level Media (via Cyprus Mail and GMA News) and Al Jazeera. All 112 points are accounted for: the feed left out Devin Vassell (2) and Luke Kornet (2), which FantasyData lists. The Blazers' record and the Spurs' conference standing are from the same feed as of Nov 7.",
+    "The play of the game is an original illustration of Victor Wembanyama's free throw with 24.2 seconds left that broke a 111–111 tie, as reported by Reuters/Field Level Media. Naji Marshall had tied it with a three with 1:41 left, and Kyrie Irving missed a contested turnaround jumper at the end. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the San Antonio Spurs or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Wembanyama’s listed 7-foot-4 and 235 pounds, with arms scaled to his reported 8-foot wingspan. It is an original silhouette with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "tall": 1.1282,
+    "ape": 1.0909,
+    "mass": 0.9843,
+    "label": "Victor Wembanyama, listed 7-4, 235 lb, reported 8-0 wingspan"
+  }
+}

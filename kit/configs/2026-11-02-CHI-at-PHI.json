@@ -1,0 +1,123 @@
+{
+ "D": "  const D = {\n    date: 'Mon, Nov 2, 2026',\n    us: 126, them: 107, record: '7–1', usName: 'Sixers', themName: 'Bulls',\n    quarters: [[30, 23], [34, 36], [26, 20], [36, 28]],\n    leadUs: 22, leadThem: 4,\n    star: {name: 'Tyrese Maxey', stats: [['Points', 26, 30], ['Assists', 11, 12], ['Shots made of 15', 10, 15]]},\n    scorers: [\n      {name: 'Tyrese Maxey', pts: 26, note: '11 ast · 10 of 15 from the floor'},\n      {name: 'Jaylen Brown', pts: 25, note: '11 reb · 5 ast · 9 of 15'},\n      {name: 'VJ Edgecombe', pts: 21, note: 'season high · 9 of 12'},\n      {name: 'LeBron James', pts: 15, note: '9 ast · 7 reb'},\n      {name: 'Joel Embiid', pts: 15, note: '8 reb · 5 of 6 free throws'},\n    ],\n    edges: [\n      {label: 'Points in the paint', us: 62, them: 54},\n      {label: 'Assists', us: 36, them: 26},\n      {label: 'Fast-break points', us: 31, them: 25},\n    ],\n    gaps: [\n      {label: 'Bench points', us: 24, them: 35},\n      {label: 'Second-chance points', us: 17, them: 20},\n    ],\n    next: {opp: 'at Pistons', when: 'Wed, Nov 4, 7:00 PM ET', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Jaylen Brown's off-the-dribble three with 3:09 left that made it 119–102. An original illustration from written accounts; not traced from footage, not to scale.\n",
+  "head": "Brown from deep",
+  "subP": "Off the dribble, 3:09 left",
+  "subL": "Off the dribble with 3:09 left",
+  "m0": "Sixers +14",
+  "m1": "Sixers +17",
+  "num": "",
+  "cap1": "Sixers by 17, 3:09 left.",
+  "cap2": "Brown finished with a season-best 25.",
+  "clock": [
+   197,
+   189
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Sixers vs Bulls Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Sixers 126, Bulls 107 · Nov 2, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Sixers vs.', 'Bulls'] : ['Sixers vs. Bulls']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['All five starters scored 15+.', 'Philly sits first in the East.'] : ['All five starters scored 15 or more. Philly sits first in the East.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Sixers improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'First in the East'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['A 15–2 run', 'in the third broke it open'] : ['A 15–2 run in the third broke it open']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Sixers ${D.leadUs}, Bulls ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin after each quarter underneath.",
+   "Sixers’ margin after each quarter underneath."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Maxey ran it:', '26 and 11'] : ['Maxey ran it: 26 points, 11 assists']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['A double-double on', '10-of-15 shooting.'] : ['A double-double on 10-of-15 shooting.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Five starters,', '102 of the 126'] : ['The five starters scored 102 of the 126']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 30;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it inside', 'and on the run'] : ['Won it inside and on the run']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Sixers in blue, Bulls in gray. Chicago’s', 'bench outscored Philly’s 35–24.'] : ['Sixers in blue, Bulls in gray. Chicago’s bench outscored Philly’s 35–24.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'Best record in the East'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Pistons’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '6–1';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['Detroit beat Philly 106–93 on Oct 25,', 'the Sixers’ only loss.'] : ['Detroit beat Philly 106–93 on Oct 25, the Sixers’ only loss.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Sixers 126 · Bulls 107 · Nov 2'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Brown from deep'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Maxey'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 65;"
+  ]
+ ],
+ "aria": "Animated recap of the Sixers' 126 to 107 home win over Chicago: Jaylen Brown's three with 3:09 left, quarter-by-quarter scoring, Tyrese Maxey's 26 points and 11 assists, the top scorers, how the Sixers won, and the next game at Detroit.",
+ "notes": [
+  "Box score from the Sixers' 126–107 home win over the Chicago Bulls on Nov 2, 2026, from the league's official stats feed, with game details from the Philadelphia Inquirer, NBC Sports Philadelphia and Bleacher Report. The feed left Jaylen Brown out of its player list; his 25 points, 11 rebounds, 5 assists and 9-of-15 shooting come from the Inquirer and Bleacher Report, which agree, and they fill the 25-point gap in the feed's team total. The five scorers shown account for 102 of the 126 points. The Pistons' record and the East standings are from the same feed.",
+  "The play of the game is an original illustration of Jaylen Brown's off-the-dribble three with 3:09 left that put the Sixers up 119–102, as described by the Inquirer. Brown's jersey number isn't in the recaps, so it is left blank. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page: 808 bass, claps, rolling hi-hats and a short plucked riff. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Philadelphia 76ers or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo."
+ ],
+ "palette": "  --navy:#031028;--navy-mid:#06204f;--navy-lift:#0b4a9a;\n  --ink:#f5f8fd;--muted:#a3b5d6;--blue:#2a8ae0;--blue-text:#74b9ff;--red:#ed174c;--red-text:#ff5577;--silver:#c4ced4;\n  --hairline:rgba(196,206,212,.24);--track:rgba(196,206,212,.16);"
+}
