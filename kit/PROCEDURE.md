@@ -49,8 +49,9 @@ Game key = `YYYY-MM-DD-AWAY-HOME`, e.g. `2026-11-06-POR-LAL` (team codes from da
    retrying if another run pushed first. Cloudflare redeploys in a minute or two. Then wait 3 minutes so the MP4s are live at
    `https://boxandmotion.com/reels/<key>/recap.mp4`.
 2. **YouTube Shorts through Buffer** (Buffer connector). Organization "My organization" (`get_account`), YouTube channel "Box & Motion"
-   (`list_channels`, service youtube). For each game in this run, up to `YOUTUBE_MAX_PER_RUN = 3` games (YouTube allows 10 uploads a day
-   until the channel is verified; three runs x 3 stays under it), most notable game first:
+   (`list_channels`, service youtube). For each game in this run, up to `YOUTUBE_MAX_PER_RUN = 5` games (the channel is phone-verified as of Nov 7, 2026;
+   three runs x 5 covers a full 15-game night), most notable game first. If Buffer or YouTube returns a daily-limit error, stop
+   posting for this run, send the remaining MP4s to Elan, and say the limit was hit:
    `create_post` with `channelId`, `schedulingType: "automatic"`, `mode: "shareNow"`,
    `assets: [{"video": {"url": "https://boxandmotion.com/reels/<key>/recap.mp4"}}]`, `text` = the description,
    `metadata.youtube = {"title": <title, max 100 chars>, "categoryId": "17", "privacy": "public", "madeForKids": false, "isAiGenerated": true}`.
