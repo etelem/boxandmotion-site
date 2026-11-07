@@ -1,7 +1,7 @@
 # Box & Motion Hoops: nightly recap reels (every game)
 
 Output per game: one drawn ~66-second recap reel, published on boxandmotion.com (it leads the game's page),
-plus a 1080x1920 MP4 for YouTube Shorts sent to Elan. This is the ONLY recap format.
+posted to YouTube Shorts through Buffer (the Short then replaces the reel at the top of the page), and the MP4 sent to Elan. This is the ONLY recap format.
 Scenes: title, final, drawn play of the game, game flow, star, top scorers, how they won, up next, end card.
 
 ## Rules (non-negotiable)
@@ -42,10 +42,27 @@ Game key = `YYYY-MM-DD-AWAY-HOME`, e.g. `2026-11-06-POR-LAL` (team codes from da
    overlapping, names and numbers right, the shooter's figure reads as a player. Fix and rebuild once if needed.
 6. **Publish to the site** (from the repo root): `python3 kit/publish_reel.py kit/out/<key>-reel.html <key>`.
 7. **MP4.** `bash kit/mp4.sh kit/out/<key>-reel.html kit/out/<key>-recap.mp4`, then SendUserFile the MP4.
+   For YouTube, also make a smaller copy next to the reel: `ffmpeg -y -loglevel error -i kit/out/<key>-recap.mp4 -c:v libx264 -preset veryfast -crf 28 -c:a aac -b:a 128k -movflags +faststart reels/<key>/recap.mp4`.
 
 ## After all games in this run
-`bash kit/push_site.sh "Recap reels: <date> (<keys>)"` from the repo root. It rebuilds the site on top of the latest main and pushes,
-retrying if another run pushed first. Cloudflare redeploys in a minute or two.
+1. `bash kit/push_site.sh "Recap reels: <date> (<keys>)"` from the repo root. It rebuilds the site on top of the latest main and pushes,
+   retrying if another run pushed first. Cloudflare redeploys in a minute or two. Then wait 3 minutes so the MP4s are live at
+   `https://boxandmotion.com/reels/<key>/recap.mp4`.
+2. **YouTube Shorts through Buffer** (Buffer connector). Organization "My organization" (`get_account`), YouTube channel "Box & Motion"
+   (`list_channels`, service youtube). For each game in this run, up to `YOUTUBE_MAX_PER_RUN = 3` games (YouTube allows 10 uploads a day
+   until the channel is verified; three runs x 3 stays under it), most notable game first:
+   `create_post` with `channelId`, `schedulingType: "automatic"`, `mode: "shareNow"`,
+   `assets: [{"video": {"url": "https://boxandmotion.com/reels/<key>/recap.mp4"}}]`, `text` = the description,
+   `metadata.youtube = {"title": <title, max 100 chars>, "categoryId": "17", "privacy": "public", "madeForKids": false, "isAiGenerated": true}`.
+   Title names the star and the result, e.g. "Wembanyama's 52 and the winning free throw | Spurs 112, Mavericks 111".
+   Description: one or two sentences, then "Box & Motion Hoops: animated NBA recaps. Unofficial fan content, not affiliated with the NBA
+   or any team." then "#NBA #Shorts" and the two team names as hashtags. Never mention Elan's personal name.
+   Then `get_post` until it shows `externalLink` (wait up to 2 minutes) or an `error`.
+   - Success: write the video id (the `v=` value of externalLink) to `reels/<key>/youtube.txt`. The game page then embeds the YouTube Short.
+   - Error: leave the reel as is and report the error.
+   Games over the cap: send the MP4 to Elan to post by hand and say so.
+3. Delete every `reels/<key>/recap.mp4` from this run (`git rm`), then `bash kit/push_site.sh "YouTube links: <date>"` again
+   (it commits everything under reels/).
 
 ## Report (SendUserMessage)
 Per game: result, star line, play of the game (who, clock, score), and a YouTube title + one-line description to paste.

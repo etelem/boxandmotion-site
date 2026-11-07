@@ -36,7 +36,13 @@ LAST = [g for g in GAMES if g["date"] == LAST_DATE]
 _ld = datetime.date.fromisoformat(LAST_DATE)
 WEEK_START = (_ld - datetime.timedelta(days=_ld.weekday())).isoformat()
 VIDEOS = S.get("videos", {})
-def video_id(key): return VIDEOS.get(key) or S["featured"].get(key, {}).get("video")
+def video_id(key):
+    # a YouTube id written by the morning recap run (reels/<key>/youtube.txt) or set by hand in season.json
+    f = f"reels/{key}/youtube.txt"
+    if os.path.isfile(f):
+        v = open(f).read().strip()
+        if v: return v
+    return VIDEOS.get(key) or S["featured"].get(key, {}).get("video")
 REELS = {d for d in (os.listdir("reels") if os.path.isdir("reels") else []) if os.path.isfile(f"reels/{d}/index.html")}
 for _g in GAMES: _g["video"] = video_id(_g["key"]); _g["reel"] = _g["key"] in REELS
 
