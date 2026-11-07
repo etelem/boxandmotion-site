@@ -1,0 +1,302 @@
+{
+ "ATL": {
+  "top6": 58,
+  "top10": 95,
+  "wins": 45,
+  "chg": 16,
+  "rec_before": [
+   4,
+   4
+  ]
+ },
+ "BKN": {
+  "top6": 0,
+  "top10": 2,
+  "wins": 19,
+  "chg": 0,
+  "rec_before": [
+   2,
+   5
+  ]
+ },
+ "BOS": {
+  "top6": 97,
+  "top10": 100,
+  "wins": 57,
+  "chg": 0,
+  "rec_before": [
+   6,
+   1
+  ]
+ },
+ "CHA": {
+  "top6": 8,
+  "top10": 53,
+  "wins": 34,
+  "chg": -8,
+  "rec_before": [
+   3,
+   5
+  ]
+ },
+ "CHI": {
+  "top6": 0,
+  "top10": 4,
+  "wins": 21,
+  "chg": 0,
+  "rec_before": [
+   1,
+   6
+  ]
+ },
+ "CLE": {
+  "top6": 70,
+  "top10": 97,
+  "wins": 47,
+  "chg": -8,
+  "rec_before": [
+   4,
+   2
+  ]
+ },
+ "DET": {
+  "top6": 95,
+  "top10": 100,
+  "wins": 56,
+  "chg": 1,
+  "rec_before": [
+   5,
+   2
+  ]
+ },
+ "IND": {
+  "top6": 12,
+  "top10": 61,
+  "wins": 35,
+  "chg": 1,
+  "rec_before": [
+   2,
+   5
+  ]
+ },
+ "MIA": {
+  "top6": 16,
+  "top10": 69,
+  "wins": 37,
+  "chg": -5,
+  "rec_before": [
+   2,
+   4
+  ]
+ },
+ "MIL": {
+  "top6": 0,
+  "top10": 2,
+  "wins": 19,
+  "chg": 0,
+  "rec_before": [
+   1,
+   6
+  ]
+ },
+ "NYK": {
+  "top6": 51,
+  "top10": 92,
+  "wins": 44,
+  "chg": 8,
+  "rec_before": [
+   3,
+   4
+  ]
+ },
+ "ORL": {
+  "top6": 13,
+  "top10": 63,
+  "wins": 36,
+  "chg": -12,
+  "rec_before": [
+   2,
+   4
+  ]
+ },
+ "PHI": {
+  "top6": 98,
+  "top10": 100,
+  "wins": 59,
+  "chg": -1,
+  "rec_before": [
+   7,
+   1
+  ]
+ },
+ "TOR": {
+  "top6": 67,
+  "top10": 96,
+  "wins": 47,
+  "chg": 7,
+  "rec_before": [
+   3,
+   3
+  ]
+ },
+ "WAS": {
+  "top6": 14,
+  "top10": 65,
+  "wins": 36,
+  "chg": 1,
+  "rec_before": [
+   3,
+   4
+  ]
+ },
+ "DAL": {
+  "top6": 13,
+  "top10": 78,
+  "wins": 41,
+  "chg": -9,
+  "rec_before": [
+   4,
+   2
+  ]
+ },
+ "DEN": {
+  "top6": 48,
+  "top10": 96,
+  "wins": 49,
+  "chg": -7,
+  "rec_before": [
+   3,
+   2
+  ]
+ },
+ "GSW": {
+  "top6": 27,
+  "top10": 90,
+  "wins": 45,
+  "chg": 9,
+  "rec_before": [
+   4,
+   3
+  ]
+ },
+ "HOU": {
+  "top6": 84,
+  "top10": 100,
+  "wins": 56,
+  "chg": -4,
+  "rec_before": [
+   6,
+   1
+  ]
+ },
+ "LAC": {
+  "top6": 0,
+  "top10": 2,
+  "wins": 21,
+  "chg": 0,
+  "rec_before": [
+   1,
+   5
+  ]
+ },
+ "LAL": {
+  "top6": 78,
+  "top10": 99,
+  "wins": 54,
+  "chg": 15,
+  "rec_before": [
+   5,
+   2
+  ]
+ },
+ "MEM": {
+  "top6": 31,
+  "top10": 91,
+  "wins": 45,
+  "chg": -30,
+  "rec_before": [
+   6,
+   0
+  ]
+ },
+ "MIN": {
+  "top6": 71,
+  "top10": 99,
+  "wins": 53,
+  "chg": 16,
+  "rec_before": [
+   4,
+   3
+  ]
+ },
+ "NOP": {
+  "top6": 0,
+  "top10": 12,
+  "wins": 29,
+  "chg": 0,
+  "rec_before": [
+   2,
+   4
+  ]
+ },
+ "OKC": {
+  "top6": 98,
+  "top10": 100,
+  "wins": 63,
+  "chg": 3,
+  "rec_before": [
+   4,
+   2
+  ]
+ },
+ "PHX": {
+  "top6": 2,
+  "top10": 29,
+  "wins": 33,
+  "chg": -1,
+  "rec_before": [
+   1,
+   3
+  ]
+ },
+ "POR": {
+  "top6": 55,
+  "top10": 97,
+  "wins": 50,
+  "chg": 2,
+  "rec_before": [
+   4,
+   1
+  ]
+ },
+ "SAC": {
+  "top6": 0,
+  "top10": 0,
+  "wins": 15,
+  "chg": 0,
+  "rec_before": [
+   0,
+   6
+  ]
+ },
+ "SAS": {
+  "top6": 93,
+  "top10": 100,
+  "wins": 59,
+  "chg": 6,
+  "rec_before": [
+   4,
+   2
+  ]
+ },
+ "UTA": {
+  "top6": 0,
+  "top10": 6,
+  "wins": 25,
+  "chg": -1,
+  "rec_before": [
+   1,
+   5
+  ]
+ }
+}

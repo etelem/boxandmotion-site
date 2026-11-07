@@ -1,0 +1,93 @@
+{
+"updated": "after Fri, Nov 6 games",
+"updated_short": "Fri, Nov 6",
+"standings": {
+"OKC":[7,2],"POR":[6,2],"MIN":[7,3],"DEN":[4,3],"UTA":[1,8],"LAL":[8,2],"GSW":[6,3],"PHX":[2,5],"LAC":[1,7],"SAC":[1,8],
+"HOU":[7,2],"SAS":[7,2],"MEM":[6,3],"DAL":[5,4],"NOP":[4,5],
+"DET":[6,2],"CLE":[5,4],"IND":[3,6],"CHI":[1,7],"MIL":[1,8],"ATL":[6,4],"WAS":[4,5],"MIA":[3,6],"CHA":[3,7],"ORL":[2,6],
+"PHI":[8,2],"BOS":[7,2],"TOR":[5,4],"NYK":[4,4],"BKN":[2,6]
+},
+"seeds": {
+"LAL":1,"HOU":2,"OKC":3,"SAS":4,"POR":5,"MIN":6,"MEM":7,"GSW":8,"DEN":9,"DAL":10,"NOP":11,"PHX":12,"LAC":13,"SAC":14,"UTA":15,
+"PHI":1,"BOS":2,"DET":3,"ATL":4,"TOR":5,"CLE":6,"NYK":7,"WAS":8,"MIA":9,"IND":10,"CHA":11,"ORL":12,"BKN":13,"CHI":14,"MIL":15
+},
+"prior_wins_oct30": {"PHI":55,"BOS":54,"DET":54,"CLE":48,"TOR":47,"NYK":45,"ATL":43,"ORL":42,"MIA":41,"CHA":39,"IND":39,"WAS":36,"CHI":25,"MIL":24,"BKN":18,
+"OKC":63,"SAS":57,"HOU":52,"MIN":50,"DEN":49,"LAL":48,"POR":45,"MEM":41,"GSW":40,"DAL":39,"PHX":36,"UTA":33,"LAC":26,"NOP":25,"SAC":17},
+"games": [
+["2026-11-02","OKC",117,"CLE",112,""],
+["2026-11-02","WAS",103,"ORL",94,""],
+["2026-11-02","BKN",90,"NYK",103,""],
+["2026-11-02","ATL",108,"IND",104,""],
+["2026-11-02","CHI",107,"PHI",126,""],
+["2026-11-02","DET",124,"CHA",91,""],
+["2026-11-02","NOP",135,"MEM",134,"OT"],
+["2026-11-02","MIL",100,"MIN",112,""],
+["2026-11-02","SAC",115,"DAL",100,""],
+["2026-11-02","BOS",93,"HOU",109,""],
+["2026-11-02","UTA",97,"SAS",119,""],
+["2026-11-02","POR",118,"DEN",110,""],
+["2026-11-02","TOR",125,"LAC",118,""],
+["2026-11-02","PHX",113,"GSW",116,""],
+["2026-11-02","MIA",117,"LAL",138,""],
+["2026-11-04","UTA",113,"NOP",120,""],
+["2026-11-04","IND",107,"MEM",103,""],
+["2026-11-04","CLE",116,"OKC",124,""],
+["2026-11-04","MIN",117,"HOU",107,""],
+["2026-11-04","TOR",109,"DEN",128,""],
+["2026-11-04","POR",132,"PHX",119,""],
+["2026-11-04","DAL",111,"SAS",112,""],
+["2026-11-04","LAL",116,"SAC",103,""],
+["2026-11-04","MIA",117,"LAC",116,""],
+["2026-11-05","ORL",104,"PHX",117,""],
+["2026-11-05","MIA",100,"GSW",120,""],
+["2026-11-06","WAS",132,"ATL",139,""],
+["2026-11-06","BOS",119,"CHA",80,""],
+["2026-11-06","PHI",95,"CLE",119,""],
+["2026-11-06","OKC",128,"MEM",97,""],
+["2026-11-06","MIN",115,"NOP",109,""],
+["2026-11-06","TOR",121,"MIL",107,""],
+["2026-11-06","UTA",100,"DAL",112,""],
+["2026-11-06","POR",118,"LAL",124,""],
+["2026-11-06","SAS",124,"SAC",109,""]
+],
+"upcoming": [
+["Sat, Nov 7","5:00 PM","DEN","IND"],
+["Sat, Nov 7","7:30 PM","BKN","ATL"],
+["Sat, Nov 7","8:00 PM","WAS","OKC"],
+["Sat, Nov 7","8:00 PM","NYK","CLE"],
+["Sat, Nov 7","8:30 PM","ORL","GSW"],
+["Sat, Nov 7","9:00 PM","HOU","PHX"],
+["Sat, Nov 7","10:00 PM","SAS","POR"],
+["Sun, Nov 8","3:30 PM","PHI","CHI"],
+["Sun, Nov 8","6:00 PM","LAL","DET"],
+["Sun, Nov 8","7:00 PM","UTA","MIN"],
+["Sun, Nov 8","7:30 PM","BKN","DAL"],
+["Sun, Nov 8","8:00 PM","BOS","MIL"],
+["Sun, Nov 8","9:00 PM","NOP","LAC"],
+["Sun, Nov 8","9:00 PM","MIA","SAC"],
+["Mon, Nov 9","7:00 PM","WAS","DET"]
+],
+"linescores": {
+"2026-11-04-DAL-SAS": {"away":[26,25,29,31],"home":[32,36,22,22]},
+"2026-11-04-LAL-SAC": {"away":[28,33,26,29],"home":[28,26,20,29]},
+"2026-11-06-POR-LAL": {"away":[29,31,15,43],"home":[20,33,34,37]}
+},
+"featured": {
+"2026-11-04-DAL-SAS": {
+ "headline":"Wemby's 52, and a one-point escape",
+ "dek":"San Antonio led by 19, made just 5 threes, and still held off Dallas behind a 52-24-8 night from Victor Wembanyama.",
+ "three":[["Wemby did everything","52 points on 16-of-28 shooting, 19-of-23 at the line, 24 rebounds and 8 blocks."],["They won without the three","The Spurs made 5 of 36 from deep but scored 62 in the paint and made 33 of 39 free throws."],["They survived the comeback","Dallas won the second half 60–44 and had it down to one at the buzzer."]],
+ "battle":[["Points in the paint",62,40],["Free throws made",33,19],["Threes made",5,14],["Offensive rebounds",22,18]],
+ "battle_labels":["SAS","DAL"],
+ "top":[["Victor Wembanyama","SAS","24 reb, 8 blk",52],["Naji Marshall","DAL","9 of 12 shooting",22],["Dylan Harper","SAS","9 of 15 shooting",21],["P.J. Washington","DAL","10 rebounds",21]]
+},
+"2026-11-06-POR-LAL": {
+ "headline":"Luka 53, Lakers stay perfect this week",
+ "dek":"Portland hit 19 threes and led at the half. Luka Dončić answered with 53, and 24 Blazers turnovers did the rest.",
+ "three":[["Luka got to the line all night","53 points on 17-of-33 shooting and 14-of-18 free throws."],["The third quarter flipped it","The Lakers won the third 34–15 to turn a 60–53 halftime deficit into a 12-point lead."],["Turnovers beat threes","Portland made 19 threes but turned it over 24 times. The Lakers scored 28 points off them."]],
+ "battle":[["Points off turnovers",28,18],["Points in the paint",52,32],["Threes made",11,19],["Steals",15,7]],
+ "battle_labels":["LAL","POR"],
+ "top":[["Luka Dončić","LAL","14 of 18 at the line",53],["Austin Reaves","LAL","4 steals",25],["Deni Avdija","POR","11 assists, 9 rebounds",22],["Damian Lillard","POR","4 of 10 from three",22]]
+}
+}
+}
