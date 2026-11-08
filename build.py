@@ -6,7 +6,7 @@ from urllib.parse import quote_plus
 T = json.load(open("data/teams.json"))
 S = json.load(open("data/season.json"))
 O = json.load(open("data/odds.json"))
-NEWSLETTER = "https://elans-newsletter-ae8074.beehiiv.com/subscribe"
+NEWSLETTER = "https://boxandmotion.beehiiv.com/subscribe"
 OUT = "dist"
 WEEKDAY = lambda d: datetime.date.fromisoformat(d).strftime("%a, %b %-d")
 CONFNAME = {"East": "East", "West": "West"}
