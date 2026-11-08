@@ -83,3 +83,9 @@
 
   refreshStars(); renderMine(); filterGames();
 })();
+
+// animation iframes report their height
+window.addEventListener('message', function (e) {
+  if (!e.data || typeof e.data.bmH !== 'number') return;
+  document.querySelectorAll('iframe.anim').forEach(function (f) { if (f.contentWindow === e.source) f.style.height = e.data.bmH + 'px'; });
+});

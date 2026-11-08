@@ -129,9 +129,32 @@ def team_band(c, kicker, extra=""):
     t = T[c]
     return f'<section class="band" style="background:radial-gradient(90% 140% at 85% 0%,{t["c1"]} 0%,{t["dark"]} 80%)"><div class="w">{kicker}{extra}</div></section>'
 
+# ---- deep dives (coach's boards from kit/boards configs, listed in data/deepdives.json) ----
+DD = json.load(open("data/deepdives.json")) if os.path.isfile("data/deepdives.json") else {"boards": []}
+BOARDS = []
+for b in DD["boards"]:
+    cfg = json.load(open(b["config"]))
+    BOARDS.append(dict(b, **{k: cfg[k] for k in ("team", "coach", "title", "situation", "beats", "sources", "final", "game")}))
+BOARDS.sort(key=lambda b: b["published"], reverse=True)
+COACH_PAGES = {}   # team code -> (coach name, page path, latest board)
+for b in BOARDS:
+    COACH_PAGES.setdefault(b["team"], (b["coach"], f'coaches/{b["coach_slug"]}/index.html', b))
+COACH_PAGES.setdefault("LAL", ("JJ Redick", "coaches/jj-redick/index.html", None))
+
+def anim_frame(R, file, label):
+    """An animation page in an iframe that sizes itself (the page posts its height)."""
+    return f'<iframe class="anim" src="{R}anim/{file}?embed=1" title="{E(label)}" loading="lazy" style="width:100%;border:0;display:block;height:560px;border-radius:18px"></iframe>'
+
+def board_card(R, b, big=False):
+    t = T[b["team"]]
+    return (f'<a href="{R}coaches/{b["coach_slug"]}/index.html" class="card pad" style="display:flex;flex-direction:column;gap:6px;'
+            f'{"min-height:260px;justify-content:flex-end;" if big else ""}background:#f7f6f1"><span class="tag">Coach\'s board · {E(t["name"])}</span>'
+            f'<b class="d" style="font-size:{40 if big else 30}px;margin-top:4px">{E(b["coach"])}: {E(b["title"])}</b><span class="dim">{E(b["dek"])}</span></a>')
+
 # ---- data.js for client ----
 shutil.rmtree(OUT, ignore_errors=True)  # start clean so removed pages disappear
 if os.path.isdir("reels"): shutil.copytree("reels", f"{OUT}/reels")
+if os.path.isdir("src/anim"): shutil.copytree("src/anim", f"{OUT}/anim")
 os.makedirs(f"{OUT}/assets", exist_ok=True)
 client = {"teams": {c: {"name": T[c]["name"], "slug": T[c]["slug"], "c1": T[c]["c1"], "c2": T[c]["c2"], "dark": T[c]["dark"],
           "rec": rec(c), "seed": seed(c), "top6": O[c]["top6"], "chg": chg(O[c]["chg"]), "last": last_line(c)} for c in T}}
@@ -178,7 +201,7 @@ home = f'''
   <a href="odds/index.html" style="font-weight:600">All 30 teams →</a></div>
  <div class="sec"><h2 class="h2">Deep dives</h2>
   <a href="players/luka-doncic/index.html" class="card pad" style="display:flex;flex-direction:column;gap:6px;background:radial-gradient(120% 140% at 100% 0%,#552583 0%,#1c0b32 75%);color:#fff;border:0"><span class="tag gold">Scouting report</span><b class="d" style="font-size:30px;margin-top:4px">Luka Dončić: 40 a night</b><span style="opacity:.85">Game log, hot and quiet nights, the step-back</span></a>
-  <a href="coaches/jj-redick/index.html" class="card pad" style="display:flex;flex-direction:column;gap:6px"><span class="tag">Coach's whiteboard</span><b class="d" style="font-size:30px;margin-top:4px">JJ Redick: how they close</b><span class="dim">The Utah comeback, on the board</span></a>
+  {board_card(R, BOARDS[0]) if BOARDS else ''}
  </div>
 </section>
 <section class="card cta"><div><p class="k">Free · every Sunday</p><b class="d" style="font-size:clamp(30px,5vw,40px)">The Sunday Box</b><p style="margin:6px 0 0;color:#d5d6d9">The week's best game, playoff odds movers and one deep dive, in four minutes.</p></div>
@@ -223,10 +246,14 @@ for c, t in T.items():
 <span class="tag {'gold' if g['featured'] else ''}">{'Featured recap' if g['featured'] else 'Recap'}</span></a>'''
     if c == "LAL":
         players = f'<a href="{R}players/luka-doncic/index.html" class="card pad" style="display:flex;flex-direction:column;gap:6px;min-height:200px;justify-content:flex-end;background:radial-gradient(120% 140% at 100% 0%,#552583 0%,#1c0b32 75%);color:#fff;border:0"><span class="tag gold">Scouting report</span><b class="d" style="font-size:30px">Luka Dončić</b><span style="opacity:.85">No. 77 · 40.1 points per game</span></a><div class="card pad empty" style="min-height:200px;display:flex;flex-direction:column;justify-content:flex-end"><b class="d" style="font-size:26px">Austin Reaves</b><span class="dim">Report coming</span></div><div class="card pad empty" style="min-height:200px;display:flex;flex-direction:column;justify-content:flex-end"><b class="d" style="font-size:26px">Walker Kessler</b><span class="dim">Report coming</span></div>'
-        coach = f'<a href="{R}coaches/jj-redick/index.html" class="card pad" style="display:flex;flex-direction:column;gap:8px"><span class="tag">Coach\'s whiteboard</span><b class="d" style="font-size:40px">JJ Redick</b><span class="dim" style="font-size:18px">Head coach since 2024. How the Lakers closed at Utah, on the board.</span><span style="font-weight:600">Open the whiteboard →</span></a>'
     else:
-        players = f'<div class="card pad empty"><b class="d" style="font-size:26px">Scouting reports are coming</b><p class="dim" style="margin:6px 0 0">We publish one player report a week, rotating through all 30 teams. Follow the {E(t["name"])} to see theirs here first.</p></div>'
-        coach = f'<div class="card pad empty"><b class="d" style="font-size:26px">Whiteboard coming</b><p class="dim" style="margin:6px 0 0">Coach whiteboards rotate through the league, one every week or two. Every set is backed by a cited source.</p></div>'
+        players = f'<div class="card pad empty"><b class="d" style="font-size:26px">Scouting reports are coming</b><p class="dim" style="margin:6px 0 0">Every week we animate the league\'s hottest player. Follow the {E(t["name"])} to see theirs here first.</p></div>'
+    if c in COACH_PAGES:
+        cn, cp, cb = COACH_PAGES[c]
+        sub = f'{E(cb["title"])}: {E(cb["dek"])}' if cb else "How the Lakers closed at Utah, on the board."
+        coach = f'<a href="{R}{cp}" class="card pad" style="display:flex;flex-direction:column;gap:8px"><span class="tag">Coach\'s board</span><b class="d" style="font-size:40px">{E(cn)}</b><span class="dim" style="font-size:18px">{sub}</span><span style="font-weight:600">Open the board →</span></a>'
+    else:
+        coach = f'<div class="card pad empty"><b class="d" style="font-size:26px">Coach\'s board coming</b><p class="dim" style="margin:6px 0 0">When a team draws up a play worth seeing again, we put it on the board. Every action is backed by a cited source.</p></div>'
     body = f'''<div class="tabs" data-tabs="team"><button class="pill on" data-tab="games">Games</button><button class="pill" data-tab="players">Players</button><button class="pill" data-tab="coach">Coach</button></div>
 <section class="sec" data-pane="team" data-value="games"><p class="k">Newest first · coverage starts Mon, Nov 2</p>{rows or '<p class="dim">No games yet this week.</p>'}</section>
 <section class="grid g3 hidden" data-pane="team" data-value="players">{players}</section>
@@ -324,11 +351,11 @@ page("odds/index.html", "Playoff odds · Box & Motion Hoops", body, active="Play
 
 # ---- deep dives ----
 R = "../"
-body = f'''<div class="sec" style="gap:8px"><p class="k">Every week or two</p><h1 class="h1">Deep dives</h1><p class="dim" style="margin:0;font-size:18px;max-width:44em">Player scouting reports and coach whiteboards, rotating through all 30 teams.</p></div>
+body = f'''<div class="sec" style="gap:8px"><p class="k">New every week</p><h1 class="h1">Deep dives</h1><p class="dim" style="margin:0;font-size:18px;max-width:44em">Every week: a scouting report on the league's hottest player, and a coach's board when a team draws up a play worth seeing again. All animated.</p></div>
 <section class="grid g2">
+{"".join(board_card(R, b, big=True) for b in BOARDS)}
 <a href="{R}players/luka-doncic/index.html" class="card pad" style="min-height:260px;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;background:radial-gradient(120% 140% at 100% 0%,#552583 0%,#1c0b32 75%);color:#fff;border:0"><span class="tag gold">Scouting report · Lakers</span><b class="d" style="font-size:40px">Luka Dončić</b><span style="opacity:.85">40.1 points a game, the hot and quiet nights, and the step-back</span></a>
 <a href="{R}coaches/jj-redick/index.html" class="card pad" style="min-height:260px;display:flex;flex-direction:column;justify-content:flex-end;gap:6px"><span class="tag">Coach's whiteboard · Lakers</span><b class="d" style="font-size:40px">JJ Redick</b><span class="dim">How the Lakers closed out the Utah comeback</span></a>
-<div class="card pad empty" style="min-height:200px;display:flex;flex-direction:column;justify-content:flex-end"><span class="tag ghost">Up next</span><b class="d" style="font-size:30px;margin-top:6px">Victor Wembanyama</b><span class="dim">Scouting report in progress</span></div>
 </section>'''
 page("deep-dives/index.html", "Deep dives · Box & Motion Hoops", body, active="Deep Dives")
 
@@ -361,9 +388,7 @@ body = f'''<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}deep-dives/in
 <div class="card pad"><span class="d" style="font-size:44px">{rec('LAL')}</span><br><span class="dim">Lakers record</span></div></div></section>
 <section class="sec"><div class="sec" style="gap:6px"><p class="k">Signature move</p><h2 class="h2">The step-back three</h2>
 <p style="margin:0;max-width:44em">He sells the drive with a hard jab, hops back off both feet, and rises before the defender recovers. At 6-8 he releases over most guards, so a late contest rarely bothers the shot.</p></div>
-<div class="grid g3"><div class="card pad step"><span class="num-badge">1</span><b class="d" style="font-size:24px">The jab</b><span class="dim">The defender has to respect the drive.</span></div>
-<div class="card pad step"><span class="num-badge">2</span><b class="d" style="font-size:24px">The hop back</b><span class="dim">Both feet, landing already set.</span></div>
-<div class="card pad step"><span class="num-badge">3</span><b class="d" style="font-size:24px">The rise</b><span class="dim">A high release over the closeout.</span></div></div></section>
+{anim_frame(R, "luka-stepback.html", "Animated illustration of Luka Dončić's step-back three")}</section>
 <section class="sec"><h2 class="h2">Game log</h2>
 <div class="card" style="padding:6px 16px"><div class="scroll"><table class="otable" style="min-width:720px"><tr><th>Date</th><th>Game</th><th>Result</th><th class="num">Pts</th><th class="num">Reb</th><th class="num">Ast</th><th class="num">FG</th><th class="num">3PT</th><th class="num">TO</th><th>Flag</th></tr>{logrows}</table></div></div>
 <p class="dim" style="margin:0;font-size:14px">Flags are automatic: any game 10 or more points from his season average ({avg:.1f}). Hot nights so far: {HOTS}. A dash means the stat isn't in our feed yet.</p></section>
@@ -385,6 +410,30 @@ body = f'''<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}deep-dives/in
 <section class="sec"><div class="sec" style="gap:6px"><h2 class="h2">What he likes to run</h2><p class="dim" style="margin:0;max-width:46em">Each set gets drawn on the board and backed by a source: his own interviews or film from this season's games. Nothing goes up without one.</p></div>
 <div class="grid g3"><div class="card pad empty"><span class="tag ghost">Go-to set</span><p class="dim" style="margin:10px 0 0">Being drawn</p></div><div class="card pad empty"><span class="tag ghost">After a timeout</span><p class="dim" style="margin:10px 0 0">Being drawn</p></div><div class="card pad empty"><span class="tag ghost">Defense</span><p class="dim" style="margin:10px 0 0">Being drawn</p></div></div></section>'''
 page("coaches/jj-redick/index.html", "JJ Redick coach's whiteboard · Box & Motion Hoops", body, active="Deep Dives")
+
+# ---- coach's boards (one page per coach, newest board first) ----
+R = "../../"
+by_coach = {}
+for b in BOARDS: by_coach.setdefault(b["coach_slug"], []).append(b)
+for cslug, bl in by_coach.items():
+    b = bl[0]; c = b["team"]; t = T[c]
+    g = next((x for x in GAMES if x["slug"] == b["game"]), None)
+    steps = "".join(f'<li><b>{E(x["title"])}.</b> {E(x["text"])}</li>' for x in b["beats"])
+    srcs = "".join(f'<li><a href="{E(u)}" target="_blank" rel="noopener">{E(l)}</a></li>' for l, u in b["sources"])
+    more = "".join(f'<li>{E(x["title"])} ({E(x["situation"])})</li>' for x in bl[1:])
+    recap = f'<a class="pill" href="{R}games/{g["slug"]}/index.html">Game recap →</a>' if g else ""
+    body = f'''<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}deep-dives/index.html">Deep dives</a><span>/</span><a href="{R}teams/{t['slug']}/index.html">{E(t['name'])}</a><span>/</span><span>{E(b['coach'])}</span></nav>
+<section class="sec" style="gap:12px"><p class="k">Coach's board · {E(t['city'])} {E(t['name'])}</p><h1 class="h1" style="font-size:clamp(56px,9vw,112px)">{E(b['coach'])}</h1>
+<p class="dim" style="margin:0;font-size:18px">{E(t['name'])} head coach since {E(b['since'])}. The {E(t['name'])} are {rec(c)}, {seed(c)}.</p></section>
+<section class="sec"><div class="sec" style="gap:6px"><p class="k">{E(b['situation'])}</p><h2 class="h2">{E(b['title'])}</h2>
+<p style="margin:0;max-width:44em;font-size:18px">{E(b['dek'])}</p></div>
+{anim_frame(R, b["anim"], b["coach"] + ": " + b["title"])}
+<ol style="margin:0;padding-left:22px;display:flex;flex-direction:column;gap:8px;max-width:46em;font-size:17px">{steps}</ol>
+<div class="row" style="gap:10px">{recap}</div></section>
+<section class="card pad"><b>Sources</b><p class="dim" style="margin:4px 0 8px">Every action on the board comes from these game stories. Where they don't say where a player stood, the spot is our illustration.</p><ul style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px">{srcs}</ul></section>
+{f'<section class="sec"><h2 class="h2">Earlier boards</h2><ul>{more}</ul></section>' if more else ''}'''
+    page(f"coaches/{cslug}/index.html", f"{b['coach']}: {b['title']} · Box & Motion Hoops", body, active="Deep Dives",
+         desc=f"{b['coach']}'s {b['title'].lower()}: {b['dek']}")
 
 # ---- newsletter ----
 R = "../"
