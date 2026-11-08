@@ -11,9 +11,7 @@ start = next(i for i, l in enumerate(base) if l.startswith('  const POSES = {'))
 end = next(i for i in range(start, len(base)) if base[i] == '  }' and i > start + 12)
 FIGURE = '\n'.join(base[start:end + 1])
 FIGURE_REAL = open(os.path.join(HERE, 'figure-real.js')).read()
-BUILD = {"tall": 80 / 78, "ape": 83 / 80, "mass": ((230 / 80) / (215 / 78)) ** 0.5,
-         # his look without drawing a face: a heavy, broad frame, his skin tone, fuller swept-back hair and a beard
-         "frame": 1.16, "hair": "swept", "beard": True, "hairColor": "#7a4f2e", "skin": "#e9c3a2"}
+BUILD = {"tall": 80 / 78, "ape": 83 / 80, "mass": ((230 / 80) / (215 / 78)) ** 0.5}   # same silhouette as the Nov 6 recap
 PAL = team_palette('LAL')
 
 HTML = r"""<!doctype html>
@@ -127,6 +125,7 @@ __FIGURE_REAL__
     // figures
     const defender = figure(svg, 'opp', k);
     defender.g.setAttribute('opacity', .8);
+    const ghosts = [0, 1, 2].map(() => { const gh = figureReal(svg, 'phi', k, '77', BUILD); gh.g.style.opacity = 0; return gh; }).reverse();
     const luka = figureReal(svg, 'phi', k, '77', BUILD);
     const trailG = S('g', {}, svg);
     const ball = S('circle', {r: 13 * k, class: 'f-ink', filter: 'url(#glow)'}, svg);
@@ -164,7 +163,7 @@ __FIGURE_REAL__
     const arcAt = (u) => [lerp(rel[0], hoopX, u), lerp(rel[1], rimY - 6, u) - 4 * peak * u * (1 - u)];
     const trail = S('path', {d: 'M' + Array.from({length: 61}, (_, i) => arcAt(i / 60)).map(([x, y]) => `${x.toFixed(1)} ${y.toFixed(1)}`).join('L'), class: 's-silver', 'stroke-width': 4, 'stroke-dasharray': '0 1', pathLength: 1, opacity: .85, filter: 'url(#glow)'}, trailG);
     built = {portrait};
-    L = (lt) => {
+    const lukaAt = (lt) => {
       // Luka: dribble in, jab, hop back, set, rise, land
       let lx, pose, lift = 0;
       if (lt < t.jab) { lx = x0; pose = POSES.dribble; }
@@ -174,6 +173,18 @@ __FIGURE_REAL__
       else if (lt < t.make + .4) { lx = xLand; const up = prog(lt, t.rise, .5), down = clamp((lt - (t.rel + .25)) / .6); pose = lt < t.rel + .25 ? mixPose(POSES.set, POSES.rise, up) : mixPose(POSES.rise, POSES.land, down); lift = lt < t.rel + .25 ? 16 * up : 16 * (1 - down * down); }
       else { lx = xLand; pose = POSES.land; }
       if (lt < t.jab) { const bob = Math.sin(lt * 9) * 4; pose = POSES.dribble; lx += bob * k; }
+      return [pose, lx, lift];
+    };
+    L = (lt) => {
+      const [pose, lx, lift] = lukaAt(lt);
+      // speed trail on the hop back: afterimages of him a beat behind, fading as he lands (like Maxey's coast-to-coast)
+      ghosts.forEach((gh, i) => {
+        const lag = (i + 1) * 0.06, on = lt > t.hop + .02 && lt < t.land + .45;
+        if (!on) { gh.g.style.opacity = 0; return; }
+        const [gp, gx, gl] = lukaAt(lt - lag);
+        gh.draw(gp, gx, floor - gl * k, k, 1);
+        gh.g.style.opacity = ((0.5 - i * 0.14) * (1 - prog(lt, t.land, .45))).toFixed(2);
+      });
       const at = luka.draw(pose, lx, floor - lift * k, k, 1);
       // defender: guards, backs off the jab, closes out late
       let dx, dPose = POSES.guard, dLift = 0;
