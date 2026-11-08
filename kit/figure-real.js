@@ -30,6 +30,9 @@
         f.num.textContent = number; f.num.style.fontSize = (30 * k).toFixed(1) + 'px';
       }
     });
+    // combed strands over the hair (only drawn for the 'swept' style)
+    f.strands = S('path', {fill: 'none', 'stroke-width': (1.6 * k).toFixed(1), 'stroke-linecap': 'round', opacity: 0.35, style: 'stroke:rgba(0,0,0,.6)'}, fill);
+    fill.insertBefore(f.strands, f.beard ? f.beard : f.shoes);
     const F = (v) => v.toFixed(1);
     const add = (a, b2, s = 1) => [a[0] + b2[0] * s, a[1] + b2[1] * s];
     // a tapered capsule from A to B: width w1 at A, wm at the muscle belly (fraction t along), w2 at B
@@ -85,9 +88,13 @@
         const blob = (pts) => { const n = pts.length; let d = `M${F((pts[0][0] + pts[1][0]) / 2)} ${F((pts[0][1] + pts[1][1]) / 2)}`;
           for (let i = 1; i <= n; i += 1) { const a = pts[i % n], c = pts[(i + 1) % n]; d += `Q${F(a[0])} ${F(a[1])} ${F((a[0] + c[0]) / 2)} ${F((a[1] + c[1]) / 2)}`; } return d + 'Z'; };
         const X = (c) => hd[0] + dir * c[0] * rx, Y = (c) => hd[1] + c[1] * ry;
+        let strands = 'M0 0';
         if (b.hair === 'swept') {
           // medium length, swept back: a little lift over the forehead, close at the temple, full at the crown and back
-          hair = blob([[0.86, -0.42], [0.82, -0.9], [0.38, -1.2], [-0.2, -1.22], [-0.72, -1.02], [-1.06, -0.62], [-1.12, -0.12], [-0.98, 0.3], [-0.74, 0.1], [-0.5, -0.36], [-0.05, -0.62], [0.5, -0.58]].map((c) => [X(c), Y(c)]));
+          hair = blob([[0.96, -0.3], [1.0, -0.74], [0.72, -1.14], [0.16, -1.36], [-0.46, -1.27], [-0.93, -0.92], [-1.1, -0.4], [-1.05, 0.05], [-0.86, 0.18], [-0.68, -0.02], [-0.5, -0.3], [-0.2, -0.42], [0.1, -0.5], [0.36, -0.43], [0.6, -0.52], [0.82, -0.4]].map((c) => [X(c), Y(c)]));
+          // a few strands combed back, a shade darker, so it reads as hair and not a cap
+          strands = [[[0.82, -0.66], [0.2, -1.08], [-0.66, -0.96]], [[0.56, -1.02], [-0.06, -1.22], [-0.7, -1.06]]]
+            .map(([a, c, e]) => `M${F(X(a))} ${F(Y(a))}Q${F(X(c))} ${F(Y(c))} ${F(X(e))} ${F(Y(e))}`).join('');
         }
         let beard = 'M0 0';
         if (b.beard) {
@@ -101,6 +108,7 @@
         const D2 = {band, armB: arm('l'), legB: leg('l'), legF: leg('r'), shorts, torso, jersey, neck, armF: arm('r'), head, hair, beard, shoes: shoe(J.lf) + shoe(J.rf)};
         PARTS.forEach((p) => { f[p].setAttribute('d', D2[p]); if (o[p]) o[p].setAttribute('d', D2[p]); });
         f.armEdge.setAttribute('d', D2.armF);
+        f.strands.setAttribute('d', strands);
         if (f.num) { const c = [lerp(N[0], Hp[0], 0.45), lerp(N[1], Hp[1], 0.45)]; f.num.setAttribute('x', F(c[0])); f.num.setAttribute('y', F(c[1] + 10 * k)); }
         return (j) => J[j];
       },

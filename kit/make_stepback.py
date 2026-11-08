@@ -146,7 +146,7 @@ __FIGURE_REAL__
         const y = floor + 86 + i * 54;
         T(g, M, y, s[0], 'd', 34).setAttribute('fill', 'var(--red)');
         const t1 = T(g, M + 40, y, s[1], 'b', 26); t1.style.fontWeight = 600;
-        T(g, M + 40 + 200, y, s[2], 'b m', 22);
+        T(g, M + 40 + 254, y, s[2], 'b m', 20);
       } else {
         const cw = (W - 2 * M) / 3, x = M + i * cw, y = floor + 92;
         T(g, x, y, s[0], 'd', 38).setAttribute('fill', 'var(--red)');

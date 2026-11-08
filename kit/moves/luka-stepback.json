@@ -9,7 +9,8 @@
     "ape": 1.0375,
     "mass": 1.021325,
     "skin": "#e9c3a2",
-    "hairColor": "#6b4a2f"
+    "hairColor": "#6b4a2f",
+    "hair": "swept"
   },
   "build_note": "Listed 6-8, 230 lb, reported 6-11 wingspan",
   "steps": [
@@ -21,7 +22,7 @@
     [
       "2",
       "Between the legs",
-      "He crosses it back to his left and hops into the shot."
+      "Crosses over, back to his left."
     ],
     [
       "3",
