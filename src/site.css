@@ -106,3 +106,6 @@ footer a{color:var(--dim)}
 .nl-pill{display:none}
 @media (max-width:640px){.nav .nl-pill{display:inline-flex;margin-left:auto}.nav .nl-pill+.pill.hot{margin-left:0}.links a.nl{display:none}.links{gap:0 16px}}
 @media (max-width:380px){.links{gap:0 12px;font-size:14px}}
+
+/* recap actions */
+.cta-btn{justify-content:center;font-size:15px;padding:11px 16px}

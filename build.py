@@ -324,8 +324,11 @@ for g in GAMES:
     kicker = f'<p class="k">Final{" · OT" if g["ot"] else ""} · {WEEKDAY(g["date"])} · {E(city)}</p>'
     names = f'<span style="color:{"#111214" if w==a else "#8a8c92"}">{E(T[a]["name"])} {g["as_"]}</span><span style="color:{"#111214" if w==h else "#8a8c92"}">{E(T[h]["name"])} {g["hs"]}</span>'
     v = g["video"]
-    yt_btn = (f'<div class="row" style="gap:10px;align-items:center"><a class="pill" style="background:#FF0033;border-color:#FF0033;color:#fff" href="https://youtube.com/shorts/{v}" target="_blank" rel="noopener">▶ Watch on YouTube</a>'
-              f'<a href="https://www.youtube.com/@boxandmotion?sub_confirmation=1" target="_blank" rel="noopener" style="font-weight:600">Subscribe to @boxandmotion</a></div>') if v else ""
+    # three actions under every recap: watch the Short, subscribe on YouTube, subscribe to the newsletter
+    yt_btn = ('<div style="display:flex;flex-direction:column;gap:8px;width:100%">'
+              + (f'<a class="pill cta-btn" style="background:#FF0033;border-color:#FF0033;color:#fff" href="https://youtube.com/shorts/{v}" target="_blank" rel="noopener">▶ Watch on YouTube</a>' if v else '')
+              + '<a class="pill cta-btn" href="https://www.youtube.com/@boxandmotion?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube</a>'
+              + f'<a class="pill hot cta-btn" href="{NEWSLETTER}" target="_blank" rel="noopener">✉ Subscribe to the newsletter</a></div>')
     if g["reel"]:
         # our drawn recap plays right on the page (no YouTube frame); the YouTube Short is one tap away
         hero = f'''<span class="tag gold" style="align-self:flex-start;margin-bottom:-28px">▶ Our recap video · 66 seconds</span>
