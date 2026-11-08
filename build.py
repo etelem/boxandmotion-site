@@ -444,8 +444,7 @@ body = f'''<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}deep-dives/in
 <div class="row"><a class="pill on" href="https://youtube.com/shorts/5FgwWO0aF8s" target="_blank" rel="noopener">▶ Watch the Short</a></div></section>
 <section class="sec"><h2 class="h2">Game log</h2>
 <div class="card" style="padding:6px 16px"><div class="scroll"><table class="otable" style="min-width:720px"><tr><th>Date</th><th>Game</th><th>Result</th><th class="num">Pts</th><th class="num">Reb</th><th class="num">Ast</th><th class="num">FG</th><th class="num">3PT</th><th class="num">TO</th><th>Flag</th></tr>{logrows}</table></div></div>
-<p class="dim" style="margin:0;font-size:14px">Flags are automatic: any game 10 or more points from his season average ({avg:.1f}). Hot nights so far: {HOTS}. A dash means the stat isn't in our feed yet.</p></section>
-<section class="card pad empty"><b>Season shot chart</b><p class="dim" style="margin:6px 0 0">The filterable shot chart (every shot, by game) arrives once our licensed shot-location feed is connected.</p></section>'''
+<p class="dim" style="margin:0;font-size:14px">Flags are automatic: any game 10 or more points from his season average ({avg:.1f}). Hot nights so far: {HOTS}. A dash means the stat isn't in our feed yet.</p></section>'''
 page("players/luka-doncic/index.html", "Luka Dončić scouting report · Box & Motion Hoops", body, active="Deep Dives",
      desc=f"Luka Dončić: {avg:.1f} points per game, game log, hot and quiet nights, and the step-back.")
 
