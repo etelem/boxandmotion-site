@@ -7,17 +7,18 @@
     // optional look (all off by default): frame = extra width through shoulders, chest and hips for a heavier build;
     // hair = 'crop' | 'swept' (fuller on top, swept back); beard = true; hairColor = a CSS color for hair and beard
     // gear seen in game photos (optional): wristband = color of a band on the guide-hand wrist, legSleeve = color of a sleeve knee-to-ankle on the back leg
-    b = Object.assign({tall: 1, mass: 1, ape: 1, frame: 1, hair: 'crop', beard: false, hairColor: null, skin: null, wristband: null, legSleeve: null}, b || {});
+    // kneeSleeve = colour of a sleeve over the back knee (kneeSleeveFront for the front knee); ankleBrace = colour of braces on both ankles
+    b = Object.assign({tall: 1, mass: 1, ape: 1, frame: 1, hair: 'crop', beard: false, hairColor: null, skin: null, wristband: null, legSleeve: null, kneeSleeve: null, kneeSleeveFront: null, ankleBrace: null}, b || {});
     const g = S('g', {'stroke-linecap': 'round', 'stroke-linejoin': 'round'}, parent);
     const outline = S('g', {class: `fig-o-${team}`}, g);
     if (team === 'phi') outline.setAttribute('filter', 'url(#glow)');
     const fill = S('g', {}, g);
-    const PARTS = ['armB', 'wrist', 'legB', 'sleeve', 'legF', 'shorts', 'torso', 'jersey', 'band', 'neck', 'armF', 'head', 'hair', 'beard', 'shoes'];
-    const CLS = {armB: 'fig-skin', legB: 'fig-skin', legF: 'fig-skin', shorts: `fig-kit-${team}`, torso: 'fig-skin', jersey: `fig-kit-${team}`, band: 'fig-band', neck: 'fig-skin', armF: 'fig-skin', head: 'fig-skin', hair: 'fig-hair', beard: 'fig-hair', shoes: 'fig-shoe', wrist: 'fig-band', sleeve: 'fig-band'};
+    const PARTS = ['armB', 'wrist', 'legB', 'sleeve', 'kneeB', 'braceB', 'legF', 'kneeF', 'braceF', 'shorts', 'torso', 'jersey', 'band', 'neck', 'armF', 'head', 'hair', 'beard', 'shoes'];
+    const CLS = {armB: 'fig-skin', legB: 'fig-skin', legF: 'fig-skin', shorts: `fig-kit-${team}`, torso: 'fig-skin', jersey: `fig-kit-${team}`, band: 'fig-band', neck: 'fig-skin', armF: 'fig-skin', head: 'fig-skin', hair: 'fig-hair', beard: 'fig-hair', shoes: 'fig-shoe', wrist: 'fig-band', sleeve: 'fig-band', kneeB: 'fig-band', kneeF: 'fig-band', braceB: 'fig-band', braceF: 'fig-band'};
     const OX = 7 * k;
     const o = {}, f = {};
     PARTS.forEach((p) => {
-      if (!['jersey', 'band', 'beard', 'wrist', 'sleeve'].includes(p)) o[p] = S('path', {'stroke-width': OX.toFixed(1)}, outline);
+      if (!['jersey', 'band', 'beard', 'wrist', 'sleeve', 'kneeB', 'kneeF', 'braceB', 'braceF'].includes(p)) o[p] = S('path', {'stroke-width': OX.toFixed(1)}, outline);
       if (p === 'armF') {
         // the front arm crosses the jersey, so it gets its own thin edge to read as an arm, not a strap
         f.armEdge = S('path', {class: `fig-o-${team}`, 'stroke-width': (4 * k).toFixed(1)}, fill);
@@ -25,7 +26,7 @@
       f[p] = S('path', {class: CLS[p], 'stroke-width': (p === 'band' ? 3 * k : p === 'jersey' || p === 'shorts' ? 2 * k : 0.5).toFixed(1)}, fill);
       if ((p === 'hair' || p === 'beard') && b.hairColor) { f[p].style.fill = b.hairColor; f[p].style.stroke = b.hairColor; }
       if (p === 'beard') { f[p].style.opacity = b.stubble == null ? 0.3 : b.stubble; f[p].setAttribute('stroke-width', 0); }
-      if (p === 'wrist' || p === 'sleeve') { const col = p === 'wrist' ? b.wristband : b.legSleeve; f[p].setAttribute('stroke-width', 0); if (col) { f[p].style.fill = col; f[p].style.stroke = col; } }
+      if (['wrist', 'sleeve', 'kneeB', 'kneeF', 'braceB', 'braceF'].includes(p)) { const col = p === 'wrist' ? b.wristband : p === 'sleeve' ? b.legSleeve : p[0] === 'k' ? (p === 'kneeB' ? b.kneeSleeve : b.kneeSleeveFront) : b.ankleBrace; f[p].setAttribute('stroke-width', 0); if (col) { f[p].style.fill = col; f[p].style.stroke = col; } }
       if (CLS[p] === 'fig-skin' && b.skin) { f[p].style.fill = b.skin; f[p].style.stroke = b.skin; }
       if (p === 'jersey' && number != null) {
         f.num = S('text', {class: 'fig-num', 'text-anchor': 'middle'}, fill);
@@ -116,7 +117,11 @@
         const lp = (a, c, q) => [lerp(a[0], c[0], q), lerp(a[1], c[1], q)];
         const wrist = b.wristband ? seg(lp(J.le, J.lh, 0.66), lp(J.le, J.lh, 0.86), 12.5 * W, 12.8 * W, 11.5 * W, 0.5) : 'M0 0';
         const sleeve = b.legSleeve ? seg(lp(J.lk, ankle(J.lf), 0.1), lp(J.lk, ankle(J.lf), 0.94), 16.5 * W, 19 * W, 11.5 * W, 0.3) : 'M0 0';
-        const D2 = {wrist, sleeve, band, armB: arm('l'), legB: leg('l'), legF: leg('r'), shorts, torso, jersey, neck, armF: arm('r'), head, hair, beard, shoes: shoe(J.lf) + shoe(J.rf)};
+        const knee = (s) => seg(lp(Hp, J[s + 'k'], 0.72), lp(J[s + 'k'], ankle(J[s + 'f']), 0.3), 17.5 * W, 18 * W, 16.5 * W, 0.3);
+        const brace = (s) => seg(lp(J[s + 'k'], ankle(J[s + 'f']), 0.8), ankle(J[s + 'f']), 13.5 * W, 14 * W, 13.5 * W, 0.3);
+        const kneeB = b.kneeSleeve ? knee('l') : 'M0 0', kneeF = b.kneeSleeveFront ? knee('r') : 'M0 0';
+        const braceB = b.ankleBrace ? brace('l') : 'M0 0', braceF = b.ankleBrace ? brace('r') : 'M0 0';
+        const D2 = {wrist, sleeve, kneeB, kneeF, braceB, braceF, band, armB: arm('l'), legB: leg('l'), legF: leg('r'), shorts, torso, jersey, neck, armF: arm('r'), head, hair, beard, shoes: shoe(J.lf) + shoe(J.rf)};
         PARTS.forEach((p) => { f[p].setAttribute('d', D2[p]); if (o[p]) o[p].setAttribute('d', D2[p]); });
         f.armEdge.setAttribute('d', D2.armF);
         f.strands.setAttribute('d', strands);

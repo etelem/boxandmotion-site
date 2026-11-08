@@ -1,0 +1,65 @@
+{
+  "out": "short-2026-11-07-ORL-GSW.html",
+  "team": "GSW",
+  "number": "30",
+  "kit": {
+    "jersey": "#F4F4F2",
+    "number": "#1D428A"
+  },
+  "build": {
+    "tall": 0.9487,
+    "ape": 1.027,
+    "mass": 0.9902,
+    "skin": "#b07a55",
+    "hairColor": "#1b1410",
+    "hair": "crop",
+    "beard": true,
+    "stubble": 0.38,
+    "kneeSleeve": "#16181d",
+    "ankleBrace": "#16181d"
+  },
+  "build_note": "Listed 6-2, 200 lb (Basketball-Reference), reported 6-4 wingspan (Sportskeeda)",
+  "kicker": "WARRIORS 126 · MAGIC 119 · OT · NOV 7",
+  "hook": [
+    "Steph's and-one",
+    "to win it in OT"
+  ],
+  "clock": "OT · 1:38",
+  "us": "GSW",
+  "them": "ORL",
+  "score_before": [
+    117,
+    118
+  ],
+  "score_make": [
+    119,
+    118
+  ],
+  "score_ft": [
+    120,
+    118
+  ],
+  "stamp": "AND-ONE",
+  "ft_line": [
+    "+1 at the line.",
+    "Warriors lead for good."
+  ],
+  "final": {
+    "label": "FINAL · OT",
+    "us": "Warriors",
+    "them": "Magic",
+    "us_pts": 126,
+    "them_pts": 119
+  },
+  "star": {
+    "name": "Stephen Curry",
+    "big": 41,
+    "big_label": "points on 13-of-19 shooting",
+    "lines": [
+      "10 of 10 at the line",
+      "19 in the fourth quarter and OT"
+    ]
+  },
+  "story": "Up 16 at the half. Orlando tied it at the buzzer. Golden State won overtime 16–9.",
+  "aria": "Animated Short: Stephen Curry drives into the lane with 1:38 left in overtime, Warriors down 118–117, and makes a floater through contact, then the free throw for a 120–118 lead. Warriors win 126–119. An original illustration, not traced from footage, not to scale."
+}
