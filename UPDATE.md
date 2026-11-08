@@ -9,6 +9,8 @@ Cloudflare redeploys the site automatically whenever `main` changes on GitHub.
    - `scores` → every game with `status: "closed"` is final. Others are in progress or upcoming.
    - `standings` → wins, losses and `rank.conference` for all 30 teams.
    Do not scrape ESPN.com or NBA.com.
+   If the `fetch_sports_data` tool isn't available in this session (it isn't listed and ToolSearch doesn't find it), or it
+   errors twice, use the **fallback sources** below instead. Never stop just because the feed is missing.
 
 2. Write `data/incoming.json`:
    ```json
@@ -50,6 +52,28 @@ Cloudflare redeploys the site automatically whenever `main` changes on GitHub.
    `Nightly update: games through <date>`.
 
 5. Check the live site a couple of minutes later (https://boxandmotion.com/last-night/) shows the new date.
+
+## Fallback sources (when the feed is unavailable)
+Same `data/incoming.json`, same checks; only the sources change. Never ESPN.com or NBA.com.
+- **Which games:** the season schedule on Plain Text Sports (`https://plaintextsports.com/nba/<season>/schedule`, e.g.
+  `2026-2027`) lists last night's games, ET tip times and each game's page link. Take every game dated last night.
+- **Final scores:** each score must match in **two** sources: the Covers.com box score (WebSearch with
+  `allowed_domains: ["covers.com"]`, e.g. "covers.com Nuggets vs Pacers Game Overview Match Player Stats November 07, 2026")
+  and one of: the Plain Text Sports game page, the AP or Field Level Media game story, or the CBS Sports gametracker.
+  Add `"OT"` only if a source says overtime. Check the Covers line score adds up to the final. If a game isn't final yet
+  or two sources don't agree, wait 15 minutes and try once more; if it's still unconfirmed, stop and report it.
+- **Standings:** FOX Sports conference standings (`https://www.foxsports.com/nba/standings`): rank, wins and losses for
+  all 30 teams. If update.py says records don't match and the differences are exactly last night's results, FOX hasn't
+  refreshed yet: wait 15 minutes, fetch again and retry once.
+- **Upcoming:** the next two days from the Plain Text Sports schedule (times are ET).
+- Commit message: `Nightly update: games through <date> (fallback sources)`, and say in the report that the fallback was used.
+- update.py's record check is the safety net: if it still refuses after the retry, change nothing and do not push.
+
+## If the update fails, alert Elan
+If the run ends without pushing last night's games (feed and fallback both failed, update.py refused, or the push
+failed), send a **PushNotification** right away, not just a SendUserMessage, with the summary in `<routine_summary>`
+tags: first sentence "Site update failed: <reason in a few words>.", then what didn't match and that the recap runs will
+hold their reels until it's fixed. A successful fallback run needs no push; the normal report says the fallback was used.
 
 ## Adding a recap video to a game page
 

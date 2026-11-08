@@ -77,6 +77,13 @@ Game key = `YYYY-MM-DD-AWAY-HOME`, e.g. `2026-11-06-POR-LAL` (team codes from da
 3. Delete every `reels/<key>/recap.mp4` from this run (`git rm`), then `bash kit/push_site.sh "YouTube links: <date>"` again
    (it commits everything under reels/).
 
+## If something blocks the morning, alert Elan
+Send a **PushNotification** (summary in `<routine_summary>` tags, the first sentence says what broke) when any of these
+happen, not just a note in the report:
+- last night's games still aren't in `data/season.json` after the last re-pull, so reels were held back;
+- `kit/push_site.sh` printed `PUSH FAILED`;
+- every YouTube post in this run failed (a daily-limit error on some posts is normal; say so in the report only).
+
 ## Report (SendUserMessage)
 Per game: result, star line, play of the game (who, clock, score), and a YouTube title + one-line description to paste.
 Then anything skipped or filled in from written recaps, and a Sources list. Remind Elan that a YouTube link pasted back can be
