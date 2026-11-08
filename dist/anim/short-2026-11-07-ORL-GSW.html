@@ -39,7 +39,7 @@ svg{display:block;width:100%;height:auto}
 <script>
 if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add('short');
 (() => {
-  const C = {"out": "short-2026-11-07-ORL-GSW.html", "team": "GSW", "number": "30", "kit": {"jersey": "#F4F4F2", "number": "#1D428A"}, "build": {"tall": 0.9487, "ape": 1.027, "mass": 0.9902, "skin": "#b07a55", "hairColor": "#1b1410", "hair": "crop", "beard": true, "stubble": 0.38, "kneeSleeve": "#16181d", "ankleBrace": "#16181d"}, "build_note": "Listed 6-2, 200 lb (Basketball-Reference), reported 6-4 wingspan (Sportskeeda)", "kicker": "WARRIORS 126 · MAGIC 119 · OT · NOV 7", "hook": ["Steph's and-one", "to win it in OT"], "clock": "OT · 1:38", "us": "GSW", "them": "ORL", "score_before": [117, 118], "score_make": [119, 118], "score_ft": [120, 118], "stamp": "AND-ONE", "ft_line": ["+1 at the line.", "Warriors lead for good."], "final": {"label": "FINAL · OT", "us": "Warriors", "them": "Magic", "us_pts": 126, "them_pts": 119}, "star": {"name": "Stephen Curry", "big": 41, "big_label": "points on 13-of-19 shooting", "lines": ["10 of 10 at the line", "19 in the fourth quarter and OT"]}, "story": "Up 16 at the half. Orlando tied it at the buzzer. Golden State won overtime 16–9.", "aria": "Animated Short: Stephen Curry drives into the lane with 1:38 left in overtime, Warriors down 118–117, and makes a floater through contact, then the free throw for a 120–118 lead. Warriors win 126–119. An original illustration, not traced from footage, not to scale."};
+  const C = {"out": "short-2026-11-07-ORL-GSW.html", "team": "GSW", "number": "30", "kit": {"jersey": "#F4F4F2", "number": "#1D428A"}, "build": {"tall": 0.9487, "ape": 1.027, "mass": 0.9902, "skin": "#b07a55", "hairColor": "#1b1410", "hair": "crop", "beard": true, "stubble": 0.38, "kneeSleeve": "#16181d", "ankleBrace": "#16181d"}, "build_note": "Listed 6-2, 200 lb (Basketball-Reference), reported 6-4 wingspan (Sportskeeda)", "kicker": "WARRIORS 126 · MAGIC 119 · OT · NOV 7", "hook": ["Steph's and-one", "to win it in OT"], "clock": "OT · 1:38", "us": "GSW", "them": "ORL", "score_before": [117, 118], "score_make": [119, 118], "score_ft": [120, 118], "stamp": "AND-ONE", "ft_line": ["+1 at the line.", "Warriors lead for good."], "final": {"label": "FINAL · OT", "us": "Warriors", "them": "Magic", "us_pts": 126, "them_pts": 119}, "star": {"name": "Stephen Curry", "big": 41, "big_label": "points on 13-of-19 shooting", "lines": ["10 of 10 at the line", "19 in the fourth quarter and OT"]}, "story": "Up 16 at the half. Orlando tied it at the buzzer. Golden State won overtime 16–9.", "aria": "Animated Short: Stephen Curry drives into the lane with 1:38 left in overtime, Warriors down 118–117, and makes a floater through contact, then the free throw for a 120–118 lead. Warriors win 126–119. An original illustration, not traced from footage, not to scale.", "signature": "splash", "gold": "#FFC72C", "accent": "#FFC72C"};
   const NS = 'http://www.w3.org/2000/svg';
   const clamp = (v) => Math.max(0, Math.min(1, v));
   const ease = (v) => 1 - Math.pow(1 - v, 3);
@@ -261,7 +261,8 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
   const floor = 1230, hoopX = W - M - 20, rimY = floor - 240 * k * 1.62, rimR = 30 * k;
   const TOTAL = 26;
   // scene timing (seconds of the Short)
-  const P0 = 0.25, PLAY = 5.2, FT0 = 5.6, R0 = 7.6, R_FROM = 1.5, R_TO = 4.5, R_SPEED = 0.42, FIN0 = 15.2, END0 = 21.5;
+  const JUMP = C.play_type === 'jumper';
+  const P0 = 0.25, PLAY = 5.2, FT0 = 5.6, R0 = 7.6, R_FROM = JUMP ? 0.9 : 1.5, R_TO = JUMP ? 3.7 : 4.5, R_SPEED = 0.42, FIN0 = 15.2, END0 = 21.5;
   const R1 = R0 + (R_TO - R_FROM) / R_SPEED;
 
   const defs = S('defs', {}, svg);
@@ -291,41 +292,72 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
   S('rect', {x: hoopX + 26 * k, y: rimY - 150 * k, width: 12 * k, height: 170 * k, rx: 3, fill: 'var(--silver)'}, play);
   S('line', {x1: hoopX - rimR, x2: hoopX + 26 * k, y1: rimY, y2: rimY, class: 's-red', 'stroke-width': 6, 'stroke-linecap': 'round'}, play);
   const net = S('g', {class: 's-silver', 'stroke-width': 2, opacity: .8}, play);
-  for (let i = 0; i <= 4; i++) { const tp = hoopX - rimR + i * rimR / 2, bt = hoopX - rimR * .55 + i * rimR * 1.1 / 4; S('line', {x1: tp, y1: rimY, x2: bt, y2: rimY + 44 * k}, net); }
+  // signature finish (per star): 'splash' = Steph's gold arc, backspin, the net snapping, rings and droplets, then SPLASH
+  const SIG = C.signature || null, GOLD = C.gold || '#FFC72C', FXC = SIG === 'splash' ? GOLD : (C.accent || '#FF5A1F');
+  const netL = Array.from({length: 5}, () => S('line', {}, net));
+  const drawNet = (snap) => netL.forEach((l, i) => { const L = 44 * k * (1 + .55 * snap), tp = hoopX - rimR + i * rimR / 2, bt = hoopX - rimR * (.55 - .18 * snap) + i * rimR * (1.1 - .36 * snap) / 4; l.setAttribute('x1', tp); l.setAttribute('y1', rimY); l.setAttribute('x2', bt); l.setAttribute('y2', rimY + L); });
+  drawNet(0);
+  const rings = [0, 1, 2].map(() => S('ellipse', {cx: hoopX, cy: rimY + 4, rx: 0, ry: 0, fill: 'none', stroke: FXC, 'stroke-width': 3, opacity: 0}, play));
+  const drops = SIG === 'splash' ? Array.from({length: 16}, (_, i) => ({a: -Math.PI / 2 + (i / 15 - .5) * 2.6, v: 260 + (i * 53) % 170, r: 7 + (i * 7) % 6, n: S('circle', {r: 6, fill: i % 3 ? '#cfe6ff' : GOLD, opacity: 0}, play)})) : [];
   // figures
   const defender = figure(play, 'opp', k); defender.g.setAttribute('opacity', .85);
   const ghosts = [0, 1, 2].map(() => { const gh = figureReal(play, 'phi', k, C.number, BUILD); gh.g.style.opacity = 0; return gh; }).reverse();
   const star = figureReal(play, 'phi', k, C.number, BUILD);
   const burst = S('g', {class: 's-red', 'stroke-width': 5, 'stroke-linecap': 'round', opacity: 0}, play);
   for (let i = 0; i < 5; i++) { const a = -Math.PI / 2 + (i - 2) * 0.5; S('line', {x1: Math.cos(a) * 26, y1: Math.sin(a) * 26, x2: Math.cos(a) * 52, y2: Math.sin(a) * 52}, burst); }
-  const trail = S('path', {fill: 'none', stroke: 'var(--silver)', 'stroke-width': 4, 'stroke-linecap': 'round', opacity: .6, filter: 'url(#glow)'}, play);
+  const trail = S('path', {fill: 'none', stroke: FXC, 'stroke-width': 5, 'stroke-linecap': 'round', opacity: .8, filter: 'url(#glow)'}, play);
+  const sparks = Array.from({length: 12}, () => S('circle', {r: 3.5, fill: FXC, opacity: 0}, play));
   const ball = S('circle', {r: 13 * k, class: 'f-ink', filter: 'url(#glow)'}, play);
+  const seam = S('path', {d: `M${-13 * k} 0L${13 * k} 0M0 ${-13 * k}Q${7 * k} 0 0 ${13 * k}`, stroke: 'rgba(17,18,20,.55)', 'stroke-width': 2.4, fill: 'none'}, play);
   const flash = S('circle', {cx: hoopX, cy: rimY, r: 0, fill: 'none', stroke: 'var(--ink)', 'stroke-width': 4, opacity: 0}, play);
-  const stamp = T(play, hoopX - 40, rimY - 120, C.stamp, 'd', 78, 'end'); stamp.style.fill = 'var(--red)';
+  const stamp = T(play, hoopX - 40, rimY - 120, C.stamp, 'd', 78, 'end'); stamp.style.fill = FXC;
+  const sigWord = SIG === 'splash' ? T(play, hoopX - 40, rimY - 50, 'SPLASH', 'd', 60, 'end') : null; if (sigWord) { sigWord.style.fill = GOLD; sigWord.style.opacity = 0; }
   const ftG = S('g', {opacity: 0}, play);
-  T(ftG, M, floor + 130, C.ft_line[0], 'd', 54);
-  T(ftG, M, floor + 190, C.ft_line[1], 'b m', 36);
+  const BEAT = C.ft_line || C.beat; if (!C.score_ft) C.score_ft = C.score_make;
+  T(ftG, M, floor + 130, BEAT[0], 'd', 54);
+  T(ftG, M, floor + 190, BEAT[1], 'b m', 36);
   T(play, M, H - 56, 'Original illustration · not traced from footage, not to scale', 'b m', 22);
 
-  // the play, as a function of play-time pt (0..PLAY)
-  const x0 = 70, xG = hoopX - 300 * k, tG = 2.2, tC = 2.45, tR = 2.95, tM = 4.0;
-  const peak = 200; // keeps the arc under the scoreboard
-  let rel = null;
-  const starAt = (pt) => {
-    let x, pose, lift = 0;
-    if (pt < tG) { const p = clamp(pt / tG); x = lerp(x0, xG, inout(p)); const c = Math.sin(pt * 9) * .5 + .5; pose = mixPose(POSES.run1, POSES.run2, c); }
-    else if (pt < tR - .15) { x = xG + 10 * k * prog(pt, tG, .3); pose = mixPose(POSES.run1, POSES.gather, prog(pt, tG, .25)); }
-    else if (pt < tR + .5) { x = xG + 10 * k; const u = prog(pt, tR - .15, .3); pose = mixPose(POSES.gather, POSES.float, u); lift = 34 * u; }
-    else { x = xG + 10 * k; const d = clamp((pt - tR - .5) / .5); pose = mixPose(POSES.float, POSES.land, d); lift = 34 * (1 - d * d); }
-    return [pose, x, lift];
-  };
-  rel = (() => { const at = star.draw(POSES.float, xG + 10 * k, floor - 34 * k, k, 1); const h = at('rh'); return [h[0] + 6 * k, h[1] - 12 * k]; })();
+  // the play, as a function of play-time pt (0..PLAY). Types: 'drive' (default: drive, contact, floater) and 'jumper' (pull-up / catch-and-shoot, two or three)
+  let x0, xG, tG, tC, tR, tM, peak, starAt, defAt;
+  if (JUMP) {
+    const three = !!C.three; xG = hoopX - (three ? 560 : 380) * k / 1.5; x0 = xG - 130 * k;
+    tG = 1.15; tC = -9; tR = 1.75; tM = tR + (three ? 1.25 : 1.0); peak = three ? 230 : 190;
+    starAt = (pt) => {
+      if (pt < tG) { const x = lerp(x0, xG, inout(clamp(pt / tG))); const c = Math.sin(pt * 8) * .5 + .5; return [mixPose(POSES.run1, POSES.run2, c), x, 0]; }
+      if (pt < tG + .3) return [mixPose(POSES.run1, POSES.set, prog(pt, tG, .25)), xG, 0];
+      if (pt < tR + .1) { const u = clamp((pt - tG - .3) / (tR + .1 - tG - .3)); return [mixPose(POSES.set, POSES.rise, ease(u)), xG, 54 * Math.sin(Math.PI / 2 * u)]; }
+      const d = clamp((pt - tR - .1) / .55); return [mixPose(POSES.rise, POSES.dribble, d), xG, 54 * (1 - d * d)];
+    };
+    defAt = (pt, x) => { // closes out and contests the release
+      const dx = lerp(xG + 300 * k, xG + 125 * k, prog(pt, .3, tR - .2)); let pose = POSES.guard, l = 0;
+      if (pt > tR - .45) { pose = mixPose(POSES.guard, POSES.contest, prog(pt, tR - .45, .3)); l = 26 * Math.sin(Math.PI * clamp((pt - tR + .45) / .8)); }
+      if (pt > tR + .5) pose = mixPose(POSES.contest, POSES.guard, prog(pt, tR + .5, .4));
+      return [pose, dx, l];
+    };
+  } else {
+    x0 = 70; xG = hoopX - 300 * k; tG = 2.2; tC = 2.45; tR = 2.95; tM = 4.0; peak = 200;
+    starAt = (pt) => {
+      let x, pose, lift = 0;
+      if (pt < tG) { const p = clamp(pt / tG); x = lerp(x0, xG, inout(p)); const c = Math.sin(pt * 9) * .5 + .5; pose = mixPose(POSES.run1, POSES.run2, c); }
+      else if (pt < tR - .15) { x = xG + 10 * k * prog(pt, tG, .3); pose = mixPose(POSES.run1, POSES.gather, prog(pt, tG, .25)); }
+      else if (pt < tR + .5) { x = xG + 10 * k; const u = prog(pt, tR - .15, .3); pose = mixPose(POSES.gather, POSES.float, u); lift = 34 * u; }
+      else { x = xG + 10 * k; const d = clamp((pt - tR - .5) / .5); pose = mixPose(POSES.float, POSES.land, d); lift = 34 * (1 - d * d); }
+      return [pose, x, lift];
+    };
+    defAt = (pt, x) => { // backpedals ahead of the drive, steps in for the contact, then contests
+      let dx = Math.min(x + 150 * k, xG + 120 * k), dPose = POSES.guard, dLift = 0;
+      if (pt > tG) { dx = lerp(xG + 120 * k, xG + 92 * k, prog(pt, tG, .25)); dPose = pt < tC + .3 ? mixPose(POSES.guard, POSES.bump, prog(pt, tG, .25)) : mixPose(POSES.bump, POSES.contest, prog(pt, tC + .3, .3)); dLift = pt > tC + .3 && pt < tM ? 18 * prog(pt, tC + .3, .3) : 0; }
+      return [dPose, dx, dLift];
+    };
+  }
+  const rel = (() => { const [p, x, l] = starAt(tR); const at = star.draw(p, x, floor - l * k, k, 1); const h = JUMP ? [(at('lh')[0] + at('rh')[0]) / 2, (at('lh')[1] + at('rh')[1]) / 2 - 16 * k] : at('rh'); return JUMP ? h : [h[0] + 6 * k, h[1] - 12 * k]; })();
   const arcAt = (u) => [lerp(rel[0], hoopX, u), lerp(rel[1], rimY - 6, u) - 4 * peak * u * (1 - u)];
   const trailTo = (u) => { const n = Math.max(1, Math.round(u * 60)); trail.setAttribute('d', u <= 0 ? 'M0 0' : 'M' + Array.from({length: n + 1}, (_, i) => arcAt(i / n * u)).map(([x, y]) => `${x.toFixed(1)} ${y.toFixed(1)}`).join('L')); };
 
   const drawPlay = (pt, slow) => {
     const [pose, x, lift] = starAt(pt);
-    // trait: his handle on the drive, a fading afterimage trail
+    // his movement into the shot leaves a fading afterimage trail (as in the signature pieces)
     ghosts.forEach((gh, i) => {
       const on = pt > .3 && pt < tG + .2;
       if (!on) { gh.g.style.opacity = 0; return; }
@@ -333,24 +365,34 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
       gh.draw(gp, gx, floor - gl * k, k, 1); gh.g.style.opacity = ((.42 - i * .12) * (1 - prog(pt, tG - .1, .3))).toFixed(2);
     });
     const at = star.draw(pose, x, floor - lift * k, k, 1);
-    // defender: backpedals ahead of the drive, steps in for the contact, then turns to watch
-    let dx = Math.min(x + 150 * k, xG + 120 * k), dPose = POSES.guard, dLift = 0;
-    if (pt > tG) { dx = lerp(xG + 120 * k, xG + 92 * k, prog(pt, tG, .25)); dPose = pt < tC + .3 ? mixPose(POSES.guard, POSES.bump, prog(pt, tG, .25)) : mixPose(POSES.bump, POSES.contest, prog(pt, tC + .3, .3)); dLift = pt > tC + .3 && pt < tM ? 18 * prog(pt, tC + .3, .3) : 0; }
+    const [dPose, dx, dLift] = defAt(pt, x);
     defender.draw(dPose, dx, floor - dLift * k, k, -1);
-    // contact burst
+    // contact burst (drives only)
     const cOn = pt > tC - .05 && pt < tC + .6;
     burst.setAttribute('transform', `translate(${(x + dx) / 2} ${floor - 175 * k})`);
     burst.setAttribute('opacity', cOn ? (1 - prog(pt, tC + .25, .35)).toFixed(2) : 0);
     // ball
     let bx, by;
     if (pt < tG) { const [hx, hy] = at('rh'); const ph = (pt * 3.2) % 1, f = ph < .5 ? ph * 2 : (1 - ph) * 2; bx = hx + 8 * k; by = lerp(hy, floor - 13 * k, f * f * (3 - 2 * f)); }
-    else if (pt < tR) { const [hx, hy] = at('rh'); bx = hx + 4 * k; by = hy - 10 * k; }
+    else if (pt < tR) { if (JUMP) { bx = (at('lh')[0] + at('rh')[0]) / 2; by = (at('lh')[1] + at('rh')[1]) / 2 - 16 * k; } else { const [hx, hy] = at('rh'); bx = hx + 4 * k; by = hy - 10 * k; } }
     else if (pt < tM) { const u = clamp((pt - tR) / (tM - tR)); [bx, by] = arcAt(u); trailTo(u); }
     else { const d = clamp((pt - tM) / .6); bx = hoopX - 4; by = lerp(rimY - 6, floor - 13 * k, d * d); }
     if (pt < tR) trailTo(0); else if (pt >= tM) trailTo(1);
+    trail.setAttribute('opacity', pt < tM ? .8 : (.8 * (1 - prog(pt, tM, .45))).toFixed(2));
     ball.setAttribute('cx', bx); ball.setAttribute('cy', by);
-    const made = pt >= tM, f = made ? clamp((pt - tM) / .8) : 0;
-    flash.setAttribute('r', rimR + 140 * f); flash.setAttribute('opacity', made ? 1 - f : 0);
+    // the finish every star gets: backspin, sparks off the arc, the net snapping, rings off the rim; Steph adds the splash
+    const spin = pt < tR ? 0 : -(Math.min(pt, tM) - tR) * 1440 - Math.max(0, pt - tM) * 600;
+    seam.setAttribute('transform', `translate(${bx.toFixed(1)} ${by.toFixed(1)}) rotate(${spin.toFixed(0)})`);
+    sparks.forEach((sk, i) => { const su = (i + .5) / sparks.length, born = tR + su * (tM - tR), age = pt - born;
+      if (age < 0 || age > 1.1) { sk.setAttribute('opacity', 0); return; }
+      const [sx, sy] = arcAt(su); sk.setAttribute('cx', sx + Math.sin(i * 2.1) * 10 * age); sk.setAttribute('cy', sy + 70 * age * age + 20 * age); sk.setAttribute('opacity', (1 - age / 1.1).toFixed(2)); });
+    const sp = pt - tM;
+    drawNet(sp > 0 ? (sp < .5 ? Math.sin(Math.PI * sp / .5) : .25 * Math.sin(Math.PI * clamp((sp - .5) / .4))) : 0);
+    rings.forEach((r, i) => { const a = sp - i * .14; if (a < 0 || a > 1) { r.setAttribute('opacity', 0); return; } const e = ease(a); r.setAttribute('rx', rimR + 150 * e); r.setAttribute('ry', 10 + 34 * e); r.setAttribute('opacity', (1 - a).toFixed(2)); });
+    drops.forEach((d) => { const a = sp - .02; if (a < 0 || a > 1) { d.n.setAttribute('opacity', 0); return; } d.n.setAttribute('cx', hoopX + Math.cos(d.a) * d.v * a); d.n.setAttribute('cy', rimY + 30 * k + Math.sin(d.a) * d.v * a + 520 * a * a); d.n.setAttribute('r', d.r * (1 - a * .5)); d.n.setAttribute('opacity', (1 - a).toFixed(2)); });
+    if (sigWord) { sigWord.style.opacity = sp > .55 ? prog(pt, tM + .55, .25) : 0; sigWord.setAttribute('transform', `translate(0 ${sp > .55 ? 14 * (1 - prog(pt, tM + .55, .3)) : 14})`); }
+    const made = pt >= tM;
+    flash.setAttribute('opacity', 0);
     stamp.style.opacity = made ? prog(pt, tM + .05, .25) : 0;
     stamp.setAttribute('transform', `scale(${made ? 1 + .25 * (1 - prog(pt, tM + .05, .25)) : 1})`); stamp.style.transformOrigin = `${hoopX - 40}px ${rimY - 120}px`;
     slowTag.setAttribute('opacity', slow ? 1 : 0);

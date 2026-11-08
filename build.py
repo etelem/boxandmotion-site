@@ -375,15 +375,50 @@ for g in GAMES:
     page(f"games/{g['slug']}/index.html", f"{T[a]['name']} {g['as_']}, {T[h]['name']} {g['hs']} · Box & Motion Hoops", body, active="Last Night",
          desc=(f["dek"] if f else auto))
 
+# ---- calendar archive (below the current week on Last Night, and on every date page) ----
+def calendar(R, sel=None):
+    counts = {}
+    for g in GAMES: counts[g["date"]] = counts.get(g["date"], 0) + 1
+    months = sorted({d[:7] for d in counts}, reverse=True)
+    out = []
+    for ym in months:
+        y, m = map(int, ym.split("-"))
+        first = datetime.date(y, m, 1)
+        nxt = datetime.date(y + (m == 12), m % 12 + 1, 1)
+        cells = ['<span></span>'] * first.weekday()
+        for day in range(1, (nxt - first).days + 1):
+            d = f"{ym}-{day:02d}"
+            n = counts.get(d)
+            cls = ' class="on"' if d == sel else ''
+            cells.append(f'<a{cls} href="{R}days/{d}/index.html" title="{WEEKDAY(d)}: {n} game{"s" if n != 1 else ""}">{day}<i></i></a>' if n else f'<span class="off">{day}</span>')
+        out.append(f'<div class="card pad cal"><p class="k">{first.strftime("%B %Y")}</p><div class="cal-g">{"".join(f"<b>{w}</b>" for w in "MTWTFSS")}{"".join(cells)}</div></div>')
+    return f'<section class="sec" id="archive"><div class="sec" style="gap:6px"><p class="k">Archive</p><h2 class="h2">Every game day</h2><p class="dim" style="margin:0">Pick a date to see that day\'s results.</p></div><div class="cal-row">{"".join(out)}</div></section>'
+
 # ---- last night ----
 R = "../"
 earlier = sorted({g["date"] for g in GAMES if g["date"] != LAST_DATE and g["date"] >= WEEK_START}, reverse=True)
 ear = "".join(f'<section class="sec"><p class="k">{WEEKDAY(d)}</p><div class="grid g3" data-games>{"".join(game_card(g, R) for g in GAMES if g["date"]==d)}</div></section>' for d in earlier)
 body = f'''<div class="between"><div class="sec" style="gap:8px"><p class="k">{WEEKDAY(LAST_DATE)} · {len(LAST)} games</p><h1 class="h1">Last night</h1></div>
-<div class="tabs"><button class="pill" data-mode="mine">Your teams</button><button class="pill" data-mode="all">All games</button></div></div>
+<div class="tabs"><button class="pill" data-mode="mine">Your teams</button><button class="pill" data-mode="all">All games</button><a class="pill" href="#archive">📅 Archive</a></div></div>
 <section class="sec"><div class="grid g3" data-games>{"".join(game_card(g, R) for g in LAST)}</div><p class="dim none-note hidden" style="margin:0">None of your teams played last night. <button class="pill sm" data-mode="all">Show all games</button></p></section>
-<h2 class="h2">Earlier this week</h2>{ear}'''
+{'<h2 class="h2">Earlier this week</h2>' + ear if ear else ''}
+{calendar(R)}'''
 page("last-night/index.html", "Last night · Box & Motion Hoops", body, active="Last Night")
+
+# ---- archive: one page per game date, reached from the calendar ----
+DATES = sorted({g["date"] for g in GAMES})
+for i, d in enumerate(DATES):
+    R = "../../"
+    prev_l = f'<a class="pill sm" href="{R}days/{DATES[i-1]}/index.html">← {WEEKDAY(DATES[i-1])}</a>' if i > 0 else ''
+    next_l = f'<a class="pill sm" href="{R}days/{DATES[i+1]}/index.html">{WEEKDAY(DATES[i+1])} →</a>' if i + 1 < len(DATES) else ''
+    day_games = [g for g in GAMES if g["date"] == d]
+    body = f'''<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}last-night/index.html">Games</a><span>/</span><span>{WEEKDAY(d)}</span></nav>
+<div class="between"><div class="sec" style="gap:8px"><p class="k">{len(day_games)} game{'s' if len(day_games) != 1 else ''}</p><h1 class="h1">{WEEKDAY(d)}</h1></div>
+<div class="row">{prev_l}{next_l}</div></div>
+<section class="sec"><div class="grid g3">{"".join(game_card(g, R, show_mine=False) for g in day_games)}</div></section>
+{calendar(R, d)}'''
+    page(f"days/{d}/index.html", f"NBA games, {WEEKDAY(d)} · Box & Motion Hoops", body, active="Last Night",
+         desc=f"Every NBA result from {WEEKDAY(d)}, with recaps in motion.")
 
 # ---- odds ----
 R = "../"
