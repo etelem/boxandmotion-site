@@ -44,9 +44,9 @@ html.short .wrap{border-radius:0}
 .step.on{opacity:1}
 </style></head><body>
 <div class="wrap">
-<svg id="sv" role="img" aria-label="Animated illustration of Luka Dončić&#x27;s step-back three: he jabs toward the basket so the defender backs off, hops back behind the three-point line with both feet, then rises and releases over a late closeout. An original drawing, not traced from footage, not to scale."></svg>
+<svg id="sv" role="img" aria-label="Animated illustration of Luka Dončić&#x27;s step-back three: he jabs toward the basket so the defender backs off, crosses the ball back between his legs to his left as he hops back behind the three-point line, then rises and releases over a late closeout. An original drawing, not traced from footage, not to scale."></svg>
 <div class="bar"><button id="pp" type="button">Pause</button><button id="slow" type="button" aria-pressed="false">Slow motion</button><span class="sp"></span>
-<button class="jump" data-t="0.6" type="button">1 · Jab</button><button class="jump" data-t="2.0" type="button">2 · Hop back</button><button class="jump" data-t="2.9" type="button">3 · Rise</button></div>
+<button class="jump" data-t="0.6" type="button">1 · Jab</button><button class="jump" data-t="2.0" type="button">2 · Between the legs</button><button class="jump" data-t="2.9" type="button">3 · Rise</button></div>
 </div>
 <script>
 (() => {
@@ -237,9 +237,9 @@ html.short .wrap{border-radius:0}
     };
   }
 
-  const BUILD = {"tall": 1.025641, "ape": 1.0375, "mass": 1.021325};
+  const BUILD = {"tall": 1.025641, "ape": 1.0375, "mass": 1.021325, "skin": "#e9c3a2", "hairColor": "#6b4a2f"};
   const svg = document.getElementById('sv');
-  const steps = [["1", "The jab", "The defender has to respect the drive."], ["2", "The hop back", "Both feet, landing already set."], ["3", "The rise", "A high release over the closeout."]];
+  const steps = [["1", "The jab", "The defender has to respect the drive."], ["2", "Between the legs", "He crosses it back to his left and hops into the shot."], ["3", "The rise", "A high release over the closeout."]];
   const TOTAL = 7.2;
   let L = null, built = null;
 
@@ -363,7 +363,14 @@ html.short .wrap{border-radius:0}
       pLand.setAttribute('cx', xLand); pLand.setAttribute('cy', floor + 2); pLand.setAttribute('opacity', lt > t.land && lt < t.make + 1.2 ? .55 : 0);
       // ball
       let bx, by;
-      if (lt < t.rise) { const [hx, hy] = at('rh'); const ph = (lt * 2.6) % 1, f = ph < .5 ? ph * 2 : (1 - ph) * 2; bx = hx + 6 * k; by = lt < t.land ? lerp(hy, floor - 13 * k, f * f * (3 - 2 * f)) : (at('lh')[1] + hy) / 2 - 16 * k; if (lt >= t.land) bx = (at('lh')[0] + hx) / 2 + 4 * k; }
+      if (lt >= t.hop && lt < t.land + .15) {
+        // between the legs: right hand down through his legs, up into the left hand as he hops back to his left
+        const p = clamp((lt - t.hop) / (t.land + .15 - t.hop)), [rx, ry] = at('rh'), [qx, qy] = at('lh');
+        const px = (at('lf')[0] + at('rf')[0]) / 2, py = floor - 13 * k;
+        if (p < .45) { const q = p / .45; bx = lerp(rx + 6 * k, px, q); by = lerp(ry, py, q * q); }
+        else { const q = (p - .45) / .55; bx = lerp(px, qx - 4 * k, q); by = lerp(py, qy, 1 - (1 - q) * (1 - q)); }
+      }
+      else if (lt < t.rise) { const [hx, hy] = at('rh'); const ph = (lt * 2.5) % 1, f = ph < .5 ? ph * 2 : (1 - ph) * 2; bx = hx + 6 * k; by = lt < t.land ? lerp(hy, floor - 13 * k, f * f * (3 - 2 * f)) : (at('lh')[1] + hy) / 2 - 16 * k; if (lt >= t.land) bx = (at('lh')[0] + hx) / 2 + 4 * k; }
       else if (lt < t.rel) { bx = (at('lh')[0] + at('rh')[0]) / 2 + 4 * k; by = (at('lh')[1] + at('rh')[1]) / 2 - 16 * k; }
       else if (lt < t.make) { const u = inout(clamp((lt - t.rel) / (t.make - t.rel))); [bx, by] = arcAt(u); trail.setAttribute('stroke-dasharray', `${u.toFixed(3)} 1`); }
       else { const d = clamp((lt - t.make) / .6); bx = hoopX - 4; by = lerp(rimY - 6, floor - 13 * k, d * d); }

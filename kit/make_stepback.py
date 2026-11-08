@@ -62,7 +62,7 @@ html.short .wrap{border-radius:0}
 <div class="wrap">
 <svg id="sv" role="img" aria-label="__ARIA__"></svg>
 <div class="bar"><button id="pp" type="button">Pause</button><button id="slow" type="button" aria-pressed="false">Slow motion</button><span class="sp"></span>
-<button class="jump" data-t="0.6" type="button">1 · Jab</button><button class="jump" data-t="2.0" type="button">2 · Hop back</button><button class="jump" data-t="2.9" type="button">3 · Rise</button></div>
+__JUMPS__</div>
 </div>
 <script>
 (() => {
@@ -205,7 +205,14 @@ __FIGURE_REAL__
       pLand.setAttribute('cx', xLand); pLand.setAttribute('cy', floor + 2); pLand.setAttribute('opacity', lt > t.land && lt < t.make + 1.2 ? .55 : 0);
       // ball
       let bx, by;
-      if (lt < t.rise) { const [hx, hy] = at('rh'); const ph = (lt * 2.6) % 1, f = ph < .5 ? ph * 2 : (1 - ph) * 2; bx = hx + 6 * k; by = lt < t.land ? lerp(hy, floor - 13 * k, f * f * (3 - 2 * f)) : (at('lh')[1] + hy) / 2 - 16 * k; if (lt >= t.land) bx = (at('lh')[0] + hx) / 2 + 4 * k; }
+      if (lt >= t.hop && lt < t.land + .15) {
+        // between the legs: right hand down through his legs, up into the left hand as he hops back to his left
+        const p = clamp((lt - t.hop) / (t.land + .15 - t.hop)), [rx, ry] = at('rh'), [qx, qy] = at('lh');
+        const px = (at('lf')[0] + at('rf')[0]) / 2, py = floor - 13 * k;
+        if (p < .45) { const q = p / .45; bx = lerp(rx + 6 * k, px, q); by = lerp(ry, py, q * q); }
+        else { const q = (p - .45) / .55; bx = lerp(px, qx - 4 * k, q); by = lerp(py, qy, 1 - (1 - q) * (1 - q)); }
+      }
+      else if (lt < t.rise) { const [hx, hy] = at('rh'); const ph = (lt * 2.5) % 1, f = ph < .5 ? ph * 2 : (1 - ph) * 2; bx = hx + 6 * k; by = lt < t.land ? lerp(hy, floor - 13 * k, f * f * (3 - 2 * f)) : (at('lh')[1] + hy) / 2 - 16 * k; if (lt >= t.land) bx = (at('lh')[0] + hx) / 2 + 4 * k; }
       else if (lt < t.rel) { bx = (at('lh')[0] + at('rh')[0]) / 2 + 4 * k; by = (at('lh')[1] + at('rh')[1]) / 2 - 16 * k; }
       else if (lt < t.make) { const u = inout(clamp((lt - t.rel) / (t.make - t.rel))); [bx, by] = arcAt(u); trail.setAttribute('stroke-dasharray', `${u.toFixed(3)} 1`); }
       else { const d = clamp((lt - t.make) / .6); bx = hoopX - 4; by = lerp(rimY - 6, floor - 13 * k, d * d); }
@@ -243,7 +250,8 @@ __FIGURE_REAL__
 </body></html>
 """
 import html as _h
-out = HTML.replace('__NAME__', _h.escape(CFG['name'])).replace('__TITLE__', _h.escape(CFG['title'])).replace('__ARIA__', _h.escape(CFG['aria'])).replace('__STEPS__', json.dumps(CFG['steps'], ensure_ascii=False)).replace('__NAMEJS__', json.dumps(CFG['name'], ensure_ascii=False)).replace('__TITLEJS__', json.dumps(CFG['title'], ensure_ascii=False)).replace('__NUM__', json.dumps(CFG['number'])).replace('__PAL__', PAL).replace('__FIGURE__', FIGURE).replace('__FIGURE_REAL__', FIGURE_REAL).replace('__BUILD__', json.dumps(BUILD))
+JUMPS = ''.join(f'<button class="jump" data-t="{t}" type="button">{n} · {_h.escape((title[4:] if title.startswith("The ") else title)[:1].upper() + (title[4:] if title.startswith("The ") else title)[1:])}</button>' for t, (n, title, _) in zip(('0.6', '2.0', '2.9'), CFG['steps']))
+out = HTML.replace('__JUMPS__', JUMPS).replace('__NAME__', _h.escape(CFG['name'])).replace('__TITLE__', _h.escape(CFG['title'])).replace('__ARIA__', _h.escape(CFG['aria'])).replace('__STEPS__', json.dumps(CFG['steps'], ensure_ascii=False)).replace('__NAMEJS__', json.dumps(CFG['name'], ensure_ascii=False)).replace('__TITLEJS__', json.dumps(CFG['title'], ensure_ascii=False)).replace('__NUM__', json.dumps(CFG['number'])).replace('__PAL__', PAL).replace('__FIGURE__', FIGURE).replace('__FIGURE_REAL__', FIGURE_REAL).replace('__BUILD__', json.dumps(BUILD))
 os.makedirs(os.path.join(ROOT, 'src', 'anim'), exist_ok=True)
 dst = os.path.join(ROOT, 'src', 'anim', CFG['out'])
 open(dst, 'w').write(out)

@@ -4,8 +4,30 @@
   "number": "77",
   "name": "Luka Dončić",
   "title": "The step-back three",
-  "build": {"tall": 1.025641, "ape": 1.0375, "mass": 1.021325},
+  "build": {
+    "tall": 1.025641,
+    "ape": 1.0375,
+    "mass": 1.021325,
+    "skin": "#e9c3a2",
+    "hairColor": "#6b4a2f"
+  },
   "build_note": "Listed 6-8, 230 lb, reported 6-11 wingspan",
-  "steps": [["1", "The jab", "The defender has to respect the drive."], ["2", "The hop back", "Both feet, landing already set."], ["3", "The rise", "A high release over the closeout."]],
-  "aria": "Animated illustration of Luka Dončić's step-back three: he jabs toward the basket so the defender backs off, hops back behind the three-point line with both feet, then rises and releases over a late closeout. An original drawing, not traced from footage, not to scale."
+  "steps": [
+    [
+      "1",
+      "The jab",
+      "The defender has to respect the drive."
+    ],
+    [
+      "2",
+      "Between the legs",
+      "He crosses it back to his left and hops into the shot."
+    ],
+    [
+      "3",
+      "The rise",
+      "A high release over the closeout."
+    ]
+  ],
+  "aria": "Animated illustration of Luka Dončić's step-back three: he jabs toward the basket so the defender backs off, crosses the ball back between his legs to his left as he hops back behind the three-point line, then rises and releases over a late closeout. An original drawing, not traced from footage, not to scale."
 }
