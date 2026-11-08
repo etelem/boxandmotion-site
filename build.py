@@ -234,7 +234,7 @@ home = f'''
   {board_card(R, BOARDS[0]) if BOARDS else ''}
  </div>
 </section>
-<section class="card cta"><div><p class="k">Free · every Sunday</p><b class="d" style="font-size:clamp(30px,5vw,40px)">The Sunday Box</b><p style="margin:6px 0 0;color:#d5d6d9">The week's best game, playoff odds movers and one deep dive, in four minutes.</p></div>
+<section class="card cta"><div><p class="k">Free · every Monday morning</p><b class="d" style="font-size:clamp(30px,5vw,40px)">Monday in Motion</b><p style="margin:6px 0 0;color:#d5d6d9">The week's best game, playoff odds movers and one deep dive, in four minutes.</p></div>
 <a class="pill hot" href="{NEWSLETTER}" target="_blank" rel="noopener">Subscribe free</a></section>
 '''
 page("index.html", "Box & Motion Hoops: every NBA game, explained", home)
@@ -499,12 +499,12 @@ for cslug, bl in by_coach.items():
 
 # ---- newsletter ----
 R = "../"
-body = f'''<section style="display:flex;flex-wrap:wrap;gap:32px;align-items:center"><div class="sec" style="flex:1 1 420px;gap:12px"><p class="k">Free · every Sunday</p><h1 class="h1">The Sunday Box</h1>
+body = f'''<section style="display:flex;flex-wrap:wrap;gap:32px;align-items:center"><div class="sec" style="flex:1 1 420px;gap:12px"><p class="k">Free · every Monday morning</p><h1 class="h1">Monday in Motion</h1>
 <p style="margin:0;font-size:20px;max-width:32em">The week in four minutes: the game of the week, the playoff odds movers, one deep dive and the games to watch.</p>
 <div class="row"><a class="pill hot" href="{NEWSLETTER}" target="_blank" rel="noopener">Subscribe free</a><span class="dim">Unsubscribe anytime.</span></div></div>
 <div class="card pad" style="flex:1 1 320px;display:flex;flex-direction:column;gap:10px"><p class="k">This week's issue</p><b class="d" style="font-size:30px">Two 50-point nights</b>
 <ol style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px"><li>The week in one line</li><li>Game of the week: Spurs 112, Mavericks 111</li><li>Playoff race movers</li><li>Deep dive: Luka Dončić</li><li>Games to watch this week</li></ol></div></section>'''
-page("newsletter/index.html", "The Sunday Box newsletter · Box & Motion Hoops", body, active="Newsletter")
+page("newsletter/index.html", "Monday in Motion newsletter · Box & Motion Hoops", body, active="Newsletter")
 
 # ---- about + 404 ----
 body = f'''<div class="sec" style="gap:12px;max-width:44em"><h1 class="h1">About</h1><p style="font-size:18px;margin:0">Box &amp; Motion explains every NBA game in animation: a recap for every game, nightly playoff odds, and scouting reports and coach whiteboards every week or two.</p>
