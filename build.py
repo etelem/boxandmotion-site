@@ -196,7 +196,7 @@ for conf in ("East", "West"):
     cols = ""
     for dv in sorted(divs):
         rows = "".join(f'''<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-top:1px solid var(--line)">
-<a href="{T[c]['slug']}/index.html" style="text-decoration:none;display:flex;align-items:center;gap:10px"><span style="width:14px;height:14px;border-radius:4px;background:{T[c]['c1']};flex:none"></span><b>{E(T[c]['city'])} {E(T[c]['name'])}</b> <span class="dim">{rec(c)}</span></a>{star_btn(c)}</div>''' for c in sorted(divs[dv], key=lambda c: S["seeds"][c]))
+<a href="{T[c]['slug']}/index.html" style="text-decoration:none;display:flex;align-items:center;gap:10px;flex:1 1 auto;min-width:0"><span style="width:14px;height:14px;border-radius:4px;background:{T[c]['c1']};flex:none"></span><span style="display:flex;flex-wrap:wrap;align-items:baseline;column-gap:8px;row-gap:0;min-width:0"><b>{E(T[c]['city'])} {E(T[c]['name'])}</b><span class="dim" style="white-space:nowrap">{rec(c)}</span></span></a><span style="flex:none">{star_btn(c)}</span></div>''' for c in sorted(divs[dv], key=lambda c: S["seeds"][c]))
         cols += f'<div class="card pad"><p class="k">{dv}</p>{rows}</div>'
     blocks += f'<section class="sec"><h2 class="h2">{conf}</h2><div class="grid g3">{cols}</div></section>'
 page("teams/index.html", "Teams · Box & Motion Hoops", f'<div class="sec" style="gap:8px"><p class="k">All 30 teams · ★ to follow</p><h1 class="h1">Teams</h1><p class="dim" style="margin:0;font-size:18px">Follow your teams and they move to the top of the home page and Last Night. Saved on this device.</p></div>{blocks}', active="Teams")
