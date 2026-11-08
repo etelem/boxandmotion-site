@@ -214,7 +214,7 @@ home = f'''
  <div class="between"><div class="sec" style="gap:8px"><p class="k">Your teams · tap ★ on any team to follow</p><h1 class="h1">The Box Score, <span class="grad" style="white-space:nowrap">in Motion.</span></h1></div>
  <div class="row" style="gap:12px">
   <a class="chip" href="last-night/index.html"><span class="dot"></span>{len(LAST)} games last night</a>
-  <a class="chip" href="odds/index.html"><span class="dot"></span>Playoff odds mover: {E(T[movers]['name'])} {chg(O[movers]['chg'])} this week</a>
+  <a class="chip" href="odds/index.html"><span class="dot"></span>Playoff odds mover: {E(T[movers]['name'])} {chg(O[movers]['chg'])} pts this week</a>
   <a class="chip" href="players/luka-doncic/index.html"><span class="dot"></span>New: Luka scouting report</a>
  </div></div>
  <div id="mine" class="grid g3"></div>
