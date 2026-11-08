@@ -2,24 +2,29 @@
   // shorts, high-top sneakers and a head with a plain hair line. Height, arm length and build come from the player's
   // listed measurements (b.tall = height vs the 6'6" generic figure, b.ape = wingspan / height, b.mass = weight per inch
   // of height vs the generic figure). Drawn twice: a glowing outline layer under a solid fill layer. The face stays
-  // featureless on purpose: the resemblance is build, number, colors and the moment, not a portrait.
+  // featureless on purpose (hair, beard and frame are allowed, a likeness of the face is not): the resemblance is build, number, colors and the moment, not a portrait.
   function figureReal(parent, team, k, number, b) {
-    b = Object.assign({tall: 1, mass: 1, ape: 1}, b || {});
+    // optional look (all off by default): frame = extra width through shoulders, chest and hips for a heavier build;
+    // hair = 'crop' | 'swept' (fuller on top, swept back); beard = true; hairColor = a CSS color for hair and beard
+    b = Object.assign({tall: 1, mass: 1, ape: 1, frame: 1, hair: 'crop', beard: false, hairColor: null, skin: null}, b || {});
     const g = S('g', {'stroke-linecap': 'round', 'stroke-linejoin': 'round'}, parent);
     const outline = S('g', {class: `fig-o-${team}`}, g);
     if (team === 'phi') outline.setAttribute('filter', 'url(#glow)');
     const fill = S('g', {}, g);
-    const PARTS = ['armB', 'legB', 'legF', 'shorts', 'torso', 'jersey', 'band', 'neck', 'armF', 'head', 'hair', 'shoes'];
-    const CLS = {armB: 'fig-skin', legB: 'fig-skin', legF: 'fig-skin', shorts: `fig-kit-${team}`, torso: 'fig-skin', jersey: `fig-kit-${team}`, band: 'fig-band', neck: 'fig-skin', armF: 'fig-skin', head: 'fig-skin', hair: 'fig-hair', shoes: 'fig-shoe'};
+    const PARTS = ['armB', 'legB', 'legF', 'shorts', 'torso', 'jersey', 'band', 'neck', 'armF', 'head', 'hair', 'beard', 'shoes'];
+    const CLS = {armB: 'fig-skin', legB: 'fig-skin', legF: 'fig-skin', shorts: `fig-kit-${team}`, torso: 'fig-skin', jersey: `fig-kit-${team}`, band: 'fig-band', neck: 'fig-skin', armF: 'fig-skin', head: 'fig-skin', hair: 'fig-hair', beard: 'fig-hair', shoes: 'fig-shoe'};
     const OX = 7 * k;
     const o = {}, f = {};
     PARTS.forEach((p) => {
-      if (p !== 'jersey' && p !== 'band') o[p] = S('path', {'stroke-width': OX.toFixed(1)}, outline);
+      if (p !== 'jersey' && p !== 'band' && p !== 'beard') o[p] = S('path', {'stroke-width': OX.toFixed(1)}, outline);
       if (p === 'armF') {
         // the front arm crosses the jersey, so it gets its own thin edge to read as an arm, not a strap
         f.armEdge = S('path', {class: `fig-o-${team}`, 'stroke-width': (4 * k).toFixed(1)}, fill);
       }
       f[p] = S('path', {class: CLS[p], 'stroke-width': (p === 'band' ? 3 * k : p === 'jersey' || p === 'shorts' ? 2 * k : 0.5).toFixed(1)}, fill);
+      if ((p === 'hair' || p === 'beard') && b.hairColor) { f[p].style.fill = b.hairColor; f[p].style.stroke = b.hairColor; }
+      if (p === 'beard') { f[p].style.opacity = b.stubble == null ? 0.3 : b.stubble; f[p].setAttribute('stroke-width', 0); }
+      if (CLS[p] === 'fig-skin' && b.skin) { f[p].style.fill = b.skin; f[p].style.stroke = b.skin; }
       if (p === 'jersey' && number != null) {
         f.num = S('text', {class: 'fig-num', 'text-anchor': 'middle'}, fill);
         f.num.textContent = number; f.num.style.fontSize = (30 * k).toFixed(1) + 'px';
@@ -46,15 +51,15 @@
     return {
       g,
       draw(pose, x, y, kk, dir) {
-        const K = k * b.tall, W = k * b.mass;
+        const K = k * b.tall, W = k * b.mass, WT = W * b.frame;
         const P0 = (j) => [x + dir * pose[j][0] * K, y + pose[j][1] * K];
         const J = {};
         ['head', 'neck', 'hip', 'lk', 'lf', 'rk', 'rf'].forEach((j) => { J[j] = P0(j); });
         const N = J.neck, Hp = J.hip;
         let ax = N[0] - Hp[0], ay = N[1] - Hp[1]; const len = Math.hypot(ax, ay) || 1; ax /= len; ay /= len;
         const px = -ay, py = ax;
-        const along = (pt, s, w, d) => [pt[0] + px * s * w * W + ax * d * K, pt[1] + py * s * w * W + ay * d * K];
-        const shoulder = (side) => [N[0] + dir * side * 12 * W - ax * 8 * K, N[1] - ay * 8 * K];
+        const along = (pt, s, w, d) => [pt[0] + px * s * w * WT + ax * d * K, pt[1] + py * s * w * WT + ay * d * K];
+        const shoulder = (side) => [N[0] + dir * side * 12 * WT - ax * 8 * K, N[1] - ay * 8 * K];
         // arms grow from the shoulder by the wingspan ratio
         [['l', -1], ['r', 1]].forEach(([s, side]) => {
           const sh = shoulder(side), e = P0(s + 'e'), h = P0(s + 'h');
@@ -63,9 +68,9 @@
         });
         const arm = (s) => seg(J[s + 's'], J[s + 'e'], 15 * W, 16 * W, 11 * W, 0.3) + seg(J[s + 'e'], J[s + 'h'], 11 * W, 12 * W, 8 * W, 0.3);
         const ankle = (ft) => [ft[0] - dir * 2 * k, ft[1] - 16 * k];
-        const leg = (s) => seg(Hp, J[s + 'k'], 25 * W, 27 * W, 15 * W, 0.35) + seg(J[s + 'k'], ankle(J[s + 'f']), 15 * W, 18 * W, 10 * W, 0.3);
+        const leg = (s) => seg(Hp, J[s + 'k'], 25 * WT, 27 * WT, 15 * W, 0.35) + seg(J[s + 'k'], ankle(J[s + 'f']), 15 * W, 18 * W, 10 * W, 0.3);
         const shortsTo = (s) => [lerp(Hp[0], J[s + 'k'][0], 0.72), lerp(Hp[1], J[s + 'k'][1], 0.72)];
-        const shorts = seg(add(Hp, [ax, ay], 6 * K), shortsTo('l'), 30 * W, 31 * W, 28 * W, 0.5) + seg(add(Hp, [ax, ay], 6 * K), shortsTo('r'), 30 * W, 31 * W, 28 * W, 0.5)
+        const shorts = seg(add(Hp, [ax, ay], 6 * K), shortsTo('l'), 30 * WT, 31 * WT, 28 * W, 0.5) + seg(add(Hp, [ax, ay], 6 * K), shortsTo('r'), 30 * WT, 31 * WT, 28 * W, 0.5)
           + poly([along(Hp, 1, 18, 10), along(Hp, -1, 18, 10), along(Hp, -1, 17, -6), along(Hp, 1, 17, -6)]);
         // torso: broad at the shoulders, tapering to the waist; the jersey sits on it with narrow straps and open armholes
         const torso = poly([along(N, 1, 24, -6), along(N, 1, 23, -24), along(Hp, 1, 16, 26), along(Hp, 1, 16, 0), along(Hp, -1, 16, 0), along(Hp, -1, 16, 26), along(N, -1, 23, -24), along(N, -1, 24, -6)]);
@@ -75,11 +80,25 @@
         const head = `M${F(hd[0] - rx)} ${F(hd[1])}A${F(rx)} ${F(ry)} 0 1 0 ${F(hd[0] + rx)} ${F(hd[1])}A${F(rx)} ${F(ry)} 0 1 0 ${F(hd[0] - rx)} ${F(hd[1])}Z`;
         // a plain, close-cropped hair cap: higher at the forehead, lower at the back
         const cap = []; for (let i = 0; i <= 16; i += 1) { const th = -Math.PI * 1.06 + (Math.PI * 0.86) * i / 16; cap.push([hd[0] + dir * (rx + 1.2 * k) * Math.cos(th), hd[1] + (ry + 1.2 * k) * Math.sin(th)]); }
-        const hair = poly(cap.concat([[hd[0] + dir * rx * 0.35, hd[1] - ry * 0.45], [hd[0] - dir * rx * 0.3, hd[1] - ry * 0.2]]));
+        let hair = poly(cap.concat([[hd[0] + dir * rx * 0.35, hd[1] - ry * 0.45], [hd[0] - dir * rx * 0.3, hd[1] - ry * 0.2]]));
+        // closed smooth curve through points (for natural hair outlines, no jagged corners)
+        const blob = (pts) => { const n = pts.length; let d = `M${F((pts[0][0] + pts[1][0]) / 2)} ${F((pts[0][1] + pts[1][1]) / 2)}`;
+          for (let i = 1; i <= n; i += 1) { const a = pts[i % n], c = pts[(i + 1) % n]; d += `Q${F(a[0])} ${F(a[1])} ${F((a[0] + c[0]) / 2)} ${F((a[1] + c[1]) / 2)}`; } return d + 'Z'; };
+        const X = (c) => hd[0] + dir * c[0] * rx, Y = (c) => hd[1] + c[1] * ry;
+        if (b.hair === 'swept') {
+          // medium length, swept back: a little lift over the forehead, close at the temple, full at the crown and back
+          hair = blob([[0.86, -0.42], [0.82, -0.9], [0.38, -1.2], [-0.2, -1.22], [-0.72, -1.02], [-1.06, -0.62], [-1.12, -0.12], [-0.98, 0.3], [-0.74, 0.1], [-0.5, -0.36], [-0.05, -0.62], [0.5, -0.58]].map((c) => [X(c), Y(c)]));
+        }
+        let beard = 'M0 0';
+        if (b.beard) {
+          // short stubble: a thin shadow that hugs the jaw and chin (drawn translucent), not a shape of its own
+          const rim = [120, 100, 80, 60, 40, 22].map((d) => [Math.cos(d * Math.PI / 180) * 0.99, Math.sin(d * Math.PI / 180) * 0.99]);
+          beard = poly([[-0.2, -0.32], [-0.36, 0.3]].concat(rim, [[0.86, 0.28], [0.56, 0.24], [0.2, 0.16], [-0.04, -0.04], [-0.08, -0.32]]).map((c) => [X(c), Y(c)]));
+        }
         const shoe = (ft) => poly([[ft[0] - dir * 7 * k, ft[1]], [ft[0] + dir * 21 * k, ft[1]], [ft[0] + dir * 20 * k, ft[1] - 8 * k], [ft[0] + dir * 7 * k, ft[1] - 12 * k], [ft[0] + dir * 5 * k, ft[1] - 21 * k], [ft[0] - dir * 7 * k, ft[1] - 21 * k]]);
         const crotch = add(Hp, [ax, ay], -8 * K), sl = shortsTo('l'), sr = shortsTo('r');
         const band = `M${F(along(Hp, 1, 17, 6)[0])} ${F(along(Hp, 1, 17, 6)[1])}L${F(along(Hp, -1, 17, 6)[0])} ${F(along(Hp, -1, 17, 6)[1])}M${F(crotch[0])} ${F(crotch[1])}L${F((sl[0] + sr[0]) / 2)} ${F((sl[1] + sr[1]) / 2)}`;
-        const D2 = {band, armB: arm('l'), legB: leg('l'), legF: leg('r'), shorts, torso, jersey, neck, armF: arm('r'), head, hair, shoes: shoe(J.lf) + shoe(J.rf)};
+        const D2 = {band, armB: arm('l'), legB: leg('l'), legF: leg('r'), shorts, torso, jersey, neck, armF: arm('r'), head, hair, beard, shoes: shoe(J.lf) + shoe(J.rf)};
         PARTS.forEach((p) => { f[p].setAttribute('d', D2[p]); if (o[p]) o[p].setAttribute('d', D2[p]); });
         f.armEdge.setAttribute('d', D2.armF);
         if (f.num) { const c = [lerp(N[0], Hp[0], 0.45), lerp(N[1], Hp[1], 0.45)]; f.num.setAttribute('x', F(c[0])); f.num.setAttribute('y', F(c[1] + 10 * k)); }

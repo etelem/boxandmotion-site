@@ -11,6 +11,11 @@ Scenes: title, final, drawn play of the game, game flow, star, top scorers, how 
 - The player who made the play is drawn to his build (`figure` in the config): listed height and weight, arms scaled to a reported
   wingspan. Face stays featureless. Measurements from a named source that is not espn.com or nba.com (Basketball-Reference,
   RealGM, Wikipedia, team media guides via news coverage). Add a note saying what the figure is based on.
+- The figure should look like HIM, realistically, never cartoony: his build, his skin tone (`skin`), his hair shape and color
+  (`hair`: "crop" or "swept", `hairColor`), facial hair only as he actually wears it (`beard: true` draws light stubble; leave
+  it off if he's clean-shaven), and a heavier `frame` (1.1-1.2) for thick-set players. The face itself stays blank: no eyes,
+  mouth or portrait. Check the head close up in the frames before publishing. Elan's rule, Nov 7: "it should look like his
+  silhouette. That goes for all players."
 - Check that the box score's player points add up to the team total; fill missing points from a full box score (StatMuse, FantasyData)
   or written recaps and say so in the notes.
 - No team or league logos, no traced footage, original music only, keep the unofficial-fan disclaimer (already in the template).
@@ -35,7 +40,8 @@ Game key = `YYYY-MM-DD-AWAY-HOME`, e.g. `2026-11-06-POR-LAL` (team codes from da
    `figure`, and only the RIGHT-hand side of each `subs` pair (never a left-hand side). Set `"team"` to the winner's code and DELETE
    any `"palette"` key, so the reel is drawn in the winner's colors. Edges/gaps: only "more is better" stats; set the `max` values above
    the largest number. The footer line must be another verified fact (streak, last meeting with the next opponent).
-   `figure`: `{"tall": height_in/78, "ape": wingspan_in/height_in (1.0 if no wingspan is reported), "mass": sqrt((lb/height_in)/(215/78)), "label": "..."}`.
+   `figure`: `{"tall": height_in/78, "ape": wingspan_in/height_in (1.0 if no wingspan is reported), "mass": sqrt((lb/height_in)/(215/78)), "label": "..."}` plus his look: `"skin"`, `"hairColor"`, `"hair"`,
+   `"beard"` (only if he has one), `"frame"` (see the rule at the top; example in `2026-11-06-POR-at-LAL.json`).
 4. **Build.** `python3 make_reel.py configs/<key>.json out/<key>-reel.html`. Leftovers may only list words that really belong to this game.
 5. **Check once.** `python3 hooks.py out/<key>-reel.html out/<key>-copy.html` then
    `node shots.js $PWD/out/<key>-copy.html out/<key>-p 1 2 7 12 14.5 21.5 29 36 42 50 58 64`. Look at the frames: nothing clipped or

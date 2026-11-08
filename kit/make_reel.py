@@ -99,7 +99,7 @@ def build(c, out):
     fig = c.get('figure')
     if fig:
         num = c['play']['num']
-        r("  function scenePlay(L, g, defs) {", FIGURE_REAL + f"  const STAR_BUILD = {json.dumps({k: fig[k] for k in ('tall', 'ape', 'mass')})};\n  function scenePlay(L, g, defs) {{")
+        r("  function scenePlay(L, g, defs) {", FIGURE_REAL + f"  const STAR_BUILD = {json.dumps({k: fig[k] for k in ('tall', 'ape', 'mass', 'frame', 'hair', 'beard', 'hairColor', 'skin', 'stubble') if k in fig})};\n  function scenePlay(L, g, defs) {{")
         r(f"const shooter = figure(g, 'phi', k, {num!r});", f"const shooter = figureReal(g, 'phi', k, {num!r}, STAR_BUILD);")
         lift = re.search(r"lift = lt < 6\.3 \? (\d+) \* up", t).group(1)
         r("const rel = [shotX + 30 * k, floor + (-306 - 54) * k];",
