@@ -58,6 +58,7 @@ html.short .step.solo.on{opacity:1}
 html.short .bar{display:none}
 html.short .wrap{border-radius:0}
 .step.on{opacity:1}
+__KITCSS__
 </style></head><body>
 <div class="wrap">
 <svg id="sv" role="img" aria-label="__ARIA__"></svg>
@@ -75,6 +76,7 @@ __JUMPS__</div>
   const S = (tag, attrs, parent) => { const n = document.createElementNS(NS, tag); for (const k in attrs) n.setAttribute(k, attrs[k]); if (parent) parent.appendChild(n); return n; };
   const T = (p, x, y, s, cls, size, anchor) => { const n = S('text', {x, y, class: cls, 'text-anchor': anchor || 'start'}, p); n.textContent = s; n.style.fontSize = size + 'px'; return n; };
 __FIGURE__
+  if (__KNEEUP__) POSES.rise = Object.assign({}, POSES.rise, {rk: [28, -112], rf: [22, -58]});   // his high release with one knee driven up
   POSES.dribble = {head: [14, -224], neck: [8, -200], hip: [-2, -122], lk: [-20, -64], lf: [-30, 0], rk: [22, -66], rf: [32, 0], le: [-14, -160], lh: [-20, -124], re: [34, -156], rh: [52, -104]};
   POSES.jab = {head: [34, -208], neck: [26, -186], hip: [4, -112], lk: [44, -58], lf: [66, 0], rk: [-18, -60], rf: [-34, 0], le: [-4, -148], lh: [4, -110], re: [46, -150], rh: [66, -104]};
   POSES.land = {head: [0, -210], neck: [-2, -186], hip: [-8, -108], lk: [10, -60], lf: [-6, 0], rk: [16, -58], rf: [18, 0], le: [18, -168], lh: [28, -186], re: [16, -154], rh: [30, -182]};
@@ -251,7 +253,9 @@ __FIGURE_REAL__
 """
 import html as _h
 JUMPS = ''.join(f'<button class="jump" data-t="{t}" type="button">{n} · {_h.escape((title[4:] if title.startswith("The ") else title)[:1].upper() + (title[4:] if title.startswith("The ") else title)[1:])}</button>' for t, (n, title, _) in zip(('0.6', '2.0', '2.9'), CFG['steps']))
-out = HTML.replace('__JUMPS__', JUMPS).replace('__NAME__', _h.escape(CFG['name'])).replace('__TITLE__', _h.escape(CFG['title'])).replace('__ARIA__', _h.escape(CFG['aria'])).replace('__STEPS__', json.dumps(CFG['steps'], ensure_ascii=False)).replace('__NAMEJS__', json.dumps(CFG['name'], ensure_ascii=False)).replace('__TITLEJS__', json.dumps(CFG['title'], ensure_ascii=False)).replace('__NUM__', json.dumps(CFG['number'])).replace('__PAL__', PAL).replace('__FIGURE__', FIGURE).replace('__FIGURE_REAL__', FIGURE_REAL).replace('__BUILD__', json.dumps(BUILD))
+KIT = CFG.get('kit') or {}
+KITCSS = (f".fig-kit-phi{{stroke:{KIT['jersey']};fill:{KIT['jersey']}}}\n.fig-num{{fill:{KIT['number']}}}\n.fig-band{{stroke:{KIT['number']}}}" if KIT else '')
+out = HTML.replace('__KITCSS__', KITCSS).replace('__KNEEUP__', 'true' if CFG.get('kneeUp') else 'false').replace('__JUMPS__', JUMPS).replace('__NAME__', _h.escape(CFG['name'])).replace('__TITLE__', _h.escape(CFG['title'])).replace('__ARIA__', _h.escape(CFG['aria'])).replace('__STEPS__', json.dumps(CFG['steps'], ensure_ascii=False)).replace('__NAMEJS__', json.dumps(CFG['name'], ensure_ascii=False)).replace('__TITLEJS__', json.dumps(CFG['title'], ensure_ascii=False)).replace('__NUM__', json.dumps(CFG['number'])).replace('__PAL__', PAL).replace('__FIGURE__', FIGURE).replace('__FIGURE_REAL__', FIGURE_REAL).replace('__BUILD__', json.dumps(BUILD))
 os.makedirs(os.path.join(ROOT, 'src', 'anim'), exist_ok=True)
 dst = os.path.join(ROOT, 'src', 'anim', CFG['out'])
 open(dst, 'w').write(out)

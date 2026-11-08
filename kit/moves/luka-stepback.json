@@ -9,8 +9,10 @@
     "ape": 1.0375,
     "mass": 1.021325,
     "skin": "#e9c3a2",
-    "hairColor": "#6b4a2f",
-    "hair": "swept"
+    "hairColor": "#86603d",
+    "hair": "tousled",
+    "wristband": "#552583",
+    "legSleeve": "#ece9e2"
   },
   "build_note": "Listed 6-8, 230 lb, reported 6-11 wingspan",
   "steps": [
@@ -30,5 +32,10 @@
       "A high release over the closeout."
     ]
   ],
-  "aria": "Animated illustration of Luka Dončić's step-back three: he jabs toward the basket so the defender backs off, crosses the ball back between his legs to his left as he hops back behind the three-point line, then rises and releases over a late closeout. An original drawing, not traced from footage, not to scale."
+  "aria": "Animated illustration of Luka Dončić's step-back three: he jabs toward the basket so the defender backs off, crosses the ball back between his legs to his left as he hops back behind the three-point line, then rises and releases over a late closeout. An original drawing, not traced from footage, not to scale.",
+  "kit": {
+    "jersey": "#552583",
+    "number": "#FDB927"
+  },
+  "kneeUp": true
 }
