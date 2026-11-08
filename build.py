@@ -277,7 +277,7 @@ for c, t in T.items():
     elif any(P["team"] == c for P in PLAYERS):
         players = "".join(player_card(R, P) for P in PLAYERS if P["team"] == c)
     else:
-        players = f'<div class="card pad empty"><b class="d" style="font-size:26px">Scouting reports are coming</b><p class="dim" style="margin:6px 0 0">Every week we animate the league\'s hottest player. Follow the {E(t["name"])} to see theirs here first.</p></div>'
+        players = f'<div class="card pad empty"><b class="d" style="font-size:26px">Scouting reports are coming</b><p class="dim" style="margin:6px 0 0">Every week we put the league\'s hottest player in motion. Follow the {E(t["name"])} to see theirs here first.</p></div>'
     if c in COACH_PAGES:
         cn, cp, cb = COACH_PAGES[c]
         sub = f'{E(cb["title"])}: {E(cb["dek"])}' if cb else "How the Lakers closed at Utah, on the board."
@@ -386,7 +386,7 @@ page("odds/index.html", "Playoff odds · Box & Motion Hoops", body, active="Play
 
 # ---- deep dives ----
 R = "../"
-body = f'''<div class="sec" style="gap:8px"><p class="k">New every week</p><h1 class="h1">Deep dives</h1><p class="dim" style="margin:0;font-size:18px;max-width:44em">Every week: a scouting report on the league's hottest player, and a coach's board when a team draws up a play worth seeing again. All animated.</p></div>
+body = f'''<div class="sec" style="gap:8px"><p class="k">New every week</p><h1 class="h1">Deep dives</h1><p class="dim" style="margin:0;font-size:18px;max-width:44em">Every week: a scouting report on the league's hottest player, and a coach's board when a team draws up a play worth seeing again. All in motion.</p></div>
 <section class="grid g2">
 {"".join(board_card(R, b, big=True) for b in BOARDS)}
 {"".join(player_card(R, P, big=True) for P in PLAYERS)}
