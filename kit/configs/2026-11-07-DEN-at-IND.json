@@ -1,0 +1,143 @@
+{
+  "D": "  const D = {\n    date: 'Sat, Nov 7, 2026',\n    us: 114, them: 102, record: '5–3', usName: 'Nuggets', themName: 'Pacers',\n    quarters: [[27, 19], [37, 22], [26, 37], [24, 24]],\n    leadUs: 27, leadThem: 5,\n    star: {name: 'Nikola Jokić', stats: [['Points', 19, 25], ['Rebounds', 13, 15], ['Assists', 8, 10]]},\n    scorers: [\n      {name: 'Nikola Jokić', pts: 19, note: '13 reb · 8 ast · 10 in the 1st'},\n      {name: 'Cameron Johnson', pts: 18, note: '8 of 12 from the floor'},\n      {name: 'Jamal Murray', pts: 16, note: '8 ast · 6 reb'},\n      {name: 'Spencer Jones', pts: 13, note: 'season debut · 3 of 3 from three'},\n      {name: 'Aaron Gordon', pts: 12, note: '5 rebounds'},\n    ],\n    edges: [\n      {label: 'Points in the paint', us: 54, them: 44},\n      {label: 'Rebounds', us: 51, them: 45},\n      {label: 'Free throws made', us: 16, them: 5},\n    ],\n    gaps: [\n      {label: 'Threes made', us: 10, them: 15},\n    ],\n    next: {opp: 'at Rockets', when: 'Mon, Nov 9', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Jamal Murray's 29-foot step-back three with 8:33 left that made it 102–90. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Murray from 29",
+    "subP": "Murray from 29 feet, 8:33 left",
+    "subL": "Murray’s step-back from 29 feet with 8:33 left",
+    "m0": "Nuggets +9",
+    "m1": "Nuggets +12",
+    "num": "27",
+    "cap1": "Murray’s step-back. Nuggets by 12.",
+    "cap2": "It stopped Indiana’s run at 102–90.",
+    "clock": [
+      521,
+      513
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Nuggets vs Pacers Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Nuggets 114, Pacers 102 · Nov 7, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Nuggets vs.', 'Pacers'] : ['Nuggets vs. Pacers']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Jokić: 19, 13 and 8.', 'Denver led by as many as 27.'] : ['Jokić had 19 points, 13 rebounds and 8 assists. Denver led by as many as 27.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Nuggets improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Won in Mexico City'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Up 23 at the half,', 'then held off a run'] : ['Up 23 at the half, then held off a 37-point third']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Nuggets ${D.leadUs}, Pacers ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Nuggets’ margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Jokić: 19,', '13 and 8'] : ['Jokić: 19 points, 13 rebounds, 8 assists']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['10 in the first quarter.', 'Two assists shy of a triple-double.'] : ['10 in the first quarter. Two assists shy of a triple-double.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Jokić, Johnson, Murray:', '53 of the 114'] : ['Jokić, Johnson and Murray combined for 53 of 114']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 25;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it inside', 'and on the glass'] : ['Won it inside and on the glass']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Nuggets in gold, Pacers in gray. Denver', 'turned it over just 3 times.'] : ['Nuggets in gold, Pacers in gray. Denver turned it over just 3 times.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'Four wins in the last five'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Rockets’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '7–3';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Indiana was the home team', 'at Arena CDMX in Mexico City.'] : ['Indiana was the home team at Arena CDMX in Mexico City.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Nuggets 114 · Pacers 102 · Nov 7'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Murray from 29'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Jokić'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 60;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - 400 * k, startX = shotX + 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+3', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 210 * k, shotX + 150 * k, prog(lt, T_JAB, 1.4));"
+    ]
+  ],
+  "team": "DEN",
+  "aria": "Animated recap of the Nuggets' 114 to 102 win over Indiana in Mexico City: Jamal Murray's 29-foot step-back three with 8:33 left, quarter-by-quarter scoring, Nikola Jokić's 19 points, 13 rebounds and 8 assists, the top scorers, how the Nuggets won, and the next game at Houston.",
+  "notes": [
+    "Box score from the Nuggets' 114–102 win over the Indiana Pacers in Mexico City on Nov 7, 2026 (Indiana was the home team), from Covers.com's full box score, with the line score and first-quarter play-by-play from CBS Sports' gametracker and game details from the AP (via theScore and CBS Sports), AFP (via Yahoo Sports), DenverSports.com, The Gazette and Yardbarker. All 114 points are accounted for in the box score. The league stats feed wasn't available for this recap, so records come from the site's standings through Nov 6 plus Saturday's results (Denver 5–3; Houston 7–3 after losing at Phoenix).",
+    "Biggest leads: Denver's 27 (64–37 late in the first half, per the AP) and Indiana's 5 (5–0 early in the first quarter, per CBS Sports' play-by-play). Points in the paint (54–44) are from DenverSports.com; rebounds, free throws, threes and turnovers are from the box score.",
+    "The play of the game is an original illustration of Jamal Murray's step-back three from 29 feet with 8:33 left, which DenverSports.com says made it 102–90 after Denver's lead had fallen to single digits. Indiana got within 102–95 a minute later, and Denver answered with six straight points. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Denver Nuggets or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Murray’s listed 6-foot-4 and 215 pounds (Basketball-Reference), with arms scaled to his reported 6-foot-6½ wingspan (Hoops Habit's 2016 draft scouting report). It is an original silhouette with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "tall": 0.9744,
+    "ape": 1.0329,
+    "mass": 1.0131,
+    "label": "Jamal Murray, listed 6-4, 215 lb, reported 6-6.5 wingspan"
+  }
+}

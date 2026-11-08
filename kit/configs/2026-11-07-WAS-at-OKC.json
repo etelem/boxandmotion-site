@@ -1,0 +1,147 @@
+{
+  "D": "  const D = {\n    date: 'Sat, Nov 7, 2026',\n    us: 114, them: 75, record: '8–2', usName: 'Thunder', themName: 'Wizards',\n    quarters: [[25, 19], [32, 17], [33, 23], [24, 16]],\n    leadUs: 43, leadThem: 1,\n    star: {name: 'Shai Gilgeous-Alexander', stats: [['Points', 30, 35], ['Assists', 9, 10], ['Shots made of 20', 11, 20]]},\n    scorers: [\n      {name: 'Shai Gilgeous-Alexander', pts: 30, note: '9 ast · 11 of 20 · three quarters'},\n      {name: 'Jared McCain', pts: 19, note: 'off the bench · 8 of 10'},\n      {name: 'Aday Mara', pts: 18, note: '8 reb · 3 blk · 8 of 10'},\n      {name: 'Ajay Mitchell', pts: 12, note: '4 rebounds'},\n      {name: 'Bennett Stirtz', pts: 11, note: 'off the bench · 2 threes'},\n    ],\n    edges: [\n      {label: 'Points in the paint', us: 56, them: 32},\n      {label: 'Bench points', us: 43, them: 23},\n      {label: 'Fast-break points', us: 21, them: 11},\n      {label: 'Rebounds', us: 55, them: 47},\n    ],\n    gaps: [\n    ],\n    next: {opp: 'at Blazers', when: 'Tue, Nov 10, 11:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Shai Gilgeous-Alexander's 27-foot step-back three with 4:38 left in the third that made it 76–54. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Shai’s step-back",
+    "subP": "Shai from 27 feet, 4:38 left in the 3rd",
+    "subL": "Shai’s step-back from 27 feet, 4:38 left in the third",
+    "m0": "Thunder +19",
+    "m1": "Thunder +22",
+    "num": "2",
+    "cap1": "Shai’s step-back. Thunder by 22.",
+    "cap2": "He sat the fourth with 30.",
+    "clock": [
+      286,
+      278
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Thunder vs Wizards Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Thunder 114, Wizards 75 · Nov 7, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Thunder vs.', 'Wizards'] : ['Thunder vs. Wizards']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Shai: 30 in three quarters.', 'Washington shot 29.6%.'] : ['Shai scored 30 in three quarters. Washington shot 29.6%.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Thunder improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Fourth straight win'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Up 21 at the half,', 'up 31 after three'] : ['Up 21 at the half, up 31 after three']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Thunder ${D.leadUs}, Wizards ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Thunder’s margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Shai: 30 and 9', 'in three quarters'] : ['Shai: 30 points and 9 assists in three quarters']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['11 of 20 from the floor.', 'Sat out the fourth.'] : ['11 of 20 from the floor. Sat out the fourth.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Shai, McCain, Mara:', '67 of the 114'] : ['Shai, McCain and Mara combined for 67 of 114']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 35;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it inside', 'and off the bench'] : ['Won it inside and off the bench']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Thunder in blue, Wizards in gray. Washington', 'made 7 of 43 threes.'] : ['Thunder in blue, Wizards in gray. Washington made 7 of 43 threes.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'Five wins in the last seven'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Blazers’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '6–3';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Washington’s 75: the NBA’s', 'lowest total this season.'] : ['Washington’s 75 was the NBA’s lowest total this season.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Thunder 114 · Wizards 75 · Nov 7'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Shai’s step-back'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Shai'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 60;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - 375 * k, startX = shotX + 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+3', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 210 * k, shotX + 150 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "T(board, bx + 24, by + 38, 'Q3', 'b m', 24);"
+    ]
+  ],
+  "team": "OKC",
+  "aria": "Animated recap of the Thunder's 114 to 75 home win over Washington: Shai Gilgeous-Alexander's 27-foot step-back three with 4:38 left in the third quarter, quarter-by-quarter scoring, his 30 points and 9 assists, the top scorers, how the Thunder won, and the next game at Portland.",
+  "notes": [
+    "Box score from the Thunder's 114–75 home win over the Washington Wizards on Nov 7, 2026, from Covers.com's full box score, with team stats (points in the paint, bench and fast-break points), biggest leads and play-by-play from Plain Text Sports, and game details from the AP (via WRAL, CBS Sports and News9), Reuters/Field Level Media (via The Sports Animal), The Oklahoman (via Yahoo Sports) and Yardbarker. All 114 points are accounted for in the box score. The league stats feed wasn't available for this recap, so records come from the site's standings through Nov 6 plus Saturday's results (Oklahoma City 8–2; Portland 6–3 after losing to San Antonio).",
+    "Biggest leads: Oklahoma City's 43 (Plain Text Sports and The Oklahoman) and Washington's 1 (16–15 late in the first quarter, per Field Level Media and Plain Text Sports). The Thunder play at Portland on Tuesday at 11:00 PM ET (Yardbarker; The Oklahoman lists 10 p.m. Central).",
+    "The play of the game is an original illustration of Shai Gilgeous-Alexander's 27-foot step-back three with 4:38 left in the third quarter, which made it 76–54 (the AP gives the time and score; Plain Text Sports' play-by-play describes the step-back and distance). The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Oklahoma City Thunder or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Gilgeous-Alexander’s listed 6-foot-6 and 195 pounds (Basketball-Reference), with arms scaled to his reported 7-foot wingspan (Sports Illustrated's 2018 draft scouting report). It is an original silhouette with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "tall": 1.0,
+    "ape": 1.0769,
+    "mass": 0.9524,
+    "label": "Shai Gilgeous-Alexander, listed 6-6, 195 lb, reported 7-0 wingspan"
+  }
+}
