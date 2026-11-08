@@ -148,7 +148,7 @@ risers = sorted(T, key=lambda c: -O[c]["chg"])[:3]; fallers = sorted(T, key=lamb
 def mini(c): return f'<a href="{R}teams/{T[c]["slug"]}/index.html" style="display:flex;justify-content:space-between;padding:10px 0;border-top:1px solid var(--line);text-decoration:none"><span><b>{E(T[c]["name"])}</b> <span class="dim">{rec(c)}</span></span><span><b>{O[c]["top6"]}%</b> <span class="{chgcls(O[c]["chg"])}">{chg(O[c]["chg"])}</span></span></a>'
 home = f'''
 <section class="sec">
- <div class="between"><div class="sec" style="gap:8px"><p class="k">Your teams · tap ★ on any team to follow</p><h1 class="h1" id="greet">Good morning.</h1></div>
+ <div class="between"><div class="sec" style="gap:8px"><p class="k">Your teams · tap ★ on any team to follow</p><h1 class="h1">The Box Score, <span class="grad" style="white-space:nowrap">in Motion</span></h1></div>
  <div class="row" style="gap:12px">
   <a class="chip" href="last-night/index.html"><span class="dot"></span>{len(LAST)} games last night</a>
   <a class="chip" href="odds/index.html"><span class="dot"></span>Biggest mover: {E(T[movers]['name'])} {chg(O[movers]['chg'])}</a>
