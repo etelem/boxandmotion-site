@@ -10,18 +10,18 @@ end = next(i for i in range(start, len(base)) if base[i] == '  }' and i > start 
 FIGURE = '\n'.join(base[start:end + 1])
 FIGURE_REAL = open(os.path.join(HERE, 'figure-real.js')).read()
 TEAM = {"Luka Dončić": ("LAL", "77"), "Stephen Curry": ("GSW", "30"), "Victor Wembanyama": ("SAS", "1"), "Nikola Jokić": ("DEN", "15"),
-        "Giannis Antetokounmpo": ("MIL", "34"), "Shai Gilgeous-Alexander": ("OKC", "2"), "Jayson Tatum": ("BOS", "0"), "Jaylen Brown": ("BOS", "7"),
-        "Anthony Edwards": ("MIN", "5"), "Jalen Brunson": ("NYK", "11"), "Karl-Anthony Towns": ("NYK", "32"), "LeBron James": ("LAL", "23"),
+        "Giannis Antetokounmpo": ("MIA", ""), "Shai Gilgeous-Alexander": ("OKC", "2"), "Jayson Tatum": ("BOS", "0"), "Jaylen Brown": ("PHI", ""),
+        "Anthony Edwards": ("MIN", "5"), "Jalen Brunson": ("NYK", "11"), "Karl-Anthony Towns": ("NYK", "32"), "LeBron James": ("PHI", ""),
         "Kevin Durant": ("HOU", "7"), "Joel Embiid": ("PHI", "21"), "Tyrese Maxey": ("PHI", "0"), "Donovan Mitchell": ("CLE", "45"),
-        "Devin Booker": ("PHX", "1"), "Anthony Davis": ("DAL", "3"), "Cade Cunningham": ("DET", "2"), "Trae Young": ("ATL", "11"),
-        "Ja Morant": ("MEM", "12"), "Kawhi Leonard": ("LAC", "2"), "Damian Lillard": ("POR", "0"), "Paolo Banchero": ("ORL", "5"),
+        "Devin Booker": ("PHX", "1"), "Anthony Davis": ("WAS", ""), "Cade Cunningham": ("DET", "2"), "Trae Young": ("WAS", ""),
+        "Ja Morant": ("POR", ""), "Kawhi Leonard": ("TOR", ""), "Damian Lillard": ("POR", "0"), "Paolo Banchero": ("ORL", "5"),
         "Jimmy Butler": ("GSW", "10"), "Domantas Sabonis": ("SAC", "11"), "Alperen Şengün": ("HOU", "28"), "Chet Holmgren": ("OKC", "7"),
         "Austin Reaves": ("LAL", "15"), "Lauri Markkanen": ("UTA", "23"), "Zion Williamson": ("NOP", "1"), "De'Aaron Fox": ("SAS", "4")}
 people = []
 for name, v in LOOKS.items():
     if name.startswith('_'): continue
     team, num = TEAM.get(name, ("GSW", "0"))
-    people.append({"name": name, "status": v["status"], "num": num, "kit": kit_for(team, True), "look": {k: v[k] for k in LOOK_KEYS if k in v}})
+    people.append({"team": team, "name": name, "status": v["status"], "num": num, "kit": kit_for(team, True), "look": {k: v[k] for k in LOOK_KEYS if k in v}})
 HTML = """<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Star looks · Box &amp; Motion Hoops</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;600&display=swap">
@@ -35,7 +35,7 @@ h1{font-family:Archivo;font-weight:800;margin:0 0 6px}p{color:#a9adb4;margin:0 0
 .fig-o-phi{stroke:#ffd27a;fill:#ffd27a}.fig-skin{stroke:#2a2c31;fill:#2a2c31}.fig-shoe{stroke:#f7f8f9;fill:#f7f8f9}
 .fig-num{font-family:Archivo;font-weight:800}.fig-hair{stroke:#2a2c31;fill:#2a2c31}.fig-band{fill:none}
 </style></head><body>
-<h1>Star looks</h1><p>Every star's look for recaps and Shorts, in his team's home kit. Green = approved, orange = proposed (used until you change it). Faces stay blank. Tell me any changes by name.</p>
+<h1>Star looks</h1><p>Every star's look for recaps and Shorts, in his team's home kit. Green = approved, orange = proposed (used until you change it). Faces stay blank. Teams are this season's (2026-27); numbers are left off for players who moved this summer until checked. Tell me any changes by name.</p>
 <div class="grid" id="g"></div>
 <script>
 const P = __P__;
@@ -53,7 +53,7 @@ P.forEach((p, i) => {
   const grp = S('g', {class: 'k' + i}, svg);
   const f = figureReal(grp, 'phi', 1.08, p.num, p.look);
   f.draw(POSES.dribble, 92, 318, 1.08, 1);
-  const n = document.createElement('div'); n.className = 'n'; n.textContent = p.name; c.appendChild(n);
+  const n = document.createElement('div'); n.className = 'n'; n.textContent = p.name + ' · ' + p.team; c.appendChild(n);
   const s = document.createElement('div'); s.className = 's ' + p.status; s.textContent = p.status; c.appendChild(s);
 });
 </script></body></html>"""
