@@ -322,24 +322,28 @@ for g in GAMES:
     kicker = f'<p class="k">Final{" · OT" if g["ot"] else ""} · {WEEKDAY(g["date"])} · {E(city)}</p>'
     names = f'<span style="color:{"#111214" if w==a else "#8a8c92"}">{E(T[a]["name"])} {g["as_"]}</span><span style="color:{"#111214" if w==h else "#8a8c92"}">{E(T[h]["name"])} {g["hs"]}</span>'
     v = g["video"]
-    if v:
-        # the recap video leads the page: video first, score and story beside it
+    yt_btn = (f'<div class="row" style="gap:10px;align-items:center"><a class="pill" style="background:#FF0033;border-color:#FF0033;color:#fff" href="https://youtube.com/shorts/{v}" target="_blank" rel="noopener">▶ Watch on YouTube</a>'
+              f'<a href="https://www.youtube.com/@boxandmotion?sub_confirmation=1" target="_blank" rel="noopener" style="font-weight:600">Subscribe to @boxandmotion</a></div>') if v else ""
+    if g["reel"]:
+        # our drawn recap plays right on the page (no YouTube frame); the YouTube Short is one tap away
+        hero = f'''<span class="tag gold" style="align-self:flex-start;margin-bottom:-28px">▶ Our recap video · 66 seconds</span>
+<section style="display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start">
+<div style="flex:0 1 360px;width:100%;max-width:360px;display:flex;flex-direction:column;gap:12px">
+<div style="aspect-ratio:9/14.4;border-radius:18px;overflow:hidden;background:#111214;box-shadow:0 10px 30px rgba(17,18,20,.18)">
+<iframe src="{R}reels/{g['key']}/index.html?embed=1" title="Box &amp; Motion recap: {E(T[a]['name'])} at {E(T[h]['name'])}" loading="lazy" style="width:100%;height:100%;border:0" allow="autoplay"></iframe></div>
+{yt_btn}</div>
+<div class="sec" style="flex:1 1 320px;gap:16px">{kicker}
+<h1 class="h1" style="display:flex;flex-wrap:wrap;gap:4px 24px;font-size:clamp(40px,6vw,72px)">{names}</h1>
+{lede}{lsh}<a class="pill" style="align-self:flex-start" href="{R}reels/{g['key']}/index.html" target="_blank" rel="noopener">Open full screen, with sound</a></div></section>'''
+    elif v:
+        # only the YouTube Short exists: embed it
         hero = f'''<span class="tag gold" style="align-self:flex-start;margin-bottom:-28px">▶ Our recap video · 66 seconds</span>
 <section style="display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start">
 <div style="flex:0 1 360px;width:100%;max-width:360px;aspect-ratio:9/16;border-radius:18px;overflow:hidden;background:#111214;box-shadow:0 10px 30px rgba(17,18,20,.18)">
 <iframe src="https://www.youtube.com/embed/{v}" title="Box &amp; Motion recap: {E(T[a]['name'])} at {E(T[h]['name'])}" style="width:100%;height:100%;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
 <div class="sec" style="flex:1 1 320px;gap:16px">{kicker}
 <h1 class="h1" style="display:flex;flex-wrap:wrap;gap:4px 24px;font-size:clamp(40px,6vw,72px)">{names}</h1>
-{lede}{lsh}<a class="pill" style="align-self:flex-start" href="https://youtube.com/shorts/{v}" target="_blank" rel="noopener">▶ Watch on YouTube</a></div></section>'''
-    elif g["reel"]:
-        # our drawn recap reel, hosted on this site, leads the page
-        hero = f'''<span class="tag gold" style="align-self:flex-start;margin-bottom:-28px">▶ Our recap · 66 seconds</span>
-<section style="display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start">
-<div style="flex:0 1 360px;width:100%;max-width:360px;aspect-ratio:9/14.4;border-radius:18px;overflow:hidden;background:#111214;box-shadow:0 10px 30px rgba(17,18,20,.18)">
-<iframe src="{R}reels/{g['key']}/index.html?embed=1" title="Box &amp; Motion recap: {E(T[a]['name'])} at {E(T[h]['name'])}" style="width:100%;height:100%;border:0" allow="autoplay"></iframe></div>
-<div class="sec" style="flex:1 1 320px;gap:16px">{kicker}
-<h1 class="h1" style="display:flex;flex-wrap:wrap;gap:4px 24px;font-size:clamp(40px,6vw,72px)">{names}</h1>
-{lede}{lsh}<a class="pill" style="align-self:flex-start" href="{R}reels/{g['key']}/index.html" target="_blank" rel="noopener">Open full screen, with sound</a></div></section>'''
+{lede}{lsh}{yt_btn}</div></section>'''
     else:
         hero = f'''<section class="sec" style="gap:18px">{kicker}
 <h1 class="h1" style="display:flex;flex-wrap:wrap;gap:4px 28px;font-size:clamp(48px,8vw,100px)">{names}</h1>
