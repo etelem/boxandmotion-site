@@ -34,6 +34,18 @@ Cloudflare redeploys the site automatically whenever `main` changes on GitHub.
    If `update.py` reports records that don't match, a final game is missing or the feed hasn't updated.
    Re-fetch once. If it still doesn't match, stop: do not edit standings by hand and do not push.
 
+3b. **Official video links** (`data/links.json`, keyed `<date>-<AWAY>-<HOME>`, e.g. `2026-11-06-POR-LAL`). For each game added
+   tonight, plus any game from the last 7 days that has no `highlights` yet (at most 15 games a run), use WebSearch with
+   `allowed_domains: ["youtube.com"]`:
+   - `highlights`: query `<Away name> at <Home name> full game highlights <Month D YYYY>`. Accept ONLY the NBA channel's upload.
+     The title reads `AWAY at HOME | FULL GAME HIGHLIGHTS | <Month D, YYYY>` (it may start with `EXTENDED:` or add a cup tag),
+     and the description starts "The <winner> defeated the <loser>, <score> tonight". Reject re-uploads ("X vs Y - FULL GAME
+     HIGHLIGHTS | ... NBA Season"), reaction videos and other channels. Store the video id only.
+   - `postgame` (optional): query `<team> postgame <opponent> <Month D YYYY>`. Store it only when the result is clearly the
+     team's own channel or its TV broadcaster, and set `postgame_label` (e.g. "Lakers postgame interviews"). If unsure, leave
+     it out: the page then links a YouTube search for that game's postgame interviews.
+   Never guess an id. Then run `python3 build.py` again.
+
 4. Delete `data/incoming.json`, then commit and push to `main`:
    `Nightly update: games through <date>`.
 

@@ -64,6 +64,22 @@ def yt(g):
     q = f"{T[g['away']]['name']} vs {T[g['home']]['name']} highlights {day}"
     return "https://www.youtube.com/@NBA/search?query=" + quote_plus(q)
 
+LINKS = json.load(open("data/links.json")) if os.path.isfile("data/links.json") else {}
+def official_links(g):
+    """Bottom-of-recap official video: the NBA channel's full-game highlights and the postgame interviews,
+    linked directly when data/links.json has them, otherwise a search scoped to that game."""
+    L = LINKS.get(g["key"], {})
+    day = datetime.date.fromisoformat(g["date"]).strftime("%B %-d %Y")
+    hl = f'https://www.youtube.com/watch?v={L["highlights"]}' if L.get("highlights") else yt(g)
+    w, l = g["win"], g["lose"]
+    pg = (f'https://www.youtube.com/watch?v={L["postgame"]}' if L.get("postgame") else
+          "https://www.youtube.com/results?search_query=" + quote_plus(f'{T[w]["name"]} {T[l]["name"]} postgame interviews {day}'))
+    pgl = L.get("postgame_label") or ("Postgame interviews" if L.get("postgame") else f"Find postgame interviews: {T[w]['name']} vs {T[l]['name']}")
+    return (f'<section class="sec"><div class="sec" style="gap:6px"><h2 class="h2">Official video</h2><p class="dim" style="margin:0">'
+            f'Links to this game\'s official uploads on YouTube. We don\'t host or edit them.</p></div>'
+            f'<div class="row" style="gap:10px"><a class="pill on" href="{hl}" target="_blank" rel="noopener">▶ {"Full game highlights (NBA)" if L.get("highlights") else "Game highlights on the NBA\'s channel"}</a>'
+            f'<a class="pill" href="{pg}" target="_blank" rel="noopener">▶ {E(pgl)}</a></div></section>')
+
 LOGO = '<svg width="28" height="28" viewBox="0 0 100 100" aria-hidden="true"><rect x="9" y="9" width="82" height="82" rx="9" fill="none" stroke="#111214" stroke-width="8"/><path d="M24 24L40 40M40 24L24 40" stroke="#111214" stroke-width="8" stroke-linecap="round"/><path d="M33 50C34 62 42 69 53 69" fill="none" stroke="#FF5A1F" stroke-width="6.5" stroke-linecap="round" stroke-dasharray="0 10.5"/><circle cx="68" cy="68" r="9.5" fill="none" stroke="#FF5A1F" stroke-width="7.5"/></svg>'
 FAVICON = "data:image/svg+xml," + quote_plus(LOGO.replace('width="28" height="28" ', '').replace('aria-hidden="true"', 'xmlns="http://www.w3.org/2000/svg"')).replace("+", "%20")
 
@@ -308,18 +324,20 @@ for g in GAMES:
     v = g["video"]
     if v:
         # the recap video leads the page: video first, score and story beside it
-        hero = f'''<section style="display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start">
+        hero = f'''<span class="tag gold" style="align-self:flex-start;margin-bottom:-28px">▶ Our recap video · 66 seconds</span>
+<section style="display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start">
 <div style="flex:0 1 360px;width:100%;max-width:360px;aspect-ratio:9/16;border-radius:18px;overflow:hidden;background:#111214;box-shadow:0 10px 30px rgba(17,18,20,.18)">
 <iframe src="https://www.youtube.com/embed/{v}" title="Box &amp; Motion recap: {E(T[a]['name'])} at {E(T[h]['name'])}" style="width:100%;height:100%;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-<div class="sec" style="flex:1 1 320px;gap:16px"><span class="tag gold" style="align-self:flex-start">▶ Our recap video · 66 seconds</span>{kicker}
+<div class="sec" style="flex:1 1 320px;gap:16px">{kicker}
 <h1 class="h1" style="display:flex;flex-wrap:wrap;gap:4px 24px;font-size:clamp(40px,6vw,72px)">{names}</h1>
 {lede}{lsh}<a class="pill" style="align-self:flex-start" href="https://youtube.com/shorts/{v}" target="_blank" rel="noopener">▶ Watch on YouTube</a></div></section>'''
     elif g["reel"]:
         # our drawn recap reel, hosted on this site, leads the page
-        hero = f'''<section style="display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start">
+        hero = f'''<span class="tag gold" style="align-self:flex-start;margin-bottom:-28px">▶ Our recap · 66 seconds</span>
+<section style="display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start">
 <div style="flex:0 1 360px;width:100%;max-width:360px;aspect-ratio:9/14.4;border-radius:18px;overflow:hidden;background:#111214;box-shadow:0 10px 30px rgba(17,18,20,.18)">
 <iframe src="{R}reels/{g['key']}/index.html?embed=1" title="Box &amp; Motion recap: {E(T[a]['name'])} at {E(T[h]['name'])}" style="width:100%;height:100%;border:0" allow="autoplay"></iframe></div>
-<div class="sec" style="flex:1 1 320px;gap:16px"><span class="tag gold" style="align-self:flex-start">▶ Our recap · 66 seconds</span>{kicker}
+<div class="sec" style="flex:1 1 320px;gap:16px">{kicker}
 <h1 class="h1" style="display:flex;flex-wrap:wrap;gap:4px 24px;font-size:clamp(40px,6vw,72px)">{names}</h1>
 {lede}{lsh}<a class="pill" style="align-self:flex-start" href="{R}reels/{g['key']}/index.html" target="_blank" rel="noopener">Open full screen, with sound</a></div></section>'''
     else:
@@ -330,11 +348,10 @@ for g in GAMES:
         feat += video_block(None)
     body = f'''{crumbs}
 {hero}
-<section class="sec"><div class="sec" style="gap:6px"><h2 class="h2">Official video</h2><p class="dim" style="margin:0">We link to the official uploads on YouTube. We don't host or edit them.</p></div>
-<div class="row"><a class="pill on" href="{yt(g)}" target="_blank" rel="noopener">▶ Game highlights on the NBA's channel</a></div></section>
 {feat}
 <section class="card cta"><div style="display:flex;flex-wrap:wrap;gap:20px;flex:1 1 400px"><div style="flex-basis:100%"><p class="k">What it meant</p></div>{meant}</div>
-<a class="pill hot" href="{R}odds/index.html">All playoff odds</a></section>'''
+<a class="pill hot" href="{R}odds/index.html">All playoff odds</a></section>
+{official_links(g)}'''
     page(f"games/{g['slug']}/index.html", f"{T[a]['name']} {g['as_']}, {T[h]['name']} {g['hs']} · Box & Motion Hoops", body, active="Last Night",
          desc=(f["dek"] if f else auto))
 
