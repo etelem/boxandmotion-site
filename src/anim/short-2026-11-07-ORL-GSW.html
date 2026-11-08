@@ -39,7 +39,7 @@ svg{display:block;width:100%;height:auto}
 <script>
 if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add('short');
 (() => {
-  const C = {"out": "short-2026-11-07-ORL-GSW.html", "team": "GSW", "number": "30", "kit": {"jersey": "#F4F4F2", "number": "#1D428A"}, "build": {"tall": 0.9487, "ape": 1.027, "mass": 0.9902, "skin": "#b07a55", "hairColor": "#1b1410", "hair": "crop", "beard": true, "stubble": 0.38, "kneeSleeve": "#16181d", "ankleBrace": "#16181d"}, "build_note": "Listed 6-2, 200 lb (Basketball-Reference), reported 6-4 wingspan (Sportskeeda)", "kicker": "WARRIORS 126 · MAGIC 119 · OT · NOV 7", "hook": ["Steph's and-one", "to win it in OT"], "clock": "OT · 1:38", "us": "GSW", "them": "ORL", "score_before": [117, 118], "score_make": [119, 118], "score_ft": [120, 118], "stamp": "AND-ONE", "ft_line": ["+1 at the line.", "Warriors lead for good."], "final": {"label": "FINAL · OT", "us": "Warriors", "them": "Magic", "us_pts": 126, "them_pts": 119}, "star": {"name": "Stephen Curry", "big": 41, "big_label": "points on 13-of-19 shooting", "lines": ["10 of 10 at the line", "19 in the fourth quarter and OT"]}, "story": "Up 16 at the half. Orlando tied it at the buzzer. Golden State won overtime 16–9.", "aria": "Animated Short: Stephen Curry drives into the lane with 1:38 left in overtime, Warriors down 118–117, and makes a floater through contact, then the free throw for a 120–118 lead. Warriors win 126–119. An original illustration, not traced from footage, not to scale."};
+  const C = {"out": "short-2026-11-07-ORL-GSW.html", "team": "GSW", "number": "30", "kit": {"jersey": "#F4F4F2", "number": "#1D428A"}, "build": {"tall": 0.9487, "ape": 1.027, "mass": 0.9902, "skin": "#b07a55", "hairColor": "#1b1410", "hair": "crop", "beard": true, "stubble": 0.38, "kneeSleeve": "#16181d", "ankleBrace": "#16181d"}, "build_note": "Listed 6-2, 200 lb (Basketball-Reference), reported 6-4 wingspan (Sportskeeda)", "kicker": "WARRIORS 126 · MAGIC 119 · OT · NOV 7", "hook": ["Steph's and-one", "to win it in OT"], "clock": "OT · 1:38", "us": "GSW", "them": "ORL", "score_before": [117, 118], "score_make": [119, 118], "score_ft": [120, 118], "stamp": "AND-ONE", "ft_line": ["+1 at the line.", "Warriors lead for good."], "final": {"label": "FINAL · OT", "us": "Warriors", "them": "Magic", "us_pts": 126, "them_pts": 119}, "star": {"name": "Stephen Curry", "big": 41, "big_label": "points on 13-of-19 shooting", "lines": ["10 of 10 at the line", "19 in the fourth quarter and OT"]}, "story": "Up 16 at the half. Orlando tied it at the buzzer. Golden State won overtime 16–9.", "aria": "Animated Short: Stephen Curry drives into the lane with 1:38 left in overtime, Warriors down 118–117, and makes a floater through contact, then the free throw for a 120–118 lead. Warriors win 126–119. An original illustration, not traced from footage, not to scale.", "signature": "splash", "gold": "#FFC72C"};
   const NS = 'http://www.w3.org/2000/svg';
   const clamp = (v) => Math.max(0, Math.min(1, v));
   const ease = (v) => 1 - Math.pow(1 - v, 3);
@@ -291,17 +291,26 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
   S('rect', {x: hoopX + 26 * k, y: rimY - 150 * k, width: 12 * k, height: 170 * k, rx: 3, fill: 'var(--silver)'}, play);
   S('line', {x1: hoopX - rimR, x2: hoopX + 26 * k, y1: rimY, y2: rimY, class: 's-red', 'stroke-width': 6, 'stroke-linecap': 'round'}, play);
   const net = S('g', {class: 's-silver', 'stroke-width': 2, opacity: .8}, play);
-  for (let i = 0; i <= 4; i++) { const tp = hoopX - rimR + i * rimR / 2, bt = hoopX - rimR * .55 + i * rimR * 1.1 / 4; S('line', {x1: tp, y1: rimY, x2: bt, y2: rimY + 44 * k}, net); }
+  // signature finish (per star): 'splash' = Steph's gold arc, backspin, the net snapping, rings and droplets, then SPLASH
+  const SIG = C.signature || null, GOLD = C.gold || '#FFC72C';
+  const netL = Array.from({length: 5}, () => S('line', {}, net));
+  const drawNet = (snap) => netL.forEach((l, i) => { const L = 44 * k * (1 + .55 * snap), tp = hoopX - rimR + i * rimR / 2, bt = hoopX - rimR * (.55 - .18 * snap) + i * rimR * (1.1 - .36 * snap) / 4; l.setAttribute('x1', tp); l.setAttribute('y1', rimY); l.setAttribute('x2', bt); l.setAttribute('y2', rimY + L); });
+  drawNet(0);
+  const rings = SIG === 'splash' ? [0, 1, 2].map(() => S('ellipse', {cx: hoopX, cy: rimY + 4, rx: 0, ry: 0, fill: 'none', stroke: GOLD, 'stroke-width': 3, opacity: 0}, play)) : [];
+  const drops = SIG === 'splash' ? Array.from({length: 16}, (_, i) => ({a: -Math.PI / 2 + (i / 15 - .5) * 2.6, v: 260 + (i * 53) % 170, r: 7 + (i * 7) % 6, n: S('circle', {r: 6, fill: i % 3 ? '#cfe6ff' : GOLD, opacity: 0}, play)})) : [];
   // figures
   const defender = figure(play, 'opp', k); defender.g.setAttribute('opacity', .85);
   const ghosts = [0, 1, 2].map(() => { const gh = figureReal(play, 'phi', k, C.number, BUILD); gh.g.style.opacity = 0; return gh; }).reverse();
   const star = figureReal(play, 'phi', k, C.number, BUILD);
   const burst = S('g', {class: 's-red', 'stroke-width': 5, 'stroke-linecap': 'round', opacity: 0}, play);
   for (let i = 0; i < 5; i++) { const a = -Math.PI / 2 + (i - 2) * 0.5; S('line', {x1: Math.cos(a) * 26, y1: Math.sin(a) * 26, x2: Math.cos(a) * 52, y2: Math.sin(a) * 52}, burst); }
-  const trail = S('path', {fill: 'none', stroke: 'var(--silver)', 'stroke-width': 4, 'stroke-linecap': 'round', opacity: .6, filter: 'url(#glow)'}, play);
+  const trail = S('path', {fill: 'none', stroke: SIG === 'splash' ? GOLD : 'var(--silver)', 'stroke-width': SIG === 'splash' ? 5 : 4, 'stroke-linecap': 'round', opacity: SIG === 'splash' ? .8 : .6, filter: 'url(#glow)'}, play);
+  const sparks = SIG === 'splash' ? Array.from({length: 12}, () => S('circle', {r: 3.5, fill: GOLD, opacity: 0}, play)) : [];
   const ball = S('circle', {r: 13 * k, class: 'f-ink', filter: 'url(#glow)'}, play);
+  const seam = S('path', {d: SIG === 'splash' ? `M${-13 * k} 0L${13 * k} 0M0 ${-13 * k}Q${7 * k} 0 0 ${13 * k}` : 'M0 0', stroke: 'rgba(17,18,20,.55)', 'stroke-width': 2.4, fill: 'none'}, play);
   const flash = S('circle', {cx: hoopX, cy: rimY, r: 0, fill: 'none', stroke: 'var(--ink)', 'stroke-width': 4, opacity: 0}, play);
-  const stamp = T(play, hoopX - 40, rimY - 120, C.stamp, 'd', 78, 'end'); stamp.style.fill = 'var(--red)';
+  const stamp = T(play, hoopX - 40, rimY - 120, C.stamp, 'd', 78, 'end'); stamp.style.fill = SIG === 'splash' ? GOLD : 'var(--red)';
+  const sigWord = SIG === 'splash' ? T(play, hoopX - 40, rimY - 50, 'SPLASH', 'd', 60, 'end') : null; if (sigWord) { sigWord.style.fill = GOLD; sigWord.style.opacity = 0; }
   const ftG = S('g', {opacity: 0}, play);
   T(ftG, M, floor + 130, C.ft_line[0], 'd', 54);
   T(ftG, M, floor + 190, C.ft_line[1], 'b m', 36);
@@ -348,9 +357,23 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
     else if (pt < tM) { const u = clamp((pt - tR) / (tM - tR)); [bx, by] = arcAt(u); trailTo(u); }
     else { const d = clamp((pt - tM) / .6); bx = hoopX - 4; by = lerp(rimY - 6, floor - 13 * k, d * d); }
     if (pt < tR) trailTo(0); else if (pt >= tM) trailTo(1);
+    if (SIG === 'splash') trail.setAttribute('opacity', pt < tM ? .8 : (.8 * (1 - prog(pt, tM, .45))).toFixed(2));
     ball.setAttribute('cx', bx); ball.setAttribute('cy', by);
+    if (SIG === 'splash') {
+      const spin = pt < tR ? 0 : -(Math.min(pt, tM) - tR) * 1440 - Math.max(0, pt - tM) * 600;
+      seam.setAttribute('transform', `translate(${bx.toFixed(1)} ${by.toFixed(1)}) rotate(${spin.toFixed(0)})`);
+      sparks.forEach((sk, i) => { const su = (i + .5) / sparks.length, born = tR + su * (tM - tR), age = pt - born;
+        if (age < 0 || age > 1.1) { sk.setAttribute('opacity', 0); return; }
+        const [sx, sy] = arcAt(su); sk.setAttribute('cx', sx + Math.sin(i * 2.1) * 10 * age); sk.setAttribute('cy', sy + 70 * age * age + 20 * age); sk.setAttribute('opacity', (1 - age / 1.1).toFixed(2)); });
+      const sp = pt - tM;
+      drawNet(sp > 0 ? (sp < .5 ? Math.sin(Math.PI * sp / .5) : .25 * Math.sin(Math.PI * clamp((sp - .5) / .4))) : 0);
+      rings.forEach((r, i) => { const a = sp - i * .14; if (a < 0 || a > 1) { r.setAttribute('opacity', 0); return; } const e = ease(a); r.setAttribute('rx', rimR + 150 * e); r.setAttribute('ry', 10 + 34 * e); r.setAttribute('opacity', (1 - a).toFixed(2)); });
+      drops.forEach((d) => { const a = sp - .02; if (a < 0 || a > 1) { d.n.setAttribute('opacity', 0); return; } d.n.setAttribute('cx', hoopX + Math.cos(d.a) * d.v * a); d.n.setAttribute('cy', rimY + 30 * k + Math.sin(d.a) * d.v * a + 520 * a * a); d.n.setAttribute('r', d.r * (1 - a * .5)); d.n.setAttribute('opacity', (1 - a).toFixed(2)); });
+      sigWord.style.opacity = sp > .55 ? prog(pt, tM + .55, .25) : 0;
+      sigWord.setAttribute('transform', `translate(0 ${sp > .55 ? 14 * (1 - prog(pt, tM + .55, .3)) : 14})`);
+    }
     const made = pt >= tM, f = made ? clamp((pt - tM) / .8) : 0;
-    flash.setAttribute('r', rimR + 140 * f); flash.setAttribute('opacity', made ? 1 - f : 0);
+    flash.setAttribute('r', rimR + 140 * f); flash.setAttribute('opacity', made && SIG !== 'splash' ? 1 - f : 0);
     stamp.style.opacity = made ? prog(pt, tM + .05, .25) : 0;
     stamp.setAttribute('transform', `scale(${made ? 1 + .25 * (1 - prog(pt, tM + .05, .25)) : 1})`); stamp.style.transformOrigin = `${hoopX - 40}px ${rimY - 120}px`;
     slowTag.setAttribute('opacity', slow ? 1 : 0);
