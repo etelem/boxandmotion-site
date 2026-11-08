@@ -101,3 +101,9 @@ footer a{color:var(--dim)}
 @media (prefers-reduced-motion:reduce){.orbs span,.chip{animation:none}.card,.pill{transition:none}}
 
 @media (max-width:640px){.gtop{aspect-ratio:auto;min-height:104px}}
+
+/* tagline */
+.tagline{display:flex;flex-direction:column;gap:6px;padding:8px 0 4px}
+.tagline h1{margin:0;font-size:clamp(40px,8vw,88px);line-height:.95;letter-spacing:-.01em}
+.tagline p{margin:0;font-size:clamp(17px,2.2vw,22px);color:var(--dim,#5c5f66)}
+.tagline .grad{white-space:nowrap}
