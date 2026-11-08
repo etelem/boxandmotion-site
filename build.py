@@ -403,7 +403,8 @@ body = f'''<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}deep-dives/in
 <div class="card pad"><span class="d" style="font-size:44px">{rec('LAL')}</span><br><span class="dim">Lakers record</span></div></div></section>
 <section class="sec"><div class="sec" style="gap:6px"><p class="k">Signature move</p><h2 class="h2">The step-back three</h2>
 <p style="margin:0;max-width:44em">He sells the drive with a hard jab, crosses the ball back between his legs to his left as he hops back off both feet, and rises before the defender recovers. At 6-8 he releases over most guards, so a late contest rarely bothers the shot.</p></div>
-{anim_frame(R, "luka-stepback.html", "Animated illustration of Luka Dončić's step-back three")}</section>
+{anim_frame(R, "luka-stepback.html", "Animated illustration of Luka Dončić's step-back three")}
+<div class="row"><a class="pill on" href="https://youtube.com/shorts/5FgwWO0aF8s" target="_blank" rel="noopener">▶ Watch the Short</a></div></section>
 <section class="sec"><h2 class="h2">Game log</h2>
 <div class="card" style="padding:6px 16px"><div class="scroll"><table class="otable" style="min-width:720px"><tr><th>Date</th><th>Game</th><th>Result</th><th class="num">Pts</th><th class="num">Reb</th><th class="num">Ast</th><th class="num">FG</th><th class="num">3PT</th><th class="num">TO</th><th>Flag</th></tr>{logrows}</table></div></div>
 <p class="dim" style="margin:0;font-size:14px">Flags are automatic: any game 10 or more points from his season average ({avg:.1f}). Hot nights so far: {HOTS}. A dash means the stat isn't in our feed yet.</p></section>
@@ -427,7 +428,8 @@ for P in PLAYERS:
 <section class="sec"><div class="sec" style="gap:6px"><p class="k">Signature move</p><h2 class="h2">{E(P['move']['title'])}</h2>
 <p style="margin:0;max-width:44em">{E(P['move']['text'])}</p></div>
 {anim_frame(R, P['move']['anim'], P['name'] + ': ' + P['move']['title'])}
-<ol style="margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px;max-width:46em">{steps}</ol></section>
+<ol style="margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px;max-width:46em">{steps}</ol>
+{f'<div class="row"><a class="pill on" href="https://youtube.com/shorts/{P["move"]["youtube"]}" target="_blank" rel="noopener">▶ Watch the Short</a></div>' if P["move"].get("youtube") else ""}</section>
 <section class="sec"><h2 class="h2">His week</h2>
 <div class="card" style="padding:6px 16px"><div class="scroll"><table class="otable" style="min-width:640px"><tr><th>Date</th><th>Game</th><th>Result</th><th class="num">Pts</th><th class="num">Reb</th><th class="num">Ast</th><th class="num">FG</th><th class="num">3PT</th></tr>{logrows}</table></div></div></section>
 <section class="card pad"><b>Sources</b><ul style="margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:4px">{srcs}</ul></section>'''
@@ -459,6 +461,7 @@ for cslug, bl in by_coach.items():
     srcs = "".join(f'<li><a href="{E(u)}" target="_blank" rel="noopener">{E(l)}</a></li>' for l, u in b["sources"])
     more = "".join(f'<li>{E(x["title"])} ({E(x["situation"])})</li>' for x in bl[1:])
     recap = f'<a class="pill" href="{R}games/{g["slug"]}/index.html">Game recap →</a>' if g else ""
+    if b.get("youtube"): recap = f'<a class="pill on" href="https://youtube.com/shorts/{b["youtube"]}" target="_blank" rel="noopener">▶ Watch the Short</a>' + recap
     body = f'''<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}deep-dives/index.html">Deep dives</a><span>/</span><a href="{R}teams/{t['slug']}/index.html">{E(t['name'])}</a><span>/</span><span>{E(b['coach'])}</span></nav>
 <section class="sec" style="gap:12px"><p class="k">Coach's board · {E(t['city'])} {E(t['name'])}</p><h1 class="h1" style="font-size:clamp(56px,9vw,112px)">{E(b['coach'])}</h1>
 <p class="dim" style="margin:0;font-size:18px">{E(t['name'])} head coach since {E(b['since'])}. The {E(t['name'])} are {rec(c)}, {seed(c)}.</p></section>
