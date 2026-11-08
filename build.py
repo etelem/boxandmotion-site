@@ -339,7 +339,7 @@ for g in GAMES:
 {yt_btn}</div>
 <div class="sec" style="flex:1 1 320px;gap:16px">{kicker}
 <h1 class="h1" style="display:flex;flex-wrap:wrap;gap:4px 24px;font-size:clamp(40px,6vw,72px)">{names}</h1>
-{lede}{lsh}<a class="pill" style="align-self:flex-start" href="{R}reels/{g['key']}/index.html" target="_blank" rel="noopener">Open full screen, with sound</a></div></section>'''
+{lede}{lsh}</div></section>'''
     elif v:
         # only the YouTube Short exists: embed it
         hero = f'''<span class="tag gold" style="align-self:flex-start;margin-bottom:-28px">▶ Our recap video · 66 seconds</span>
