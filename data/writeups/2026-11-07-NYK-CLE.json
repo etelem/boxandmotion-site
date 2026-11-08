@@ -1,0 +1,86 @@
+{
+ "headline": "Brunson and Towns take Cleveland",
+ "dek": "Brunson scored 31 and Towns 29. New York led by as many as 19.",
+ "three": [
+  [
+   "Brunson: 31 points, 18 in the second quarter",
+   "12 of 25 from the floor, with 9 assists."
+  ],
+  [
+   "Up 10 at the half, up 18 after three",
+   "Brunson and Towns combined for 60 of 109."
+  ],
+  [
+   "Won it on the glass and on second chances",
+   "Second-chance points 26–8; rebounds 49–40. N.Y. made 13 of 14 free throws."
+  ]
+ ],
+ "battle": [
+  [
+   "Second-chance points",
+   26,
+   8
+  ],
+  [
+   "Rebounds",
+   49,
+   40
+  ],
+  [
+   "Assists",
+   27,
+   23
+  ],
+  [
+   "Steals",
+   7,
+   3
+  ]
+ ],
+ "battle_labels": [
+  "NYK",
+  "CLE"
+ ],
+ "top": [
+  [
+   "Jalen Brunson",
+   "NYK",
+   "12 of 25, 9 assists, 6 rebounds",
+   31
+  ],
+  [
+   "Karl-Anthony Towns",
+   "NYK",
+   "13 rebounds, 11 of 21",
+   29
+  ],
+  [
+   "OG Anunoby",
+   "NYK",
+   "3 threes, 4 of 4 FT",
+   15
+  ],
+  [
+   "Landry Shamet",
+   "NYK",
+   "3 threes, started for Josh Hart",
+   9
+  ]
+ ],
+ "linescore": {
+  "away": [
+   26,
+   37,
+   25,
+   21
+  ],
+  "home": [
+   27,
+   26,
+   17,
+   27
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-07-NYK-at-CLE.json"
+}

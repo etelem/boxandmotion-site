@@ -5,6 +5,16 @@ from urllib.parse import quote_plus
 
 T = json.load(open("data/teams.json"))
 S = json.load(open("data/season.json"))
+# hand-picked featured games (game of the week candidates) before nightly write-ups are merged in
+FEATURED_KEYS = set(S["featured"])
+# nightly text recaps written from each fact-checked reel config (kit/make_writeup.py): same page sections as featured games
+S.setdefault("linescores", {})
+if os.path.isdir("data/writeups"):
+    for fn in sorted(os.listdir("data/writeups")):
+        if fn.endswith(".json"):
+            _k = fn[:-5]; _w = json.load(open(f"data/writeups/{fn}"))
+            S["featured"].setdefault(_k, _w)
+            if _w.get("linescore") and _k not in S["linescores"]: S["linescores"][_k] = _w["linescore"]
 O = json.load(open("data/odds.json"))
 NEWSLETTER = "https://boxandmotion.beehiiv.com/subscribe"
 OUT = "dist"
@@ -194,7 +204,7 @@ shutil.copy("src/site.css", f"{OUT}/assets/site.css"); shutil.copy("src/site.js"
 # ---- home ----
 R = ""
 movers = sorted(T, key=lambda c: -abs(O[c]["chg"]))[:1][0]
-_gk = S.get("gotw") or max(S["featured"])
+_gk = S.get("gotw") or max(FEATURED_KEYS)
 gotw = next(g for g in GAMES if g["key"] == _gk)
 fz = S["featured"][gotw["key"]]
 risers = sorted(T, key=lambda c: -O[c]["chg"])[:3]; fallers = sorted(T, key=lambda c: O[c]["chg"])[:3]
@@ -302,7 +312,8 @@ for g in GAMES:
     lsh = ""
     if ls:
         def tr(c, q, tot): return f'<tr><th>{E(T[c]["name"])}</th>' + "".join(f"<td>{x}</td>" for x in q) + f'<td><b>{tot}</b></td></tr>'
-        lsh = f'<div class="scroll"><table class="lines"><tr class="k"><th></th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th><th>Final</th></tr>{tr(a, ls["away"], g["as_"])}{tr(h, ls["home"], g["hs"])}</table></div>'
+        ot_cols = "".join(f"<th>{'OT' if i == 4 else f'{i-3}OT'}</th>" for i in range(4, len(ls["away"])))
+        lsh = f'<div class="scroll"><table class="lines"><tr class="k"><th></th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th>{ot_cols}<th>Final</th></tr>{tr(a, ls["away"], g["as_"])}{tr(h, ls["home"], g["hs"])}</table></div>'
     ws, lsc = max(g["as_"], g["hs"]), min(g["as_"], g["hs"])
     margin = ws - lsc
     auto = f"{T[w]['city']} beat {T[l]['city']} {ws}–{lsc}{' in overtime' if g['ot'] else ''}"

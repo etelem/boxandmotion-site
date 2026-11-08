@@ -1,0 +1,86 @@
+{
+ "headline": "Booker's last nine sink Houston",
+ "dek": "Booker scored the Suns’ last 9. Durant’s tying 3 fell short.",
+ "three": [
+  [
+   "Booker: 24 points, including the Suns’ last 9",
+   "10 of 24 from the floor, with 3 steals."
+  ],
+  [
+   "Tied 47–47 at the half, then won both late quarters",
+   "Booker and Green combined for 40 of 102."
+  ],
+  [
+   "Won it passing: 29 assists to 16",
+   "Assists 29–16; field goals made 41–36. Houston had 15 offensive rebounds to 9."
+  ]
+ ],
+ "battle": [
+  [
+   "Assists",
+   29,
+   16
+  ],
+  [
+   "Field goals made",
+   41,
+   36
+  ],
+  [
+   "Threes made",
+   12,
+   10
+  ],
+  [
+   "Steals",
+   8,
+   7
+  ]
+ ],
+ "battle_labels": [
+  "PHX",
+  "HOU"
+ ],
+ "top": [
+  [
+   "Devin Booker",
+   "PHX",
+   "10 of 24, 3 steals, last 9 Suns points",
+   24
+  ],
+  [
+   "Jalen Green",
+   "PHX",
+   "6 assists, 7 of 14",
+   16
+  ],
+  [
+   "Miles Bridges",
+   "PHX",
+   "10 rebounds, 7 assists",
+   13
+  ],
+  [
+   "Dillon Brooks",
+   "PHX",
+   "3 threes",
+   11
+  ]
+ ],
+ "linescore": {
+  "away": [
+   23,
+   24,
+   28,
+   24
+  ],
+  "home": [
+   35,
+   12,
+   29,
+   26
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-07-HOU-at-PHX.json"
+}

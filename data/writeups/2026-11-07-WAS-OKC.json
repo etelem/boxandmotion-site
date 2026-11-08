@@ -1,0 +1,86 @@
+{
+ "headline": "Thunder rout Washington by 39",
+ "dek": "Shai scored 30 in three quarters. Washington shot 29.6%.",
+ "three": [
+  [
+   "Shai: 30 points and 9 assists in three quarters",
+   "11 of 20 from the floor. Sat out the fourth."
+  ],
+  [
+   "Up 21 at the half, up 31 after three",
+   "Shai, McCain and Mara combined for 67 of 114."
+  ],
+  [
+   "Won it inside and off the bench",
+   "Points in the paint 56–32; bench points 43–23. Washington made 7 of 43 threes."
+  ]
+ ],
+ "battle": [
+  [
+   "Points in the paint",
+   56,
+   32
+  ],
+  [
+   "Bench points",
+   43,
+   23
+  ],
+  [
+   "Fast-break points",
+   21,
+   11
+  ],
+  [
+   "Rebounds",
+   55,
+   47
+  ]
+ ],
+ "battle_labels": [
+  "OKC",
+  "WAS"
+ ],
+ "top": [
+  [
+   "Shai Gilgeous-Alexander",
+   "OKC",
+   "9 ast, 11 of 20, three quarters",
+   30
+  ],
+  [
+   "Jared McCain",
+   "OKC",
+   "off the bench, 8 of 10",
+   19
+  ],
+  [
+   "Aday Mara",
+   "OKC",
+   "8 reb, 3 blk, 8 of 10",
+   18
+  ],
+  [
+   "Ajay Mitchell",
+   "OKC",
+   "4 rebounds",
+   12
+  ]
+ ],
+ "linescore": {
+  "away": [
+   19,
+   17,
+   23,
+   16
+  ],
+  "home": [
+   25,
+   32,
+   33,
+   24
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-07-WAS-at-OKC.json"
+}

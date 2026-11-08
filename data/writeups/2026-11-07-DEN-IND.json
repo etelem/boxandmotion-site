@@ -1,0 +1,86 @@
+{
+ "headline": "Denver led by 27, then held on",
+ "dek": "Jokić had 19 points, 13 rebounds and 8 assists. Denver led by as many as 27.",
+ "three": [
+  [
+   "Jokić: 19 points, 13 rebounds, 8 assists",
+   "10 in the first quarter. Two assists shy of a triple-double."
+  ],
+  [
+   "Up 23 at the half, then held off a 37-point third",
+   "Jokić, Johnson and Murray combined for 53 of 114."
+  ],
+  [
+   "Won it inside and on the glass",
+   "Points in the paint 54–44; rebounds 51–45. Denver turned it over just 3 times."
+  ]
+ ],
+ "battle": [
+  [
+   "Points in the paint",
+   54,
+   44
+  ],
+  [
+   "Rebounds",
+   51,
+   45
+  ],
+  [
+   "Free throws made",
+   16,
+   5
+  ],
+  [
+   "Threes made",
+   10,
+   15
+  ]
+ ],
+ "battle_labels": [
+  "DEN",
+  "IND"
+ ],
+ "top": [
+  [
+   "Nikola Jokić",
+   "DEN",
+   "13 reb, 8 ast, 10 in the 1st",
+   19
+  ],
+  [
+   "Cameron Johnson",
+   "DEN",
+   "8 of 12 from the floor",
+   18
+  ],
+  [
+   "Jamal Murray",
+   "DEN",
+   "8 ast, 6 reb",
+   16
+  ],
+  [
+   "Spencer Jones",
+   "DEN",
+   "season debut, 3 of 3 from three",
+   13
+  ]
+ ],
+ "linescore": {
+  "away": [
+   27,
+   37,
+   26,
+   24
+  ],
+  "home": [
+   19,
+   22,
+   37,
+   24
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-07-DEN-at-IND.json"
+}

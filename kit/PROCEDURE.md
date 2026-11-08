@@ -47,6 +47,12 @@ Game key = `YYYY-MM-DD-AWAY-HOME`, e.g. `2026-11-06-POR-LAL` (team codes from da
    `node shots.js $PWD/out/<key>-copy.html out/<key>-p 1 2 7 12 14.5 21.5 29 36 42 50 58 64`. Look at the frames: nothing clipped or
    overlapping, names and numbers right, the shooter's figure reads as a player. Fix and rebuild once if needed.
 6. **Publish to the site** (from the repo root): `python3 kit/publish_reel.py kit/out/<key>-reel.html <key>`.
+   Then write the game page's text recap from the same config:
+   `python3 kit/make_writeup.py kit/configs/<date>-<AWAY>-at-<HOME>.json "<Headline>"`.
+   - The headline is the only new text: short, factual, about who won and how (e.g. "Brunson and Towns take Cleveland",
+     "Curry's 41 wins it in overtime"). No hype beyond the facts, and nothing that isn't in the config.
+   - Everything else comes from the config's verified numbers and captions: the dek, the three things that decided it,
+     where it was won, top performers and the quarter line score, with an OT column when needed.
 7. **MP4.** `bash kit/mp4.sh kit/out/<key>-reel.html kit/out/<key>-recap.mp4`, then SendUserFile the MP4.
    For YouTube, also make a smaller copy next to the reel: `ffmpeg -y -loglevel error -i kit/out/<key>-recap.mp4 -c:v libx264 -preset veryfast -crf 28 -c:a aac -b:a 128k -movflags +faststart reels/<key>/recap.mp4`.
 

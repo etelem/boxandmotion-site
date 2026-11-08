@@ -1,0 +1,88 @@
+{
+ "headline": "Curry's 41 wins it in overtime",
+ "dek": "Curry scored 41, with the go-ahead and-one in overtime.",
+ "three": [
+  [
+   "Curry: 41 points, 10 of 10 at the line",
+   "19 in the fourth quarter and overtime, on 13-of-19 shooting."
+  ],
+  [
+   "Up 16 at the half, then won it in overtime",
+   "Curry and Lendeborg combined for 64 of 126."
+  ],
+  [
+   "Won it shooting and off the bench",
+   "Assists 32–29; bench points 42–31. Orlando grabbed 24 offensive rebounds."
+  ]
+ ],
+ "battle": [
+  [
+   "Assists",
+   32,
+   29
+  ],
+  [
+   "Bench points",
+   42,
+   31
+  ],
+  [
+   "Free throws made",
+   25,
+   15
+  ],
+  [
+   "Offensive rebounds",
+   3,
+   24
+  ]
+ ],
+ "battle_labels": [
+  "GSW",
+  "ORL"
+ ],
+ "top": [
+  [
+   "Stephen Curry",
+   "GSW",
+   "13 of 19, 5 of 10 from three, 10 of 10 FT",
+   41
+  ],
+  [
+   "Yaxel Lendeborg",
+   "GSW",
+   "8 rebounds, 3 blocks, 9 of 15",
+   23
+  ],
+  [
+   "Brandin Podziemski",
+   "GSW",
+   "4 of 5 from three, 7 rebounds",
+   15
+  ],
+  [
+   "Georges Niang",
+   "GSW",
+   "off the bench, 3 of 3 from three",
+   11
+  ]
+ ],
+ "linescore": {
+  "away": [
+   19,
+   22,
+   37,
+   32,
+   9
+  ],
+  "home": [
+   31,
+   26,
+   20,
+   33,
+   16
+  ],
+  "ot": true
+ },
+ "source": "kit/configs/2026-11-07-ORL-at-GSW.json"
+}

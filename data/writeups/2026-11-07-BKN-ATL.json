@@ -1,0 +1,86 @@
+{
+ "headline": "Down 17, the Hawks steal it late",
+ "dek": "Down 17 early, Atlanta took its first lead with 1:26 left.",
+ "three": [
+  [
+   "Jalen Johnson: 30 points in his return",
+   "Back after missing three games. 11 of 17 from the floor."
+  ],
+  [
+   "Down 7 after three, then won the fourth 36–26",
+   "Johnson and Alexander-Walker combined for 50 of 124."
+  ],
+  [
+   "Won it inside and off turnovers",
+   "Points in the paint 70–48; points off turnovers 28–13. Brooklyn turned it over 22 times."
+  ]
+ ],
+ "battle": [
+  [
+   "Points in the paint",
+   70,
+   48
+  ],
+  [
+   "Points off turnovers",
+   28,
+   13
+  ],
+  [
+   "Fast-break points",
+   20,
+   4
+  ],
+  [
+   "Blocks",
+   9,
+   1
+  ]
+ ],
+ "battle_labels": [
+  "ATL",
+  "BKN"
+ ],
+ "top": [
+  [
+   "Jalen Johnson",
+   "ATL",
+   "7 reb, 6 ast, back from an ankle sprain",
+   30
+  ],
+  [
+   "Nickeil Alexander-Walker",
+   "ATL",
+   "the go-ahead free throws",
+   20
+  ],
+  [
+   "Aaron Wiggins",
+   "ATL",
+   "off the bench, 5 threes",
+   20
+  ],
+  [
+   "Onyeka Okongwu",
+   "ATL",
+   "3 blocks, 5 assists",
+   16
+  ]
+ ],
+ "linescore": {
+  "away": [
+   37,
+   33,
+   25,
+   26
+  ],
+  "home": [
+   27,
+   39,
+   22,
+   36
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-07-BKN-at-ATL.json"
+}
