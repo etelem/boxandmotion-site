@@ -97,8 +97,8 @@ def video_block(v):
 def page(path, title, body, active=None, desc="Every NBA game, explained in animation. Recaps, playoff odds and scouting reports.", band=""):
     depth = path.count("/"); R = "../" * depth
     nav = [("Teams", "teams/index.html", "Teams"), ("Last Night", "last-night/index.html", "Last Night"), ("Deep Dives", "deep-dives/index.html", "Deep Dives"),
-           ("Playoff Odds", "odds/index.html", '<span class="lg">Playoff </span>Odds'), ("Newsletter", "newsletter/index.html", "Newsletter")]
-    # on phones Newsletter moves up beside My teams (as its own button) and "Playoff Odds" shortens to "Odds", so the tabs fit without scrolling
+           ("Playoff Odds", "odds/index.html", "Playoff Odds"), ("Newsletter", "newsletter/index.html", "Newsletter")]
+    # on phones Newsletter moves up beside My teams (as its own button), so the four tabs fit without scrolling
     links = "".join(f'<a href="{R}{h}"{" aria-current=page" if n==active else ""}{" class=nl" if n=="Newsletter" else ""}>{lbl}</a>' for n, h, lbl in nav)
     html = f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
