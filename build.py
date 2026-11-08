@@ -402,7 +402,7 @@ body = f'''<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}deep-dives/in
 <div class="card pad"><span class="d" style="font-size:44px">53</span><br><span class="dim">season high</span></div>
 <div class="card pad"><span class="d" style="font-size:44px">{rec('LAL')}</span><br><span class="dim">Lakers record</span></div></div></section>
 <section class="sec"><div class="sec" style="gap:6px"><p class="k">Signature move</p><h2 class="h2">The step-back three</h2>
-<p style="margin:0;max-width:44em">He sells the drive with a hard jab, hops back off both feet, and rises before the defender recovers. At 6-8 he releases over most guards, so a late contest rarely bothers the shot.</p></div>
+<p style="margin:0;max-width:44em">He sells the drive with a hard jab, crosses the ball back between his legs to his left as he hops back off both feet, and rises before the defender recovers. At 6-8 he releases over most guards, so a late contest rarely bothers the shot.</p></div>
 {anim_frame(R, "luka-stepback.html", "Animated illustration of Luka Dončić's step-back three")}</section>
 <section class="sec"><h2 class="h2">Game log</h2>
 <div class="card" style="padding:6px 16px"><div class="scroll"><table class="otable" style="min-width:720px"><tr><th>Date</th><th>Game</th><th>Result</th><th class="num">Pts</th><th class="num">Reb</th><th class="num">Ast</th><th class="num">FG</th><th class="num">3PT</th><th class="num">TO</th><th>Flag</th></tr>{logrows}</table></div></div>
