@@ -1,0 +1,171 @@
+{
+  "D": "  const D = {\n    date: 'Sat, Nov 7, 2026',\n    us: 126, them: 119, record: '7–3', usName: 'Warriors', themName: 'Magic',\n    quarters: [[31, 19], [26, 22], [20, 37], [33, 32]],\n    leadUs: 16, leadThem: 6,\n    star: {name: 'Stephen Curry', stats: [['Points', 41, 50], ['Free throws made of 10', 10, 10], ['Points in the 4th and OT', 19, 25]]},\n    scorers: [\n      {name: 'Stephen Curry', pts: 41, note: '13 of 19 · 5 of 10 from three · 10 of 10 FT'},\n      {name: 'Yaxel Lendeborg', pts: 23, note: '8 rebounds · 3 blocks · 9 of 15'},\n      {name: 'Brandin Podziemski', pts: 15, note: '4 of 5 from three · 7 rebounds'},\n      {name: 'Georges Niang', pts: 11, note: 'off the bench · 3 of 3 from three'},\n      {name: 'Brandon Williams', pts: 9, note: 'off the bench · 3 of 3 FT'},\n    ],\n    edges: [\n      {label: 'Field goal percentage', us: 54, them: 38, unit: '%'},\n      {label: 'Assists', us: 32, them: 29},\n      {label: 'Bench points', us: 42, them: 31},\n      {label: 'Free throws made', us: 25, them: 15},\n    ],\n    gaps: [\n      {label: 'Offensive rebounds', us: 3, them: 24},\n      {label: 'Second-chance points', us: 2, them: 33},\n    ],\n    next: {opp: 'vs Pelicans', when: 'Mon, Nov 9, 10:00 PM ET', pUs: 0},\n  };\n",
+  "team": "GSW",
+  "play": {
+    "comment": "Curry's floater through contact with 1:38 left in overtime, a three-point play that turned a 118–117 deficit into a 120–118 lead for good. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "The and-one",
+    "subP": "Steph in the lane, 1:38 left in OT",
+    "subL": "Steph in the lane with 1:38 left in overtime",
+    "m0": "Magic +1",
+    "m1": "Warriors +2",
+    "num": "30",
+    "cap1": "Steph's and-one. Warriors by 2.",
+    "cap2": "Floater, foul, free throw: 120–118.",
+    "clock": [
+      106,
+      98
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Warriors vs Magic Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Warriors 126, Magic 119 (OT) · Nov 7, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Warriors vs.', 'Magic'] : ['Warriors vs. Magic']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Curry: 41, and the', 'go-ahead and-one in OT.'] : ['Curry scored 41, with the go-ahead and-one in overtime.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Warriors improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Seventh straight win'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Up 16 at the half,', 'won it in overtime'] : ['Up 16 at the half, then won it in overtime']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Warriors ${D.leadUs}, Magic ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Warriors’ margin underneath. OT: 16–9."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Curry: 41,', '10 of 10 at the line'] : ['Curry: 41 points, 10 of 10 at the line']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['19 in the fourth and OT.', '13 of 19 from the floor.'] : ['19 in the fourth quarter and overtime, on 13-of-19 shooting.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Curry and Lendeborg:', '64 of the 126'] : ['Curry and Lendeborg combined for 64 of 126']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 50;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it shooting', 'and off the bench'] : ['Won it shooting and off the bench']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Warriors in gold, Magic in gray. Orlando', 'grabbed 24 offensive rebounds.'] : ['Warriors in gold, Magic in gray. Orlando grabbed 24 offensive rebounds.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'After an 0–3 start'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Pelicans’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '4–5';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Curry: 16 games of 40-plus since', 'turning 35, the most in NBA history.'] : ['Curry has 16 games of 40-plus since turning 35, the most in NBA history.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Warriors 126 · Magic 119 · OT · Nov 7'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'The and-one'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Steph'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 60;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 170 : 200) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+      "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+    ],
+    [
+      "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+      "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+    ],
+    [
+      "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+      "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+3', 'd w', 72, 'end');"
+    ],
+    [
+      "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+      "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 120 * k, shotX + 80 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "T(board, bx + 24, by + 38, 'OT', 'b m', 24);"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 190, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 222, ly, D.themName"
+    ]
+  ],
+  "aria": "Animated recap of the Warriors' 126 to 119 overtime home win over Orlando: Stephen Curry's three-point play with 1:38 left in overtime, quarter-by-quarter scoring, his 41 points, the top scorers, how the Warriors won, and the next game against New Orleans.",
+  "notes": [
+    "Box score from the Warriors' 126–119 overtime home win over the Orlando Magic on Nov 7, 2026, from the full box score on Covers (Yahoo Sports' box score matches Orlando's lines), with game details from the AP (via ABC7 San Francisco and La Nación), Yahoo Sports, NBC Sports Bay Area (via Yahoo), DAZN and Open Court. All 126 Warriors points and all 119 Magic points are accounted for in that box score. Curry's 19 points in the fourth quarter and overtime are 14 in the fourth (NBC Sports Bay Area) plus 5 in overtime (Yahoo Sports, Open Court). The Pelicans' record is from the site's standings after Friday's games; they did not play Saturday. Golden State's Monday opponent is New Orleans per the Warriors coverage on Yahoo Sports and the published schedule (one AP version said Charlotte).",
+    "The play of the game is an original illustration of Stephen Curry's three-point play with 1:38 left in overtime (the AP's time): with the Warriors down 118–117, he drove and made a floater through contact, then the free throw, for a 120–118 lead they never gave up (Open Court's account). Wendell Carter Jr. then missed two free throws with 1:15 left that would have tied it. The floater is drawn as a short pull-up in the lane and the contact isn't shown. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "Regulation ended 110–110: Curry's runner with 25.2 seconds left put Golden State up 110–108 and Jamal Cain's putback tied it at the end. The quarter chart shows the four regulation quarters; Golden State won overtime 16–9.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Golden State Warriors or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Curry’s listed 6-foot-2 and 200 pounds (Basketball-Reference), with arms scaled to his reported 6-foot-4 wingspan (Sportskeeda). It is an original silhouette with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "tall": 0.9487,
+    "ape": 1.027,
+    "mass": 0.9902,
+    "label": "Stephen Curry, listed 6-2, 200 lb, reported 6-4 wingspan"
+  }
+}
