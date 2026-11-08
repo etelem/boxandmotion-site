@@ -1,0 +1,155 @@
+{
+  "D": "  const D = {\n    date: 'Sat, Nov 7, 2026',\n    us: 124, them: 121, record: '7–4', usName: 'Hawks', themName: 'Nets',\n    quarters: [[27, 37], [39, 33], [22, 25], [36, 26]],\n    leadUs: 7, leadThem: 17,\n    star: {name: 'Jalen Johnson', stats: [['Points', 30, 35], ['Shots made of 17', 11, 17], ['Free throws made of 10', 8, 10]]},\n    scorers: [\n      {name: 'Jalen Johnson', pts: 30, note: '7 reb · 6 ast · back from an ankle sprain'},\n      {name: 'Nickeil Alexander-Walker', pts: 20, note: 'the go-ahead free throws'},\n      {name: 'Aaron Wiggins', pts: 20, note: 'off the bench · 5 threes'},\n      {name: 'Onyeka Okongwu', pts: 16, note: '3 blocks · 5 assists'},\n      {name: 'Kingston Flemings', pts: 10, note: '5 of 8 · 2 late blocks'},\n    ],\n    edges: [\n      {label: 'Points in the paint', us: 70, them: 48},\n      {label: 'Points off turnovers', us: 28, them: 13},\n      {label: 'Fast-break points', us: 20, them: 4},\n      {label: 'Blocks', us: 9, them: 1},\n    ],\n    gaps: [\n      {label: 'Rebounds', us: 40, them: 53},\n      {label: 'Threes made', us: 12, them: 14},\n    ],\n    next: {opp: 'vs Lakers', when: 'Mon, Nov 9, 7:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Nickeil Alexander-Walker's second free throw with 1:26 left that gave the Hawks a 115–114 lead, their first of the night. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "First lead",
+    "subP": "Alexander-Walker at the line, 1:26 left",
+    "subL": "Alexander-Walker at the line with 1:26 left",
+    "m0": "Tied 114",
+    "m1": "Hawks +1",
+    "num": "7",
+    "cap1": "Alexander-Walker hits it. Hawks by 1.",
+    "cap2": "Atlanta’s first lead of the night.",
+    "clock": [
+      94,
+      86
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Hawks vs Nets Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Hawks 124, Nets 121 · Nov 7, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Hawks vs.', 'Nets'] : ['Hawks vs. Nets']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Down 17 early. First lead', 'with 1:26 left.'] : ['Down 17 early, Atlanta took its first lead with 1:26 left.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Hawks improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Fourth straight win'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Down 7 after three,', 'won the fourth 36–26'] : ['Down 7 after three, then won the fourth 36–26']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Hawks ${D.leadUs}, Nets ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Hawks’ margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Johnson: 30', 'in his return'] : ['Jalen Johnson: 30 points in his return']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['Back after three games out.', '11 of 17 from the floor.'] : ['Back after missing three games. 11 of 17 from the floor.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Johnson and Alexander-Walker:', '50 of the 124'] : ['Johnson and Alexander-Walker combined for 50 of 124']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 35;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it inside', 'and off turnovers'] : ['Won it inside and off turnovers']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Hawks in gold, Nets in gray. Brooklyn', 'turned it over 22 times.'] : ['Hawks in gold, Nets in gray. Brooklyn turned it over 22 times.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'Fourth in the East'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Lakers’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '8–2';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Sixth straight win', 'over Brooklyn.'] : ['Atlanta’s sixth straight win over Brooklyn.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Hawks 124 · Nets 121 · Nov 7'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'First lead'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Johnson'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 75;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - 190 * k, startX = shotX;"
+    ],
+    [
+      "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+      "S('line', {x1: hoopX - 190 * k, x2: hoopX - 190 * k, y1: floor - 6, y2: floor + 14}, court),"
+    ],
+    [
+      "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+      "const tag = T(g, hoopX - 190 * k, floor + 56 * k + 10, 'Free-throw line',"
+    ],
+    [
+      "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+      "defender.g.style.opacity = 0;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+1', 'd w', 72, 'end');"
+    ],
+    [
+      "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+      "lift = lt < 6.3 ? 12 * up : 12 * (1 - down * down);"
+    ]
+  ],
+  "team": "ATL",
+  "aria": "Animated recap of the Hawks' 124 to 121 home win over Brooklyn: Nickeil Alexander-Walker's go-ahead free throw with 1:26 left, quarter-by-quarter scoring, Jalen Johnson's 30 points, the top scorers, how the Hawks won, and the next game against the Lakers.",
+  "notes": [
+    "Box score from the Hawks' 124–121 home win over the Brooklyn Nets on Nov 7, 2026, from Covers.com's full box score and Plain Text Sports (they agree on every player line), with game details from the AP (via Yahoo Sports, WRAL and Atlanta News First), Reuters/Field Level Media and Yahoo Sports. All 124 Hawks points and all 121 Nets points are accounted for. Points in the paint (70–48) and fast-break points (20–4) are in both box scores; points off turnovers (28–13) are from Plain Text Sports and match Nets coach Jordi Fernandez's '22 turnovers for 28 points'. The league stats feed wasn't available for this recap; records and the conference standing come from the site's standings after Saturday (FOX Sports' conference table).",
+    "Biggest leads: Brooklyn's 17 (31–14 in the first quarter, per the AP, Field Level Media and Plain Text Sports' play-by-play) and Atlanta's 7 (123–116 with 9.5 seconds left). Atlanta trailed until the final 1:26.",
+    "The play of the game is an original illustration of Nickeil Alexander-Walker's free throws with 1:26 left, after he was fouled by Mikel Brown Jr.: the first tied it 114–114 and the second gave the Hawks a 115–114 lead, their first of the night (AP; Field Level Media; Plain Text Sports' play-by-play). He added a running layup at 1:07 for 117–114, and Jalen Johnson's three-point play with 38.5 seconds left made it 120–114. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Atlanta Hawks or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Alexander-Walker’s listed 6-foot-5 and 205 pounds (Basketball-Reference, Wikipedia), with arms scaled to his reported 6-foot-9½ wingspan (Bleacher Report's 2019 draft scouting report); his No. 7 is from Wikipedia. It is an original silhouette with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "tall": 0.9872,
+    "ape": 1.0584,
+    "mass": 0.9828,
+    "label": "Nickeil Alexander-Walker, listed 6-5, 205 lb, reported 6-9.5 wingspan"
+  }
+}
