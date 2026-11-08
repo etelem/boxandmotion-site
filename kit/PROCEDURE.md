@@ -1,8 +1,11 @@
 # Box & Motion Hoops: nightly recap reels (every game)
 
-Output per game: one drawn ~66-second recap reel, published on boxandmotion.com (it leads the game's page),
-posted to YouTube Shorts through Buffer (the Short then replaces the reel at the top of the page), and the MP4 sent to Elan. This is the ONLY recap format.
-Scenes: title, final, drawn play of the game, game flow, star, top scorers, how they won, up next, end card.
+What gets made (Elan's split, Nov 8, 2026):
+- **Website, every game:** the drawn ~66-second recap reel (it leads the game's page) plus the text recap.
+  Scenes: title, final, drawn play of the game, game flow, star, top scorers, how they won, up next, end card.
+- **YouTube, the best games only:** each run posts at most ONE Short: a ~27-second, play-first cut of its most notable
+  verified game (biggest star line, close finish, or a big play). Three runs = 2-3 Shorts a night. The full reel is never
+  posted to YouTube. Titles lead with the player ("Steph's and-one to win it in OT | Warriors 126, Magic 119").
 
 ## Rules (non-negotiable)
 - Every number and claim is verified against the box score or a named written source. Cite sources in the reel's notes.
@@ -11,11 +14,13 @@ Scenes: title, final, drawn play of the game, game flow, star, top scorers, how 
 - The player who made the play is drawn to his build (`figure` in the config): listed height and weight, arms scaled to a reported
   wingspan. Face stays featureless. Measurements from a named source that is not espn.com or nba.com (Basketball-Reference,
   RealGM, Wikipedia, team media guides via news coverage). Add a note saying what the figure is based on.
-- Figure style for every player: the recap silhouette (navy body, glowing team-color outline, jersey and number), drawn to his
-  build. No skin tone, colored hair or facial hair, never cartoony; the face stays blank. What makes it him is the build, the
-  number, the moment, and ONE motion that shows his signature trait: Maxey's speed = fading full-body afterimages trailing him
-  (Luka's step-back uses the same trail on the hop back). Elan's rule, Nov 7: "it should look like his silhouette. That goes
-  for all players."
+- Figure style for every player (Elan, Nov 8: every recap should look and feel like the Luka step-back and Steph's Splash, not
+  stick figures): the star is drawn in his team's kit (home = white with team-colour numbers, Lakers gold at home; away = team
+  colour) with his look from `kit/looks.json` (skin tone, hair, beard, gear) and the glowing outline. The face always stays blank;
+  never traced, never cartoony. Set `"player"` (his name as in looks.json) and `"home"` (true/false) and the build/kit/look are
+  applied automatically. If he isn't in looks.json yet, he is drawn as a team-colour silhouette in the kit: do NOT invent a look;
+  list him in the report under "needs a look" so Elan can approve one. Every make gets the signature-piece finish (glowing arc in
+  the team accent, sparks, backspin, the net snapping, rings off the rim); stars with a signature finish get it too (Steph: SPLASH).
 - Check that the box score's player points add up to the team total; fill missing points from a full box score (StatMuse, FantasyData)
   or written recaps and say so in the notes.
 - No team or league logos, no traced footage, original music only, keep the unofficial-fan disclaimer (already in the template).
@@ -40,8 +45,8 @@ Game key = `YYYY-MM-DD-AWAY-HOME`, e.g. `2026-11-06-POR-LAL` (team codes from da
    `figure`, and only the RIGHT-hand side of each `subs` pair (never a left-hand side). Set `"team"` to the winner's code and DELETE
    any `"palette"` key, so the reel is drawn in the winner's colors. Edges/gaps: only "more is better" stats; set the `max` values above
    the largest number. The footer line must be another verified fact (streak, last meeting with the next opponent).
-   `figure`: `{"tall": height_in/78, "ape": wingspan_in/height_in (1.0 if no wingspan is reported), "mass": sqrt((lb/height_in)/(215/78)), "label": "..."}` Build keys only (the look options in
-   figure-real.js are not used: see the figure style rule at the top).
+   `figure`: `{"player": "<name as in kit/looks.json>", "home": true|false, "tall": height_in/78, "ape": wingspan_in/height_in (1.0 if no wingspan is reported), "mass": sqrt((lb/height_in)/(215/78)), "label": "..."}`.
+   His look and kit come from `player`/`home` (see the figure style rule at the top).
 4. **Build.** `python3 make_reel.py configs/<key>.json out/<key>-reel.html`. Leftovers may only list words that really belong to this game.
 5. **Check once.** `python3 hooks.py out/<key>-reel.html out/<key>-copy.html` then
    `node shots.js $PWD/out/<key>-copy.html out/<key>-p 1 2 7 12 14.5 21.5 29 36 42 50 58 64`. Look at the frames: nothing clipped or
@@ -53,28 +58,38 @@ Game key = `YYYY-MM-DD-AWAY-HOME`, e.g. `2026-11-06-POR-LAL` (team codes from da
      "Curry's 41 wins it in overtime"). No hype beyond the facts, and nothing that isn't in the config.
    - Everything else comes from the config's verified numbers and captions: the dek, the three things that decided it,
      where it was won, top performers and the quarter line score, with an OT column when needed.
-7. **MP4.** `bash kit/mp4.sh kit/out/<key>-reel.html kit/out/<key>-recap.mp4`, then SendUserFile the MP4.
-   For YouTube, also make a smaller copy next to the reel: `ffmpeg -y -loglevel error -i kit/out/<key>-recap.mp4 -c:v libx264 -preset veryfast -crf 28 -c:a aac -b:a 128k -movflags +faststart reels/<key>/recap.mp4`.
+7. **The YouTube Short (this run's ONE most notable game only).** Pick the game; its play must be a drive (layup or floater,
+   with or without an and-one) or a jump shot (two or three). If its play is another kind (free throw, dunk, block, lob), use
+   this run's next most notable game whose play fits; if none fits, post no Short and say so.
+   - Copy the closest example in `kit/shorts/`: `2026-11-07-ORL-at-GSW.json` (drive + and-one, with the free-throw beat) or
+     `2026-11-06-POR-at-LAL.json` (`"play_type": "jumper"`, `"three": true|false`). Set `out` (`short-<date>-<AWAY>-<HOME>.html`),
+     `team` (the winner), `home`, `player`, `number`, `build` (tall/ape/mass from the reel config), `kicker`, `hook` (player-first,
+     two short lines), `clock`, `stamp` (AND-ONE, DAGGER, GAME-WINNER, THREE... only what the play was), the beat lines
+     (`ft_line` for an and-one, otherwise `beat`), `final`, `star`, `story`, `aria`.
+   - Score on the board: `score_before` / `score_make` (/ `score_ft`) only if every number is verified; otherwise use
+     `"margins": ["Lakers +4", "Lakers +6"]` from the written recap. Every line on every card is from the box score or a named source.
+   - Build and check: `python3 kit/make_playshort.py kit/shorts/<key>.json`, then look at frames (`?short=1`, `window.__A.render(t)`)
+     around the release, the make, the beat, the final card and the end card: nothing clipped or overlapping.
+   - MP4: `bash kit/short_mp4.sh $PWD/src/anim/<out> kit/out/<key>-short.mp4 1`, copy it to `reels/<key>/short.mp4`,
+     and SendUserFile it.
 
 ## After all games in this run
 1. `bash kit/push_site.sh "Recap reels: <date> (<keys>)"` from the repo root. It rebuilds the site on top of the latest main and pushes,
    retrying if another run pushed first. Cloudflare redeploys in a minute or two. Then wait 3 minutes so the MP4s are live at
-   `https://boxandmotion.com/reels/<key>/recap.mp4`.
+   `https://boxandmotion.com/reels/<key>/short.mp4`.
 2. **YouTube Shorts through Buffer** (Buffer connector). Organization "My organization" (`get_account`), YouTube channel "Box & Motion"
-   (`list_channels`, service youtube). For each game in this run, up to `YOUTUBE_MAX_PER_RUN = 5` games (the channel is phone-verified as of Nov 7, 2026;
-   three runs x 5 covers a full 15-game night), most notable game first. If Buffer or YouTube returns a daily-limit error, stop
-   posting for this run, send the remaining MP4s to Elan, and say the limit was hit:
+   (`list_channels`, service youtube). Post this run's one Short (step 7). If Buffer or YouTube returns a daily-limit error, send the MP4 to Elan and say so:
    `create_post` with `channelId`, `schedulingType: "automatic"`, `mode: "shareNow"`,
-   `assets: [{"video": {"url": "https://boxandmotion.com/reels/<key>/recap.mp4"}}]`, `text` = the description,
+   `assets: [{"video": {"url": "https://boxandmotion.com/reels/<key>/short.mp4"}}]`, `text` = the description,
    `metadata.youtube = {"title": <title, max 100 chars>, "categoryId": "17", "privacy": "public", "madeForKids": false, "isAiGenerated": true}`.
-   Title names the star and the result, e.g. "Wembanyama's 52 and the winning free throw | Spurs 112, Mavericks 111".
+   Title leads with the player and the play, then the result, e.g. "Steph's and-one to win it in OT | Warriors 126, Magic 119".
    Description: one or two sentences, then "Box & Motion Hoops: animated NBA recaps. Unofficial fan content, not affiliated with the NBA
    or any team." then "#NBA #Shorts" and the two team names as hashtags. Never mention Elan's personal name.
    Then `get_post` until it shows `externalLink` (wait up to 2 minutes) or an `error`.
-   - Success: write the video id (the `v=` value of externalLink) to `reels/<key>/youtube.txt`. The game page then embeds the YouTube Short.
+   - Success: write the video id (the `v=` value of externalLink) to `reels/<key>/youtube.txt`. The game page keeps the reel and adds the
+     "Watch on YouTube" button.
    - Error: leave the reel as is and report the error.
-   Games over the cap: send the MP4 to Elan to post by hand and say so.
-3. Delete every `reels/<key>/recap.mp4` from this run (`git rm`), then `bash kit/push_site.sh "YouTube links: <date>"` again
+3. Delete `reels/<key>/short.mp4` (`git rm`), then `bash kit/push_site.sh "YouTube links: <date>"` again
    (it commits everything under reels/).
 
 ## If something blocks the morning, alert Elan
