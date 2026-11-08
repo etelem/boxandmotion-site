@@ -98,7 +98,7 @@ def page(path, title, body, active=None, desc="Every NBA game, explained in anim
 </nav></header>
 {band}
 <main class="w">{body}</main>
-<footer class="w"><span><b>The box score, in motion.</b> Box &amp; Motion Hoops · unofficial fan coverage, not affiliated with the NBA or any team.</span>
+<footer class="w"><span>Box &amp; Motion Hoops · unofficial fan coverage, not affiliated with the NBA or any team.</span>
 <span>Updated {S['updated']}. Video links go to official uploads only. <a href="{R}about/index.html">About</a></span></footer>
 </div><script src="{R}assets/data.js"></script><script src="{R}assets/site.js"></script></body></html>"""
     full = os.path.join(OUT, path); os.makedirs(os.path.dirname(full) or OUT, exist_ok=True)
@@ -147,9 +147,8 @@ fz = S["featured"][gotw["key"]]
 risers = sorted(T, key=lambda c: -O[c]["chg"])[:3]; fallers = sorted(T, key=lambda c: O[c]["chg"])[:3]
 def mini(c): return f'<a href="{R}teams/{T[c]["slug"]}/index.html" style="display:flex;justify-content:space-between;padding:10px 0;border-top:1px solid var(--line);text-decoration:none"><span><b>{E(T[c]["name"])}</b> <span class="dim">{rec(c)}</span></span><span><b>{O[c]["top6"]}%</b> <span class="{chgcls(O[c]["chg"])}">{chg(O[c]["chg"])}</span></span></a>'
 home = f'''
-<section class="tagline"><h1 class="d">The box score, <span class="grad">in motion.</span></h1><p>Every NBA game, explained in animation.</p></section>
 <section class="sec">
- <div class="between"><div class="sec" style="gap:8px"><p class="k">Your teams · tap ★ on any team to follow</p><h2 class="h1" id="greet">Good morning.</h2></div>
+ <div class="between"><div class="sec" style="gap:8px"><p class="k">Your teams · tap ★ on any team to follow</p><h1 class="h1" id="greet">Good morning.</h1></div>
  <div class="row" style="gap:12px">
   <a class="chip" href="last-night/index.html"><span class="dot"></span>{len(LAST)} games last night</a>
   <a class="chip" href="odds/index.html"><span class="dot"></span>Biggest mover: {E(T[movers]['name'])} {chg(O[movers]['chg'])}</a>
@@ -185,7 +184,7 @@ home = f'''
 <section class="card cta"><div><p class="k">Free · every Sunday</p><b class="d" style="font-size:clamp(30px,5vw,40px)">The Sunday Box</b><p style="margin:6px 0 0;color:#d5d6d9">The week's best game, playoff odds movers and one deep dive, in four minutes.</p></div>
 <a class="pill hot" href="{NEWSLETTER}" target="_blank" rel="noopener">Subscribe free</a></section>
 '''
-page("index.html", "Box & Motion Hoops: the box score, in motion", home)
+page("index.html", "Box & Motion Hoops: every NBA game, explained", home)
 
 # ---- teams index ----
 R = "../"
