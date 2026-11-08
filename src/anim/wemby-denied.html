@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Denied by Wemby · Box &amp; Motion Hoops</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<style>
+:root{
+  --navy:#0b0c0d;--navy-mid:#222326;--navy-lift:#3d3f45;
+  --ink:#f7f8f9;--muted:#b3b7bd;--blue:#C4CED4;--blue-text:#d6dde1;--red:#ff5a1f;--red-text:#ff8a5c;--silver:#c6c9ce;
+  --hairline:rgba(196,206,212,.24);--track:rgba(196,206,212,.16);
+  --font-display:'Archivo',system-ui,sans-serif;--font-body:'IBM Plex Sans',system-ui,sans-serif;--font-mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+html,body{margin:0;background:#111214}
+body{font-family:var(--font-body);color:var(--ink);display:flex;justify-content:center}
+.wrap{width:min(100vw,56.25vh);background:radial-gradient(120% 95% at 12% 0%,var(--navy-lift),var(--navy-mid) 55%,var(--navy));overflow:hidden}
+html.short .wrap{width:100%}
+svg{display:block;width:100%;height:auto}
+.d{font-family:var(--font-display);font-weight:800;fill:var(--ink)}
+.k{font-family:var(--font-mono);font-weight:500;letter-spacing:.14em;text-transform:uppercase;fill:var(--red-text)}
+.b{font-family:var(--font-body);fill:var(--ink)}
+.m{fill:var(--muted)}
+.s-silver{stroke:var(--silver);fill:none}
+.s-red{stroke:var(--red);fill:none}
+.f-ink{fill:var(--ink)}
+.f-red{fill:var(--red)}
+.fig-o-phi{stroke:var(--blue-text);fill:var(--blue-text)}
+.fig-o-opp{stroke:var(--silver);fill:var(--silver)}
+.fig-skin{stroke:var(--navy);fill:var(--navy)}
+.fig-kit-phi{stroke:var(--blue);fill:var(--blue)}
+.fig-kit-opp{stroke:var(--navy-mid);fill:var(--navy-mid)}
+.fig-shoe{stroke:var(--ink);fill:var(--ink)}
+.fig-num{font-family:var(--font-display);font-weight:800;fill:var(--navy-lift)}
+.fig-hair{stroke:var(--navy-mid);fill:var(--navy-mid)}
+.fig-band{stroke:var(--navy-lift);fill:none}
+.fig-kit-phi{stroke:#F4F4F2;fill:#F4F4F2}
+.fig-num{fill:#111214}
+.fig-band{stroke:#111214}
+</style></head><body>
+<div class="wrap"><svg id="sv" viewBox="0 0 900 1600" role="img" aria-label="Original illustration of Victor Wembanyama&#x27;s chase-down block: beaten by a driver, he covers the gap in long strides, rises with his hand far above the rim and swats the layup back the other way. Not traced from footage, not to scale."></svg></div>
+<script>
+if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add('short');
+(() => {
+  const C = {"out": "wemby-denied.html", "team": "SAS", "number": "1", "name": "Victor Wembanyama", "kit": {"jersey": "#F4F4F2", "number": "#111214"}, "accent": "#FF5A1F", "build": {"tall": 1.1282, "ape": 1.0909, "mass": 0.9843, "skin": "#7a5038", "hairColor": "#16110d", "hair": "tousled"}, "kicker": "Signature moves · Victor Wembanyama", "hook": ["Denied by Wemby", "His block, in motion"], "steps": [["Long strides", "He erases a lost step in a few long strides."], ["The reach", "Reported 8-foot wingspan. He gets there first."], ["Ball stops dead", "Not a tip. It goes back the other way."]], "aria": "Original illustration of Victor Wembanyama's chase-down block: beaten by a driver, he covers the gap in long strides, rises with his hand far above the rim and swats the layup back the other way. Not traced from footage, not to scale."};
+  const NS = 'http://www.w3.org/2000/svg';
+  const clamp = (v) => Math.max(0, Math.min(1, v));
+  const ease = (v) => 1 - Math.pow(1 - v, 3);
+  const inout = (v) => v < .5 ? 2 * v * v : 1 - Math.pow(-2 * v + 2, 2) / 2;
+  const prog = (lt, s, d) => ease(clamp((lt - s) / d));
+  const lerp = (a, b, p) => a + (b - a) * p;
+  const S = (tag, attrs, parent) => { const n = document.createElementNS(NS, tag); for (const k in attrs) n.setAttribute(k, attrs[k]); if (parent) parent.appendChild(n); return n; };
+  const T = (p, x, y, s, cls, size, anchor) => { const n = S('text', {x, y, class: cls, 'text-anchor': anchor || 'start'}, p); n.textContent = s; n.style.fontSize = size + 'px'; return n; };
+  const POSES = {
+    dribble: {head: [4, -236], neck: [2, -212], hip: [0, -130], lk: [-14, -70], lf: [-22, 0], rk: [16, -72], rf: [26, 0], le: [-20, -170], lh: [-26, -132], re: [26, -166], rh: [42, -112]},
+    set: {head: [6, -218], neck: [4, -194], hip: [-4, -118], lk: [12, -66], lf: [-10, 0], rk: [18, -64], rf: [20, 0], le: [22, -176], lh: [30, -198], re: [18, -160], rh: [34, -192]},
+    rise: {head: [4, -246], neck: [2, -222], hip: [0, -140], lk: [-6, -74], lf: [-12, -6], rk: [8, -76], rf: [10, -4], le: [22, -262], lh: [30, -300], re: [14, -262], rh: [26, -306]},
+    guard: {head: [-2, -232], neck: [0, -208], hip: [0, -128], lk: [-18, -68], lf: [-28, 0], rk: [16, -68], rf: [26, 0], le: [-34, -188], lh: [-52, -210], re: [30, -186], rh: [48, -206]},
+    contest: {head: [-4, -244], neck: [-2, -220], hip: [0, -138], lk: [-8, -74], lf: [-14, -4], rk: [8, -74], rf: [12, -4], le: [-16, -262], lh: [-26, -304], re: [10, -262], rh: [4, -300]},
+  };
+  const JOINTS = ['head', 'neck', 'hip', 'lk', 'lf', 'rk', 'rf', 'le', 'lh', 're', 'rh'];
+  const BONES = [['neck', 'hip', 1.5], ['hip', 'lk', 1], ['lk', 'lf', 1], ['hip', 'rk', 1], ['rk', 'rf', 1], ['neck', 'le', 0.9], ['le', 'lh', 0.9], ['neck', 're', 0.9], ['re', 'rh', 0.9]];
+  const mixPose = (a, b, p) => Object.fromEntries(JOINTS.map((j) => [j, [lerp(a[j][0], b[j][0], p), lerp(a[j][1], b[j][1], p)]]));
+  // An athletic silhouette: limbs, uniform and sneakers drawn twice, a wide glowing outline layer under a solid fill layer,
+  // so overlapping parts merge into one outlined body. The face is left featureless on purpose.
+  const LIMBS = [['hip', 'lk', 21], ['lk', 'lf', 15], ['hip', 'rk', 21], ['rk', 'rf', 15], ['neck', 'le', 13], ['le', 'lh', 11], ['neck', 're', 13], ['re', 'rh', 11], ['neck', 'head', 12]];
+  function figure(parent, team, k, number) {
+    const g = S('g', {'stroke-linecap': 'round', 'stroke-linejoin': 'round'}, parent);
+    const outline = S('g', {class: `fig-o-${team}`}, g);
+    if (team === 'phi') outline.setAttribute('filter', 'url(#glow)');
+    const fill = S('g', {}, g);
+    const mk = (layer, cls, extra) => ({
+      limbs: LIMBS.map(([, , w]) => S('line', {class: cls.skin, 'stroke-width': ((w + extra) * k).toFixed(1)}, layer)),
+      shorts: [0, 1].map(() => S('line', {class: cls.kit, 'stroke-width': ((30 + extra) * k).toFixed(1)}, layer)),
+      jersey: S('polygon', {class: cls.kit, 'stroke-width': ((4 + extra) * k).toFixed(1)}, layer),
+      head: S('ellipse', {class: cls.skin, 'stroke-width': (extra * k).toFixed(1)}, layer),
+      shoes: [0, 1].map(() => S('line', {class: cls.shoe, 'stroke-width': ((11 + extra) * k).toFixed(1)}, layer)),
+    });
+    const o = mk(outline, {skin: '', kit: '', shoe: ''}, 7);
+    const f = mk(fill, {skin: 'fig-skin', kit: `fig-kit-${team}`, shoe: 'fig-shoe'}, 0);
+    // draw order in the fill layer: back arm, legs, shorts, jersey, number, front arm, head
+    [f.limbs[4], f.limbs[5]].forEach((n) => fill.insertBefore(n, fill.firstChild));
+    fill.appendChild(f.shorts[0]); fill.appendChild(f.shorts[1]); fill.appendChild(f.jersey);
+    const num = number == null ? null : S('text', {class: 'fig-num', 'text-anchor': 'middle'}, fill);
+    if (num) { num.textContent = number; num.style.fontSize = (30 * k).toFixed(1) + 'px'; }
+    // the front arm crosses the jersey, so it gets its own thin outline to read as an arm, not a strap
+    const armEdge = [6, 7].map((i) => S('line', {class: `fig-o-${team}`, 'stroke-width': ((LIMBS[i][2] + 4) * k).toFixed(1)}, fill));
+    fill.appendChild(f.limbs[6]); fill.appendChild(f.limbs[7]); fill.appendChild(f.limbs[8]); fill.appendChild(f.head);
+    const setLine = (n, [x1, y1], [x2, y2]) => { n.setAttribute('x1', x1.toFixed(1)); n.setAttribute('y1', y1.toFixed(1)); n.setAttribute('x2', x2.toFixed(1)); n.setAttribute('y2', y2.toFixed(1)); };
+    return {
+      g,
+      draw(pose, x, y, kk, dir) {
+        const at = (j) => [x + dir * pose[j][0] * k, y + pose[j][1] * k];
+        const N = at('neck'), Hp = at('hip');
+        let ax = N[0] - Hp[0], ay = N[1] - Hp[1]; const len = Math.hypot(ax, ay) || 1; ax /= len; ay /= len;
+        const px = -ay, py = ax;
+        const pt = (b, side, along, w) => `${(b[0] + px * side * w * k + ax * along * k).toFixed(1)},${(b[1] + py * side * w * k + ay * along * k).toFixed(1)}`;
+        const jersey = [pt(N, 1, -8, 15), pt(N, -1, -8, 15), pt(Hp, -1, -4, 14), pt(Hp, 1, -4, 14)].join(' ');
+        const knees = [at('lk'), at('rk')];
+        const shortsEnd = knees.map((kn) => [lerp(Hp[0], kn[0], 0.62), lerp(Hp[1], kn[1], 0.62)]);
+        const feet = [at('lf'), at('rf')];
+        const hd = at('head');
+        const shoulder = (side) => [N[0] + dir * side * 12 * k - ax * 7 * k, N[1] - ay * 7 * k];
+        [o, f].forEach((layer, li) => {
+          LIMBS.forEach(([a, b], i) => setLine(layer.limbs[i], i === 4 ? shoulder(-1) : i === 6 ? shoulder(1) : at(a), b === 'head' ? [lerp(N[0], hd[0], 0.6), lerp(N[1], hd[1], 0.6)] : at(b)));
+          layer.shorts.forEach((n, i) => setLine(n, [Hp[0] + ax * 4 * k, Hp[1] + ay * 4 * k], shortsEnd[i]));
+          layer.jersey.setAttribute('points', jersey);
+          layer.head.setAttribute('cx', hd[0].toFixed(1)); layer.head.setAttribute('cy', hd[1].toFixed(1));
+          layer.head.setAttribute('rx', (15 * k).toFixed(1)); layer.head.setAttribute('ry', (18 * k).toFixed(1));
+          layer.shoes.forEach((n, i) => setLine(n, [feet[i][0] - dir * 3 * k, feet[i][1] - 4 * k], [feet[i][0] + dir * 14 * k, feet[i][1] - 4 * k]));
+        });
+        armEdge.forEach((n, i) => { const [ja, jb] = LIMBS[6 + i]; setLine(n, i === 0 ? shoulder(1) : at(ja), at(jb)); });
+        if (num) {
+          num.setAttribute('x', ((N[0] + Hp[0]) / 2).toFixed(1));
+          num.setAttribute('y', ((N[1] + Hp[1]) / 2 + 10 * k).toFixed(1));
+        }
+        return at;
+      },
+    };
+  }
+  // drive, gather and floater poses (facing right)
+  POSES.run1 = {head: [26, -222], neck: [20, -198], hip: [0, -122], lk: [30, -70], lf: [22, 0], rk: [-20, -62], rf: [-46, -12], le: [-4, -162], lh: [6, -130], re: [36, -160], rh: [54, -110]};
+  POSES.run2 = {head: [26, -222], neck: [20, -198], hip: [0, -122], lk: [-20, -62], lf: [-46, -12], rk: [30, -70], rf: [22, 0], le: [-4, -162], lh: [6, -130], re: [36, -160], rh: [54, -110]};
+  POSES.gather = {head: [16, -214], neck: [12, -190], hip: [-2, -116], lk: [20, -62], lf: [12, 0], rk: [-14, -62], rf: [-28, 0], le: [26, -168], lh: [36, -172], re: [22, -160], rh: [36, -168]};
+  POSES.float = {head: [2, -246], neck: [0, -222], hip: [-4, -140], lk: [24, -110], lf: [16, -62], rk: [-8, -74], rf: [-12, -6], le: [16, -232], lh: [22, -258], re: [18, -264], rh: [26, -310]};
+  POSES.land = {head: [0, -214], neck: [-2, -190], hip: [-6, -112], lk: [12, -60], lf: [-4, 0], rk: [16, -58], rf: [20, 0], le: [20, -170], lh: [28, -190], re: [16, -156], rh: [30, -150]};
+  POSES.bump = {head: [-14, -230], neck: [-10, -206], hip: [0, -128], lk: [-16, -68], lf: [-26, 0], rk: [18, -68], rf: [26, 0], le: [-30, -196], lh: [-44, -224], re: [24, -200], rh: [30, -240]};
+  // A player-proportioned silhouette: tapered limbs with muscle curves, a sleeveless jersey over the torso, knee-length
+  // shorts, high-top sneakers and a head with a plain hair line. Height, arm length and build come from the player's
+  // listed measurements (b.tall = height vs the 6'6" generic figure, b.ape = wingspan / height, b.mass = weight per inch
+  // of height vs the generic figure). Drawn twice: a glowing outline layer under a solid fill layer. The face stays
+  // featureless on purpose (hair, beard and frame are allowed, a likeness of the face is not): the resemblance is build, number, colors and the moment, not a portrait.
+  function figureReal(parent, team, k, number, b) {
+    // optional look (all off by default): frame = extra width through shoulders, chest and hips for a heavier build;
+    // hair = 'crop' | 'swept' (fuller on top, swept back); beard = true; hairColor = a CSS color for hair and beard
+    // gear seen in game photos (optional): wristband = color of a band on the guide-hand wrist, legSleeve = color of a sleeve knee-to-ankle on the back leg
+    // kneeSleeve = colour of a sleeve over the back knee (kneeSleeveFront for the front knee); ankleBrace = colour of braces on both ankles
+    b = Object.assign({tall: 1, mass: 1, ape: 1, frame: 1, hair: 'crop', beard: false, hairColor: null, skin: null, wristband: null, legSleeve: null, kneeSleeve: null, kneeSleeveFront: null, ankleBrace: null}, b || {});
+    const g = S('g', {'stroke-linecap': 'round', 'stroke-linejoin': 'round'}, parent);
+    const outline = S('g', {class: `fig-o-${team}`}, g);
+    if (team === 'phi') outline.setAttribute('filter', 'url(#glow)');
+    const fill = S('g', {}, g);
+    const PARTS = ['armB', 'wrist', 'legB', 'sleeve', 'kneeB', 'braceB', 'legF', 'kneeF', 'braceF', 'shorts', 'torso', 'jersey', 'band', 'neck', 'armF', 'head', 'hair', 'beard', 'shoes'];
+    const CLS = {armB: 'fig-skin', legB: 'fig-skin', legF: 'fig-skin', shorts: `fig-kit-${team}`, torso: 'fig-skin', jersey: `fig-kit-${team}`, band: 'fig-band', neck: 'fig-skin', armF: 'fig-skin', head: 'fig-skin', hair: 'fig-hair', beard: 'fig-hair', shoes: 'fig-shoe', wrist: 'fig-band', sleeve: 'fig-band', kneeB: 'fig-band', kneeF: 'fig-band', braceB: 'fig-band', braceF: 'fig-band'};
+    const OX = 7 * k;
+    const o = {}, f = {};
+    PARTS.forEach((p) => {
+      if (!['jersey', 'band', 'beard', 'wrist', 'sleeve', 'kneeB', 'kneeF', 'braceB', 'braceF'].includes(p)) o[p] = S('path', {'stroke-width': OX.toFixed(1)}, outline);
+      if (p === 'armF') {
+        // the front arm crosses the jersey, so it gets its own thin edge to read as an arm, not a strap
+        f.armEdge = S('path', {class: `fig-o-${team}`, 'stroke-width': (4 * k).toFixed(1)}, fill);
+      }
+      f[p] = S('path', {class: CLS[p], 'stroke-width': (p === 'band' ? 3 * k : p === 'jersey' || p === 'shorts' ? 2 * k : 0.5).toFixed(1)}, fill);
+      if ((p === 'hair' || p === 'beard') && b.hairColor) { f[p].style.fill = b.hairColor; f[p].style.stroke = b.hairColor; }
+      if (p === 'beard') { f[p].style.opacity = b.stubble == null ? 0.3 : b.stubble; f[p].setAttribute('stroke-width', 0); }
+      if (['wrist', 'sleeve', 'kneeB', 'kneeF', 'braceB', 'braceF'].includes(p)) { const col = p === 'wrist' ? b.wristband : p === 'sleeve' ? b.legSleeve : p[0] === 'k' ? (p === 'kneeB' ? b.kneeSleeve : b.kneeSleeveFront) : b.ankleBrace; f[p].setAttribute('stroke-width', 0); if (col) { f[p].style.fill = col; f[p].style.stroke = col; } }
+      if (CLS[p] === 'fig-skin' && b.skin) { f[p].style.fill = b.skin; f[p].style.stroke = b.skin; }
+      if (p === 'jersey' && number != null) {
+        f.num = S('text', {class: 'fig-num', 'text-anchor': 'middle'}, fill);
+        f.num.textContent = number; f.num.style.fontSize = (30 * k).toFixed(1) + 'px';
+      }
+    });
+    // combed strands over the hair (only drawn for the 'swept' style)
+    f.strands = S('path', {fill: 'none', 'stroke-width': (1.6 * k).toFixed(1), 'stroke-linecap': 'round', opacity: 0.35, style: 'stroke:rgba(0,0,0,.6)'}, fill);
+    fill.insertBefore(f.strands, f.beard ? f.beard : f.shoes);
+    const F = (v) => v.toFixed(1);
+    const add = (a, b2, s = 1) => [a[0] + b2[0] * s, a[1] + b2[1] * s];
+    // a tapered capsule from A to B: width w1 at A, wm at the muscle belly (fraction t along), w2 at B
+    const seg = (A, B, w1, wm, w2, t = 0.4, belly = 0) => {
+      const dx = B[0] - A[0], dy = B[1] - A[1], L = Math.hypot(dx, dy) || 1, u = [dx / L, dy / L], n = [-u[1], u[0]];
+      const m = add(A, u, L * t);
+      const side = (s) => {
+        const a = add(A, n, s * w1 / 2), e = add(B, n, s * w2 / 2), mm = add(m, n, s * (wm / 2 + (s > 0 ? belly : 0)));
+        return [a, [2 * mm[0] - (a[0] + e[0]) / 2, 2 * mm[1] - (a[1] + e[1]) / 2], e];
+      };
+      const [a1, c1, b1] = side(1), [a2, c2, b2] = side(-1);
+      const capB = w2 * 0.66, capA = w1 * 0.66;
+      return `M${F(a1[0])} ${F(a1[1])}Q${F(c1[0])} ${F(c1[1])} ${F(b1[0])} ${F(b1[1])}`
+        + `C${F(b1[0] + u[0] * capB)} ${F(b1[1] + u[1] * capB)} ${F(b2[0] + u[0] * capB)} ${F(b2[1] + u[1] * capB)} ${F(b2[0])} ${F(b2[1])}`
+        + `Q${F(c2[0])} ${F(c2[1])} ${F(a2[0])} ${F(a2[1])}`
+        + `C${F(a2[0] - u[0] * capA)} ${F(a2[1] - u[1] * capA)} ${F(a1[0] - u[0] * capA)} ${F(a1[1] - u[1] * capA)} ${F(a1[0])} ${F(a1[1])}Z`;
+    };
+    const poly = (pts) => 'M' + pts.map(([x, y]) => `${F(x)} ${F(y)}`).join('L') + 'Z';
+    return {
+      g,
+      draw(pose, x, y, kk, dir) {
+        const K = k * b.tall, W = k * b.mass, WT = W * b.frame;
+        const P0 = (j) => [x + dir * pose[j][0] * K, y + pose[j][1] * K];
+        const J = {};
+        ['head', 'neck', 'hip', 'lk', 'lf', 'rk', 'rf'].forEach((j) => { J[j] = P0(j); });
+        const N = J.neck, Hp = J.hip;
+        let ax = N[0] - Hp[0], ay = N[1] - Hp[1]; const len = Math.hypot(ax, ay) || 1; ax /= len; ay /= len;
+        const px = -ay, py = ax;
+        const along = (pt, s, w, d) => [pt[0] + px * s * w * WT + ax * d * K, pt[1] + py * s * w * WT + ay * d * K];
+        const shoulder = (side) => [N[0] + dir * side * 12 * WT - ax * 8 * K, N[1] - ay * 8 * K];
+        // arms grow from the shoulder by the wingspan ratio
+        [['l', -1], ['r', 1]].forEach(([s, side]) => {
+          const sh = shoulder(side), e = P0(s + 'e'), h = P0(s + 'h');
+          const E = add(sh, [e[0] - sh[0], e[1] - sh[1]], b.ape);
+          J[s + 'e'] = E; J[s + 'h'] = add(E, [h[0] - e[0], h[1] - e[1]], b.ape); J[s + 's'] = sh;
+        });
+        const arm = (s) => seg(J[s + 's'], J[s + 'e'], 15 * W, 16 * W, 11 * W, 0.3) + seg(J[s + 'e'], J[s + 'h'], 11 * W, 12 * W, 8 * W, 0.3);
+        const ankle = (ft) => [ft[0] - dir * 2 * k, ft[1] - 16 * k];
+        const leg = (s) => seg(Hp, J[s + 'k'], 25 * WT, 27 * WT, 15 * W, 0.35) + seg(J[s + 'k'], ankle(J[s + 'f']), 15 * W, 18 * W, 10 * W, 0.3);
+        const shortsTo = (s) => [lerp(Hp[0], J[s + 'k'][0], 0.72), lerp(Hp[1], J[s + 'k'][1], 0.72)];
+        const shorts = seg(add(Hp, [ax, ay], 6 * K), shortsTo('l'), 30 * WT, 31 * WT, 28 * W, 0.5) + seg(add(Hp, [ax, ay], 6 * K), shortsTo('r'), 30 * WT, 31 * WT, 28 * W, 0.5)
+          + poly([along(Hp, 1, 18, 10), along(Hp, -1, 18, 10), along(Hp, -1, 17, -6), along(Hp, 1, 17, -6)]);
+        // torso: broad at the shoulders, tapering to the waist; the jersey sits on it with narrow straps and open armholes
+        const torso = poly([along(N, 1, 24, -6), along(N, 1, 23, -24), along(Hp, 1, 16, 26), along(Hp, 1, 16, 0), along(Hp, -1, 16, 0), along(Hp, -1, 16, 26), along(N, -1, 23, -24), along(N, -1, 24, -6)]);
+        const jersey = poly([along(N, 1, 11, -2), along(N, 1, 14, -6), along(N, 1, 18, -30), along(Hp, 1, 17, 22), along(Hp, 1, 17, 6), along(Hp, -1, 17, 6), along(Hp, -1, 17, 22), along(N, -1, 18, -30), along(N, -1, 14, -6), along(N, -1, 11, -2), along(N, 0, 0, -12)]);
+        const hd = J.head, rx = 14 * W * 1.02, ry = 17.5 * K / b.tall * Math.sqrt(b.tall);
+        const neck = seg(add(N, [ax, ay], -4 * K), [lerp(N[0], hd[0], 0.65), lerp(N[1], hd[1], 0.65)], 13 * W, 12 * W, 12 * W, 0.5);
+        const head = `M${F(hd[0] - rx)} ${F(hd[1])}A${F(rx)} ${F(ry)} 0 1 0 ${F(hd[0] + rx)} ${F(hd[1])}A${F(rx)} ${F(ry)} 0 1 0 ${F(hd[0] - rx)} ${F(hd[1])}Z`;
+        // a plain, close-cropped hair cap: higher at the forehead, lower at the back
+        const cap = []; for (let i = 0; i <= 16; i += 1) { const th = -Math.PI * 1.06 + (Math.PI * 0.86) * i / 16; cap.push([hd[0] + dir * (rx + 1.2 * k) * Math.cos(th), hd[1] + (ry + 1.2 * k) * Math.sin(th)]); }
+        let hair = poly(cap.concat([[hd[0] + dir * rx * 0.35, hd[1] - ry * 0.45], [hd[0] - dir * rx * 0.3, hd[1] - ry * 0.2]]));
+        // closed smooth curve through points (for natural hair outlines, no jagged corners)
+        const blob = (pts) => { const n = pts.length; let d = `M${F((pts[0][0] + pts[1][0]) / 2)} ${F((pts[0][1] + pts[1][1]) / 2)}`;
+          for (let i = 1; i <= n; i += 1) { const a = pts[i % n], c = pts[(i + 1) % n]; d += `Q${F(a[0])} ${F(a[1])} ${F((a[0] + c[0]) / 2)} ${F((a[1] + c[1]) / 2)}`; } return d + 'Z'; };
+        const X = (c) => hd[0] + dir * c[0] * rx, Y = (c) => hd[1] + c[1] * ry;
+        let strands = 'M0 0';
+        if (b.hair === 'tousled') {
+          // longer and a little messy: uneven lift across the top, swept back, down to the nape behind the ear
+          hair = blob([[0.98, -0.28], [1.06, -0.66], [0.92, -0.98], [0.66, -1.2], [0.42, -1.3], [0.18, -1.44], [-0.08, -1.34], [-0.34, -1.42], [-0.6, -1.26], [-0.86, -1.12], [-1.06, -0.8], [-1.16, -0.38], [-1.14, 0.08], [-1.0, 0.42], [-0.82, 0.36], [-0.7, 0.06], [-0.5, -0.28], [-0.2, -0.42], [0.1, -0.5], [0.36, -0.43], [0.6, -0.52], [0.82, -0.38]].map((c) => [X(c), Y(c)]));
+          strands = [[[0.84, -0.7], [0.24, -1.12], [-0.7, -1.02]], [[0.6, -1.06], [0.0, -1.3], [-0.72, -1.16]], [[0.78, -0.48], [0.1, -0.8], [-0.86, -0.6]]]
+            .map(([a, c, e]) => `M${F(X(a))} ${F(Y(a))}Q${F(X(c))} ${F(Y(c))} ${F(X(e))} ${F(Y(e))}`).join('');
+        }
+        if (b.hair === 'swept') {
+          // medium length, swept back: a little lift over the forehead, close at the temple, full at the crown and back
+          hair = blob([[0.96, -0.3], [1.0, -0.74], [0.72, -1.14], [0.16, -1.36], [-0.46, -1.27], [-0.93, -0.92], [-1.1, -0.4], [-1.05, 0.05], [-0.86, 0.18], [-0.68, -0.02], [-0.5, -0.3], [-0.2, -0.42], [0.1, -0.5], [0.36, -0.43], [0.6, -0.52], [0.82, -0.4]].map((c) => [X(c), Y(c)]));
+          // a few strands combed back, a shade darker, so it reads as hair and not a cap
+          strands = [[[0.82, -0.66], [0.2, -1.08], [-0.66, -0.96]], [[0.56, -1.02], [-0.06, -1.22], [-0.7, -1.06]]]
+            .map(([a, c, e]) => `M${F(X(a))} ${F(Y(a))}Q${F(X(c))} ${F(Y(c))} ${F(X(e))} ${F(Y(e))}`).join('');
+        }
+        let beard = 'M0 0';
+        if (b.beard) {
+          // short stubble: a thin shadow that hugs the jaw and chin (drawn translucent), not a shape of its own
+          const rim = [120, 100, 80, 60, 40, 22].map((d) => [Math.cos(d * Math.PI / 180) * 0.99, Math.sin(d * Math.PI / 180) * 0.99]);
+          beard = poly([[-0.2, -0.32], [-0.36, 0.3]].concat(rim, [[0.86, 0.28], [0.56, 0.24], [0.2, 0.16], [-0.04, -0.04], [-0.08, -0.32]]).map((c) => [X(c), Y(c)]));
+        }
+        const shoe = (ft) => poly([[ft[0] - dir * 7 * k, ft[1]], [ft[0] + dir * 21 * k, ft[1]], [ft[0] + dir * 20 * k, ft[1] - 8 * k], [ft[0] + dir * 7 * k, ft[1] - 12 * k], [ft[0] + dir * 5 * k, ft[1] - 21 * k], [ft[0] - dir * 7 * k, ft[1] - 21 * k]]);
+        const crotch = add(Hp, [ax, ay], -8 * K), sl = shortsTo('l'), sr = shortsTo('r');
+        const band = `M${F(along(Hp, 1, 17, 6)[0])} ${F(along(Hp, 1, 17, 6)[1])}L${F(along(Hp, -1, 17, 6)[0])} ${F(along(Hp, -1, 17, 6)[1])}M${F(crotch[0])} ${F(crotch[1])}L${F((sl[0] + sr[0]) / 2)} ${F((sl[1] + sr[1]) / 2)}`;
+        const lp = (a, c, q) => [lerp(a[0], c[0], q), lerp(a[1], c[1], q)];
+        const wrist = b.wristband ? seg(lp(J.le, J.lh, 0.66), lp(J.le, J.lh, 0.86), 12.5 * W, 12.8 * W, 11.5 * W, 0.5) : 'M0 0';
+        const sleeve = b.legSleeve ? seg(lp(J.lk, ankle(J.lf), 0.1), lp(J.lk, ankle(J.lf), 0.94), 16.5 * W, 19 * W, 11.5 * W, 0.3) : 'M0 0';
+        const knee = (s) => seg(lp(Hp, J[s + 'k'], 0.72), lp(J[s + 'k'], ankle(J[s + 'f']), 0.3), 17.5 * W, 18 * W, 16.5 * W, 0.3);
+        const brace = (s) => seg(lp(J[s + 'k'], ankle(J[s + 'f']), 0.8), ankle(J[s + 'f']), 13.5 * W, 14 * W, 13.5 * W, 0.3);
+        const kneeB = b.kneeSleeve ? knee('l') : 'M0 0', kneeF = b.kneeSleeveFront ? knee('r') : 'M0 0';
+        const braceB = b.ankleBrace ? brace('l') : 'M0 0', braceF = b.ankleBrace ? brace('r') : 'M0 0';
+        const D2 = {wrist, sleeve, kneeB, kneeF, braceB, braceF, band, armB: arm('l'), legB: leg('l'), legF: leg('r'), shorts, torso, jersey, neck, armF: arm('r'), head, hair, beard, shoes: shoe(J.lf) + shoe(J.rf)};
+        PARTS.forEach((p) => { f[p].setAttribute('d', D2[p]); if (o[p]) o[p].setAttribute('d', D2[p]); });
+        f.armEdge.setAttribute('d', D2.armF);
+        f.strands.setAttribute('d', strands);
+        if (f.num) { const c = [lerp(N[0], Hp[0], 0.45), lerp(N[1], Hp[1], 0.45)]; f.num.setAttribute('x', F(c[0])); f.num.setAttribute('y', F(c[1] + 10 * k)); }
+        return (j) => J[j];
+      },
+    };
+  }
+
+  // Wemby poses (facing right)
+  POSES.stride1 = {head: [26, -226], neck: [20, -202], hip: [0, -124], lk: [44, -74], lf: [64, -6], rk: [-34, -60], rf: [-72, -22], le: [-14, -160], lh: [-26, -128], re: [40, -164], rh: [62, -140]};
+  POSES.stride2 = {head: [26, -226], neck: [20, -202], hip: [0, -124], lk: [-34, -60], lf: [-72, -22], rk: [44, -74], rf: [64, -6], le: [38, -164], lh: [58, -140], re: [-14, -160], rh: [-26, -128]};
+  POSES.load = {head: [22, -198], neck: [16, -174], hip: [-6, -102], lk: [26, -54], lf: [14, 0], rk: [-6, -54], rf: [-22, 0], le: [-20, -142], lh: [-38, -122], re: [32, -152], rh: [48, -172]};
+  POSES.block = {head: [12, -246], neck: [8, -222], hip: [-2, -140], lk: [18, -96], lf: [4, -46], rk: [-10, -84], rf: [-24, -30], le: [-18, -200], lh: [-42, -212], re: [30, -266], rh: [58, -322]};
+  POSES.wland = {head: [10, -222], neck: [6, -198], hip: [-4, -120], lk: [16, -62], lf: [6, 0], rk: [-14, -62], rf: [-26, 0], le: [-16, -170], lh: [-30, -150], re: [28, -200], rh: [40, -236]};
+  POSES.stumble = {head: [-18, -214], neck: [-14, -190], hip: [0, -116], lk: [14, -60], lf: [22, 0], rk: [-20, -60], rf: [-34, 0], le: [-30, -160], lh: [-44, -140], re: [10, -164], rh: [22, -140]};
+
+  const svg = document.getElementById('sv');
+  const W = 900, H = 1600, M = 56, k = 1.32, ACC = C.accent;
+  const floor = 1180, hoopX = W - M - 24, rimY = floor - 240 * k * 1.62, rimR = 30 * k;
+  const TOTAL = 17;
+  const P0 = 0.5, PLAY = 3.6, B0 = 4.8;
+  const SEGS = [[0.35, 1.6, 0.45], [1.6, 2.06, 0.2], [2.06, 3.2, 0.6]]; // breakdown: [from, to, speed] in play-time
+  const segT = []; let acc = B0; SEGS.forEach(([a, b, sp]) => { segT.push([acc, acc + (b - a) / sp, a, sp]); acc += (b - a) / sp; });
+  const B_END = acc, END0 = B_END + 1.2;
+
+  const defs = S('defs', {}, svg);
+  const glow = S('filter', {id: 'glow', x: '-50%', y: '-50%', width: '200%', height: '200%'}, defs);
+  S('feGaussianBlur', {stdDeviation: 6, result: 'b'}, glow);
+  const mg = S('feMerge', {}, glow); S('feMergeNode', {in: 'b'}, mg); S('feMergeNode', {in: 'SourceGraphic'}, mg);
+
+  const top = S('g', {}, svg);
+  T(top, M, 92, C.kicker, 'k', 26);
+  T(top, M, 196, C.hook[0], 'd', 84);
+  T(top, M, 256, C.hook[1], 'b m', 40);
+  const slowTag = S('g', {opacity: 0}, top);
+  S('rect', {x: W - M - 250, y: 300, width: 250, height: 52, rx: 26, fill: 'none', stroke: 'var(--red)', 'stroke-width': 2.5}, slowTag);
+  T(slowTag, W - M - 125, 335, 'SLOW MOTION', 'k', 24, 'middle').style.fill = 'var(--red)';
+  const play = S('g', {}, svg);
+  const court = S('g', {class: 's-silver', 'stroke-width': 3, 'stroke-linecap': 'round', opacity: .9}, play);
+  S('line', {x1: -40, x2: W + 40, y1: floor, y2: floor}, court);
+  S('line', {x1: hoopX + 40 * k, x2: hoopX + 40 * k, y1: rimY - 120 * k, y2: floor + 40}, court);
+  S('rect', {x: hoopX + 26 * k, y: rimY - 150 * k, width: 12 * k, height: 170 * k, rx: 3, fill: 'var(--silver)'}, play);
+  const net = S('g', {class: 's-silver', 'stroke-width': 2, opacity: .8}, play);
+  for (let i = 0; i <= 4; i++) { const tp = hoopX - rimR + i * rimR / 2, bt = hoopX - rimR * .55 + i * rimR * 1.1 / 4; S('line', {x1: tp, y1: rimY, x2: bt, y2: rimY + 44 * k}, net); }
+  S('line', {x1: hoopX - rimR, x2: hoopX + 26 * k, y1: rimY, y2: rimY, class: 's-red', 'stroke-width': 6, 'stroke-linecap': 'round'}, play);
+  // rim-height guide (breakdown beat 2)
+  const rimLine = S('g', {opacity: 0}, play);
+  S('line', {x1: 40, x2: hoopX - rimR - 10, y1: rimY, y2: rimY, stroke: 'var(--ink)', 'stroke-width': 2.5, 'stroke-dasharray': '10 10'}, rimLine);
+  T(rimLine, 44, rimY - 14, 'rim height', 'k', 22).style.fill = 'var(--ink)';
+  const driver = figure(play, 'opp', k); driver.g.setAttribute('opacity', .9);
+  const ghosts = [0, 1, 2].map(() => { const gh = figureReal(play, 'phi', k, C.number, C.build); gh.g.style.opacity = 0; return gh; }).reverse();
+  const wemby = figureReal(play, 'phi', k, C.number, C.build);
+  const waves = [0, 1, 2].map(() => S('circle', {r: 0, fill: 'none', stroke: 'var(--ink)', 'stroke-width': 5, opacity: 0}, play));
+  const shards = Array.from({length: 10}, (_, i) => ({a: (i / 10) * Math.PI * 2 + .3, n: S('line', {stroke: ACC, 'stroke-width': 5, 'stroke-linecap': 'round', opacity: 0}, play)}));
+  const btrail = S('path', {fill: 'none', stroke: 'var(--ink)', 'stroke-width': 5, 'stroke-linecap': 'round', opacity: 0, filter: 'url(#glow)'}, play);
+  const ballG = S('g', {}, play);
+  S('circle', {r: 13 * k, class: 'f-ink', filter: 'url(#glow)'}, ballG);
+  const seam = S('path', {d: `M${-13 * k} 0L${13 * k} 0M0 ${-13 * k}Q${7 * k} 0 0 ${13 * k}`, stroke: 'rgba(17,18,20,.55)', 'stroke-width': 2.4, fill: 'none'}, ballG);
+  const stampG = S('g', {opacity: 0}, top);
+  const st1 = T(stampG, W / 2, floor + 170, 'DENIED', 'd', 132, 'middle'); st1.style.fill = ACC;
+  T(stampG, W / 2, floor + 240, 'by Wemby', 'd', 52, 'middle');
+  const cap = C.steps.map((s, i) => { const g = S('g', {opacity: 0}, top); const n = T(g, M, floor + 150, `${i + 1}`, 'd', 64); n.style.fill = ACC; T(g, M + 62, floor + 150, s[0], 'd', 54); T(g, M, floor + 212, s[1], 'b m', 36); return g; });
+  T(top, M, H - 56, 'Original illustration · not traced from footage, not to scale', 'b m', 22);
+
+  // ---- the play, as a function of play-time pt ----
+  const dx0 = 250, dxG = 540, tG = 1.4, tJ = 1.58, tB = 1.95;
+  const wx0 = 60, wxL = 390, tW0 = 0.3, tWL = 1.62;
+  const driverAt = (pt) => {
+    if (pt < tG) { const x = lerp(dx0, dxG, clamp(pt / tG)); const c = Math.sin(pt * 10) * .5 + .5; return [mixPose(POSES.run1, POSES.run2, c), x, 0]; }
+    if (pt < tJ) return [mixPose(POSES.run1, POSES.gather, prog(pt, tG, .15)), dxG + 20 * prog(pt, tG, .18), 0];
+    if (pt < tB + .02) { const u = clamp((pt - tJ) / (tB - tJ)); return [mixPose(POSES.gather, POSES.float, ease(u)), dxG + 20 + 30 * u, 44 * Math.sin(Math.PI / 2 * u)]; }
+    const d = clamp((pt - tB) / .5); return [mixPose(POSES.float, POSES.stumble, ease(d)), dxG + 50 + 20 * d, 44 * (1 - d * d)];
+  };
+  const wembyAt = (pt) => {
+    if (pt < tW0) return [POSES.stride1, wx0, 0];
+    if (pt < tWL) { const u = clamp((pt - tW0) / (tWL - tW0)); const x = lerp(wx0, wxL, u); const c = Math.sin((pt - tW0) * 6.5) * .5 + .5; return [mixPose(POSES.stride1, POSES.stride2, c), x, 0]; }
+    if (pt < tWL + .1) return [mixPose(POSES.stride1, POSES.load, prog(pt, tWL, .1)), wxL + 10 * prog(pt, tWL, .1), 0];
+    if (pt < tB) { const u = clamp((pt - tWL - .1) / (tB - tWL - .1)); return [mixPose(POSES.load, POSES.block, ease(u)), wxL + 10 + 40 * u, 120 * Math.sin(Math.PI / 2 * u)]; }
+    const d = clamp((pt - tB - .05) / .5); return [mixPose(POSES.block, POSES.wland, ease(d)), wxL + 50 + 20 * d, 120 * (1 - d * d)];
+  };
+  const HIT = .14; // hit-stop: the ball stops dead for a beat
+  let hitPt = null;
+  const drawPlay = (pt, slow) => {
+    const frozen = pt > tB && pt < tB + HIT; const fpt = frozen ? tB : pt > tB ? pt - HIT : pt;
+    const [dp, dx, dl] = driverAt(fpt), [wp, wx, wl] = wembyAt(fpt);
+    const strides = fpt > tW0 && fpt < tWL + .1;
+    ghosts.forEach((gh, i) => { if (!strides) { gh.g.style.opacity = 0; return; } const [gp, gx, gl] = wembyAt(fpt - (i + 1) * .06); gh.draw(gp, gx, floor - gl * k, k, 1); gh.g.style.opacity = (.34 - i * .1).toFixed(2); });
+    const ad = driver.draw(dp, dx, floor - dl * k, k, 1);
+    const aw = wemby.draw(wp, wx, floor - wl * k, k, 1);
+    // ball: dribbled, carried up for the layup, met by Wemby's hand, then sent back the other way
+    let bx, by, spin = 0;
+    const hit = (() => { const [p1, x1, l1] = wembyAt(tB); const a = wemby.draw(p1, x1, floor - l1 * k, k, 1); return a('rh'); })();
+    wemby.draw(wp, wx, floor - wl * k, k, 1);
+    if (fpt < tG) { const h = ad('rh'); const ph = (fpt * 3.2) % 1, f = ph < .5 ? ph * 2 : (1 - ph) * 2; bx = h[0] + 8 * k; by = lerp(h[1], floor - 13 * k, f * f * (3 - 2 * f)); }
+    else if (fpt < tB - .08) { const h = ad('rh'); bx = h[0] + 4 * k; by = h[1] - 12 * k; }
+    else if (fpt <= tB) { const h = ad('rh'); const u = clamp((fpt - (tB - .08)) / .08); bx = lerp(h[0] + 4 * k, hit[0] + 6 * k, u); by = lerp(h[1] - 12 * k, hit[1] - 6 * k, u); }
+    else { const a = fpt - tB; bx = hit[0] - 1500 * a; by = hit[1] - 160 * a + 900 * a * a; spin = a * 1400; }
+    ballG.setAttribute('transform', `translate(${bx.toFixed(1)} ${by.toFixed(1)})`); seam.setAttribute('transform', `rotate(${spin.toFixed(0)})`);
+    const after = fpt - tB;
+    btrail.setAttribute('d', after > 0 ? 'M' + Array.from({length: 16}, (_, i) => { const a = Math.max(0, after - i * .012); return `${(hit[0] - 1500 * a).toFixed(1)} ${(hit[1] - 160 * a + 900 * a * a).toFixed(1)}`; }).join('L') : 'M0 0');
+    btrail.setAttribute('opacity', after > 0 && after < .5 ? .8 : 0);
+    // impact: shockwave rings, shards, a shake
+    const imp = pt - tB;
+    waves.forEach((w, i) => { const a = (imp - i * .06) / .5; if (imp < 0 || a < 0 || a > 1) { w.setAttribute('opacity', 0); return; } w.setAttribute('cx', hit[0]); w.setAttribute('cy', hit[1]); w.setAttribute('r', 20 + 120 * ease(a)); w.setAttribute('opacity', (1 - a).toFixed(2)); });
+    shards.forEach((s, i) => { const a = imp / .4; if (imp < 0 || a > 1) { s.n.setAttribute('opacity', 0); return; } const r0 = 30 + 90 * ease(a), r1 = r0 + 34 * (1 - a); s.n.setAttribute('x1', hit[0] + Math.cos(s.a) * r0); s.n.setAttribute('y1', hit[1] + Math.sin(s.a) * r0); s.n.setAttribute('x2', hit[0] + Math.cos(s.a) * r1); s.n.setAttribute('y2', hit[1] + Math.sin(s.a) * r1); s.n.setAttribute('opacity', (1 - a).toFixed(2)); });
+    const sh = imp > 0 && imp < .35 ? 14 * (1 - imp / .35) : 0;
+    play.setAttribute('transform', sh ? `translate(${(Math.sin(imp * 90) * sh).toFixed(1)} ${(Math.cos(imp * 70) * sh * .6).toFixed(1)})` : '');
+    slowTag.setAttribute('opacity', slow ? 1 : 0);
+    return imp;
+  };
+
+  // ---- end card ----
+  const endc = S('g', {opacity: 0}, svg);
+  S('rect', {width: W, height: H, fill: '#111214'}, endc);
+  const lg = S('g', {transform: `translate(${W / 2 - 120} 430)`}, endc);
+  S('rect', {x: 0, y: 0, width: 240, height: 240, rx: 44, fill: 'none', stroke: '#fff', 'stroke-width': 26}, lg);
+  S('path', {d: 'M58 52 L112 106 M112 52 L58 106', stroke: '#fff', 'stroke-width': 26, 'stroke-linecap': 'round'}, lg);
+  [[92, 150], [104, 186], [130, 214]].forEach(([cx, cy]) => S('circle', {cx, cy, r: 12, fill: '#FF5A1F'}, lg));
+  S('circle', {cx: 182, cy: 190, r: 34, fill: 'none', stroke: '#FF5A1F', 'stroke-width': 24}, lg);
+  T(endc, W / 2, 800, 'BOX & MOTION HOOPS', 'd', 56, 'middle');
+  const tg = T(endc, W / 2, 870, 'The box score, in motion.', 'b', 38, 'middle'); tg.style.fill = '#FF5A1F';
+  T(endc, W / 2, 1010, 'Signature moves at boxandmotion.com', 'b', 36, 'middle');
+  T(endc, W / 2, 1070, 'Follow for every game, in motion', 'b m', 32, 'middle');
+
+  const render = (t) => {
+    let pt = Math.max(0, Math.min(PLAY, t - P0)), slow = false, step = -1;
+    if (t >= B0) { pt = SEGS[SEGS.length - 1][1]; segT.forEach(([s0, s1, a, sp], i) => { if (t >= s0 && t < s1) { pt = a + (t - s0) * sp; slow = true; step = i; } }); }
+    const imp = drawPlay(pt, slow);
+    rimLine.setAttribute('opacity', step === 1 ? 1 : 0);
+    stampG.setAttribute('opacity', imp > .05 && t < B0 ? prog(pt, tB + .05, .15) : 0);
+    stampG.setAttribute('transform', `translate(${W / 2} ${floor + 170}) scale(${imp > .05 ? 1 + .3 * (1 - prog(pt, tB + .05, .2)) : 1}) translate(${-W / 2} ${-floor - 170})`);
+    cap.forEach((g, i) => g.setAttribute('opacity', i === step ? 1 : 0));
+    endc.setAttribute('opacity', t >= END0 ? prog(t, END0, .35) : 0);
+  };
+  let time = 0, last = null;
+  const frame = (now) => { if (last != null) { time += (now - last) / 1000; if (time > TOTAL) time = 0; } last = now; if (!window.__hold) render(time); requestAnimationFrame(frame); };
+  render(0); requestAnimationFrame(frame);
+  window.__A = {render, build: () => {}, total: TOTAL};
+  const postH = () => { try { parent.postMessage({bmH: document.documentElement.scrollHeight}, '*'); } catch (e) {} };
+  addEventListener('load', postH); addEventListener('resize', postH);
+})();
+</script>
+</body></html>

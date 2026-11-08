@@ -1,0 +1,39 @@
+{
+  "out": "wemby-denied.html",
+  "team": "SAS",
+  "number": "1",
+  "name": "Victor Wembanyama",
+  "kit": {
+    "jersey": "#F4F4F2",
+    "number": "#111214"
+  },
+  "accent": "#FF5A1F",
+  "build": {
+    "tall": 1.1282,
+    "ape": 1.0909,
+    "mass": 0.9843,
+    "skin": "#7a5038",
+    "hairColor": "#16110d",
+    "hair": "tousled"
+  },
+  "kicker": "Signature moves · Victor Wembanyama",
+  "hook": [
+    "Denied by Wemby",
+    "His block, in motion"
+  ],
+  "steps": [
+    [
+      "Long strides",
+      "He erases a lost step in a few long strides."
+    ],
+    [
+      "The reach",
+      "Reported 8-foot wingspan. He gets there first."
+    ],
+    [
+      "Ball stops dead",
+      "Not a tip. It goes back the other way."
+    ]
+  ],
+  "aria": "Original illustration of Victor Wembanyama's chase-down block: beaten by a driver, he covers the gap in long strides, rises with his hand far above the rim and swats the layup back the other way. Not traced from footage, not to scale."
+}
