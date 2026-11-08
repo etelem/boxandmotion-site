@@ -5,6 +5,8 @@ The config holds the D data block, the play-of-the-game settings, the text subst
 import sys, json, os, re
 HERE = os.path.dirname(os.path.abspath(__file__))
 FIGURE_REAL = open(os.path.join(HERE, 'figure-real.js')).read()
+sys.path.insert(0, HERE)
+from looks import look_for, kit_for, kit_css, LOOK_KEYS
 TEAMS_JSON = os.path.join(HERE, '..', 'data', 'teams.json')
 
 def _rgb(h): h = h.lstrip('#'); return [int(h[i:i + 2], 16) for i in (0, 2, 4)]
@@ -72,6 +74,8 @@ def mkplay(c):
     r("qClock.textContent = clk.toFixed(1);", "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;")
     r("bigClock.textContent = clk.toFixed(1);", "")
     r("bigClock.style.opacity = (0.13 * prog(lt, 1, 0.8) + (made ? 0.25 * Math.exp(-(lt - T_MAKE) * 1.5) : 0)) * (1 - prog(lt, 13.6, 0.8));", "bigClock.style.opacity = 0;")
+    # signature-piece feel: the ball's arc glows in the team accent colour
+    r("class: 's-silver', 'stroke-width': 4, 'stroke-dasharray': '0 1', pathLength: 1, opacity: 0.85", "fill: 'none', stroke: 'var(--blue)', 'stroke-width': 5, 'stroke-linecap': 'round', 'stroke-dasharray': '0 1', pathLength: 1, opacity: 0.9")
     r("    // Lillard's trait: Dame Time. A giant game clock counts down behind him and freezes on the make.\n", "")
     return p
 
@@ -99,12 +103,19 @@ def build(c, out):
     fig = c.get('figure')
     if fig:
         num = c['play']['num']
-        r("  function scenePlay(L, g, defs) {", FIGURE_REAL + f"  const STAR_BUILD = {json.dumps({k: fig[k] for k in ('tall', 'ape', 'mass', 'frame', 'hair', 'beard', 'hairColor', 'skin', 'stubble') if k in fig})};\n  function scenePlay(L, g, defs) {{")
+        # his look (skin, hair, beard, gear) from kit/looks.json and the team's home/away kit, as in the Luka and Steph pieces
+        look = {}
+        if fig.get('player'):
+            look, _status, _sig = look_for(fig['player'])
+        sb = dict(look); sb.update({k: fig[k] for k in ('tall', 'ape', 'mass') + LOOK_KEYS if k in fig})
+        r("  function scenePlay(L, g, defs) {", FIGURE_REAL + f"  const STAR_BUILD = {json.dumps(sb)};\n  function scenePlay(L, g, defs) {{")
         r(f"const shooter = figure(g, 'phi', k, {num!r});", f"const shooter = figureReal(g, 'phi', k, {num!r}, STAR_BUILD);")
         lift = re.search(r"lift = lt < 6\.3 \? (\d+) \* up", t).group(1)
         r("const rel = [shotX + 30 * k, floor + (-306 - 54) * k];",
           f"const relAt = shooter.draw(POSES.rise, shotX, floor - {lift} * k, k, 1), rel = [(relAt('lh')[0] + relAt('rh')[0]) / 2 + 4 * k, (relAt('lh')[1] + relAt('rh')[1]) / 2 - 16 * k];")
         r(".fig-num{font-family:var(--font-display);fill:var(--navy-lift)}", ".fig-num{font-family:var(--font-display);fill:var(--navy-lift)}\n.fig-hair{stroke:var(--navy-mid);fill:var(--navy-mid)}\n.fig-band{stroke:var(--navy-lift);fill:none}")
+    if fig and c.get('team'):
+        t = t.replace("</style>", kit_css(kit_for(c['team'], fig.get('home', True))) + "\n</style>", 1)
     t = t.replace("</style>", EMBED_CSS + "</style>", 1)
     t = t.replace('<div class="wrap">', EMBED_JS + '<div class="wrap">', 1)
     open(out, 'w').write(t)

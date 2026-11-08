@@ -1,0 +1,254 @@
+{
+ "_about": "Each star's look for every recap and Short: skin tone, hair ('crop'|'swept'|'tousled'), hair colour, beard (+ stubble = beard opacity), gear. Face stays blank. 'approved' = Elan signed off; 'proposed' = drawn from reference photos, used until he changes it. Build (height, weight, wingspan) still comes from each game's config.",
+ "Luka Dončić": {
+  "status": "approved",
+  "skin": "#e9c3a2",
+  "hair": "tousled",
+  "hairColor": "#86603d",
+  "beard": false,
+  "wristband": "#552583",
+  "legSleeve": "#ece9e2",
+  "signature": "stepback"
+ },
+ "Stephen Curry": {
+  "status": "approved",
+  "skin": "#b07a55",
+  "hair": "crop",
+  "hairColor": "#1b1410",
+  "beard": true,
+  "stubble": 0.38,
+  "kneeSleeve": "#16181d",
+  "ankleBrace": "#16181d",
+  "signature": "splash"
+ },
+ "Victor Wembanyama": {
+  "status": "approved",
+  "skin": "#7a5038",
+  "hair": "tousled",
+  "hairColor": "#16110d",
+  "beard": false,
+  "signature": "denied"
+ },
+ "Nikola Jokić": {
+  "status": "proposed",
+  "skin": "#ecc9ab",
+  "hair": "crop",
+  "hairColor": "#5a3f28",
+  "beard": true,
+  "stubble": 0.25
+ },
+ "Giannis Antetokounmpo": {
+  "status": "proposed",
+  "skin": "#6b4430",
+  "hair": "crop",
+  "hairColor": "#121010",
+  "beard": true,
+  "stubble": 0.45
+ },
+ "Shai Gilgeous-Alexander": {
+  "status": "proposed",
+  "skin": "#7a5038",
+  "hair": "crop",
+  "hairColor": "#121010",
+  "beard": false
+ },
+ "Jayson Tatum": {
+  "status": "proposed",
+  "skin": "#8a5a3c",
+  "hair": "crop",
+  "hairColor": "#121010",
+  "beard": true,
+  "stubble": 0.5
+ },
+ "Jaylen Brown": {
+  "status": "proposed",
+  "skin": "#6b4430",
+  "hair": "crop",
+  "hairColor": "#121010",
+  "beard": true,
+  "stubble": 0.5
+ },
+ "Anthony Edwards": {
+  "status": "proposed",
+  "skin": "#6b4430",
+  "hair": "crop",
+  "hairColor": "#121010",
+  "beard": false
+ },
+ "Jalen Brunson": {
+  "status": "proposed",
+  "skin": "#9a6a48",
+  "hair": "crop",
+  "hairColor": "#121010",
+  "beard": true,
+  "stubble": 0.5
+ },
+ "Karl-Anthony Towns": {
+  "status": "proposed",
+  "skin": "#b07a55",
+  "hair": "crop",
+  "hairColor": "#1b1410",
+  "beard": true,
+  "stubble": 0.4
+ },
+ "LeBron James": {
+  "status": "proposed",
+  "skin": "#6b4430",
+  "hair": "crop",
+  "hairColor": "#2a2826",
+  "beard": true,
+  "stubble": 0.55
+ },
+ "Kevin Durant": {
+  "status": "proposed",
+  "skin": "#6b4430",
+  "hair": "crop",
+  "hairColor": "#121010",
+  "beard": true,
+  "stubble": 0.4
+ },
+ "Joel Embiid": {
+  "status": "proposed",
+  "skin": "#4f3122",
+  "hair": "crop",
+  "hairColor": "#121010",
+  "beard": true,
+  "stubble": 0.35
+ },
+ "Tyrese Maxey": {
+  "status": "proposed",
+  "skin": "#8a5a3c",
+  "hair": "crop",
+  "hairColor": "#121010",
+  "beard": false
+ },
+ "Donovan Mitchell": {
+  "status": "proposed",
+  "skin": "#7a5038",
+  "hair": "crop",
+  "hairColor": "#121010",
+  "beard": true,
+  "stubble": 0.45
+ },
+ "Devin Booker": {
+  "status": "proposed",
+  "skin": "#b07a55",
+  "hair": "swept",
+  "hairColor": "#1b1410",
+  "beard": true,
+  "stubble": 0.35
+ },
+ "Anthony Davis": {
+  "status": "proposed",
+  "skin": "#6b4430",
+  "hair": "crop",
+  "hairColor": "#121010",
+  "beard": true,
+  "stubble": 0.3
+ },
+ "Cade Cunningham": {
+  "status": "proposed",
+  "skin": "#8a5a3c",
+  "hair": "crop",
+  "hairColor": "#121010",
+  "beard": false
+ },
+ "Trae Young": {
+  "status": "proposed",
+  "skin": "#9a6a48",
+  "hair": "crop",
+  "hairColor": "#121010",
+  "beard": false
+ },
+ "Ja Morant": {
+  "status": "proposed",
+  "skin": "#7a5038",
+  "hair": "tousled",
+  "hairColor": "#121010",
+  "beard": false
+ },
+ "Kawhi Leonard": {
+  "status": "proposed",
+  "skin": "#6b4430",
+  "hair": "crop",
+  "hairColor": "#121010",
+  "beard": true,
+  "stubble": 0.45
+ },
+ "Damian Lillard": {
+  "status": "proposed",
+  "skin": "#6b4430",
+  "hair": "crop",
+  "hairColor": "#121010",
+  "beard": true,
+  "stubble": 0.55
+ },
+ "Paolo Banchero": {
+  "status": "proposed",
+  "skin": "#b07a55",
+  "hair": "tousled",
+  "hairColor": "#1b1410",
+  "beard": false
+ },
+ "Jimmy Butler": {
+  "status": "proposed",
+  "skin": "#6b4430",
+  "hair": "crop",
+  "hairColor": "#121010",
+  "beard": true,
+  "stubble": 0.45
+ },
+ "Domantas Sabonis": {
+  "status": "proposed",
+  "skin": "#e9c3a2",
+  "hair": "crop",
+  "hairColor": "#5a3f28",
+  "beard": true,
+  "stubble": 0.4
+ },
+ "Alperen Şengün": {
+  "status": "proposed",
+  "skin": "#e2b896",
+  "hair": "crop",
+  "hairColor": "#2a1d14",
+  "beard": true,
+  "stubble": 0.45
+ },
+ "Chet Holmgren": {
+  "status": "proposed",
+  "skin": "#c99a74",
+  "hair": "crop",
+  "hairColor": "#1b1410",
+  "beard": false
+ },
+ "Austin Reaves": {
+  "status": "proposed",
+  "skin": "#f0d2b6",
+  "hair": "swept",
+  "hairColor": "#6b4a2e",
+  "beard": true,
+  "stubble": 0.3
+ },
+ "Lauri Markkanen": {
+  "status": "proposed",
+  "skin": "#f0d2b6",
+  "hair": "swept",
+  "hairColor": "#9a7448",
+  "beard": true,
+  "stubble": 0.3
+ },
+ "Zion Williamson": {
+  "status": "proposed",
+  "skin": "#6b4430",
+  "hair": "crop",
+  "hairColor": "#121010",
+  "beard": false
+ },
+ "De'Aaron Fox": {
+  "status": "proposed",
+  "skin": "#6b4430",
+  "hair": "crop",
+  "hairColor": "#121010",
+  "beard": false
+ }
+}

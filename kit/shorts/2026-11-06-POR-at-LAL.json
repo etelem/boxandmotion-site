@@ -1,0 +1,48 @@
+{
+  "out": "short-2026-11-06-POR-LAL.html",
+  "team": "LAL",
+  "home": true,
+  "number": "77",
+  "player": "Luka Dončić",
+  "play_type": "jumper",
+  "three": false,
+  "build": {
+    "tall": 1.0256,
+    "ape": 1.0375,
+    "mass": 1.0213
+  },
+  "build_note": "Listed 6-8, 230 lb, reported 6-11 wingspan",
+  "kicker": "LAKERS 124 · BLAZERS 118 · NOV 6",
+  "hook": [
+    "Luka's dagger",
+    "for 53 points"
+  ],
+  "clock": "Q4 · 0:28",
+  "margins": [
+    "Lakers +4",
+    "Lakers +6"
+  ],
+  "stamp": "DAGGER",
+  "beat": [
+    "Lakers by 6, 28 seconds left.",
+    "Points 50 and 51 of his 53."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Lakers",
+    "them": "Blazers",
+    "us_pts": 124,
+    "them_pts": 118
+  },
+  "star": {
+    "name": "Luka Dončić",
+    "big": 53,
+    "big_label": "points on 17-of-33 shooting",
+    "lines": [
+      "14 of 18 at the line",
+      "20 in the third quarter"
+    ]
+  },
+  "story": "Down 7 at the half. The Lakers won the third 34–15 and held on, 124–118.",
+  "aria": "Original illustration of Luka Dončić's jumper in the lane with 28 seconds left that put the Lakers up six. Not traced from footage, not to scale."
+}
