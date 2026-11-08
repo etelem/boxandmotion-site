@@ -101,3 +101,7 @@ footer a{color:var(--dim)}
 @media (prefers-reduced-motion:reduce){.orbs span,.chip{animation:none}.card,.pill{transition:none}}
 
 @media (max-width:640px){.gtop{aspect-ratio:auto;min-height:104px}}
+
+/* phone nav: Newsletter becomes a button beside My teams; Playoff Odds -> Odds */
+.nl-pill{display:none}
+@media (max-width:640px){.nav .nl-pill{display:inline-flex;margin-left:auto}.nav .nl-pill+.pill.hot{margin-left:0}.links a.nl{display:none}.links .lg{display:none}.links{gap:0 22px}}

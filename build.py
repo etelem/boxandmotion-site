@@ -96,8 +96,10 @@ def video_block(v):
 
 def page(path, title, body, active=None, desc="Every NBA game, explained in animation. Recaps, playoff odds and scouting reports.", band=""):
     depth = path.count("/"); R = "../" * depth
-    nav = [("Teams", "teams/index.html"), ("Last Night", "last-night/index.html"), ("Deep Dives", "deep-dives/index.html"), ("Playoff Odds", "odds/index.html"), ("Newsletter", "newsletter/index.html")]
-    links = "".join(f'<a href="{R}{h}"{" aria-current=page" if n==active else ""}>{n}</a>' for n, h in nav)
+    nav = [("Teams", "teams/index.html", "Teams"), ("Last Night", "last-night/index.html", "Last Night"), ("Deep Dives", "deep-dives/index.html", "Deep Dives"),
+           ("Playoff Odds", "odds/index.html", '<span class="lg">Playoff </span>Odds'), ("Newsletter", "newsletter/index.html", "Newsletter")]
+    # on phones Newsletter moves up beside My teams (as its own button) and "Playoff Odds" shortens to "Odds", so the tabs fit without scrolling
+    links = "".join(f'<a href="{R}{h}"{" aria-current=page" if n==active else ""}{" class=nl" if n=="Newsletter" else ""}>{lbl}</a>' for n, h, lbl in nav)
     html = f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{E(title)}</title><meta name="description" content="{E(desc)}">
@@ -110,7 +112,7 @@ def page(path, title, body, active=None, desc="Every NBA game, explained in anim
 <header class="glass"><nav aria-label="Main" class="w nav">
 <a class="brand" href="{R}index.html">{LOGO}<span class="d">Box &amp; Motion <span class="grad">Hoops</span></span></a>
 <div class="links">{links}</div>
-<a href="{R}teams/index.html" class="pill hot favcount">★ My teams</a>
+<a href="{R}newsletter/index.html" class="pill nl-pill">✉ Newsletter</a><a href="{R}teams/index.html" class="pill hot favcount">★ My teams</a>
 </nav></header>
 {band}
 <main class="w">{body}</main>
