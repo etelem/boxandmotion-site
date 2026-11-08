@@ -1,0 +1,162 @@
+{
+  "team": "NYK",
+  "D": "  const D = {\n    date: 'Sat, Nov 7, 2026',\n    us: 109, them: 97, record: '5–4', usName: 'Knicks', themName: 'Cavaliers',\n    quarters: [[26, 27], [37, 26], [25, 17], [21, 27]],\n    leadUs: 19, leadThem: 6,\n    star: {name: 'Jalen Brunson', stats: [['Points', 31, 40], ['Second-quarter points', 18, 25], ['Assists', 9, 12]]},\n    scorers: [\n      {name: 'Jalen Brunson', pts: 31, note: '12 of 25 · 9 assists · 6 rebounds'},\n      {name: 'Karl-Anthony Towns', pts: 29, note: '13 rebounds · 11 of 21'},\n      {name: 'OG Anunoby', pts: 15, note: '3 threes · 4 of 4 FT'},\n      {name: 'Landry Shamet', pts: 9, note: '3 threes · started for Josh Hart'},\n      {name: 'Jordan Clarkson', pts: 9, note: 'off the bench · 4 of 5'},\n    ],\n    edges: [\n      {label: 'Second-chance points', us: 26, them: 8},\n      {label: 'Rebounds', us: 49, them: 40},\n      {label: 'Assists', us: 27, them: 23},\n      {label: 'Steals', us: 7, them: 3},\n    ],\n    gaps: [\n      {label: 'Threes made', us: 14, them: 16},\n    ],\n    next: {opp: 'vs Bucks', when: 'Tue, Nov 10, 7:30 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Jalen Brunson's pull-up jumper with 2:37 left in the second quarter that put the Knicks up five, in the middle of his 18-point quarter. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "The pull-up",
+    "subP": "Brunson pulls up, 2:37 left in the half",
+    "subL": "Brunson’s pull-up jumper with 2:37 left in the half",
+    "m0": "Knicks +3",
+    "m1": "Knicks +5",
+    "num": "11",
+    "cap1": "Brunson pulled up. Knicks by 5.",
+    "cap2": "Part of his 18-point second quarter.",
+    "clock": [
+      165,
+      157
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Knicks at Cavaliers Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Knicks 109, Cavaliers 97 · Nov 7, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Knicks at', 'Cavaliers'] : ['Knicks at Cavaliers']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Brunson 31, Towns 29.', 'N.Y. led by as many as 19.'] : ['Brunson scored 31 and Towns 29. New York led by as many as 19.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Knicks improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Third straight win'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Up 10 at the half,', 'up 18 after three'] : ['Up 10 at the half, up 18 after three']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Knicks ${D.leadUs}, Cavaliers ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Knicks’ margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Brunson: 31,', '18 in the second'] : ['Brunson: 31 points, 18 in the second quarter']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['12 of 25 shooting,', 'with 9 assists.'] : ['12 of 25 from the floor, with 9 assists.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Brunson and Towns:', '60 of the 109'] : ['Brunson and Towns combined for 60 of 109']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 35;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it on the glass', 'and second chances'] : ['Won it on the glass and on second chances']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Knicks in blue, Cavaliers in gray. N.Y.', 'made 13 of 14 free throws.'] : ['Knicks in blue, Cavaliers in gray. N.Y. made 13 of 14 free throws.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'Over .500 for the first time'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Bucks’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '1–8';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Towns has a double-double', 'in all nine games.'] : ['Towns has a double-double in all nine games.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Knicks 109 · Cavaliers 97 · Nov 7'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'The pull-up'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Brunson'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 55;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 200 : 236) * k, startX = shotX - (P ? 190 : 230) * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+2', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 150 * k, shotX + 85 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "    T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "    T(board, bx + 24, by + 38, 'Q2', 'b m', 24);"
+    ],
+    [
+      "      return lerp(startX, shotX, prog(lt, T_JAB, 1.2));",
+      "      // Brunson's trait: change of pace. Halfway in he hesitates, then bursts into the pull-up.\n      return lerp(startX, shotX, lt < T_JAB + 0.75 ? 0.55 * prog(lt, T_JAB, 0.35) : 0.55 + 0.45 * prog(lt, T_JAB + 0.75, 0.45));"
+    ],
+    [
+      "const ghost = figure(g, 'phi', k, '11');",
+      "const ghost = figureReal(g, 'phi', k, '11', STAR_BUILD);"
+    ],
+    [
+      "ghost.draw(POSES.dribble, startX + 30 * k, floor, k, 1);",
+      "ghost.draw(POSES.dribble, lerp(startX, shotX, 0.55), floor, k, 1);"
+    ],
+    [
+      "      ghost.g.style.opacity = 0;",
+      "      ghost.g.style.opacity = lt > T_JAB + 0.75 && lt < T_MAKE ? (0.3 * (1 - prog(lt, T_JAB + 1.1, 1.6))).toFixed(2) : 0;"
+    ]
+  ],
+  "aria": "Animated recap of the Knicks' 109 to 97 road win at Cleveland: Jalen Brunson's pull-up jumper with 2:37 left in the first half, quarter-by-quarter scoring, his 31 points, the top scorers, how the Knicks won, and the next game against Milwaukee.",
+  "notes": [
+    "Box score from the Knicks' 109–97 win over the Cleveland Cavaliers in Cleveland on Nov 7, 2026, from StatMuse's full box score, with game details from the New York Daily News (via Yahoo Sports), SNY (via Yahoo Sports), Fear the Sword (via Yahoo Sports), Hoops Wire, AFP (via The42), NY Knicks News and the CBS Sports gametracker. All 109 Knicks points and all 97 Cavaliers points are accounted for in the box score. The quarter scores are CBS Sports' line score; the 19-point lead is from AFP and SNY (88–69 late in the third), and Cleveland's 6-point lead is SNY's. Second-chance points (26–8) are from Hoops Wire and AFP. The Bucks' record and the Knicks' standing are from the site's standings.",
+    "The play of the game is an original illustration of Jalen Brunson's pull-up jumper with 2:37 left in the second quarter, which made it 52–47 (the Daily News' description) after his four-point play had made it 50–45 at 3:23. It came during an 18-point second quarter for Brunson (AFP, SNY). The recaps don't describe the shot beyond a pull-up, so it is drawn as a plain pull-up. His change of pace is shown as a hesitation on the way into the shot, with a fading afterimage where he pauses: a stylized signature, not a description of this possession. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the New York Knicks or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Brunson’s listed 6-foot-2 and 190 pounds (RealGM), with arms scaled to his 6-foot-4 wingspan at the 2018 draft combine (NBC Sports). It is an original silhouette with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "tall": 0.9487,
+    "ape": 1.027,
+    "mass": 0.9651,
+    "label": "Jalen Brunson, listed 6-2, 190 lb, 6-4 wingspan (2018 combine)"
+  }
+}

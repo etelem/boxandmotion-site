@@ -1,0 +1,146 @@
+{
+  "team": "PHX",
+  "D": "  const D = {\n    date: 'Sat, Nov 7, 2026',\n    us: 102, them: 99, record: '3–5', usName: 'Suns', themName: 'Rockets',\n    quarters: [[35, 23], [12, 24], [29, 28], [26, 24]],\n    leadUs: 19, leadThem: 6,\n    star: {name: 'Devin Booker', stats: [['Points', 24, 30], ['Fourth-quarter points', 9, 12], ['Steals', 3, 5]]},\n    scorers: [\n      {name: 'Devin Booker', pts: 24, note: '10 of 24 · 3 steals · last 9 Suns points'},\n      {name: 'Jalen Green', pts: 16, note: '6 assists · 7 of 14'},\n      {name: 'Miles Bridges', pts: 13, note: '10 rebounds · 7 assists'},\n      {name: 'Dillon Brooks', pts: 11, note: '3 threes'},\n      {name: 'Luke Kennard', pts: 11, note: 'off the bench · 3 threes'},\n    ],\n    edges: [\n      {label: 'Assists', us: 29, them: 16},\n      {label: 'Field goals made', us: 41, them: 36},\n      {label: 'Threes made', us: 12, them: 10},\n      {label: 'Steals', us: 8, them: 7},\n    ],\n    gaps: [\n      {label: 'Free throws made', us: 8, them: 17},\n    ],\n    next: {opp: 'vs Spurs', when: 'Mon, Nov 9, 9:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Devin Booker's 17-footer with 4:24 left that broke a 93-93 tie, the first of the Suns' last nine points, all his. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "The tie-breaker",
+    "subP": "Booker from 17 feet, 4:24 left",
+    "subL": "Booker’s 17-footer with 4:24 left, tied at 93",
+    "m0": "Tied 93–93",
+    "m1": "Suns +2",
+    "num": "1",
+    "cap1": "Booker broke the tie. Suns by 2.",
+    "cap2": "First of the Suns’ last 9 points, all his.",
+    "clock": [
+      272,
+      264
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Suns vs Rockets Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Suns 102, Rockets 99 · Nov 7, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Suns vs.', 'Rockets'] : ['Suns vs. Rockets']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Booker scored the last 9.', 'Durant’s tying 3 fell short.'] : ['Booker scored the Suns’ last 9. Durant’s tying 3 fell short.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Suns improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Second straight win'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Tied 47–47 at the half,', 'won both late quarters'] : ['Tied 47–47 at the half, then won both late quarters']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Suns ${D.leadUs}, Rockets ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Suns’ margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Booker: 24,', '9 in the fourth'] : ['Booker: 24 points, 9 in the fourth']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['The Suns’ last 9 points', 'were all his.'] : ['The Suns’ last 9 points were all his.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Booker and Green:', '40 of the 102'] : ['Booker and Green combined for 40 of 102']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 30;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it passing:', '29 assists to 16'] : ['Won it passing: 29 assists to 16']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Suns in orange, Rockets in gray. Houston', 'had 15 offensive rebounds to 9.'] : ['Suns in orange, Rockets in gray. Houston had 15 offensive rebounds to 9.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'12th in the West'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Spurs’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '8–2';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Booker’s 745th game passed', 'Steve Nash for third in Suns history.'] : ['Booker’s 745th game passed Steve Nash for third in Suns history.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Suns 102 · Rockets 99 · Nov 7'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'The tie-breaker'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Booker'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 45;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 200 : 236) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+2', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 140 * k, shotX + 85 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "        pose = lt < 6.3 ? mixPose(POSES.set, POSES.rise, up) : mixPose(POSES.rise, POSES.dribble, down);",
+      "        pose = lt < 6.3 ? mixPose(POSES.set, POSES.rise, up) : mixPose(POSES.rise, POSES.dribble, down);\n        // Booker's trait: he holds the follow-through, arms up, until the ball drops through.\n        if (lt >= 6.3) { const hold = 1 - prog(lt, T_MAKE + 0.9, 0.8), dy = pose.neck[1] - POSES.rise.neck[1]; ['le', 'lh', 're', 'rh'].forEach((j) => { pose[j] = [lerp(pose[j][0], POSES.rise[j][0], hold), lerp(pose[j][1], POSES.rise[j][1] + dy, hold)]; }); }"
+    ]
+  ],
+  "aria": "Animated recap of the Suns' 102 to 99 home win over Houston: Devin Booker's 17-footer that broke a 93-93 tie with 4:24 left, quarter-by-quarter scoring, his 24 points, the top scorers, how the Suns won, and the next game against San Antonio.",
+  "notes": [
+    "Box score from the Suns' 102–99 home win over the Houston Rockets on Nov 7, 2026, from StatMuse's full box score and quarter scores, with game details from the AP (via ABC News and Fox Sports), Field Level Media, Basketball Insiders, Roundtable and Yardbarker. All 102 Suns points and all 99 Rockets points are accounted for in the box score. The 19-point Suns lead (44–25) is from the AP, Field Level Media and Basketball Insiders; Houston's 6-point lead in the third quarter is Basketball Insiders'. Booker's nine fourth-quarter points are from Roundtable and match Field Level Media's sequence (a 17-footer, a step-back jumper, a 3-pointer and a driving layup). The Spurs' record and the Suns' standing are from the site's standings (Basketball Insiders also has Phoenix 12th in the West); the next game is from the AP and Yardbarker.",
+    "The play of the game is an original illustration of Devin Booker's 17-footer with 4:24 left that broke a 93–93 tie (Field Level Media; Roundtable has the game tied at 93 with about four and a half minutes left). It was the first of the Suns' last nine points, all scored by Booker, ending with a layup for a 102–95 lead at 2:30. The recaps don't describe how he got the shot, so it is drawn as a plain pull-up. His signature smooth mid-range stroke is shown by holding the follow-through until the ball drops: a stylized trait, not a description of this possession. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Phoenix Suns or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Booker’s listed 6-foot-5 and 206 pounds (RealGM), with arms scaled to his 6-foot-8¼ wingspan at the 2015 draft combine (theScore). It is an original silhouette with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "tall": 0.9872,
+    "ape": 1.0422,
+    "mass": 0.9852,
+    "label": "Devin Booker, listed 6-5, 206 lb, 6-8.25 wingspan (2015 combine)"
+  }
+}
