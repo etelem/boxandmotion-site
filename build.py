@@ -151,6 +151,18 @@ def board_card(R, b, big=False):
             f'{"min-height:260px;justify-content:flex-end;" if big else ""}background:#f7f6f1"><span class="tag">Coach\'s board · {E(t["name"])}</span>'
             f'<b class="d" style="font-size:{40 if big else 30}px;margin-top:4px">{E(b["coach"])}: {E(b["title"])}</b><span class="dim">{E(b["dek"])}</span></a>')
 
+PLAYERS = []
+if os.path.isdir("data/players"):
+    for fn in sorted(os.listdir("data/players")):
+        if fn.endswith(".json"): PLAYERS.append(json.load(open(f"data/players/{fn}")))
+PLAYERS.sort(key=lambda x: x["published"], reverse=True)
+
+def player_card(R, P, big=False):
+    t = T[P["team"]]
+    return (f'<a href="{R}players/{P["slug"]}/index.html" class="card pad" style="display:flex;flex-direction:column;gap:6px;{"min-height:260px;" if big else ""}justify-content:flex-end;'
+            f'background:radial-gradient(120% 140% at 100% 0%,{t["c1"]} 0%,{t["dark"]} 75%);color:#fff;border:0"><span class="tag gold">Scouting report · {E(t["name"])}</span>'
+            f'<b class="d" style="font-size:{40 if big else 30}px">{E(P["name"])}</b><span style="opacity:.85">{E(P["card"])}</span></a>')
+
 # ---- data.js for client ----
 shutil.rmtree(OUT, ignore_errors=True)  # start clean so removed pages disappear
 if os.path.isdir("reels"): shutil.copytree("reels", f"{OUT}/reels")
@@ -200,7 +212,7 @@ home = f'''
   <div><p class="k" style="margin-top:6px">Fallers</p>{"".join(mini(c) for c in fallers)}</div>
   <a href="odds/index.html" style="font-weight:600">All 30 teams →</a></div>
  <div class="sec"><h2 class="h2">Deep dives</h2>
-  <a href="players/luka-doncic/index.html" class="card pad" style="display:flex;flex-direction:column;gap:6px;background:radial-gradient(120% 140% at 100% 0%,#552583 0%,#1c0b32 75%);color:#fff;border:0"><span class="tag gold">Scouting report</span><b class="d" style="font-size:30px;margin-top:4px">Luka Dončić: 40 a night</b><span style="opacity:.85">Game log, hot and quiet nights, the step-back</span></a>
+  {player_card(R, PLAYERS[0]) if PLAYERS else '<a href="players/luka-doncic/index.html" class="card pad" style="display:flex;flex-direction:column;gap:6px;background:radial-gradient(120% 140% at 100% 0%,#552583 0%,#1c0b32 75%);color:#fff;border:0"><span class="tag gold">Scouting report</span><b class="d" style="font-size:30px;margin-top:4px">Luka Dončić: 40 a night</b><span style="opacity:.85">Game log, hot and quiet nights, the step-back</span></a>'}
   {board_card(R, BOARDS[0]) if BOARDS else ''}
  </div>
 </section>
@@ -246,6 +258,8 @@ for c, t in T.items():
 <span class="tag {'gold' if g['featured'] else ''}">{'Featured recap' if g['featured'] else 'Recap'}</span></a>'''
     if c == "LAL":
         players = f'<a href="{R}players/luka-doncic/index.html" class="card pad" style="display:flex;flex-direction:column;gap:6px;min-height:200px;justify-content:flex-end;background:radial-gradient(120% 140% at 100% 0%,#552583 0%,#1c0b32 75%);color:#fff;border:0"><span class="tag gold">Scouting report</span><b class="d" style="font-size:30px">Luka Dončić</b><span style="opacity:.85">No. 77 · 40.1 points per game</span></a><div class="card pad empty" style="min-height:200px;display:flex;flex-direction:column;justify-content:flex-end"><b class="d" style="font-size:26px">Austin Reaves</b><span class="dim">Report coming</span></div><div class="card pad empty" style="min-height:200px;display:flex;flex-direction:column;justify-content:flex-end"><b class="d" style="font-size:26px">Walker Kessler</b><span class="dim">Report coming</span></div>'
+    elif any(P["team"] == c for P in PLAYERS):
+        players = "".join(player_card(R, P) for P in PLAYERS if P["team"] == c)
     else:
         players = f'<div class="card pad empty"><b class="d" style="font-size:26px">Scouting reports are coming</b><p class="dim" style="margin:6px 0 0">Every week we animate the league\'s hottest player. Follow the {E(t["name"])} to see theirs here first.</p></div>'
     if c in COACH_PAGES:
@@ -354,6 +368,7 @@ R = "../"
 body = f'''<div class="sec" style="gap:8px"><p class="k">New every week</p><h1 class="h1">Deep dives</h1><p class="dim" style="margin:0;font-size:18px;max-width:44em">Every week: a scouting report on the league's hottest player, and a coach's board when a team draws up a play worth seeing again. All animated.</p></div>
 <section class="grid g2">
 {"".join(board_card(R, b, big=True) for b in BOARDS)}
+{"".join(player_card(R, P, big=True) for P in PLAYERS)}
 <a href="{R}players/luka-doncic/index.html" class="card pad" style="min-height:260px;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;background:radial-gradient(120% 140% at 100% 0%,#552583 0%,#1c0b32 75%);color:#fff;border:0"><span class="tag gold">Scouting report · Lakers</span><b class="d" style="font-size:40px">Luka Dončić</b><span style="opacity:.85">40.1 points a game, the hot and quiet nights, and the step-back</span></a>
 <a href="{R}coaches/jj-redick/index.html" class="card pad" style="min-height:260px;display:flex;flex-direction:column;justify-content:flex-end;gap:6px"><span class="tag">Coach's whiteboard · Lakers</span><b class="d" style="font-size:40px">JJ Redick</b><span class="dim">How the Lakers closed out the Utah comeback</span></a>
 </section>'''
@@ -395,6 +410,28 @@ body = f'''<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}deep-dives/in
 <section class="card pad empty"><b>Season shot chart</b><p class="dim" style="margin:6px 0 0">The filterable shot chart (every shot, by game) arrives once our licensed shot-location feed is connected.</p></section>'''
 page("players/luka-doncic/index.html", "Luka Dončić scouting report · Box & Motion Hoops", body, active="Deep Dives",
      desc=f"Luka Dončić: {avg:.1f} points per game, game log, hot and quiet nights, and the step-back.")
+
+# ---- player reports from data/players/<slug>.json (the weekly hot-player report) ----
+for P in PLAYERS:
+    c = P["team"]; t = T[c]
+    stats = "".join(f'<div class="card pad"><span class="d" style="font-size:44px{";color:" + t["c1"] if i == 0 else ""}">{E(v)}</span><br><span class="dim">{E(l)}</span></div>' for i, (v, l) in enumerate(P["stats"]))
+    logrows = "".join("<tr>" + "".join(f'<td{" class=num" if 3 <= j else ""}>{"<b>" + E(str(v)) + "</b>" if j == 3 else E("—" if v is None else str(v))}</td>' for j, v in enumerate(r)) + "</tr>" for r in P["log"])
+    steps = "".join(f'<li><b>{E(a)}.</b> {E(b2)}</li>' for a, b2 in P["move"]["steps"])
+    srcs = "".join(f'<li><a href="{E(u)}" target="_blank" rel="noopener">{E(l)}</a></li>' for l, u in P["sources"])
+    body = f'''<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}deep-dives/index.html">Deep dives</a><span>/</span><a href="{R}teams/{t['slug']}/index.html">{E(t['name'])}</a><span>/</span><span>{E(P['name'])}</span></nav>
+<section style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-end"><div class="sec" style="flex:999 1 480px;gap:12px"><p class="k">Scouting report · {E(P['week'])}</p>
+<h1 class="h1" style="font-size:clamp(56px,9vw,112px)">{E(P['name'])}</h1>
+<p style="margin:0;font-size:20px;max-width:34em">{E(P['lede'])}</p>
+<p class="dim" style="margin:0">{E(P['bio'])}</p></div>
+<div style="flex:1 1 280px;display:grid;grid-template-columns:1fr 1fr;gap:12px">{stats}</div></section>
+<section class="sec"><div class="sec" style="gap:6px"><p class="k">Signature move</p><h2 class="h2">{E(P['move']['title'])}</h2>
+<p style="margin:0;max-width:44em">{E(P['move']['text'])}</p></div>
+{anim_frame(R, P['move']['anim'], P['name'] + ': ' + P['move']['title'])}
+<ol style="margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px;max-width:46em">{steps}</ol></section>
+<section class="sec"><h2 class="h2">His week</h2>
+<div class="card" style="padding:6px 16px"><div class="scroll"><table class="otable" style="min-width:640px"><tr><th>Date</th><th>Game</th><th>Result</th><th class="num">Pts</th><th class="num">Reb</th><th class="num">Ast</th><th class="num">FG</th><th class="num">3PT</th></tr>{logrows}</table></div></div></section>
+<section class="card pad"><b>Sources</b><ul style="margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:4px">{srcs}</ul></section>'''
+    page(f"players/{P['slug']}/index.html", f"{P['name']} scouting report · Box & Motion Hoops", body, active="Deep Dives", desc=P["lede"])
 
 # ---- coach: Redick ----
 body = f'''<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}deep-dives/index.html">Deep dives</a><span>/</span><a href="{R}teams/lakers/index.html">Lakers</a><span>/</span><span>JJ Redick</span></nav>
