@@ -1,7 +1,7 @@
-# Box & Motion Hoops: the weekly deep dives and Monday in Motion
+# Box & Motion Hoops: the weekly deep dives and The Sunday Box
 
-Every Monday at 4:13 AM ET (after the 2:56 AM site update and the 3:17–3:21 recap runs) this run makes the week's two deep
-dives and drafts Monday's newsletter, Monday in Motion. **Nothing goes public until Elan approves.** The run builds everything, sends him previews and waits in the same session for his reply.
+Every Saturday morning this run makes the week's two deep dives and drafts Sunday's newsletter. **Nothing goes public until
+Elan approves.** The run builds everything, sends him previews and waits in the same session for his reply.
 
 The house rules in PROCEDURE.md still apply: every number checked against a box score or a named written source; no logos and
 no traced footage; never espn.com or nba.com as a source; never Elan's personal name anywhere; skip rather than guess. Figures
@@ -9,8 +9,7 @@ follow the figure style rule at the top of PROCEDURE.md: the recap silhouette dr
 shows his signature trait.
 
 ## The week
-The games from last Monday through Sunday night: every game in `data/season.json` dated in that window. If Sunday's games
-are not in it yet (the site update hasn't run or failed), `git pull` once; if they're still missing, say so in the previews. Pull before
+The games from last Saturday through Friday night: every game in `data/season.json` dated in that window. Pull before
 starting; the nightly update keeps that file current.
 
 ## 1. Scouting report: the week's hottest player
@@ -60,8 +59,8 @@ starting; the nightly update keeps that file current.
 ## 3. Shorts and the newsletter draft
 1. For each animation: `bash kit/short_mp4.sh src/anim/<file>.html kit/out/<file>-short.mp4` (normal speed, then slow motion).
    Copy it to `src/anim/<file>.mp4` for the YouTube step below.
-2. **Draft the issue in beehiiv** (publication "Box & Motion", Monday in Motion). Duplicate the newest issue (Monday in Motion,
-   or The Sunday Box before the rename) and keep its design. Title: "Monday in Motion: <hook>". Sections:
+2. **Draft the issue in beehiiv** (publication "Box & Motion", The Sunday Box). Duplicate the newest Sunday Box post and keep
+   its design. Title: "The Sunday Box: <hook>". Sections:
    - The week in one line.
    - Game of the week, with its recap Short link.
    - Playoff race movers, from `data/odds.json`.
@@ -86,8 +85,7 @@ Then wait for his reply in this session. Change whatever he asks and send new pr
    `assets.video.url = https://boxandmotion.com/anim/<file>.mp4`.
    - Titles: "<Player>'s <move>, explained | Box & Motion scouting report" and "<Coach>'s <play>, on the board | <Team> vs <Opp>".
    - When the video ids come back, add them to the deep-dive data (`youtube` field), `git rm src/anim/*.mp4`, rebuild and push.
-3. Add the Short links to the newsletter draft. Schedule it for Monday 7:00 AM ET (or the time Elan gave). If he approves
-   after 7:00 AM, send it right away instead (still Monday). Report the scheduled or sent time.
-Before ending your turn, use send_later to remind yourself in this session at Monday 6:30 AM ET. If he still hasn't
-replied by then, publish nothing and send him one reminder. If he approves later on Monday, publish then; after Monday,
-ask before sending a stale issue.
+3. Add the Short links to the newsletter draft. Schedule it for Sunday 8:00 AM ET (or the time Elan gave), then report the
+   scheduled time.
+Before ending your turn, use send_later to remind yourself in this session at Sunday 7:30 AM ET. If he still hasn't
+replied by then, publish nothing and send him one reminder.
