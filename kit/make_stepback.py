@@ -1,5 +1,6 @@
-"""Build the Luka Doncic step-back animation for his scouting report.
-Usage (from the repo root): python3 kit/make_stepback.py  ->  src/anim/luka-stepback.html
+"""Build a step-back-three animation for a player's scouting report from a move config.
+Usage (from the repo root): python3 kit/make_stepback.py [kit/moves/<id>.json]  ->  src/anim/<out>
+(defaults to kit/moves/luka-stepback.json). Config: out, team, number, name, title, build {tall, ape, mass}, steps, aria.
 An original drawn illustration of his signature move, not traced from footage and not to scale.
 The figure is drawn to his listed 6-8, 230 lb with arms scaled to a reported 6-11 wingspan (same build as the Nov 6 recap)."""
 import os, sys, json
@@ -11,12 +12,13 @@ start = next(i for i, l in enumerate(base) if l.startswith('  const POSES = {'))
 end = next(i for i in range(start, len(base)) if base[i] == '  }' and i > start + 12)
 FIGURE = '\n'.join(base[start:end + 1])
 FIGURE_REAL = open(os.path.join(HERE, 'figure-real.js')).read()
-BUILD = {"tall": 80 / 78, "ape": 83 / 80, "mass": ((230 / 80) / (215 / 78)) ** 0.5}   # same silhouette as the Nov 6 recap
-PAL = team_palette('LAL')
+CFG = json.load(open(sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, 'moves', 'luka-stepback.json')))
+BUILD = CFG['build']
+PAL = team_palette(CFG['team'])
 
 HTML = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Luka Dončić: the step-back three · Box &amp; Motion Hoops</title>
+<title>__NAME__: __TITLE__ · Box &amp; Motion Hoops</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;600&display=swap">
 <style>
 :root{
@@ -58,7 +60,7 @@ html.short .wrap{border-radius:0}
 .step.on{opacity:1}
 </style></head><body>
 <div class="wrap">
-<svg id="sv" role="img" aria-label="Animated illustration of Luka Dončić's step-back three: he jabs toward the basket so the defender backs off, hops back behind the three-point line with both feet, then rises and releases over a late closeout. An original drawing, not traced from footage, not to scale."></svg>
+<svg id="sv" role="img" aria-label="__ARIA__"></svg>
 <div class="bar"><button id="pp" type="button">Pause</button><button id="slow" type="button" aria-pressed="false">Slow motion</button><span class="sp"></span>
 <button class="jump" data-t="0.6" type="button">1 · Jab</button><button class="jump" data-t="2.0" type="button">2 · Hop back</button><button class="jump" data-t="2.9" type="button">3 · Rise</button></div>
 </div>
@@ -79,7 +81,7 @@ __FIGURE__
 __FIGURE_REAL__
   const BUILD = __BUILD__;
   const svg = document.getElementById('sv');
-  const steps = [['1', 'The jab', 'The defender has to respect the drive.'], ['2', 'The hop back', 'Both feet, landing already set.'], ['3', 'The rise', 'A high release over the closeout.']];
+  const steps = __STEPS__;
   const TOTAL = 7.2;
   let L = null, built = null;
 
@@ -100,8 +102,8 @@ __FIGURE_REAL__
     const rimY = floor - 240 * k * 1.62, rimR = 30 * k;
     // header
     const hy = short ? 100 : M + 6;
-    T(svg, M, hy, 'Signature move · Luka Dončić', 'k', short ? 28 : portrait ? 22 : 18);
-    T(svg, M, hy + (short ? 76 : portrait ? 56 : 48), 'The step-back three', 'd', short ? 68 : portrait ? 52 : 44);
+    T(svg, M, hy, 'Signature move · ' + __NAMEJS__, 'k', short ? 28 : portrait ? 22 : 18);
+    T(svg, M, hy + (short ? 76 : portrait ? 56 : 48), __TITLEJS__, 'd', short ? 68 : portrait ? 52 : 44);
     if (short) { T(svg, M, H - 70, 'BOX & MOTION HOOPS', 'd', 36); T(svg, W - M, H - 70, 'boxandmotion.com', 'b m', 28, 'end'); }
     // court
     const court = S('g', {class: 's-silver', 'stroke-width': 3, 'stroke-linecap': 'round', opacity: .9}, svg);
@@ -125,8 +127,8 @@ __FIGURE_REAL__
     // figures
     const defender = figure(svg, 'opp', k);
     defender.g.setAttribute('opacity', .8);
-    const ghosts = [0, 1, 2].map(() => { const gh = figureReal(svg, 'phi', k, '77', BUILD); gh.g.style.opacity = 0; return gh; }).reverse();
-    const luka = figureReal(svg, 'phi', k, '77', BUILD);
+    const ghosts = [0, 1, 2].map(() => { const gh = figureReal(svg, 'phi', k, __NUM__, BUILD); gh.g.style.opacity = 0; return gh; }).reverse();
+    const luka = figureReal(svg, 'phi', k, __NUM__, BUILD);
     const trailG = S('g', {}, svg);
     const ball = S('circle', {r: 13 * k, class: 'f-ink', filter: 'url(#glow)'}, svg);
     const flash = S('circle', {cx: hoopX, cy: rimY, r: 0, fill: 'none', stroke: 'var(--ink)', 'stroke-width': 4, opacity: 0}, svg);
@@ -240,8 +242,9 @@ __FIGURE_REAL__
 </script>
 </body></html>
 """
-out = HTML.replace('__PAL__', PAL).replace('__FIGURE__', FIGURE).replace('__FIGURE_REAL__', FIGURE_REAL).replace('__BUILD__', json.dumps(BUILD))
+import html as _h
+out = HTML.replace('__NAME__', _h.escape(CFG['name'])).replace('__TITLE__', _h.escape(CFG['title'])).replace('__ARIA__', _h.escape(CFG['aria'])).replace('__STEPS__', json.dumps(CFG['steps'], ensure_ascii=False)).replace('__NAMEJS__', json.dumps(CFG['name'], ensure_ascii=False)).replace('__TITLEJS__', json.dumps(CFG['title'], ensure_ascii=False)).replace('__NUM__', json.dumps(CFG['number'])).replace('__PAL__', PAL).replace('__FIGURE__', FIGURE).replace('__FIGURE_REAL__', FIGURE_REAL).replace('__BUILD__', json.dumps(BUILD))
 os.makedirs(os.path.join(ROOT, 'src', 'anim'), exist_ok=True)
-dst = os.path.join(ROOT, 'src', 'anim', 'luka-stepback.html')
+dst = os.path.join(ROOT, 'src', 'anim', CFG['out'])
 open(dst, 'w').write(out)
 print('wrote', os.path.relpath(dst, ROOT))
