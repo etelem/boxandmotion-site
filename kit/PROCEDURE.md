@@ -81,7 +81,9 @@ Game key = `YYYY-MM-DD-AWAY-HOME`, e.g. `2026-11-06-POR-LAL` (team codes from da
 2. **YouTube Shorts through Buffer** (Buffer connector). Organization "My organization" (`get_account`), YouTube channel "Box & Motion"
    (`list_channels`, service youtube). Post this run's one Short (step 7). If Buffer or YouTube returns a daily-limit error, send the MP4 to Elan and say so:
    `create_post` with `channelId`, `schedulingType: "automatic"`, `mode: "shareNow"`,
-   `assets: [{"video": {"url": "https://boxandmotion.com/reels/<key>/short.mp4"}}]`, `text` = the description,
+   `assets: [{"video": {"url": "https://boxandmotion.com/reels/<key>/short.mp4", "metadata": {"thumbnailOffset": <ms>}}}]`, where <ms>
+   is the "thumbnail offset" make_playshort.py printed (the frame with the hook, the stamp and the star; never a chart or the end card),
+   `text` = the description. If create_post rejects `thumbnailOffset`, post again without it and say so in the report,
    `metadata.youtube = {"title": <title, max 100 chars>, "categoryId": "17", "privacy": "public", "madeForKids": false, "isAiGenerated": true}`.
    Title leads with the player and the play, then the result, e.g. "Steph's and-one to win it in OT | Warriors 126, Magic 119".
    Description: one or two sentences, then "Every game: boxandmotion.com · Free Sunday newsletter: boxandmotion.beehiiv.com/subscribe"

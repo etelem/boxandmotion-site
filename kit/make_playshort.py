@@ -294,3 +294,7 @@ out = (HTML.replace('__KITCSS__', KITCSS).replace('__PAL__', PAL).replace('__FIG
 dst = os.path.join(ROOT, 'src', 'anim', CFG['out'])
 open(dst, 'w').write(out)
 print('wrote', os.path.relpath(dst, ROOT))
+# YouTube thumbnail: half a second after the make, when the hook title, the stamp (DAGGER, AND-ONE...) and the star are all
+# on screen. Same timing as the JS (P0 + tM + 0.5); the MP4 runs at speed 1, so animation time = video time.
+_tm = (1.75 + (1.25 if CFG.get('three') else 1.0)) if CFG.get('play_type') == 'jumper' else 4.0
+print('thumbnail offset (ms):', int(round((0.25 + _tm + 0.5) * 1000)))
