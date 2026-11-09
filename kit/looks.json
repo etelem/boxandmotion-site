@@ -97,7 +97,8 @@
   "hair": "crop",
   "hairColor": "#2a2826",
   "beard": true,
-  "stubble": 0.55
+  "stubble": 0.55,
+  "signature": "flex"
  },
  "Kevin Durant": {
   "status": "proposed",

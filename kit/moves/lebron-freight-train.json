@@ -1,0 +1,42 @@
+{
+  "out": "lebron-freight-train.html",
+  "team": "PHI",
+  "number": "23",
+  "name": "LeBron James",
+  "accent": "#ED174C",
+  "kit": {
+    "jersey": "#F4F4F2",
+    "number": "#006BB6"
+  },
+  "build": {
+    "tall": 1.0385,
+    "ape": 1.037,
+    "mass": 1.0582,
+    "skin": "#6b4430",
+    "hair": "crop",
+    "hairColor": "#2a2826",
+    "beard": true,
+    "stubble": 0.55
+  },
+  "build_note": "Listed 6-9, 250 lb; reported 7-0 wingspan",
+  "kicker": "Signature moves · LeBron James",
+  "hook": [
+    "Freight Train",
+    "LeBron's drive, in motion"
+  ],
+  "steps": [
+    [
+      "Downhill",
+      "Full speed from the top, shoulders square."
+    ],
+    [
+      "Through contact",
+      "The help defender bounces off. He doesn't."
+    ],
+    [
+      "The flex",
+      "Lands, rolls the shoulders, flexes."
+    ]
+  ],
+  "aria": "Original illustration of LeBron James' power drive: he goes downhill at full speed, runs through a help defender, throws down a two-hand dunk and finishes with his shoulder-roll flex. Not traced from footage, not to scale."
+}
