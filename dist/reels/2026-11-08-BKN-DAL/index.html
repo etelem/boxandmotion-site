@@ -74,6 +74,10 @@ html.embed .wrap{padding:0;gap:.5rem;max-width:none}
 html.embed .page-title,html.embed .chips,html.embed .own,html.embed .still-note,html.embed .notes{display:none}
 html.embed .stage{border-radius:0;border:0}
 html.embed .transport{padding:0 10px 8px}
+html.embed,html.embed body{height:100%;margin:0;overflow:hidden;overscroll-behavior:none}
+html.embed .wrap{height:100%;box-sizing:border-box}
+html.embed .stage,html.embed .stage.tall{flex:1 1 0;min-height:0;aspect-ratio:auto;width:100%}
+html.embed .transport{flex:none}
 </style>
 
 <script>if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add("embed");</script>

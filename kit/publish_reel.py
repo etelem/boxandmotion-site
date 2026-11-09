@@ -10,6 +10,10 @@ assert any(g[0] == d and g[1] == a and g[3] == h for g in season['games']), f"{k
 t = open(src).read()
 assert "el.src = 'soundtrack.mp3'" in t
 t = t.replace("el.src = 'soundtrack.mp3'", "el.src = '../soundtrack.mp3'")
+# embedded reels fill their frame on the game page and never scroll inside it
+FIT = 'html.embed,html.embed body{height:100%;margin:0;overflow:hidden;overscroll-behavior:none}\nhtml.embed .wrap{height:100%;box-sizing:border-box}\nhtml.embed .stage,html.embed .stage.tall{flex:1 1 0;min-height:0;aspect-ratio:auto;width:100%}\nhtml.embed .transport{flex:none}\n'
+if 'html.embed,html.embed body{height:100%' not in t:
+    t = t.replace('</style>', FIT + '</style>', 1)
 out = os.path.join(root, 'reels', key); os.makedirs(out, exist_ok=True)
 open(os.path.join(out, 'index.html'), 'w').write(t)
 if not os.path.exists(os.path.join(root, 'reels', 'soundtrack.mp3')):
