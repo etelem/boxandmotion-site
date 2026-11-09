@@ -5,7 +5,7 @@
  "situation": "The off-ball screen that frees a shooter",
  "aria": "Animated whiteboard explaining a pin-down screen: a shooter starts near the basket, a teammate comes down and screens the shooter's defender, pinning him low, the shooter pops up to the wing, catches the pass and shoots a three. Positions are illustrative.",
  "note": "Original illustration of a typical pin-down. Spots on the floor are illustrative.",
- "total": 17.5,
+ "total": 14.0,
  "players": {
   "1": {
    "side": "o",
@@ -237,11 +237,6 @@
    "t": 8.6,
    "title": "Catch and shoot",
    "text": "One pass, and he's open before the defense recovers."
-  },
-  {
-   "t": 12.6,
-   "title": "Seen this week",
-   "text": "Klay Thompson set one in the Heat's OT winner. Spoelstra's full board is at boxandmotion.com."
   }
  ],
  "sources": []
