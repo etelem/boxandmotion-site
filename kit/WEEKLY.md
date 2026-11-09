@@ -41,7 +41,8 @@ starting; the nightly update keeps that file current.
    Log rows are newest first. Use `null` for a stat the feed doesn't have (it shows as a dash).
 
 ## 2. Coach's board: the week's best drawn-up play (only if one qualifies)
-1. **Find it.** Search the week's game stories for after-timeout plays and sets with a written description: "out of a
+1. **Find it.** Start with this week's lines in `kit/boards/CANDIDATES.md` (logged by the nightly recap runs), then search the
+   week's game stories for after-timeout plays and sets with a written description: "out of a
    timeout", "drew up", "inbounds play", "play call", game-winners. It qualifies only if at least two sources describe the
    actions (who screened, who cut, who passed, where the shot came from), with the clock and the score. If nothing qualifies,
    skip the board this week and say so. Never invent an action.
