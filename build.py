@@ -177,6 +177,17 @@ for m in DD.get("moves", []):
     MOVES.append(dict(m, steps=cfg.get("steps", []), number=cfg.get("number", "")))
 MOVES.sort(key=lambda m: m["published"], reverse=True)
 
+# X's and O's: evergreen learn-the-game explainers (kit/xo configs, listed under "xo" in data/deepdives.json)
+XO = []
+for x in DD.get("xo", []):
+    cfg = json.load(open(x["config"]))
+    XO.append(dict(x, title=cfg["title"], sub=cfg["situation"], beats=cfg["beats"]))
+XO.sort(key=lambda x: x["published"], reverse=True)
+
+def xo_card(R, x, big=False):
+    return (f'<a href="{R}xo/{x["slug"]}/index.html" class="card pad" style="display:flex;flex-direction:column;gap:6px;{"min-height:260px;" if big else ""}justify-content:flex-end;background:#f7f6f1">'
+            f'<span class="tag hot">X\'s and O\'s</span><b class="d" style="font-size:{40 if big else 30}px;margin-top:4px">{E(x["title"])}</b><span class="dim">{E(x["dek"])}</span></a>')
+
 def move_card(R, m, big=False):
     t = T[m["team"]]
     return (f'<a href="{R}moves/{m["slug"]}/index.html" class="card pad" style="display:flex;flex-direction:column;gap:6px;{"min-height:260px;" if big else ""}justify-content:flex-end;'
@@ -203,6 +214,7 @@ PLAYERS.sort(key=lambda x: x["published"], reverse=True)
 LATEST_DD = sorted([("2026-11-07", "players/luka-doncic/index.html", "New: Luka scouting report")]
                    + [(b["published"], f'coaches/{b["coach_slug"]}/index.html', f'New: {b["coach"]}\'s board') for b in BOARDS]
                    + [(m["published"], f'moves/{m["slug"]}/index.html', f'New: {m["player"]}\'s signature move') for m in MOVES]
+                   + [(x["published"], f'xo/{x["slug"]}/index.html', f'New X\'s and O\'s: the {x["term"].lower()}') for x in XO]
                    + [(P["published"], f'players/{P["slug"]}/index.html', f'New: {P["name"]} scouting report') for P in PLAYERS],
                    key=lambda x: x[0], reverse=True)[0]
 
@@ -465,9 +477,10 @@ R = "../"
 DD_ITEMS = ([("2026-11-07", f'''<a href="{R}players/luka-doncic/index.html" class="card pad" style="min-height:260px;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;background:radial-gradient(120% 140% at 100% 0%,#552583 0%,#1c0b32 75%);color:#fff;border:0"><span class="tag gold">Scouting report · Lakers</span><b class="d" style="font-size:40px">Luka Dončić</b><span style="opacity:.85">40.1 points a game, the hot and quiet nights, and the step-back</span></a>'''), ("2026-11-07", f'''<a href="{R}coaches/jj-redick/index.html" class="card pad" style="min-height:260px;display:flex;flex-direction:column;justify-content:flex-end;gap:6px"><span class="tag">Coach's whiteboard · Lakers</span><b class="d" style="font-size:40px">JJ Redick</b><span class="dim">How the Lakers closed out the Utah comeback</span></a>''')]
             + [(b["published"], board_card(R, b, big=True)) for b in BOARDS]
             + [(m["published"], move_card(R, m, big=True)) for m in MOVES]
+            + [(x["published"], xo_card(R, x, big=True)) for x in XO]
             + [(P["published"], player_card(R, P, big=True)) for P in PLAYERS])
 DD_CARDS = "\n".join(html for _, html in sorted(DD_ITEMS, key=lambda x: x[0], reverse=True))
-body = f'''<div class="sec" style="gap:8px"><p class="k">New every week</p><h1 class="h1">Deep dives</h1><p class="dim" style="margin:0;font-size:18px;max-width:44em">Every week: a scouting report on the league's hottest player, and a coach's board when a team draws up a play worth seeing again. All in motion.</p></div>
+body = f'''<div class="sec" style="gap:8px"><p class="k">New every week</p><h1 class="h1">Deep dives</h1><p class="dim" style="margin:0;font-size:18px;max-width:44em">Scouting reports on the league's hottest players, coach's boards when a team draws up a play worth seeing again, stars' signature moves, and X's and O's that teach the game. All in motion.</p></div>
 <section class="grid g2">{DD_CARDS}</section>'''
 page("deep-dives/index.html", "Deep dives · Box & Motion Hoops", body, active="Deep Dives")
 
@@ -544,6 +557,17 @@ for m in MOVES:
 <ol style="margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px;max-width:46em">{steps}</ol>
 <div class="row" style="gap:8px">{yt}<a class="pill" href="{R}teams/{t['slug']}/index.html">{E(t['name'])} page →</a></div></section>'''
     page(f"moves/{m['slug']}/index.html", f"{m['player']}: {m['title']} · Box & Motion Hoops", body, active="Deep Dives", desc=m["dek"])
+
+# ---- X's and O's explainers ----
+for x in XO:
+    yt = f'<a class="pill cta-btn" style="background:#FF0033;border-color:#FF0033;color:#fff" href="https://youtube.com/shorts/{x["youtube"]}" target="_blank" rel="noopener">▶ Watch the Short</a>' if x.get("youtube") else ""
+    body = f'''<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}deep-dives/index.html">Deep dives</a><span>/</span><span>X's and O's</span></nav>
+<section class="sec" style="gap:12px"><p class="k">X's and O's · learn the game</p>
+<h1 class="h1" style="font-size:clamp(48px,8vw,96px)">{E(x['title'])}</h1>
+<p style="margin:0;font-size:20px;max-width:34em">{E(x['sub'])}.</p></section>
+<section class="sec">{anim_frame(R, x['anim'], x['title'])}
+<div class="row" style="gap:8px">{yt}<a class="pill" href="{R}deep-dives/index.html">More deep dives →</a></div></section>'''
+    page(f"xo/{x['slug']}/index.html", f"{x['title']} · Box & Motion Hoops", body, active="Deep Dives", desc=f"{x['title']} {x['sub']}, explained in motion.")
 
 # ---- coach: Redick ----
 body = f'''<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}deep-dives/index.html">Deep dives</a><span>/</span><a href="{R}teams/lakers/index.html">Lakers</a><span>/</span><span>JJ Redick</span></nav>

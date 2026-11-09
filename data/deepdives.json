@@ -22,5 +22,15 @@
    "dek": "Steph's jumper, in motion: one motion from the hip, gone on the way up, and he's walking away before it drops.",
    "youtube": "RXHsM6b6Kas"
   }
+ ],
+ "xo": [
+  {
+   "config": "kit/xo/pin-down.json",
+   "anim": "xo-pin-down.html",
+   "slug": "pin-down",
+   "term": "Pin-down",
+   "published": "2026-11-09T23:00",
+   "dek": "The off-ball screen that frees a shooter, in four steps."
+  }
  ]
 }
