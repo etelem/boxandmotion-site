@@ -304,10 +304,13 @@ for c, t in T.items():
 <span class="row" style="gap:6px 14px;align-items:baseline"><b class="d" style="font-size:28px;color:{t['c1'] if r=='W' else '#5c5f66'}">{r} {sc}</b><b style="font-size:18px">{E(opp)}</b>{' <span class="dim">OT</span>' if g['ot'] else ''}</span>
 <span class="dim">Record after: {g['rec'][c]}</span></span>
 <span class="tag {'gold' if g['featured'] else ''}">{'Featured recap' if g['featured'] else 'Recap'}</span></a>'''
+    moves = "".join(move_card(R, m) for m in MOVES if m["team"] == c)   # signature moves sit with the team's players
     if c == "LAL":
-        players = f'<a href="{R}players/luka-doncic/index.html" class="card pad" style="display:flex;flex-direction:column;gap:6px;min-height:200px;justify-content:flex-end;background:radial-gradient(120% 140% at 100% 0%,#552583 0%,#1c0b32 75%);color:#fff;border:0"><span class="tag gold">Scouting report</span><b class="d" style="font-size:30px">Luka Dončić</b><span style="opacity:.85">No. 77 · 40.1 points per game</span></a><div class="card pad empty" style="min-height:200px;display:flex;flex-direction:column;justify-content:flex-end"><b class="d" style="font-size:26px">Austin Reaves</b><span class="dim">Report coming</span></div><div class="card pad empty" style="min-height:200px;display:flex;flex-direction:column;justify-content:flex-end"><b class="d" style="font-size:26px">Walker Kessler</b><span class="dim">Report coming</span></div>'
+        players = moves + f'<a href="{R}players/luka-doncic/index.html" class="card pad" style="display:flex;flex-direction:column;gap:6px;min-height:200px;justify-content:flex-end;background:radial-gradient(120% 140% at 100% 0%,#552583 0%,#1c0b32 75%);color:#fff;border:0"><span class="tag gold">Scouting report</span><b class="d" style="font-size:30px">Luka Dončić</b><span style="opacity:.85">No. 77 · 40.1 points per game</span></a><div class="card pad empty" style="min-height:200px;display:flex;flex-direction:column;justify-content:flex-end"><b class="d" style="font-size:26px">Austin Reaves</b><span class="dim">Report coming</span></div><div class="card pad empty" style="min-height:200px;display:flex;flex-direction:column;justify-content:flex-end"><b class="d" style="font-size:26px">Walker Kessler</b><span class="dim">Report coming</span></div>'
     elif any(P["team"] == c for P in PLAYERS):
-        players = "".join(player_card(R, P) for P in PLAYERS if P["team"] == c)
+        players = moves + "".join(player_card(R, P) for P in PLAYERS if P["team"] == c)
+    elif moves:
+        players = moves
     else:
         players = f'<div class="card pad empty"><b class="d" style="font-size:26px">Scouting reports are coming</b><p class="dim" style="margin:6px 0 0">Every week we put the league\'s hottest player in motion. Follow the {E(t["name"])} to see theirs here first.</p></div>'
     if c in COACH_PAGES:
