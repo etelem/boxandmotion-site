@@ -198,6 +198,13 @@ if os.path.isdir("data/players"):
         if fn.endswith(".json"): PLAYERS.append(json.load(open(f"data/players/{fn}")))
 PLAYERS.sort(key=lambda x: x["published"], reverse=True)
 
+# the home page's "New:" chip points at the newest deep dive (same newest-first order as the Deep dives page)
+LATEST_DD = sorted([("2026-11-07", "players/luka-doncic/index.html", "New: Luka scouting report")]
+                   + [(b["published"], f'coaches/{b["coach_slug"]}/index.html', f'New: {b["coach"]}\'s board') for b in BOARDS]
+                   + [(m["published"], f'moves/{m["slug"]}/index.html', f'New: {m["player"]}\'s signature move') for m in MOVES]
+                   + [(P["published"], f'players/{P["slug"]}/index.html', f'New: {P["name"]} scouting report') for P in PLAYERS],
+                   key=lambda x: x[0], reverse=True)[0]
+
 def player_card(R, P, big=False):
     t = T[P["team"]]
     return (f'<a href="{R}players/{P["slug"]}/index.html" class="card pad" style="display:flex;flex-direction:column;gap:6px;{"min-height:260px;" if big else ""}justify-content:flex-end;'
@@ -228,7 +235,7 @@ home = f'''
  <div class="row" style="gap:12px">
   <a class="chip" href="last-night/index.html"><span class="dot"></span>{len(LAST)} games last night</a>
   <a class="chip" href="odds/index.html"><span class="dot"></span>Playoff odds mover: {E(T[movers]['name'])} {chg(O[movers]['chg'])} this week</a>
-  <a class="chip" href="players/luka-doncic/index.html"><span class="dot"></span>New: Luka scouting report</a>
+  <a class="chip" href="{LATEST_DD[1]}"><span class="dot"></span>{E(LATEST_DD[2])}</a>
  </div></div>
  <div id="mine" class="grid g3"></div>
  <div id="mine-empty" class="card pad empty hidden"><b class="d" style="font-size:26px">Pick your teams</b><p class="dim" style="margin:6px 0 14px">Follow teams to see their record, odds and last game here. Saved on this device, no sign-up.</p><div class="row"><button class="pill star" data-team="LAL">★ Lakers</button><button class="pill star" data-team="PHI">★ 76ers</button><button class="pill star" data-team="NYK">★ Knicks</button><a class="pill" href="teams/index.html">All 30 teams →</a></div></div>
