@@ -1,0 +1,86 @@
+{
+ "headline": "George and Tatum lead Boston past Milwaukee",
+ "dek": "George scored 27 and Tatum 21. Boston led by as many as 23.",
+ "three": [
+  [
+   "George: 27 points on 11-of-18 shooting",
+   "5 of 10 from three, with 2 steals."
+  ],
+  [
+   "Down 14 early, then won by 20",
+   "George and Tatum combined for 48 of 117."
+  ],
+  [
+   "Won it inside and on the glass",
+   "Points in the paint 44–28; rebounds 48–36. Five Celtics scored in double figures."
+  ]
+ ],
+ "battle": [
+  [
+   "Points in the paint",
+   44,
+   28
+  ],
+  [
+   "Rebounds",
+   48,
+   36
+  ],
+  [
+   "Offensive rebounds",
+   20,
+   9
+  ],
+  [
+   "Steals",
+   12,
+   5
+  ]
+ ],
+ "battle_labels": [
+  "BOS",
+  "MIL"
+ ],
+ "top": [
+  [
+   "Paul George",
+   "BOS",
+   "11 of 18, 5 threes, 2 steals",
+   27
+  ],
+  [
+   "Jayson Tatum",
+   "BOS",
+   "5 threes, 6 assists",
+   21
+  ],
+  [
+   "Neemias Queta",
+   "BOS",
+   "9 rebounds, 4 assists",
+   13
+  ],
+  [
+   "Payton Pritchard",
+   "BOS",
+   "off the bench, 4 threes",
+   12
+  ]
+ ],
+ "linescore": {
+  "away": [
+   25,
+   33,
+   33,
+   26
+  ],
+  "home": [
+   27,
+   18,
+   29,
+   23
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-08-BOS-at-MIL.json"
+}

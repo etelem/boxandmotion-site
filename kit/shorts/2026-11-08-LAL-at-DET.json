@@ -1,0 +1,48 @@
+{
+  "out": "short-2026-11-08-LAL-DET.html",
+  "team": "LAL",
+  "home": false,
+  "number": "15",
+  "player": "Austin Reaves",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 0.9872,
+    "ape": 1.0162,
+    "mass": 0.9634
+  },
+  "build_note": "Listed 6-5, 197 lb, 6-6.25 wingspan (2021 combine)",
+  "kicker": "LAKERS 121 · PISTONS 116 · NOV 8",
+  "hook": [
+    "Reaves' dagger three",
+    "for 43 without Luka"
+  ],
+  "clock": "Q4 · 0:46",
+  "margins": [
+    "Lakers +5",
+    "Lakers +8"
+  ],
+  "stamp": "DAGGER",
+  "beat": [
+    "Lakers by 8, 46 seconds left.",
+    "Then he closed it out at the line."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Lakers",
+    "them": "Pistons",
+    "us_pts": 121,
+    "them_pts": 116
+  },
+  "star": {
+    "name": "Austin Reaves",
+    "big": 43,
+    "big_label": "points on 14-of-27 shooting",
+    "lines": [
+      "11 of 11 at the line",
+      "13 in the third quarter"
+    ]
+  },
+  "story": "Up 24 after one. Detroit got within 3 in the third; the Lakers held on, 121–116.",
+  "aria": "Original illustration of Austin Reaves' off-balance three with 46 seconds left that put the Lakers up eight at Detroit. Not traced from footage, not to scale."
+}

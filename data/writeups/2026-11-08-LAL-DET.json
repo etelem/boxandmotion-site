@@ -1,0 +1,86 @@
+{
+ "headline": "Reaves scores 43 as the Lakers hold off Detroit",
+ "dek": "Austin Reaves scored 43 with Luka Dončić out.",
+ "three": [
+  [
+   "Reaves: 43 points, a season high",
+   "14 of 27 from the floor, 11 of 11 at the line."
+  ],
+  [
+   "Up 24 after the first quarter, then held on by 5",
+   "Reaves alone scored 43 of the 121."
+  ],
+  [
+   "Won it early and in the paint",
+   "First-quarter points 38–14; points in the paint 58–46. L.A. made 26 of 33 free throws."
+  ]
+ ],
+ "battle": [
+  [
+   "First-quarter points",
+   38,
+   14
+  ],
+  [
+   "Points in the paint",
+   58,
+   46
+  ],
+  [
+   "Free throws made",
+   26,
+   13
+  ],
+  [
+   "Rebounds",
+   44,
+   43
+  ]
+ ],
+ "battle_labels": [
+  "LAL",
+  "DET"
+ ],
+ "top": [
+  [
+   "Austin Reaves",
+   "LAL",
+   "14 of 27, 11 of 11 FT, 13 in the 3rd",
+   43
+  ],
+  [
+   "Collin Sexton",
+   "LAL",
+   "off the bench, 7 of 8 FT",
+   17
+  ],
+  [
+   "Ziaire Williams",
+   "LAL",
+   "off the bench, 4 threes",
+   17
+  ],
+  [
+   "Walker Kessler",
+   "LAL",
+   "16 rebounds, 3 blocks",
+   12
+  ]
+ ],
+ "linescore": {
+  "away": [
+   38,
+   23,
+   27,
+   33
+  ],
+  "home": [
+   14,
+   34,
+   33,
+   35
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-08-LAL-at-DET.json"
+}
