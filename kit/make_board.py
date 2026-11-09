@@ -14,7 +14,8 @@ window.__A = {render(t), build(), total} for frame export."""
 import json, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(HERE)
 cfg = json.load(open(sys.argv[1])); out = sys.argv[2]
-team = json.load(open(os.path.join(ROOT, 'data', 'teams.json')))[cfg['team']]
+team = (json.load(open(os.path.join(ROOT, 'data', 'teams.json')))[cfg['team']] if cfg.get('team')
+        else cfg.get('colors', {'c1': '#FF5A1F', 'c2': '#16181d'}))   # explainers (no team) use the brand colors
 
 HTML = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -160,7 +161,7 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
       peeps[id] = pg;
     });
     const ball = S('circle', {r: F(0.62 * s), fill: '#FF5A1F', stroke: '#16181d', 'stroke-width': F(s * 0.1)}, top2);
-    const plus = T(top2, 0, 0, '+3', 'd', short ? 72 : 48, 'middle'); plus.style.fill = '#FF5A1F';
+    const plus = T(top2, 0, 0, (CFG.actions.find((a) => a.type === 'shot') || {}).plus || '+3', 'd', short ? 72 : 48, 'middle'); plus.style.fill = '#FF5A1F';
 
     // where is a player at time t (feet)
     const posAt = (id, t) => {
@@ -205,9 +206,8 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
       if (holder) { bp = [bp[0] + R * 0.85, bp[1] - R * 0.85]; }
       ball.setAttribute('cx', F(bp[0])); ball.setAttribute('cy', F(bp[1])); ball.setAttribute('r', F(br));
       // clock: frozen until the catch, runs to the release
-      const c = CFG.clock, cq = clamp((t - c.run) / (c.stop - c.run));
-      clock.textContent = fmtClock(lerp(c.start, c.end, cq));
-      score.textContent = t >= CFG.score.at ? CFG.score.after : CFG.score.before;
+      if (CFG.clock) { const c = CFG.clock, cq = clamp((t - c.run) / (c.stop - c.run)); clock.textContent = fmtClock(lerp(c.start, c.end, cq)); }
+      if (CFG.score) score.textContent = t >= CFG.score.at ? CFG.score.after : CFG.score.before;
       // active beat
       let k = 0; CFG.beats.forEach((b, i) => { if (t >= b.t) k = i; });
       beats.forEach((b, i) => { b.style.opacity = short ? (i === k ? 1 : 0) : (i === k ? 1 : i < k ? .45 : .22); });
