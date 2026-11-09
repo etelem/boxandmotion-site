@@ -104,7 +104,7 @@ def video_block(v):
             f'<p class="dim" style="margin:0">Drawn play of the game, game flow, the star line and how it was won.</p>'
             f'<a class="pill" style="align-self:flex-start" href="https://youtube.com/shorts/{v}" target="_blank" rel="noopener">▶ Watch on YouTube</a></div></section>')
 
-def page(path, title, body, active=None, desc="Every NBA game, explained in animation. Recaps, playoff odds and scouting reports.", band=""):
+def page(path, title, body, active=None, desc="Every NBA game, explained in motion. Recaps, playoff odds and scouting reports.", band=""):
     depth = path.count("/"); R = "../" * depth
     nav = [("Teams", "teams/index.html", "Teams"), ("Last Night", "last-night/index.html", "Last Night"), ("Deep Dives", "deep-dives/index.html", "Deep Dives"),
            ("Playoff Odds", "odds/index.html", "Playoff Odds"), ("Newsletter", "newsletter/index.html", "Newsletter")]
@@ -168,6 +168,19 @@ COACH_PAGES = {}   # team code -> (coach name, page path, latest board)
 for b in BOARDS:
     COACH_PAGES.setdefault(b["team"], (b["coach"], f'coaches/{b["coach_slug"]}/index.html', b))
 COACH_PAGES.setdefault("LAL", ("JJ Redick", "coaches/jj-redick/index.html", None))
+
+# signature moves (one animation per star, from kit/moves configs, listed under "moves" in data/deepdives.json)
+MOVES = []
+for m in DD.get("moves", []):
+    cfg = json.load(open(m["config"]))
+    MOVES.append(dict(m, steps=cfg.get("steps", []), number=cfg.get("number", "")))
+MOVES.sort(key=lambda m: m["published"], reverse=True)
+
+def move_card(R, m, big=False):
+    t = T[m["team"]]
+    return (f'<a href="{R}moves/{m["slug"]}/index.html" class="card pad" style="display:flex;flex-direction:column;gap:6px;{"min-height:260px;" if big else ""}justify-content:flex-end;'
+            f'background:radial-gradient(120% 140% at 100% 0%,{t["c1"]} 0%,{t["dark"]} 75%);color:#fff;border:0"><span class="tag gold">Signature move · {E(t["name"])}</span>'
+            f'<b class="d" style="font-size:{40 if big else 30}px">{E(m["player"])}: {E(m["title"])}</b><span style="opacity:.85">{E(m["dek"])}</span></a>')
 
 def anim_frame(R, file, label):
     """An animation page in an iframe that sizes itself (the page posts its height)."""
@@ -440,6 +453,7 @@ R = "../"
 body = f'''<div class="sec" style="gap:8px"><p class="k">New every week</p><h1 class="h1">Deep dives</h1><p class="dim" style="margin:0;font-size:18px;max-width:44em">Every week: a scouting report on the league's hottest player, and a coach's board when a team draws up a play worth seeing again. All in motion.</p></div>
 <section class="grid g2">
 {"".join(board_card(R, b, big=True) for b in BOARDS)}
+{"".join(move_card(R, m, big=True) for m in MOVES)}
 {"".join(player_card(R, P, big=True) for P in PLAYERS)}
 <a href="{R}players/luka-doncic/index.html" class="card pad" style="min-height:260px;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;background:radial-gradient(120% 140% at 100% 0%,#552583 0%,#1c0b32 75%);color:#fff;border:0"><span class="tag gold">Scouting report · Lakers</span><b class="d" style="font-size:40px">Luka Dončić</b><span style="opacity:.85">40.1 points a game, the hot and quiet nights, and the step-back</span></a>
 <a href="{R}coaches/jj-redick/index.html" class="card pad" style="min-height:260px;display:flex;flex-direction:column;justify-content:flex-end;gap:6px"><span class="tag">Coach's whiteboard · Lakers</span><b class="d" style="font-size:40px">JJ Redick</b><span class="dim">How the Lakers closed out the Utah comeback</span></a>
@@ -505,6 +519,20 @@ for P in PLAYERS:
 <div class="card" style="padding:6px 16px"><div class="scroll"><table class="otable" style="min-width:640px"><tr><th>Date</th><th>Game</th><th>Result</th><th class="num">Pts</th><th class="num">Reb</th><th class="num">Ast</th><th class="num">FG</th><th class="num">3PT</th></tr>{logrows}</table></div></div></section>
 <section class="card pad"><b>Sources</b><ul style="margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:4px">{srcs}</ul></section>'''
     page(f"players/{P['slug']}/index.html", f"{P['name']} scouting report · Box & Motion Hoops", body, active="Deep Dives", desc=P["lede"])
+
+# ---- signature moves ----
+for m in MOVES:
+    t = T[m["team"]]
+    steps = "".join(f'<li><b>{E(a)}.</b> {E(b2)}</li>' for a, b2 in m["steps"])
+    yt = f'<a class="pill cta-btn" style="background:#FF0033;border-color:#FF0033;color:#fff" href="https://youtube.com/shorts/{m["youtube"]}" target="_blank" rel="noopener">▶ Watch the Short</a>' if m.get("youtube") else ""
+    body = f'''<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}deep-dives/index.html">Deep dives</a><span>/</span><a href="{R}teams/{t['slug']}/index.html">{E(t['name'])}</a><span>/</span><span>{E(m['player'])}</span></nav>
+<section class="sec" style="gap:12px"><p class="k">Signature move · {E(t['city'])} {E(t['name'])}{' · No. ' + E(m['number']) if m['number'] else ''}</p>
+<h1 class="h1" style="font-size:clamp(56px,9vw,112px)">{E(m['title'])}</h1>
+<p style="margin:0;font-size:20px;max-width:34em">{E(m['dek'])}</p></section>
+<section class="sec">{anim_frame(R, m['anim'], m['player'] + ': ' + m['title'])}
+<ol style="margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px;max-width:46em">{steps}</ol>
+<div class="row" style="gap:8px">{yt}<a class="pill" href="{R}teams/{t['slug']}/index.html">{E(t['name'])} page →</a></div></section>'''
+    page(f"moves/{m['slug']}/index.html", f"{m['player']}: {m['title']} · Box & Motion Hoops", body, active="Deep Dives", desc=m["dek"])
 
 # ---- coach: Redick ----
 body = f'''<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}deep-dives/index.html">Deep dives</a><span>/</span><a href="{R}teams/lakers/index.html">Lakers</a><span>/</span><span>JJ Redick</span></nav>
