@@ -291,7 +291,111 @@ def crunch_time(sec):
     tr.buses['music'] = reverb(delay(tr.buses['music'], tr.step * 3, 0.3, 0.18), 0.2)
     return master(tr, duck=0.4, gains=(0.85, 0.55, 2.2, 0.7))
 
-STYLES = {'night-game': night_game, 'fast-break': fast_break, 'film-room': film_room, 'crunch-time': crunch_time}
+def _vinyl(tr, sec, amount=25, hiss=0.012):
+    crackle = np.zeros_like(tr.buses['fx']); idx = rng.integers(0, len(crackle), int(sec * amount))
+    crackle[idx] = rng.uniform(-0.25, 0.25, len(idx)); tr.buses['fx'] += lp(crackle, 5000)
+    tr.buses['fx'] += lp(noise(len(tr.buses['fx'])), 3000) * hiss
+
+def brush(level=1.0):  # brushed snare: soft swish
+    n = int(SR * 0.22)
+    return bp(noise(n), 1500, 7000) * env(n, 0.02, 0.16, curve=3) * 0.35 * level
+
+def upright(midi, sec):  # round, woody bass
+    n = int(SR * sec); f = hz(midi)
+    x = sine(f, n) + 0.35 * sine(2 * f, n) + 0.12 * sine(3 * f, n)
+    return lp(x, 900) * env(n, 0.008, sec * 0.8, sustain=0.1, curve=2.5) * 0.55
+
+def late_show(sec):
+    """'Late Show': slower lo-fi jazz, 78 BPM, F minor 9ths on electric piano, upright bass, brushes. Film Room's quieter cousin."""
+    tr = Track(sec, 78); K = kick(0.5, 0.3, 110, 46)
+    prog = [(41, [53, 56, 60, 63, 67]), (46, [58, 61, 65, 68, 72]), (39, [51, 55, 58, 62, 65]), (44, [56, 60, 63, 67, 70])]  # Fm9 Bbm9 Eb9-ish Abmaj9
+    sw = lambda st: st + (0.38 if st % 2 else 0)
+    nb = int(sec / tr.bar) + 1
+    for bar in range(nb):
+        root, ch = prog[bar % 4]; t0 = tr.at(bar)
+        for st, sub in ((0, ch), (7, ch[1:4]), (12, ch[2:])):
+            for k, m in enumerate(sub): tr.put('music', t0 + (sw(st) + k * 0.08) * tr.step, keys(m, tr.step * 7, 1.0, 0.6), 0.4)
+        walk = [0, 7, 10, 12] if bar % 2 == 0 else [0, 3, 5, 7]
+        for i, iv in enumerate(walk): tr.put('bass', t0 + i * 4 * tr.step, upright(root - 12 + iv, tr.step * 3.6), 0.9)
+        if bar == 0: continue
+        for st in (0, 10): tr.put('drums', t0 + sw(st) * tr.step, K, 0.8)
+        for st in (4, 12): tr.put('drums', t0 + st * tr.step, brush(), 1.0)
+        for st in range(0, 16, 2): tr.put('drums', t0 + sw(st) * tr.step, hat(level=0.5), 0.8)
+        if bar % 4 == 2:
+            for st, m in ((0, ch[4] + 12), (3, ch[3] + 12), (6, ch[2] + 12), (10, ch[3] + 12)):
+                tr.put('music', t0 + sw(st) * tr.step, keys(m, 0.9, 3.0, 0.9), 0.35)
+    _vinyl(tr, sec, 20, 0.01)
+    tr.buses['music'] = lp(reverb(tr.buses['music'], 0.28, 1.2), 5000)
+    return master(tr, duck=0.1, gains=(0.8, 0.6, 2.2, 0.7))
+
+def shootaround(sec):
+    """'Shootaround': sunny lo-fi, 90 BPM, G major 7ths, plucked guitar melody over soft swung drums."""
+    tr = Track(sec, 90); K, S, H = kick(0.6, 0.28, 120, 50), snare(210, 0.6, 0.15), hat()
+    prog = [(43, [55, 59, 62, 66]), (40, [52, 55, 59, 62]), (36, [48, 52, 55, 59]), (38, [50, 54, 57, 60])]  # Gmaj7 Em7 Cmaj7 D7
+    mel = [[(0, 74), (3, 71), (6, 74), (8, 78), (11, 76)], [(0, 71), (3, 67), (6, 71), (10, 74)],
+           [(0, 72), (3, 71), (6, 67), (8, 64), (11, 67)], [(0, 66), (3, 69), (6, 72), (10, 69), (14, 66)]]
+    sw = lambda st: st + (0.33 if st % 2 else 0)
+    nb = int(sec / tr.bar) + 1
+    for bar in range(nb):
+        root, ch = prog[bar % 4]; t0 = tr.at(bar)
+        for st in (0, 6, 10):
+            for k, m in enumerate(ch): tr.put('music', t0 + (sw(st) + k * 0.05) * tr.step, keys(m + 12, tr.step * 4, 1.0, 0.5), 0.3)
+        for st, iv, ln in ((0, 0, 6), (6, 7, 2), (10, 12, 3), (14, 7, 2)):
+            tr.put('bass', t0 + sw(st) * tr.step, bass_pluck(root - 12 + iv, ln * tr.step, 420), 0.85)
+        if bar == 0: continue
+        for st in ([0, 7, 10] if bar % 2 == 0 else [0, 10, 11]): tr.put('drums', t0 + sw(st) * tr.step, K, 0.9)
+        for st in (4, 12): tr.put('drums', t0 + st * tr.step, S, 0.6)
+        for st in range(16): tr.put('drums', t0 + sw(st) * tr.step, H, 0.6 if st % 2 else 0.35)
+        if bar >= 2:
+            for st, m in mel[bar % 4]: tr.put('music', t0 + sw(st) * tr.step, pluck(m, 0.9, 3500), 0.75)
+    _vinyl(tr, sec, 18, 0.008)
+    tr.buses['music'] = delay(reverb(tr.buses['music'], 0.2), tr.step * 3, 0.25, 0.15)
+    return master(tr, duck=0.15, gains=(0.85, 0.55, 2.4, 0.7))
+
+def back_court(sec):
+    """'Back Court': punchier jazzy boom-bap, 94 BPM, C minor, hard swung drums, muted horn stabs and a walking bass."""
+    tr = Track(sec, 94); K, S, H = kick(1.0, 0.3, 140, 46), snare(190, 1.1, 0.2), hat()
+    prog = [(48, [60, 63, 67, 70]), (53, [65, 68, 72, 75]), (44, [56, 60, 63, 67]), (43, [55, 59, 62, 65])]  # Cm7 Fm7 Abmaj7 G7
+    sw = lambda st: st + (0.3 if st % 2 else 0)
+    nb = int(sec / tr.bar) + 1
+    for bar in range(nb):
+        root, ch = prog[bar % 4]; t0 = tr.at(bar)
+        tr.put('music', t0, pad(ch, tr.bar, 1100, 10), 0.35)
+        for i, iv in enumerate([0, 3, 7, 10] if bar % 2 == 0 else [12, 10, 7, 5]):
+            tr.put('bass', t0 + i * 4 * tr.step, upright(root - 12 + iv, tr.step * 3.4), 1.0)
+        if bar == 0: tr.put('drums', t0, K); continue
+        for st in ([0, 3, 10] if bar % 2 == 0 else [0, 7, 8, 10]): tr.put('drums', t0 + sw(st) * tr.step, K)
+        for st in (4, 12): tr.put('drums', t0 + st * tr.step, S, 0.9)
+        if bar % 4 == 3: tr.put('drums', t0 + 15 * tr.step, S, 0.45)
+        for st in range(0, 16, 2): tr.put('drums', t0 + sw(st) * tr.step, H, 0.9)
+        for st in range(1, 16, 2): tr.put('drums', t0 + sw(st) * tr.step, H, 0.4)
+        if bar >= 2:
+            for st in ((2, 6) if bar % 2 == 0 else (2, 11)):
+                tr.put('music', t0 + sw(st) * tr.step, brass([m + 12 for m in ch[:3]], tr.step * 1.2, 1500), 0.8)
+    _vinyl(tr, sec, 22, 0.009)
+    tr.buses['music'] = lp(reverb(tr.buses['music'], 0.18), 6000)
+    return master(tr, duck=0.25, gains=(0.8, 0.45, 4.5, 0.7))
+
+def chalk_talk(sec):
+    """'Chalk Talk': calm and spacious, 84 BPM, A minor piano-like bells over a soft kick and rim. Built for explainers: room for the eye."""
+    tr = Track(sec, 84); K = kick(0.45, 0.32, 105, 46)
+    prog = [(45, [57, 60, 64, 67]), (41, [53, 57, 60, 64]), (48, [60, 64, 67, 71]), (43, [55, 59, 62, 65])]  # Am7 Fmaj7 Cmaj7 G7
+    nb = int(sec / tr.bar) + 1
+    for bar in range(nb):
+        root, ch = prog[bar % 4]; t0 = tr.at(bar)
+        tr.put('music', t0, pad(ch, tr.bar, 900, 6), 0.55)
+        for i, m in enumerate([ch[0] + 12, ch[2] + 12, ch[3] + 12, ch[1] + 24, ch[3] + 12, ch[2] + 12]):
+            tr.put('music', t0 + [0, 3, 6, 8, 11, 14][i] * tr.step, keys(m, 1.4, 2.0, 0.5), 0.32)
+        tr.put('bass', t0, upright(root - 12, tr.step * 7), 0.8); tr.put('bass', t0 + 8 * tr.step, upright(root - 12 + 7, tr.step * 7), 0.6)
+        if bar == 0: continue
+        tr.put('drums', t0, K, 0.8); tr.put('drums', t0 + 10 * tr.step, K, 0.5)
+        for st in (4, 12): tr.put('drums', t0 + st * tr.step, rim(), 0.55)
+        for st in range(0, 16, 4): tr.put('drums', t0 + (st + 2) * tr.step, shaker(), 0.7)
+    tr.buses['music'] = reverb(tr.buses['music'], 0.35, 1.4)
+    return master(tr, duck=0.08, gains=(0.85, 0.6, 2.0, 0.7))
+
+STYLES = {'night-game': night_game, 'fast-break': fast_break, 'film-room': film_room, 'crunch-time': crunch_time,
+          'late-show': late_show, 'shootaround': shootaround, 'back-court': back_court, 'chalk-talk': chalk_talk}
 
 if __name__ == '__main__':
     style, out = sys.argv[1], sys.argv[2]
