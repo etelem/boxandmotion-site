@@ -1,0 +1,132 @@
+{
+  "D": "  const D = {\n    date: 'Sun, Nov 8, 2026',\n    us: 121, them: 116, record: '9–2', usName: 'Lakers', themName: 'Pistons',\n    quarters: [[38, 14], [23, 34], [27, 33], [33, 35]],\n    leadUs: 26, leadThem: 0,\n    star: {name: 'Austin Reaves', stats: [['Points', 43, 50], ['Free throws made of 11', 11, 11], ['Third-quarter points', 13, 20]]},\n    scorers: [\n      {name: 'Austin Reaves', pts: 43, note: '14 of 27 · 11 of 11 FT · 13 in the 3rd'},\n      {name: 'Collin Sexton', pts: 17, note: 'off the bench · 7 of 8 FT'},\n      {name: 'Ziaire Williams', pts: 17, note: 'off the bench · 4 threes'},\n      {name: 'Walker Kessler', pts: 12, note: '16 rebounds · 3 blocks'},\n      {name: 'Quentin Grimes', pts: 12, note: '2 threes · 4 assists'},\n    ],\n    edges: [\n      {label: 'First-quarter points', us: 38, them: 14},\n      {label: 'Points in the paint', us: 58, them: 46},\n      {label: 'Free throws made', us: 26, them: 13},\n      {label: 'Rebounds', us: 44, them: 43},\n    ],\n    gaps: [\n      {label: 'Threes made', us: 11, them: 19},\n      {label: 'Bench points', us: 45, them: 67},\n    ],\n    next: {opp: 'at Hawks', when: 'Mon, Nov 9, 7:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Austin Reaves' off-balance three with 46 seconds left that put the Lakers up eight, 112–104. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "The dagger",
+    "subP": "Reaves from three, 46 seconds left",
+    "subL": "Reaves’ off-balance three with 46 seconds left",
+    "m0": "Lakers +5",
+    "m1": "Lakers +8",
+    "num": "15",
+    "cap1": "Reaves had the dagger. Lakers by 8.",
+    "cap2": "112–104 with 46 seconds left.",
+    "clock": [
+      54,
+      46
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Lakers at Pistons Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Lakers 121, Pistons 116 · Nov 8, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Lakers at', 'Pistons'] : ['Lakers at Pistons']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Reaves scored 43', 'with Luka out.'] : ['Austin Reaves scored 43 with Luka Dončić out.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Lakers improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Fifth straight win'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Up 24 after one,', 'held on by 5'] : ['Up 24 after the first quarter, then held on by 5']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Lakers ${D.leadUs}. Detroit never led."
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Lakers’ margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Reaves: 43,', 'a season high'] : ['Reaves: 43 points, a season high']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['14 of 27 shooting,', '11 of 11 at the line.'] : ['14 of 27 from the floor, 11 of 11 at the line.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Reaves alone:', '43 of the 121'] : ['Reaves alone scored 43 of the 121']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 50;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it early', 'and in the paint'] : ['Won it early and in the paint']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Lakers in gold, Pistons in gray. L.A.', 'made 26 of 33 free throws.'] : ['Lakers in gold, Pistons in gray. L.A. made 26 of 33 free throws.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'First in the West'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Hawks’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '7–4';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['The Lakers had lost four straight', 'to Detroit before this one.'] : ['The Lakers had lost four straight to Detroit before this one.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Lakers 121 · Pistons 116 · Nov 8'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'The dagger'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Reaves'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 70;"
+    ]
+  ],
+  "team": "LAL",
+  "aria": "Animated recap of the Lakers' 121 to 116 road win at Detroit: Austin Reaves' off-balance three with 46 seconds left, quarter-by-quarter scoring, his 43 points, the top scorers, how the Lakers won, and the next game at Atlanta.",
+  "notes": [
+    "Box score from the Lakers' 121–116 win over the Detroit Pistons in Detroit on Nov 8, 2026, from the Covers.com box score, with game details from the AP (via Yahoo Sports), The Sporting Tribune, theScore, USA Today (via Yahoo Sports), IBTimes Australia and Lakers Daily. All 121 Lakers points and all 116 Pistons points are accounted for in the box score, and the quarter scores add up to both totals. The 26-point lead (40–14 early in the second quarter) is from the AP and The Sporting Tribune; Detroit never led (IBTimes, and Covers lists its largest lead as 0). Bench points (45–67) are summed from the box score and match IBTimes. Luka Dončić sat out with lower-back tightness (AP). The Hawks' record and the Lakers' standing are from the site's standings.",
+    "The play of the game is an original illustration of Austin Reaves' off-balance three with 46 seconds left (the AP's description), which made it 112–104 (Lakers Daily) after the Lakers had led 109–104 (IBTimes). It came after Walker Kessler's three-point play had made it 107–99 with 2:15 left (AP). The recaps call the shot off-balance but don't describe how he got it, so it is drawn as a plain pull-up. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Los Angeles Lakers or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Reaves’ listed 6-foot-5 and 197 pounds (Basketball-Reference), with arms scaled to his 6-foot-6¼ wingspan at the 2021 draft combine (Hoopsmatic), in the Lakers' road kit. His No. 15 is from team merchandise listings. It is an original silhouette with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "player": "Austin Reaves",
+    "home": false,
+    "tall": 0.9872,
+    "ape": 1.0162,
+    "mass": 0.9634,
+    "label": "Austin Reaves, listed 6-5, 197 lb, 6-6.25 wingspan (2021 combine)"
+  }
+}

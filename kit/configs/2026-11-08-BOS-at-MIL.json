@@ -1,0 +1,136 @@
+{
+  "D": "  const D = {\n    date: 'Sun, Nov 8, 2026',\n    us: 117, them: 97, record: '8–2', usName: 'Celtics', themName: 'Bucks',\n    quarters: [[25, 27], [33, 18], [33, 29], [26, 23]],\n    leadUs: 23, leadThem: 14,\n    star: {name: 'Paul George', stats: [['Points', 27, 35], ['Field goals made of 18', 11, 18], ['Threes made of 10', 5, 10]]},\n    scorers: [\n      {name: 'Paul George', pts: 27, note: '11 of 18 · 5 threes · 2 steals'},\n      {name: 'Jayson Tatum', pts: 21, note: '5 threes · 6 assists'},\n      {name: 'Neemias Queta', pts: 13, note: '9 rebounds · 4 assists'},\n      {name: 'Payton Pritchard', pts: 12, note: 'off the bench · 4 threes'},\n      {name: 'Mitchell Robinson', pts: 12, note: 'off the bench · 6 of 6 · 4 steals'},\n    ],\n    edges: [\n      {label: 'Points in the paint', us: 44, them: 28},\n      {label: 'Rebounds', us: 48, them: 36},\n      {label: 'Offensive rebounds', us: 20, them: 9},\n      {label: 'Steals', us: 12, them: 5},\n    ],\n    gaps: [\n      {label: 'Free throws made', us: 9, them: 12},\n    ],\n    next: {opp: 'at 76ers', when: 'Tue, Nov 10, 8:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Paul George's three with 11:21 left in the first half that turned a 27–25 deficit into a 28–27 lead Boston never gave up. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "The go-ahead three",
+    "subP": "George from three, 11:21 left in the half",
+    "subL": "George’s three with 11:21 left in the first half",
+    "m0": "Bucks +2",
+    "m1": "Celtics +1",
+    "num": "13",
+    "cap1": "George put Boston ahead for good.",
+    "cap2": "28–27, and the Celtics never trailed again.",
+    "clock": [
+      689,
+      681
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Celtics at Bucks Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Celtics 117, Bucks 97 · Nov 8, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Celtics at', 'Bucks'] : ['Celtics at Bucks']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['George 27, Tatum 21.', 'Boston led by as many as 23.'] : ['George scored 27 and Tatum 21. Boston led by as many as 23.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Celtics improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Second win over Milwaukee in five nights'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Down 14 early,', 'won by 20'] : ['Down 14 early, then won by 20']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Celtics ${D.leadUs}, Bucks ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Celtics’ margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['George: 27,', 'on 11 of 18'] : ['George: 27 points on 11-of-18 shooting']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['5 of 10 from three,', 'with 2 steals.'] : ['5 of 10 from three, with 2 steals.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['George and Tatum:', '48 of the 117'] : ['George and Tatum combined for 48 of 117']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 35;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it inside', 'and on the glass'] : ['Won it inside and on the glass']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Celtics in green, Bucks in gray. Five', 'Celtics scored in double figures.'] : ['Celtics in green, Bucks in gray. Five Celtics scored in double figures.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'Second in the East'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'76ers’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '9–2';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Milwaukee is 1–9, its worst start', 'since 1993–94.'] : ['Milwaukee is 1–9, its worst start since 1993–94.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Celtics 117 · Bucks 97 · Nov 8'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'The go-ahead three'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'George'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 55;"
+    ],
+    [
+      "    T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "    T(board, bx + 24, by + 38, 'Q2', 'b m', 24);"
+    ]
+  ],
+  "team": "BOS",
+  "aria": "Animated recap of the Celtics' 117 to 97 road win at Milwaukee: Paul George's go-ahead three with 11:21 left in the first half, quarter-by-quarter scoring, his 27 points, the top scorers, how the Celtics won, and the next game at Philadelphia.",
+  "notes": [
+    "Box score from the Celtics' 117–97 win over the Milwaukee Bucks in Milwaukee on Nov 8, 2026, from the Covers.com box score, with game details from the AP (via WHDH), The Boston Globe and Yahoo Sports. All 117 Celtics points and all 97 Bucks points are accounted for in the box score, and the quarter scores add up to both totals (halftime 58–45, as the AP and the Globe report). Boston's 23-point lead (70–47 early in the third quarter) is from the Globe and Covers; Milwaukee's 14-point lead (20–6 in the first quarter) is from the AP and the Globe. Milwaukee's 1–9 start, its worst since 1993–94, is from the AP. The 76ers' record and the Celtics' standing are from the site's standings.",
+    "The play of the game is an original illustration of Paul George's three with 11:21 left in the first half (Yahoo Sports), which gave Boston a 28–27 lead in the opening minute of the second quarter (the AP); Boston did not trail again (Yahoo Sports). The recaps don't describe how he got the shot, so it is drawn as a plain pull-up. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Boston Celtics or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to George’s listed 6-foot-8 and 230 pounds (FOX Sports), with arms scaled to his 6-foot-11¼ wingspan at the 2010 draft combine (NBADraft.net), in the Celtics' road kit. His No. 13 is from NBC Sports Boston. His look isn't on file yet, so he is drawn as a team-colour silhouette. It is an original silhouette with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "player": "Paul George",
+    "home": false,
+    "tall": 1.0256,
+    "ape": 1.0406,
+    "mass": 1.0213,
+    "label": "Paul George, listed 6-8, 230 lb, 6-11.25 wingspan (2010 combine)"
+  }
+}
