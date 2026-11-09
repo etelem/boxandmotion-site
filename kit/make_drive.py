@@ -25,8 +25,9 @@ BODY = r"""
   POSES.load2 = {head: [20, -196], neck: [14, -172], hip: [-6, -100], lk: [24, -54], lf: [14, 0], rk: [-6, -54], rf: [-22, 0], le: [28, -150], lh: [44, -164], re: [24, -156], rh: [42, -170]};
   POSES.cock = {head: [8, -240], neck: [4, -216], hip: [-2, -136], lk: [24, -98], lf: [14, -50], rk: [-12, -82], rf: [-28, -30], le: [24, -200], lh: [40, -218], re: [-8, -258], rh: [-4, -298]};
   POSES.slam = {head: [16, -236], neck: [10, -212], hip: [0, -134], lk: [18, -86], lf: [10, -36], rk: [-10, -78], rf: [-24, -26], le: [34, -262], lh: [62, -290], re: [38, -264], rh: [66, -294]};
-  POSES.flexA = {head: [6, -228], neck: [3, -204], hip: [0, -124], lk: [14, -62], lf: [22, 0], rk: [-14, -62], rf: [-24, 0], le: [-46, -204], lh: [-30, -244], re: [50, -204], rh: [34, -244]};
-  POSES.flexB = {head: [10, -224], neck: [6, -198], hip: [0, -122], lk: [14, -60], lf: [22, 0], rk: [-14, -60], rf: [-24, 0], le: [-42, -222], lh: [-26, -258], re: [48, -192], rh: [36, -230]};
+  // the flex: shoulders rounded forward and down, fists together low in front of the waist; the roll pumps it deeper
+  POSES.flexA = {head: [26, -206], neck: [16, -186], hip: [-6, -120], lk: [20, -58], lf: [30, 0], rk: [-18, -58], rf: [-30, 0], le: [52, -152], lh: [24, -124], re: [60, -148], rh: [30, -120]};
+  POSES.flexB = {head: [32, -194], neck: [21, -176], hip: [-8, -114], lk: [24, -54], lf: [30, 0], rk: [-16, -54], rf: [-30, 0], le: [60, -140], lh: [28, -112], re: [66, -136], rh: [34, -108]};
   POSES.knocked = {head: [-34, -206], neck: [-28, -184], hip: [-6, -116], lk: [14, -60], lf: [20, 0], rk: [-22, -58], rf: [-38, 0], le: [-50, -176], lh: [-70, -190], re: [8, -176], rh: [26, -196]};
   POSES.seated = {head: [-24, -124], neck: [-18, -102], hip: [-10, -40], lk: [22, -46], lf: [44, 0], rk: [14, -40], rf: [36, -4], le: [-30, -72], lh: [-46, -26], re: [0, -80], rh: [-20, -30]};
 
@@ -87,7 +88,7 @@ BODY = r"""
     if (pt < tD) { const u = clamp((pt - tJ) / (tD - tJ)); const pose = u < .7 ? mixPose(POSES.load2, POSES.cock, ease(u / .7)) : mixPose(POSES.cock, POSES.slam, ease((u - .7) / .3)); return [pose, lerp(xC + 50, hoopX - 165, ease(u)), 120 * Math.sin(Math.PI / 2 * Math.min(1, u * 1.15))]; }
     if (pt < tL) { const d = clamp((pt - tD) / (tL - tD)); return [mixPose(POSES.slam, POSES.land, ease(d)), hoopX - 165 - 20 * d, 120 * (1 - d * d)]; }
     if (pt < tF) return [mixPose(POSES.land, POSES.flexA, prog(pt, tL, .3)), hoopX - 185 - 60 * prog(pt, tL, .35), 0];
-    const r = (pt - tF) * 5.2; const c = Math.sin(r) * .5 + .5; // the shoulder roll
+    const r = (pt - tF) * 6.0; const c = Math.sin(r) * .5 + .5; // the shoulder roll, pumping down
     return [mixPose(POSES.flexA, POSES.flexB, c), hoopX - 245, 4 * Math.sin(r * 2)];
   };
   const defAt = (pt) => {
