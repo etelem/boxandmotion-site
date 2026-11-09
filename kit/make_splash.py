@@ -159,8 +159,11 @@ BODY = r"""
   S('circle', {cx: 182, cy: 190, r: 34, fill: 'none', stroke: '#FF5A1F', 'stroke-width': 24}, lg);
   T(endc, W / 2, 800, 'BOX & MOTION HOOPS', 'd', 56, 'middle');
   const tg = T(endc, W / 2, 870, 'The box score, in motion.', 'b', 38, 'middle'); tg.style.fill = '#FF5A1F';
-  T(endc, W / 2, 1010, 'Signature moves at boxandmotion.com', 'b', 36, 'middle');
-  T(endc, W / 2, 1070, 'Follow for every game, in motion', 'b m', 32, 'middle');
+  // Shorts links aren't clickable, so the address is big enough to remember (kept above y 1200, clear of the Shorts overlay)
+  T(endc, W / 2, 990, 'Signature moves and every game', 'b m', 32, 'middle');
+  const url = T(endc, W / 2, 1068, 'boxandmotion.com', 'd', 64, 'middle'); url.style.fill = '#fff';
+  S('rect', {x: W / 2 - 150, y: 1090, width: 300, height: 8, rx: 4, fill: '#FF5A1F'}, endc);
+  T(endc, W / 2, 1170, 'Free Sunday newsletter: link on our channel', 'b m', 30, 'middle');
 
   const render = (t) => {
     let pt, slow = false;

@@ -69,7 +69,8 @@ Game key = `YYYY-MM-DD-AWAY-HOME`, e.g. `2026-11-06-POR-LAL` (team codes from da
    - Score on the board: `score_before` / `score_make` (/ `score_ft`) only if every number is verified; otherwise use
      `"margins": ["Lakers +4", "Lakers +6"]` from the written recap. Every line on every card is from the box score or a named source.
    - Build and check: `python3 kit/make_playshort.py kit/shorts/<key>.json`, then look at frames (`?short=1`, `window.__A.render(t)`)
-     around the release, the make, the beat, the final card and the end card: nothing clipped or overlapping.
+     around the release, the make, the beat, the final card and the end card: nothing clipped or overlapping. The end card
+     (from `make_playshort.py`, don't edit it per game) shows boxandmotion.com large and points to the newsletter link on the channel.
    - MP4: `bash kit/short_mp4.sh $PWD/src/anim/<out> kit/out/<key>-short.mp4 1`, copy it to `reels/<key>/short.mp4`,
      and SendUserFile it.
 
@@ -83,8 +84,10 @@ Game key = `YYYY-MM-DD-AWAY-HOME`, e.g. `2026-11-06-POR-LAL` (team codes from da
    `assets: [{"video": {"url": "https://boxandmotion.com/reels/<key>/short.mp4"}}]`, `text` = the description,
    `metadata.youtube = {"title": <title, max 100 chars>, "categoryId": "17", "privacy": "public", "madeForKids": false, "isAiGenerated": true}`.
    Title leads with the player and the play, then the result, e.g. "Steph's and-one to win it in OT | Warriors 126, Magic 119".
-   Description: one or two sentences, then "Box & Motion Hoops: animated NBA recaps. Unofficial fan content, not affiliated with the NBA
-   or any team." then "#NBA #Shorts" and the two team names as hashtags. Never mention Elan's personal name.
+   Description: one or two sentences, then "Every game: boxandmotion.com · Free Sunday newsletter: boxandmotion.beehiiv.com/subscribe"
+   (Shorts links aren't clickable, so these are for people to read and copy), then "Box & Motion Hoops: every NBA game, in motion.
+   Unofficial fan content, not affiliated with the NBA or any team." then "#NBA #Shorts" and the two team names as hashtags.
+   Never mention Elan's personal name.
    Then `get_post` until it shows `externalLink` (wait up to 2 minutes) or an `error`.
    - Success: write the video id (the `v=` value of externalLink) to `reels/<key>/youtube.txt`. The game page keeps the reel and adds the
      "Watch on YouTube" button.
