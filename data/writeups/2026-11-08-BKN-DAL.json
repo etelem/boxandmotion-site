@@ -1,0 +1,86 @@
+{
+ "headline": "Flagg's 12 assists power a 37-point rout",
+ "dek": "Flagg had 25 points and a career-high 12 assists.",
+ "three": [
+  [
+   "Flagg: 25 points and 12 assists",
+   "14 in the first quarter, 20 by halftime, 8 of 13 overall."
+  ],
+  [
+   "Up 20 at the half, and never trailed",
+   "Flagg and Irving combined for 46 of 130."
+  ],
+  [
+   "Won it inside and off the bench",
+   "Points in the paint 64–40; bench points 58–31. Dallas shot 57 percent from the floor."
+  ]
+ ],
+ "battle": [
+  [
+   "Points in the paint",
+   64,
+   40
+  ],
+  [
+   "Bench points",
+   58,
+   31
+  ],
+  [
+   "Rebounds",
+   46,
+   30
+  ],
+  [
+   "Assists",
+   31,
+   23
+  ]
+ ],
+ "battle_labels": [
+  "DAL",
+  "BKN"
+ ],
+ "top": [
+  [
+   "Cooper Flagg",
+   "DAL",
+   "12 assists, 8 of 13, 6 of 6 FT",
+   25
+  ],
+  [
+   "Kyrie Irving",
+   "DAL",
+   "9 of 15",
+   21
+  ],
+  [
+   "Daniel Gafford",
+   "DAL",
+   "7 of 8, 3 blocks, 19 minutes",
+   18
+  ],
+  [
+   "Santi Aldama",
+   "DAL",
+   "off the bench, 5 of 7",
+   12
+  ]
+ ],
+ "linescore": {
+  "away": [
+   26,
+   20,
+   25,
+   22
+  ],
+  "home": [
+   33,
+   33,
+   34,
+   30
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-08-BKN-at-DAL.json"
+}

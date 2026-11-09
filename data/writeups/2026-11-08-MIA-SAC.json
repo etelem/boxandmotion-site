@@ -1,0 +1,86 @@
+{
+ "headline": "Giannis seals it in Sacramento",
+ "dek": "Giannis had 29 points and 14 rebounds. Klay Thompson hit 7 threes.",
+ "three": [
+  [
+   "Giannis: 29 points and 14 rebounds",
+   "14 of 23 from the floor, with 2 steals and 2 blocks."
+  ],
+  [
+   "Up 9 at the half, and led the whole second half",
+   "Giannis and Klay combined for 52 of 114."
+  ],
+  [
+   "Won it from three: 18 makes to 11",
+   "Threes made 18–11; assists 29–24. Miami made just 8 of 18 free throws."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   18,
+   11
+  ],
+  [
+   "Assists",
+   29,
+   24
+  ],
+  [
+   "Fast-break points",
+   18,
+   8
+  ],
+  [
+   "Field goals made",
+   44,
+   38
+  ]
+ ],
+ "battle_labels": [
+  "MIA",
+  "SAC"
+ ],
+ "top": [
+  [
+   "Giannis Antetokounmpo",
+   "MIA",
+   "14 rebounds, 14 of 23",
+   29
+  ],
+  [
+   "Klay Thompson",
+   "MIA",
+   "7 threes, 7 of 13 from three",
+   23
+  ],
+  [
+   "Bam Adebayo",
+   "MIA",
+   "8 rebounds, 3 steals",
+   18
+  ],
+  [
+   "Davion Mitchell",
+   "MIA",
+   "11 assists, 40 minutes",
+   17
+  ]
+ ],
+ "linescore": {
+  "away": [
+   34,
+   34,
+   23,
+   23
+  ],
+  "home": [
+   30,
+   29,
+   22,
+   27
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-08-MIA-at-SAC.json"
+}

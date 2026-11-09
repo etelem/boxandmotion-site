@@ -1,0 +1,48 @@
+{
+  "out": "short-2026-11-08-MIA-SAC.html",
+  "team": "MIA",
+  "home": false,
+  "number": "7",
+  "player": "Giannis Antetokounmpo",
+  "play_type": "jumper",
+  "three": false,
+  "build": {
+    "tall": 1.0641,
+    "ape": 1.0482,
+    "mass": 1.0453
+  },
+  "build_note": "Listed 6-11, 250 lb (Basketball-Reference), reported 7-3 wingspan (Heating Up)",
+  "kicker": "HEAT 114 · KINGS 108 · NOV 8",
+  "hook": [
+    "Giannis seals it",
+    "with 59.1 left"
+  ],
+  "clock": "Q4 · 59.1",
+  "margins": [
+    "Heat +5",
+    "Heat +7"
+  ],
+  "stamp": "DAGGER",
+  "beat": [
+    "Heat by 7, 59.1 seconds left.",
+    "Miami led the whole second half."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Heat",
+    "them": "Kings",
+    "us_pts": 114,
+    "them_pts": 108
+  },
+  "star": {
+    "name": "Giannis Antetokounmpo",
+    "big": 29,
+    "big_label": "points on 14-of-23 shooting",
+    "lines": [
+      "14 rebounds",
+      "2 steals, 2 blocks"
+    ]
+  },
+  "story": "Up 9 at the half. Sacramento tied it at 95 with 6:12 left; Miami closed on a 19–13 run to win 114–108.",
+  "aria": "Original illustration of Giannis Antetokounmpo's jumper with 59.1 seconds left that put the Heat up seven at Sacramento. Not traced from footage, not to scale."
+}

@@ -1,0 +1,86 @@
+{
+ "headline": "Brown, Maxey and LeBron hold off Chicago",
+ "dek": "Brown scored 29, Maxey 27 and LeBron 22.",
+ "three": [
+  [
+   "Brown: 29 points, a game high",
+   "11 of 22 from the floor, with 7 rebounds."
+  ],
+  [
+   "Up 7 at the half, then held on late",
+   "Brown, Maxey and LeBron combined for 78 of 127."
+  ],
+  [
+   "Won it on the offensive glass",
+   "Offensive rebounds 20–9; rebounds 54–42. Chicago had 8 blocks to Philadelphia’s 2."
+  ]
+ ],
+ "battle": [
+  [
+   "Offensive rebounds",
+   20,
+   9
+  ],
+  [
+   "Rebounds",
+   54,
+   42
+  ],
+  [
+   "Threes made",
+   14,
+   10
+  ],
+  [
+   "Steals",
+   8,
+   6
+  ]
+ ],
+ "battle_labels": [
+  "PHI",
+  "CHI"
+ ],
+ "top": [
+  [
+   "Jaylen Brown",
+   "PHI",
+   "11 of 22, 7 rebounds, 4 assists",
+   29
+  ],
+  [
+   "Tyrese Maxey",
+   "PHI",
+   "9 of 16, 6 of 6 FT, 7 assists",
+   27
+  ],
+  [
+   "LeBron James",
+   "PHI",
+   "season high, 5 assists",
+   22
+  ],
+  [
+   "Joel Embiid",
+   "PHI",
+   "10 rebounds, 8 offensive",
+   18
+  ]
+ ],
+ "linescore": {
+  "away": [
+   34,
+   34,
+   31,
+   28
+  ],
+  "home": [
+   33,
+   28,
+   32,
+   28
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-08-PHI-at-CHI.json"
+}

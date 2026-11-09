@@ -1,0 +1,148 @@
+{
+  "team": "MIA",
+  "D": "  const D = {\n    date: 'Sun, Nov 8, 2026',\n    us: 114, them: 108, record: '4–6', usName: 'Heat', themName: 'Kings',\n    quarters: [[34, 30], [34, 29], [23, 22], [23, 27]],\n    leadUs: 16, leadThem: 5,\n    star: {name: 'Giannis Antetokounmpo', stats: [['Points', 29, 35], ['Rebounds', 14, 20], ['Shots made of 23', 14, 23]]},\n    scorers: [\n      {name: 'Giannis Antetokounmpo', pts: 29, note: '14 rebounds · 14 of 23'},\n      {name: 'Klay Thompson', pts: 23, note: '7 threes · 7 of 13 from three'},\n      {name: 'Bam Adebayo', pts: 18, note: '8 rebounds · 3 steals'},\n      {name: 'Davion Mitchell', pts: 17, note: '11 assists · 40 minutes'},\n      {name: 'Pelle Larsson', pts: 11, note: '3 of 4 from three'},\n    ],\n    edges: [\n      {label: 'Threes made', us: 18, them: 11},\n      {label: 'Assists', us: 29, them: 24},\n      {label: 'Fast-break points', us: 18, them: 8},\n      {label: 'Field goals made', us: 44, them: 38},\n    ],\n    gaps: [\n      {label: 'Free throws made', us: 8, them: 21},\n    ],\n    next: {opp: 'at Jazz', when: 'Tue, Nov 10, 9:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Giannis Antetokounmpo's jumper with 59.1 seconds left that put the Heat up 112-105. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "The sealer",
+    "subP": "Giannis’s jumper, 59.1 left",
+    "subL": "Giannis’s jumper with 59.1 seconds left",
+    "m0": "Heat +5",
+    "m1": "Heat +7",
+    "num": "7",
+    "cap1": "Giannis sealed it. Heat by 7.",
+    "cap2": "Miami led the whole second half.",
+    "clock": [
+      67,
+      59.1
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Heat at Kings Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Heat 114, Kings 108 · Nov 8, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Heat at', 'Kings'] : ['Heat at Kings']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Giannis: 29 and 14.', 'Klay hit 7 threes.'] : ['Giannis had 29 points and 14 rebounds. Klay Thompson hit 7 threes.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Heat improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Second win in three games'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Up 9 at the half,', 'led all second half'] : ['Up 9 at the half, and led the whole second half']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Heat ${D.leadUs}, Kings ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Heat’s margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Giannis: 29', 'and 14 boards'] : ['Giannis: 29 points and 14 rebounds']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['14 of 23 from the floor,', '2 steals, 2 blocks.'] : ['14 of 23 from the floor, with 2 steals and 2 blocks.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Giannis and Klay:', '52 of the 114'] : ['Giannis and Klay combined for 52 of 114']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 35;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it from three:', '18 makes to 11'] : ['Won it from three: 18 makes to 11']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Heat in orange, Kings in gray. Miami', 'made 8 of 18 free throws.'] : ['Heat in orange, Kings in gray. Miami made just 8 of 18 free throws.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'3–3 on the road'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Jazz’s record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '1–9';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Sacramento is 0–5 at home.', 'Domantas Sabonis sat out (left knee).'] : ['Sacramento is 0–5 at home. Domantas Sabonis sat out with left knee soreness.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Heat 114 · Kings 108 · Nov 8'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'The sealer'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Giannis'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 50;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 200 : 236) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 140 * k, shotX + 85 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+2', 'd w', 72, 'end');"
+    ],
+    [
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = clk < 60 ? clk.toFixed(1) : `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+    ]
+  ],
+  "aria": "Animated recap of the Heat's 114 to 108 road win at Sacramento: Giannis Antetokounmpo's jumper with 59.1 seconds left, quarter-by-quarter scoring, his 29 points and 14 rebounds, the top scorers, how the Heat won, and the next game at Utah.",
+  "notes": [
+    "Box score from the Heat's 114–108 win over the Sacramento Kings in Sacramento on Nov 8, 2026, from the Covers.com box score, with game details from the AP (via Yahoo Sports), Field Level Media, FortyEightMinutes, Roundtable, The Kings Herald, Yardbarker and the Land of Basketball daily summary. All 114 Heat points and all 108 Kings points are accounted for in the box score. The quarter scores are Covers' and match Field Level Media's running scores (34–30, 68–59 at the half, 91–81 after three). The 16-point Heat lead is from Covers, the AP and Yardbarker; Sacramento's 5-point lead is Covers'. Team totals (threes, assists, fast-break points, field goals, free throws) are Covers'. The Jazz's record is from the site's standings; the road record (3–3) is Yardbarker's; the next game, Sacramento's 0–5 home record and Sabonis's absence are from the AP and Field Level Media.",
+    "The play of the game is an original illustration of Giannis Antetokounmpo's jumper with 59.1 seconds left that put Miami up 112–105 (Field Level Media; FortyEightMinutes has the same score with under a minute left). He went 0 for 1 from three, so it was a two, from 110–105. Sacramento had tied it at 95 on De'Andre Hunter's free throws with 6:12 left before Miami closed on a 19–13 run (AP). The recaps don't describe how he got the shot, so it is drawn as a plain pull-up. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Miami Heat or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Antetokounmpo’s listed 6-foot-11 and 250 pounds (Basketball-Reference), with arms scaled to a reported 7-foot-3 wingspan (Heating Up), in the Heat's road red with No. 7 (Eurohoops). It is an original silhouette with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "player": "Giannis Antetokounmpo",
+    "home": false,
+    "tall": 1.0641,
+    "ape": 1.0482,
+    "mass": 1.0453,
+    "label": "Giannis Antetokounmpo, listed 6-11, 250 lb, reported 7-3 wingspan"
+  }
+}
