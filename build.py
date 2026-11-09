@@ -107,9 +107,10 @@ def video_block(v):
 def page(path, title, body, active=None, desc="Every NBA game, explained in motion. Recaps, playoff odds and scouting reports.", band=""):
     depth = path.count("/"); R = "../" * depth
     nav = [("Teams", "teams/index.html", "Teams"), ("Last Night", "last-night/index.html", "Last Night"), ("Deep Dives", "deep-dives/index.html", "Deep Dives"),
-           ("Playoff Odds", "odds/index.html", "Playoff Odds"), ("Newsletter", "newsletter/index.html", "Newsletter")]
-    # on phones Newsletter moves up beside My teams (as its own button), so the four tabs fit without scrolling
-    links = "".join(f'<a href="{R}{h}"{" aria-current=page" if n==active else ""}{" class=nl" if n=="Newsletter" else ""}>{lbl}</a>' for n, h, lbl in nav)
+           ("Playoff Odds", "odds/index.html", "Playoff Odds"), ("Newsletter", "newsletter/index.html", "Newsletter"), ("About", "about/index.html", "About")]
+    # on phones Newsletter and About move up to the row with My teams, so the four main tabs fit without scrolling
+    cls = {"Newsletter": " class=nl", "About": " class=ab"}
+    links = "".join(f'<a href="{R}{h}"{" aria-current=page" if n==active else ""}{cls.get(n, "")}>{lbl}</a>' for n, h, lbl in nav)
     html = f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{E(title)}</title><meta name="description" content="{E(desc)}">
@@ -122,7 +123,7 @@ def page(path, title, body, active=None, desc="Every NBA game, explained in moti
 <header class="glass"><nav aria-label="Main" class="w nav">
 <a class="brand" href="{R}index.html">{LOGO}<span class="d">Box &amp; Motion <span class="grad">Hoops</span></span></a>
 <div class="links">{links}</div>
-<a href="{R}newsletter/index.html" class="pill nl-pill">✉ Newsletter</a><a href="{R}teams/index.html" class="pill hot favcount">★ My teams</a>
+<a href="{R}about/index.html" class="ab-link"{" aria-current=page" if active=="About" else ""}>About</a><a href="{R}newsletter/index.html" class="pill nl-pill">✉ Newsletter</a><a href="{R}teams/index.html" class="pill hot favcount">★ My teams</a>
 </nav></header>
 {band}
 <main class="w">{body}</main>
@@ -590,10 +591,25 @@ body = f'''<section style="display:flex;flex-wrap:wrap;gap:32px;align-items:cent
 page("newsletter/index.html", "The Sunday Box newsletter · Box & Motion Hoops", body, active="Newsletter")
 
 # ---- about + 404 ----
-body = f'''<div class="sec" style="gap:12px;max-width:44em"><h1 class="h1">About</h1><p style="font-size:18px;margin:0">Box &amp; Motion explains every NBA game in animation: a recap for every game, nightly playoff odds, and scouting reports and coach whiteboards every week or two.</p>
-<p class="dim" style="margin:0">Box &amp; Motion is unofficial fan coverage and is not affiliated with the NBA or any team. Team names are used to identify teams. We link to official video uploads and never re-upload them. Scores and records come from a league stats feed; odds come from our own model.</p>
-<p style="margin:0">Contact: <a href="mailto:boxandmotionhoops@gmail.com">boxandmotionhoops@gmail.com</a></p></div>'''
-page("about/index.html", "About · Box & Motion Hoops", body)
+body = f'''<section class="sec" style="gap:14px;max-width:46em"><p class="k">About Box &amp; Motion</p>
+<h1 class="h1" style="font-size:clamp(48px,8vw,96px)">We want more out of our box scores.</h1>
+<p style="font-size:20px;margin:0">A box score tells you who scored. It doesn’t tell you how the game was won: the run that flipped it, the matchup a coach kept going back to, the play drawn up out of a timeout.</p></section>
+<section class="grid g2">
+<div class="card pad" style="display:flex;flex-direction:column;gap:8px"><p class="k">Who we are</p><b class="d" style="font-size:28px">Fans with a day job in data</b>
+<p style="margin:0">Our team has a background in analytics and AI enablement. We love basketball, and we don’t have time to watch every game anymore. We still want to know what actually happened.</p></div>
+<div class="card pad" style="display:flex;flex-direction:column;gap:8px"><p class="k">What we make</p><b class="d" style="font-size:28px">The story of the game, in motion</b>
+<p style="margin:0">Every game, told through the numbers and simple X’s and O’s: where it was won, who carried it, and the play that decided it, drawn so you can see it in about a minute.</p></div></section>
+<section class="sec" style="gap:10px"><h2 class="h2">What’s here</h2>
+<div class="grid g2">
+<a class="card pad" href="{R}last-night/index.html" style="display:flex;flex-direction:column;gap:4px;text-decoration:none"><b>Recaps for every game</b><span class="dim">Each night’s games, in motion, with the box score behind them.</span></a>
+<a class="card pad" href="{R}odds/index.html" style="display:flex;flex-direction:column;gap:4px;text-decoration:none"><b>Playoff odds</b><span class="dim">Our own model, updated every morning, with who moved this week.</span></a>
+<a class="card pad" href="{R}deep-dives/index.html" style="display:flex;flex-direction:column;gap:4px;text-decoration:none"><b>Deep dives</b><span class="dim">Scouting reports, coach’s boards and stars’ signature moves.</span></a>
+<a class="card pad" href="{R}newsletter/index.html" style="display:flex;flex-direction:column;gap:4px;text-decoration:none"><b>The Sunday Box</b><span class="dim">The week in one email, every Sunday morning. Free.</span></a></div></section>
+<section class="sec" style="gap:10px;max-width:46em"><h2 class="h2">How we make it</h2>
+<p style="margin:0">Scores and records come from league stats, and every number in a recap is checked against the box score or a named game story. The plays are original illustrations drawn from written accounts, not traced from footage and not to scale. We use AI tools to help draw and publish it all, and we skip anything we can’t verify rather than guess.</p>
+<p class="dim" style="margin:0">Box &amp; Motion is unofficial fan coverage and is not affiliated with the NBA or any team. Team names are used to identify teams. We link to official video uploads and never re-upload them.</p>
+<p style="margin:0">Contact: <a href="mailto:boxandmotionhoops@gmail.com">boxandmotionhoops@gmail.com</a></p></section>'''
+page("about/index.html", "About · Box & Motion Hoops", body, active="About", desc="We want more out of our box scores: every NBA game, told through the numbers and simple X’s and O’s, in motion.")
 page("404.html", "Not found · Box & Motion Hoops", '<div class="sec"><h1 class="h1">Air ball.</h1><p class="dim" style="font-size:18px;margin:0">That page doesn\'t exist. <a href="/">Back to the home page</a>.</p></div>')
 
 n = sum(len(fs) for _, _, fs in os.walk(OUT))
