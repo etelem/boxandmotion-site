@@ -89,3 +89,11 @@ window.addEventListener('message', function (e) {
   if (!e.data || typeof e.data.bmH !== 'number') return;
   document.querySelectorAll('iframe.anim').forEach(function (f) { if (f.contentWindow === e.source) f.style.height = e.data.bmH + 'px'; });
 });
+
+// phones: if the current tab is off the end of the scrolling tab row (About), bring it into view
+(function () {
+  var row = document.querySelector('.links'), cur = row && row.querySelector('a[aria-current]');
+  if (!cur || row.scrollWidth <= row.clientWidth) return;
+  var right = cur.offsetLeft + cur.offsetWidth - row.offsetLeft;
+  if (right > row.clientWidth) row.scrollLeft = right - row.clientWidth + 8;
+})();

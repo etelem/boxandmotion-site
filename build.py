@@ -108,8 +108,8 @@ def page(path, title, body, active=None, desc="Every NBA game, explained in moti
     depth = path.count("/"); R = "../" * depth
     nav = [("Teams", "teams/index.html", "Teams"), ("Last Night", "last-night/index.html", "Last Night"), ("Deep Dives", "deep-dives/index.html", "Deep Dives"),
            ("Playoff Odds", "odds/index.html", "Playoff Odds"), ("Newsletter", "newsletter/index.html", "Newsletter"), ("About", "about/index.html", "About")]
-    # on phones Newsletter and About move up to the row with My teams, so the four main tabs fit without scrolling
-    cls = {"Newsletter": " class=nl", "About": " class=ab"}
+    # on phones Newsletter moves up beside My teams (as its own button); About stays the last tab (the row scrolls if it must)
+    cls = {"Newsletter": " class=nl"}
     links = "".join(f'<a href="{R}{h}"{" aria-current=page" if n==active else ""}{cls.get(n, "")}>{lbl}</a>' for n, h, lbl in nav)
     html = f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -123,7 +123,7 @@ def page(path, title, body, active=None, desc="Every NBA game, explained in moti
 <header class="glass"><nav aria-label="Main" class="w nav">
 <a class="brand" href="{R}index.html">{LOGO}<span class="d">Box &amp; Motion <span class="grad">Hoops</span></span></a>
 <div class="links">{links}</div>
-<a href="{R}about/index.html" class="ab-link"{" aria-current=page" if active=="About" else ""}>About</a><a href="{R}newsletter/index.html" class="pill nl-pill">✉ Newsletter</a><a href="{R}teams/index.html" class="pill hot favcount">★ My teams</a>
+<a href="{R}newsletter/index.html" class="pill nl-pill">✉ Newsletter</a><a href="{R}teams/index.html" class="pill hot favcount">★ My teams</a>
 </nav></header>
 {band}
 <main class="w">{body}</main>

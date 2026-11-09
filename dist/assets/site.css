@@ -122,7 +122,3 @@ footer a{color:var(--dim)}
 .cal-g a:hover{background:rgba(255,90,31,.2)}
 .cal-g a.on{background:#FF5A1F;color:#fff}.cal-g a.on i{background:#fff}
 
-/* About: a tab on desktop; on phones it sits in the top row beside Newsletter and My teams */
-.ab-link{display:none;font-weight:600;font-size:15px;text-decoration:none;padding:6px 0}
-.ab-link[aria-current]{box-shadow:inset 0 -3px 0 var(--accent-ink)}
-@media (max-width:640px){.nav .brand{flex-basis:100%}.nav .ab-link{display:inline-flex}.links a.ab{display:none}}
