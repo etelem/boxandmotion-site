@@ -450,12 +450,12 @@ page("odds/index.html", "Playoff odds · Box & Motion Hoops", body, active="Play
 
 # ---- deep dives ----
 R = "../"
-# every deep dive, in the order it was published (oldest first; ties keep this order)
+# every deep dive, newest first (ties keep this order)
 DD_ITEMS = ([("2026-11-07", f'''<a href="{R}players/luka-doncic/index.html" class="card pad" style="min-height:260px;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;background:radial-gradient(120% 140% at 100% 0%,#552583 0%,#1c0b32 75%);color:#fff;border:0"><span class="tag gold">Scouting report · Lakers</span><b class="d" style="font-size:40px">Luka Dončić</b><span style="opacity:.85">40.1 points a game, the hot and quiet nights, and the step-back</span></a>'''), ("2026-11-07", f'''<a href="{R}coaches/jj-redick/index.html" class="card pad" style="min-height:260px;display:flex;flex-direction:column;justify-content:flex-end;gap:6px"><span class="tag">Coach's whiteboard · Lakers</span><b class="d" style="font-size:40px">JJ Redick</b><span class="dim">How the Lakers closed out the Utah comeback</span></a>''')]
             + [(b["published"], board_card(R, b, big=True)) for b in BOARDS]
             + [(m["published"], move_card(R, m, big=True)) for m in MOVES]
             + [(P["published"], player_card(R, P, big=True)) for P in PLAYERS])
-DD_CARDS = "\n".join(html for _, html in sorted(DD_ITEMS, key=lambda x: x[0]))
+DD_CARDS = "\n".join(html for _, html in sorted(DD_ITEMS, key=lambda x: x[0], reverse=True))
 body = f'''<div class="sec" style="gap:8px"><p class="k">New every week</p><h1 class="h1">Deep dives</h1><p class="dim" style="margin:0;font-size:18px;max-width:44em">Every week: a scouting report on the league's hottest player, and a coach's board when a team draws up a play worth seeing again. All in motion.</p></div>
 <section class="grid g2">{DD_CARDS}</section>'''
 page("deep-dives/index.html", "Deep dives · Box & Motion Hoops", body, active="Deep Dives")
