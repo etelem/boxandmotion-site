@@ -43,7 +43,8 @@ Game key = `YYYY-MM-DD-AWAY-HOME`, e.g. `2026-11-06-POR-LAL` (team codes from da
    **Board watch:** while reading the stories, look for a coaching whiteboard play: a play out of a timeout, an inbounds play or a
    late-game set that a coach drew up. It's a candidate only if at least two sources describe the actions (who screened, cut, passed,
    where the shot came from) and the clock and score are known (the Basketball-Reference play-by-play is a good check). Don't build
-   it: add one line to `kit/boards/CANDIDATES.md` (date, game, coach, clock, score, the actions, source links) and mention it in the report.
+   it: write `kit/boards/candidates/<key>.md` (one file per game, so the three runs never edit the same file) with the coach,
+   clock, score, the actions and the source links, and mention it in the report.
 3. **Config.** Copy the closest example in configs/: `2026-11-06-POR-at-LAL.json` (late jumper, pull-up), `2026-11-04-DAL-at-SAS.json`
    (free throw at the line), `2026-11-02-CHI-at-PHI.json`, `2026-11-02-MIA-at-LAL.json`. Rewrite `D`, `play`, `aria`, `notes`,
    `figure`, and only the RIGHT-hand side of each `subs` pair (never a left-hand side). Set `"team"` to the winner's code and DELETE

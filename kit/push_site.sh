@@ -3,7 +3,7 @@
 # Usage (from the repo root): bash kit/push_site.sh "Recap reels: 2026-11-07 (SAS-POR, DEN-IND)"
 set -e
 MSG="$1"
-git add -A reels data/writeups kit/shorts kit/boards/CANDIDATES.md src/anim
+git add -A reels data/writeups kit/shorts kit/boards/candidates src/anim
 git commit -qm "$MSG" || { echo "no new reels to commit"; exit 0; }
 for try in 1 2 3 4 5 6; do
   git pull -q --rebase origin main
