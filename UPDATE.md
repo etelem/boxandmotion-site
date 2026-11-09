@@ -52,6 +52,8 @@ Cloudflare redeploys the site automatically whenever `main` changes on GitHub.
    `Nightly update: games through <date>`.
 
 5. Check the live site a couple of minutes later (https://boxandmotion.com/last-night/) shows the new date.
+   WebFetch can serve an older copy of the page for a while, so a stale result is not a failure: say so in the report, and
+   send no alert for it. Only a failed push is a deploy problem worth a PushNotification.
 
 ## Fallback sources (when the feed is unavailable)
 Same `data/incoming.json`, same checks; only the sources change. Never ESPN.com or NBA.com.
@@ -60,6 +62,10 @@ Same `data/incoming.json`, same checks; only the sources change. Never ESPN.com 
 - **Final scores:** each score must match in **two** sources: the Covers.com box score (WebSearch with
   `allowed_domains: ["covers.com"]`, e.g. "covers.com Nuggets vs Pacers Game Overview Match Player Stats November 07, 2026")
   and one of: the Plain Text Sports game page, the AP or Field Level Media game story, or the CBS Sports gametracker.
+  If a game's Covers matchup page doesn't come up in search or won't open, the result on the winning team's Covers schedule
+  page (covers.com/sport/basketball/nba/teams/main/<team>, e.g. minnesota-timberwolves) counts as the Covers source.
+  Plain Text Sports pages can come back as an old snapshot (check the "loaded at" time on the page); if one is from before the
+  game, use the AP / Field Level Media story or the CBS Sports scoreboard as the second source instead.
   Add `"OT"` only if a source says overtime. Check the Covers line score adds up to the final. If a game isn't final yet
   or two sources don't agree, wait 15 minutes and try once more; if it's still unconfirmed, stop and report it.
 - **Standings:** FOX Sports conference standings (`https://www.foxsports.com/nba/standings`): rank, wins and losses for
