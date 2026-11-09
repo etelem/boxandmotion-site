@@ -117,8 +117,8 @@ __FIGURE_REAL__
   const court = S('g', {class: 's-silver', 'stroke-width': 3, 'stroke-linecap': 'round', opacity: .9}, play);
   S('line', {x1: -20, x2: W + 20, y1: floor, y2: floor}, court);
   S('line', {x1: hoopX + 40 * k, x2: hoopX + 40 * k, y1: rimY - 120 * k, y2: floor}, court);
-  const laneX = hoopX - 345 * k; S('line', {x1: laneX, x2: laneX, y1: floor - 6, y2: floor + 16}, court);
-  T(play, laneX, floor + 40, 'lane', 'b m', 22, 'middle');
+  const laneX = C.three ? hoopX - 560 * k / 1.5 : hoopX - 345 * k; S('line', {x1: laneX, x2: laneX, y1: floor - 6, y2: floor + 16}, court);
+  T(play, laneX, floor + 40, C.three ? '3-pt line' : 'lane', 'b m', 22, 'middle');
   S('rect', {x: hoopX + 26 * k, y: rimY - 150 * k, width: 12 * k, height: 170 * k, rx: 3, fill: 'var(--silver)'}, play);
   S('line', {x1: hoopX - rimR, x2: hoopX + 26 * k, y1: rimY, y2: rimY, class: 's-red', 'stroke-width': 6, 'stroke-linecap': 'round'}, play);
   const net = S('g', {class: 's-silver', 'stroke-width': 2, opacity: .8}, play);

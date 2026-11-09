@@ -1,0 +1,86 @@
+{
+ "headline": "Garland's 24 and 10 end the Clippers' seven-game skid",
+ "dek": "Garland had 24 points and 10 assists. A seven-game skid ends.",
+ "three": [
+  [
+   "Garland: 24 points and 10 assists",
+   "6 of 11 from the floor, 9 of 12 at the line, 14 by halftime."
+  ],
+  [
+   "Up 7 at the half, won the fourth 37–28",
+   "Garland and Lopez combined for 44 of 139."
+  ],
+  [
+   "Won it inside and from three",
+   "Points in the paint 60–52; assists 34–23. L.A. had a season-low 11 turnovers."
+  ]
+ ],
+ "battle": [
+  [
+   "Points in the paint",
+   60,
+   52
+  ],
+  [
+   "Assists",
+   34,
+   23
+  ],
+  [
+   "Threes made",
+   16,
+   10
+  ],
+  [
+   "Fast-break points",
+   11,
+   15
+  ]
+ ],
+ "battle_labels": [
+  "LAC",
+  "NOP"
+ ],
+ "top": [
+  [
+   "Darius Garland",
+   "LAC",
+   "10 assists, 6 of 11, 3 threes",
+   24
+  ],
+  [
+   "Brook Lopez",
+   "LAC",
+   "8 of 11, 7 rebounds",
+   20
+  ],
+  [
+   "Gradey Dick",
+   "LAC",
+   "season high, 6 of 7",
+   15
+  ],
+  [
+   "Keaton Wagler",
+   "LAC",
+   "rookie, 3 of 4 from three",
+   15
+  ]
+ ],
+ "linescore": {
+  "away": [
+   28,
+   32,
+   35,
+   28
+  ],
+  "home": [
+   28,
+   39,
+   35,
+   37
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-08-NOP-at-LAC.json"
+}

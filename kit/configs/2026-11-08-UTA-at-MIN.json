@@ -1,0 +1,150 @@
+{
+  "D": "  const D = {\n    date: 'Sun, Nov 8, 2026',\n    us: 115, them: 100, record: '8–3', usName: 'Wolves', themName: 'Jazz',\n    quarters: [[28, 25], [29, 26], [33, 27], [25, 22]],\n    leadUs: 19, leadThem: 4,\n    star: {name: 'Ayo Dosunmu', stats: [['Points', 26, 30], ['Threes made of 5', 4, 5], ['Free throws made of 8', 8, 8]]},\n    scorers: [\n      {name: 'Ayo Dosunmu', pts: 26, note: '7 of 13 · 4 of 5 from three · 8 of 8 FT'},\n      {name: 'LaMelo Ball', pts: 24, note: '10 of 20 · 5 assists'},\n      {name: 'Jaden McDaniels', pts: 16, note: '5 of 9 · 6 rebounds'},\n      {name: 'Bones Hyland', pts: 14, note: 'off the bench'},\n      {name: 'Rudy Gobert', pts: 10, note: '15 rebounds'},\n    ],\n    edges: [\n      {label: 'Free throws made', us: 27, them: 19},\n      {label: 'Threes made', us: 12, them: 7},\n      {label: 'Field goal percentage', us: 49, them: 43, unit: '%'},\n    ],\n    gaps: [\n    ],\n    next: {opp: 'vs Mavericks', when: 'Thu, Nov 12, 8:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "LaMelo Ball's three-pointer with 6:45 left in the second quarter that made it 43–33, Minnesota's biggest lead of the first half. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Ball’s three",
+    "subP": "Ball from three, 6:45 left in the 2nd",
+    "subL": "LaMelo Ball from three with 6:45 left in the second",
+    "m0": "Wolves +7",
+    "m1": "Wolves +10",
+    "num": "1",
+    "cap1": "Ball’s three. Timberwolves by 10.",
+    "cap2": "Their biggest lead of the first half.",
+    "clock": [
+      413,
+      405
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Timberwolves vs Jazz Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Timberwolves 115, Jazz 100 · Nov 8, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Timberwolves vs.', 'Jazz'] : ['Timberwolves vs. Jazz']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Dosunmu 26, Ball 24.', 'Minnesota made 27 of 32 FTs.'] : ['Dosunmu scored 26 and Ball 24. Minnesota made 27 of 32 free throws.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Timberwolves improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Fourth straight win'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Up 6 at the half,', 'up 12 after three'] : ['Up 6 at the half, up 12 after three']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Timberwolves ${D.leadUs}"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Timberwolves’ margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Dosunmu: 26', 'on 13 shots'] : ['Dosunmu: 26 points on 13 shots']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['4 of 5 from three.', '8 of 8 at the line.'] : ['4 of 5 from three. 8 of 8 at the line.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Dosunmu and Ball:', '50 of the 115'] : ['Dosunmu and Ball combined for 50 of 115']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 30;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it at the line', 'and from three'] : ['Won it at the line and from three']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Timberwolves in blue, Jazz in gray. Utah', 'began the fourth 0 for 9.'] : ['Timberwolves in blue, Jazz in gray. Utah began the fourth 0 for 9 from the floor.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'5–2 without Anthony Edwards'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Mavericks’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '6–4';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Thursday starts an', 'eight-game homestand.'] : ['Thursday starts an eight-game homestand.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Timberwolves 115 · Jazz 100 · Nov 8'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Ball’s three'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Dosunmu'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 55;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - 375 * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+3', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "T(board, bx + 24, by + 38, 'Q2', 'b m', 24);"
+    ]
+  ],
+  "team": "MIN",
+  "aria": "Animated recap of the Timberwolves' 115 to 100 home win over Utah: LaMelo Ball's three with 6:45 left in the second quarter, quarter-by-quarter scoring, Ayo Dosunmu's 26 points, the top scorers, how Minnesota won, and the next game against Dallas.",
+  "notes": [
+    "Final score and quarter scores from the Field Level Media game story (via Yardbarker and The Sports Leader): Minnesota led 28–25 after one, 57–51 at the half and 90–78 after three, and won the fourth 25–22. The halftime and end-of-third scores also match Yahoo Sports' Jazz recap. The AP story (via ABC News and KFGO) gives 90–72 after three, which does not add up to the 115–100 final with the fourth-quarter score, so the 90–78 figure is used. Minnesota's biggest lead, 19, is from the AP. The sports data feed wasn't available for this recap; records are from the site's standings after Sunday's games (Minnesota 8–3, Dallas 6–4).",
+    "Points: Dosunmu 26 (7 of 13, 4 of 5 from three, 8 of 8 free throws per the AP and RotoWire via CBS Sports), Ball 24 (10 of 20) and Gobert 10 with 15 rebounds (AP and Field Level Media), McDaniels 16 on 5 of 9 with 6 rebounds and Hyland 14 (AP and SB Nation's Canis Hoopus via Yahoo Sports), Lyles 9, Shannon Jr. 5 and Kuminga 4 (Canis Hoopus), Beringer 4 (Field Level Media) and Clark 3 (Canis Hoopus' bench recap via Yahoo Sports). No full box score could be read, so the player points were filled in from these written recaps; they add up to the team's 115. Team shooting (38 of 77, 12 of 32 from three; Utah 37 of 87, 7 of 24) is from Field Level Media and Minnesota's 27 of 32 free throws from the AP. Utah's 19 made free throws follow from its 100 points, 37 field goals and 7 threes. Utah's own biggest lead isn't confirmed by a written source, so only Minnesota's is shown.",
+    "The play of the game is an original illustration of LaMelo Ball's three-pointer with 6:45 left in the second quarter that made it 43–33 (Field Level Media). Canis Hoopus notes Minnesota led by as many as 10 in the first half. The recaps don't describe the move, so it is drawn as the template's plain pull-up. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "Next: Minnesota hosts Dallas on Thursday at 8:00 PM ET (Plain Text Sports schedule; Canis Hoopus lists 7:00 PM Central), the first game of an eight-game homestand (AP). Minnesota is 5–2 without Anthony Edwards, per the AP.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Minnesota Timberwolves or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Ball’s listed 6-foot-7 and 180 pounds (Basketball-Reference), wearing No. 1 (Wikipedia). The only reported wingspan, from NBADraft.net's pre-draft workouts, equals his 6-foot-6 measured height, so his arms are drawn at a 1.0 ratio. It is an original silhouette with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "player": "LaMelo Ball",
+    "home": true,
+    "tall": 1.0128,
+    "ape": 1.0,
+    "mass": 0.9092,
+    "label": "LaMelo Ball, listed 6-7, 180 lb, reported wingspan equal to his height"
+  }
+}

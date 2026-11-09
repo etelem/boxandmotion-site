@@ -1,0 +1,76 @@
+{
+ "headline": "Dosunmu and Ball carry Minnesota to a fourth straight win",
+ "dek": "Dosunmu scored 26 and Ball 24. Minnesota made 27 of 32 free throws.",
+ "three": [
+  [
+   "Dosunmu: 26 points on 13 shots",
+   "4 of 5 from three. 8 of 8 at the line."
+  ],
+  [
+   "Up 6 at the half, up 12 after three",
+   "Dosunmu and Ball combined for 50 of 115."
+  ],
+  [
+   "Won it at the line and from three",
+   "Free throws made 27–19; threes made 12–7. Utah began the fourth 0 for 9 from the floor."
+  ]
+ ],
+ "battle": [
+  [
+   "Free throws made",
+   27,
+   19
+  ],
+  [
+   "Threes made",
+   12,
+   7
+  ]
+ ],
+ "battle_labels": [
+  "MIN",
+  "UTA"
+ ],
+ "top": [
+  [
+   "Ayo Dosunmu",
+   "MIN",
+   "7 of 13, 4 of 5 from three, 8 of 8 FT",
+   26
+  ],
+  [
+   "LaMelo Ball",
+   "MIN",
+   "10 of 20, 5 assists",
+   24
+  ],
+  [
+   "Jaden McDaniels",
+   "MIN",
+   "5 of 9, 6 rebounds",
+   16
+  ],
+  [
+   "Bones Hyland",
+   "MIN",
+   "off the bench",
+   14
+  ]
+ ],
+ "linescore": {
+  "away": [
+   25,
+   26,
+   27,
+   22
+  ],
+  "home": [
+   28,
+   29,
+   33,
+   25
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-08-UTA-at-MIN.json"
+}

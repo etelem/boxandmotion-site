@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-08-NOP-LAC.html",
+  "team": "LAC",
+  "home": true,
+  "number": "4",
+  "player": "Kobe Sanders",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 1.0256,
+    "ape": 1.0165,
+    "mass": 0.9689
+  },
+  "build_note": "Listed 6-8, 207 lb (RealGM), reported 6-8.3 wingspan (databallr)",
+  "kicker": "CLIPPERS 139 · PELICANS 123 · NOV 8",
+  "hook": [
+    "Sanders' three",
+    "puts LA up for good"
+  ],
+  "clock": "Q3 · 2:23",
+  "us": "LAC",
+  "them": "NOP",
+  "score_before": [
+    91,
+    93
+  ],
+  "score_make": [
+    94,
+    93
+  ],
+  "stamp": "THREE",
+  "beat": [
+    "Clippers by 1.",
+    "They never trailed again."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Clippers",
+    "them": "Pelicans",
+    "us_pts": 139,
+    "them_pts": 123
+  },
+  "star": {
+    "name": "Darius Garland",
+    "big": 24,
+    "big_label": "points and 10 assists",
+    "lines": [
+      "6 of 11 from the floor",
+      "9 of 12 at the line"
+    ]
+  },
+  "story": "Trailing late in the third, the Clippers won the fourth 37–28 to end a seven-game skid.",
+  "aria": "Original illustration of Kobe Sanders' three-pointer with 2:23 left in the third quarter that put the Clippers ahead 94–93 for good. Not traced from footage, not to scale."
+}
