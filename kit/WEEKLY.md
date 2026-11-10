@@ -82,7 +82,8 @@ Send with SendUserFile: both Shorts MP4s. Then a SendUserMessage with:
 Then wait for his reply in this session. Change whatever he asks and send new previews.
 **On approve:**
 1. Merge the branch into main, then `python3 build.py`, commit, and push. Use the same retry loop as kit/push_site.sh.
-2. Wait 3 minutes, then post each Short through Buffer (the same settings as PROCEDURE.md step 2), with
+2. Wait 3 minutes, then post each Short through Buffer to YouTube, and to TikTok and Instagram if they're connected (the same settings
+   as PROCEDURE.md step 2), with
    `assets.video.url = https://boxandmotion.com/anim/<file>.mp4`.
    - Titles: "<Player>'s <move>, explained | Box & Motion scouting report" and "<Coach>'s <play>, on the board | <Team> vs <Opp>".
    - When the video ids come back, add them to the deep-dive data (`youtube` field), `git rm src/anim/*.mp4`, rebuild and push.

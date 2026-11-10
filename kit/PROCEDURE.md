@@ -100,6 +100,12 @@ Game key = `YYYY-MM-DD-AWAY-HOME`, e.g. `2026-11-06-POR-LAL` (team codes from da
    Unofficial fan content, not affiliated with the NBA or any team." then "#NBA #Shorts" and the two team names as hashtags.
    Never mention Elan's personal name.
    Then `get_post` until it shows `externalLink` (wait up to 2 minutes) or an `error`.
+   **TikTok and Instagram too:** `list_channels` also shows any TikTok and Instagram channels connected to Buffer. Post the same
+   MP4 to each with `create_post` (`schedulingType: "automatic"`, `mode: "shareNow"`, same `assets`). Caption: the one-or-two
+   sentence description, then "Every NBA game, in motion: boxandmotion.com · Free Sunday newsletter: link in bio", then at most 5
+   hashtags (#NBA plus the two teams and the player). Instagram: `metadata.instagram = {"type": "reel", "shouldShareToFeed": true,
+   "isAiGenerated": true}`. TikTok: `metadata.tiktok = {"isAiGenerated": true}`. If one of them errors (limits, a lapsed login),
+   report it and carry on; YouTube is the one whose link goes on the site.
    - Success: write the video id (the `v=` value of externalLink) to `reels/<key>/youtube.txt`. The game page keeps the reel and adds the
      "Watch on YouTube" button.
    - Error: leave the reel as is and report the error.
