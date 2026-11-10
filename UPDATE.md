@@ -3,6 +3,23 @@
 Refreshes scores, standings, "last night", upcoming games and playoff odds on boxandmotion.com.
 Cloudflare redeploys the site automatically whenever `main` changes on GitHub.
 
+## Five checks a morning (6:00, 6:30, 6:45, 7:00, 7:30 AM ET)
+The same procedure runs five times. Standings pages refresh at different times each morning (FOX: by ~6:10 on Nov 9,
+~6:47 on Nov 10), so the scores are verified once and the later checks only wait for current standings.
+
+0. **Already done?** If `data/season.json` already has last night's games (its `updated_short` is last night's date, e.g.
+   "Mon, Nov 9"), or there were no games and nothing changed, stop: one line in the report, no commit, no alert.
+1. **Saved scores?** If `data/pending/<last night's date>.json` exists, an earlier check already verified the scores
+   (same format as `data/incoming.json`). Use its `games` and `upcoming` as they are and only fetch fresh standings
+   (step 1 below, standings part). Otherwise do the full steps.
+2. **Standings not current yet** (update.py says the records don't match, and the differences are exactly last night's
+   results): save the verified `games` and `upcoming` to `data/pending/<date>.json`, add a line to the standings log,
+   commit `Standings check <time> ET: waiting for standings (<date>)` and push. No alert unless this is the 7:30 check.
+3. **Standings log:** every check that fetches standings appends one line to `data/standings-log.csv`:
+   `<games date>,<check time ET>,<source>,<current|stale>` (e.g. `2026-11-09,06:30,FOX,stale`). It shows when standings
+   usually appear, so checks that never matter can be dropped later.
+4. **On success:** also delete `data/pending/<date>.json` in the same commit.
+
 ## Steps
 
 1. Get the data from the sports feed (the `fetch_sports_data` tool, league `nba`):
@@ -33,8 +50,11 @@ Cloudflare redeploys the site automatically whenever `main` changes on GitHub.
    python3 model.py      # playoff odds (20,000 simulations)
    python3 build.py      # rebuilds dist/
    ```
-   If `update.py` reports records that don't match, a final game is missing or the feed hasn't updated.
-   Re-fetch once. If it still doesn't match, stop: do not edit standings by hand and do not push.
+   If `update.py` reports records that don't match and the differences are exactly last night's results, the standings
+   source hasn't refreshed yet: try the backup standings source (see Fallback sources), and if that is stale too, save the
+   scores as in "Five checks a morning" step 2 and leave it to the next check. If the differences are anything else (a game
+   missing or not final), re-check the games once. Never edit standings by hand, and never push season.json changes that
+   update.py refused.
 
 3b. **Official video links** (`data/links.json`, keyed `<date>-<AWAY>-<HOME>`, e.g. `2026-11-06-POR-LAL`). For each game added
    tonight, plus any game from the last 7 days that has no `highlights` yet (at most 15 games a run), use WebSearch with
@@ -48,12 +68,12 @@ Cloudflare redeploys the site automatically whenever `main` changes on GitHub.
      it out: the page then links a YouTube search for that game's postgame interviews.
    Never guess an id. Then run `python3 build.py` again.
 
-4. Delete `data/incoming.json`, then commit and push to `main`:
+4. Delete `data/incoming.json` (and `data/pending/<date>.json` if there is one), then commit and push to `main`:
    `Nightly update: games through <date>`.
 
-5. Check the live site a couple of minutes later (https://boxandmotion.com/last-night/) shows the new date.
-   WebFetch can serve an older copy of the page for a while, so a stale result is not a failure: say so in the report, and
-   send no alert for it. Only a failed push is a deploy problem worth a PushNotification.
+5. Check the live site a couple of minutes later shows the new date. Add a throwaway query so WebFetch doesn't return a
+   cached copy: `https://boxandmotion.com/last-night/?r=<HHMM>`. A stale result is still not a failure: say so in the
+   report, and send no alert for it. Only a failed push is a deploy problem worth a PushNotification.
 
 ## Fallback sources (when the feed is unavailable)
 Same `data/incoming.json`, same checks; only the sources change. Never ESPN.com or NBA.com.
@@ -67,19 +87,24 @@ Same `data/incoming.json`, same checks; only the sources change. Never ESPN.com 
   Plain Text Sports pages can come back as an old snapshot (check the "loaded at" time on the page); if one is from before the
   game, use the AP / Field Level Media story or the CBS Sports scoreboard as the second source instead.
   Add `"OT"` only if a source says overtime. Check the Covers line score adds up to the final. If a game isn't final yet
-  or two sources don't agree, wait 15 minutes and try once more; if it's still unconfirmed, stop and report it.
+  or two sources don't agree, don't save that night's scores: the next check verifies them again (the 7:30 check reports
+  what's still unconfirmed and alerts).
 - **Standings:** FOX Sports conference standings (`https://www.foxsports.com/nba/standings`): rank, wins and losses for
-  all 30 teams. If update.py says records don't match and the differences are exactly last night's results, FOX hasn't
-  refreshed yet: wait 15 minutes, fetch again and retry once.
+  all 30 teams. If FOX can't be opened or update.py shows FOX is stale (differences are exactly last night's results), use
+  CBS Sports (`https://www.cbssports.com/nba/standings/`) the same way. If both are stale, the next check tries again
+  (see "Five checks a morning"); don't wait inside the run. ESPN.com and NBA.com stay off-limits (ESPN's standings also came
+  back stale through WebFetch hours after the games when tested on Nov 10).
 - **Upcoming:** the next two days from the Plain Text Sports schedule (times are ET).
 - Commit message: `Nightly update: games through <date> (fallback sources)`, and say in the report that the fallback was used.
 - update.py's record check is the safety net: if it still refuses after the retry, change nothing and do not push.
 
 ## If the update fails, alert Elan
-If the run ends without pushing last night's games (feed and fallback both failed, update.py refused, or the push
-failed), send a **PushNotification** right away, not just a SendUserMessage, with the summary in `<routine_summary>`
-tags: first sentence "Site update failed: <reason in a few words>.", then what didn't match and that the recap runs will
-hold their reels until it's fixed. A successful fallback run needs no push; the normal report says the fallback was used.
+Only the **7:30 check** (the last one) alerts for missing data: if it ends without last night's games in season.json
+(standings still stale on FOX and CBS, scores still unconfirmed, or update.py refused), send a **PushNotification** right
+away, not just a SendUserMessage, with the summary in `<routine_summary>` tags: first sentence "Site update failed: <reason
+in a few words>.", then what didn't match and that the recap runs will hold their reels until it's fixed. Earlier checks
+that save scores and wait send no alert. A failed push alerts from any check. A successful fallback run needs no push; the
+normal report says the fallback was used.
 
 ## Adding a recap video to a game page
 

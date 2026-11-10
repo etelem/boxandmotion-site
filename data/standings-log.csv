@@ -1,0 +1,7 @@
+games_date,check_time_et,source,status
+2026-11-08,06:12,FOX,current
+2026-11-09,06:05,FOX,stale
+2026-11-09,06:22,FOX,stale
+2026-11-09,06:47,FOX,current (page timestamp)
+2026-11-09,08:30,ESPN,stale
+2026-11-09,08:35,CBS,current
