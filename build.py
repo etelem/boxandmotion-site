@@ -214,7 +214,7 @@ PLAYERS.sort(key=lambda x: x["published"], reverse=True)
 LATEST_DD = sorted([("2026-11-07", "players/luka-doncic/index.html", "New: Luka scouting report")]
                    + [(b["published"], f'coaches/{b["coach_slug"]}/index.html', f'New: {b["coach"]}\'s board') for b in BOARDS]
                    + [(m["published"], f'moves/{m["slug"]}/index.html', f'New: {m["player"]}\'s signature move') for m in MOVES]
-                   + [(x["published"], f'xo/{x["slug"]}/index.html', f'New X\'s and O\'s: the {x["term"].lower()}') for x in XO]
+                   + [(x["published"], f'xo/{x["slug"]}/index.html', f'New X\'s and O\'s: {x["term"]}') for x in XO]
                    + [(P["published"], f'players/{P["slug"]}/index.html', f'New: {P["name"]} scouting report') for P in PLAYERS],
                    key=lambda x: x[0], reverse=True)[0]
 
