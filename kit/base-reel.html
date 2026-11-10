@@ -544,23 +544,36 @@ body{background:var(--navy);color:var(--ink);font-family:var(--font-body);font-s
   function sceneScorers(L, g) {
     const {W, H, M, fs, P} = L;
     const head = heading(L, g, P ? ['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']);
-    const start = head.y + fs.s * 1.4, rowH = (H - M - start) / D.scorers.length, th = 18, max = 45;
+    // the losing side, when the config has it: the winner's top three, a line on where it got away, the loser's top two (in gray)
+    const LS = D.loser && D.loser.scorers ? D.loser.scorers.slice(0, 2) : [];
+    const WS = LS.length ? D.scorers.slice(0, 3) : D.scorers;
+    const ALL = WS.concat(LS), slots = ALL.length + (LS.length ? 1 : 0);
+    const start = head.y + fs.s * 1.4, rowH = (H - M - start) / slots, th = 18, max = 45;
+    const top = Math.max(max, ...ALL.map((x) => x.pts));
     const tx0 = P ? M : M + 560, tx1 = W - M - (P ? 110 : 130);
-    const rows = D.scorers.map((pl, i) => {
-      const group = S('g', {}, g), yc = start + rowH * (i + 0.5);
+    let side = null;
+    if (LS.length) {
+      side = S('g', {}, g);
+      fitAll([T(side, M, start + rowH * (WS.length + 0.62), `${D.themName}: ${D.loser.line}`, 'k', fs.s * 0.8)], W - 2 * M);
+    }
+    const rows = ALL.map((pl, i) => {
+      const slot = i < WS.length ? i : i + 1, lose = i >= WS.length;
+      const group = S('g', {}, g), yc = start + rowH * (slot + 0.5);
       const ty = P ? yc + 4 : yc - th / 2;
       fitAll([T(group, M, P ? yc - 26 : yc - 6, pl.name, 'b w', fs.b)], P ? W - 2 * M - 120 : 540);
       fitAll([T(group, M, P ? yc + th + fs.s * 1.25 : yc + fs.s * 1.05, pl.note, 'b m', fs.s * 0.85)], P ? W - 2 * M : 540);
       S('rect', {x: tx0, y: ty, width: tx1 - tx0, height: th, rx: th / 2, class: 'f-track'}, group);
-      const fill = S('rect', {x: tx0, y: ty, width: 0, height: th, rx: th / 2, class: i < 3 ? 'f-blue' : 'f-silver'}, group);
+      const fill = S('rect', {x: tx0, y: ty, width: 0, height: th, rx: th / 2, class: i < 3 && !lose ? 'f-blue' : 'f-silver'}, group);
       const num = T(group, W - M, ty + th / 2 + fs.h * 0.34, '0', 'd', fs.h, 'end');
+      if (lose) num.style.fill = 'var(--muted)';
       return {group, fill, num, pts: pl.pts};
     });
     return (lt) => {
+      if (side) show(side, prog(lt, 0.3 + WS.length * 0.3, 0.5), 18);
       rows.forEach((row, i) => {
         show(row.group, prog(lt, 0.3 + i * 0.3, 0.5), 18);
         const p = prog(lt, 0.5 + i * 0.3, 1.2);
-        row.fill.setAttribute('width', ((tx1 - tx0) * row.pts / max * p).toFixed(1));
+        row.fill.setAttribute('width', ((tx1 - tx0) * row.pts / top * p).toFixed(1));
         row.num.textContent = String(Math.round(row.pts * p));
       });
     };

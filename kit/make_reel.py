@@ -84,8 +84,29 @@ def mkplay(c):
     r("    // Lillard's trait: Dame Time. A giant game clock counts down behind him and freezes on the make.\n", "")
     return p
 
+ORD = ['1st', '2nd', '3rd', '4th']
+def lose_line(D):
+    """Where it got away for the losing team, short enough for the scorers scene. Only the line score."""
+    q = json.loads(re.search(r'quarters:\s*(\[\[.*?\]\])', D).group(1))
+    us, them = (int(re.search(k + r':\s*(\d+)', D).group(1)) for k in ('us', 'them'))
+    wq, lq = [a for a, b in q], [b for a, b in q]
+    if us - sum(wq) or them - sum(lq): return f'forced overtime, lost it {them - sum(lq)}–{us - sum(wq)}'
+    m = [a - b for a, b in zip(lq, wq)]; after3 = sum(m[:3])
+    if after3 >= 0: return (f'led by {after3} after three' if after3 else 'tied after three') + f', lost the 4th {lq[3]}–{wq[3]}'
+    k = min(range(4), key=lambda i: m[i])
+    if k == 3 and after3 >= -5: return f'within {-after3} after three, lost the 4th {lq[3]}–{wq[3]}'
+    rl, rw = sum(lq[k + 1:]), sum(wq[k + 1:])
+    if k < 3 and rl - rw >= 5: return f'lost the {ORD[k]} {lq[k]}–{wq[k]}, won the rest {rl}–{rw}'
+    if all(x < 0 for x in m): return 'trailed in every quarter'
+    return f'lost the {ORD[k]} quarter {lq[k]}–{wq[k]}'
+
 def build(c, out):
     t = SRC
+    # the losing side in the scorers scene: "loser_top": [[name, pts, note], ...] from the box score
+    if c.get('loser_top') and 'loser:' not in c['D']:
+        sc = ', '.join(f"{{name: {n!r}, pts: {int(p)}, note: {note!r}}}" for n, p, note in c['loser_top'][:2])
+        i = c['D'].rindex('};')
+        c['D'] = c['D'][:i] + f"  loser: {{line: {lose_line(c['D'])!r}, scorers: [{sc}]}},\n  " + c['D'][i:]
     def r(a, b, n=1):
         nonlocal t
         assert t.count(a) == n, (t.count(a), a[:90]); t = t.replace(a, b)
