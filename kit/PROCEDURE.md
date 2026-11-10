@@ -86,12 +86,12 @@ Game key = `YYYY-MM-DD-AWAY-HOME`, e.g. `2026-11-06-POR-LAL` (team codes from da
 ## Waiting for the site data (before publishing anything)
 Build everything first (research, configs, reels, frame checks, the Short config). Publishing needs last night's games in
 `data/season.json`, which the site update adds at one of its checks (6:00, 6:30, 6:45, 7:00 or 7:30 AM ET).
-- `git pull --rebase`. If the games aren't there, wait 10 minutes and pull again, until 7:45 AM ET.
+- `git pull --rebase`. If the games aren't there, wait 10 minutes and pull again, until 8:00 AM ET.
 - **Once they're there, correct every record and rank in your configs from `data/season.json`** before the final build:
   the winner's record and conference rank on the record card (`standings` and `seeds`), the next opponent's record
   (`oddsNum`), and any record or rank in the notes. Configs written before the standings landed are guesses: on Nov 10,
   3 of 7 had the wrong rank. Then rebuild the reel (and the Short if a line on it changed) and publish.
-- Still missing at 7:45: commit the configs as held (`Recap configs (held, not published): <date> (<keys>)`), don't
+- Still missing at 8:00: commit the configs as held (`Recap configs (held, not published): <date> (<keys>)`), don't
   publish to the site or YouTube, and alert (see below).
 - If you skip a game, say why in your commit message, not just in the report.
 
@@ -127,7 +127,7 @@ Build everything first (research, configs, reels, frame checks, the Short config
 ## If something blocks the morning, alert Elan
 Send a **PushNotification** (summary in `<routine_summary>` tags, the first sentence says what broke) when any of these
 happen, not just a note in the report:
-- last night's games still aren't in `data/season.json` at 7:45 AM ET, so reels were held back;
+- last night's games still aren't in `data/season.json` at 8:00 AM ET, so reels were held back;
 - `kit/push_site.sh` printed `PUSH FAILED`;
 - every YouTube post in this run failed (a daily-limit error on some posts is normal; say so in the report only).
 
