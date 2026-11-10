@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-09-SAS-PHX.html",
+  "team": "SAS",
+  "home": false,
+  "number": "1",
+  "player": "Victor Wembanyama",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 1.1282,
+    "ape": 1.0909,
+    "mass": 0.9843
+  },
+  "build_note": "Listed 7-4, 235 lb (RealGM), reported 8-0 wingspan (Sportskeeda)",
+  "kicker": "SPURS 122 · SUNS 96 · NOV 9",
+  "hook": [
+    "Wemby from deep:",
+    "40 in 25 minutes"
+  ],
+  "clock": "Q3 · 0:31",
+  "us": "SAS",
+  "them": "PHX",
+  "score_before": [
+    90,
+    68
+  ],
+  "score_make": [
+    93,
+    68
+  ],
+  "stamp": "THREE",
+  "beat": [
+    "Spurs by 25 after three.",
+    "His 40 came in 25 minutes."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Spurs",
+    "them": "Suns",
+    "us_pts": 122,
+    "them_pts": 96
+  },
+  "star": {
+    "name": "Victor Wembanyama",
+    "big": 40,
+    "big_label": "points in 25 minutes",
+    "lines": [
+      "11 rebounds, 9 blocks",
+      "15 of 19 from the floor"
+    ]
+  },
+  "story": "Up 15 at the half, up 34 in the fourth. San Antonio's ninth straight win.",
+  "aria": "Original illustration of Victor Wembanyama's 3-pointer with 31 seconds left in the third quarter that made it 93–68 at Phoenix. Not traced from footage, not to scale."
+}
