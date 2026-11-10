@@ -54,6 +54,14 @@
    "published": "2026-11-09T23:00",
    "dek": "The off-ball screen that frees a shooter, in four steps.",
    "youtube": "I17mRqcBCMs"
+  },
+  {
+   "config": "kit/xo/spain-pick-and-roll.json",
+   "anim": "xo-spain-pick-and-roll.html",
+   "slug": "spain-pick-and-roll",
+   "term": "Spain pick-and-roll",
+   "published": "2026-11-10T02:30",
+   "dek": "A ball screen with a second screen behind it, in four steps."
   }
  ]
 }
