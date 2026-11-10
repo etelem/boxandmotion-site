@@ -1,0 +1,156 @@
+{
+  "D": "  const D = {\n    date: 'Mon, Nov 9, 2026',\n    us: 124, them: 114, record: '10–2', usName: 'Lakers', themName: 'Hawks',\n    quarters: [[31, 22], [37, 35], [27, 33], [29, 24]],\n    leadUs: 20, leadThem: 8,\n    star: {name: 'Luka Dončić', stats: [['Points', 32, 40], ['Assists', 10, 12], ['Steals', 5, 6]]},\n    scorers: [\n      {name: 'Luka Dončić', pts: 32, note: '11 of 22 · 10 assists · 5 steals'},\n      {name: 'Sandro Mamukelashvili', pts: 23, note: 'off the bench · 5 of 8 from three'},\n      {name: 'Walker Kessler', pts: 21, note: '8 of 12 · 10 rebounds'},\n      {name: 'Collin Sexton', pts: 18, note: 'off the bench · 6 assists'},\n      {name: 'Ziaire Williams', pts: 12, note: '2 threes · 2 steals'},\n    ],\n    edges: [\n      {label: 'Points in the paint', us: 52, them: 42},\n      {label: 'Steals', us: 16, them: 12},\n      {label: 'Field goals made', us: 45, them: 40},\n      {label: 'Bench points', us: 49, them: 45},\n    ],\n    gaps: [\n      {label: 'Threes made', us: 15, them: 17},\n      {label: 'Assists', us: 30, them: 33},\n    ],\n    next: {opp: 'at Bucks', when: 'Wed, Nov 11, 8:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Luka Dončić's driving finger-roll layup with 2:27 left that made it 117–111 after Atlanta had cut the lead to four. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Luka to the rim",
+    "subP": "Luka on the drive, 2:27 left",
+    "subL": "Luka Dončić on the drive with 2:27 left",
+    "m0": "Lakers +4",
+    "m1": "Lakers +6",
+    "num": "77",
+    "cap1": "Luka got to the rim. Lakers by 6.",
+    "cap2": "117–111 with 2:27 left.",
+    "clock": [
+      155,
+      147
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Lakers at Hawks Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Lakers 124, Hawks 114 · Nov 9, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Lakers at', 'Hawks'] : ['Lakers at Hawks']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Luka had 32 and 10,', 'back after a night off.'] : ['Luka Dončić had 32 points and 10 assists, back after sitting out Sunday.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Lakers improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Sixth straight win'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Up 11 at the half,', 'up 4 with 3:30 left'] : ['Up 11 at the half, up just 4 with 3:30 left']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Lakers ${D.leadUs}, Hawks ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Lakers’ margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Luka: 32 points,', '10 assists, 5 steals'] : ['Luka: 32 points, 10 assists, 5 steals']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['11 of 22 shooting,', '7 of 7 at the line.'] : ['11 of 22 from the floor, 7 of 7 at the line, 8 rebounds.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Luka and Sandro:', '55 of the 124'] : ['Luka and Mamukelashvili combined for 55 of the 124']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 40;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it in the paint', 'and with 16 steals'] : ['Won it in the paint and with 16 steals']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Lakers in gold, Hawks in gray. L.A.', 'had 16 steals, five by Luka.'] : ['Lakers in gold, Hawks in gray. L.A. had 16 steals, five by Luka.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'First in the West'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Bucks’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '1–9';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Second night of a back-to-back.', 'Atlanta’s four-game win streak ended.'] : ['Second night of a back-to-back. Atlanta’s four-game win streak ended.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Lakers 124 · Hawks 114 · Nov 9'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Luka to the rim'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Luka'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 60;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 170 : 200) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+2', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 120 * k, shotX + 80 * k, prog(lt, T_JAB, 1.4));"
+    ]
+  ],
+  "team": "LAL",
+  "loser_top": [
+    [
+      "CJ McCollum",
+      21,
+      "off the bench · 8 of 15"
+    ],
+    [
+      "Nickeil Alexander-Walker",
+      20,
+      "4 of 14 from three"
+    ]
+  ],
+  "aria": "Animated recap of the Lakers' 124 to 114 road win at Atlanta: Luka Dončić's drive with 2:27 left, quarter-by-quarter scoring, his 32 points and 10 assists, the top scorers, how the Lakers won, and the next game at Milwaukee.",
+  "notes": [
+    "Box score from the Lakers' 124–114 win over the Atlanta Hawks in Atlanta on Nov 9, 2026, from the Covers.com box score, with game details from the AP (via Yahoo Sports and the Killeen Daily Herald), 107.5 The Game, Yardbarker, beIN Sports and the Plain Text Sports play-by-play. All 124 Lakers points and all 114 Hawks points are accounted for in the box score, and the quarter scores add up to both totals. Halftime was 68–57 and it was 95–90 after three (box score, 107.5 The Game, Yardbarker). Biggest leads: the Lakers' 20 and Atlanta's 8 (Covers.com); Atlanta led 19–11 early (107.5 The Game). Bench points (49–45) are summed from the box score. Dončić sat out Sunday's win at Detroit with low back tightness and returned for the second night of the back-to-back; Austin Reaves missed this game with an illness (AP, 107.5 The Game). The win was the Lakers' sixth straight and ended Atlanta's four-game winning streak (AP, 107.5 The Game). The Lakers are 10–2, first in the West, and play at Milwaukee on Wednesday at 8:00 PM ET (FOX Sports standings, Yardbarker). The Bucks' record is from the site's standings.",
+    "The play of the game is an original illustration of Luka Dončić's driving finger-roll layup with 2:27 left that made it 117–111 (Plain Text Sports play-by-play; the AP and 107.5 The Game also describe the layup). It came after Dyson Daniels' floater had cut the Lakers' lead to 115–111 with 3:30 left (AP), and Atlanta never got closer than six after it (107.5 The Game). It is drawn as a basket on a drive from 115–111; the finger-roll finish itself isn't animated. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Los Angeles Lakers or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The player in the play of the game is drawn to Dončić’s listed 6-foot-8 and 230 pounds (Basketball-Reference), with arms scaled to his reported 6-foot-11 wingspan (NBA Draft Room), in the Lakers' road kit. His No. 77 is from Basketball-Reference. It is an original silhouette with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "player": "Luka Dončić",
+    "home": false,
+    "tall": 1.0256,
+    "ape": 1.0375,
+    "mass": 1.0213,
+    "label": "Luka Dončić, listed 6-8, 230 lb, reported 6-11 wingspan"
+  }
+}

@@ -1,0 +1,109 @@
+{
+ "headline": "Collins and Detroit hold off Davis' 44",
+ "dek": "Anthony Davis scored 44. Detroit answered with five players in double figures.",
+ "three": [
+  [
+   "Collins: 24 points, a season high",
+   "9 of 13 from the floor, 10 rebounds, 15 by halftime."
+  ],
+  [
+   "Up 10 at the half, won the third 35–29",
+   "Collins, Robinson and Jenkins combined for 68 of 122."
+  ],
+  [
+   "Won it running and at the line",
+   "Fast-break points 19–4; assists 31–16. Washington turned it over 18 times to Detroit’s 10."
+  ]
+ ],
+ "battle": [
+  [
+   "Fast-break points",
+   19,
+   4
+  ],
+  [
+   "Assists",
+   31,
+   16
+  ],
+  [
+   "Free throws made",
+   28,
+   20
+  ],
+  [
+   "Points in the paint",
+   58,
+   50
+  ]
+ ],
+ "battle_labels": [
+  "DET",
+  "WAS"
+ ],
+ "top": [
+  [
+   "John Collins",
+   "DET",
+   "season high, 10 rebounds, 9 of 13",
+   24
+  ],
+  [
+   "Duncan Robinson",
+   "DET",
+   "4 threes, 6 of 7 FT",
+   22
+  ],
+  [
+   "Daniss Jenkins",
+   "DET",
+   "8 assists, 4 steals, 13 in the 3rd",
+   22
+  ],
+  [
+   "Cade Cunningham",
+   "DET",
+   "7 assists, 7 of 16",
+   17
+  ]
+ ],
+ "linescore": {
+  "away": [
+   32,
+   26,
+   29,
+   24
+  ],
+  "home": [
+   31,
+   37,
+   35,
+   19
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-09-WAS-at-DET.json",
+ "loser": {
+  "top": [
+   [
+    "Anthony Davis",
+    "WAS",
+    "16 of 21 · 13 rebounds",
+    44
+   ],
+   [
+    "AJ Dybantsa",
+    "WAS",
+    "8 of 17 · 8 rebounds",
+    21
+   ],
+   [
+    "Trae Young",
+    "WAS",
+    "7 assists",
+    20
+   ]
+  ],
+  "source": "box score"
+ }
+}

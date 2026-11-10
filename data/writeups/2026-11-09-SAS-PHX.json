@@ -1,0 +1,103 @@
+{
+ "headline": "Wembanyama scores 40 in 25 minutes",
+ "dek": "Victor Wembanyama scored 40 in just 25 minutes.",
+ "three": [
+  [
+   "Wembanyama: 40 points, 11 rebounds, 9 blocks",
+   "15 of 19 from the floor, 22 points by halftime."
+  ],
+  [
+   "Up 15 at the half, up as many as 34 in the fourth",
+   "Wembanyama alone scored 40 of the 122."
+  ],
+  [
+   "Won the glass and the rim",
+   "Rebounds 55–35; assists 30–21. San Antonio blocked 11 shots to Phoenix’s 7."
+  ]
+ ],
+ "battle": [
+  [
+   "Rebounds",
+   55,
+   35
+  ],
+  [
+   "Assists",
+   30,
+   21
+  ],
+  [
+   "Blocks",
+   11,
+   7
+  ],
+  [
+   "Offensive rebounds",
+   15,
+   11
+  ]
+ ],
+ "battle_labels": [
+  "SAS",
+  "PHX"
+ ],
+ "top": [
+  [
+   "Victor Wembanyama",
+   "SAS",
+   "15 of 19, 9 blocks, 25 minutes",
+   40
+  ],
+  [
+   "Dylan Harper",
+   "SAS",
+   "7 of 10, 14 in the 3rd",
+   17
+  ],
+  [
+   "De’Aaron Fox",
+   "SAS",
+   "9 rebounds, 6 assists",
+   15
+  ],
+  [
+   "Julian Champagnie",
+   "SAS",
+   "3 threes, started for Vassell",
+   11
+  ]
+ ],
+ "linescore": {
+  "away": [
+   31,
+   30,
+   32,
+   29
+  ],
+  "home": [
+   25,
+   21,
+   22,
+   28
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-09-SAS-at-PHX.json",
+ "loser": {
+  "top": [
+   [
+    "Devin Booker",
+    "PHX",
+    "10 of 17 · 9 of 10 FT",
+    32
+   ],
+   [
+    "Khaman Maluach",
+    "PHX",
+    "off the bench · 4 of 6",
+    11
+   ]
+  ],
+  "source": "box score"
+ }
+}

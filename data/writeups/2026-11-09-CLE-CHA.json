@@ -1,0 +1,103 @@
+{
+ "headline": "Allen and Reid end Charlotte's skid",
+ "dek": "Grayson Allen scored 27 and Naz Reid 25 to end a six-game skid.",
+ "three": [
+  [
+   "Allen: 27 points, six threes",
+   "6 of 12 from three, 8 of 14 overall, 6 assists."
+  ],
+  [
+   "Up 16 at the half, led by as many as 33",
+   "Allen and Reid combined for 52 of 124."
+  ],
+  [
+   "Won it from three and on the glass",
+   "Threes made 23–14; rebounds 49–32. Charlotte made 23 of 46 threes."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   23,
+   14
+  ],
+  [
+   "Rebounds",
+   49,
+   32
+  ],
+  [
+   "Assists",
+   29,
+   27
+  ],
+  [
+   "Points in the paint",
+   34,
+   48
+  ]
+ ],
+ "battle_labels": [
+  "CHA",
+  "CLE"
+ ],
+ "top": [
+  [
+   "Grayson Allen",
+   "CHA",
+   "6 threes, 6 assists",
+   27
+  ],
+  [
+   "Naz Reid",
+   "CHA",
+   "13 rebounds, 4 threes",
+   25
+  ],
+  [
+   "Tidjane Salaün",
+   "CHA",
+   "off the bench, 3 of 4 from three",
+   14
+  ],
+  [
+   "Sion James",
+   "CHA",
+   "3 of 6 from three",
+   11
+  ]
+ ],
+ "linescore": {
+  "away": [
+   28,
+   25,
+   27,
+   32
+  ],
+  "home": [
+   29,
+   40,
+   38,
+   17
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-09-CLE-at-CHA.json",
+ "loser": {
+  "top": [
+   [
+    "Meleek Thomas",
+    "CLE",
+    "4 of 6 from three",
+    18
+   ],
+   [
+    "Peyton Watson",
+    "CLE",
+    "5 of 9",
+    13
+   ]
+  ],
+  "source": "box score"
+ }
+}

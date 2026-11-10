@@ -1,0 +1,103 @@
+{
+ "headline": "Durant and Şengün end Houston's skid",
+ "dek": "Durant scored 23 and Şengün 20. A two-game skid ends.",
+ "three": [
+  [
+   "Durant: 23 points, 12 rebounds, 8 assists",
+   "11 in the first quarter, 10 of 10 at the line."
+  ],
+  [
+   "Up 14 at the half, then survived an 18–2 Denver run",
+   "Durant and Şengün combined for 43 of 110."
+  ],
+  [
+   "Won it on the glass and off the bench",
+   "Rebounds 50–39; assists 29–20. Houston had 29 assists on 41 baskets."
+  ]
+ ],
+ "battle": [
+  [
+   "Rebounds",
+   50,
+   39
+  ],
+  [
+   "Assists",
+   29,
+   20
+  ],
+  [
+   "Threes made",
+   14,
+   8
+  ],
+  [
+   "Bench points",
+   33,
+   22
+  ]
+ ],
+ "battle_labels": [
+  "HOU",
+  "DEN"
+ ],
+ "top": [
+  [
+   "Kevin Durant",
+   "HOU",
+   "12 rebounds, 8 assists, 10 of 10 FT",
+   23
+  ],
+  [
+   "Alperen Şengün",
+   "HOU",
+   "11 rebounds, 8 assists, 9 of 17",
+   20
+  ],
+  [
+   "Jabari Smith Jr.",
+   "HOU",
+   "7 rebounds, 2 threes",
+   14
+  ],
+  [
+   "Fred VanVleet",
+   "HOU",
+   "3 of 6 from three",
+   12
+  ]
+ ],
+ "linescore": {
+  "away": [
+   24,
+   16,
+   28,
+   32
+  ],
+  "home": [
+   32,
+   22,
+   23,
+   33
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-09-DEN-at-HOU.json",
+ "loser": {
+  "top": [
+   [
+    "Jamal Murray",
+    "DEN",
+    "14 of 23 · 5 of 8 from three",
+    38
+   ],
+   [
+    "Nikola Jokić",
+    "DEN",
+    "16 rebounds · 11 of 21",
+    25
+   ]
+  ],
+  "source": "box score"
+ }
+}

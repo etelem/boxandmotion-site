@@ -1,0 +1,103 @@
+{
+ "headline": "Luka returns, Lakers win a sixth straight",
+ "dek": "Luka Dončić had 32 points and 10 assists, back after sitting out Sunday.",
+ "three": [
+  [
+   "Luka: 32 points, 10 assists, 5 steals",
+   "11 of 22 from the floor, 7 of 7 at the line, 8 rebounds."
+  ],
+  [
+   "Up 11 at the half, up just 4 with 3:30 left",
+   "Luka and Mamukelashvili combined for 55 of the 124."
+  ],
+  [
+   "Won it in the paint and with 16 steals",
+   "Points in the paint 52–42; steals 16–12. L.A. had 16 steals, five by Luka."
+  ]
+ ],
+ "battle": [
+  [
+   "Points in the paint",
+   52,
+   42
+  ],
+  [
+   "Steals",
+   16,
+   12
+  ],
+  [
+   "Field goals made",
+   45,
+   40
+  ],
+  [
+   "Bench points",
+   49,
+   45
+  ]
+ ],
+ "battle_labels": [
+  "LAL",
+  "ATL"
+ ],
+ "top": [
+  [
+   "Luka Dončić",
+   "LAL",
+   "11 of 22, 10 assists, 5 steals",
+   32
+  ],
+  [
+   "Sandro Mamukelashvili",
+   "LAL",
+   "off the bench, 5 of 8 from three",
+   23
+  ],
+  [
+   "Walker Kessler",
+   "LAL",
+   "8 of 12, 10 rebounds",
+   21
+  ],
+  [
+   "Collin Sexton",
+   "LAL",
+   "off the bench, 6 assists",
+   18
+  ]
+ ],
+ "linescore": {
+  "away": [
+   31,
+   37,
+   27,
+   29
+  ],
+  "home": [
+   22,
+   35,
+   33,
+   24
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-09-LAL-at-ATL.json",
+ "loser": {
+  "top": [
+   [
+    "CJ McCollum",
+    "ATL",
+    "off the bench · 8 of 15",
+    21
+   ],
+   [
+    "Nickeil Alexander-Walker",
+    "ATL",
+    "4 of 14 from three",
+    20
+   ]
+  ],
+  "source": "box score"
+ }
+}

@@ -1,0 +1,103 @@
+{
+ "headline": "Flagg's 43 rallies Dallas past Indiana",
+ "dek": "Cooper Flagg scored 43 and Kyrie Irving 35 as Dallas came back from 13 down.",
+ "three": [
+  [
+   "Flagg: 43 points, a season high",
+   "13 at the half, 30 after it, 10 rebounds in all."
+  ],
+  [
+   "Down 10 at the half, won the second half 69–56",
+   "Flagg and Irving combined for 78 of 125."
+  ],
+  [
+   "Won the second half and on the glass",
+   "Rebounds 43–27; free throws made 25–21. Dallas out-rebounded Indiana 43–27."
+  ]
+ ],
+ "battle": [
+  [
+   "Rebounds",
+   43,
+   27
+  ],
+  [
+   "Free throws made",
+   25,
+   21
+  ],
+  [
+   "Fast-break points",
+   14,
+   10
+  ],
+  [
+   "Blocks",
+   4,
+   2
+  ]
+ ],
+ "battle_labels": [
+  "DAL",
+  "IND"
+ ],
+ "top": [
+  [
+   "Cooper Flagg",
+   "DAL",
+   "10 rebounds, 16 of 25, 8 of 8 FT",
+   43
+  ],
+  [
+   "Kyrie Irving",
+   "DAL",
+   "7 of 10 from three",
+   35
+  ],
+  [
+   "P.J. Washington",
+   "DAL",
+   "9 rebounds, 2 blocks",
+   13
+  ],
+  [
+   "Santi Aldama",
+   "DAL",
+   "4 of 9, 4 rebounds",
+   10
+  ]
+ ],
+ "linescore": {
+  "away": [
+   31,
+   35,
+   27,
+   29
+  ],
+  "home": [
+   26,
+   30,
+   34,
+   35
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-09-IND-at-DAL.json",
+ "loser": {
+  "top": [
+   [
+    "Pascal Siakam",
+    "IND",
+    "26 in the first half · 9 rebounds, 8 assists",
+    29
+   ],
+   [
+    "Aaron Nesmith",
+    "IND",
+    "4 of 10 from three",
+    18
+   ]
+  ],
+  "source": "box score"
+ }
+}

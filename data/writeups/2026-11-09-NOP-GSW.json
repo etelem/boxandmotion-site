@@ -1,0 +1,103 @@
+{
+ "headline": "Warriors rout the Pelicans for an eighth straight",
+ "dek": "Stephen Curry and Brandin Podziemski scored 25 each in a 51-point win.",
+ "three": [
+  [
+   "Steph: 25 points in 21 minutes",
+   "16 in the third quarter, then he sat the fourth."
+  ],
+  [
+   "Up 29 at the half, won by 51",
+   "Three 20-point scorers combined for 73 of 138."
+  ],
+  [
+   "Won it from three and off the bench",
+   "Threes made 21–8; bench points 60–41. Golden State made 21 of 44 threes."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   21,
+   8
+  ],
+  [
+   "Bench points",
+   60,
+   41
+  ],
+  [
+   "Points in the paint",
+   52,
+   38
+  ],
+  [
+   "Fast-break points",
+   17,
+   6
+  ]
+ ],
+ "battle_labels": [
+  "GSW",
+  "NOP"
+ ],
+ "top": [
+  [
+   "Stephen Curry",
+   "GSW",
+   "6 of 10, 9 of 9 FT, 21 minutes",
+   25
+  ],
+  [
+   "Brandin Podziemski",
+   "GSW",
+   "5 threes, 4 assists",
+   25
+  ],
+  [
+   "Yaxel Lendeborg",
+   "GSW",
+   "8 of 10, 4 of 4 from three",
+   23
+  ],
+  [
+   "De’Anthony Melton",
+   "GSW",
+   "off the bench, 4 threes",
+   16
+  ]
+ ],
+ "linescore": {
+  "away": [
+   20,
+   23,
+   22,
+   22
+  ],
+  "home": [
+   35,
+   37,
+   40,
+   26
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-09-NOP-at-GSW.json",
+ "loser": {
+  "top": [
+   [
+    "Derik Queen",
+    "NOP",
+    "off the bench · 8 of 10 FT · 3 blocks",
+    16
+   ],
+   [
+    "Dejounte Murray",
+    "NOP",
+    "5 of 10",
+    12
+   ]
+  ],
+  "source": "box score"
+ }
+}

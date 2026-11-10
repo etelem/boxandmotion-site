@@ -1,0 +1,103 @@
+{
+ "headline": "Jerome's 27 keeps Memphis perfect on the road",
+ "dek": "Ty Jerome scored 27. Memphis is 5–0 on the road.",
+ "three": [
+  [
+   "Ty Jerome: 27 points and five threes",
+   "9 of 19 from the floor, 4 of 4 at the line."
+  ],
+  [
+   "Up 6 at the half, pulled away in the fourth",
+   "Jerome, Boozer and Grant combined for 66 of 118."
+  ],
+  [
+   "Won it from three and off the bench",
+   "Bench points 44–27; threes made 16–13. Memphis made 16 of 34 threes."
+  ]
+ ],
+ "battle": [
+  [
+   "Bench points",
+   44,
+   27
+  ],
+  [
+   "Threes made",
+   16,
+   13
+  ],
+  [
+   "Rebounds",
+   44,
+   34
+  ],
+  [
+   "Fast-break points",
+   12,
+   4
+  ]
+ ],
+ "battle_labels": [
+  "MEM",
+  "TOR"
+ ],
+ "top": [
+  [
+   "Ty Jerome",
+   "MEM",
+   "9 of 19, 5 threes, 4 of 4 FT",
+   27
+  ],
+  [
+   "Cameron Boozer",
+   "MEM",
+   "8 assists, 7 rebounds",
+   22
+  ],
+  [
+   "Jerami Grant",
+   "MEM",
+   "off the bench, 3 of 3 from three",
+   17
+  ],
+  [
+   "Jaylen Wells",
+   "MEM",
+   "4 of 5 from three",
+   14
+  ]
+ ],
+ "linescore": {
+  "away": [
+   25,
+   34,
+   30,
+   29
+  ],
+  "home": [
+   26,
+   27,
+   28,
+   21
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-09-MEM-at-TOR.json",
+ "loser": {
+  "top": [
+   [
+    "Jamal Shead",
+    "TOR",
+    "11 assists · 4 threes",
+    20
+   ],
+   [
+    "RJ Barrett",
+    "TOR",
+    "7 of 21 shooting",
+    19
+   ]
+  ],
+  "source": "box score"
+ }
+}
