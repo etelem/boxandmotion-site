@@ -72,5 +72,22 @@
   ],
   "ot": false
  },
- "source": "kit/configs/2026-11-08-UTA-at-MIN.json"
+ "source": "kit/configs/2026-11-08-UTA-at-MIN.json",
+ "loser": {
+  "top": [
+   [
+    "Darryn Peterson",
+    "UTA",
+    "6 rebounds",
+    26
+   ],
+   [
+    "Keyonte George",
+    "UTA",
+    "in three quarters, then left with a sprained ankle",
+    19
+   ]
+  ],
+  "source": "Associated Press game story"
+ }
 }

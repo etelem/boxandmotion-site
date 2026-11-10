@@ -84,5 +84,22 @@
   ],
   "ot": true
  },
- "source": "kit/configs/2026-11-07-ORL-at-GSW.json"
+ "source": "kit/configs/2026-11-07-ORL-at-GSW.json",
+ "loser": {
+  "top": [
+   [
+    "Franz Wagner",
+    "ORL",
+    "11 assists",
+    30
+   ],
+   [
+    "Wendell Carter Jr.",
+    "ORL",
+    "11 rebounds",
+    19
+   ]
+  ],
+  "source": "Covers.com box score"
+ }
 }

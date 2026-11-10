@@ -82,5 +82,22 @@
   ],
   "ot": false
  },
- "source": "kit/configs/2026-11-07-WAS-at-OKC.json"
+ "source": "kit/configs/2026-11-07-WAS-at-OKC.json",
+ "loser": {
+  "top": [
+   [
+    "AJ Dybantsa",
+    "WAS",
+    "7 of 15 shooting",
+    19
+   ],
+   [
+    "Alex Sarr",
+    "WAS",
+    "14 rebounds",
+    15
+   ]
+  ],
+  "source": "Covers.com box score"
+ }
 }

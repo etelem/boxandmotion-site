@@ -82,5 +82,22 @@
   ],
   "ot": false
  },
- "source": "kit/configs/2026-11-08-PHI-at-CHI.json"
+ "source": "kit/configs/2026-11-08-PHI-at-CHI.json",
+ "loser": {
+  "top": [
+   [
+    "Josh Giddey",
+    "CHI",
+    "15 assists, 7 rebounds",
+    19
+   ],
+   [
+    "Matas Buzelis",
+    "CHI",
+    "6 of 10, 3 threes",
+    19
+   ]
+  ],
+  "source": "Covers.com box score"
+ }
 }

@@ -36,8 +36,12 @@ takes games number N, N+M, N+2M, ... (counting from 1).
 
 Game key = `YYYY-MM-DD-AWAY-HOME`, e.g. `2026-11-06-POR-LAL` (team codes from data/teams.json).
 
-## Steps per game (work in kit/; tell the story from the WINNING team's side)
+## Steps per game (work in kit/; tell the story from the WINNING team's side, plus the losing team's short block)
 1. **Box score.** `fetch_sports_data` game_stats with the game id; standings for records and conference rank; scores for each team's next game.
+   **The losing side:** from the same box score, take the losing team's top two scorers (three if a third line is notable,
+   e.g. a triple-double) with one short note each, and put them in the config as `"loser_top": [["Full Name", pts, "8 of 15 from three"], ...]`.
+   `make_writeup.py` carries them to the game page's "From the <team>' side" block, which also says where the game got away
+   (worked out from the line score) and the loser's next game. Numbers only from the box score; skip a note rather than guess.
 2. **Written recaps.** WebSearch + WebFetch 2-3 game stories. Collect halftime score, runs, biggest lead, and ONE play of the game
    with clock time and score before/after. If the move isn't described, draw the template's plain pull-up and say so in the notes.
    **Board watch:** while reading the stories, look for a coaching whiteboard play: a play out of a timeout, an inbounds play or a

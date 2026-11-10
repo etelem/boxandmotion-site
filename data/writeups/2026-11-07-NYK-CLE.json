@@ -82,5 +82,22 @@
   ],
   "ot": false
  },
- "source": "kit/configs/2026-11-07-NYK-at-CLE.json"
+ "source": "kit/configs/2026-11-07-NYK-at-CLE.json",
+ "loser": {
+  "top": [
+   [
+    "Donovan Mitchell",
+    "CLE",
+    "13 of 22, 5 threes",
+    37
+   ],
+   [
+    "Evan Mobley",
+    "CLE",
+    "9 rebounds, 5 assists",
+    12
+   ]
+  ],
+  "source": "Covers.com box score"
+ }
 }

@@ -82,5 +82,22 @@
   ],
   "ot": false
  },
- "source": "kit/configs/2026-11-08-NOP-at-LAC.json"
+ "source": "kit/configs/2026-11-08-NOP-at-LAC.json",
+ "loser": {
+  "top": [
+   [
+    "Trey Murphy III",
+    "NOP",
+    "9 of 17 shooting",
+    26
+   ],
+   [
+    "Zion Williamson",
+    "NOP",
+    "9 of 9 from the floor",
+    25
+   ]
+  ],
+  "source": "Covers.com box score"
+ }
 }

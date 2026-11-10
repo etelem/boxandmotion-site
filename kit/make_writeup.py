@@ -54,6 +54,9 @@ w = {
     'linescore': {'away': q_us if us == away else q_them, 'home': q_them if us == away else q_us, 'ot': bool(ot_us or ot_them)},
     'source': os.path.relpath(cfg_path, ROOT),
 }
+# the losing team's side: their top scorers from the box score (config "loser_top": [[name, pts, note], ...])
+if c.get('loser_top'):
+    w['loser'] = {'top': [[n, them, note, int(p)] for n, p, note in c['loser_top'][:3]], 'source': 'box score'}
 out = os.path.join(ROOT, 'data', 'writeups', key + '.json'); os.makedirs(os.path.dirname(out), exist_ok=True)
 json.dump(w, open(out, 'w'), indent=1, ensure_ascii=False)
 print('wrote', os.path.relpath(out, ROOT))

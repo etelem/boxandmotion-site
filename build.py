@@ -339,6 +339,32 @@ for c, t in T.items():
     page(f"teams/{t['slug']}/index.html", f"{t['city']} {t['name']} · Box & Motion Hoops", body, active="Teams",
          desc=f"{t['city']} {t['name']}: record, playoff odds, game recaps and scouting reports.", band=band)
 
+ORD = ["first", "second", "third", "fourth"]
+def got_away(lq, wq, ot):
+    """One line, from the losing team's side, on where the game got away. Uses only the line score."""
+    n = len(lq); m = [a - b for a, b in zip(lq, wq)]
+    name = lambda i: f"the {ORD[i]} quarter" if i < 4 else ("overtime" if i == 4 else f"the {i - 3}{'nd' if i == 5 else 'rd' if i == 6 else 'th'} overtime")
+    after3 = sum(m[:3])
+    if ot:
+        return f"Forced overtime, then lost {name(n - 1)} {lq[-1]}–{wq[-1]}."
+    if after3 >= 0:
+        lead = f"Led by {after3} after three quarters" if after3 > 0 else "Tied after three quarters"
+        return f"{lead}, then lost the fourth {lq[3]}–{wq[3]}."
+    k = min(range(n), key=lambda i: m[i])
+    if k == 3 and after3 >= -5:
+        return f"Within {-after3} after three quarters, then lost the fourth {lq[3]}–{wq[3]}."
+    rl, rw = sum(lq[k + 1:]), sum(wq[k + 1:])
+    if k < n - 1 and rl - rw >= 5:
+        return f"Lost {name(k)} {lq[k]}–{wq[k]}, then won the rest of the game {rl}–{rw}."
+    if all(x < 0 for x in m):
+        return f"Trailed in every quarter; the biggest gap was {name(k)}, {lq[k]}–{wq[k]}."
+    return f"Lost {name(k)} {lq[k]}–{wq[k]}, the stretch that decided it."
+
+def next_game(c):
+    for day, tm, a, h in S["upcoming"]:
+        if c in (a, h): return f"{day}, {'vs.' if c == h else 'at'} {T[h if c == a else a]['name']}, {tm} ET"
+    return ""
+
 # ---- game pages ----
 for g in GAMES:
     R = "../../"
@@ -400,6 +426,18 @@ for g in GAMES:
         hero = f'''<section class="sec" style="gap:18px">{kicker}
 <h1 class="h1" style="display:flex;flex-wrap:wrap;gap:4px 28px;font-size:clamp(48px,8vw,100px)">{names}</h1>
 {lede}{lsh}</section>'''
+    # the other side: where it got away for the losing team, their top performers, and their next game
+    lose_html = ""
+    if ls:
+        lq, wq = (ls["away"], ls["home"]) if l == a else (ls["home"], ls["away"])
+        ltop = ((f or {}).get("loser") or {}).get("top") or [x for x in (f or {}).get("top", []) if x[1] == l]
+        rows = "".join(f'<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-top:1px solid var(--line)"><span><b>{E(n)}</b><br><span class="dim" style="font-size:14px">{E(note)}</span></span><b class="d" style="font-size:34px;color:{T[l]["c1"]}">{pts}</b></div>' for n, tm, note, pts in ltop[:3])
+        nx = next_game(l)
+        lose_html = f'''<section class="card pad" style="display:flex;flex-direction:column;gap:10px"><p class="k">From the {E(T[l]['name'])}' side</p>
+<p style="margin:0;font-size:20px;font-weight:600;max-width:36em">{E(got_away(lq, wq, g['ot']))}</p>
+{('<div>' + rows + '</div>') if rows else ''}
+<span class="dim">{E(T[l]['name'])} fall to {g['rec'][l]}.{(' Next: ' + E(nx) + '.') if nx else ''} <a href="{R}teams/{T[l]['slug']}/index.html">{E(T[l]['name'])} page →</a></span></section>'''
+    feat += lose_html
     if f and not v and not g["reel"]:
         feat += video_block(None)
     body = f'''{crumbs}

@@ -82,5 +82,22 @@
   ],
   "ot": false
  },
- "source": "kit/configs/2026-11-08-BOS-at-MIL.json"
+ "source": "kit/configs/2026-11-08-BOS-at-MIL.json",
+ "loser": {
+  "top": [
+   [
+    "Kyle Kuzma",
+    "MIL",
+    "6 of 13 from three",
+    27
+   ],
+   [
+    "Brayden Burries",
+    "MIL",
+    "8 rebounds, 4 assists",
+    13
+   ]
+  ],
+  "source": "Covers.com box score"
+ }
 }
