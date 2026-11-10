@@ -481,7 +481,7 @@ DD_ITEMS = ([("2026-11-07", f'''<a href="{R}players/luka-doncic/index.html" clas
             + [(P["published"], player_card(R, P, big=True)) for P in PLAYERS])
 DD_CARDS = "\n".join(html for _, html in sorted(DD_ITEMS, key=lambda x: x[0], reverse=True))
 body = f'''<div class="sec" style="gap:8px"><p class="k">New every week</p><h1 class="h1">Deep dives</h1><p class="dim" style="margin:0;font-size:18px;max-width:44em">Scouting reports on the league's hottest players, coach's boards when a team draws up a play worth seeing again, stars' signature moves, and X's and O's that teach the game. All in motion.</p></div>
-<section class="grid g2">{DD_CARDS}</section>'''
+<section class="grid g2 dd-grid">{DD_CARDS}</section>'''
 page("deep-dives/index.html", "Deep dives · Box & Motion Hoops", body, active="Deep Dives")
 
 # ---- player: Luka ----

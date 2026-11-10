@@ -122,3 +122,6 @@ footer a{color:var(--dim)}
 .cal-g a:hover{background:rgba(255,90,31,.2)}
 .cal-g a.on{background:#FF5A1F;color:#fff}.cal-g a.on i{background:#fff}
 
+
+/* Deep dives: every card reads from the top (tag, title, line), whatever its length */
+.dd-grid>.card{justify-content:flex-start!important;min-height:0!important}
