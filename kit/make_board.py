@@ -93,6 +93,8 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
     const ks = short ? 26 : tall ? 20 : 16, ts = short ? 64 : tall ? 46 : 40;
     T(svg, M, short ? 96 : M + 14, CFG.kicker, 'k', ks);
     const title = T(svg, M, (short ? 96 : M + 14) + ts + 6, CFG.title, 'd', ts);
+    // long titles shrink to fit the width instead of running off the board
+    if (title.getComputedTextLength && title.getComputedTextLength() > W - 2 * M) title.style.fontSize = (ts * (W - 2 * M) / title.getComputedTextLength()) + 'px';
     T(svg, M, (short ? 96 : M + 14) + ts + 6 + (short ? 50 : 30), CFG.situation, 'b m', short ? 30 : tall ? 22 : 18);
     // court
     const g = S('g', {class: 'court', 'stroke-width': F(s * 0.22)}, svg);

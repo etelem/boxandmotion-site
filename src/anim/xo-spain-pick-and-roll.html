@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What's a Spain pick-and-roll? · Box &amp; Motion Hoops</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<style>
+:root{--board:#f7f6f1;--ink:#16181d;--dim:#6b6f78;--line:#d9d7cf;--acc:#FF5A1F;--c1:#FF5A1F;--c2:#16181d}
+html,body{margin:0;background:transparent}
+body{font-family:'IBM Plex Sans',system-ui,sans-serif;color:var(--ink)}
+.wrap{background:var(--board);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+svg{display:block;width:100%;height:auto}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:0 16px 16px}
+.bar button{font:600 14px/1 'IBM Plex Sans',system-ui,sans-serif;color:var(--ink);background:transparent;border:1.5px solid var(--ink);border-radius:999px;min-height:38px;padding:0 14px;cursor:pointer}
+.bar button[aria-pressed="true"],.bar button.on{background:var(--ink);color:var(--board)}
+.bar button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.bar .sp{flex:1}
+html.short .bar{display:none}
+html.short .wrap,html.embed .wrap{border-radius:0;border:0}
+.d{font-family:'Archivo',system-ui,sans-serif;font-weight:800;fill:var(--ink)}
+.k{font-family:'IBM Plex Mono',monospace;font-weight:500;letter-spacing:.14em;text-transform:uppercase;fill:var(--acc)}
+.b{font-family:'IBM Plex Sans',system-ui,sans-serif;fill:var(--ink)}
+.m{fill:var(--dim)}
+.court{fill:none;stroke:var(--ink);stroke-linecap:round;stroke-linejoin:round}
+.beat{transition:opacity .2s}
+html.short .beat{transition:none}
+</style></head><body>
+<div class="wrap">
+<svg id="sv" role="img" aria-label="Animated whiteboard explaining a Spain pick-and-roll: the big sets a ball screen for the ball handler, a shooter comes behind the play and sets a back screen on the big's defender, the big rolls to the rim behind it and catches the pass for a layup, while the shooter pops out to the three-point line as the other option. Positions are illustrative."></svg>
+<div class="bar"><button id="pp" type="button">Pause</button><button id="slow" type="button" aria-pressed="false">Slow motion</button><button id="again" type="button">Replay</button><span class="sp"></span><span id="jumps"></span></div>
+</div>
+<script>
+if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add('embed');
+if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add('short');
+(function () {
+  const CFG = {"slug": "xo-spain-pick-and-roll", "kicker": "X's and O's in 20 seconds", "title": "What's a Spain pick-and-roll?", "situation": "A ball screen with a second screen behind it", "aria": "Animated whiteboard explaining a Spain pick-and-roll: the big sets a ball screen for the ball handler, a shooter comes behind the play and sets a back screen on the big's defender, the big rolls to the rim behind it and catches the pass for a layup, while the shooter pops out to the three-point line as the other option. Positions are illustrative.", "note": "Original illustration of a typical Spain pick-and-roll. Spots on the floor are illustrative.", "total": 14.4, "players": {"1": {"side": "o", "num": 1, "name": "Handler", "x": 0, "y": 35}, "2": {"side": "o", "num": 2, "name": "Shooter", "x": 15, "y": 20}, "3": {"side": "o", "num": 3, "x": -21, "y": 4}, "4": {"side": "o", "num": 4, "x": 21, "y": 4}, "5": {"side": "o", "num": 5, "name": "Big", "x": -9, "y": 18}, "x1": {"side": "d", "x": 0, "y": 31.8}, "x2": {"side": "d", "x": 12.5, "y": 18}, "x3": {"side": "d", "x": -17.5, "y": 7}, "x4": {"side": "d", "x": 17.5, "y": 7}, "x5": {"side": "d", "x": -6.5, "y": 16}}, "ball": "1", "actions": [{"type": "move", "who": "5", "t": [0.75, 2.55], "path": [[-9, 18], [-6, 26], [-2.6, 32.6]]}, {"type": "move", "who": "x5", "trail": false, "t": [0.9, 2.7], "path": [[-6.5, 16], [-4.5, 22], [-3, 26]]}, {"type": "screen", "who": "5", "t": [2.55, 5.1], "angle": -17}, {"type": "move", "who": "1", "t": [3.0, 5.4], "path": [[0, 35], [-4.5, 37.5], [-9.8, 33.5], [-12.5, 27.5]]}, {"type": "move", "who": "x1", "trail": false, "t": [3.45, 5.85], "path": [[0, 31.8], [-3.6, 31.6], [-9.6, 29]]}, {"type": "move", "who": "2", "t": [3.0, 5.4], "path": [[15, 20], [8, 19], [1, 20.5], [-2.2, 22.5]]}, {"type": "move", "who": "x2", "trail": false, "t": [3.3, 5.7], "path": [[12.5, 18], [6, 17.5], [2.5, 20.2]]}, {"type": "screen", "who": "2", "t": [5.4, 9.3], "angle": 103}, {"type": "move", "who": "5", "key": true, "t": [5.55, 8.1], "path": [[-2.6, 32.6], [-0.5, 28.5], [1, 22.5], [0.6, 13], [0, 7.5]]}, {"type": "move", "who": "x5", "trail": false, "t": [5.85, 6.6], "path": [[-3, 26], [-3.4, 24.6]]}, {"type": "move", "who": "x5", "trail": false, "t": [7.8, 9.6], "path": [[-3.4, 24.6], [-4.6, 19], [-2.6, 11.5]]}, {"type": "move", "who": "x2", "trail": false, "t": [7.2, 8.4], "path": [[2.5, 20.2], [2, 15]]}, {"type": "move", "who": "2", "t": [8.1, 9.9], "path": [[-2.2, 22.5], [-1.6, 25.5], [1.2, 27.6]]}, {"type": "pass", "from": "1", "to": "5", "t": [8.1, 9.0]}, {"type": "shot", "who": "5", "plus": "+2", "t": [9.45, 10.65]}], "beats": [{"t": 0, "title": "The ball screen", "text": "The big comes up and screens for the ball handler."}, {"t": 3.3, "title": "The screen behind it", "text": "Then a shooter slips in behind the big's defender and screens him."}, {"t": 5.55, "title": "The roll", "text": "The big rolls to the rim. His defender is stuck on the second screen."}, {"t": 8.1, "title": "Two options", "text": "Lob to the big at the rim, or kick it to the shooter popping out for three."}], "sources": []};
+  const NS = 'http://www.w3.org/2000/svg';
+  const S = (tag, a, p) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+  const T = (p, x, y, txt, cls, size, anchor) => { const e = S('text', {x, y, class: cls, 'text-anchor': anchor || 'start'}, p); e.style.fontSize = size + 'px'; e.textContent = txt; return e; };
+  const clamp = (v, a = 0, b = 1) => Math.max(a, Math.min(b, v));
+  const lerp = (a, b, p) => a + (b - a) * p;
+  const ease = (p) => p < .5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+  const svg = document.getElementById('sv');
+  const short = document.documentElement.classList.contains('short');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const TOTAL = CFG.total;
+  // polyline helpers: length, point at fraction
+  const plen = (pts) => { let L = 0; for (let i = 1; i < pts.length; i++) L += Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]); return L; };
+  const pat = (pts, f) => { const L = plen(pts) * clamp(f); let acc = 0; for (let i = 1; i < pts.length; i++) { const d = Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]); if (acc + d >= L) { const q = d ? (L - acc) / d : 0; return [lerp(pts[i - 1][0], pts[i][0], q), lerp(pts[i - 1][1], pts[i][1], q)]; } acc += d; } return pts[pts.length - 1].slice(); };
+  // smooth a polyline with Catmull-Rom so cuts curve like marker strokes
+  const smooth = (pts) => { if (pts.length < 3) return pts; const o = []; for (let i = 0; i < pts.length - 1; i++) { const p0 = pts[Math.max(0, i - 1)], p1 = pts[i], p2 = pts[i + 1], p3 = pts[Math.min(pts.length - 1, i + 2)]; for (let s = 0; s < 8; s++) { const t = s / 8, t2 = t * t, t3 = t2 * t; o.push([0.5 * ((2 * p1[0]) + (-p0[0] + p2[0]) * t + (2 * p0[0] - 5 * p1[0] + 4 * p2[0] - p3[0]) * t2 + (-p0[0] + 3 * p1[0] - 3 * p2[0] + p3[0]) * t3), 0.5 * ((2 * p1[1]) + (-p0[1] + p2[1]) * t + (2 * p0[1] - 5 * p1[1] + 4 * p2[1] - p3[1]) * t2 + (-p0[1] + 3 * p1[1] - 3 * p2[1] + p3[1]) * t3)]); } } o.push(pts[pts.length - 1]); return o; };
+  CFG.actions.forEach((a) => { if (a.path) a.sp = smooth(a.path); });
+  // wrap a text element's words onto tspans no wider than maxW (returns the line count)
+  const wrap = (tx, x, maxW) => { const words = tx.textContent.split(' '); tx.textContent = ''; let line = S('tspan', {x}, tx), n = 1;
+    words.forEach((wd) => { const prev = line.textContent; line.textContent = prev ? prev + ' ' + wd : wd; if (line.getComputedTextLength() > maxW && prev) { line.textContent = prev; line = S('tspan', {x, dy: '1.25em'}, tx); line.textContent = wd; n += 1; } }); return n; };
+
+  let L, draw;
+  function build() {
+    const tall = short || svg.parentNode.getBoundingClientRect().width < 700;
+    const W = short ? 900 : tall ? 800 : 1280, H = short ? 1600 : tall ? 1580 : 780, M = short ? 56 : 40;
+    let s, cx, cy, top;
+    // 5 extra feet on the left so a sideline inbounder and his name fit
+    if (short) { top = 300; s = (W - 2 * M) / 55; }
+    else if (tall) { top = 190; s = (W - 2 * M) / 55; }
+    else { top = 160; s = (H - top - 56) / 47; }
+    cx = tall ? M + 30 * s : M + 30 * s; cy = top;   // court origin: center of the baseline
+    const P = (x, y) => [cx + x * s, cy + y * s];
+    L = {W, H, M, s, P, tall, short};
+    svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+    svg.replaceChildren();
+    const defs = S('defs', {}, svg);
+    const mk = (id, col) => { const m = S('marker', {id, viewBox: '0 0 10 10', refX: 6, refY: 5, markerWidth: 5, markerHeight: 5, orient: 'auto-start-reverse'}, defs); S('path', {d: 'M0 0L10 5L0 10z', fill: col}, m); };
+    mk('ar-ink', '#16181d'); mk('ar-acc', '#FF5A1F');
+    const F = (v) => v.toFixed(1);
+    // header
+    const ks = short ? 26 : tall ? 20 : 16, ts = short ? 64 : tall ? 46 : 40;
+    T(svg, M, short ? 96 : M + 14, CFG.kicker, 'k', ks);
+    const title = T(svg, M, (short ? 96 : M + 14) + ts + 6, CFG.title, 'd', ts);
+    // long titles shrink to fit the width instead of running off the board
+    if (title.getComputedTextLength && title.getComputedTextLength() > W - 2 * M) title.style.fontSize = (ts * (W - 2 * M) / title.getComputedTextLength()) + 'px';
+    T(svg, M, (short ? 96 : M + 14) + ts + 6 + (short ? 50 : 30), CFG.situation, 'b m', short ? 30 : tall ? 22 : 18);
+    // court
+    const g = S('g', {class: 'court', 'stroke-width': F(s * 0.22)}, svg);
+    const [x0, y0] = P(-25, 0), [x1, y1] = P(25, 47);
+    S('rect', {x: F(x0), y: F(y0), width: F(x1 - x0), height: F(y1 - y0), rx: F(s * 0.6)}, g);
+    const [px0, py0] = P(-8, 0), [px1, py1] = P(8, 19);
+    S('rect', {x: F(px0), y: F(py0), width: F(px1 - px0), height: F(py1 - py0)}, g);
+    const [fc, fy] = P(0, 19); S('circle', {cx: F(fc), cy: F(fy), r: F(6 * s)}, g);
+    const arcR = 23.75 * s, [hx, hy] = P(0, 5.25), cornerY = 5.25 + Math.sqrt(23.75 * 23.75 - 22 * 22);
+    const [lx0, ly0] = P(-22, 0), [lx1, ly1] = P(-22, cornerY), [rx1, ry1] = P(22, cornerY), [rx0, ry0] = P(22, 0);
+    S('path', {d: `M${F(lx0)} ${F(ly0)}L${F(lx1)} ${F(ly1)}A${F(arcR)} ${F(arcR)} 0 0 0 ${F(rx1)} ${F(ry1)}L${F(rx0)} ${F(ry0)}`}, g);
+    const [bx0, by] = P(-3, 4), [bx1] = P(3, 4); S('path', {d: `M${F(bx0)} ${F(by)}L${F(bx1)} ${F(by)}`, 'stroke-width': F(s * 0.35)}, g);
+    S('circle', {cx: F(hx), cy: F(hy), r: F(0.9 * s), stroke: '#FF5A1F'}, g);
+    const [hc, hcy] = P(0, 47); S('path', {d: `M${F(hc - 6 * s)} ${F(hcy)}A${F(6 * s)} ${F(6 * s)} 0 0 1 ${F(hc + 6 * s)} ${F(hcy)}`}, g);
+    // clock and score
+    const sbY = tall ? y1 + (short ? 70 : 52) : top - 6, sbX = tall ? M : x1 + 40;
+    const clock = T(svg, tall ? W - M : W - M, tall ? sbY : M + 14 + ts + 6, '', 'd', short ? 64 : tall ? 44 : 40, 'end');
+    const score = T(svg, tall ? M : x1 + 40, tall ? sbY : M + 14 + ts + 6, '', 'd', short ? 44 : tall ? 30 : 26);
+    if (!tall) { clock.setAttribute('y', top + 40); score.setAttribute('y', top + 40); }
+    // beats panel
+    const beats = CFG.beats.map((b, i) => {
+      let x, y, w;
+      if (short) { x = M; y = sbY + 90; w = W - 2 * M; }
+      else if (tall) { x = M; y = sbY + 44 + i * 112; w = W - 2 * M; }
+      else { x = x1 + 40; y = top + 100 + i * 92; w = W - M - x; }
+      const bg = S('g', {class: 'beat'}, svg);
+      const ns = short ? 56 : tall ? 36 : 30;
+      T(bg, x, y + ns, String(i + 1), 'd', ns);
+      T(bg, x + ns * 1.1, y + ns * 0.78, b.title, 'd', short ? 50 : tall ? 30 : 24);
+      const tx = T(bg, x + ns * 1.1, y + ns * 0.78 + (short ? 58 : tall ? 36 : 30), b.text, 'b', short ? 38 : tall ? 24 : 17);
+      // wrap the description to the panel width
+      wrap(tx, x + ns * 1.1, w - ns * 1.1);
+      return bg;
+    });
+    const note = T(svg, M, short ? H - 170 : H - (tall ? 52 : 22), CFG.note, 'b m', short ? 24 : tall ? 18 : 14); if (short || tall) wrap(note, M, W - 2 * M);
+    if (short) {
+      T(svg, M, H - 70, 'BOX & MOTION HOOPS', 'd', 36);
+      T(svg, W - M, H - 70, 'boxandmotion.com', 'b m', 28, 'end');
+    }
+    // layers: trails under players
+    const trails = S('g', {}, svg), marks = S('g', {}, svg), people = S('g', {}, svg), top2 = S('g', {}, svg);
+    const trailEls = CFG.actions.map((a) => {
+      if (a.type === 'move' && a.trail !== false) {
+        const d = 'M' + a.sp.map((p) => P(p[0], p[1]).map(F).join(' ')).join('L');
+        const acc = !!a.key;
+        const el = S('path', {d, fill: 'none', stroke: acc ? '#FF5A1F' : '#16181d', 'stroke-width': F(s * (acc ? 0.34 : 0.26)), 'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'marker-end': `url(#ar-${acc ? 'acc' : 'ink'})`}, trails);
+        const len = el.getTotalLength(); el.style.strokeDasharray = len; el.style.strokeDashoffset = len; el.__len = len; return el;
+      }
+      if (a.type === 'pass') { const el = S('path', {fill: 'none', stroke: '#16181d', 'stroke-width': F(s * 0.24), 'stroke-dasharray': `${F(s)} ${F(s * 0.7)}`, 'stroke-linecap': 'round', 'marker-end': 'url(#ar-ink)'}, trails); return el; }
+      if (a.type === 'screen') { return S('path', {fill: 'none', stroke: '#16181d', 'stroke-width': F(s * 0.42), 'stroke-linecap': 'round'}, marks); }
+      return null;
+    });
+    // players
+    const R = 1.45 * s;
+    const peeps = {};
+    Object.entries(CFG.players).forEach(([id, p]) => {
+      const pg = S('g', {}, people);
+      if (p.side === 'd') {
+        const d = 0.95 * s;
+        S('path', {d: `M${-d} ${-d}L${d} ${d}M${d} ${-d}L${-d} ${d}`, stroke: '#7d828c', 'stroke-width': F(s * 0.36), 'stroke-linecap': 'round'}, pg);
+      } else {
+        S('circle', {r: F(R), fill: 'var(--c1)', stroke: '#16181d', 'stroke-width': F(s * 0.14)}, pg);
+        const n = T(pg, 0, R * 0.42, String(p.num), 'd', R * 1.2, 'middle'); n.style.fill = '#fff';
+        if (p.name) { const nm = T(pg, 0, R + (short ? 30 : 20), p.name, 'b', short ? 24 : tall ? 16 : 15, 'middle'); nm.style.fontWeight = 600; }
+      }
+      peeps[id] = pg;
+    });
+    const ball = S('circle', {r: F(0.62 * s), fill: '#FF5A1F', stroke: '#16181d', 'stroke-width': F(s * 0.1)}, top2);
+    const plus = T(top2, 0, 0, (CFG.actions.find((a) => a.type === 'shot') || {}).plus || '+3', 'd', short ? 72 : 48, 'middle'); plus.style.fill = '#FF5A1F';
+
+    // where is a player at time t (feet)
+    const posAt = (id, t) => {
+      let p = [CFG.players[id].x, CFG.players[id].y];
+      CFG.actions.forEach((a) => { if (a.type === 'move' && a.who === id && t >= a.t[0]) p = pat(a.sp, ease(clamp((t - a.t[0]) / (a.t[1] - a.t[0])))); });
+      return p;
+    };
+    const fmtClock = (v) => v.toFixed(1);
+    draw = (t) => {
+      Object.keys(peeps).forEach((id) => { const [x, y] = P(...posAt(id, t)); peeps[id].setAttribute('transform', `translate(${F(x)} ${F(y)})`); });
+      CFG.actions.forEach((a, i) => {
+        const el = trailEls[i]; if (!el) return;
+        const p = clamp((t - a.t[0]) / (a.t[1] - a.t[0]));
+        if (a.type === 'move') { el.style.strokeDashoffset = el.__len * (1 - ease(p)); el.style.opacity = p <= 0 ? 0 : t > a.t[1] + 2.2 ? .35 : 1; el.setAttribute('marker-end', p > .96 ? `url(#ar-${a.key ? 'acc' : 'ink'})` : ''); }
+        if (a.type === 'pass') {
+          const A = P(...posAt(a.from, a.t[0])), B = P(...posAt(a.to, a.t[1]));
+          const q = ease(p), E = [lerp(A[0], B[0], q), lerp(A[1], B[1], q)];
+          el.setAttribute('d', t < a.t[0] ? 'M0 0' : `M${F(A[0])} ${F(A[1])}L${F(E[0])} ${F(E[1])}`);
+        }
+        if (a.type === 'screen') {
+          const on = t >= a.t[0] ? clamp((t - a.t[0]) / 0.3) : 0;
+          const [x, y] = P(...posAt(a.who, a.t[0])), ang = a.angle * Math.PI / 180, r = R + 0.5 * s, w = 1.4 * s * on;
+          const c = [x + Math.cos(ang) * r, y + Math.sin(ang) * r], n = [-Math.sin(ang), Math.cos(ang)];
+          el.setAttribute('d', on ? `M${F(c[0] - n[0] * w)} ${F(c[1] - n[1] * w)}L${F(c[0] + n[0] * w)} ${F(c[1] + n[1] * w)}` : 'M0 0');
+        }
+      });
+      // ball: with the holder, along a pass, or on the shot
+      let bp = P(...posAt(CFG.ball, t)), br = 0.62 * s; let holder = CFG.ball;
+      plus.style.opacity = 0;
+      CFG.actions.forEach((a) => {
+        if (a.type === 'pass' && t >= a.t[0]) {
+          if (t < a.t[1]) { const A = P(...posAt(a.from, a.t[0])), B = P(...posAt(a.to, a.t[1])), q = ease((t - a.t[0]) / (a.t[1] - a.t[0])); bp = [lerp(A[0], B[0], q), lerp(A[1], B[1], q)]; holder = null; }
+          else { holder = a.to; bp = P(...posAt(a.to, t)); }
+        }
+        if (a.type === 'shot' && t >= a.t[0]) {
+          const A = P(...posAt(a.who, a.t[0])), H2 = P(0, 5.25), q = clamp((t - a.t[0]) / (a.t[1] - a.t[0]));
+          bp = [lerp(A[0], H2[0], q), lerp(A[1], H2[1], q) - Math.sin(q * Math.PI) * 3 * s]; br = 0.62 * s * (1 + 0.9 * Math.sin(q * Math.PI)); holder = null;
+          if (q >= 1) { br = 0.62 * s * Math.max(0.5, 1 - (t - a.t[1]) * 2); }
+          if (t > a.t[1]) { plus.style.opacity = clamp((t - a.t[1]) / 0.25); plus.setAttribute('x', F(H2[0] + 5 * s)); plus.setAttribute('y', F(H2[1] + 1.5 * s)); }
+        }
+      });
+      if (holder) { bp = [bp[0] + R * 0.85, bp[1] - R * 0.85]; }
+      ball.setAttribute('cx', F(bp[0])); ball.setAttribute('cy', F(bp[1])); ball.setAttribute('r', F(br));
+      // clock: frozen until the catch, runs to the release
+      if (CFG.clock) { const c = CFG.clock, cq = clamp((t - c.run) / (c.stop - c.run)); clock.textContent = fmtClock(lerp(c.start, c.end, cq)); }
+      if (CFG.score) score.textContent = t >= CFG.score.at ? CFG.score.after : CFG.score.before;
+      // active beat
+      let k = 0; CFG.beats.forEach((b, i) => { if (t >= b.t) k = i; });
+      beats.forEach((b, i) => { b.style.opacity = short ? (i === k ? 1 : 0) : (i === k ? 1 : i < k ? .45 : .22); });
+    };
+    draw(window.__t || 0);
+  }
+
+  // playback
+  let t = 0, last = null, playing = !reduce, speed = 1;
+  window.__t = 0;
+  const tick = (now) => {
+    if (window.__hold) return;
+    if (last != null && playing) { t += (now - last) / 1000 * speed; if (t > TOTAL + 1.5) t = 0; }
+    last = now; window.__t = t; draw(Math.min(t, TOTAL)); requestAnimationFrame(tick);
+  };
+  build();
+  if (reduce) { t = TOTAL; draw(TOTAL); }
+  requestAnimationFrame(tick);
+  let rw = 0; window.addEventListener('resize', () => { clearTimeout(rw); rw = setTimeout(() => { build(); draw(Math.min(t, TOTAL)); }, 120); });
+  const pp = document.getElementById('pp'), slow = document.getElementById('slow');
+  pp.addEventListener('click', () => { playing = !playing; pp.textContent = playing ? 'Pause' : 'Play'; last = null; });
+  slow.addEventListener('click', () => { speed = speed === 1 ? 0.4 : 1; slow.setAttribute('aria-pressed', String(speed !== 1)); });
+  document.getElementById('again').addEventListener('click', () => { t = 0; playing = true; pp.textContent = 'Pause'; });
+  const jumps = document.getElementById('jumps');
+  CFG.beats.forEach((b, i) => { const btn = document.createElement('button'); btn.type = 'button'; btn.textContent = (i + 1) + ' · ' + b.title; btn.addEventListener('click', () => { t = b.t + 0.05; draw(t); }); jumps.appendChild(btn); jumps.appendChild(document.createTextNode(' ')); });
+  window.__A = {render: (x) => draw(x), build, total: TOTAL};
+  // tell a parent page how tall we are, so its iframe fits without scrolling
+  const postH = () => { if (window.parent !== window) window.parent.postMessage({bmH: Math.ceil(document.querySelector('.wrap').getBoundingClientRect().height)}, '*'); };
+  if ('ResizeObserver' in window) new ResizeObserver(postH).observe(document.body); window.addEventListener('load', postH); postH();
+})();
+</script>
+</body></html>
