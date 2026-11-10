@@ -51,24 +51,22 @@ if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add(
 if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add('short');
 (function () {
   const CFG = __CFG__;
-  // Film Room under the board, following the board's own clock (window.__t), so Replay, the step buttons and the loop stay in sync
+  // Film Room under the board. While it plays, the board follows the music's clock (sndClock), so nothing is re-synced mid-play;
+  // Replay, the step buttons, pause, slow motion and the loop move the music once (sndSeek / sndRun).
   let sndBtn = null, sndTxt = null, sndOn = false, audio = null;
+  function sndClock() {
+    if (!sndOn || !audio || audio.paused || audio.seeking || audio.readyState < 3) return null;
+    const c = audio.currentTime; audio.volume = Math.max(0, Math.min(1, (CFG.total + 1.5 - c) / 1.5)); return c;
+  }
+  function sndSeek(x) { if (sndOn && audio) { try { audio.currentTime = x; } catch (e) {} } }
+  function sndRun(go, x) { if (!sndOn || !audio) return; if (go) { sndSeek(x); audio.play().catch(() => {}); } else audio.pause(); }
   function toggleSound() {
     sndOn = !sndOn;
     if (sndTxt) sndTxt.textContent = sndOn ? 'Mute' : '▶ Play with sound';
     if (!audio) { audio = new Audio(CFG.music || '../audio/film-room.mp3'); audio.preload = 'auto'; }
-    if (sndOn) { document.getElementById('again').click(); audio.currentTime = 0; audio.play().catch(() => { sndOn = false; if (sndTxt) sndTxt.textContent = 'Sound unavailable'; }); }
+    if (sndOn) { document.getElementById('again').click(); audio.volume = 1; audio.currentTime = 0; audio.play().catch(() => { sndOn = false; if (sndTxt) sndTxt.textContent = 'Sound unavailable'; }); }
     else audio.pause();
   }
-  setInterval(() => {
-    if (!sndOn || !audio) return;
-    const t = window.__t || 0, END = CFG.total + 1.5;
-    const paused = document.getElementById('pp').textContent === 'Play', slowed = document.getElementById('slow').getAttribute('aria-pressed') === 'true';
-    if (paused || slowed) { if (!audio.paused) audio.pause(); return; }
-    audio.volume = Math.max(0, Math.min(1, (END - t) / 1.5));
-    if (Math.abs(audio.currentTime - t) > 0.3) { try { audio.currentTime = t; } catch (e) {} }
-    if (audio.paused) audio.play().catch(() => {});
-  }, 150);
   const NS = 'http://www.w3.org/2000/svg';
   const S = (tag, a, p) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
   const T = (p, x, y, txt, cls, size, anchor) => { const e = S('text', {x, y, class: cls, 'text-anchor': anchor || 'start'}, p); e.style.fontSize = size + 'px'; e.textContent = txt; return e; };
@@ -250,7 +248,12 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
   window.__t = 0;
   const tick = (now) => {
     if (window.__hold) return;
-    if (last != null && playing) { t += (now - last) / 1000 * speed; if (t > TOTAL + 1.5) t = 0; }
+    if (last != null && playing) {
+      // with sound on, the music is the clock (no seeking while it plays, so it never stutters); otherwise frame time
+      const c = speed === 1 ? sndClock() : null;
+      t = c != null ? c : t + (now - last) / 1000 * speed;
+      if (t > TOTAL + 1.5) { t = 0; sndSeek(0); }
+    }
     last = now; window.__t = t; draw(Math.min(t, TOTAL)); requestAnimationFrame(tick);
   };
   build();
@@ -258,11 +261,11 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
   requestAnimationFrame(tick);
   let rw = 0; window.addEventListener('resize', () => { clearTimeout(rw); rw = setTimeout(() => { build(); draw(Math.min(t, TOTAL)); }, 120); });
   const pp = document.getElementById('pp'), slow = document.getElementById('slow');
-  pp.addEventListener('click', () => { playing = !playing; pp.textContent = playing ? 'Pause' : 'Play'; last = null; });
-  slow.addEventListener('click', () => { speed = speed === 1 ? 0.4 : 1; slow.setAttribute('aria-pressed', String(speed !== 1)); });
-  document.getElementById('again').addEventListener('click', () => { t = 0; playing = true; pp.textContent = 'Pause'; });
+  pp.addEventListener('click', () => { playing = !playing; pp.textContent = playing ? 'Pause' : 'Play'; last = null; sndRun(playing && speed === 1, t); });
+  slow.addEventListener('click', () => { speed = speed === 1 ? 0.4 : 1; slow.setAttribute('aria-pressed', String(speed !== 1)); sndRun(playing && speed === 1, t); });
+  document.getElementById('again').addEventListener('click', () => { t = 0; playing = true; pp.textContent = 'Pause'; sndRun(speed === 1, 0); });
   const jumps = document.getElementById('jumps');
-  CFG.beats.forEach((b, i) => { const btn = document.createElement('button'); btn.type = 'button'; btn.textContent = (i + 1) + ' · ' + b.title; btn.addEventListener('click', () => { t = b.t + 0.05; draw(t); }); jumps.appendChild(btn); jumps.appendChild(document.createTextNode(' ')); });
+  CFG.beats.forEach((b, i) => { const btn = document.createElement('button'); btn.type = 'button'; btn.textContent = (i + 1) + ' · ' + b.title; btn.addEventListener('click', () => { t = b.t + 0.05; draw(t); sndSeek(t); }); jumps.appendChild(btn); jumps.appendChild(document.createTextNode(' ')); });
   window.__A = {render: (x) => draw(x), build, total: TOTAL};
   // tell a parent page how tall we are, so its iframe fits without scrolling
   const postH = () => { if (window.parent !== window) window.parent.postMessage({bmH: Math.ceil(document.querySelector('.wrap').getBoundingClientRect().height)}, '*'); };

@@ -32,24 +32,22 @@ if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add(
 if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add('short');
 (function () {
   const CFG = {"slug": "heat-klay-corner-ato", "team": "MIA", "coach": "Erik Spoelstra", "game": "2026-11-04-heat-at-clippers", "kicker": "Coach's board \u00b7 Erik Spoelstra \u00b7 Heat", "title": "Klay's corner three", "situation": "Heat at Clippers \u00b7 Nov 4 \u00b7 end of overtime", "aria": "Animated whiteboard of the Heat's last play in overtime against the Clippers on Nov 4: down 116-114 with 3.3 seconds left, Klay Thompson sets a pin screen, runs the baseline off a Bam Adebayo screen, catches Giannis Antetokounmpo's inbounds pass in the left corner and hits the winning three with one second left. Positions are illustrative.", "note": "Original illustration. Actions are from published game stories; spots on the floor are illustrative.", "total": 9.4, "players": {"1": {"side": "o", "num": 1, "x": 0, "y": 33}, "2": {"side": "o", "num": 2, "name": "Thompson", "x": 17, "y": 18}, "3": {"side": "o", "num": 3, "x": 8.6, "y": 4.0}, "4": {"side": "o", "num": 4, "name": "Antetokounmpo", "x": -27.2, "y": 27}, "5": {"side": "o", "num": 5, "name": "Adebayo", "x": -7, "y": 17}, "x1": {"side": "d", "x": 0, "y": 29.5}, "x2": {"side": "d", "x": 14.5, "y": 16}, "x3": {"side": "d", "x": 6.0, "y": 5.6}, "x4": {"side": "d", "x": -22.4, "y": 27}, "x5": {"side": "d", "x": -5.5, "y": 14.5}}, "ball": "4", "actions": [{"type": "move", "who": "2", "t": [1.2, 2.3], "path": [[17, 18], [10, 13], [5.6, 9.4]]}, {"type": "move", "who": "x2", "trail": false, "t": [1.2, 2.3], "path": [[14.5, 16], [9.5, 11.8]]}, {"type": "screen", "who": "2", "t": [2.3, 3.3], "angle": -80}, {"type": "move", "who": "3", "t": [2.4, 3.4], "path": [[8.6, 4.0], [12, 7.6], [17, 11.8], [21, 14.5]]}, {"type": "move", "who": "x3", "trail": false, "t": [2.9, 3.9], "path": [[6.0, 5.6], [9.6, 7.6], [13, 9.8]]}, {"type": "move", "who": "5", "t": [2.4, 3.5], "path": [[-7, 17], [-8.6, 11], [-10, 5.4]]}, {"type": "move", "who": "x5", "trail": false, "t": [2.4, 3.6], "path": [[-5.5, 14.5], [-7.8, 8.6]]}, {"type": "move", "who": "2", "key": true, "t": [3.3, 5.0], "path": [[5.6, 9.4], [4.6, 4.2], [0, 2.4], [-9, 2.2], [-21.6, 2.8]]}, {"type": "move", "who": "x2", "trail": false, "t": [3.45, 5.0], "path": [[9.5, 11.8], [5.2, 6.2], [-2, 5.3], [-7.4, 6.4]]}, {"type": "screen", "who": "5", "t": [3.9, 6.4], "angle": 20}, {"type": "pass", "from": "4", "to": "2", "t": [5.0, 5.5]}, {"type": "move", "who": "x5", "trail": false, "t": [5.6, 6.7], "path": [[-7.8, 8.6], [-13, 7], [-17.2, 5.2]]}, {"type": "shot", "who": "2", "t": [6.4, 7.8]}], "beats": [{"t": 0, "title": "The timeout", "text": "Down 116\u2013114, 3.3 seconds left in overtime. Spoelstra draws one up."}, {"t": 1.2, "title": "The pin screen", "text": "Thompson screens first, pinning a defender so a teammate can pop out."}, {"t": 3.3, "title": "The baseline run", "text": "Then he runs the baseline, and Adebayo screens his man off him."}, {"t": 5.0, "title": "The pass", "text": "Antetokounmpo hits him in the left corner. Nobody is there."}, {"t": 6.4, "title": "The shot", "text": "Thompson lets it go. Heat win 117\u2013116 with one second left."}], "clock": {"start": 3.3, "run": 5.5, "stop": 7.8, "end": 1.0}, "score": {"before": "MIA 114 \u00b7 LAC 116", "after": "MIA 117 \u00b7 LAC 116", "at": 7.8}, "final": "Heat 117, Clippers 116 (OT)", "sources": [["Miami Herald via Yahoo Sports: Spoelstra's timeout, Antetokounmpo's inbounds pass, Adebayo's screen", "https://sports.yahoo.com/articles/spoelstra-compares-start-two-significant-185950405.html"], ["Heat On SI: Thompson's pin screen and run across the baseline", "https://www.si.com/nba/heat/onsi/klay-comes-through-miami-heat-escape-on-thompson-s-game-winner-01m6n7b04c8f"], ["Associated Press via Inquirer: left-corner inbounds play, one second left, 117-116", "https://sports.inquirer.net/705288/nba-klay-thompson-hits-game-winner-in-ot-as-heat-rally-past-clippers"], ["South Florida Sun Sentinel via KDH News: after-timeout inbounds play, closing lineup", "https://kdhnews.com/sports/nba/heat-gets-much-needed-overtime-road-win-over-clippers-on-game-winner-from-klay-thompson/article_eb5b3011-5d2e-5320-bacf-e4c2fce66ec4.html"]]};
-  // Film Room under the board, following the board's own clock (window.__t), so Replay, the step buttons and the loop stay in sync
+  // Film Room under the board. While it plays, the board follows the music's clock (sndClock), so nothing is re-synced mid-play;
+  // Replay, the step buttons, pause, slow motion and the loop move the music once (sndSeek / sndRun).
   let sndBtn = null, sndTxt = null, sndOn = false, audio = null;
+  function sndClock() {
+    if (!sndOn || !audio || audio.paused || audio.seeking || audio.readyState < 3) return null;
+    const c = audio.currentTime; audio.volume = Math.max(0, Math.min(1, (CFG.total + 1.5 - c) / 1.5)); return c;
+  }
+  function sndSeek(x) { if (sndOn && audio) { try { audio.currentTime = x; } catch (e) {} } }
+  function sndRun(go, x) { if (!sndOn || !audio) return; if (go) { sndSeek(x); audio.play().catch(() => {}); } else audio.pause(); }
   function toggleSound() {
     sndOn = !sndOn;
     if (sndTxt) sndTxt.textContent = sndOn ? 'Mute' : '▶ Play with sound';
     if (!audio) { audio = new Audio(CFG.music || '../audio/film-room.mp3'); audio.preload = 'auto'; }
-    if (sndOn) { document.getElementById('again').click(); audio.currentTime = 0; audio.play().catch(() => { sndOn = false; if (sndTxt) sndTxt.textContent = 'Sound unavailable'; }); }
+    if (sndOn) { document.getElementById('again').click(); audio.volume = 1; audio.currentTime = 0; audio.play().catch(() => { sndOn = false; if (sndTxt) sndTxt.textContent = 'Sound unavailable'; }); }
     else audio.pause();
   }
-  setInterval(() => {
-    if (!sndOn || !audio) return;
-    const t = window.__t || 0, END = CFG.total + 1.5;
-    const paused = document.getElementById('pp').textContent === 'Play', slowed = document.getElementById('slow').getAttribute('aria-pressed') === 'true';
-    if (paused || slowed) { if (!audio.paused) audio.pause(); return; }
-    audio.volume = Math.max(0, Math.min(1, (END - t) / 1.5));
-    if (Math.abs(audio.currentTime - t) > 0.3) { try { audio.currentTime = t; } catch (e) {} }
-    if (audio.paused) audio.play().catch(() => {});
-  }, 150);
   const NS = 'http://www.w3.org/2000/svg';
   const S = (tag, a, p) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
   const T = (p, x, y, txt, cls, size, anchor) => { const e = S('text', {x, y, class: cls, 'text-anchor': anchor || 'start'}, p); e.style.fontSize = size + 'px'; e.textContent = txt; return e; };
@@ -231,7 +229,12 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
   window.__t = 0;
   const tick = (now) => {
     if (window.__hold) return;
-    if (last != null && playing) { t += (now - last) / 1000 * speed; if (t > TOTAL + 1.5) t = 0; }
+    if (last != null && playing) {
+      // with sound on, the music is the clock (no seeking while it plays, so it never stutters); otherwise frame time
+      const c = speed === 1 ? sndClock() : null;
+      t = c != null ? c : t + (now - last) / 1000 * speed;
+      if (t > TOTAL + 1.5) { t = 0; sndSeek(0); }
+    }
     last = now; window.__t = t; draw(Math.min(t, TOTAL)); requestAnimationFrame(tick);
   };
   build();
@@ -239,11 +242,11 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
   requestAnimationFrame(tick);
   let rw = 0; window.addEventListener('resize', () => { clearTimeout(rw); rw = setTimeout(() => { build(); draw(Math.min(t, TOTAL)); }, 120); });
   const pp = document.getElementById('pp'), slow = document.getElementById('slow');
-  pp.addEventListener('click', () => { playing = !playing; pp.textContent = playing ? 'Pause' : 'Play'; last = null; });
-  slow.addEventListener('click', () => { speed = speed === 1 ? 0.4 : 1; slow.setAttribute('aria-pressed', String(speed !== 1)); });
-  document.getElementById('again').addEventListener('click', () => { t = 0; playing = true; pp.textContent = 'Pause'; });
+  pp.addEventListener('click', () => { playing = !playing; pp.textContent = playing ? 'Pause' : 'Play'; last = null; sndRun(playing && speed === 1, t); });
+  slow.addEventListener('click', () => { speed = speed === 1 ? 0.4 : 1; slow.setAttribute('aria-pressed', String(speed !== 1)); sndRun(playing && speed === 1, t); });
+  document.getElementById('again').addEventListener('click', () => { t = 0; playing = true; pp.textContent = 'Pause'; sndRun(speed === 1, 0); });
   const jumps = document.getElementById('jumps');
-  CFG.beats.forEach((b, i) => { const btn = document.createElement('button'); btn.type = 'button'; btn.textContent = (i + 1) + ' · ' + b.title; btn.addEventListener('click', () => { t = b.t + 0.05; draw(t); }); jumps.appendChild(btn); jumps.appendChild(document.createTextNode(' ')); });
+  CFG.beats.forEach((b, i) => { const btn = document.createElement('button'); btn.type = 'button'; btn.textContent = (i + 1) + ' · ' + b.title; btn.addEventListener('click', () => { t = b.t + 0.05; draw(t); sndSeek(t); }); jumps.appendChild(btn); jumps.appendChild(document.createTextNode(' ')); });
   window.__A = {render: (x) => draw(x), build, total: TOTAL};
   // tell a parent page how tall we are, so its iframe fits without scrolling
   const postH = () => { if (window.parent !== window) window.parent.postMessage({bmH: Math.ceil(document.querySelector('.wrap').getBoundingClientRect().height)}, '*'); };

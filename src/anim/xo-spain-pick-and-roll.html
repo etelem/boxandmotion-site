@@ -32,24 +32,22 @@ if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add(
 if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add('short');
 (function () {
   const CFG = {"slug": "xo-spain-pick-and-roll", "kicker": "X's and O's in 20 seconds", "title": "What's a Spain pick-and-roll?", "situation": "A ball screen with a second screen behind it", "aria": "Animated whiteboard explaining a Spain pick-and-roll: the big sets a ball screen for the ball handler, a shooter comes behind the play and sets a back screen on the big's defender, the big rolls to the rim behind it and catches the pass for a layup, while the shooter pops out to the three-point line as the other option. Positions are illustrative.", "note": "Original illustration of a typical Spain pick-and-roll. Spots on the floor are illustrative.", "total": 14.4, "players": {"1": {"side": "o", "num": 1, "name": "Handler", "x": 0, "y": 35}, "2": {"side": "o", "num": 2, "name": "Shooter", "x": 15, "y": 20}, "3": {"side": "o", "num": 3, "x": -21, "y": 4}, "4": {"side": "o", "num": 4, "x": 21, "y": 4}, "5": {"side": "o", "num": 5, "name": "Big", "x": -9, "y": 18}, "x1": {"side": "d", "x": 0, "y": 31.8}, "x2": {"side": "d", "x": 12.5, "y": 18}, "x3": {"side": "d", "x": -17.5, "y": 7}, "x4": {"side": "d", "x": 17.5, "y": 7}, "x5": {"side": "d", "x": -6.5, "y": 16}}, "ball": "1", "actions": [{"type": "move", "who": "5", "t": [0.75, 2.55], "path": [[-9, 18], [-6, 26], [-2.6, 32.6]]}, {"type": "move", "who": "x5", "trail": false, "t": [0.9, 2.7], "path": [[-6.5, 16], [-4.5, 22], [-3, 26]]}, {"type": "screen", "who": "5", "t": [2.55, 5.1], "angle": -17}, {"type": "move", "who": "1", "t": [3.0, 5.4], "path": [[0, 35], [-4.5, 37.5], [-9.8, 33.5], [-12.5, 27.5]]}, {"type": "move", "who": "x1", "trail": false, "t": [3.45, 5.85], "path": [[0, 31.8], [-3.6, 31.6], [-9.6, 29]]}, {"type": "move", "who": "2", "t": [3.0, 5.4], "path": [[15, 20], [8, 19], [1, 20.5], [-2.2, 22.5]]}, {"type": "move", "who": "x2", "trail": false, "t": [3.3, 5.7], "path": [[12.5, 18], [6, 17.5], [2.5, 20.2]]}, {"type": "screen", "who": "2", "t": [5.4, 9.3], "angle": 103}, {"type": "move", "who": "5", "key": true, "t": [5.55, 8.1], "path": [[-2.6, 32.6], [-0.5, 28.5], [1, 22.5], [0.6, 13], [0, 7.5]]}, {"type": "move", "who": "x5", "trail": false, "t": [5.85, 6.6], "path": [[-3, 26], [-3.4, 24.6]]}, {"type": "move", "who": "x5", "trail": false, "t": [7.8, 9.6], "path": [[-3.4, 24.6], [-4.6, 19], [-2.6, 11.5]]}, {"type": "move", "who": "x2", "trail": false, "t": [7.2, 8.4], "path": [[2.5, 20.2], [2, 15]]}, {"type": "move", "who": "2", "t": [8.1, 9.9], "path": [[-2.2, 22.5], [-1.6, 25.5], [1.2, 27.6]]}, {"type": "pass", "from": "1", "to": "5", "t": [8.1, 9.0]}, {"type": "shot", "who": "5", "plus": "+2", "t": [9.45, 10.65]}], "beats": [{"t": 0, "title": "The ball screen", "text": "The big comes up and screens for the ball handler."}, {"t": 3.3, "title": "The screen behind it", "text": "Then a shooter slips in behind the big's defender and screens him."}, {"t": 5.55, "title": "The roll", "text": "The big rolls to the rim. His defender is stuck on the second screen."}, {"t": 8.1, "title": "Two options", "text": "Lob to the big at the rim, or kick it to the shooter popping out for three."}], "sources": []};
-  // Film Room under the board, following the board's own clock (window.__t), so Replay, the step buttons and the loop stay in sync
+  // Film Room under the board. While it plays, the board follows the music's clock (sndClock), so nothing is re-synced mid-play;
+  // Replay, the step buttons, pause, slow motion and the loop move the music once (sndSeek / sndRun).
   let sndBtn = null, sndTxt = null, sndOn = false, audio = null;
+  function sndClock() {
+    if (!sndOn || !audio || audio.paused || audio.seeking || audio.readyState < 3) return null;
+    const c = audio.currentTime; audio.volume = Math.max(0, Math.min(1, (CFG.total + 1.5 - c) / 1.5)); return c;
+  }
+  function sndSeek(x) { if (sndOn && audio) { try { audio.currentTime = x; } catch (e) {} } }
+  function sndRun(go, x) { if (!sndOn || !audio) return; if (go) { sndSeek(x); audio.play().catch(() => {}); } else audio.pause(); }
   function toggleSound() {
     sndOn = !sndOn;
     if (sndTxt) sndTxt.textContent = sndOn ? 'Mute' : '▶ Play with sound';
     if (!audio) { audio = new Audio(CFG.music || '../audio/film-room.mp3'); audio.preload = 'auto'; }
-    if (sndOn) { document.getElementById('again').click(); audio.currentTime = 0; audio.play().catch(() => { sndOn = false; if (sndTxt) sndTxt.textContent = 'Sound unavailable'; }); }
+    if (sndOn) { document.getElementById('again').click(); audio.volume = 1; audio.currentTime = 0; audio.play().catch(() => { sndOn = false; if (sndTxt) sndTxt.textContent = 'Sound unavailable'; }); }
     else audio.pause();
   }
-  setInterval(() => {
-    if (!sndOn || !audio) return;
-    const t = window.__t || 0, END = CFG.total + 1.5;
-    const paused = document.getElementById('pp').textContent === 'Play', slowed = document.getElementById('slow').getAttribute('aria-pressed') === 'true';
-    if (paused || slowed) { if (!audio.paused) audio.pause(); return; }
-    audio.volume = Math.max(0, Math.min(1, (END - t) / 1.5));
-    if (Math.abs(audio.currentTime - t) > 0.3) { try { audio.currentTime = t; } catch (e) {} }
-    if (audio.paused) audio.play().catch(() => {});
-  }, 150);
   const NS = 'http://www.w3.org/2000/svg';
   const S = (tag, a, p) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
   const T = (p, x, y, txt, cls, size, anchor) => { const e = S('text', {x, y, class: cls, 'text-anchor': anchor || 'start'}, p); e.style.fontSize = size + 'px'; e.textContent = txt; return e; };
@@ -231,7 +229,12 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
   window.__t = 0;
   const tick = (now) => {
     if (window.__hold) return;
-    if (last != null && playing) { t += (now - last) / 1000 * speed; if (t > TOTAL + 1.5) t = 0; }
+    if (last != null && playing) {
+      // with sound on, the music is the clock (no seeking while it plays, so it never stutters); otherwise frame time
+      const c = speed === 1 ? sndClock() : null;
+      t = c != null ? c : t + (now - last) / 1000 * speed;
+      if (t > TOTAL + 1.5) { t = 0; sndSeek(0); }
+    }
     last = now; window.__t = t; draw(Math.min(t, TOTAL)); requestAnimationFrame(tick);
   };
   build();
@@ -239,11 +242,11 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
   requestAnimationFrame(tick);
   let rw = 0; window.addEventListener('resize', () => { clearTimeout(rw); rw = setTimeout(() => { build(); draw(Math.min(t, TOTAL)); }, 120); });
   const pp = document.getElementById('pp'), slow = document.getElementById('slow');
-  pp.addEventListener('click', () => { playing = !playing; pp.textContent = playing ? 'Pause' : 'Play'; last = null; });
-  slow.addEventListener('click', () => { speed = speed === 1 ? 0.4 : 1; slow.setAttribute('aria-pressed', String(speed !== 1)); });
-  document.getElementById('again').addEventListener('click', () => { t = 0; playing = true; pp.textContent = 'Pause'; });
+  pp.addEventListener('click', () => { playing = !playing; pp.textContent = playing ? 'Pause' : 'Play'; last = null; sndRun(playing && speed === 1, t); });
+  slow.addEventListener('click', () => { speed = speed === 1 ? 0.4 : 1; slow.setAttribute('aria-pressed', String(speed !== 1)); sndRun(playing && speed === 1, t); });
+  document.getElementById('again').addEventListener('click', () => { t = 0; playing = true; pp.textContent = 'Pause'; sndRun(speed === 1, 0); });
   const jumps = document.getElementById('jumps');
-  CFG.beats.forEach((b, i) => { const btn = document.createElement('button'); btn.type = 'button'; btn.textContent = (i + 1) + ' · ' + b.title; btn.addEventListener('click', () => { t = b.t + 0.05; draw(t); }); jumps.appendChild(btn); jumps.appendChild(document.createTextNode(' ')); });
+  CFG.beats.forEach((b, i) => { const btn = document.createElement('button'); btn.type = 'button'; btn.textContent = (i + 1) + ' · ' + b.title; btn.addEventListener('click', () => { t = b.t + 0.05; draw(t); sndSeek(t); }); jumps.appendChild(btn); jumps.appendChild(document.createTextNode(' ')); });
   window.__A = {render: (x) => draw(x), build, total: TOTAL};
   // tell a parent page how tall we are, so its iframe fits without scrolling
   const postH = () => { if (window.parent !== window) window.parent.postMessage({bmH: Math.ceil(document.querySelector('.wrap').getBoundingClientRect().height)}, '*'); };
