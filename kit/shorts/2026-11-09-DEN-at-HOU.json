@@ -1,0 +1,52 @@
+{
+  "out": "short-2026-11-09-DEN-HOU.html",
+  "team": "HOU",
+  "home": true,
+  "number": "28",
+  "player": "Alperen Şengün",
+  "build": {
+    "tall": 1.0641,
+    "ape": 1.012,
+    "mass": 1.0306
+  },
+  "build_note": "Listed 6-11, 243 lb (RealGM), reported 7-0 wingspan (SportsBrief)",
+  "kicker": "ROCKETS 110 · NUGGETS 100 · NOV 9",
+  "hook": [
+    "Şengün's reverse",
+    "around Jokić"
+  ],
+  "clock": "Q4 · 4:14",
+  "us": "HOU",
+  "them": "DEN",
+  "score_before": [
+    96,
+    90
+  ],
+  "score_make": [
+    98,
+    90
+  ],
+  "stamp": "REVERSE",
+  "beat": [
+    "Rockets by 8, 4:14 left.",
+    "100–90 with four minutes to go."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Rockets",
+    "them": "Nuggets",
+    "us_pts": 110,
+    "them_pts": 100
+  },
+  "star": {
+    "name": "Alperen Şengün",
+    "big": 20,
+    "big_label": "points, 11 rebounds, 8 assists",
+    "lines": [
+      "9 in the fourth quarter",
+      "Durant: 23, 12 rebounds, 8 assists"
+    ]
+  },
+  "story": "Up 16 early in the third, Houston saw Denver tie it 60–60, then pulled away to snap a two-game skid.",
+  "aria": "Animated Short: Alperen Şengün's reverse baseline layup around Nikola Jokić with 4:14 left that put the Rockets up 98–90. Rockets win 110–100. An original illustration, not traced from footage, not to scale."
+}

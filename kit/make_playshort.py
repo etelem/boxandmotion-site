@@ -198,7 +198,7 @@ __FIGURE_REAL__
     const [dPose, dx, dLift] = defAt(pt, x);
     defender.draw(dPose, dx, floor - dLift * k, k, -1);
     // contact burst (drives only)
-    const cOn = pt > tC - .05 && pt < tC + .6;
+    const cOn = (C.ft_line || C.contact) && pt > tC - .05 && pt < tC + .6; // the contact burst only when there was a foul (and-one)
     burst.setAttribute('transform', `translate(${(x + dx) / 2} ${floor - 175 * k})`);
     burst.setAttribute('opacity', cOn ? (1 - prog(pt, tC + .25, .35)).toFixed(2) : 0);
     // ball
