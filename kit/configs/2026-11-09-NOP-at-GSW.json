@@ -1,0 +1,164 @@
+{
+  "D": "  const D = {\n    date: 'Mon, Nov 9, 2026',\n    us: 138, them: 87, record: '8–3', usName: 'Warriors', themName: 'Pelicans',\n    quarters: [[35, 20], [37, 23], [40, 22], [26, 22]],\n    leadUs: 51, leadThem: 1,\n    star: {name: 'Stephen Curry', stats: [['Points', 25, 30], ['Third-quarter points', 16, 20], ['Free throws made of 9', 9, 9]]},\n    scorers: [\n      {name: 'Stephen Curry', pts: 25, note: '6 of 10 · 9 of 9 FT · 21 minutes'},\n      {name: 'Brandin Podziemski', pts: 25, note: '5 threes · 4 assists'},\n      {name: 'Yaxel Lendeborg', pts: 23, note: '8 of 10 · 4 of 4 from three'},\n      {name: 'De’Anthony Melton', pts: 16, note: 'off the bench · 4 threes'},\n      {name: 'Charles Bassey', pts: 12, note: 'off the bench · 10 rebounds'},\n    ],\n    edges: [\n      {label: 'Threes made', us: 21, them: 8},\n      {label: 'Bench points', us: 60, them: 41},\n      {label: 'Points in the paint', us: 52, them: 38},\n      {label: 'Fast-break points', us: 17, them: 6},\n    ],\n    gaps: [\n      {label: 'Free throws made', us: 17, them: 21},\n    ],\n    next: {opp: 'at Rockets', when: 'Wed, Nov 11, 9:30 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Stephen Curry's 22-foot three with 3:13 left in the third quarter that put the Warriors up 101-61, their first 40-point lead. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Steph from three",
+    "subP": "Steph from three, 3:13 left in the 3rd",
+    "subL": "Steph’s three from 22 feet, 3:13 left in the third",
+    "m0": "Warriors +37",
+    "m1": "Warriors +40",
+    "num": "30",
+    "cap1": "Steph’s three. Warriors by 40.",
+    "cap2": "16 in the third. He sat the fourth.",
+    "clock": [
+      201,
+      193
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Warriors vs Pelicans Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Warriors 138, Pelicans 87 · Nov 9, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Warriors vs.', 'Pelicans'] : ['Warriors vs. Pelicans']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Curry and Podziemski', 'scored 25 each.'] : ['Stephen Curry and Brandin Podziemski scored 25 each in a 51-point win.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Warriors improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Eighth straight win'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Up 29 at the half,', 'won by 51'] : ['Up 29 at the half, won by 51']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Warriors ${D.leadUs}, Pelicans ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Warriors’ margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Steph: 25', 'in 21 minutes'] : ['Steph: 25 points in 21 minutes']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['16 in the third quarter,', 'then he sat.'] : ['16 in the third quarter, then he sat the fourth.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Three 20-point scorers:', '73 of the 138'] : ['Three 20-point scorers combined for 73 of 138']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 30;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it from three', 'and off the bench'] : ['Won it from three and off the bench']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Warriors in gold, Pelicans in gray.', 'Golden State made 21 of 44 threes.'] : ['Warriors in gold, Pelicans in gray. Golden State made 21 of 44 threes.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'5th in the West'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Rockets’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '8–3';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['First team in NBA history to start 0–3', 'and then win eight straight.'] : ['First team in NBA history to start 0–3 and then win eight straight.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Warriors 138 · Pelicans 87 · Nov 9'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Steph from three'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Steph'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 70;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - 375 * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.5));"
+    ],
+    [
+      "    T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "    T(board, bx + 24, by + 38, 'Q3', 'b m', 24);"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 200, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 232, ly, D.themName"
+    ]
+  ],
+  "team": "GSW",
+  "loser_top": [
+    [
+      "Derik Queen",
+      16,
+      "off the bench · 8 of 10 FT · 3 blocks"
+    ],
+    [
+      "Dejounte Murray",
+      12,
+      "5 of 10"
+    ]
+  ],
+  "aria": "Animated recap of the Warriors' 138 to 87 home win over New Orleans: Stephen Curry's three with 3:13 left in the third quarter, quarter-by-quarter scoring, his 25 points in 21 minutes, the top scorers, how the Warriors won, and the next game at Houston.",
+  "notes": [
+    "Box score from the Warriors' 138–87 home win over the New Orleans Pelicans on Nov 9, 2026, from the Covers.com box score, checked against the Digest Sports box score, with game details from the AP (via Yahoo Sports), Field Level Media, NBC Sports Bay Area (via Yahoo Sports), Heavy and Yardbarker. All 138 Warriors points and all 87 Pelicans points are accounted for in both box scores, and the quarter scores add up to both totals and match the AP (35–20 after one, 72–43 at the half). The 51-point lead is the final margin (Covers, Yardbarker); New Orleans' only lead was 3–2 early in the first quarter (Covers, Digest Sports play-by-play). Bench points (60–41) are from NBC Sports Bay Area and match the box score; points in the paint and fast-break points are Covers'. Curry's 16 third-quarter points are from Field Level Media and the play-by-play; he did not play in the fourth (NBC Sports Bay Area says he sat for good in the third). Being the first team in NBA history to start 0–3 and then win eight straight is from Field Level Media and NBC Sports Bay Area. The next game is from Yardbarker and Heavy; the Rockets' record and the Warriors' standing are from the site's standings.",
+    "The play of the game is an original illustration of Stephen Curry's 22-foot three, assisted by Al Horford, with 3:13 left in the third quarter. Field Level Media says the Warriors led by 40, 101–61, at 3:13 of the third; the Digest Sports play-by-play shows that score came on Curry's three, from 98–61. It was the last of his 16 points in the quarter. The recaps don't describe how he got the shot, so it is drawn as a plain three. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Golden State Warriors or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Curry’s listed 6-foot-2 and 200 pounds (Basketball-Reference), with arms scaled to his reported 6-foot-4 wingspan (Sportskeeda), in the Warriors' home white with No. 30, with his approved look. It is an original figure with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "player": "Stephen Curry",
+    "home": true,
+    "tall": 0.9487,
+    "ape": 1.027,
+    "mass": 0.9902,
+    "label": "Stephen Curry, listed 6-2, 200 lb, reported 6-4 wingspan"
+  }
+}

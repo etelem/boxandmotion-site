@@ -1,0 +1,48 @@
+{
+  "out": "short-2026-11-09-IND-DAL.html",
+  "team": "DAL",
+  "home": true,
+  "number": "32",
+  "player": "Cooper Flagg",
+  "play_type": "jumper",
+  "three": false,
+  "build": {
+    "tall": 1.0385,
+    "ape": 1.037,
+    "mass": 0.9582
+  },
+  "build_note": "Listed 6-9, 205 lb (Basketball-Reference), 7-0 wingspan at the 2025 draft combine (CBS Sports)",
+  "kicker": "MAVERICKS 125 · PACERS 122 · NOV 9",
+  "hook": [
+    "Flagg pulls up",
+    "on his way to 43"
+  ],
+  "clock": "Q4 · 26.3",
+  "margins": [
+    "Mavericks +2",
+    "Mavericks +4"
+  ],
+  "stamp": "PULL-UP",
+  "beat": [
+    "Mavericks by 4, 26.3 left.",
+    "Points 42 and 43 of his 43."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Mavericks",
+    "them": "Pacers",
+    "us_pts": 125,
+    "them_pts": 122
+  },
+  "star": {
+    "name": "Cooper Flagg",
+    "big": 43,
+    "big_label": "points on 16-of-25 shooting",
+    "lines": [
+      "10 rebounds, 6 assists",
+      "30 in the second half"
+    ]
+  },
+  "story": "Down 13 in the first half. Dallas won the second half 69–56 and held on, 125–122.",
+  "aria": "Original illustration of Cooper Flagg's 18-foot pull-up with 26.3 seconds left that put the Mavericks up four against Indiana. Not traced from footage, not to scale."
+}

@@ -1,0 +1,160 @@
+{
+  "D": "  const D = {\n    date: 'Mon, Nov 9, 2026',\n    us: 124, them: 112, record: '4–7', usName: 'Hornets', themName: 'Cavaliers',\n    quarters: [[29, 28], [40, 25], [38, 27], [17, 32]],\n    leadUs: 33, leadThem: 9,\n    star: {name: 'Grayson Allen', stats: [['Points', 27, 30], ['Threes made of 12', 6, 12], ['Assists', 6, 10]]},\n    scorers: [\n      {name: 'Grayson Allen', pts: 27, note: '6 threes · 6 assists'},\n      {name: 'Naz Reid', pts: 25, note: '13 rebounds · 4 threes'},\n      {name: 'Tidjane Salaün', pts: 14, note: 'off the bench · 3 of 4 from three'},\n      {name: 'Sion James', pts: 11, note: '3 of 6 from three'},\n      {name: 'Coby White', pts: 10, note: '9 assists'},\n    ],\n    edges: [\n      {label: 'Threes made', us: 23, them: 14},\n      {label: 'Rebounds', us: 49, them: 32},\n      {label: 'Assists', us: 29, them: 27},\n    ],\n    gaps: [\n      {label: 'Points in the paint', us: 34, them: 48},\n      {label: 'Fast-break points', us: 13, them: 18},\n    ],\n    next: {opp: 'at Suns', when: 'Thu, Nov 12, 9:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Royce O'Neale's three from the right wing with 2:40 left that put the Hornets back up 13 after Cleveland had cut it to eight. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "O’Neale’s answer",
+    "subP": "O’Neale from three, 2:40 left",
+    "subL": "O’Neale from the right wing with 2:40 left",
+    "m0": "Hornets +10",
+    "m1": "Hornets +13",
+    "num": "00",
+    "cap1": "O’Neale’s three. Hornets by 13.",
+    "cap2": "Cleveland had cut it to 8.",
+    "clock": [
+      168,
+      160
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Hornets vs Cavaliers Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Hornets 124, Cavaliers 112 · Nov 9, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Hornets vs.', 'Cavaliers'] : ['Hornets vs. Cavaliers']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Allen 27, Reid 25.', 'A six-game skid is over.'] : ['Grayson Allen scored 27 and Naz Reid 25 to end a six-game skid.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Hornets improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Six-game skid snapped'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Up 16 at the half,', 'led by 33'] : ['Up 16 at the half, led by as many as 33']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Hornets ${D.leadUs}, Cavaliers ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Hornets’ margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Allen: 27,', 'six threes'] : ['Allen: 27 points, six threes']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['6 of 12 from three,', '6 assists.'] : ['6 of 12 from three, 8 of 14 overall, 6 assists.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Allen and Reid:', '52 of the 124'] : ['Allen and Reid combined for 52 of 124']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 30;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it from three', 'and on the glass'] : ['Won it from three and on the glass']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Hornets in teal, Cavaliers in gray.', 'Charlotte made 23 of 46 threes.'] : ['Hornets in teal, Cavaliers in gray. Charlotte made 23 of 46 threes.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'10th in the East'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Suns’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '3–6';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Charlotte’s first win', 'since Oct. 26.'] : ['Charlotte’s first win since Oct. 26.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Hornets 124 · Cavaliers 112 · Nov 9'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'O’Neale’s answer'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Allen'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 60;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - 375 * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.5));"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 200, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 232, ly, D.themName"
+    ]
+  ],
+  "team": "CHA",
+  "loser_top": [
+    [
+      "Meleek Thomas",
+      18,
+      "4 of 6 from three"
+    ],
+    [
+      "Peyton Watson",
+      13,
+      "5 of 9"
+    ]
+  ],
+  "aria": "Animated recap of the Hornets' 124 to 112 home win over Cleveland: Royce O'Neale's three with 2:40 left, quarter-by-quarter scoring, Grayson Allen's 27 points, the top scorers, how the Hornets won, and the next game at Phoenix.",
+  "notes": [
+    "Box score from the Hornets' 124–112 home win over the Cleveland Cavaliers on Nov 9, 2026, from the Covers.com box score, with game details from the AP (via Yahoo Sports), Field Level Media, Sports Illustrated's Hornets site, At The Hive and Yardbarker. All 124 Hornets points and all 112 Cavaliers points are accounted for in the box score, and the quarter scores add up to both totals and match Field Level Media's 69–53 halftime score and Yardbarker's 107–80 after three. The 33-point lead is from the AP, Covers and At The Hive; Cleveland's 9-point lead is from Covers and Yardbarker. The 23 threes are Covers' and Sports Illustrated's; points in the paint and fast-break points are Covers'. The end of the six-game losing streak and the first win since Oct. 26 are from the AP. The next game is from the AP and Yardbarker; the Suns' record and the Hornets' standing are from the site's standings.",
+    "The play of the game is an original illustration of Royce O'Neale's three from the right wing with 2:40 left, which put Charlotte back up 13 (the AP). Cleveland had cut it to 118–110 on Meleek Thomas' three with under four minutes left; Ryan Kalkbrenner's tip-in and O'Neale's three followed (Field Level Media), and At The Hive calls it the dagger after Kalkbrenner's offensive rebound. The recaps don't describe how he got the shot, so it is drawn as a plain three. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Charlotte Hornets or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to O'Neale's listed 6-foot-6 and 226 pounds (Wikipedia, RealGM), with arms scaled to his reported 6-foot-9 wingspan (Sportskeeda), in the Hornets' home white with No. 00 (Wikipedia). His look hasn't been approved yet, so he is drawn as a team-colour silhouette. It is an original figure with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "player": "Royce O'Neale",
+    "home": true,
+    "tall": 1.0,
+    "ape": 1.0385,
+    "mass": 1.0253,
+    "label": "Royce O'Neale, listed 6-6, 226 lb, reported 6-9 wingspan"
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "D": "  const D = {\n    date: 'Mon, Nov 9, 2026',\n    us: 125, them: 122, record: '7–4', usName: 'Mavericks', themName: 'Pacers',\n    quarters: [[26, 31], [30, 35], [34, 27], [35, 29]],\n    leadUs: 8, leadThem: 13,\n    star: {name: 'Cooper Flagg', stats: [['Points, a season high', 43, 50], ['Second-half points', 30, 35], ['Shots made of 25', 16, 25]]},\n    scorers: [\n      {name: 'Cooper Flagg', pts: 43, note: '10 rebounds · 16 of 25 · 8 of 8 FT'},\n      {name: 'Kyrie Irving', pts: 35, note: '7 of 10 from three'},\n      {name: 'P.J. Washington', pts: 13, note: '9 rebounds · 2 blocks'},\n      {name: 'Santi Aldama', pts: 10, note: '4 of 9 · 4 rebounds'},\n      {name: 'Daniel Gafford', pts: 8, note: '2 of 3 · 3 assists'},\n    ],\n    edges: [\n      {label: 'Rebounds', us: 43, them: 27},\n      {label: 'Free throws made', us: 25, them: 21},\n      {label: 'Fast-break points', us: 14, them: 10},\n      {label: 'Blocks', us: 4, them: 2},\n    ],\n    gaps: [\n      {label: 'Assists', us: 26, them: 35},\n      {label: 'Threes made', us: 14, them: 15},\n    ],\n    next: {opp: 'at Timberwolves', when: 'Thu, Nov 12, 8:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Cooper Flagg's 18-foot pull-up with 26.3 seconds left that put the Mavericks up 123-119. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Flagg pulls up",
+    "subP": "Flagg from 18 feet, 26.3 left",
+    "subL": "Flagg’s 18-foot pull-up with 26.3 seconds left",
+    "m0": "Mavericks +2",
+    "m1": "Mavericks +4",
+    "num": "32",
+    "cap1": "Flagg pulled up. Mavericks by 4.",
+    "cap2": "Points 42 and 43 of his 43.",
+    "clock": [
+      33,
+      26.3
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Mavericks vs Pacers Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Mavericks 125, Pacers 122 · Nov 9, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Mavericks vs.', 'Pacers'] : ['Mavericks vs. Pacers']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Flagg 43, Irving 35.', 'Dallas came back from 13 down.'] : ['Cooper Flagg scored 43 and Kyrie Irving 35 as Dallas came back from 13 down.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Mavericks improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Third straight win'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Down 10 at the half,', 'won the second 69–56'] : ['Down 10 at the half, won the second half 69–56']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Mavericks ${D.leadUs}, Pacers ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Mavericks’ margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Flagg: 43,', 'a season high'] : ['Flagg: 43 points, a season high']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['13 at the half,', '30 after it.'] : ['13 at the half, 30 after it, 10 rebounds in all.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Flagg and Irving:', '78 of the 125'] : ['Flagg and Irving combined for 78 of 125']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 50;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won the second half', 'and on the glass'] : ['Won the second half and on the glass']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Mavericks in silver, Pacers in gray.', 'Dallas out-rebounded Indiana 43–27.'] : ['Mavericks in silver, Pacers in gray. Dallas out-rebounded Indiana 43–27.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'9th in the West'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Timberwolves’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '8–3';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Three games over .500 for the first', 'time since March 2025.'] : ['Three games over .500 for the first time since March 2025.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Mavericks 125 · Pacers 122 · Nov 9'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Flagg pulls up'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Flagg'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 50;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 200 : 236) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 140 * k, shotX + 85 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+2', 'd w', 72, 'end');"
+    ],
+    [
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = clk < 60 ? clk.toFixed(1) : `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 200, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 232, ly, D.themName"
+    ]
+  ],
+  "team": "DAL",
+  "loser_top": [
+    [
+      "Pascal Siakam",
+      29,
+      "26 in the first half · 9 rebounds, 8 assists"
+    ],
+    [
+      "Aaron Nesmith",
+      18,
+      "4 of 10 from three"
+    ]
+  ],
+  "aria": "Animated recap of the Mavericks' 125 to 122 home win over Indiana: Cooper Flagg's 18-foot pull-up with 26.3 seconds left, quarter-by-quarter scoring, his season-high 43 points, the top scorers, how the Mavericks won, and the next game at Minnesota.",
+  "notes": [
+    "Box score from the Mavericks' 125–122 home win over the Indiana Pacers on Nov 9, 2026, from the Covers.com box score, with game details from the AP (via CBS News Texas), Field Level Media (via the Hawaii Tribune-Herald), the Dallas Sports Journal, Sports Illustrated's Mavericks and Pacers sites and Yardbarker. All 125 Mavericks points and all 122 Pacers points are accounted for in the box score, and the quarter scores add up to both totals and match the running scores in the recaps (66–56 Indiana at the half, 93–90 after three). The biggest leads (Indiana 13 at 63–50, Dallas 8 at 116–108) are from Covers, Field Level Media and the Dallas Sports Journal. Flagg's 30 second-half points are from Field Level Media and his 13 first-half points from Sports Illustrated. Dallas being three games over .500 for the first time since March 2025 is from the AP. The next game is from the AP and Yardbarker; the Timberwolves' record and the Mavericks' standing are from the site's standings.",
+    "The play of the game is an original illustration of Cooper Flagg's 18-foot pull-up with 26.3 seconds left, which made it 123–119 (the Dallas Sports Journal; Sports Illustrated's Mavericks site describes it as a midrange jumper after Naji Marshall split a pair of free throws). It came one trip after another 18-foot pull-up that made it 120–116, and they were his last points: 42 and 43. Aaron Nesmith's three then cut it to 123–122, Kyrie Irving's two free throws made it 125–122 with 18 seconds left (Field Level Media), and Caleb Martin stole the last inbounds pass. It is drawn as a plain pull-up. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Dallas Mavericks or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Flagg’s listed 6-foot-9 and 205 pounds (Basketball-Reference), with arms scaled to his 7-foot wingspan at the 2025 draft combine (CBS Sports), in the Mavericks' home white with No. 32 (Basketball-Reference). His look hasn't been approved yet, so he is drawn as a team-colour silhouette. It is an original figure with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "player": "Cooper Flagg",
+    "home": true,
+    "tall": 1.0385,
+    "ape": 1.037,
+    "mass": 0.9582,
+    "label": "Cooper Flagg, listed 6-9, 205 lb, 7-0 wingspan (2025 combine)"
+  }
+}
