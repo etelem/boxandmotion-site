@@ -51,6 +51,24 @@ if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add(
 if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add('short');
 (function () {
   const CFG = __CFG__;
+  // Film Room under the board, following the board's own clock (window.__t), so Replay, the step buttons and the loop stay in sync
+  let sndBtn = null, sndTxt = null, sndOn = false, audio = null;
+  function toggleSound() {
+    sndOn = !sndOn;
+    if (sndTxt) sndTxt.textContent = sndOn ? 'Mute' : '▶ Play with sound';
+    if (!audio) { audio = new Audio(CFG.music || '../audio/film-room.mp3'); audio.preload = 'auto'; }
+    if (sndOn) { document.getElementById('again').click(); audio.currentTime = 0; audio.play().catch(() => { sndOn = false; if (sndTxt) sndTxt.textContent = 'Sound unavailable'; }); }
+    else audio.pause();
+  }
+  setInterval(() => {
+    if (!sndOn || !audio) return;
+    const t = window.__t || 0, END = CFG.total + 1.5;
+    const paused = document.getElementById('pp').textContent === 'Play', slowed = document.getElementById('slow').getAttribute('aria-pressed') === 'true';
+    if (paused || slowed) { if (!audio.paused) audio.pause(); return; }
+    audio.volume = Math.max(0, Math.min(1, (END - t) / 1.5));
+    if (Math.abs(audio.currentTime - t) > 0.3) { try { audio.currentTime = t; } catch (e) {} }
+    if (audio.paused) audio.play().catch(() => {});
+  }, 150);
   const NS = 'http://www.w3.org/2000/svg';
   const S = (tag, a, p) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
   const T = (p, x, y, txt, cls, size, anchor) => { const e = S('text', {x, y, class: cls, 'text-anchor': anchor || 'start'}, p); e.style.fontSize = size + 'px'; e.textContent = txt; return e; };
@@ -110,7 +128,17 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
     S('circle', {cx: F(hx), cy: F(hy), r: F(0.9 * s), stroke: '#FF5A1F'}, g);
     const [hc, hcy] = P(0, 47); S('path', {d: `M${F(hc - 6 * s)} ${F(hcy)}A${F(6 * s)} ${F(6 * s)} 0 0 1 ${F(hc + 6 * s)} ${F(hcy)}`}, g);
     // clock and score
-    const sbY = tall ? y1 + (short ? 70 : 52) : top - 6, sbX = tall ? M : x1 + 40;
+    // sound: a "Play with sound" button right under the court (site and standalone only, never in the Short)
+    const SND = !short, sndH = SND && tall ? 62 : 0;
+    const sbY = tall ? y1 + (short ? 70 : (CFG.score || CFG.clock ? 52 : 4)) + sndH : top - 6, sbX = tall ? M : x1 + 40;   // explainers have no score row
+    if (SND) {
+      const bw = tall ? 270 : 210, bh = tall ? 46 : 38, bx = tall ? M : W - M - bw, by = tall ? y1 + 16 : H - bh - 12;
+      sndBtn = S('g', {role: 'button', tabindex: 0, 'aria-label': 'Play with sound', style: 'cursor:pointer'}, svg);
+      S('rect', {x: bx, y: by, width: bw, height: bh, rx: bh / 2, fill: 'var(--board)', stroke: '#FF5A1F', 'stroke-width': 2}, sndBtn);
+      sndTxt = T(sndBtn, bx + bw / 2, by + bh * 0.66, sndOn ? 'Mute' : '▶ Play with sound', 'b', tall ? 21 : 16, 'middle'); sndTxt.style.fontWeight = 600;
+      sndBtn.addEventListener('click', toggleSound);
+      sndBtn.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleSound(); } });
+    }
     const clock = T(svg, tall ? W - M : W - M, tall ? sbY : M + 14 + ts + 6, '', 'd', short ? 64 : tall ? 44 : 40, 'end');
     const score = T(svg, tall ? M : x1 + 40, tall ? sbY : M + 14 + ts + 6, '', 'd', short ? 44 : tall ? 30 : 26);
     if (!tall) { clock.setAttribute('y', top + 40); score.setAttribute('y', top + 40); }

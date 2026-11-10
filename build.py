@@ -194,12 +194,13 @@ def move_card(R, m, big=False):
             f'background:radial-gradient(120% 140% at 100% 0%,{t["c1"]} 0%,{t["dark"]} 75%);color:#fff;border:0"><span class="tag gold">Signature move · {E(t["name"])}</span>'
             f'<b class="d" style="font-size:{40 if big else 30}px">{E(m["player"])}: {E(m["title"])}</b><span style="opacity:.85">{E(m["dek"])}</span></a>')
 
-def anim_frame(R, file, label):
-    """An animation page in an iframe that sizes itself (the page posts its height)."""
-    # every deep-dive animation gets the Film Room track: the button restarts the animation and starts the music with it
+def anim_frame(R, file, label, music=None):
+    """An animation page in an iframe that sizes itself (the page posts its height). Boards and X's and O's carry their own
+    Film Room button under the court; other animations get a "Play with sound" button here, playing `music` (a site path)."""
+    btn = (f'<button type="button" class="pill snd" data-snd="{R}{music}" style="align-self:flex-start">▶ Play with sound</button>' if music else '')
     return (f'<div class="anim-wrap" style="display:flex;flex-direction:column;gap:10px">'
             f'<iframe class="anim" src="{R}anim/{file}?embed=1" title="{E(label)}" loading="lazy" style="width:100%;border:0;display:block;height:560px;border-radius:18px"></iframe>'
-            f'<button type="button" class="pill snd" data-snd="{R}audio/film-room.mp3" style="align-self:flex-start">▶ Play with sound</button></div>')
+            f'{btn}</div>')
 
 def board_card(R, b, big=False):
     t = T[b["team"]]
@@ -555,7 +556,7 @@ body = f'''<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}deep-dives/in
 <div class="card pad"><span class="d" style="font-size:44px">{rec('LAL')}</span><br><span class="dim">Lakers record</span></div></div></section>
 <section class="sec"><div class="sec" style="gap:6px"><p class="k">Signature move</p><h2 class="h2">The step-back three</h2>
 <p style="margin:0;max-width:44em">He sells the drive with a hard jab, crosses the ball back between his legs to his left as he hops back off both feet, and rises before the defender recovers. At 6-8 he releases over most guards, so a late contest rarely bothers the shot.</p></div>
-{anim_frame(R, "luka-stepback.html", "Animated illustration of Luka Dončić's step-back three")}
+{anim_frame(R, "luka-stepback.html", "Animated illustration of Luka Dončić's step-back three", "reels/soundtrack.mp3")}
 <div class="row"><a class="pill on" href="https://youtube.com/shorts/5FgwWO0aF8s" target="_blank" rel="noopener">▶ Watch the Short</a></div></section>
 <section class="sec"><h2 class="h2">Game log</h2>
 <div class="card" style="padding:6px 16px"><div class="scroll"><table class="otable" style="min-width:720px"><tr><th>Date</th><th>Game</th><th>Result</th><th class="num">Pts</th><th class="num">Reb</th><th class="num">Ast</th><th class="num">FG</th><th class="num">3PT</th><th class="num">TO</th><th>Flag</th></tr>{logrows}</table></div></div>
@@ -578,7 +579,7 @@ for P in PLAYERS:
 <div style="flex:1 1 280px;display:grid;grid-template-columns:1fr 1fr;gap:12px">{stats}</div></section>
 <section class="sec"><div class="sec" style="gap:6px"><p class="k">Signature move</p><h2 class="h2">{E(P['move']['title'])}</h2>
 <p style="margin:0;max-width:44em">{E(P['move']['text'])}</p></div>
-{anim_frame(R, P['move']['anim'], P['name'] + ': ' + P['move']['title'])}
+{anim_frame(R, P['move']['anim'], P['name'] + ': ' + P['move']['title'], "reels/soundtrack.mp3")}
 <ol style="margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px;max-width:46em">{steps}</ol>
 {f'<div class="row"><a class="pill on" href="https://youtube.com/shorts/{P["move"]["youtube"]}" target="_blank" rel="noopener">▶ Watch the Short</a></div>' if P["move"].get("youtube") else ""}</section>
 <section class="sec"><h2 class="h2">His week</h2>
@@ -595,7 +596,7 @@ for m in MOVES:
 <section class="sec" style="gap:12px"><p class="k">Signature move · {E(t['city'])} {E(t['name'])}{' · No. ' + E(m['number']) if m['number'] else ''}</p>
 <h1 class="h1" style="font-size:clamp(56px,9vw,112px)">{E(m['title'])}</h1>
 <p style="margin:0;font-size:20px;max-width:34em">{E(m['dek'])}</p></section>
-<section class="sec">{anim_frame(R, m['anim'], m['player'] + ': ' + m['title'])}
+<section class="sec">{anim_frame(R, m['anim'], m['player'] + ': ' + m['title'], "reels/soundtrack.mp3")}
 <ol style="margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px;max-width:46em">{steps}</ol>
 <div class="row" style="gap:8px">{yt}<a class="pill" href="{R}teams/{t['slug']}/index.html">{E(t['name'])} page →</a></div></section>'''
     page(f"moves/{m['slug']}/index.html", f"{m['player']}: {m['title']} · Box & Motion Hoops", body, active="Deep Dives", desc=m["dek"])
@@ -617,7 +618,7 @@ body = f'''<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}deep-dives/in
 <p class="dim" style="margin:0;font-size:18px">Lakers head coach since 2024. The Lakers are {rec('LAL')}, {seed('LAL')}.</p></section>
 <section class="sec"><div class="sec" style="gap:6px"><p class="k">From the games · Lakers at Jazz, Oct 25</p><h2 class="h2">How they closed at Utah</h2>
 <p style="margin:0;max-width:44em;font-size:18px">Down three with 4:17 left, the Lakers closed on a 19–7 run to win 132–123, with Luka Dončić scoring 52. Every possession of the finish, on the board.</p></div>
-{anim_frame(R, "lakers-utah-close.html", "Whiteboard breakdown of the Lakers' last 4:17 at Utah")}</section>
+{anim_frame(R, "lakers-utah-close.html", "Whiteboard breakdown of the Lakers' last 4:17 at Utah", "audio/film-room.mp3")}</section>
 <section class="sec"><div class="sec" style="gap:6px"><h2 class="h2">What he likes to run</h2><p class="dim" style="margin:0;max-width:46em">Each set gets drawn on the board and backed by a source: his own interviews or film from this season's games. Nothing goes up without one.</p></div>
 <div class="grid g3"><div class="card pad empty"><span class="tag ghost">Go-to set</span><p class="dim" style="margin:10px 0 0">Being drawn</p></div><div class="card pad empty"><span class="tag ghost">After a timeout</span><p class="dim" style="margin:10px 0 0">Being drawn</p></div><div class="card pad empty"><span class="tag ghost">Defense</span><p class="dim" style="margin:10px 0 0">Being drawn</p></div></div></section>'''
 page("coaches/jj-redick/index.html", "JJ Redick coach's whiteboard · Box & Motion Hoops", body, active="Deep Dives")

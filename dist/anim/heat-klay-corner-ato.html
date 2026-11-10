@@ -32,6 +32,24 @@ if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add(
 if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add('short');
 (function () {
   const CFG = {"slug": "heat-klay-corner-ato", "team": "MIA", "coach": "Erik Spoelstra", "game": "2026-11-04-heat-at-clippers", "kicker": "Coach's board \u00b7 Erik Spoelstra \u00b7 Heat", "title": "Klay's corner three", "situation": "Heat at Clippers \u00b7 Nov 4 \u00b7 end of overtime", "aria": "Animated whiteboard of the Heat's last play in overtime against the Clippers on Nov 4: down 116-114 with 3.3 seconds left, Klay Thompson sets a pin screen, runs the baseline off a Bam Adebayo screen, catches Giannis Antetokounmpo's inbounds pass in the left corner and hits the winning three with one second left. Positions are illustrative.", "note": "Original illustration. Actions are from published game stories; spots on the floor are illustrative.", "total": 9.4, "players": {"1": {"side": "o", "num": 1, "x": 0, "y": 33}, "2": {"side": "o", "num": 2, "name": "Thompson", "x": 17, "y": 18}, "3": {"side": "o", "num": 3, "x": 8.6, "y": 4.0}, "4": {"side": "o", "num": 4, "name": "Antetokounmpo", "x": -27.2, "y": 27}, "5": {"side": "o", "num": 5, "name": "Adebayo", "x": -7, "y": 17}, "x1": {"side": "d", "x": 0, "y": 29.5}, "x2": {"side": "d", "x": 14.5, "y": 16}, "x3": {"side": "d", "x": 6.0, "y": 5.6}, "x4": {"side": "d", "x": -22.4, "y": 27}, "x5": {"side": "d", "x": -5.5, "y": 14.5}}, "ball": "4", "actions": [{"type": "move", "who": "2", "t": [1.2, 2.3], "path": [[17, 18], [10, 13], [5.6, 9.4]]}, {"type": "move", "who": "x2", "trail": false, "t": [1.2, 2.3], "path": [[14.5, 16], [9.5, 11.8]]}, {"type": "screen", "who": "2", "t": [2.3, 3.3], "angle": -80}, {"type": "move", "who": "3", "t": [2.4, 3.4], "path": [[8.6, 4.0], [12, 7.6], [17, 11.8], [21, 14.5]]}, {"type": "move", "who": "x3", "trail": false, "t": [2.9, 3.9], "path": [[6.0, 5.6], [9.6, 7.6], [13, 9.8]]}, {"type": "move", "who": "5", "t": [2.4, 3.5], "path": [[-7, 17], [-8.6, 11], [-10, 5.4]]}, {"type": "move", "who": "x5", "trail": false, "t": [2.4, 3.6], "path": [[-5.5, 14.5], [-7.8, 8.6]]}, {"type": "move", "who": "2", "key": true, "t": [3.3, 5.0], "path": [[5.6, 9.4], [4.6, 4.2], [0, 2.4], [-9, 2.2], [-21.6, 2.8]]}, {"type": "move", "who": "x2", "trail": false, "t": [3.45, 5.0], "path": [[9.5, 11.8], [5.2, 6.2], [-2, 5.3], [-7.4, 6.4]]}, {"type": "screen", "who": "5", "t": [3.9, 6.4], "angle": 20}, {"type": "pass", "from": "4", "to": "2", "t": [5.0, 5.5]}, {"type": "move", "who": "x5", "trail": false, "t": [5.6, 6.7], "path": [[-7.8, 8.6], [-13, 7], [-17.2, 5.2]]}, {"type": "shot", "who": "2", "t": [6.4, 7.8]}], "beats": [{"t": 0, "title": "The timeout", "text": "Down 116\u2013114, 3.3 seconds left in overtime. Spoelstra draws one up."}, {"t": 1.2, "title": "The pin screen", "text": "Thompson screens first, pinning a defender so a teammate can pop out."}, {"t": 3.3, "title": "The baseline run", "text": "Then he runs the baseline, and Adebayo screens his man off him."}, {"t": 5.0, "title": "The pass", "text": "Antetokounmpo hits him in the left corner. Nobody is there."}, {"t": 6.4, "title": "The shot", "text": "Thompson lets it go. Heat win 117\u2013116 with one second left."}], "clock": {"start": 3.3, "run": 5.5, "stop": 7.8, "end": 1.0}, "score": {"before": "MIA 114 \u00b7 LAC 116", "after": "MIA 117 \u00b7 LAC 116", "at": 7.8}, "final": "Heat 117, Clippers 116 (OT)", "sources": [["Miami Herald via Yahoo Sports: Spoelstra's timeout, Antetokounmpo's inbounds pass, Adebayo's screen", "https://sports.yahoo.com/articles/spoelstra-compares-start-two-significant-185950405.html"], ["Heat On SI: Thompson's pin screen and run across the baseline", "https://www.si.com/nba/heat/onsi/klay-comes-through-miami-heat-escape-on-thompson-s-game-winner-01m6n7b04c8f"], ["Associated Press via Inquirer: left-corner inbounds play, one second left, 117-116", "https://sports.inquirer.net/705288/nba-klay-thompson-hits-game-winner-in-ot-as-heat-rally-past-clippers"], ["South Florida Sun Sentinel via KDH News: after-timeout inbounds play, closing lineup", "https://kdhnews.com/sports/nba/heat-gets-much-needed-overtime-road-win-over-clippers-on-game-winner-from-klay-thompson/article_eb5b3011-5d2e-5320-bacf-e4c2fce66ec4.html"]]};
+  // Film Room under the board, following the board's own clock (window.__t), so Replay, the step buttons and the loop stay in sync
+  let sndBtn = null, sndTxt = null, sndOn = false, audio = null;
+  function toggleSound() {
+    sndOn = !sndOn;
+    if (sndTxt) sndTxt.textContent = sndOn ? 'Mute' : '▶ Play with sound';
+    if (!audio) { audio = new Audio(CFG.music || '../audio/film-room.mp3'); audio.preload = 'auto'; }
+    if (sndOn) { document.getElementById('again').click(); audio.currentTime = 0; audio.play().catch(() => { sndOn = false; if (sndTxt) sndTxt.textContent = 'Sound unavailable'; }); }
+    else audio.pause();
+  }
+  setInterval(() => {
+    if (!sndOn || !audio) return;
+    const t = window.__t || 0, END = CFG.total + 1.5;
+    const paused = document.getElementById('pp').textContent === 'Play', slowed = document.getElementById('slow').getAttribute('aria-pressed') === 'true';
+    if (paused || slowed) { if (!audio.paused) audio.pause(); return; }
+    audio.volume = Math.max(0, Math.min(1, (END - t) / 1.5));
+    if (Math.abs(audio.currentTime - t) > 0.3) { try { audio.currentTime = t; } catch (e) {} }
+    if (audio.paused) audio.play().catch(() => {});
+  }, 150);
   const NS = 'http://www.w3.org/2000/svg';
   const S = (tag, a, p) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
   const T = (p, x, y, txt, cls, size, anchor) => { const e = S('text', {x, y, class: cls, 'text-anchor': anchor || 'start'}, p); e.style.fontSize = size + 'px'; e.textContent = txt; return e; };
@@ -74,6 +92,8 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
     const ks = short ? 26 : tall ? 20 : 16, ts = short ? 64 : tall ? 46 : 40;
     T(svg, M, short ? 96 : M + 14, CFG.kicker, 'k', ks);
     const title = T(svg, M, (short ? 96 : M + 14) + ts + 6, CFG.title, 'd', ts);
+    // long titles shrink to fit the width instead of running off the board
+    if (title.getComputedTextLength && title.getComputedTextLength() > W - 2 * M) title.style.fontSize = (ts * (W - 2 * M) / title.getComputedTextLength()) + 'px';
     T(svg, M, (short ? 96 : M + 14) + ts + 6 + (short ? 50 : 30), CFG.situation, 'b m', short ? 30 : tall ? 22 : 18);
     // court
     const g = S('g', {class: 'court', 'stroke-width': F(s * 0.22)}, svg);
@@ -89,7 +109,17 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
     S('circle', {cx: F(hx), cy: F(hy), r: F(0.9 * s), stroke: '#FF5A1F'}, g);
     const [hc, hcy] = P(0, 47); S('path', {d: `M${F(hc - 6 * s)} ${F(hcy)}A${F(6 * s)} ${F(6 * s)} 0 0 1 ${F(hc + 6 * s)} ${F(hcy)}`}, g);
     // clock and score
-    const sbY = tall ? y1 + (short ? 70 : 52) : top - 6, sbX = tall ? M : x1 + 40;
+    // sound: a "Play with sound" button right under the court (site and standalone only, never in the Short)
+    const SND = !short, sndH = SND && tall ? 62 : 0;
+    const sbY = tall ? y1 + (short ? 70 : (CFG.score || CFG.clock ? 52 : 4)) + sndH : top - 6, sbX = tall ? M : x1 + 40;   // explainers have no score row
+    if (SND) {
+      const bw = tall ? 270 : 210, bh = tall ? 46 : 38, bx = tall ? M : W - M - bw, by = tall ? y1 + 16 : H - bh - 12;
+      sndBtn = S('g', {role: 'button', tabindex: 0, 'aria-label': 'Play with sound', style: 'cursor:pointer'}, svg);
+      S('rect', {x: bx, y: by, width: bw, height: bh, rx: bh / 2, fill: 'var(--board)', stroke: '#FF5A1F', 'stroke-width': 2}, sndBtn);
+      sndTxt = T(sndBtn, bx + bw / 2, by + bh * 0.66, sndOn ? 'Mute' : '▶ Play with sound', 'b', tall ? 21 : 16, 'middle'); sndTxt.style.fontWeight = 600;
+      sndBtn.addEventListener('click', toggleSound);
+      sndBtn.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleSound(); } });
+    }
     const clock = T(svg, tall ? W - M : W - M, tall ? sbY : M + 14 + ts + 6, '', 'd', short ? 64 : tall ? 44 : 40, 'end');
     const score = T(svg, tall ? M : x1 + 40, tall ? sbY : M + 14 + ts + 6, '', 'd', short ? 44 : tall ? 30 : 26);
     if (!tall) { clock.setAttribute('y', top + 40); score.setAttribute('y', top + 40); }
@@ -142,7 +172,7 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
       peeps[id] = pg;
     });
     const ball = S('circle', {r: F(0.62 * s), fill: '#FF5A1F', stroke: '#16181d', 'stroke-width': F(s * 0.1)}, top2);
-    const plus = T(top2, 0, 0, '+3', 'd', short ? 72 : 48, 'middle'); plus.style.fill = '#FF5A1F';
+    const plus = T(top2, 0, 0, (CFG.actions.find((a) => a.type === 'shot') || {}).plus || '+3', 'd', short ? 72 : 48, 'middle'); plus.style.fill = '#FF5A1F';
 
     // where is a player at time t (feet)
     const posAt = (id, t) => {
@@ -187,9 +217,8 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
       if (holder) { bp = [bp[0] + R * 0.85, bp[1] - R * 0.85]; }
       ball.setAttribute('cx', F(bp[0])); ball.setAttribute('cy', F(bp[1])); ball.setAttribute('r', F(br));
       // clock: frozen until the catch, runs to the release
-      const c = CFG.clock, cq = clamp((t - c.run) / (c.stop - c.run));
-      clock.textContent = fmtClock(lerp(c.start, c.end, cq));
-      score.textContent = t >= CFG.score.at ? CFG.score.after : CFG.score.before;
+      if (CFG.clock) { const c = CFG.clock, cq = clamp((t - c.run) / (c.stop - c.run)); clock.textContent = fmtClock(lerp(c.start, c.end, cq)); }
+      if (CFG.score) score.textContent = t >= CFG.score.at ? CFG.score.after : CFG.score.before;
       // active beat
       let k = 0; CFG.beats.forEach((b, i) => { if (t >= b.t) k = i; });
       beats.forEach((b, i) => { b.style.opacity = short ? (i === k ? 1 : 0) : (i === k ? 1 : i < k ? .45 : .22); });
