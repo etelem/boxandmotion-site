@@ -21,6 +21,26 @@
    "published": "2026-11-09",
    "dek": "Steph's jumper, in motion: one motion from the hip, gone on the way up, and he's walking away before it drops.",
    "youtube": "RXHsM6b6Kas"
+  },
+  {
+   "config": "kit/moves/lebron-freight-train.json",
+   "anim": "lebron-freight-train.html",
+   "slug": "lebron-james-freight-train",
+   "player": "LeBron James",
+   "team": "PHI",
+   "title": "Freight Train",
+   "published": "2026-11-10T01:10",
+   "dek": "LeBron's drive, in motion: downhill at full speed, through the contact, then the flex."
+  },
+  {
+   "config": "kit/moves/wemby-denied.json",
+   "anim": "wemby-denied.html",
+   "slug": "victor-wembanyama-denied",
+   "player": "Victor Wembanyama",
+   "team": "SAS",
+   "title": "Denied by Wemby",
+   "published": "2026-11-10T01:20",
+   "dek": "His block, in motion: long strides to erase a lost step, a reach nobody else has, and the ball goes back the other way."
   }
  ],
  "xo": [
