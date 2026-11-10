@@ -196,7 +196,10 @@ def move_card(R, m, big=False):
 
 def anim_frame(R, file, label):
     """An animation page in an iframe that sizes itself (the page posts its height)."""
-    return f'<iframe class="anim" src="{R}anim/{file}?embed=1" title="{E(label)}" loading="lazy" style="width:100%;border:0;display:block;height:560px;border-radius:18px"></iframe>'
+    # every deep-dive animation gets the Film Room track: the button restarts the animation and starts the music with it
+    return (f'<div class="anim-wrap" style="display:flex;flex-direction:column;gap:10px">'
+            f'<iframe class="anim" src="{R}anim/{file}?embed=1" title="{E(label)}" loading="lazy" style="width:100%;border:0;display:block;height:560px;border-radius:18px"></iframe>'
+            f'<button type="button" class="pill snd" data-snd="{R}audio/film-room.mp3" style="align-self:flex-start">▶ Play with sound</button></div>')
 
 def board_card(R, b, big=False):
     t = T[b["team"]]
@@ -228,6 +231,7 @@ def player_card(R, P, big=False):
 shutil.rmtree(OUT, ignore_errors=True)  # start clean so removed pages disappear
 if os.path.isdir("reels"): shutil.copytree("reels", f"{OUT}/reels")
 if os.path.isdir("src/anim"): shutil.copytree("src/anim", f"{OUT}/anim")
+if os.path.isdir("src/audio"): shutil.copytree("src/audio", f"{OUT}/audio")
 os.makedirs(f"{OUT}/assets", exist_ok=True)
 client = {"teams": {c: {"name": T[c]["name"], "slug": T[c]["slug"], "c1": T[c]["c1"], "c2": T[c]["c2"], "dark": T[c]["dark"],
           "rec": rec(c), "seed": seed(c), "top6": O[c]["top6"], "chg": chg(O[c]["chg"]), "last": last_line(c)} for c in T}}

@@ -97,3 +97,20 @@ window.addEventListener('message', function (e) {
   var right = cur.offsetLeft + cur.offsetWidth - row.offsetLeft;
   if (right > row.clientWidth) row.scrollLeft = right - row.clientWidth + 8;
 })();
+
+// deep dives: "Play with sound" restarts the animation and plays the Film Room track under it (one track at a time)
+(function () {
+  var audio = null, current = null;
+  function stop() { if (audio) audio.pause(); if (current) current.textContent = '▶ Play with sound'; current = null; }
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest && e.target.closest('button[data-snd]'); if (!btn) return;
+    if (current === btn) { stop(); return; }
+    stop();
+    if (!audio) { audio = new Audio(); audio.loop = true; audio.preload = 'auto'; }
+    audio.src = btn.getAttribute('data-snd');
+    var frame = btn.parentNode.querySelector('iframe'); if (frame) frame.src = frame.src;   // start the animation from the top with the music
+    var p = audio.play();
+    current = btn; btn.textContent = 'Mute';
+    if (p && p.catch) p.catch(function () { stop(); btn.textContent = 'Sound unavailable here'; });
+  });
+})();
