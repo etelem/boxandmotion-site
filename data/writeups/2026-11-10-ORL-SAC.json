@@ -1,0 +1,103 @@
+{
+ "headline": "Wagner's season-high 33 snaps Orlando's skid",
+ "dek": "Franz Wagner scored 33 and Anthony Black 26. Orlando snapped a four-game losing streak.",
+ "three": [
+  [
+   "Franz Wagner: a season-high 33",
+   "10 of 10 at the line, with 7 rebounds and 7 assists."
+  ],
+  [
+   "Up 5 at the half, and never behind after an 18–5 run in the second",
+   "Wagner and Black combined for 59 of 107."
+  ],
+  [
+   "Won it in the paint and on turnovers",
+   "Points in the paint 58–28; turnovers forced 21–14. Orlando scored 33 points off 21 Sacramento turnovers."
+  ]
+ ],
+ "battle": [
+  [
+   "Points in the paint",
+   58,
+   28
+  ],
+  [
+   "Turnovers forced",
+   21,
+   14
+  ],
+  [
+   "Rebounds",
+   48,
+   34
+  ],
+  [
+   "Threes made",
+   10,
+   16
+  ]
+ ],
+ "battle_labels": [
+  "ORL",
+  "SAC"
+ ],
+ "top": [
+  [
+   "Franz Wagner",
+   "ORL",
+   "7 rebounds, 7 assists",
+   33
+  ],
+  [
+   "Anthony Black",
+   "ORL",
+   "7 rebounds, 4 steals",
+   26
+  ],
+  [
+   "Desmond Bane",
+   "ORL",
+   "6 rebounds, 4 assists",
+   15
+  ],
+  [
+   "Wendell Carter Jr.",
+   "ORL",
+   "11 rebounds, 3 blocks",
+   8
+  ]
+ ],
+ "linescore": {
+  "away": [
+   34,
+   23,
+   27,
+   23
+  ],
+  "home": [
+   27,
+   25,
+   24,
+   24
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-10-ORL-at-SAC.json",
+ "loser": {
+  "top": [
+   [
+    "Zach LaVine",
+    "SAC",
+    "10 of 16 · 6 of 9 from three",
+    31
+   ],
+   [
+    "Darius Acuff Jr.",
+    "SAC",
+    "4 threes · 6 assists",
+    29
+   ]
+  ],
+  "source": "box score"
+ }
+}
