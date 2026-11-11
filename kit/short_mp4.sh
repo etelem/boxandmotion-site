@@ -9,7 +9,7 @@ N=$(node -e "
 const {chromium}=require('/opt/npm-tools/node_modules/playwright');
 (async()=>{const b=await chromium.launch();const p=await b.newPage();await p.goto('file://$PAGE?short=1');await p.waitForTimeout(800);
 const t=await p.evaluate(()=>window.__A.total);await b.close();
-console.log('$SPEEDS'.split(',').map(Number).reduce((a,s)=>a+Math.round(t/s*30),0)+36);})()")
+console.log('$SPEEDS'.split(',').map(Number).reduce((a,s)=>a+Math.round(t/s*30),0)+Math.round(30*${HOLD:-1.2}));})()")
 Q=$(( (N + 3) / 4 ))
 for i in 0 1 2 3; do node "$HERE/short_frames.js" "$PAGE" "$WORK/f" $((i*Q)) $(((i+1)*Q)) "$SPEEDS" >/dev/null & done; wait
 DUR=$(python3 -c "print(round($N/30,2))")
