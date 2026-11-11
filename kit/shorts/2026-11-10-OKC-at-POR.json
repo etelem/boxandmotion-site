@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-10-OKC-POR.html",
+  "team": "POR",
+  "home": true,
+  "number": "0",
+  "player": "Damian Lillard",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 0.9487,
+    "ape": 1.0777,
+    "mass": 0.9902
+  },
+  "build_note": "Listed 6-2, 200 lb (FOX Sports roster), 6-7.75 wingspan at the 2012 draft combine (NBADraft.net)",
+  "kicker": "BLAZERS 123 · THUNDER 103 · NOV 10",
+  "hook": [
+    "Lillard from the logo,",
+    "1.1 left in the third"
+  ],
+  "clock": "Q3 · 1.1",
+  "us": "POR",
+  "them": "OKC",
+  "score_before": [
+    94,
+    80
+  ],
+  "score_make": [
+    97,
+    80
+  ],
+  "stamp": "THREE",
+  "beat": [
+    "Blazers by 17 after three.",
+    "13 of his 25 came in the third."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Blazers",
+    "them": "Thunder",
+    "us_pts": 123,
+    "them_pts": 103
+  },
+  "star": {
+    "name": "Damian Lillard",
+    "big": 25,
+    "big_label": "points",
+    "lines": [
+      "13 in the third quarter",
+      "4 of 10 from three"
+    ]
+  },
+  "story": "Tied at the half, won the third 38–21. Portland's second win over OKC in their last 21 meetings.",
+  "aria": "Original illustration of Damian Lillard's 30-foot 3-pointer with 1.1 seconds left in the third quarter that made it 97–80 against Oklahoma City. Not traced from footage, not to scale."
+}

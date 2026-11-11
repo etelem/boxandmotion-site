@@ -1,0 +1,169 @@
+{
+  "team": "POR",
+  "D": "  const D = {\n    date: 'Tue, Nov 10, 2026',\n    us: 123, them: 103, record: '7–3', usName: 'Blazers', themName: 'Thunder',\n    quarters: [[26, 27], [33, 32], [38, 21], [26, 23]],\n    leadUs: 22, leadThem: 1,\n    star: {name: 'Damian Lillard', stats: [['Points', 25, 30], ['Third-quarter points', 13, 15], ['Threes made of 10', 4, 10]]},\n    scorers: [\n      {name: 'Damian Lillard', pts: 25, note: '13 in the 3rd · 5 of 5 FT'},\n      {name: 'Deni Avdija', pts: 24, note: '8 assists · 6 rebounds'},\n      {name: 'Sidy Cissoko', pts: 17, note: 'started for Henderson · 3 threes'},\n      {name: 'Toumani Camara', pts: 12, note: '4 of 4 FT'},\n      {name: 'Jrue Holiday', pts: 11, note: 'off the bench · 2 threes'},\n    ],\n    edges: [\n      {label: 'Threes made', us: 19, them: 8},\n      {label: 'Assists', us: 26, them: 20},\n      {label: 'Bench points', us: 38, them: 32},\n      {label: 'Free throws made', us: 24, them: 21},\n    ],\n    gaps: [\n      {label: 'Rebounds', us: 44, them: 45},\n    ],\n    next: {opp: 'vs Thunder', when: 'Wed, Nov 11, 10:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Damian Lillard's 30-foot 3-pointer with 1.1 seconds left in the third quarter that made it 97-80. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Lillard from 30",
+    "subP": "Lillard from 30 feet, 1.1 left in the 3rd",
+    "subL": "Lillard’s 30-footer with 1.1 seconds left in the third",
+    "m0": "Blazers +14",
+    "m1": "Blazers +17",
+    "num": "0",
+    "cap1": "Lillard from the logo. Blazers by 17.",
+    "cap2": "13 in the third quarter.",
+    "clock": [
+      8,
+      1.1
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Blazers vs Thunder Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Blazers 123, Thunder 103 · Nov 10, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Blazers vs.', 'Thunder'] : ['Blazers vs. Thunder']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Lillard 25, Avdija 24.', 'A 38–21 third did it.'] : ['Lillard scored 25, Avdija 24, and a 38–21 third quarter did it.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Blazers improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Two-game skid snapped'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Tied at the half,', 'won the third 38–21'] : ['Tied at the half, won the third 38–21']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Blazers ${D.leadUs}. OKC’s last lead: 71–70 in the 3rd"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Blazers’ margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Lillard: 25,', '13 in the third'] : ['Lillard: 25 points, 13 in the third']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['5 of 6 in the third quarter,', '4 threes in all.'] : ['5 of 6 in the third quarter, 4 threes in all.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Lillard and Avdija:', '49 of the 123'] : ['Lillard and Avdija combined for 49 of 123']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 30;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it from', 'the three-point line'] : ['Won it from the three-point line']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Blazers in red, Thunder in gray.', 'Gilgeous-Alexander shot 8 of 22.'] : ['Blazers in red, Thunder in gray. Gilgeous-Alexander shot 8 of 22.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'8th in the West'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Thunder’s record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '8–3';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Portland’s second win over OKC', 'in their last 21 meetings.'] : ['Portland’s second win over OKC in their last 21 meetings.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Blazers 123 · Thunder 103 · Nov 10'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Lillard from 30'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Lillard'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 50;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "    T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "    T(board, bx + 24, by + 38, 'Q3', 'b m', 24);"
+    ],
+    [
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = clk < 60 ? clk.toFixed(1) : `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 180, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 212, ly, D.themName"
+    ]
+  ],
+  "aria": "Animated recap of the Trail Blazers' 123 to 103 home win over Oklahoma City: Damian Lillard's 30-foot 3-pointer with 1.1 seconds left in the third quarter, quarter-by-quarter scoring, his 25 points with 13 in the third, the top scorers, how the Blazers won, and Wednesday's rematch with the Thunder.",
+  "notes": [
+    "Box score from the Trail Blazers' 123–103 home win over the Oklahoma City Thunder on Nov 10, 2026, from the Covers.com box score, with game details from the AP (Anne M. Peterson, via TSN and KRMG), the AP's game story carried by 95.3 The Score (KUJZ), Portland Trail Blazers On SI, Roundtable Sports (via Yahoo Sports) and NewsBeep. All 123 Portland points and all 103 Oklahoma City points are accounted for in the box score, and the quarter scores add up to both totals (59–59 at the half and 97–80 after three, matching the AP). Bench points (38–32) are worked out from the box score's starters. Records and the Blazers' standing are from the site's standings; the rematch on Wednesday in Portland is from the AP.",
+    "Biggest lead: Portland's 22 (95.3 The Score). Oklahoma City's last lead was 71–70 on Ajay Mitchell's basket with 7:09 left in the third; Portland then scored nine straight, including Lillard's back-to-back threes for 79–71, and 18 of the next 22 (AP). The sources don't give the Thunder's biggest lead, so the reel doesn't show one. Lillard's 13 third-quarter points on 5-of-6 shooting are from On SI. Portland's second win over Oklahoma City in their last 21 meetings is from the AP story on 95.3 The Score. Shai Gilgeous-Alexander (26 points, 8 of 22, 0 of 4 from three) sat the fourth quarter (AP), and so did Lillard (95.3 The Score).",
+    "The play of the game is an original illustration of Damian Lillard's 30-foot 3-pointer with 1.1 seconds left in the third quarter, after Deni Avdija's layup and three had made it 94–80 (95.3 The Score); Roundtable Sports (via Yahoo Sports) calls it a deep logo three as time expired and NewsBeep says it came from just inside the center-court logo. The line score confirms 97–80 after three. It is drawn as the template's pull-up from deep. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Portland Trail Blazers or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Lillard’s listed 6-foot-2 and 200 pounds (FOX Sports roster), with arms scaled to his 6-foot-7.75 wingspan at the 2012 draft combine (NBADraft.net), in the Blazers' home white with No. 0 (FOX Sports roster) and his proposed look. It is an original figure with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "player": "Damian Lillard",
+    "home": true,
+    "tall": 0.9487,
+    "ape": 1.0777,
+    "mass": 0.9902,
+    "label": "Damian Lillard, listed 6-2, 200 lb, 6-7.75 wingspan (2012 combine)"
+  },
+  "loser_top": [
+    [
+      "Shai Gilgeous-Alexander",
+      26,
+      "8 rebounds · 8 of 22 · 10 of 11 FT"
+    ],
+    [
+      "Jared McCain",
+      21,
+      "4 of 7 from three"
+    ]
+  ]
+}

@@ -1,0 +1,103 @@
+{
+ "headline": "Goodwin hits six threes as the Suns' bench scores 81",
+ "dek": "Jordan Goodwin hit 6 of 7 threes, and the Suns’ bench scored 81.",
+ "three": [
+  [
+   "Goodwin: 18 points, 6 of 7 from three",
+   "18 points in 14 minutes, in his first game back from a calf injury."
+  ],
+  [
+   "Up 17 at the half, up as many as 32 in the third",
+   "Seven Suns scored 10 or more."
+  ],
+  [
+   "Won it from three and off the bench",
+   "Bench points 81–62; assists 32–28. Phoenix shot 51 percent from three."
+  ]
+ ],
+ "battle": [
+  [
+   "Bench points",
+   81,
+   62
+  ],
+  [
+   "Assists",
+   32,
+   28
+  ],
+  [
+   "Threes made",
+   22,
+   15
+  ],
+  [
+   "Free throws made",
+   13,
+   19
+  ]
+ ],
+ "battle_labels": [
+  "PHX",
+  "LAC"
+ ],
+ "top": [
+  [
+   "Jordan Goodwin",
+   "PHX",
+   "off the bench, 6 of 7 from three",
+   18
+  ],
+  [
+   "Devin Booker",
+   "PHX",
+   "5 assists, 6 of 14",
+   17
+  ],
+  [
+   "Luke Kennard",
+   "PHX",
+   "off the bench, season high",
+   14
+  ],
+  [
+   "Jalen Green",
+   "PHX",
+   "3 of 4 from three",
+   13
+  ]
+ ],
+ "linescore": {
+  "away": [
+   18,
+   29,
+   25,
+   38
+  ],
+  "home": [
+   29,
+   35,
+   35,
+   34
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-10-LAC-at-PHX.json",
+ "loser": {
+  "top": [
+   [
+    "Darius Garland",
+    "LAC",
+    "6 assists · 5 rebounds",
+    13
+   ],
+   [
+    "Rui Hachimura",
+    "LAC",
+    "3 of 5 from three",
+    13
+   ]
+  ],
+  "source": "box score"
+ }
+}

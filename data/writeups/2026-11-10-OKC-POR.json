@@ -1,0 +1,103 @@
+{
+ "headline": "Lillard's 13-point third pulls Portland past OKC",
+ "dek": "Lillard scored 25, Avdija 24, and a 38–21 third quarter did it.",
+ "three": [
+  [
+   "Lillard: 25 points, 13 in the third",
+   "5 of 6 in the third quarter, 4 threes in all."
+  ],
+  [
+   "Tied at the half, won the third 38–21",
+   "Lillard and Avdija combined for 49 of 123."
+  ],
+  [
+   "Won it from the three-point line",
+   "Threes made 19–8; assists 26–20. Gilgeous-Alexander shot 8 of 22."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   19,
+   8
+  ],
+  [
+   "Assists",
+   26,
+   20
+  ],
+  [
+   "Bench points",
+   38,
+   32
+  ],
+  [
+   "Free throws made",
+   24,
+   21
+  ]
+ ],
+ "battle_labels": [
+  "POR",
+  "OKC"
+ ],
+ "top": [
+  [
+   "Damian Lillard",
+   "POR",
+   "13 in the 3rd, 5 of 5 FT",
+   25
+  ],
+  [
+   "Deni Avdija",
+   "POR",
+   "8 assists, 6 rebounds",
+   24
+  ],
+  [
+   "Sidy Cissoko",
+   "POR",
+   "started for Henderson, 3 threes",
+   17
+  ],
+  [
+   "Toumani Camara",
+   "POR",
+   "4 of 4 FT",
+   12
+  ]
+ ],
+ "linescore": {
+  "away": [
+   27,
+   32,
+   21,
+   23
+  ],
+  "home": [
+   26,
+   33,
+   38,
+   26
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-10-OKC-at-POR.json",
+ "loser": {
+  "top": [
+   [
+    "Shai Gilgeous-Alexander",
+    "OKC",
+    "8 rebounds · 8 of 22 · 10 of 11 FT",
+    26
+   ],
+   [
+    "Jared McCain",
+    "OKC",
+    "4 of 7 from three",
+    21
+   ]
+  ],
+  "source": "box score"
+ }
+}
