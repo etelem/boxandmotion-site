@@ -266,7 +266,7 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
   document.getElementById('again').addEventListener('click', () => { t = 0; playing = true; pp.textContent = 'Pause'; sndRun(speed === 1, 0); });
   const jumps = document.getElementById('jumps');
   CFG.beats.forEach((b, i) => { const btn = document.createElement('button'); btn.type = 'button'; btn.textContent = (i + 1) + ' · ' + b.title; btn.addEventListener('click', () => { t = b.t + 0.05; draw(t); sndSeek(t); }); jumps.appendChild(btn); jumps.appendChild(document.createTextNode(' ')); });
-  window.__A = {render: (x) => draw(x), build, total: TOTAL};
+  window.__A = {render: (x) => draw(x), build, total: TOTAL, loop: {start: Math.max(0, Math.min(...(CFG.actions || []).map((a) => a.t[0]), TOTAL) - 0.3), cut: TOTAL}}; // Shorts open on the first action and loop
   // tell a parent page how tall we are, so its iframe fits without scrolling
   const postH = () => { if (window.parent !== window) window.parent.postMessage({bmH: Math.ceil(document.querySelector('.wrap').getBoundingClientRect().height)}, '*'); };
   if ('ResizeObserver' in window) new ResizeObserver(postH).observe(document.body); window.addEventListener('load', postH); postH();

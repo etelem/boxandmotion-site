@@ -35,7 +35,7 @@ BODY = r"""
   const floor = 1180, hoopX = W - M - 24, rimY = floor - 240 * k * 1.62, rimR = 30 * k;
   // timeline: full-speed shot, slow breakdown in two parts, end card
   const P0 = 0.5, PLAY = 4.9, B0 = 5.8, B_FROM = 0.65, B_MID = 1.6, B_SPD1 = 0.3, B_TO = 3.4, B_SPD2 = 0.6;
-  const COLD = !!C.cold_open; // start mid-motion, short loop-back ending instead of the 3.5 s end card
+  const COLD = C.cold_open !== false; // start mid-motion, short loop-back ending instead of the 3.5 s end card
   const CO_PT = 0.95, CO_P0 = -CO_PT, CO_B0 = 3.8;
   const _B0 = COLD ? CO_B0 : B0;
   const B1 = _B0 + (B_MID - B_FROM) / B_SPD1, B2 = B1 + (B_TO - B_MID) / B_SPD2, END0 = B2 + 1.4;
@@ -194,7 +194,7 @@ BODY = r"""
   let time = 0, last = null;
   const frame = (now) => { if (last != null) { time += (now - last) / 1000; if (time > TOTAL) time = 0; } last = now; if (!window.__hold) render(time); requestAnimationFrame(frame); };
   render(0); requestAnimationFrame(frame);
-  window.__A = {render, build: () => {}, total: TOTAL};
+  window.__A = {render, build: () => {}, total: TOTAL, loop: COLD ? {start: 0, cut: TOTAL, native: true} : {start: P0 + 0.3, cut: END0}};
   const postH = () => { try { parent.postMessage({bmH: document.documentElement.scrollHeight}, '*'); } catch (e) {} };
   addEventListener('load', postH); addEventListener('resize', postH);
 })();

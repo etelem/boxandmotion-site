@@ -157,7 +157,7 @@ BODY = r"""
   let time = 0, last = null;
   const frame = (now) => { if (last != null) { time += (now - last) / 1000; if (time > TOTAL) time = 0; } last = now; if (!window.__hold) render(time); requestAnimationFrame(frame); };
   render(0); requestAnimationFrame(frame);
-  window.__A = {render, build: () => {}, total: TOTAL};
+  window.__A = {render, build: () => {}, total: TOTAL, loop: {start: P0 + 0.3, cut: END0}}; // Shorts open mid-drive and loop (no end card)
   const postH = () => { try { parent.postMessage({bmH: document.documentElement.scrollHeight}, '*'); } catch (e) {} };
   addEventListener('load', postH); addEventListener('resize', postH);
 })();

@@ -14,6 +14,9 @@ What gets made (Elan's split, Nov 8, 2026):
 - The player who made the play is drawn to his build (`figure` in the config): listed height and weight, arms scaled to a reported
   wingspan. Face stays featureless. Measurements from a named source that is not espn.com or nba.com (Basketball-Reference,
   RealGM, Wikipedia, team media guides via news coverage). Add a note saying what the figure is based on.
+- Every Short follows the looping standard (Elan, Nov 10, 2026): it opens mid-motion (no static title beat), has no end card,
+  and its last frame blends back into its first so it loops. `kit/short_mp4.sh` does this automatically for any page that
+  sets `window.__A.loop = {start, cut}` (all generators do); keep the default speed `1`, never a slow-motion second pass.
 - Figure style for every player (Elan, Nov 8: every recap should look and feel like the Luka step-back and Steph's Splash, not
   stick figures): the star is drawn in his team's kit (home = white with team-colour numbers, Lakers gold at home; away = team
   colour) with his look from `kit/looks.json` (skin tone, hair, beard, gear) and the glowing outline. The face always stays blank;
