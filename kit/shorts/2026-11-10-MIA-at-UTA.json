@@ -1,0 +1,48 @@
+{
+  "out": "short-2026-11-10-MIA-UTA.html",
+  "team": "MIA",
+  "home": false,
+  "number": "7",
+  "player": "Giannis Antetokounmpo",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 1.0641,
+    "ape": 1.0482,
+    "mass": 1.0453
+  },
+  "build_note": "Listed 6-11, 250 lb (Basketball-Reference), reported 7-3 wingspan (Heating Up)",
+  "kicker": "HEAT 115 · JAZZ 109 · NOV 10",
+  "hook": [
+    "Giannis from deep",
+    "on his way to 30"
+  ],
+  "clock": "Q3 · 4:51",
+  "us": "MIA",
+  "them": "UTA",
+  "score_before": [82, 66],
+  "score_make": [85, 66],
+  "stamp": "THREE",
+  "beat": [
+    "Heat by 19, 4:51 in the 3rd.",
+    "His 4th bucket of a 22–6 run."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Heat",
+    "them": "Jazz",
+    "us_pts": 115,
+    "them_pts": 109
+  },
+  "star": {
+    "name": "Giannis Antetokounmpo",
+    "big": 30,
+    "big_label": "points on 12-of-21 shooting",
+    "lines": [
+      "11 rebounds",
+      "in 31 minutes"
+    ]
+  },
+  "story": "Up 23 in the third. Utah won the fourth 37–23, but Giannis scored three baskets in two minutes to hold them off, 115–109.",
+  "aria": "Original illustration of Giannis Antetokounmpo's 3-pointer with 4:51 left in the third quarter that put the Heat up 19 at Utah. Not traced from footage, not to scale."
+}

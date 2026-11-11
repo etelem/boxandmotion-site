@@ -1,0 +1,103 @@
+{
+ "headline": "Knicks rout the Bucks for a fourth straight win",
+ "dek": "Karl-Anthony Towns had 21 points and 16 rebounds. New York won the glass 59–32.",
+ "three": [
+  [
+   "Towns: 21 points and 16 rebounds",
+   "A double-double in all 10 games this season."
+  ],
+  [
+   "Up 24 at the half, and won by 32",
+   "Brunson, Towns and Anunoby combined for 63 of 117."
+  ],
+  [
+   "Won it on the glass and in the paint",
+   "Rebounds 59–32; offensive rebounds 18–7. Milwaukee made 30 of 79 shots, 38 percent."
+  ]
+ ],
+ "battle": [
+  [
+   "Rebounds",
+   59,
+   32
+  ],
+  [
+   "Offensive rebounds",
+   18,
+   7
+  ],
+  [
+   "Points in the paint",
+   38,
+   28
+  ],
+  [
+   "Free throws made",
+   20,
+   9
+  ]
+ ],
+ "battle_labels": [
+  "NYK",
+  "MIL"
+ ],
+ "top": [
+  [
+   "Jalen Brunson",
+   "NYK",
+   "7 of 18, 8 of 8 FT",
+   23
+  ],
+  [
+   "Karl-Anthony Towns",
+   "NYK",
+   "16 rebounds, 9 of 14 FT",
+   21
+  ],
+  [
+   "OG Anunoby",
+   "NYK",
+   "5 of 8 from three, 29 minutes",
+   19
+  ],
+  [
+   "Tyler Kolek",
+   "NYK",
+   "off the bench, 5 of 6, 15 minutes",
+   12
+  ]
+ ],
+ "linescore": {
+  "away": [
+   21,
+   13,
+   38,
+   13
+  ],
+  "home": [
+   26,
+   32,
+   27,
+   32
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-10-MIL-at-NYK.json",
+ "loser": {
+  "top": [
+   [
+    "Jaime Jaquez Jr.",
+    "MIL",
+    "6 of 13 · 2 threes",
+    16
+   ],
+   [
+    "Ryan Rollins",
+    "MIL",
+    "4 of 6 from three · first start since Halloween",
+    14
+   ]
+  ],
+  "source": "box score"
+ }
+}

@@ -1,0 +1,161 @@
+{
+  "D": "  const D = {\n    date: 'Tue, Nov 10, 2026',\n    us: 117, them: 85, record: '6–4', usName: 'Knicks', themName: 'Bucks',\n    quarters: [[26, 21], [32, 13], [27, 38], [32, 13]],\n    leadUs: 32, leadThem: 3,\n    star: {name: 'Karl-Anthony Towns', stats: [['Points', 21, 30], ['Rebounds', 16, 20], ['Free throws made of 14', 9, 14]]},\n    scorers: [\n      {name: 'Jalen Brunson', pts: 23, note: '7 of 18 · 8 of 8 FT'},\n      {name: 'Karl-Anthony Towns', pts: 21, note: '16 rebounds · 9 of 14 FT'},\n      {name: 'OG Anunoby', pts: 19, note: '5 of 8 from three · 29 minutes'},\n      {name: 'Tyler Kolek', pts: 12, note: 'off the bench · 5 of 6 · 15 minutes'},\n      {name: 'Landry Shamet', pts: 10, note: 'started for Josh Hart'},\n    ],\n    edges: [\n      {label: 'Rebounds', us: 59, them: 32},\n      {label: 'Offensive rebounds', us: 18, them: 7},\n      {label: 'Points in the paint', us: 38, them: 28},\n      {label: 'Free throws made', us: 20, them: 9},\n    ],\n    gaps: [\n      {label: 'Fast-break points', us: 4, them: 13},\n    ],\n    next: {opp: 'vs Cavaliers', when: 'Wed, Nov 11, 7:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Tyler Kolek's 3-pointer with 8:43 left in the second quarter that made it 34–23 and put the Knicks up by double digits for good. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Kolek from deep",
+    "subP": "Kolek from three, 8:43 in the 2nd",
+    "subL": "Tyler Kolek’s three with 8:43 left in the second",
+    "m0": "Knicks +8",
+    "m1": "Knicks +11",
+    "num": "13",
+    "cap1": "Kolek from deep. Knicks by 11.",
+    "cap2": "34–23. Double digits the rest of the way.",
+    "clock": [
+      530,
+      523
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Knicks vs Bucks Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Knicks 117, Bucks 85 · Nov 10, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Knicks vs.', 'Bucks'] : ['Knicks vs. Bucks']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Towns: 21 and 16.', 'N.Y. won the glass 59–32.'] : ['Karl-Anthony Towns had 21 points and 16 rebounds. New York won the glass 59–32.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Knicks improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Fourth straight win'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Up 24 at the half,', 'won by 32'] : ['Up 24 at the half, and won by 32']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Knicks ${D.leadUs}, Bucks ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Knicks’ margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Towns: 21', 'and 16 boards'] : ['Towns: 21 points and 16 rebounds']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['A double-double in all', '10 games this season.'] : ['A double-double in all 10 games this season.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Brunson, Towns, Anunoby:', '63 of the 117'] : ['Brunson, Towns and Anunoby combined for 63 of 117']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 30;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it on the glass', 'and in the paint'] : ['Won it on the glass and in the paint']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Knicks in blue, Bucks in gray. Milwaukee', 'made 30 of 79 shots, 38 percent.'] : ['Knicks in blue, Bucks in gray. Milwaukee made 30 of 79 shots, 38 percent.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'Fourth in the East'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Cavaliers’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '5–6';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Second night of a back-to-back.', 'N.Y. won 109–97 at Cleveland on Saturday.'] : ['Second night of a back-to-back. N.Y. won 109–97 at Cleveland on Saturday.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Knicks 117 · Bucks 85 · Nov 10'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Kolek from deep'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Towns'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 70;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+3', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "T(board, bx + 24, by + 38, 'Q2', 'b m', 24);"
+    ]
+  ],
+  "team": "NYK",
+  "aria": "Animated recap of the Knicks' 117 to 85 home win over Milwaukee: Tyler Kolek's 3-pointer with 8:43 left in the second quarter that put New York up by double digits for good, quarter-by-quarter scoring, Karl-Anthony Towns's 21 points and 16 rebounds, the top scorers, how the Knicks won, and the next game against Cleveland.",
+  "notes": [
+    "Box score from the Knicks' 117–85 win over the Milwaukee Bucks at Madison Square Garden on Nov 10, 2026, from the Covers.com box score, with game details from Field Level Media, the New York Post (via Yahoo Sports), SB Nation (via Yahoo Sports) and the Plain Text Sports play-by-play. All 117 Knicks points and all 85 Bucks points are accounted for in the box score, and the quarter scores add up to both totals (58–34 at the half, matching Field Level Media and Yahoo Sports). The 32-point lead and Milwaukee's 3-point lead are Covers'. Team totals (rebounds, offensive rebounds, points in the paint, free throws, fast-break points, Milwaukee's 30 of 79 shooting) are Covers'. Records and ranks are from the site's standings after Tuesday's games: New York 6–4 and fourth in the East, Milwaukee 1–10, Cleveland 5–6.",
+    "Milwaukee won the third quarter 38–27 and opened the fourth by pulling within 11 at 85–74, before Towns and Kolek scored the first 14 points of a 20–2 New York run (Field Level Media). Towns's double-double in all 10 games this season is from the New York Post (Field Level Media counts 14 straight regular-season games dating to April 1). Landry Shamet started in place of Josh Hart, who missed a third straight game (New York Post). The Knicks play Cleveland at home on Wednesday at 7:00 PM ET, the second night of a back-to-back (Plain Text Sports schedule); they won 109–97 at Cleveland on Saturday, Nov 7.",
+    "The play of the game is an original illustration of Tyler Kolek's 23-foot 3-pointer, assisted by Jordan Clarkson, with 8:43 left in the second quarter, which made it 34–23 and put New York ahead by double digits for good (Field Level Media; the Plain Text Sports play-by-play has the same clock and score, from 31–23). The recaps don't describe how he got the shot, so it is drawn as the template's plain pull-up. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the New York Knicks or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Kolek’s listed 6-foot-2 and 195 pounds (Basketball-Reference), with arms scaled to his 6-foot-2.75 draft-combine wingspan (Sportskeeda), in the Knicks' home white with No. 13 (Basketball-Reference). He has no approved look on file yet, so he is drawn as a team-colour silhouette in the kit. It is an original silhouette with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "player": "Tyler Kolek",
+    "home": true,
+    "tall": 0.9487,
+    "ape": 1.0101,
+    "mass": 0.9778,
+    "label": "Tyler Kolek, listed 6-2, 195 lb, 6-2.75 wingspan (draft combine)"
+  },
+  "loser_top": [
+    [
+      "Jaime Jaquez Jr.",
+      16,
+      "6 of 13 · 2 threes"
+    ],
+    [
+      "Ryan Rollins",
+      14,
+      "4 of 6 from three · first start since Halloween"
+    ]
+  ]
+}

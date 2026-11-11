@@ -1,0 +1,109 @@
+{
+ "headline": "Giannis scores 30 as Miami holds off Utah",
+ "dek": "Giannis Antetokounmpo had 30 points and 11 rebounds. Utah’s fourth-quarter run fell short.",
+ "three": [
+  [
+   "Giannis: 30 points and 11 rebounds",
+   "12 of 21 from the floor, in 31 minutes."
+  ],
+  [
+   "Up 10 at the half, and up as many as 23 in the third",
+   "Giannis and Mitchell combined for 49 of 115."
+  ],
+  [
+   "Won it at the line and on turnovers",
+   "Turnovers forced 18–8; free throws made 33–14. Miami scored 25 points off 18 Utah turnovers."
+  ]
+ ],
+ "battle": [
+  [
+   "Turnovers forced",
+   18,
+   8
+  ],
+  [
+   "Free throws made",
+   33,
+   14
+  ],
+  [
+   "Steals",
+   8,
+   6
+  ],
+  [
+   "Points in the paint",
+   32,
+   50
+  ]
+ ],
+ "battle_labels": [
+  "MIA",
+  "UTA"
+ ],
+ "top": [
+  [
+   "Giannis Antetokounmpo",
+   "MIA",
+   "11 rebounds, 12 of 21",
+   30
+  ],
+  [
+   "Davion Mitchell",
+   "MIA",
+   "8 assists, 3 threes",
+   19
+  ],
+  [
+   "Pelle Larsson",
+   "MIA",
+   "7 rebounds, 4 of 7",
+   14
+  ],
+  [
+   "Andrew Wiggins",
+   "MIA",
+   "off the bench, 5 of 8",
+   13
+  ]
+ ],
+ "linescore": {
+  "away": [
+   29,
+   35,
+   28,
+   23
+  ],
+  "home": [
+   25,
+   29,
+   18,
+   37
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-10-MIA-at-UTA.json",
+ "loser": {
+  "top": [
+   [
+    "Darryn Peterson",
+    "UTA",
+    "10 of 19 · fouled out",
+    25
+   ],
+   [
+    "Ace Bailey",
+    "UTA",
+    "10 of 15 · 7 rebounds",
+    23
+   ],
+   [
+    "Isaiah Collier",
+    "UTA",
+    "4 of 4 from three · 15 in the 4th",
+    17
+   ]
+  ],
+  "source": "box score"
+ }
+}
