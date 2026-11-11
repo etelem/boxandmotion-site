@@ -1,0 +1,44 @@
+{
+  "out": "steph-splash-v2.html",
+  "team": "GSW",
+  "number": "30",
+  "name": "Stephen Curry",
+  "kit": {
+    "jersey": "#F4F4F2",
+    "number": "#1D428A"
+  },
+  "gold": "#FFC72C",
+  "build": {
+    "tall": 0.9487,
+    "ape": 1.027,
+    "mass": 0.9902,
+    "skin": "#b07a55",
+    "hairColor": "#1b1410",
+    "hair": "crop",
+    "beard": true,
+    "stubble": 0.38,
+    "kneeSleeve": "#16181d",
+    "ankleBrace": "#16181d"
+  },
+  "kicker": "Signature moves · Stephen Curry",
+  "hook": [
+    "Why Steph's jumper",
+    "looks different"
+  ],
+  "steps": [
+    [
+      "One motion",
+      "Hip to over his head, no hitch."
+    ],
+    [
+      "Gone on the way up",
+      "Out before the closeout gets there."
+    ],
+    [
+      "Walking away",
+      "He turns before it drops."
+    ]
+  ],
+  "aria": "Original illustration of Stephen Curry's jump shot: one smooth motion from the hip, released on the way up over a closing defender, a high arc, and he turns away before the ball splashes through the net. Not traced from footage, not to scale.",
+  "cold_open": true
+}

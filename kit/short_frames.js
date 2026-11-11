@@ -4,7 +4,7 @@
 // then holds the last frame for 1.2 s. Frames FROM..TO (exclusive) of that sequence are written.
 const {chromium} = require('/opt/npm-tools/node_modules/playwright');
 const [,, page, dir, from, to, speedsArg] = process.argv;
-const FPS = 30, HOLD = 1.2;
+const FPS = 30, HOLD = process.env.HOLD != null ? +process.env.HOLD : 1.2; // HOLD=0 for looping Shorts
 (async () => {
   const b = await chromium.launch();
   const p = await b.newPage({viewport: {width: 540, height: 960}, deviceScaleFactor: 2});

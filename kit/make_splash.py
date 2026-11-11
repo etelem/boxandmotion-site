@@ -33,10 +33,14 @@ BODY = r"""
   const svg = document.getElementById('sv');
   const W = 900, H = 1600, M = 56, k = 1.32, GOLD = C.gold;
   const floor = 1180, hoopX = W - M - 24, rimY = floor - 240 * k * 1.62, rimR = 30 * k;
-  const TOTAL = 19.5;
   // timeline: full-speed shot, slow breakdown in two parts, end card
   const P0 = 0.5, PLAY = 4.9, B0 = 5.8, B_FROM = 0.65, B_MID = 1.6, B_SPD1 = 0.3, B_TO = 3.4, B_SPD2 = 0.6;
-  const B1 = B0 + (B_MID - B_FROM) / B_SPD1, B2 = B1 + (B_TO - B_MID) / B_SPD2, END0 = B2 + 1.4;
+  const COLD = !!C.cold_open; // start mid-motion, short loop-back ending instead of the 3.5 s end card
+  const CO_PT = 0.95, CO_P0 = -CO_PT, CO_B0 = 3.8;
+  const _B0 = COLD ? CO_B0 : B0;
+  const B1 = _B0 + (B_MID - B_FROM) / B_SPD1, B2 = B1 + (B_TO - B_MID) / B_SPD2, END0 = B2 + 1.4;
+  const RW0 = B2, RW1 = B2 + .45, LOOP_END = RW1 + .85; // rewind to the opening frame, brand strip, loop
+  const TOTAL = COLD ? LOOP_END : 19.5;
 
   const defs = S('defs', {}, svg);
   const glow = S('filter', {id: 'glow', x: '-50%', y: '-50%', width: '200%', height: '200%'}, defs);
@@ -45,8 +49,8 @@ BODY = r"""
 
   const play = S('g', {}, svg);
   T(play, M, 92, C.kicker, 'k', 26);
-  T(play, M, 196, C.hook[0], 'd', 96);
-  T(play, M, 256, C.hook[1], 'b m', 40);
+  if (C.cold_open) { T(play, M, 178, C.hook[0], 'd', 74); T(play, M, 252, C.hook[1], 'd', 74); }
+  else { T(play, M, 196, C.hook[0], 'd', 96); T(play, M, 256, C.hook[1], 'b m', 40); }
   const slowTag = S('g', {opacity: 0}, play);
   S('rect', {x: W - M - 250, y: 300, width: 250, height: 52, rx: 26, fill: 'none', stroke: 'var(--red)', 'stroke-width': 2.5}, slowTag);
   T(slowTag, W - M - 125, 335, 'SLOW MOTION', 'k', 24, 'middle').style.fill = 'var(--red)';
@@ -165,16 +169,27 @@ BODY = r"""
   S('rect', {x: W / 2 - 150, y: 1090, width: 300, height: 8, rx: 4, fill: '#FF5A1F'}, endc);
   T(endc, W / 2, 1170, 'Free Sunday newsletter: link on our channel', 'b m', 30, 'middle');
 
+  let strip = null, rwTag = null;
+  if (C.cold_open) {
+    strip = S('g', {opacity: 0}, svg);
+    S('rect', {x: 0, y: floor + 96, width: W, height: 150, fill: '#111214', opacity: .92}, strip);
+    T(strip, M, floor + 160, 'BOX & MOTION HOOPS', 'd', 44);
+    const st = T(strip, M, floor + 208, 'Signature moves at boxandmotion.com', 'b', 30); st.style.fill = '#FF5A1F';
+    rwTag = T(svg, W - M, 335, '◀◀ AGAIN', 'k', 26, 'end'); rwTag.style.fill = 'var(--red)'; rwTag.setAttribute('opacity', 0);
+  }
   const render = (t) => {
     let pt, slow = false;
-    if (t < B0) pt = Math.max(0, Math.min(PLAY, t - P0));
-    else if (t < B1) { pt = B_FROM + (t - B0) * B_SPD1; slow = true; }
+    if (t < _B0) pt = Math.max(0, Math.min(PLAY, t - (COLD ? CO_P0 : P0)));
+    else if (t < B1) { pt = B_FROM + (t - _B0) * B_SPD1; slow = true; }
     else if (t < B2) { pt = B_MID + (t - B1) * B_SPD2; slow = true; }
-    else pt = B_TO;
+    else if (COLD && t < RW1) pt = lerp(B_TO, CO_PT, inout(clamp((t - RW0) / (RW1 - RW0))));
+    else pt = COLD ? CO_PT : B_TO;
     drawShot(pt, slow);
-    const step = t < B0 ? -1 : pt < 1.18 ? 0 : pt < 1.95 ? 1 : 2;
-    cap.forEach((g, i) => g.setAttribute('opacity', i === step && t < END0 ? 1 : 0));
-    endc.setAttribute('opacity', t >= END0 ? prog(t, END0, .35) : 0);
+    const step = t < _B0 || (COLD && t >= B2) ? -1 : pt < 1.18 ? 0 : pt < 1.95 ? 1 : 2;
+    cap.forEach((g, i) => g.setAttribute('opacity', i === step && (COLD || t < END0) ? 1 : 0));
+    endc.setAttribute('opacity', !COLD && t >= END0 ? prog(t, END0, .35) : 0);
+    if (strip) strip.setAttribute('opacity', COLD && t >= RW0 ? prog(t, RW0, .2) * (1 - prog(t, LOOP_END - .15, .15)) : 0);
+    if (rwTag) rwTag.setAttribute('opacity', COLD && t >= RW0 && t < RW1 ? 1 : 0);
   };
   let time = 0, last = null;
   const frame = (now) => { if (last != null) { time += (now - last) / 1000; if (time > TOTAL) time = 0; } last = now; if (!window.__hold) render(time); requestAnimationFrame(frame); };
