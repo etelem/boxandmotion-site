@@ -1,0 +1,109 @@
+{
+ "headline": "George scores 36 as Boston pulls away in the fourth",
+ "dek": "Paul George scored 36 in his first regular-season game back in Philadelphia.",
+ "three": [
+  [
+   "George: 36 points on 14-of-22 shooting",
+   "17 by halftime, 14 in just over seven minutes of the 4th."
+  ],
+  [
+   "Tied at 76 in the third, then a 24–6 Celtics run",
+   "George and Tatum combined for 57 of 123."
+  ],
+  [
+   "Won it from three and in the fourth",
+   "Threes made 22–11; assists 28–23. Boston won the fourth quarter 32–19."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   22,
+   11
+  ],
+  [
+   "Assists",
+   28,
+   23
+  ],
+  [
+   "Points in the paint",
+   46,
+   32
+  ],
+  [
+   "Steals",
+   6,
+   4
+  ]
+ ],
+ "battle_labels": [
+  "BOS",
+  "PHI"
+ ],
+ "top": [
+  [
+   "Paul George",
+   "BOS",
+   "14 of 22, 6 threes, 30 minutes",
+   36
+  ],
+  [
+   "Jayson Tatum",
+   "BOS",
+   "6 rebounds, 4 assists, 2 blocks",
+   21
+  ],
+  [
+   "Payton Pritchard",
+   "BOS",
+   "off the bench, 4 threes",
+   18
+  ],
+  [
+   "Sam Hauser",
+   "BOS",
+   "off the bench, 4 of 6 from three",
+   12
+  ]
+ ],
+ "linescore": {
+  "away": [
+   30,
+   32,
+   29,
+   32
+  ],
+  "home": [
+   23,
+   28,
+   31,
+   19
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-10-BOS-at-PHI.json",
+ "loser": {
+  "top": [
+   [
+    "Tyrese Maxey",
+    "PHI",
+    "8 of 12 · 3 of 4 from three",
+    24
+   ],
+   [
+    "Anfernee Simons",
+    "PHI",
+    "off the bench · 7 of 13",
+    17
+   ],
+   [
+    "Joel Embiid",
+    "PHI",
+    "11 of 13 FT · 6 rebounds",
+    16
+   ]
+  ],
+  "source": "box score"
+ }
+}

@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-10-BOS-PHI.html",
+  "team": "BOS",
+  "home": false,
+  "number": "13",
+  "player": "Paul George",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 1.0385,
+    "ape": 1.0278,
+    "mass": 0.9927
+  },
+  "build_note": "Listed 6-9, 220 lb (Land of Basketball), 6-11.25 wingspan at the 2010 draft combine (NBADraft.net)",
+  "kicker": "CELTICS 123 · 76ERS 101 · NOV 10",
+  "hook": [
+    "Paul George's 36",
+    "back in Philly"
+  ],
+  "clock": "Q4 · 9:34",
+  "us": "BOS",
+  "them": "PHI",
+  "score_before": [
+    97,
+    82
+  ],
+  "score_make": [
+    100,
+    82
+  ],
+  "stamp": "THREE",
+  "beat": [
+    "Celtics by 18 with 9:34 left.",
+    "A 24–6 run after a 76–76 tie."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Celtics",
+    "them": "76ers",
+    "us_pts": 123,
+    "them_pts": 101
+  },
+  "star": {
+    "name": "Paul George",
+    "big": 36,
+    "big_label": "points on 14-of-22 shooting",
+    "lines": [
+      "6 of 11 from three",
+      "14 in the fourth quarter"
+    ]
+  },
+  "story": "Tied at 76 in the third. Boston won the fourth 32–19 and moved to 9–2, first in the East.",
+  "aria": "Original illustration of Paul George's 3-pointer with 9 minutes 34 seconds left in the fourth quarter that made it 100–82 at Philadelphia. Not traced from footage, not to scale."
+}
