@@ -1,0 +1,169 @@
+{
+  "team": "CLE",
+  "D": "  const D = {\n    date: 'Wed, Nov 11, 2026',\n    us: 115, them: 107, record: '6–6', usName: 'Cavaliers', themName: 'Knicks',\n    quarters: [[33, 23], [26, 30], [23, 23], [33, 31]],\n    leadUs: 12, leadThem: 2,\n    star: {name: 'James Harden', stats: [['Points (season high)', 32, 40], ['Threes made of 7', 5, 7], ['Free throws made of 11', 9, 11]]},\n    scorers: [\n      {name: 'James Harden', pts: 32, note: '9 of 14 · 5 of 7 from three'},\n      {name: 'Donovan Mitchell', pts: 23, note: '8 of 15 · 7 rebounds · 6 assists'},\n      {name: 'Tyrese Proctor', pts: 15, note: 'off the bench · 3 threes'},\n      {name: 'Meleek Thomas', pts: 14, note: 'off the bench · 6 of 11'},\n      {name: 'Jarrett Allen', pts: 11, note: '14 rebounds · 4 of 7'},\n    ],\n    edges: [\n      {label: 'Free throws made', us: 20, them: 11},\n      {label: 'Rebounds', us: 50, them: 42},\n      {label: 'Blocks', us: 9, them: 4},\n      {label: 'Steals', us: 8, them: 5},\n    ],\n    gaps: [\n      {label: 'Assists', us: 23, them: 33},\n    ],\n    next: {opp: 'at Heat', when: 'Fri, Nov 13, 8:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "James Harden's pull-up 3-pointer with 4:22 left that broke a 101–101 tie and put Cleveland ahead for good. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "The go-ahead three",
+    "subP": "Harden pulls up, 4:22 left",
+    "subL": "Harden’s pull-up three at 101–101, 4:22 left",
+    "m0": "Tied",
+    "m1": "Cavaliers +3",
+    "num": "1",
+    "cap1": "Harden from deep. Cavaliers by 3.",
+    "cap2": "104–101. Ahead for good.",
+    "clock": [
+      270,
+      262
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Cavaliers vs Knicks Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Cavaliers 115, Knicks 107 · Nov 11, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Cavaliers vs.', 'Knicks'] : ['Cavaliers vs. Knicks']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Harden: a season-high 32.', 'Cleveland wins at MSG.'] : ['James Harden scored a season-high 32. Cleveland wins at the Garden.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Cavaliers improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Two-game skid over'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Up 6 at the half,', 'held off a 14–4 run'] : ['Up 6 at the half, then held off a 14–4 Knicks run']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Cavaliers ${D.leadUs}, Knicks ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Cavaliers’ margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Harden: 32,', 'a season high'] : ['Harden: a season-high 32 points']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['He came in averaging 15.3.', '5 of 7 from three.'] : ['He came in averaging 15.3. Then 5 of 7 from three.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Harden and Mitchell:', '55 of the 115'] : ['Harden and Mitchell combined for 55 of 115']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 40;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it at the line', 'and on the glass'] : ['Won it at the line and on the glass']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Cavaliers in gold, Knicks in gray. Jalen', 'Brunson didn’t take a free throw.'] : ['Cavaliers in gold, Knicks in gray. Jalen Brunson didn’t take a free throw.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'Sixth in the East'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Heat’s record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '5–6';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Ended a five-game losing run', 'against New York.'] : ['It ended a five-game losing run against New York, back to last May’s East finals.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Cavaliers 115 · Knicks 107 · Nov 11'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'The go-ahead three'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Harden'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 60;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+3', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 200, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 232, ly, D.themName"
+    ]
+  ],
+  "aria": "Animated recap of the Cavaliers' 115 to 107 road win over the Knicks: James Harden's pull-up 3-pointer with 4:22 left that broke a 101 to 101 tie and put Cleveland ahead for good, quarter-by-quarter scoring, Harden's season-high 32 points, the top scorers, how the Cavaliers won, and the next game at Miami.",
+  "figure": {
+    "player": "James Harden",
+    "home": false,
+    "tall": 0.9872,
+    "ape": 1.0779,
+    "mass": 1.0181,
+    "label": "James Harden, listed 6-5, 220 lb, 6-11 wingspan (2009 pre-draft)"
+  },
+  "loser_top": [
+    [
+      "Jalen Brunson",
+      27,
+      "12 of 23 · no free-throw attempts"
+    ],
+    [
+      "Karl-Anthony Towns",
+      21,
+      "11 rebounds · 8 assists"
+    ]
+  ],
+  "notes": [
+    "Box score from the Cavaliers' 115–107 win over the New York Knicks at Madison Square Garden on Nov 11, 2026, from the CBS Sports box score and play-by-play, with game details from the Associated Press (via CBS Sports and theScore), Field Level Media (via Yardbarker) and the New York Post (via Yahoo Sports). All 115 Cleveland points and all 107 New York points are accounted for in the box score, and the quarter scores add up to both totals (59–53 at the half, matching the AP). Cleveland's 12-point lead (33–21 late in the first quarter, which Field Level Media also reports) and New York's 2-point lead are read from the CBS play-by-play. Team totals (free throws 20 of 25 to 11 of 11, rebounds 50–42, blocks 9–4, steals 8–5, assists 23–33) are CBS's. Records and ranks are from the site's standings after Wednesday's games: Cleveland 6–6 and sixth in the East, Miami 5–6.",
+    "The Cavaliers led 95–85 with 8:25 left before New York went on a 14–4 run to tie it at 99 (AP; the CBS play-by-play has Josh Hart's layup tying it with 5:36 left). Harden came in averaging 15.3 points on 36.4 percent shooting (AP via theScore); 32 is his season high. Brunson took no free throws and New York took 11 to Cleveland's 25 (CBS box score). The win ended Cleveland's two-game losing streak (losses to New York on Nov 7 and at Charlotte on Nov 9, from the site's results) and a five-game losing run against the Knicks dating to last May's Eastern Conference finals (Field Level Media, New York Post). Cleveland plays at Miami on Friday at 8:00 PM ET, an NBA Cup group game (AP preview via Yahoo Sports).",
+    "The play of the game is an original illustration of James Harden's unassisted pull-up 3-pointer with 4:22 left, which broke a 101–101 tie and put Cleveland ahead for good (CBS play-by-play; Field Level Media and the New York Post have the same clock, the AP has 4:21). It came after Mitchell rebounded a Karl-Anthony Towns miss, and New York called timeout right after. The play-by-play calls it a pull-up; the recaps don't describe the move further, so it is drawn as the template's plain pull-up. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Cleveland Cavaliers or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Harden's listed 6-foot-5 and 220 pounds (RealGM), with arms scaled to the 6-foot-11 wingspan in his 2009 pre-draft measurements (SLAM), in Cleveland's road wine with No. 1. He has no approved look on file yet, so he is drawn as a team-colour silhouette in the kit. It is an original silhouette with a featureless face, not a portrait or a trace of footage."
+  ]
+}

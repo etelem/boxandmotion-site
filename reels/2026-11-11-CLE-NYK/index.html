@@ -1,0 +1,1246 @@
+<title>Cavaliers vs Knicks Recap</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500&display=swap">
+<style>
+/* Layout: one cinematic stage (16:9, tall on phones) carrying seven scenes, a transport bar and scene chips beneath it, then notes. */
+:root{
+  --navy:#1e000c;--navy-mid:#4d0020;--navy-lift:#860038;
+  --ink:#f7f8f9;--muted:#bcb4a4;--blue:#FDBB30;--blue-text:#fecf6e;--red:#ff5a1f;--red-text:#ff8a5c;--silver:#cdc7bb;
+  --hairline:rgba(253,187,48,.24);--track:rgba(253,187,48,.16);
+  --font-display:'Fraunces',Georgia,'Times New Roman',serif;
+  --font-body:'Albert Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  color-scheme:dark;
+}
+body{background:var(--navy);color:var(--ink);font-family:var(--font-body);font-size:1rem;line-height:1.5}
+.wrap{max-width:70rem;margin-inline:auto;padding-inline:16px;padding-block:1.25rem 2.5rem;display:flex;flex-direction:column;gap:1rem}
+.page-title{font-family:var(--font-display);font-weight:400;font-size:1.25rem;margin:0;text-wrap:balance}
+.stage{aspect-ratio:16/9;max-width:100%;border-radius:14px;overflow:hidden;border:1px solid var(--hairline);background:radial-gradient(120% 95% at 12% 0%,var(--navy-lift),var(--navy-mid) 55%,var(--navy))}
+.stage.tall{aspect-ratio:9/13}
+.stage svg{display:block;width:100%;height:100%}
+
+.transport{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem}
+.btn{font:inherit;font-weight:600;color:var(--navy);background:var(--ink);border:1px solid var(--ink);border-radius:999px;min-height:2.5rem;min-width:5.75rem;padding:0 1.1rem;cursor:pointer;white-space:nowrap}
+.btn-quiet{background:transparent;color:var(--ink);border-color:var(--red)}
+.btn:disabled{opacity:.55;cursor:default}
+.scrub{flex:1 1 12rem;min-width:0;accent-color:var(--blue);height:2.5rem}
+.clock{font-variant-numeric:tabular-nums;color:var(--muted);font-size:.875rem;white-space:nowrap}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{font:inherit;font-size:.875rem;color:var(--muted);background:transparent;border:1px solid var(--hairline);border-radius:999px;min-height:2.25rem;padding:0 .9rem;cursor:pointer}
+.chip[aria-current="true"]{color:var(--ink);border-color:var(--red)}
+.btn:focus-visible,.chip:focus-visible,.scrub:focus-visible{outline:2px solid var(--blue-text);outline-offset:2px}
+.still-note{margin:0;font-size:.875rem;color:var(--muted)}
+.own{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .75rem}
+.own-start{display:flex;align-items:center;gap:.4rem;font-size:.875rem;color:var(--muted)}
+.own-start input{width:4.5rem;font:inherit;color:var(--ink);background:var(--navy-mid);border:1px solid var(--hairline);border-radius:8px;padding:.3rem .5rem;min-height:2.25rem}
+.own-start input:focus-visible{outline:2px solid var(--blue-text);outline-offset:2px}
+
+.notes h2{font-size:.8125rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--red-text);margin:0}
+.notes{display:flex;flex-direction:column;gap:.5rem;margin-top:.5rem;padding-top:1rem;border-top:1px solid var(--hairline)}
+.notes p{margin:0;max-width:65ch;color:var(--muted)}
+
+.d{font-family:var(--font-display);font-weight:400;fill:var(--ink);font-variant-numeric:lining-nums tabular-nums}
+.b{font-family:var(--font-body);fill:var(--ink);font-variant-numeric:tabular-nums}
+.k{font-family:var(--font-body);font-weight:600;letter-spacing:.14em;text-transform:uppercase;fill:var(--red-text)}
+.b.m,.m{fill:var(--muted)}
+.d.g,.b.g,.g{fill:var(--blue-text)}
+.b.i{fill:var(--silver)}
+.b.w,.w{fill:var(--ink);font-weight:600}
+.f-blue{fill:var(--blue)}
+.f-red{fill:var(--red)}
+.f-ink{fill:var(--ink)}
+.f-silver{fill:var(--silver)}
+.f-muted{fill:var(--muted)}
+.f-track{fill:var(--track)}
+.f-navy{fill:var(--navy)}
+.s-red{stroke:var(--red);fill:none}
+.s-blue{stroke:var(--blue);fill:none}
+.s-ink{stroke:var(--ink);fill:none}
+.s-silver{stroke:var(--silver);fill:none}
+.s-muted{stroke:var(--muted);fill:none}
+.s-hair{stroke:var(--hairline);fill:none}
+.fig-o-phi{stroke:var(--blue-text);fill:var(--blue-text)}
+.fig-o-opp{stroke:var(--silver);fill:var(--silver)}
+.fig-skin{stroke:var(--navy);fill:var(--navy)}
+.fig-kit-phi{stroke:var(--blue);fill:var(--blue)}
+.fig-kit-opp{stroke:var(--navy-mid);fill:var(--navy-mid)}
+.fig-shoe{stroke:var(--ink);fill:var(--ink)}
+.fig-num{font-family:var(--font-display);fill:var(--navy-lift)}
+.fig-hair{stroke:var(--navy-mid);fill:var(--navy-mid)}
+.fig-band{stroke:var(--navy-lift);fill:none}
+.fig-kit-phi{stroke:#860038;fill:#860038}
+.fig-num{fill:#FDBB30}
+.fig-band{stroke:#FDBB30}
+html.embed body{background:transparent}
+html.embed .wrap{padding:0;gap:.5rem;max-width:none}
+html.embed .page-title,html.embed .chips,html.embed .own,html.embed .still-note,html.embed .notes{display:none}
+html.embed .stage{border-radius:0;border:0}
+html.embed .transport{padding:0 10px 8px}
+/* embedded on a game page: fill the frame exactly, never scroll inside it */
+html.embed,html.embed body{height:100%;margin:0;overflow:hidden;overscroll-behavior:none}
+html.embed .wrap{height:100%;box-sizing:border-box}
+html.embed .stage,html.embed .stage.tall{flex:1 1 0;min-height:0;aspect-ratio:auto;width:100%}
+html.embed .transport{flex:none}
+</style>
+
+<script>if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add("embed");</script>
+<div class="wrap">
+  <h1 class="page-title">Cavaliers 115, Knicks 107 · Nov 11, 2026</h1>
+  <div class="stage" id="stage">
+    <svg id="reel" role="img" aria-label="Animated recap of the Cavaliers' 115 to 107 road win over the Knicks: James Harden's pull-up 3-pointer with 4:22 left that broke a 101 to 101 tie and put Cleveland ahead for good, quarter-by-quarter scoring, Harden's season-high 32 points, the top scorers, how the Cavaliers won, and the next game at Miami."></svg>
+  </div>
+  <div class="transport">
+    <button class="btn" id="play" type="button">Pause</button>
+    <button class="btn btn-quiet" id="sound" type="button">Play with sound</button>
+    <input class="scrub" id="scrub" type="range" min="0" max="62.5" step="0.01" value="0" aria-label="Position in the animation">
+    <span class="clock" id="clock">0:00 / 1:02</span>
+  </div>
+  <nav class="chips" id="chips" aria-label="Scenes"></nav>
+  <div class="own" id="own">
+    <button class="chip" id="own-pick" type="button">Use my own track</button>
+    <input type="file" id="own-file" accept="audio/*" hidden>
+    <label class="own-start" id="own-start-wrap" for="own-start" hidden>Start the song at <input type="number" id="own-start" min="0" max="1800" step="1" value="0" inputmode="numeric"> seconds</label>
+    <button class="chip" id="own-clear" type="button" hidden>Back to the built-in music</button>
+  </div>
+  <p class="still-note" id="own-status">Pick an audio file from this device and the reel plays to it. The file is not uploaded, so only you hear it.</p>
+  <p class="still-note" id="sound-hint" hidden>Sound is on. If you hear nothing, check your device volume.</p>
+  <p class="still-note" id="sound-note" hidden>Sound could not start in this view. Try opening the page in a regular browser tab.</p>
+  <p class="still-note" id="still-note" hidden>Your device asks for reduced motion, so this opens on the final frame. Press Play to watch it run.</p>
+
+
+  <section class="notes">
+    <h2>About these numbers</h2>
+    <p>Box score from the Cavaliers' 115–107 win over the New York Knicks at Madison Square Garden on Nov 11, 2026, from the CBS Sports box score and play-by-play, with game details from the Associated Press (via CBS Sports and theScore), Field Level Media (via Yardbarker) and the New York Post (via Yahoo Sports). All 115 Cleveland points and all 107 New York points are accounted for in the box score, and the quarter scores add up to both totals (59–53 at the half, matching the AP). Cleveland's 12-point lead (33–21 late in the first quarter, which Field Level Media also reports) and New York's 2-point lead are read from the CBS play-by-play. Team totals (free throws 20 of 25 to 11 of 11, rebounds 50–42, blocks 9–4, steals 8–5, assists 23–33) are CBS's. Records and ranks are from the site's standings after Wednesday's games: Cleveland 6–6 and sixth in the East, Miami 5–6.</p>
+    <p>The Cavaliers led 95–85 with 8:25 left before New York went on a 14–4 run to tie it at 99 (AP; the CBS play-by-play has Josh Hart's layup tying it with 5:36 left). Harden came in averaging 15.3 points on 36.4 percent shooting (AP via theScore); 32 is his season high. Brunson took no free throws and New York took 11 to Cleveland's 25 (CBS box score). The win ended Cleveland's two-game losing streak (losses to New York on Nov 7 and at Charlotte on Nov 9, from the site's results) and a five-game losing run against the Knicks dating to last May's Eastern Conference finals (Field Level Media, New York Post). Cleveland plays at Miami on Friday at 8:00 PM ET, an NBA Cup group game (AP preview via Yahoo Sports).</p>
+    <p>The play of the game is an original illustration of James Harden's unassisted pull-up 3-pointer with 4:22 left, which broke a 101–101 tie and put Cleveland ahead for good (CBS play-by-play; Field Level Media and the New York Post have the same clock, the AP has 4:21). It came after Mitchell rebounded a Karl-Anthony Towns miss, and New York called timeout right after. The play-by-play calls it a pull-up; the recaps don't describe the move further, so it is drawn as the template's plain pull-up. The figures are stylized and not traced from footage, and the spacing is not to scale.</p>
+    <p>The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Cleveland Cavaliers or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.</p>
+    <p>The shooter in the play of the game is drawn to Harden's listed 6-foot-5 and 220 pounds (RealGM), with arms scaled to the 6-foot-11 wingspan in his 2009 pre-draft measurements (SLAM), in Cleveland's road wine with No. 1. He has no approved look on file yet, so he is drawn as a team-colour silhouette in the kit. It is an original silhouette with a featureless face, not a portrait or a trace of footage.</p>
+  </section>
+</div>
+
+<script>
+(() => {
+  const NS = 'http://www.w3.org/2000/svg';
+  const D = {
+    date: 'Wed, Nov 11, 2026',
+    us: 115, them: 107, record: '6–6', usName: 'Cavaliers', themName: 'Knicks',
+    quarters: [[33, 23], [26, 30], [23, 23], [33, 31]],
+    leadUs: 12, leadThem: 2,
+    star: {name: 'James Harden', stats: [['Points (season high)', 32, 40], ['Threes made of 7', 5, 7], ['Free throws made of 11', 9, 11]]},
+    scorers: [
+      {name: 'James Harden', pts: 32, note: '9 of 14 · 5 of 7 from three'},
+      {name: 'Donovan Mitchell', pts: 23, note: '8 of 15 · 7 rebounds · 6 assists'},
+      {name: 'Tyrese Proctor', pts: 15, note: 'off the bench · 3 threes'},
+      {name: 'Meleek Thomas', pts: 14, note: 'off the bench · 6 of 11'},
+      {name: 'Jarrett Allen', pts: 11, note: '14 rebounds · 4 of 7'},
+    ],
+    edges: [
+      {label: 'Free throws made', us: 20, them: 11},
+      {label: 'Rebounds', us: 50, them: 42},
+      {label: 'Blocks', us: 9, them: 4},
+      {label: 'Steals', us: 8, them: 5},
+    ],
+    gaps: [
+      {label: 'Assists', us: 23, them: 33},
+    ],
+    next: {opp: 'at Heat', when: 'Fri, Nov 13, 8:00 PM ET', pUs: 0},
+  };
+  const SCENES = [
+    {id: 'title', name: 'Title', t0: 0, t1: 4},
+    {id: 'final', name: 'Final', t0: 4, t1: 10},
+    {id: 'play', name: 'The go-ahead three', t0: 10, t1: 25},
+    {id: 'flow', name: 'Game flow', t0: 25, t1: 32.5},
+    {id: 'triple', name: 'Harden', t0: 32.5, t1: 39},
+    {id: 'scorers', name: 'Scorers', t0: 39, t1: 45.5},
+    {id: 'edge', name: 'How they won', t0: 45.5, t1: 53.5},
+    {id: 'next', name: 'Up next', t0: 53.5, t1: 62.5},
+    {id: 'end', name: 'Box & Motion', t0: 62.5, t1: 66},
+  ];
+  const TOTAL = 66;
+  const pct = (p) => `${Math.round(p * 100)}%`;
+
+  const clamp = (v) => Math.max(0, Math.min(1, v));
+  const ease = (v) => 1 - Math.pow(1 - v, 3);
+  const prog = (lt, start, dur) => ease(clamp((lt - start) / dur));
+  const lerp = (a, b, p) => a + (b - a) * p;
+  const S = (tag, attrs, parent) => {
+    const n = document.createElementNS(NS, tag);
+    for (const k in attrs) n.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(n);
+    return n;
+  };
+  const T = (parent, x, y, str, cls, size, anchor) => {
+    const n = S('text', {x, y, class: cls, 'text-anchor': anchor || 'start'}, parent);
+    n.textContent = str;
+    n.style.fontSize = size + 'px';
+    n._size = size;
+    return n;
+  };
+  const fitAll = (nodes, maxW) => {
+    const widest = Math.max(...nodes.map((n) => n.getComputedTextLength()));
+    if (widest > maxW) nodes.forEach((n) => { n.style.fontSize = (n._size * maxW / widest) + 'px'; });
+    return nodes;
+  };
+  const show = (node, p, dy) => {
+    node.style.opacity = p;
+    node.setAttribute('transform', `translate(0 ${((1 - p) * (dy == null ? 26 : dy)).toFixed(2)})`);
+  };
+  const ball = (parent, cx, cy, r) => {
+    const g = S('g', {class: 's-red', 'stroke-width': Math.max(2, r * 0.11), 'stroke-linecap': 'round'}, parent);
+    S('circle', {cx, cy, r}, g);
+    S('line', {x1: cx - r, x2: cx + r, y1: cy, y2: cy}, g);
+    S('line', {x1: cx, x2: cx, y1: cy - r, y2: cy + r}, g);
+    const a = r * 0.72, c = r * 0.18;
+    S('path', {d: `M${cx - a} ${cy - a}Q${cx - c} ${cy} ${cx - a} ${cy + a}`}, g);
+    S('path', {d: `M${cx + a} ${cy - a}Q${cx + c} ${cy} ${cx + a} ${cy + a}`}, g);
+    return g;
+  };
+  const mark = (parent, x, y, size) => {
+    const g = S('g', {transform: `translate(${x} ${y}) scale(${size / 100})`}, parent);
+    S('rect', {x: 9, y: 9, width: 82, height: 82, rx: 9, fill: 'none', stroke: 'var(--ink)', 'stroke-width': 8}, g);
+    S('path', {d: 'M24 24L40 40M40 24L24 40', fill: 'none', stroke: 'var(--ink)', 'stroke-width': 8, 'stroke-linecap': 'round'}, g);
+    S('path', {d: 'M33 50C34 62 42 69 53 69', fill: 'none', stroke: '#FF5A1F', 'stroke-width': 6.5, 'stroke-linecap': 'round', 'stroke-dasharray': '0 10.5'}, g);
+    S('circle', {cx: 68, cy: 68, r: 9.5, fill: 'none', stroke: '#FF5A1F', 'stroke-width': 7.5}, g);
+    return g;
+  };
+  const heading = (L, g, lines) => {
+    const nodes = fitAll(lines.map((s, i) => T(g, L.M, L.top + L.fs.h * (0.9 + i * 1.12), s, 'd', L.fs.h)), L.W - 2 * L.M);
+    return {nodes, y: L.top + L.fs.h * (0.9 + (lines.length - 1) * 1.12)};
+  };
+  const subline = (L, g, y, lines) => {
+    lines.forEach((s, i) => T(g, L.M, y + L.fs.s * (1.35 + i * 1.25), s, 'b m', L.fs.s));
+    return y + L.fs.s * (1.35 + (lines.length - 1) * 1.25);
+  };
+
+  function sceneTitle(L, g) {
+    const {W, H, M, fs, P} = L;
+    const y0 = P ? H * 0.34 : H * 0.4;
+    mark(g, M, y0 - fs.k - fs.d * 0.86, fs.d * 0.62);
+    T(g, M, y0, `Game recap · ${D.date}`, 'k', fs.k);
+    const lines = P ? ['Cavaliers vs.', 'Knicks'] : ['Cavaliers vs. Knicks'];
+    fitAll(lines.map((s, i) => T(g, M, y0 + fs.d * (1 + i * 1.02), s, 'd', fs.d)), W - 2 * M);
+    const yb = y0 + fs.d * (1 + (lines.length - 1) * 1.02) + fs.d * 0.32;
+    const rule = ['f-red', 'f-ink', 'f-blue'].map((cls) => S('rect', {x: M, y: yb, width: 0, height: 6, class: cls}, g));
+    const subs = (P ? ['Harden: a season-high 32.', 'Cleveland wins at MSG.'] : ['James Harden scored a season-high 32. Cleveland wins at the Garden.'])
+      .map((s, i) => T(g, M, yb + 30 + fs.b * (1 + i * 1.3), s, 'b m', fs.b));
+    return (lt) => {
+      const seg = 100 * prog(lt, 0.3, 1);
+      rule.forEach((r, i) => { r.setAttribute('x', (M + i * seg).toFixed(1)); r.setAttribute('width', seg.toFixed(1)); });
+      subs.forEach((n, i) => show(n, prog(lt, 0.8 + i * 0.15, 0.7)));
+    };
+  }
+
+  function sceneFinal(L, g) {
+    const {W, H, M, fs, P} = L;
+    const cx = W / 2, base = P ? H * 0.47 : H * 0.56, size = P ? 220 : 300;
+    T(g, cx, base - size * 0.92, 'Final', 'k', fs.k, 'middle');
+    const dash = T(g, cx, base, '–', 'd', size, 'middle');
+    const gap = dash.getComputedTextLength() / 2 + size * 0.04;
+    const us = T(g, cx - gap, base, '0', 'd', size, 'end');
+    const them = T(g, cx + gap, base, '0', 'd m', size, 'start');
+    const labels = S('g', {}, g);
+    T(labels, cx - gap, base + fs.b * 1.5, D.usName, 'b w', fs.b, 'end');
+    T(labels, cx + gap, base + fs.b * 1.5, D.themName, 'b m', fs.b, 'start');
+    const extra = S('g', {}, g);
+    const line1 = S('text', {x: cx, y: base + fs.b * 3.4, class: 'b', 'text-anchor': 'middle'}, extra);
+    line1.style.fontSize = fs.b + 'px';
+    S('tspan', {class: 'w'}, line1).textContent = `Cavaliers improve to ${D.record}`;
+    T(extra, cx, base + fs.b * 3.4 + fs.s * 1.7, 'Two-game skid over', 'b m', fs.s, 'middle');
+    return (lt) => {
+      const p = prog(lt, 0.4, 2.2);
+      us.textContent = String(Math.round(D.us * p));
+      them.textContent = String(Math.round(D.them * p));
+      labels.style.opacity = prog(lt, 0.4, 0.5);
+      show(extra, prog(lt, 2.9, 0.7));
+    };
+  }
+
+  // Play of the game: a stylized side view drawn from the written play-by-play, not traced from footage and not to scale.
+  const POSES = {
+    dribble: {head: [4, -236], neck: [2, -212], hip: [0, -130], lk: [-14, -70], lf: [-22, 0], rk: [16, -72], rf: [26, 0], le: [-20, -170], lh: [-26, -132], re: [26, -166], rh: [42, -112]},
+    set: {head: [6, -218], neck: [4, -194], hip: [-4, -118], lk: [12, -66], lf: [-10, 0], rk: [18, -64], rf: [20, 0], le: [22, -176], lh: [30, -198], re: [18, -160], rh: [34, -192]},
+    rise: {head: [4, -246], neck: [2, -222], hip: [0, -140], lk: [-6, -74], lf: [-12, -6], rk: [8, -76], rf: [10, -4], le: [22, -262], lh: [30, -300], re: [14, -262], rh: [26, -306]},
+    guard: {head: [-2, -232], neck: [0, -208], hip: [0, -128], lk: [-18, -68], lf: [-28, 0], rk: [16, -68], rf: [26, 0], le: [-34, -188], lh: [-52, -210], re: [30, -186], rh: [48, -206]},
+    contest: {head: [-4, -244], neck: [-2, -220], hip: [0, -138], lk: [-8, -74], lf: [-14, -4], rk: [8, -74], rf: [12, -4], le: [-16, -262], lh: [-26, -304], re: [10, -262], rh: [4, -300]},
+  };
+  const JOINTS = ['head', 'neck', 'hip', 'lk', 'lf', 'rk', 'rf', 'le', 'lh', 're', 'rh'];
+  const BONES = [['neck', 'hip', 1.5], ['hip', 'lk', 1], ['lk', 'lf', 1], ['hip', 'rk', 1], ['rk', 'rf', 1], ['neck', 'le', 0.9], ['le', 'lh', 0.9], ['neck', 're', 0.9], ['re', 'rh', 0.9]];
+  const mixPose = (a, b, p) => Object.fromEntries(JOINTS.map((j) => [j, [lerp(a[j][0], b[j][0], p), lerp(a[j][1], b[j][1], p)]]));
+  // An athletic silhouette: limbs, uniform and sneakers drawn twice, a wide glowing outline layer under a solid fill layer,
+  // so overlapping parts merge into one outlined body. The face is left featureless on purpose.
+  const LIMBS = [['hip', 'lk', 21], ['lk', 'lf', 15], ['hip', 'rk', 21], ['rk', 'rf', 15], ['neck', 'le', 13], ['le', 'lh', 11], ['neck', 're', 13], ['re', 'rh', 11], ['neck', 'head', 12]];
+  function figure(parent, team, k, number) {
+    const g = S('g', {'stroke-linecap': 'round', 'stroke-linejoin': 'round'}, parent);
+    const outline = S('g', {class: `fig-o-${team}`}, g);
+    if (team === 'phi') outline.setAttribute('filter', 'url(#glow)');
+    const fill = S('g', {}, g);
+    const mk = (layer, cls, extra) => ({
+      limbs: LIMBS.map(([, , w]) => S('line', {class: cls.skin, 'stroke-width': ((w + extra) * k).toFixed(1)}, layer)),
+      shorts: [0, 1].map(() => S('line', {class: cls.kit, 'stroke-width': ((30 + extra) * k).toFixed(1)}, layer)),
+      jersey: S('polygon', {class: cls.kit, 'stroke-width': ((4 + extra) * k).toFixed(1)}, layer),
+      head: S('ellipse', {class: cls.skin, 'stroke-width': (extra * k).toFixed(1)}, layer),
+      shoes: [0, 1].map(() => S('line', {class: cls.shoe, 'stroke-width': ((11 + extra) * k).toFixed(1)}, layer)),
+    });
+    const o = mk(outline, {skin: '', kit: '', shoe: ''}, 7);
+    const f = mk(fill, {skin: 'fig-skin', kit: `fig-kit-${team}`, shoe: 'fig-shoe'}, 0);
+    // draw order in the fill layer: back arm, legs, shorts, jersey, number, front arm, head
+    [f.limbs[4], f.limbs[5]].forEach((n) => fill.insertBefore(n, fill.firstChild));
+    fill.appendChild(f.shorts[0]); fill.appendChild(f.shorts[1]); fill.appendChild(f.jersey);
+    const num = number == null ? null : S('text', {class: 'fig-num', 'text-anchor': 'middle'}, fill);
+    if (num) { num.textContent = number; num.style.fontSize = (30 * k).toFixed(1) + 'px'; }
+    // the front arm crosses the jersey, so it gets its own thin outline to read as an arm, not a strap
+    const armEdge = [6, 7].map((i) => S('line', {class: `fig-o-${team}`, 'stroke-width': ((LIMBS[i][2] + 4) * k).toFixed(1)}, fill));
+    fill.appendChild(f.limbs[6]); fill.appendChild(f.limbs[7]); fill.appendChild(f.limbs[8]); fill.appendChild(f.head);
+    const setLine = (n, [x1, y1], [x2, y2]) => { n.setAttribute('x1', x1.toFixed(1)); n.setAttribute('y1', y1.toFixed(1)); n.setAttribute('x2', x2.toFixed(1)); n.setAttribute('y2', y2.toFixed(1)); };
+    return {
+      g,
+      draw(pose, x, y, kk, dir) {
+        const at = (j) => [x + dir * pose[j][0] * k, y + pose[j][1] * k];
+        const N = at('neck'), Hp = at('hip');
+        let ax = N[0] - Hp[0], ay = N[1] - Hp[1]; const len = Math.hypot(ax, ay) || 1; ax /= len; ay /= len;
+        const px = -ay, py = ax;
+        const pt = (b, side, along, w) => `${(b[0] + px * side * w * k + ax * along * k).toFixed(1)},${(b[1] + py * side * w * k + ay * along * k).toFixed(1)}`;
+        const jersey = [pt(N, 1, -8, 15), pt(N, -1, -8, 15), pt(Hp, -1, -4, 14), pt(Hp, 1, -4, 14)].join(' ');
+        const knees = [at('lk'), at('rk')];
+        const shortsEnd = knees.map((kn) => [lerp(Hp[0], kn[0], 0.62), lerp(Hp[1], kn[1], 0.62)]);
+        const feet = [at('lf'), at('rf')];
+        const hd = at('head');
+        const shoulder = (side) => [N[0] + dir * side * 12 * k - ax * 7 * k, N[1] - ay * 7 * k];
+        [o, f].forEach((layer, li) => {
+          LIMBS.forEach(([a, b], i) => setLine(layer.limbs[i], i === 4 ? shoulder(-1) : i === 6 ? shoulder(1) : at(a), b === 'head' ? [lerp(N[0], hd[0], 0.6), lerp(N[1], hd[1], 0.6)] : at(b)));
+          layer.shorts.forEach((n, i) => setLine(n, [Hp[0] + ax * 4 * k, Hp[1] + ay * 4 * k], shortsEnd[i]));
+          layer.jersey.setAttribute('points', jersey);
+          layer.head.setAttribute('cx', hd[0].toFixed(1)); layer.head.setAttribute('cy', hd[1].toFixed(1));
+          layer.head.setAttribute('rx', (15 * k).toFixed(1)); layer.head.setAttribute('ry', (18 * k).toFixed(1));
+          layer.shoes.forEach((n, i) => setLine(n, [feet[i][0] - dir * 3 * k, feet[i][1] - 4 * k], [feet[i][0] + dir * 14 * k, feet[i][1] - 4 * k]));
+        });
+        armEdge.forEach((n, i) => { const [ja, jb] = LIMBS[6 + i]; setLine(n, i === 0 ? shoulder(1) : at(ja), at(jb)); });
+        if (num) {
+          num.setAttribute('x', ((N[0] + Hp[0]) / 2).toFixed(1));
+          num.setAttribute('y', ((N[1] + Hp[1]) / 2 + 10 * k).toFixed(1));
+        }
+        return at;
+      },
+    };
+  }
+
+  // Play of the game: James Harden's pull-up 3-pointer with 4:22 left that broke a 101–101 tie and put Cleveland ahead for good. An original illustration from written accounts; not traced from footage, not to scale.
+
+  // An original illustration from written accounts; not traced from footage, not to scale.
+  // A player-proportioned silhouette: tapered limbs with muscle curves, a sleeveless jersey over the torso, knee-length
+  // shorts, high-top sneakers and a head with a plain hair line. Height, arm length and build come from the player's
+  // listed measurements (b.tall = height vs the 6'6" generic figure, b.ape = wingspan / height, b.mass = weight per inch
+  // of height vs the generic figure). Drawn twice: a glowing outline layer under a solid fill layer. The face stays
+  // featureless on purpose (hair, beard and frame are allowed, a likeness of the face is not): the resemblance is build, number, colors and the moment, not a portrait.
+  function figureReal(parent, team, k, number, b) {
+    // optional look (all off by default): frame = extra width through shoulders, chest and hips for a heavier build;
+    // hair = 'crop' | 'swept' (fuller on top, swept back); beard = true; hairColor = a CSS color for hair and beard
+    // gear seen in game photos (optional): wristband = color of a band on the guide-hand wrist, legSleeve = color of a sleeve knee-to-ankle on the back leg
+    // kneeSleeve = colour of a sleeve over the back knee (kneeSleeveFront for the front knee); ankleBrace = colour of braces on both ankles
+    b = Object.assign({tall: 1, mass: 1, ape: 1, frame: 1, hair: 'crop', beard: false, hairColor: null, skin: null, wristband: null, legSleeve: null, kneeSleeve: null, kneeSleeveFront: null, ankleBrace: null}, b || {});
+    const g = S('g', {'stroke-linecap': 'round', 'stroke-linejoin': 'round'}, parent);
+    const outline = S('g', {class: `fig-o-${team}`}, g);
+    if (team === 'phi') outline.setAttribute('filter', 'url(#glow)');
+    const fill = S('g', {}, g);
+    const PARTS = ['armB', 'wrist', 'legB', 'sleeve', 'kneeB', 'braceB', 'legF', 'kneeF', 'braceF', 'shorts', 'torso', 'jersey', 'band', 'neck', 'armF', 'head', 'hair', 'beard', 'shoes'];
+    const CLS = {armB: 'fig-skin', legB: 'fig-skin', legF: 'fig-skin', shorts: `fig-kit-${team}`, torso: 'fig-skin', jersey: `fig-kit-${team}`, band: 'fig-band', neck: 'fig-skin', armF: 'fig-skin', head: 'fig-skin', hair: 'fig-hair', beard: 'fig-hair', shoes: 'fig-shoe', wrist: 'fig-band', sleeve: 'fig-band', kneeB: 'fig-band', kneeF: 'fig-band', braceB: 'fig-band', braceF: 'fig-band'};
+    const OX = 7 * k;
+    const o = {}, f = {};
+    PARTS.forEach((p) => {
+      if (!['jersey', 'band', 'beard', 'wrist', 'sleeve', 'kneeB', 'kneeF', 'braceB', 'braceF'].includes(p)) o[p] = S('path', {'stroke-width': OX.toFixed(1)}, outline);
+      if (p === 'armF') {
+        // the front arm crosses the jersey, so it gets its own thin edge to read as an arm, not a strap
+        f.armEdge = S('path', {class: `fig-o-${team}`, 'stroke-width': (4 * k).toFixed(1)}, fill);
+      }
+      f[p] = S('path', {class: CLS[p], 'stroke-width': (p === 'band' ? 3 * k : p === 'jersey' || p === 'shorts' ? 2 * k : 0.5).toFixed(1)}, fill);
+      if ((p === 'hair' || p === 'beard') && b.hairColor) { f[p].style.fill = b.hairColor; f[p].style.stroke = b.hairColor; }
+      if (p === 'beard') { f[p].style.opacity = b.stubble == null ? 0.3 : b.stubble; f[p].setAttribute('stroke-width', 0); }
+      if (['wrist', 'sleeve', 'kneeB', 'kneeF', 'braceB', 'braceF'].includes(p)) { const col = p === 'wrist' ? b.wristband : p === 'sleeve' ? b.legSleeve : p[0] === 'k' ? (p === 'kneeB' ? b.kneeSleeve : b.kneeSleeveFront) : b.ankleBrace; f[p].setAttribute('stroke-width', 0); if (col) { f[p].style.fill = col; f[p].style.stroke = col; } }
+      if (CLS[p] === 'fig-skin' && b.skin) { f[p].style.fill = b.skin; f[p].style.stroke = b.skin; }
+      if (p === 'jersey' && number != null) {
+        f.num = S('text', {class: 'fig-num', 'text-anchor': 'middle'}, fill);
+        f.num.textContent = number; f.num.style.fontSize = (30 * k).toFixed(1) + 'px';
+      }
+    });
+    // combed strands over the hair (only drawn for the 'swept' style)
+    f.strands = S('path', {fill: 'none', 'stroke-width': (1.6 * k).toFixed(1), 'stroke-linecap': 'round', opacity: 0.35, style: 'stroke:rgba(0,0,0,.6)'}, fill);
+    fill.insertBefore(f.strands, f.beard ? f.beard : f.shoes);
+    const F = (v) => v.toFixed(1);
+    const add = (a, b2, s = 1) => [a[0] + b2[0] * s, a[1] + b2[1] * s];
+    // a tapered capsule from A to B: width w1 at A, wm at the muscle belly (fraction t along), w2 at B
+    const seg = (A, B, w1, wm, w2, t = 0.4, belly = 0) => {
+      const dx = B[0] - A[0], dy = B[1] - A[1], L = Math.hypot(dx, dy) || 1, u = [dx / L, dy / L], n = [-u[1], u[0]];
+      const m = add(A, u, L * t);
+      const side = (s) => {
+        const a = add(A, n, s * w1 / 2), e = add(B, n, s * w2 / 2), mm = add(m, n, s * (wm / 2 + (s > 0 ? belly : 0)));
+        return [a, [2 * mm[0] - (a[0] + e[0]) / 2, 2 * mm[1] - (a[1] + e[1]) / 2], e];
+      };
+      const [a1, c1, b1] = side(1), [a2, c2, b2] = side(-1);
+      const capB = w2 * 0.66, capA = w1 * 0.66;
+      return `M${F(a1[0])} ${F(a1[1])}Q${F(c1[0])} ${F(c1[1])} ${F(b1[0])} ${F(b1[1])}`
+        + `C${F(b1[0] + u[0] * capB)} ${F(b1[1] + u[1] * capB)} ${F(b2[0] + u[0] * capB)} ${F(b2[1] + u[1] * capB)} ${F(b2[0])} ${F(b2[1])}`
+        + `Q${F(c2[0])} ${F(c2[1])} ${F(a2[0])} ${F(a2[1])}`
+        + `C${F(a2[0] - u[0] * capA)} ${F(a2[1] - u[1] * capA)} ${F(a1[0] - u[0] * capA)} ${F(a1[1] - u[1] * capA)} ${F(a1[0])} ${F(a1[1])}Z`;
+    };
+    const poly = (pts) => 'M' + pts.map(([x, y]) => `${F(x)} ${F(y)}`).join('L') + 'Z';
+    return {
+      g,
+      draw(pose, x, y, kk, dir) {
+        const K = k * b.tall, W = k * b.mass, WT = W * b.frame;
+        const P0 = (j) => [x + dir * pose[j][0] * K, y + pose[j][1] * K];
+        const J = {};
+        ['head', 'neck', 'hip', 'lk', 'lf', 'rk', 'rf'].forEach((j) => { J[j] = P0(j); });
+        const N = J.neck, Hp = J.hip;
+        let ax = N[0] - Hp[0], ay = N[1] - Hp[1]; const len = Math.hypot(ax, ay) || 1; ax /= len; ay /= len;
+        const px = -ay, py = ax;
+        const along = (pt, s, w, d) => [pt[0] + px * s * w * WT + ax * d * K, pt[1] + py * s * w * WT + ay * d * K];
+        const shoulder = (side) => [N[0] + dir * side * 12 * WT - ax * 8 * K, N[1] - ay * 8 * K];
+        // arms grow from the shoulder by the wingspan ratio
+        [['l', -1], ['r', 1]].forEach(([s, side]) => {
+          const sh = shoulder(side), e = P0(s + 'e'), h = P0(s + 'h');
+          const E = add(sh, [e[0] - sh[0], e[1] - sh[1]], b.ape);
+          J[s + 'e'] = E; J[s + 'h'] = add(E, [h[0] - e[0], h[1] - e[1]], b.ape); J[s + 's'] = sh;
+        });
+        const arm = (s) => seg(J[s + 's'], J[s + 'e'], 15 * W, 16 * W, 11 * W, 0.3) + seg(J[s + 'e'], J[s + 'h'], 11 * W, 12 * W, 8 * W, 0.3);
+        const ankle = (ft) => [ft[0] - dir * 2 * k, ft[1] - 16 * k];
+        const leg = (s) => seg(Hp, J[s + 'k'], 25 * WT, 27 * WT, 15 * W, 0.35) + seg(J[s + 'k'], ankle(J[s + 'f']), 15 * W, 18 * W, 10 * W, 0.3);
+        const shortsTo = (s) => [lerp(Hp[0], J[s + 'k'][0], 0.72), lerp(Hp[1], J[s + 'k'][1], 0.72)];
+        const shorts = seg(add(Hp, [ax, ay], 6 * K), shortsTo('l'), 30 * WT, 31 * WT, 28 * W, 0.5) + seg(add(Hp, [ax, ay], 6 * K), shortsTo('r'), 30 * WT, 31 * WT, 28 * W, 0.5)
+          + poly([along(Hp, 1, 18, 10), along(Hp, -1, 18, 10), along(Hp, -1, 17, -6), along(Hp, 1, 17, -6)]);
+        // torso: broad at the shoulders, tapering to the waist; the jersey sits on it with narrow straps and open armholes
+        const torso = poly([along(N, 1, 24, -6), along(N, 1, 23, -24), along(Hp, 1, 16, 26), along(Hp, 1, 16, 0), along(Hp, -1, 16, 0), along(Hp, -1, 16, 26), along(N, -1, 23, -24), along(N, -1, 24, -6)]);
+        const jersey = poly([along(N, 1, 11, -2), along(N, 1, 14, -6), along(N, 1, 18, -30), along(Hp, 1, 17, 22), along(Hp, 1, 17, 6), along(Hp, -1, 17, 6), along(Hp, -1, 17, 22), along(N, -1, 18, -30), along(N, -1, 14, -6), along(N, -1, 11, -2), along(N, 0, 0, -12)]);
+        const hd = J.head, rx = 14 * W * 1.02, ry = 17.5 * K / b.tall * Math.sqrt(b.tall);
+        const neck = seg(add(N, [ax, ay], -4 * K), [lerp(N[0], hd[0], 0.65), lerp(N[1], hd[1], 0.65)], 13 * W, 12 * W, 12 * W, 0.5);
+        const head = `M${F(hd[0] - rx)} ${F(hd[1])}A${F(rx)} ${F(ry)} 0 1 0 ${F(hd[0] + rx)} ${F(hd[1])}A${F(rx)} ${F(ry)} 0 1 0 ${F(hd[0] - rx)} ${F(hd[1])}Z`;
+        // a plain, close-cropped hair cap: higher at the forehead, lower at the back
+        const cap = []; for (let i = 0; i <= 16; i += 1) { const th = -Math.PI * 1.06 + (Math.PI * 0.86) * i / 16; cap.push([hd[0] + dir * (rx + 1.2 * k) * Math.cos(th), hd[1] + (ry + 1.2 * k) * Math.sin(th)]); }
+        let hair = poly(cap.concat([[hd[0] + dir * rx * 0.35, hd[1] - ry * 0.45], [hd[0] - dir * rx * 0.3, hd[1] - ry * 0.2]]));
+        // closed smooth curve through points (for natural hair outlines, no jagged corners)
+        const blob = (pts) => { const n = pts.length; let d = `M${F((pts[0][0] + pts[1][0]) / 2)} ${F((pts[0][1] + pts[1][1]) / 2)}`;
+          for (let i = 1; i <= n; i += 1) { const a = pts[i % n], c = pts[(i + 1) % n]; d += `Q${F(a[0])} ${F(a[1])} ${F((a[0] + c[0]) / 2)} ${F((a[1] + c[1]) / 2)}`; } return d + 'Z'; };
+        const X = (c) => hd[0] + dir * c[0] * rx, Y = (c) => hd[1] + c[1] * ry;
+        let strands = 'M0 0';
+        if (b.hair === 'tousled') {
+          // longer and a little messy: uneven lift across the top, swept back, down to the nape behind the ear
+          hair = blob([[0.98, -0.28], [1.06, -0.66], [0.92, -0.98], [0.66, -1.2], [0.42, -1.3], [0.18, -1.44], [-0.08, -1.34], [-0.34, -1.42], [-0.6, -1.26], [-0.86, -1.12], [-1.06, -0.8], [-1.16, -0.38], [-1.14, 0.08], [-1.0, 0.42], [-0.82, 0.36], [-0.7, 0.06], [-0.5, -0.28], [-0.2, -0.42], [0.1, -0.5], [0.36, -0.43], [0.6, -0.52], [0.82, -0.38]].map((c) => [X(c), Y(c)]));
+          strands = [[[0.84, -0.7], [0.24, -1.12], [-0.7, -1.02]], [[0.6, -1.06], [0.0, -1.3], [-0.72, -1.16]], [[0.78, -0.48], [0.1, -0.8], [-0.86, -0.6]]]
+            .map(([a, c, e]) => `M${F(X(a))} ${F(Y(a))}Q${F(X(c))} ${F(Y(c))} ${F(X(e))} ${F(Y(e))}`).join('');
+        }
+        if (b.hair === 'swept') {
+          // medium length, swept back: a little lift over the forehead, close at the temple, full at the crown and back
+          hair = blob([[0.96, -0.3], [1.0, -0.74], [0.72, -1.14], [0.16, -1.36], [-0.46, -1.27], [-0.93, -0.92], [-1.1, -0.4], [-1.05, 0.05], [-0.86, 0.18], [-0.68, -0.02], [-0.5, -0.3], [-0.2, -0.42], [0.1, -0.5], [0.36, -0.43], [0.6, -0.52], [0.82, -0.4]].map((c) => [X(c), Y(c)]));
+          // a few strands combed back, a shade darker, so it reads as hair and not a cap
+          strands = [[[0.82, -0.66], [0.2, -1.08], [-0.66, -0.96]], [[0.56, -1.02], [-0.06, -1.22], [-0.7, -1.06]]]
+            .map(([a, c, e]) => `M${F(X(a))} ${F(Y(a))}Q${F(X(c))} ${F(Y(c))} ${F(X(e))} ${F(Y(e))}`).join('');
+        }
+        let beard = 'M0 0';
+        if (b.beard) {
+          // short stubble: a thin shadow that hugs the jaw and chin (drawn translucent), not a shape of its own
+          const rim = [120, 100, 80, 60, 40, 22].map((d) => [Math.cos(d * Math.PI / 180) * 0.99, Math.sin(d * Math.PI / 180) * 0.99]);
+          beard = poly([[-0.2, -0.32], [-0.36, 0.3]].concat(rim, [[0.86, 0.28], [0.56, 0.24], [0.2, 0.16], [-0.04, -0.04], [-0.08, -0.32]]).map((c) => [X(c), Y(c)]));
+        }
+        const shoe = (ft) => poly([[ft[0] - dir * 7 * k, ft[1]], [ft[0] + dir * 21 * k, ft[1]], [ft[0] + dir * 20 * k, ft[1] - 8 * k], [ft[0] + dir * 7 * k, ft[1] - 12 * k], [ft[0] + dir * 5 * k, ft[1] - 21 * k], [ft[0] - dir * 7 * k, ft[1] - 21 * k]]);
+        const crotch = add(Hp, [ax, ay], -8 * K), sl = shortsTo('l'), sr = shortsTo('r');
+        const band = `M${F(along(Hp, 1, 17, 6)[0])} ${F(along(Hp, 1, 17, 6)[1])}L${F(along(Hp, -1, 17, 6)[0])} ${F(along(Hp, -1, 17, 6)[1])}M${F(crotch[0])} ${F(crotch[1])}L${F((sl[0] + sr[0]) / 2)} ${F((sl[1] + sr[1]) / 2)}`;
+        const lp = (a, c, q) => [lerp(a[0], c[0], q), lerp(a[1], c[1], q)];
+        const wrist = b.wristband ? seg(lp(J.le, J.lh, 0.66), lp(J.le, J.lh, 0.86), 12.5 * W, 12.8 * W, 11.5 * W, 0.5) : 'M0 0';
+        const sleeve = b.legSleeve ? seg(lp(J.lk, ankle(J.lf), 0.1), lp(J.lk, ankle(J.lf), 0.94), 16.5 * W, 19 * W, 11.5 * W, 0.3) : 'M0 0';
+        const knee = (s) => seg(lp(Hp, J[s + 'k'], 0.72), lp(J[s + 'k'], ankle(J[s + 'f']), 0.3), 17.5 * W, 18 * W, 16.5 * W, 0.3);
+        const brace = (s) => seg(lp(J[s + 'k'], ankle(J[s + 'f']), 0.8), ankle(J[s + 'f']), 13.5 * W, 14 * W, 13.5 * W, 0.3);
+        const kneeB = b.kneeSleeve ? knee('l') : 'M0 0', kneeF = b.kneeSleeveFront ? knee('r') : 'M0 0';
+        const braceB = b.ankleBrace ? brace('l') : 'M0 0', braceF = b.ankleBrace ? brace('r') : 'M0 0';
+        const D2 = {wrist, sleeve, kneeB, kneeF, braceB, braceF, band, armB: arm('l'), legB: leg('l'), legF: leg('r'), shorts, torso, jersey, neck, armF: arm('r'), head, hair, beard, shoes: shoe(J.lf) + shoe(J.rf)};
+        PARTS.forEach((p) => { f[p].setAttribute('d', D2[p]); if (o[p]) o[p].setAttribute('d', D2[p]); });
+        f.armEdge.setAttribute('d', D2.armF);
+        f.strands.setAttribute('d', strands);
+        if (f.num) { const c = [lerp(N[0], Hp[0], 0.45), lerp(N[1], Hp[1], 0.45)]; f.num.setAttribute('x', F(c[0])); f.num.setAttribute('y', F(c[1] + 10 * k)); }
+        return (j) => J[j];
+      },
+    };
+  }
+  const STAR_BUILD = {"tall": 0.9872, "ape": 1.0779, "mass": 1.0181};
+  function scenePlay(L, g, defs) {
+    const {W, H, M, fs, P} = L;
+    const k = P ? 0.82 : 1;
+    const floor = P ? H * 0.8 : H - M - 70;
+    const hoopX = P ? W - M - 30 : W - M - 120;
+    const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;
+    const rimY = floor - 240 * k * 1.62, rimR = 34 * k;
+    const glow = S('filter', {id: 'glow', x: '-50%', y: '-50%', width: '200%', height: '200%'}, defs);
+    S('feGaussianBlur', {stdDeviation: 6, result: 'b'}, glow);
+    const merge = S('feMerge', {}, glow); S('feMergeNode', {in: 'b'}, merge); S('feMergeNode', {in: 'SourceGraphic'}, merge);
+
+    const kicker = T(g, M, L.top + 6, 'Play of the game', 'k', fs.k);
+    const head = fitAll([T(g, M, L.top + fs.h * 1.1, 'The go-ahead three', 'd', fs.h)], P ? W - 2 * M : W * 0.42)[0];
+    const sub = T(g, M, L.top + fs.h * 1.1 + fs.s * 1.5, P ? 'Harden pulls up, 4:22 left' : 'Harden’s pull-up three at 101–101, 4:22 left', 'b m', fs.s);
+    const board = S('g', {}, g);
+    const bx = M, by = L.top + fs.h * 1.1 + fs.s * (P ? 3.4 : 3.6);
+    S('rect', {x: bx, y: by, width: 330, height: 92, rx: 12, class: 'f-navy', opacity: 0.85}, board);
+    S('rect', {x: bx, y: by, width: 330, height: 92, rx: 12, class: 's-hair', 'stroke-width': 2}, board);
+    T(board, bx + 24, by + 38, 'Q4', 'b m', 24);
+    const sUs = T(board, bx + 24, by + 78, 'Tied', 'b w', 26);
+    T(board, bx + 306, by + 30, 'Clock', 'b m', 18, 'end');
+    const qClock = T(board, bx + 306, by + 76, '', 'd', 46, 'end');
+
+    const court = S('g', {class: 's-silver', 'stroke-width': 3, 'stroke-linecap': 'round'}, g);
+    const lines = [
+      S('line', {x1: M - 20, x2: W - M + 20, y1: floor, y2: floor}, court),
+      S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),
+      S('line', {x1: hoopX + 46 * k, x2: hoopX + 46 * k, y1: rimY - 120 * k, y2: floor}, court),
+      S('line', {x1: hoopX + 46 * k, x2: hoopX + 46 * k + 40, y1: floor, y2: floor}, court),
+    ];
+    lines.forEach((n) => { n.setAttribute('pathLength', 1); n.setAttribute('stroke-dasharray', 1); n.setAttribute('stroke-dashoffset', 1); });
+    const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line', 'b m', fs.s * 0.8, 'middle');
+    S('rect', {x: hoopX + 30 * k, y: rimY - 150 * k, width: 12 * k, height: 170 * k, rx: 3, class: 'f-silver'}, g);
+    S('line', {x1: hoopX - rimR, x2: hoopX + 30 * k, y1: rimY, y2: rimY, class: 's-red', 'stroke-width': 6, 'stroke-linecap': 'round'}, g);
+    const net = S('g', {class: 's-silver', 'stroke-width': 2, opacity: 0.8}, g);
+    for (let i = 0; i <= 4; i += 1) {
+      const top = hoopX - rimR + i * (rimR * 2 / 4), bottom = hoopX - rimR * 0.55 + i * (rimR * 1.1 / 4);
+      S('line', {x1: top, y1: rimY, x2: bottom, y2: rimY + 48 * k}, net);
+    }
+
+    const bigClock = T(g, P ? W / 2 : (M + hoopX) / 2 + 60, P ? floor - 520 * k : floor - 190, '', 'd', P ? 230 : 300, 'middle');
+    bigClock.style.opacity = 0;
+    // the sidestep: a bracket measures the space it opens between him and his defender.
+    const space = S('g', {}, g);
+    const spaceLine = S('line', {class: 's-silver', 'stroke-width': 3, filter: 'url(#glow)'}, space);
+    const capL = S('line', {class: 's-silver', 'stroke-width': 3}, space), capR = S('line', {class: 's-silver', 'stroke-width': 3}, space);
+    const spaceTxt = T(space, 0, 0, 'Space', 'b w', fs.s, 'middle');
+    const ghost = figure(g, 'phi', k, '1');
+    ghost.g.style.opacity = 0;
+
+    const defender = figure(g, 'opp', k);
+    defender.g.setAttribute('opacity', 0.75);
+    const shooter = figureReal(g, 'phi', k, '1', STAR_BUILD);
+    const ghosts = [0, 1, 2, 3, 4].map(() => S('circle', {r: 12 * k, class: 'f-ink', opacity: 0}, g));
+    const ball = S('circle', {r: 13 * k, class: 'f-ink', filter: 'url(#glow)'}, g);
+    const T_JAB = 3.6, T_STEP = 4.3, T_SET = 4.9, T_JUMP = 5.2, T_REL = 5.9, T_MAKE = 10;
+    const relAt = shooter.draw(POSES.rise, shotX, floor - 54 * k, k, 1), rel = [(relAt('lh')[0] + relAt('rh')[0]) / 2 + 4 * k, (relAt('lh')[1] + relAt('rh')[1]) / 2 - 16 * k];
+    const peak = P ? 280 : 220;
+    const arcAt = (u) => [lerp(rel[0], hoopX, u), lerp(rel[1], rimY - 6, u) - 4 * peak * u * (1 - u)];
+    const trailPts = Array.from({length: 61}, (_, i) => arcAt(i / 60));
+    const trail = S('path', {d: 'M' + trailPts.map(([x, y]) => `${x.toFixed(1)} ${y.toFixed(1)}`).join('L'), fill: 'none', stroke: 'var(--blue)', 'stroke-width': 5, 'stroke-linecap': 'round', 'stroke-dasharray': '0 1', pathLength: 1, opacity: 0.9, filter: 'url(#glow)'}, g);
+    const flash = S('circle', {cx: hoopX, cy: rimY, r: 0, class: 's-ink', 'stroke-width': 4, opacity: 0}, g);
+    const plus = T(g, hoopX - rimR, rimY - 70 * k, '+3', 'd w', 72, 'end');
+    const caption = S('g', {}, g);
+    const capY = P ? floor + 150 : L.top + fs.h * 1.1 + fs.s * 1.5;
+    if (P) {
+      T(caption, M, capY, 'Harden from deep. Cavaliers by 3.', 'b w', fs.b);
+      T(caption, M, capY + fs.s * 1.5, '104–101. Ahead for good.', 'b m', fs.s);
+    } else {
+      T(caption, M, capY + fs.s * 1.6, 'Harden from deep. Cavaliers by 3. 104–101. Ahead for good.', 'b w', fs.b);
+    }
+    const slowmo = T(g, P ? W - M : W / 2, P ? L.top + 6 : floor + 56 * k + 10, 'Slow motion', 'k', fs.k, P ? 'end' : 'middle');
+
+    // shooter position over time: probe, jab in, then hop back
+    const xAt = (lt) => {
+      if (lt < T_JAB) return startX + Math.sin(Math.max(0, lt - 1.2) * 2.4) * 10 * k;
+      return lerp(startX, shotX, prog(lt, T_JAB, 1.2));
+    };
+    const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));
+
+    return (lt) => {
+      lines.forEach((n, i) => n.setAttribute('stroke-dashoffset', (1 - prog(lt, 0.1 + i * 0.12, 0.9)).toFixed(3)));
+      [kicker, head, sub].forEach((n, i) => show(n, prog(lt, 0.2 + i * 0.15, 0.6), 18));
+      show(board, prog(lt, 0.6, 0.6), 14);
+      tag.style.opacity = prog(lt, 1, 0.6) * (1 - prog(lt, 9.5, 0.6));
+      const made = lt >= T_MAKE;
+      sUs.textContent = made ? 'Cavaliers +3' : 'Tied';
+      // clock: real time until the release, then slow motion, frozen at 42.8 on the make
+      const clk = lt < T_REL ? 270 - (lt / T_REL) * 7 : lt < T_MAKE ? 263 - clamp((lt - T_REL) / (T_MAKE - T_REL)) : 262;
+      const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;
+      
+      bigClock.style.opacity = 0;
+
+      const sx = xAt(lt);
+      let pose, lift = 0;
+      if (lt < T_STEP) pose = lt < T_JAB ? POSES.dribble : mixPose(POSES.dribble, POSES.set, 0.35 * prog(lt, T_JAB, 0.3));
+      else if (lt < T_SET) { pose = mixPose(POSES.dribble, POSES.set, prog(lt, T_STEP, 0.5)); lift = 22 * Math.sin(clamp((lt - T_STEP) / 0.45) * Math.PI); }
+      else if (lt < T_JUMP) pose = POSES.set;
+      else {
+        const up = prog(lt, T_JUMP, 0.6), down = clamp((lt - 6.3) / 0.6);
+        pose = lt < 6.3 ? mixPose(POSES.set, POSES.rise, up) : mixPose(POSES.rise, POSES.dribble, down);
+        lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);
+      }
+      const at = shooter.draw(pose, sx, floor - lift * k, k, 1);
+      shooter.g.style.opacity = prog(lt, 0.8, 0.6);
+      // afterimage left where he stepped back from
+      ghost.draw(POSES.dribble, startX + 30 * k, floor, k, 1);
+      ghost.g.style.opacity = 0;
+
+      const dx = defX(lt);
+      const dUp = prog(lt, 5.6, 0.6), dDown = clamp((lt - 6.4) / 0.6);
+      const dPose = lt < 5.6 ? POSES.guard : lt < 6.4 ? mixPose(POSES.guard, POSES.contest, dUp) : mixPose(POSES.contest, POSES.guard, dDown);
+      defender.draw(dPose, dx, floor - (lt < 6.4 ? 30 * dUp : 30 * (1 - dDown)) * k, k, -1);
+      defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);
+
+      // the space bracket opens with the step-back
+      const sy = floor - 140 * k, a = sx + 34 * k, b = dx - 34 * k;
+      const showSpace = lt > T_STEP + 0.2 && lt < T_REL + 0.6 && b > a;
+      spaceLine.setAttribute('x1', a.toFixed(1)); spaceLine.setAttribute('x2', b.toFixed(1)); spaceLine.setAttribute('y1', sy.toFixed(1)); spaceLine.setAttribute('y2', sy.toFixed(1));
+      capL.setAttribute('x1', a.toFixed(1)); capL.setAttribute('x2', a.toFixed(1)); capL.setAttribute('y1', (sy - 10).toFixed(1)); capL.setAttribute('y2', (sy + 10).toFixed(1));
+      capR.setAttribute('x1', b.toFixed(1)); capR.setAttribute('x2', b.toFixed(1)); capR.setAttribute('y1', (sy - 10).toFixed(1)); capR.setAttribute('y2', (sy + 10).toFixed(1));
+      spaceTxt.setAttribute('x', ((a + b) / 2).toFixed(1)); spaceTxt.setAttribute('y', (sy - 18).toFixed(1));
+      space.style.opacity = 0;
+
+      let bxp, byp;
+      if (lt < T_SET) {
+        const [hx, hy] = at('rh'), ph = Math.max(0, (lt - 1.2) / 0.42) % 1, f = ph < 0.5 ? ph * 2 : (1 - ph) * 2;
+        bxp = hx + 6 * k; byp = lerp(hy, floor - 13 * k, f * f * (3 - 2 * f));
+      } else if (lt < T_REL) {
+        const [ax, ay] = at('lh'), [cx, cy] = at('rh');
+        bxp = (ax + cx) / 2 + 4 * k; byp = (ay + cy) / 2 - 16 * k;
+      } else if (lt < T_MAKE) {
+        const v = clamp((lt - T_REL) / (T_MAKE - T_REL)), u = v < 0.5 ? 2 * v * v : 1 - Math.pow(-2 * v + 2, 2) / 2;
+        [bxp, byp] = arcAt(u);
+        ghosts.forEach((n, i) => {
+          const [gx2, gy2] = arcAt(Math.max(0, u - (i + 1) * 0.025));
+          n.setAttribute('cx', gx2.toFixed(1)); n.setAttribute('cy', gy2.toFixed(1)); n.setAttribute('opacity', (0.3 - i * 0.055).toFixed(2));
+        });
+        trail.setAttribute('stroke-dasharray', `${u.toFixed(3)} 1`);
+      } else {
+        const d = clamp((lt - T_MAKE) / 0.7);
+        bxp = hoopX - 4; byp = lerp(rimY - 6, floor - 13 * k, d * d);
+        if (d >= 1) { const bb = Math.abs(Math.sin((lt - T_MAKE - 0.7) * 7)) * Math.exp(-(lt - T_MAKE - 0.7) * 2.2); byp = floor - 13 * k - 80 * k * bb; }
+        ghosts.forEach((n) => n.setAttribute('opacity', 0));
+        trail.setAttribute('stroke-dasharray', '1 1');
+      }
+      if (lt < T_REL) { ghosts.forEach((n) => n.setAttribute('opacity', 0)); trail.setAttribute('stroke-dasharray', '0 1'); }
+      ball.setAttribute('cx', bxp.toFixed(1)); ball.setAttribute('cy', byp.toFixed(1));
+      ball.style.opacity = prog(lt, 0.8, 0.6);
+      trail.style.opacity = 0.85 * (1 - prog(lt, 12.5, 1));
+      slowmo.style.opacity = lt > T_REL + 0.3 && lt < T_MAKE ? 0.5 + 0.5 * Math.sin((lt - T_REL) * 6) : 0;
+
+      const snap = made ? Math.exp(-(lt - T_MAKE) * 5) * Math.sin((lt - T_MAKE) * 22) : 0;
+      net.setAttribute('transform', `translate(0 ${(rimY * -0.18 * snap).toFixed(1)}) scale(1 ${(1 + 0.18 * snap).toFixed(3)})`);
+      const f = made ? clamp((lt - T_MAKE) / 0.8) : 0;
+      flash.setAttribute('r', (rimR + 160 * f).toFixed(1)); flash.setAttribute('opacity', made ? (1 - f).toFixed(2) : 0);
+      show(plus, made ? prog(lt, T_MAKE, 0.4) : 0, 20);
+      show(caption, prog(lt, T_MAKE + 0.8, 0.6), 18);
+      if (!P) sub.style.opacity = 1 - prog(lt, T_MAKE + 0.4, 0.4);
+    };
+  }
+
+
+  function sceneFlow(L, g) {
+    const {W, H, M, fs, P} = L;
+    const head = heading(L, g, P ? ['Up 6 at the half,', 'held off a 14–4 run'] : ['Up 6 at the half, then held off a 14–4 Knicks run']);
+    const subY = subline(L, g, head.y, P ? ['Points per quarter. Margin after each', 'quarter underneath.'] : ['Points per quarter, with the Cavaliers’ margin after each quarter underneath.']);
+    const top = subY + fs.s * 2.2, bottom = P ? H * 0.7 : H - M - fs.s * 4.4;
+    const max = 50, colW = (W - 2 * M) / 4, bw = Math.min(70, colW * 0.24);
+    const y = (v) => bottom - v / max * (bottom - top);
+    S('line', {x1: M, x2: W - M, y1: bottom, y2: bottom, class: 's-muted', 'stroke-width': 2}, g);
+    let runP = 0, runM = 0;
+    const cols = D.quarters.map(([p, m], i) => {
+      runP += p; runM += m;
+      const cx = M + colW * (i + 0.5), group = S('g', {}, g);
+      const barP = S('rect', {x: cx - bw - 5, width: bw, y: bottom, height: 0, rx: 6, class: 'f-blue'}, group);
+      const barM = S('rect', {x: cx + 5, width: bw, y: bottom, height: 0, rx: 6, class: 'f-muted', opacity: 0.5}, group);
+      const nP = T(group, cx - bw / 2 - 5, y(p) - 12, String(p), 'b w', fs.s, 'middle');
+      const nM = T(group, cx + bw / 2 + 5, y(m) - 12, String(m), 'b m', fs.s, 'middle');
+      T(group, cx, bottom + fs.s * 1.35, `Q${i + 1}`, 'b m', fs.s, 'middle');
+      const lead = runP - runM;
+      const tag = T(g, cx, bottom + fs.s * 1.35 + (P ? 64 : 72), lead === 0 ? 'Tied' : `${lead > 0 ? '+' : '–'}${Math.abs(lead)}`, lead > 0 ? 'd g' : 'd m', P ? 54 : 60, 'middle');
+      return {group, barP, barM, nP, nM, tag, p, m};
+    });
+    const legend = S('g', {}, g);
+    const ly = P ? H - M - fs.s * 2.4 : top - fs.s * 0.6;
+    const lx = P ? M : W - M - 840;
+    S('rect', {x: lx, y: ly - 18, width: 22, height: 22, rx: 4, class: 'f-blue'}, legend);
+    T(legend, lx + 32, ly, D.usName, 'b', fs.s);
+    S('rect', {x: lx + 200, y: ly - 18, width: 22, height: 22, rx: 4, class: 'f-muted', opacity: 0.5}, legend);
+    T(legend, lx + 232, ly, D.themName, 'b m', fs.s);
+    const leads = T(g, P ? M : lx + 350, P ? H - M : ly, `Biggest lead: Cavaliers ${D.leadUs}, Knicks ${D.leadThem}`, 'b m', fs.s);
+    if (P) fitAll([leads], W - 2 * M);
+    return (lt) => {
+      cols.forEach((c, i) => {
+        const p = prog(lt, 0.5 + i * 0.9, 0.8);
+        const hp = (bottom - y(c.p)) * p, hm = (bottom - y(c.m)) * p;
+        c.barP.setAttribute('height', hp.toFixed(1)); c.barP.setAttribute('y', (bottom - hp).toFixed(1));
+        c.barM.setAttribute('height', hm.toFixed(1)); c.barM.setAttribute('y', (bottom - hm).toFixed(1));
+        c.nP.style.opacity = c.nM.style.opacity = p;
+        show(c.tag, prog(lt, 0.9 + i * 0.9, 0.5), 14);
+      });
+      legend.style.opacity = prog(lt, 0.3, 0.5);
+      leads.style.opacity = prog(lt, 4.6, 0.6);
+    };
+  }
+
+  function sceneTriple(L, g) {
+    const {W, H, M, fs, P} = L;
+    const head = heading(L, g, P ? ['Harden: 32,', 'a season high'] : ['Harden: a season-high 32 points']);
+    subline(L, g, head.y, P ? ['He came in averaging 15.3.', '5 of 7 from three.'] : ['He came in averaging 15.3. Then 5 of 7 from three.']);
+    const stats = D.star.stats.map(([label, value, max], i) => [label, value, max, ['s-blue', 's-red', 's-silver'][i]]);
+    const r = P ? 100 : 130, sw = P ? 22 : 24;
+    const rings = stats.map(([label, value, max, stroke], i) => {
+      const cx = P ? W / 2 : M + r + 40 + i * (W - 2 * M - 2 * r - 80) / 2;
+      const cy = P ? head.y + 260 + i * 270 : H * 0.62;
+      const group = S('g', {}, g);
+      S('circle', {cx, cy, r, class: 's-hair', 'stroke-width': sw}, group);
+      const arc = S('circle', {cx, cy, r, class: stroke, 'stroke-width': sw, 'stroke-linecap': 'round', pathLength: 1, 'stroke-dasharray': '0 1', transform: `rotate(-90 ${cx} ${cy})`}, group);
+      const num = T(group, cx, cy + r * 0.3, '0', 'd', r * 0.85, 'middle');
+      T(group, cx, cy + r + fs.s * 1.7, label, 'b m', fs.s, 'middle');
+      return {group, arc, num, value, max};
+    });
+    return (lt) => {
+      rings.forEach((ring, i) => {
+        show(ring.group, prog(lt, 0.3 + i * 0.4, 0.5), 18);
+        const p = prog(lt, 0.5 + i * 0.4, 1.6);
+        ring.arc.setAttribute('stroke-dasharray', `${(Math.min(1, ring.value / ring.max) * p).toFixed(3)} 1`);
+        ring.num.textContent = String(Math.round(ring.value * p));
+      });
+    };
+  }
+
+  function sceneScorers(L, g) {
+    const {W, H, M, fs, P} = L;
+    const head = heading(L, g, P ? ['Harden and Mitchell:', '55 of the 115'] : ['Harden and Mitchell combined for 55 of 115']);
+    const start = head.y + fs.s * 1.4, rowH = (H - M - start) / D.scorers.length, th = 18, max = 40;
+    const tx0 = P ? M : M + 560, tx1 = W - M - (P ? 110 : 130);
+    const rows = D.scorers.map((pl, i) => {
+      const group = S('g', {}, g), yc = start + rowH * (i + 0.5);
+      const ty = P ? yc + 4 : yc - th / 2;
+      fitAll([T(group, M, P ? yc - 26 : yc - 6, pl.name, 'b w', fs.b)], P ? W - 2 * M - 120 : 540);
+      fitAll([T(group, M, P ? yc + th + fs.s * 1.25 : yc + fs.s * 1.05, pl.note, 'b m', fs.s * 0.85)], P ? W - 2 * M : 540);
+      S('rect', {x: tx0, y: ty, width: tx1 - tx0, height: th, rx: th / 2, class: 'f-track'}, group);
+      const fill = S('rect', {x: tx0, y: ty, width: 0, height: th, rx: th / 2, class: i < 3 ? 'f-blue' : 'f-silver'}, group);
+      const num = T(group, W - M, ty + th / 2 + fs.h * 0.34, '0', 'd', fs.h, 'end');
+      return {group, fill, num, pts: pl.pts};
+    });
+    return (lt) => {
+      rows.forEach((row, i) => {
+        show(row.group, prog(lt, 0.3 + i * 0.3, 0.5), 18);
+        const p = prog(lt, 0.5 + i * 0.3, 1.2);
+        row.fill.setAttribute('width', ((tx1 - tx0) * row.pts / max * p).toFixed(1));
+        row.num.textContent = String(Math.round(row.pts * p));
+      });
+    };
+  }
+
+  function sceneEdge(L, g) {
+    const {W, H, M, fs, P} = L;
+    const head = heading(L, g, P ? ['Won it at the line', 'and on the glass'] : ['Won it at the line and on the glass']);
+    const subY = subline(L, g, head.y, P ? ['Cavaliers in gold, Knicks in gray. Jalen', 'Brunson didn’t take a free throw.'] : ['Cavaliers in gold, Knicks in gray. Jalen Brunson didn’t take a free throw.']);
+    const items = [...D.edges, ...D.gaps];
+    const start = subY + fs.s * 1.4, rowH = (H - M - start) / items.length, th = 16;
+    const mid = P ? W / 2 : M + 470 + (W - 2 * M - 470) / 2, half = P ? (W - 2 * M) / 2 - 70 : (W - 2 * M - 470) / 2 - 80;
+    const max = 60;
+    const rows = items.map((it, i) => {
+      const group = S('g', {}, g), yc = start + rowH * (i + 0.5), ty = P ? yc + 6 : yc - th / 2;
+      const win = it.us > it.them;
+      fitAll([T(group, P ? mid : M, P ? yc - 16 : yc + fs.s * 0.34, it.label, win ? 'b' : 'b m', fs.s, P ? 'middle' : 'start')], P ? W - 2 * M : 450);
+      const left = S('rect', {x: mid, y: ty, width: 0, height: th, rx: th / 2, class: 'f-blue', opacity: win ? 1 : 0.55}, group);
+      const right = S('rect', {x: mid, y: ty, width: 0, height: th, rx: th / 2, class: 'f-muted', opacity: win ? 0.45 : 0.85}, group);
+      const nP = T(group, mid - 14, ty + th / 2 + fs.b * 0.34, '0', win ? 'b w' : 'b', fs.b, 'end');
+      const nM = T(group, mid + 14, ty + th / 2 + fs.b * 0.34, '0', win ? 'b m' : 'b w', fs.b, 'start');
+      return {group, left, right, nP, nM, it};
+    });
+    return (lt) => {
+      rows.forEach((row, i) => {
+        show(row.group, prog(lt, 0.3 + i * 0.35, 0.5), 14);
+        const p = prog(lt, 0.5 + i * 0.35, 1.1);
+        const wl = half * row.it.us / max * p, wr = half * row.it.them / max * p;
+        row.left.setAttribute('x', (mid - wl).toFixed(1)); row.left.setAttribute('width', wl.toFixed(1));
+        row.right.setAttribute('width', wr.toFixed(1));
+        row.nP.textContent = Math.round(row.it.us * p) + (row.it.unit || '');
+        row.nM.textContent = Math.round(row.it.them * p) + (row.it.unit || '');
+        row.nP.setAttribute('x', (mid - wl - 14).toFixed(1));
+        row.nM.setAttribute('x', (mid + wr + 14).toFixed(1));
+      });
+    };
+  }
+
+  function sceneNext(L, g) {
+    const {W, H, M, fs, P} = L;
+    const big = P ? 220 : 240, num = P ? 92 : 92;
+    const ky = L.top + 60, ry = ky + big * 0.94;
+    const left = S('g', {}, g);
+    T(left, M, ky, 'Record', 'k', fs.k);
+    T(left, M, ry, D.record, 'd', big);
+    T(left, M, ry + fs.b * 2, 'Sixth in the East', 'b m', fs.b);
+    const nx = P ? M : W * 0.53, ny = P ? ry + fs.b * 2 + 150 : L.top + 140;
+    const next = S('g', {}, g);
+    T(next, nx, ny, 'Up next', 'k', fs.k);
+    fitAll([T(next, nx, ny + num * 1.05, D.next.opp, 'd', num)], P ? W - 2 * M : W * 0.47 - M);
+    T(next, nx, ny + num * 1.05 + fs.b * 1.7, D.next.when, 'b', fs.b);
+    const odds = S('g', {}, g);
+    const oy = ny + num * 1.05 + fs.b * 1.7 + (P ? 150 : 170);
+    const oddsNum = T(odds, nx, oy, '0%', 'd g', num);
+    T(odds, nx, oy + fs.s * 1.6, 'Heat’s record so far', 'b m', fs.s);
+    const foot = (P ? ['Ended a five-game losing run', 'against New York.'] : ['It ended a five-game losing run against New York, back to last May’s East finals.'])
+      .map((str, i, all) => T(g, M, H - M - (all.length - 1 - i) * fs.s * 1.35, str, 'b m', fs.s));
+    return (lt) => {
+      show(left, prog(lt, 0.1, 0.6));
+      show(next, prog(lt, 0.7, 0.6));
+      show(odds, prog(lt, 1.3, 0.6));
+      oddsNum.textContent = '5–6';
+      foot.forEach((n) => { n.style.opacity = prog(lt, 2.2, 0.6); });
+    };
+  }
+  function sceneEnd(L, g) {
+    const {W, H, M, fs, P} = L;
+    const size = P ? 200 : 170, cy = H * (P ? 0.4 : 0.38);
+    const logo = mark(g, W / 2 - size / 2, cy - size / 2, size);
+    const word = T(g, W / 2, cy + size / 2 + fs.h * 1.25, 'Box & Motion ', 'd', fs.h, 'middle');
+    const hp = S('tspan', {fill: '#FF5A1F'}, word); hp.textContent = 'Hoops';
+    const handle = T(g, W / 2, cy + size / 2 + fs.h * 1.25 + fs.b * 1.7, '@boxandmotion · boxandmotion.com', 'b w', fs.b, 'middle');
+    const disc = T(g, W / 2, H - M, 'Unofficial fan recap. Not affiliated with the NBA or any team.', 'b m', fs.s * 0.8, 'middle');
+    return (lt) => {
+      logo.style.opacity = prog(lt, 0.05, 0.5);
+      logo.setAttribute('transform', `translate(${W / 2 - size / 2} ${cy - size / 2 + 20 * (1 - prog(lt, 0.05, 0.6))}) scale(${size / 100})`);
+      show(word, prog(lt, 0.4, 0.6), 18);
+      show(handle, prog(lt, 0.8, 0.6), 14);
+      disc.style.opacity = prog(lt, 1.1, 0.6);
+    };
+  }
+  const BPM = 96, STEP = 60 / BPM / 4, BAR = STEP * 16, ENDING = BAR * 24, VOL = 0.7;
+  // An original bouncy club-rap beat in C minor: four chords, an 808 line under them and a short plucked riff on top.
+  const CHORDS = [[60, 63, 67], [56, 60, 63], [58, 63, 67], [58, 62, 65]];
+  const ROOT = [36, 32, 39, 34];
+  const RIFF = [
+    [[0, 67, 2], [3, 67, 1], [6, 70, 2], [10, 72, 2], [14, 70, 2]],
+    [[0, 67, 2], [3, 67, 1], [6, 65, 2], [10, 63, 3]],
+    [[0, 67, 2], [3, 67, 1], [6, 70, 2], [10, 72, 2], [14, 74, 2]],
+    [[0, 67, 2], [3, 67, 1], [6, 65, 2], [10, 62, 3]],
+  ];
+  const ARP = [[72, 75, 79, 75, 84, 79, 75, 79], [72, 75, 80, 75, 84, 80, 75, 80], [70, 75, 79, 75, 82, 79, 75, 79], [70, 74, 77, 74, 82, 77, 74, 77]];
+  const hz = (midi) => 440 * Math.pow(2, (midi - 69) / 12);
+  const DRIVE = new Float32Array(1024).map((_, i) => Math.tanh(1.6 * (i / 511.5 - 1)) / Math.tanh(1.6));
+
+  function makeEngine(ctx) {
+    const master = ctx.createGain(); master.gain.value = 0.0001;
+    const comp = ctx.createDynamicsCompressor();
+    comp.threshold.value = -20; comp.ratio.value = 6; comp.attack.value = 0.004; comp.release.value = 0.18;
+    const bus = ctx.createGain(); bus.gain.value = 1;
+    bus.connect(comp); comp.connect(master); master.connect(ctx.destination);
+    const delay = ctx.createDelay(1); delay.delayTime.value = STEP * 3;
+    const feedback = ctx.createGain(); feedback.gain.value = 0.3;
+    const wet = ctx.createGain(); wet.gain.value = 0.28;
+    delay.connect(feedback); feedback.connect(delay); delay.connect(wet); wet.connect(bus);
+    const noise = ctx.createBuffer(1, ctx.sampleRate, ctx.sampleRate);
+    const samples = noise.getChannelData(0);
+    for (let i = 0; i < samples.length; i += 1) samples[i] = Math.random() * 2 - 1;
+
+    const voice = (when, peak, attack, decay, out) => {
+      const g = ctx.createGain();
+      g.gain.setValueAtTime(0.0001, when);
+      g.gain.exponentialRampToValueAtTime(peak, when + attack);
+      g.gain.exponentialRampToValueAtTime(0.0001, when + attack + decay);
+      g.connect(out || bus);
+      return g;
+    };
+    const osc = (type, freq, when, len, out) => {
+      const o = ctx.createOscillator(); o.type = type; o.frequency.setValueAtTime(freq, when);
+      o.connect(out); o.start(when); o.stop(when + len);
+      return o;
+    };
+    const hiss = (when, len, out) => {
+      const src = ctx.createBufferSource(); src.buffer = noise;
+      src.connect(out); src.start(when, Math.random() * 0.5, len);
+    };
+    const filter = (type, freq, q, out) => {
+      const f = ctx.createBiquadFilter(); f.type = type; f.frequency.value = freq; f.Q.value = q; f.connect(out);
+      return f;
+    };
+    function kick(when, level) {
+      const o = osc('sine', 160, when, 0.3, voice(when, 0.7 * level, 0.002, 0.2));
+      o.frequency.exponentialRampToValueAtTime(48, when + 0.07);
+      hiss(when, 0.02, filter('highpass', 3000, 0.7, voice(when, 0.2 * level, 0.001, 0.012)));
+    }
+    function sub(when, midi, len, level, slideTo) {
+      // 808-style bass: a driven sine that drops onto its note, with an octave on top so small speakers still carry it
+      const f = hz(midi), g = ctx.createGain();
+      g.gain.setValueAtTime(0.0001, when);
+      g.gain.linearRampToValueAtTime(level, when + 0.006);
+      g.gain.setValueAtTime(level, when + Math.max(0.02, len - 0.08));
+      g.gain.linearRampToValueAtTime(0.0001, when + len);
+      g.connect(bus);
+      const shape = ctx.createWaveShaper(); shape.curve = DRIVE; shape.connect(g);
+      const o = osc('sine', f * 2, when, len + 0.02, shape);
+      o.frequency.exponentialRampToValueAtTime(f, when + 0.045);
+      if (slideTo) { o.frequency.setValueAtTime(f, when + len * 0.45); o.frequency.exponentialRampToValueAtTime(hz(slideTo), when + len); }
+      const upper = ctx.createGain(); upper.gain.value = 0.4; upper.connect(g);
+      osc('triangle', f * 2, when, len + 0.02, upper);
+    }
+    function clap(when, level) {
+      [0, 0.011, 0.024].forEach((d) => hiss(when + d, 0.03, filter('bandpass', 1500, 1.1, voice(when + d, 0.4 * level, 0.001, 0.014))));
+      hiss(when + 0.03, 0.2, filter('bandpass', 1700, 0.9, voice(when + 0.03, 0.45 * level, 0.002, 0.13)));
+    }
+    function snap(when, level) {
+      hiss(when, 0.05, filter('bandpass', 2900, 4, voice(when, 0.5 * level, 0.001, 0.035)));
+      osc('sine', 1850, when, 0.04, voice(when, 0.06 * level, 0.001, 0.025));
+    }
+    function hat(when, level, open) {
+      hiss(when, open ? 0.25 : 0.05, filter('highpass', 8500, 0.7, voice(when, level, 0.001, open ? 0.2 : 0.03)));
+    }
+    function crash(when, level) {
+      hiss(when, 0.9, filter('highpass', 5000, 0.7, voice(when, level, 0.002, 0.85)));
+    }
+    function lead(when, midi, len, level, cutoff) {
+      const g = voice(when, level, 0.004, Math.max(0.14, len));
+      g.connect(delay);
+      const f = filter('lowpass', cutoff, 2, g);
+      f.frequency.setValueAtTime(cutoff * 1.8, when);
+      f.frequency.exponentialRampToValueAtTime(cutoff * 0.6, when + 0.2);
+      osc('square', hz(midi), when, len + 0.3, f).detune.value = -6;
+      osc('sawtooth', hz(midi), when, len + 0.3, f).detune.value = 7;
+    }
+    function keys(when, chord, level, decay) {
+      const out = filter('lowpass', 3200, 0.5, voice(when, level, 0.004, decay));
+      chord.forEach((midi) => {
+        osc('triangle', hz(midi), when, decay + 0.05, out);
+        osc('sine', hz(midi) * 2, when, decay + 0.05, out).detune.value = 4;
+      });
+    }
+    function chime(when, midi, level) {
+      const g = voice(when, level, 0.003, 0.32);
+      g.connect(delay);
+      osc('sine', hz(midi), when, 0.36, g);
+      const upper = ctx.createGain(); upper.gain.value = 0.2; upper.connect(g);
+      osc('sine', hz(midi) * 3, when, 0.2, upper);
+    }
+    function riser(when, dur, peak) {
+      const g = ctx.createGain();
+      g.gain.setValueAtTime(0.0001, when);
+      g.gain.exponentialRampToValueAtTime(peak, when + dur - 0.04);
+      g.gain.linearRampToValueAtTime(0.0001, when + dur);
+      g.connect(bus);
+      const f = filter('bandpass', 300, 1.2, g);
+      f.frequency.setValueAtTime(300, when);
+      f.frequency.exponentialRampToValueAtTime(7000, when + dur);
+      const src = ctx.createBufferSource(); src.buffer = noise; src.loop = true;
+      src.connect(f); src.start(when); src.stop(when + dur + 0.02);
+    }
+    function step(n, when) {
+      const s = n % 16, bar = Math.floor(n / 16), c = bar % 4;
+      if (n * STEP >= ENDING) {
+        if (s === 0) { kick(when, 1); sub(when, 36, 2.2, 0.28, 24); keys(when, [48, 60, 63, 67, 72], 0.07, 2.4); crash(when, 0.14); }
+        return;
+      }
+      const intro = bar < 2, quiet = bar === 7, hook = bar >= 20, lift = bar >= 8 && !quiet;
+      RIFF[c].forEach(([at, midi, len]) => {
+        if (at !== s) return;
+        lead(when, midi, len * STEP, intro ? 0.36 : quiet ? 0.3 : 0.34, intro ? (bar ? 1300 : 750) : quiet ? 900 : 2300);
+        if (lift) chime(when, midi + 12, 0.1);
+      });
+      if (intro || quiet) {
+        if (s === 4 || s === 12) snap(when, 1.3);
+        if ((bar === 1 || bar === 7) && s === 0) riser(when, BAR, 0.16);
+        if (quiet && s === 0) sub(when, ROOT[c], STEP * 13, 0.19);
+        if ((quiet || bar === 1) && (s === 0 || s === 8)) keys(when, CHORDS[c], quiet ? 0.14 : 0.1, 0.6);
+        return;
+      }
+      if ((bar === 2 || bar === 8 || bar === 20) && s === 0) crash(when, bar === 8 ? 0.2 : 0.12);
+      if (s === 0 || s === 6 || s === 10) {
+        kick(when, 1);
+        sub(when, ROOT[c], STEP * (s === 0 ? 5.6 : s === 6 ? 3.7 : c === 3 ? 2.8 : 5.6), 0.18);
+      }
+      if (c === 3 && s === 13) { kick(when, 0.9); sub(when, ROOT[c] + 7, STEP * 2.9, 0.2, ROOT[0]); }
+      if (s === 4 || s === 12) { clap(when, 1); snap(when, 0.6); }
+      if (hook && c === 3 && s === 15) clap(when, 0.7);
+      if (s % 2 === 0) hat(when, s % 4 === 0 ? 0.2 : 0.14);
+      if (bar >= 4) {
+        if (s % 2 === 1 && s > 8) hat(when, 0.07);
+        if ((c === 1 || c === 3) && s === 14) [[0.5, 0.09], [1.5, 0.14]].forEach(([k, level]) => hat(when + STEP * k, level));
+        if (c === 2 && s === 6) [2 / 3, 4 / 3].forEach((k) => hat(when + STEP * k, 0.1));
+        if (s === 0 || s === 8 || s === 14) keys(when, CHORDS[c], s === 14 ? 0.08 : 0.13, 0.45);
+      }
+      if (lift && s === 10) hat(when, 0.13, true);
+      if (hook && s % 2 === 0) chime(when, ARP[c][s / 2], 0.09);
+      if (bar === 19 && s === 0) riser(when, BAR, 0.12);
+    }
+    const pad = () => {};
+    return {master, step, pad};
+  }
+  window.__reel = {makeEngine, STEP, VOL, TOTAL};
+
+  const BUILDERS = {title: sceneTitle, final: sceneFinal, play: scenePlay, flow: sceneFlow, triple: sceneTriple, scorers: sceneScorers, edge: sceneEdge, next: sceneNext, end: sceneEnd};
+  const svg = document.getElementById('reel');
+  const stage = document.getElementById('stage');
+  let built = null;
+
+  function build(portrait) {
+    svg.replaceChildren();
+    const L = portrait
+      ? {P: true, W: 900, H: 1300, M: 64, fs: {k: 28, s: 32, b: 38, h: 64, d: 128, x: 240}}
+      : {P: false, W: 1600, H: 900, M: 96, fs: {k: 22, s: 26, b: 32, h: 58, d: 140, x: 330}};
+    L.top = L.M + L.fs.k + 40;
+    stage.classList.toggle('tall', portrait);
+    svg.setAttribute('viewBox', `0 0 ${L.W} ${L.H}`);
+    const defs = S('defs', {}, svg);
+
+    const court = S('g', {class: 's-silver', 'stroke-width': 3}, svg);
+    const shapes = portrait
+      ? [S('circle', {cx: L.W / 2, cy: L.H + 60, r: 470}, court), S('rect', {x: L.W / 2 - 110, y: L.H - 300, width: 220, height: 320}, court), S('circle', {cx: L.W / 2, cy: L.H - 300, r: 110}, court)]
+      : [S('circle', {cx: L.W + 60, cy: L.H / 2, r: 470}, court), S('rect', {x: L.W - 300, y: L.H / 2 - 110, width: 320, height: 220}, court), S('circle', {cx: L.W - 300, cy: L.H / 2, r: 110}, court)];
+    shapes.forEach((n) => { n.setAttribute('pathLength', 1); n.setAttribute('stroke-dasharray', 1); });
+
+    const header = S('g', {}, svg);
+    mark(header, L.M, L.M - L.fs.k * 0.1, L.fs.k * 1.3);
+    fitAll([T(header, L.M + L.fs.k * 1.9, L.M + L.fs.k, 'Cavaliers 115 · Knicks 107 · Nov 11', 'k', L.fs.k)], L.W - 2 * L.M - L.fs.k * 1.9);
+    const scenes = SCENES.map((sc) => {
+      const g = S('g', {}, svg);
+      return {...sc, g, update: BUILDERS[sc.id](L, g, defs)};
+    });
+    built = {portrait, court, shapes, header, scenes};
+  }
+
+  function render(t) {
+    if (!built) return;
+    const drawIn = prog(t, 0.2, 2.6);
+    built.shapes.forEach((n) => n.setAttribute('stroke-dashoffset', (1 - drawIn).toFixed(3)));
+    built.court.style.opacity = lerp(0.2, 0.06, clamp((t - 3.4) / 0.8));
+    built.header.style.opacity = prog(t, SCENES[1].t0, 0.6);
+    built.scenes.forEach((sc, i) => {
+      const fadeIn = i === 0 ? 1 : clamp((t - sc.t0) / 0.45);
+      const fadeOut = i === built.scenes.length - 1 ? 1 : clamp((sc.t1 - t) / 0.35);
+      const vis = Math.min(fadeIn, fadeOut);
+      sc.g.style.display = vis > 0 ? '' : 'none';
+      if (vis > 0) { sc.g.style.opacity = vis; sc.update(t - sc.t0); }
+    });
+  }
+
+  const playBtn = document.getElementById('play');
+  const soundBtn = document.getElementById('sound');
+  const sound = {mode: null, on: false, el: null, ctx: null, engine: null, next: 0, audible: false, timer: 0, seekCheck: 0, offset: 0, ended: false, fade: 0, own: null};
+  const soundHint = document.getElementById('sound-hint');
+  const soundNote = document.getElementById('sound-note');
+  const scrub = document.getElementById('scrub');
+  const clock = document.getElementById('clock');
+  const chips = document.getElementById('chips');
+  const stamp = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
+  const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let t = still ? TOTAL : 0, playing = !still, last = null, shownScene = -1;
+  document.getElementById('still-note').hidden = !still;
+  scrub.max = String(TOTAL);
+
+  const chipButtons = SCENES.map((sc) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'chip'; b.id = `chip-${sc.id}`; b.textContent = sc.name;
+    b.addEventListener('click', () => { t = sc.t0 + (sc.id === 'title' ? 0 : 0.01); playing = true; jumped(); sync(); });
+    chips.appendChild(b);
+    return b;
+  });
+
+  function setLevel(target, timeConstant, wait) {
+    const g = sound.engine.master.gain, now = sound.ctx.currentTime;
+    g.cancelScheduledValues(now);
+    g.setTargetAtTime(target, now + (wait || 0), timeConstant);
+  }
+  function cue(wait) {
+    sound.next = Math.ceil(t / STEP - 1e-6);
+    const bar = Math.floor(t / BAR), into = t - bar * BAR, left = BAR - into;
+    if (bar >= 2 && bar < 16 && into > 0.02 && left > 0.4) sound.engine.pad(sound.ctx.currentTime + wait, CHORDS[bar % 4], left);
+  }
+  // The soundtrack plays from a recorded file first; if this view refuses it, the same music is generated live instead.
+  function useSynth() {
+    if (sound.mode !== 'file') return;
+    clearTimeout(sound.timer);
+    if (sound.el) { sound.el.pause(); sound.el.removeAttribute('src'); sound.el = null; }
+    if (!sound.ctx) { sound.mode = 'none'; sound.on = false; sync(); return; }
+    sound.mode = 'synth';
+    sound.engine = makeEngine(sound.ctx);
+    sound.audible = false;
+    sync();
+  }
+  function playFile() {
+    const el = sound.el, started = el.play();
+    if (started && started.catch) started.catch((err) => {
+      if (el !== sound.el || (err && err.name === 'AbortError')) return;
+      if (sound.mode !== 'own') { useSynth(); return; }
+      if (err && err.name === 'NotAllowedError') { playing = false; ownStatus.textContent = `Loaded ${sound.own.name}. Press Play to start.`; sync(); }
+      else ownFailed();
+    });
+  }
+  function startSound() {
+    sound.on = true; sound.mode = 'file'; sound.offset = 0; sound.ended = false; t = 0; playing = true;
+    try { if (navigator.audioSession) navigator.audioSession.type = 'playback'; } catch (err) { /* older browsers */ }
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if (AC) { try { sound.ctx = new AC(); sound.ctx.resume(); } catch (err) { sound.ctx = null; } }
+    const el = new Audio();
+    el.preload = 'auto'; el.src = '../soundtrack.mp3';
+    sound.el = el;
+    el.addEventListener('error', useSynth);
+    el.addEventListener('playing', () => {
+      clearTimeout(sound.timer);
+      if (sound.ctx && sound.mode === 'file') sound.ctx.suspend().catch(() => {});
+    }, {once: true});
+    sound.timer = setTimeout(useSynth, 4000);
+    playFile();
+  }
+  function jumped() {
+    if (sound.mode === 'file' || sound.mode === 'own') {
+      clearInterval(sound.fade);
+      sound.ended = false;
+      // Past the end of a short track: let the picture run on in silence instead of being pulled back.
+      if (Number.isFinite(sound.el.duration) && t + sound.offset >= sound.el.duration - 0.25) { sound.ended = true; sound.el.pause(); return; }
+      try { sound.el.volume = 1; sound.el.currentTime = t + sound.offset; } catch (err) { /* not seekable yet */ }
+      clearTimeout(sound.seekCheck);
+      if (!playing) { sound.el.pause(); return; }
+      if (sound.mode === 'own') return;
+      // If the track cannot jump to the new spot, hand over to the live version so the picture is not dragged back.
+      const target = t, asked = performance.now();
+      sound.seekCheck = setTimeout(() => {
+        if (sound.mode !== 'file' || !playing) return;
+        const expected = target + (performance.now() - asked) / 1000;
+        if (Math.abs(sound.el.currentTime - expected) > 2.5) { t = Math.min(TOTAL, expected); useSynth(); }
+      }, 1200);
+      return;
+    }
+    if (sound.mode !== 'synth' || !sound.audible) return;
+    const g = sound.engine.master.gain, now = sound.ctx.currentTime;
+    g.cancelScheduledValues(now);
+    g.setTargetAtTime(0.0001, now, 0.012);
+    g.setTargetAtTime(VOL, now + 0.09, 0.03);
+    cue(0.09);
+  }
+  function soundSync() {
+    soundBtn.textContent = !sound.mode ? 'Play with sound' : sound.mode === 'none' ? 'Sound unavailable' : sound.on ? 'Mute' : 'Unmute';
+    soundBtn.disabled = sound.mode === 'none';
+    soundHint.hidden = !(sound.on && (sound.mode === 'file' || sound.mode === 'synth' || sound.mode === 'own'));
+    soundNote.hidden = sound.mode !== 'none';
+    if (sound.mode === 'file' || sound.mode === 'own') {
+      const el = sound.el, want = t + sound.offset;
+      el.muted = !sound.on;
+      if (playing && el.paused && !sound.ended) {
+        if (Math.abs(el.currentTime - want) > 0.08) { try { el.currentTime = want; } catch (err) { /* not seekable yet */ } }
+        playFile();
+      } else if (!playing && !el.paused && t < TOTAL) el.pause();
+      return;
+    }
+    if (sound.mode !== 'synth') return;
+    const audible = sound.on && playing;
+    if (audible === sound.audible) return;
+    sound.audible = audible;
+    if (audible) {
+      if (sound.ctx.state !== 'running') sound.ctx.resume().catch(() => {});
+      cue(0.02); setLevel(VOL, 0.03);
+    } else if (sound.on && t >= TOTAL) setLevel(0.0001, 0.5, 1.8);
+    else setLevel(0.0001, 0.04);
+  }
+  // Your own track: played straight from the chosen file on this device, never uploaded or published.
+  const ownPick = document.getElementById('own-pick'), ownFile = document.getElementById('own-file');
+  const ownStartWrap = document.getElementById('own-start-wrap'), ownStart = document.getElementById('own-start');
+  const ownClear = document.getElementById('own-clear'), ownStatus = document.getElementById('own-status');
+  const OWN_HELP = ownStatus.textContent;
+  function ownUi() {
+    const active = sound.mode === 'own';
+    ownStartWrap.hidden = !active; ownClear.hidden = !active;
+    ownPick.textContent = active ? 'Choose a different track' : 'Use my own track';
+  }
+  function stopSound() {
+    clearTimeout(sound.timer); clearTimeout(sound.seekCheck); clearInterval(sound.fade);
+    if (sound.el) { sound.el.pause(); sound.el.removeAttribute('src'); sound.el = null; }
+    if (sound.engine) { setLevel(0.0001, 0.03); sound.engine = null; }
+    if (sound.own) { URL.revokeObjectURL(sound.own.url); sound.own = null; }
+    sound.audible = false; sound.ended = false; sound.offset = 0;
+  }
+  function fadeOwn() {
+    const el = sound.el;
+    let level = 1;
+    clearInterval(sound.fade);
+    sound.fade = setInterval(() => {
+      level -= 0.05;
+      try { el.volume = Math.max(0, level); } catch (err) { /* volume is fixed on some phones */ }
+      if (level <= 0) { clearInterval(sound.fade); el.pause(); try { el.volume = 1; } catch (err) { /* as above */ } }
+    }, 150);
+  }
+  function ownFailed() {
+    const own = sound.own;
+    if (own && !own.triedData && window.FileReader) {
+      own.triedData = true;
+      const reader = new FileReader();
+      reader.onload = () => {
+        if (sound.own !== own || !sound.el) return;
+        sound.el.src = reader.result;
+        playing = false; t = 0;
+        ownStatus.textContent = `Loaded ${own.name}. Press Play to start.`;
+        sync();
+      };
+      reader.onerror = () => ownFailed();
+      reader.readAsDataURL(own.file);
+      return;
+    }
+    stopSound(); sound.mode = null; sound.on = false;
+    ownStatus.textContent = 'That file could not be played here. Try an MP3 or M4A file.';
+    ownUi(); sync();
+  }
+  function useOwn(file) {
+    stopSound();
+    const own = {name: file.name, file, url: URL.createObjectURL(file), triedData: false};
+    const el = new Audio();
+    el.preload = 'auto'; el.src = own.url;
+    el.addEventListener('error', () => { if (sound.el === el) ownFailed(); });
+    el.addEventListener('ended', () => { if (sound.el === el) sound.ended = true; });
+    sound.own = own; sound.el = el; sound.mode = 'own'; sound.on = true;
+    sound.offset = Math.max(0, Number(ownStart.value) || 0);
+    t = 0; playing = true;
+    ownStatus.textContent = `Playing your file: ${file.name}. It stays on this device and is not part of the shared page.`;
+    ownUi(); jumped(); sync();
+  }
+  ownPick.addEventListener('click', () => ownFile.click());
+  ownFile.addEventListener('change', () => { const file = ownFile.files && ownFile.files[0]; ownFile.value = ''; if (file) useOwn(file); });
+  ownStart.addEventListener('change', () => {
+    if (sound.mode !== 'own') return;
+    sound.offset = Math.max(0, Number(ownStart.value) || 0);
+    jumped(); sync();
+  });
+  ownClear.addEventListener('click', () => { stopSound(); sound.mode = null; sound.on = false; ownStatus.textContent = OWN_HELP; ownUi(); sync(); });
+
+  function pump() {
+    if (sound.mode !== 'synth' || !sound.audible) return;
+    while (sound.next * STEP < Math.min(TOTAL, t + 0.25)) {
+      sound.engine.step(sound.next, sound.ctx.currentTime + Math.max(0, sound.next * STEP - t));
+      sound.next += 1;
+    }
+  }
+
+  function sync() {
+    render(t);
+    soundSync();
+    scrub.value = t.toFixed(2);
+    clock.textContent = `${stamp(t)} / ${stamp(TOTAL)}`;
+    playBtn.textContent = playing ? 'Pause' : t >= TOTAL ? 'Replay' : 'Play';
+    let current = SCENES.length - 1;
+    while (current > 0 && t < SCENES[current].t0) current -= 1;
+    if (current !== shownScene) {
+      shownScene = current;
+      chipButtons.forEach((b, i) => { if (i === current) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current'); });
+    }
+  }
+  playBtn.addEventListener('click', () => {
+    if (t >= TOTAL) { t = 0; playing = true; jumped(); sync(); } else { playing = !playing; sync(); }
+  });
+  soundBtn.addEventListener('click', () => {
+    if (!sound.mode) startSound();
+    else if (sound.mode !== 'none') sound.on = !sound.on;
+    sync();
+  });
+  scrub.addEventListener('input', () => { t = Number(scrub.value); if (t >= TOTAL) playing = false; jumped(); sync(); });
+
+  function frame(now) {
+    if (last != null && playing) {
+      const dt = Math.min(0.1, (now - last) / 1000);
+      const el = sound.mode === 'file' || sound.mode === 'own' ? sound.el : null;
+      if (!el || sound.ended || el.ended) t += dt;
+      else if (!el.paused && !el.seeking && el.readyState >= 3) {
+        t += dt;
+        const off = el.currentTime - sound.offset - t;
+        t += Math.abs(off) > 0.3 ? off : off * 0.15;
+      }
+      t = Math.max(0, Math.min(TOTAL, t));
+      if (t >= TOTAL) { playing = false; if (sound.mode === 'own') fadeOwn(); }
+      pump();
+      sync();
+    }
+    last = now;
+    requestAnimationFrame(frame);
+  }
+
+  const wantsPortrait = () => stage.clientWidth > 0 && stage.clientWidth < 640;
+  const rebuild = () => { build(wantsPortrait()); sync(); };
+  rebuild();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(rebuild);
+  if ('ResizeObserver' in window) new ResizeObserver(() => { if (built && built.portrait !== wantsPortrait()) rebuild(); }).observe(stage);
+  requestAnimationFrame(frame);
+})();
+</script>

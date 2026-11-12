@@ -1,0 +1,103 @@
+{
+ "headline": "Murray's 17 in the fourth holds off Memphis",
+ "dek": "Jamal Murray scored 30 and Nikola Jokić 27. Denver never trailed.",
+ "three": [
+  [
+   "Murray: 30 points, 17 in the fourth",
+   "7 of 8 in the fourth. His fifth 30-point game this season."
+  ],
+  [
+   "Up 13 at the half, then held off Memphis’s 38-point third",
+   "Murray, Jokić and Johnson combined for 80 of 123."
+  ],
+  [
+   "34 assists and only 6 turnovers",
+   "Assists 34–27; points in the paint 54–40. Nine different Nuggets had a block."
+  ]
+ ],
+ "battle": [
+  [
+   "Assists",
+   34,
+   27
+  ],
+  [
+   "Points in the paint",
+   54,
+   40
+  ],
+  [
+   "Blocks",
+   11,
+   4
+  ],
+  [
+   "Points off turnovers",
+   15,
+   2
+  ]
+ ],
+ "battle_labels": [
+  "DEN",
+  "MEM"
+ ],
+ "top": [
+  [
+   "Jamal Murray",
+   "DEN",
+   "12 of 19, 8 assists, 2 blocks",
+   30
+  ],
+  [
+   "Nikola Jokić",
+   "DEN",
+   "11 rebounds, 8 assists",
+   27
+  ],
+  [
+   "Cameron Johnson",
+   "DEN",
+   "9 of 15, 4 of 7 from three",
+   23
+  ],
+  [
+   "Christian Braun",
+   "DEN",
+   "5 rebounds, 4 assists",
+   12
+  ]
+ ],
+ "linescore": {
+  "away": [
+   35,
+   30,
+   29,
+   29
+  ],
+  "home": [
+   24,
+   28,
+   38,
+   28
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-11-DEN-at-MEM.json",
+ "loser": {
+  "top": [
+   [
+    "Ty Jerome",
+    "MEM",
+    "9 of 18 · 5 assists",
+    22
+   ],
+   [
+    "Jaylen Wells",
+    "MEM",
+    "5 of 10 from three · 5 of 5 FT",
+    22
+   ]
+  ],
+  "source": "box score"
+ }
+}

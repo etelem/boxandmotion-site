@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-11-CLE-NYK.html",
+  "team": "CLE",
+  "home": false,
+  "number": "1",
+  "player": "James Harden",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 0.9872,
+    "ape": 1.0779,
+    "mass": 1.0181
+  },
+  "build_note": "Listed 6-5, 220 lb (RealGM), 6-11 wingspan in 2009 pre-draft measurements (SLAM)",
+  "kicker": "CAVALIERS 115 · KNICKS 107 · NOV 11",
+  "hook": [
+    "Harden's go-ahead 3",
+    "on a 32-point night"
+  ],
+  "clock": "Q4 · 4:22",
+  "us": "CLE",
+  "them": "NYK",
+  "score_before": [
+    101,
+    101
+  ],
+  "score_make": [
+    104,
+    101
+  ],
+  "stamp": "THREE",
+  "beat": [
+    "Cavaliers by 3 with 4:22 left.",
+    "Ahead for good from there."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Cavaliers",
+    "them": "Knicks",
+    "us_pts": 115,
+    "them_pts": 107
+  },
+  "star": {
+    "name": "James Harden",
+    "big": 32,
+    "big_label": "points on 9-of-14 shooting",
+    "lines": [
+      "5 of 7 from three",
+      "his season high"
+    ]
+  },
+  "story": "New York erased a 10-point fourth-quarter lead. Harden's pull-up broke a 101–101 tie, and Cleveland won 115–107.",
+  "aria": "Original illustration of James Harden's pull-up 3-pointer with 4 minutes 22 seconds left in the fourth quarter that broke a 101–101 tie at Madison Square Garden. Not traced from footage, not to scale."
+}

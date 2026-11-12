@@ -1,0 +1,103 @@
+{
+ "headline": "Harden's season-high 32 beats the Knicks",
+ "dek": "James Harden scored a season-high 32. Cleveland wins at the Garden.",
+ "three": [
+  [
+   "Harden: a season-high 32 points",
+   "He came in averaging 15.3. Then 5 of 7 from three."
+  ],
+  [
+   "Up 6 at the half, then held off a 14–4 Knicks run",
+   "Harden and Mitchell combined for 55 of 115."
+  ],
+  [
+   "Won it at the line and on the glass",
+   "Free throws made 20–11; rebounds 50–42. Jalen Brunson didn’t take a free throw."
+  ]
+ ],
+ "battle": [
+  [
+   "Free throws made",
+   20,
+   11
+  ],
+  [
+   "Rebounds",
+   50,
+   42
+  ],
+  [
+   "Blocks",
+   9,
+   4
+  ],
+  [
+   "Steals",
+   8,
+   5
+  ]
+ ],
+ "battle_labels": [
+  "CLE",
+  "NYK"
+ ],
+ "top": [
+  [
+   "James Harden",
+   "CLE",
+   "9 of 14, 5 of 7 from three",
+   32
+  ],
+  [
+   "Donovan Mitchell",
+   "CLE",
+   "8 of 15, 7 rebounds, 6 assists",
+   23
+  ],
+  [
+   "Tyrese Proctor",
+   "CLE",
+   "off the bench, 3 threes",
+   15
+  ],
+  [
+   "Meleek Thomas",
+   "CLE",
+   "off the bench, 6 of 11",
+   14
+  ]
+ ],
+ "linescore": {
+  "away": [
+   33,
+   26,
+   23,
+   33
+  ],
+  "home": [
+   23,
+   30,
+   23,
+   31
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-11-CLE-at-NYK.json",
+ "loser": {
+  "top": [
+   [
+    "Jalen Brunson",
+    "NYK",
+    "12 of 23 · no free-throw attempts",
+    27
+   ],
+   [
+    "Karl-Anthony Towns",
+    "NYK",
+    "11 rebounds · 8 assists",
+    21
+   ]
+  ],
+  "source": "box score"
+ }
+}

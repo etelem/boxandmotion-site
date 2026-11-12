@@ -1,0 +1,166 @@
+{
+  "team": "ORL",
+  "D": "  const D = {\n    date: 'Wed, Nov 11, 2026',\n    us: 123, them: 108, record: '4–7', usName: 'Magic', themName: 'Jazz',\n    quarters: [[29, 34], [37, 25], [19, 28], [38, 21]],\n    leadUs: 16, leadThem: 6,\n    star: {name: 'Franz Wagner', stats: [['Points (ties career high)', 38, 40], ['Field goals made of 23', 13, 23], ['Free throws made of 10', 9, 10]]},\n    scorers: [\n      {name: 'Franz Wagner', pts: 38, note: '13 of 23 · 9 of 10 FT · 8 rebounds'},\n      {name: 'Desmond Bane', pts: 25, note: '7 of 11 from three'},\n      {name: 'Anthony Black', pts: 22, note: '8 assists · 7 rebounds'},\n      {name: 'Jevon Carter', pts: 11, note: 'off the bench · 3 threes · 2 steals'},\n      {name: 'Wendell Carter Jr.', pts: 9, note: '7 rebounds · 3 of 5'},\n    ],\n    edges: [\n      {label: 'Points in the paint', us: 40, them: 28},\n      {label: 'Fast-break points', us: 14, them: 3},\n      {label: 'Threes made', us: 18, them: 14},\n      {label: 'Assists', us: 24, them: 21},\n    ],\n    gaps: [\n      {label: 'Free throws made', us: 23, them: 28},\n      {label: 'Blocks', us: 4, them: 8},\n    ],\n    next: {opp: 'vs Bucks', when: 'Fri, Nov 13, 7:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Franz Wagner's driving layup with 6:30 left that broke a 98–98 tie and put Orlando ahead for good. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Wagner for the lead",
+    "subP": "Wagner drives, 6:30 left",
+    "subL": "Franz Wagner’s drive at 98–98, 6:30 left",
+    "m0": "Tied",
+    "m1": "Magic +2",
+    "num": "22",
+    "cap1": "Wagner’s drive. Magic by 2.",
+    "cap2": "100–98. Ahead for good.",
+    "clock": [
+      398,
+      390
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Magic vs Jazz Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Magic 123, Jazz 108 · Nov 11, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Magic vs.', 'Jazz'] : ['Magic vs. Jazz']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Wagner 38, Bane 7 threes.', 'Orlando won the fourth 38–21.'] : ['Franz Wagner scored 38 and Desmond Bane made 7 threes. Orlando won the fourth 38–21.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Magic improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'First winning streak of the season'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Down 2 after three,', 'won the fourth 38–21'] : ['Down 2 after three, then won the fourth 38–21']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Magic ${D.leadUs}, Jazz ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Magic’s margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Wagner: 38, tying', 'his career high'] : ['Wagner: 38 points, tying his career high']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['12 in the fourth.', 'Third straight 30-point game.'] : ['12 in the fourth. His third straight 30-point game.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Wagner, Bane, Black:', '85 of the 123'] : ['Wagner, Bane and Black combined for 85 of 123']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 40;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it in the paint', 'and in transition'] : ['Won it in the paint and in transition']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Magic in blue, Jazz in gray. Bane', 'made 7 of 11 threes.'] : ['Magic in blue, Jazz in gray. Desmond Bane made 7 of 11 threes.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'Tenth in the East'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Bucks’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '1–11';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Two straight wins to close', 'a 2–2 road trip.'] : ['Two straight wins to close a 2–2 four-game road trip.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Magic 123 · Jazz 108 · Nov 11'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Wagner for the lead'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Wagner'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 60;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 170 : 200) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+2', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 120 * k, shotX + 80 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+    ]
+  ],
+  "aria": "Animated recap of the Magic's 123 to 108 road win over the Jazz: Franz Wagner's driving layup with 6:30 left that broke a 98 to 98 tie and put Orlando ahead for good, quarter-by-quarter scoring, Wagner's career-high-tying 38 points, the top scorers, how the Magic won, and the next game at home against Milwaukee.",
+  "figure": {
+    "player": "Franz Wagner",
+    "home": false,
+    "tall": 1.0513,
+    "ape": 1.0244,
+    "mass": 0.9866,
+    "label": "Franz Wagner, listed 6-10, 220 lb, reported 7-0 wingspan"
+  },
+  "loser_top": [
+    [
+      "Darryn Peterson",
+      22,
+      "7 of 19 · 6 of 6 FT"
+    ],
+    [
+      "Brice Sensabaugh",
+      19,
+      "off the bench · 6 of 10"
+    ],
+    [
+      "Ace Bailey",
+      18,
+      "7 rebounds · 4 blocks"
+    ]
+  ],
+  "notes": [
+    "Box score from the Magic's 123–108 win over the Utah Jazz at the Delta Center on Nov 11, 2026, from the CBS Sports box score and play-by-play, with game details from the Associated Press (via KUTV and CBS Sports), Field Level Media (via Yardbarker), the Deseret News, WFTV and Magic on SI. All 123 Orlando points and all 108 Utah points are accounted for in the box score, and the quarter scores add up to both totals (66–59 Orlando at the half and 87–85 Utah after three, matching the AP). Orlando's 16-point lead (123–107 in the final minute) and Utah's 6-point lead (40–34 in the second quarter, which the AP also reports) are from the SportBusy play-by-play. Points in the paint (40–28) and fast-break points (14–3) are the AP's; threes, assists, free throws and blocks are CBS's. Records and ranks are from the site's standings after Wednesday's games: Orlando 4–7 and tenth in the East, Milwaukee 1–11.",
+    "Utah led 96–95 on a Brice Sensabaugh three with 8:01 left; Orlando answered with an 18–3 run (AP) and won the fourth quarter 38–21. Wagner's 38 ties his career high (Yahoo Sports, ClutchPoints), with 12 in the fourth (WFTV, Magic on SI), and it is his third straight 30-point game (Field Level Media). Bane's seven threes are a season high (Yahoo Sports, WFTV). The win is Orlando's first winning streak of the season (Field Level Media) and closes a 2–2 road trip after losses at Phoenix and Golden State and a win at Sacramento (site results). Orlando hosts Milwaukee on Friday at 7:00 PM ET in the NBA Cup group stage (AP, Plain Text Sports).",
+    "The play of the game is an original illustration of Franz Wagner's driving layup with 6:30 left, which broke a 98–98 tie and put Orlando ahead for good (CBS play-by-play; Field Level Media and the AP describe the Wagner layup that started the run; SportBusy's clock has 6:28). The recaps don't describe the drive itself, so it is drawn as the template's plain drive to the rim. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Orlando Magic or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Wagner's listed 6-foot-10 and 220 pounds (Basketball-Reference), with arms scaled to a reported 7-foot wingspan (CraftedNBA), in Orlando's road blue with No. 22. He has no approved look on file yet, so he is drawn as a team-colour silhouette in the kit. It is an original silhouette with a featureless face, not a portrait or a trace of footage."
+  ]
+}

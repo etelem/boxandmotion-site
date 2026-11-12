@@ -1,0 +1,109 @@
+{
+ "headline": "Wagner's 38 and a 38–21 fourth beat Utah",
+ "dek": "Franz Wagner scored 38 and Desmond Bane made 7 threes. Orlando won the fourth 38–21.",
+ "three": [
+  [
+   "Wagner: 38 points, tying his career high",
+   "12 in the fourth. His third straight 30-point game."
+  ],
+  [
+   "Down 2 after three, then won the fourth 38–21",
+   "Wagner, Bane and Black combined for 85 of 123."
+  ],
+  [
+   "Won it in the paint and in transition",
+   "Points in the paint 40–28; fast-break points 14–3. Desmond Bane made 7 of 11 threes."
+  ]
+ ],
+ "battle": [
+  [
+   "Points in the paint",
+   40,
+   28
+  ],
+  [
+   "Fast-break points",
+   14,
+   3
+  ],
+  [
+   "Threes made",
+   18,
+   14
+  ],
+  [
+   "Assists",
+   24,
+   21
+  ]
+ ],
+ "battle_labels": [
+  "ORL",
+  "UTA"
+ ],
+ "top": [
+  [
+   "Franz Wagner",
+   "ORL",
+   "13 of 23, 9 of 10 FT, 8 rebounds",
+   38
+  ],
+  [
+   "Desmond Bane",
+   "ORL",
+   "7 of 11 from three",
+   25
+  ],
+  [
+   "Anthony Black",
+   "ORL",
+   "8 assists, 7 rebounds",
+   22
+  ],
+  [
+   "Jevon Carter",
+   "ORL",
+   "off the bench, 3 threes, 2 steals",
+   11
+  ]
+ ],
+ "linescore": {
+  "away": [
+   29,
+   37,
+   19,
+   38
+  ],
+  "home": [
+   34,
+   25,
+   28,
+   21
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-11-ORL-at-UTA.json",
+ "loser": {
+  "top": [
+   [
+    "Darryn Peterson",
+    "UTA",
+    "7 of 19 · 6 of 6 FT",
+    22
+   ],
+   [
+    "Brice Sensabaugh",
+    "UTA",
+    "off the bench · 6 of 10",
+    19
+   ],
+   [
+    "Ace Bailey",
+    "UTA",
+    "7 rebounds · 4 blocks",
+    18
+   ]
+  ],
+  "source": "box score"
+ }
+}
