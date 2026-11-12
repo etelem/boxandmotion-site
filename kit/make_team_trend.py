@@ -50,6 +50,12 @@ html,body{margin:0;background:#f4f4f2}.wrap{width:540px;height:960px;margin:0 au
 </style></head><body><div class="wrap"><svg id="sv" width="540" height="960" viewBox="0 0 540 960" role="img" aria-label="__TITLE__"></svg></div>
 <script>
 (() => {
+  // ?embed=1 (site iframe): scale the 9:16 board to the frame's width and report the height to the page
+  if (/[?&]embed=1/.test(location.search)) { const w0 = document.querySelector('.wrap'); document.documentElement.style.background = 'transparent'; document.body.style.background = 'transparent';
+    const fit = () => { const s = Math.min(1, document.documentElement.clientWidth / 540); w0.style.transformOrigin = 'top left'; w0.style.transform = `scale(${s})`;
+      w0.style.marginLeft = Math.max(0, (document.documentElement.clientWidth - 540 * s) / 2) + 'px'; document.body.style.height = (960 * s) + 'px'; document.body.style.overflow = 'hidden';
+      if (window.parent !== window) window.parent.postMessage({bmH: Math.ceil(960 * s)}, '*'); };
+    w0.style.margin = '0'; fit(); window.addEventListener('resize', fit); }
   const D = __DATA__, NS = 'http://www.w3.org/2000/svg', sv = document.getElementById('sv');
   const S = (tag, at, par) => { const e = document.createElementNS(NS, tag); for (const k in at) e.setAttribute(k, at[k]); (par || sv).appendChild(e); return e; };
   const T = (par, x, y, txt, cls, size, anchor) => { const e = S('text', {x, y, class: cls, 'text-anchor': anchor || 'start'}, par); e.style.fontSize = size + 'px'; e.textContent = txt; return e; };

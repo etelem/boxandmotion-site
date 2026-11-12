@@ -184,6 +184,15 @@ for x in DD.get("xo", []):
     XO.append(dict(x, title=cfg["title"], sub=cfg["situation"], beats=cfg["beats"]))
 XO.sort(key=lambda x: x["published"], reverse=True)
 
+# Trend board: good, lucky or in trouble? One team per Short, all 30 teams on the chart (kit/make_team_trend.py, listed
+# under "trends" in data/deepdives.json; numbers frozen at publish, sources on the board itself)
+TRENDS = sorted(DD.get("trends", []), key=lambda x: x["published"], reverse=True)
+
+def trend_card(R, x, big=False):
+    t = T[x["team"]]
+    return (f'<a href="{R}trends/{x["slug"]}/index.html" class="card pad" style="display:flex;flex-direction:column;gap:6px;{"min-height:260px;" if big else ""}justify-content:flex-end;background:#fff">'
+            f'<span class="tag hot">Trend board · {E(t["name"])}</span><b class="d" style="font-size:{40 if big else 30}px;margin-top:4px">{E(x["title"])}</b><span class="dim">{E(x["dek"])}</span></a>')
+
 def xo_card(R, x, big=False):
     return (f'<a href="{R}xo/{x["slug"]}/index.html" class="card pad" style="display:flex;flex-direction:column;gap:6px;{"min-height:260px;" if big else ""}justify-content:flex-end;background:#f7f6f1">'
             f'<span class="tag hot">X\'s and O\'s</span><b class="d" style="font-size:{40 if big else 30}px;margin-top:4px">{E(x["title"])}</b><span class="dim">{E(x["dek"])}</span></a>')
@@ -214,13 +223,16 @@ if os.path.isdir("data/players"):
         if fn.endswith(".json"): PLAYERS.append(json.load(open(f"data/players/{fn}")))
 PLAYERS.sort(key=lambda x: x["published"], reverse=True)
 
-# the home page's "New:" chip points at the newest deep dive (same newest-first order as the Deep dives page)
-LATEST_DD = sorted([("2026-11-07", "players/luka-doncic/index.html", "New: Luka scouting report")]
+# the home page's "New" chips: the newest deep dive, plus the next one if it came out within a day of it (two pieces the same night)
+_NEW = sorted([("2026-11-07", "players/luka-doncic/index.html", "New: Luka scouting report")]
                    + [(b["published"], f'coaches/{b["coach_slug"]}/index.html', f'New: {b["coach"]}\'s board') for b in BOARDS]
                    + [(m["published"], f'moves/{m["slug"]}/index.html', f'New: {m["player"]}\'s signature move') for m in MOVES]
                    + [(x["published"], f'xo/{x["slug"]}/index.html', f'New X\'s and O\'s: {x["term"]}') for x in XO]
-                   + [(P["published"], f'players/{P["slug"]}/index.html', f'New: {P["name"]} scouting report') for P in PLAYERS],
-                   key=lambda x: x[0], reverse=True)[0]
+                   + [(P["published"], f'players/{P["slug"]}/index.html', f'New: {P["name"]} scouting report') for P in PLAYERS]
+                   + [(x["published"], f'trends/{x["slug"]}/index.html', f'New trend: {x["short"]}') for x in TRENDS],
+                   key=lambda x: x[0], reverse=True)
+_ts = lambda v: datetime.datetime.fromisoformat(v if "T" in v else v + "T12:00")
+LATEST_DD = [_NEW[0]] + [n for n in _NEW[1:2] if (_ts(_NEW[0][0]) - _ts(n[0])).total_seconds() <= 24 * 3600]
 
 def player_card(R, P, big=False):
     t = T[P["team"]]
@@ -253,7 +265,7 @@ home = f'''
  <div class="row" style="gap:12px">
   <a class="chip" href="last-night/index.html"><span class="dot"></span>{len(LAST)} games last night</a>
   <a class="chip" href="odds/index.html"><span class="dot"></span>Playoff odds mover: {E(T[movers]['name'])} {chg(O[movers]['chg'])} this week</a>
-  <a class="chip" href="{LATEST_DD[1]}"><span class="dot"></span>{E(LATEST_DD[2])}</a>
+  {"".join(f'<a class="chip" href="{n[1]}"><span class="dot"></span>{E(n[2])}</a>' for n in LATEST_DD)}
  </div></div>
  <div id="mine" class="grid g3"></div>
  <div id="mine-empty" class="card pad empty hidden"><b class="d" style="font-size:26px">Pick your teams</b><p class="dim" style="margin:6px 0 14px">Follow teams to see their record, odds and last game here. Saved on this device, no sign-up.</p><div class="row"><button class="pill star" data-team="LAL">★ Lakers</button><button class="pill star" data-team="PHI">★ 76ers</button><button class="pill star" data-team="NYK">★ Knicks</button><a class="pill" href="teams/index.html">All 30 teams →</a></div></div>
@@ -521,7 +533,8 @@ DD_ITEMS = ([("2026-11-07", f'''<a href="{R}players/luka-doncic/index.html" clas
             + [(b["published"], board_card(R, b, big=True)) for b in BOARDS]
             + [(m["published"], move_card(R, m, big=True)) for m in MOVES]
             + [(x["published"], xo_card(R, x, big=True)) for x in XO]
-            + [(P["published"], player_card(R, P, big=True)) for P in PLAYERS])
+            + [(P["published"], player_card(R, P, big=True)) for P in PLAYERS]
+            + [(x["published"], trend_card(R, x, big=True)) for x in TRENDS])
 DD_CARDS = "\n".join(html for _, html in sorted(DD_ITEMS, key=lambda x: x[0], reverse=True))
 body = f'''<div class="sec" style="gap:8px"><p class="k">New every week</p><h1 class="h1">Deep dives</h1><p class="dim" style="margin:0;font-size:18px;max-width:44em">Scouting reports on the league's hottest players, coach's boards when a team draws up a play worth seeing again, stars' signature moves, and X's and O's that teach the game. All in motion.</p></div>
 <section class="grid g2 dd-grid">{DD_CARDS}</section>'''
@@ -611,6 +624,18 @@ for x in XO:
 <section class="sec">{anim_frame(R, x['anim'], x['title'])}
 <div class="row" style="gap:8px">{yt}<a class="pill" href="{R}deep-dives/index.html">More deep dives →</a></div></section>'''
     page(f"xo/{x['slug']}/index.html", f"{x['title']} · Box & Motion Hoops", body, active="Deep Dives", desc=f"{x['title']} {x['sub']}, explained in motion.")
+
+# ---- trend boards ----
+for x in TRENDS:
+    t = T[x["team"]]
+    yt = f'<a class="pill cta-btn" style="background:#FF0033;border-color:#FF0033;color:#fff" href="https://youtube.com/shorts/{x["youtube"]}" target="_blank" rel="noopener">▶ Watch the Short</a>' if x.get("youtube") else ""
+    body = f'''<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}deep-dives/index.html">Deep dives</a><span>/</span><a href="{R}teams/{t['slug']}/index.html">{E(t['name'])}</a><span>/</span><span>Trend board</span></nav>
+<section class="sec" style="gap:12px"><p class="k">Trend board · good, lucky or in trouble?</p>
+<h1 class="h1" style="font-size:clamp(44px,7vw,88px)">{E(x['title'])}</h1>
+<p style="margin:0;font-size:20px;max-width:34em">{E(x['dek'])}</p></section>
+<section class="sec" style="max-width:560px">{anim_frame(R, x['anim'], x['title'], "reels/soundtrack.mp3")}
+<div class="row" style="gap:8px">{yt}<a class="pill" href="{R}teams/{t['slug']}/index.html">{E(t['name'])} page →</a><a class="pill" href="{R}deep-dives/index.html">More deep dives →</a></div></section>'''
+    page(f"trends/{x['slug']}/index.html", f"{x['title']} · Box & Motion Hoops", body, active="Deep Dives", desc=x["dek"])
 
 # ---- coach: Redick ----
 body = f'''<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}deep-dives/index.html">Deep dives</a><span>/</span><a href="{R}teams/lakers/index.html">Lakers</a><span>/</span><span>JJ Redick</span></nav>
