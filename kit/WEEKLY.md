@@ -58,7 +58,7 @@ starting; the nightly update keeps that file current.
    became head coach), dek.
 
 ## 3. Shorts and the newsletter draft
-1. For each animation: `bash kit/short_mp4.sh src/anim/<file>.html kit/out/<file>-short.mp4` (the looping house standard: opens on the first action, no end card, blends back into its first frame).
+1. For each animation: `bash kit/short_mp4.sh src/anim/<file>.html kit/out/<file>-short.mp4` (the house standard: opens on the first action, ends on the 3-second Box & Motion end card (YouTube handle, site, newsletter), then blends back into its first frame so it loops).
    Copy it to `src/anim/<file>.mp4` for the YouTube step below.
 2. **Draft the issue in beehiiv** (publication "Box & Motion", The Sunday Box). Duplicate the newest Sunday Box post and keep
    its design. Title: "The Sunday Box: <hook>". Sections:

@@ -633,12 +633,15 @@ body{background:var(--navy);color:var(--ink);font-family:var(--font-body);font-s
     const word = T(g, W / 2, cy + size / 2 + fs.h * 1.25, 'Box & Motion ', 'd', fs.h, 'middle');
     const hp = S('tspan', {fill: '#FF5A1F'}, word); hp.textContent = 'Hoops';
     const handle = T(g, W / 2, cy + size / 2 + fs.h * 1.25 + fs.b * 1.7, '@boxandmotion · boxandmotion.com', 'b w', fs.b, 'middle');
+    const news = [T(g, W / 2, cy + size / 2 + fs.h * 1.25 + fs.b * 3.2, 'Free Sunday newsletter: The Sunday Box', 'b m', fs.b * 0.82, 'middle'),
+      T(g, W / 2, cy + size / 2 + fs.h * 1.25 + fs.b * 4.3, 'boxandmotion.beehiiv.com/subscribe', 'b m', fs.b * 0.82, 'middle')];
     const disc = T(g, W / 2, H - M, 'Unofficial fan recap. Not affiliated with the NBA or any team.', 'b m', fs.s * 0.8, 'middle');
     return (lt) => {
       logo.style.opacity = prog(lt, 0.05, 0.5);
       logo.setAttribute('transform', `translate(${W / 2 - size / 2} ${cy - size / 2 + 20 * (1 - prog(lt, 0.05, 0.6))}) scale(${size / 100})`);
       show(word, prog(lt, 0.4, 0.6), 18);
       show(handle, prog(lt, 0.8, 0.6), 14);
+      news.forEach((n) => show(n, prog(lt, 1.0, 0.6), 12));
       disc.style.opacity = prog(lt, 1.1, 0.6);
     };
   }
