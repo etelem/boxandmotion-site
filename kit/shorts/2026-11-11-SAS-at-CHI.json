@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-11-SAS-CHI.html",
+  "team": "SAS",
+  "home": false,
+  "number": "1",
+  "player": "Victor Wembanyama",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 1.1282,
+    "ape": 1.0909,
+    "mass": 0.9843
+  },
+  "build_note": "Listed 7-4, 235 lb (Basketball-Reference, Wikipedia), reported 8-0 wingspan (Wikipedia)",
+  "kicker": "SPURS 124 · BULLS 119 · NOV 11",
+  "hook": [
+    "Wemby steps back",
+    "as Spurs erase 22"
+  ],
+  "clock": "Q4 · 8:19",
+  "us": "SAS",
+  "them": "CHI",
+  "score_before": [
+    104,
+    94
+  ],
+  "score_make": [
+    107,
+    94
+  ],
+  "stamp": "THREE",
+  "beat": [
+    "Spurs by 13, 8:19 left.",
+    "32 points, 9 boards, 5 blocks."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Spurs",
+    "them": "Bulls",
+    "us_pts": 124,
+    "them_pts": 119
+  },
+  "star": {
+    "name": "Victor Wembanyama",
+    "big": 32,
+    "big_label": "points on 13-of-18 shooting",
+    "lines": [
+      "9 rebounds, 5 blocks",
+      "Spurs' 10th straight win"
+    ]
+  },
+  "story": "Down 22 in the second quarter. The Spurs opened the third on an 18–3 run and won 124–119.",
+  "aria": "Original illustration of Victor Wembanyama's step-back 3-pointer with 8:19 left that made it 107–94 at Chicago. Not traced from footage, not to scale."
+}

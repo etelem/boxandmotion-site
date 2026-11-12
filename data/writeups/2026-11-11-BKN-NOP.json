@@ -1,0 +1,103 @@
+{
+ "headline": "Nets score 83 by halftime and rout New Orleans",
+ "dek": "Brooklyn scored 83 by halftime and won by 34.",
+ "three": [
+  [
+   "Demin: 22 points in his return",
+   "4 of 6 from three, 12 in the fourth, back after six games out."
+  ],
+  [
+   "Up 17 at the half, up as many as 41",
+   "Six Nets scored 15 or more, tying a franchise record."
+  ],
+  [
+   "Won the arc and the glass",
+   "Threes made 20–12; assists 30–20. Brooklyn hit 20 threes to New Orleans’ 12."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   20,
+   12
+  ],
+  [
+   "Assists",
+   30,
+   20
+  ],
+  [
+   "Rebounds",
+   42,
+   28
+  ],
+  [
+   "Points in the paint",
+   50,
+   38
+  ]
+ ],
+ "battle_labels": [
+  "BKN",
+  "NOP"
+ ],
+ "top": [
+  [
+   "Egor Demin",
+   "BKN",
+   "4 of 6 from three, 8 of 10 FT",
+   22
+  ],
+  [
+   "Michael Porter Jr.",
+   "BKN",
+   "6 rebounds, 4 threes",
+   22
+  ],
+  [
+   "Julius Randle",
+   "BKN",
+   "5 assists, plus-38",
+   17
+  ],
+  [
+   "Moritz Wagner",
+   "BKN",
+   "off the bench, 6 of 8",
+   16
+  ]
+ ],
+ "linescore": {
+  "away": [
+   39,
+   44,
+   24,
+   38
+  ],
+  "home": [
+   25,
+   41,
+   15,
+   30
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-11-BKN-at-NOP.json",
+ "loser": {
+  "top": [
+   [
+    "Zion Williamson",
+    "NOP",
+    "8 of 14 · 12 of 14 FT",
+    29
+   ],
+   [
+    "Saddiq Bey",
+    "NOP",
+    "off the bench · 3 threes",
+    15
+   ]
+  ],
+  "source": "box score"
+ }
+}

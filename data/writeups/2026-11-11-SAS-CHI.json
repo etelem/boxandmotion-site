@@ -1,0 +1,103 @@
+{
+ "headline": "Spurs erase a 22-point deficit for their 10th straight",
+ "dek": "Down 22 in the second quarter, the Spurs won behind Wembanyama’s 32 for their 10th straight.",
+ "three": [
+  [
+   "Wembanyama: 32 points, 9 rebounds, 5 blocks",
+   "13 of 18 from the floor, two days after scoring 40 at Phoenix."
+  ],
+  [
+   "Down 14 at the half, opened the third on an 18–3 run",
+   "Wembanyama and Harper combined for 50 of 124."
+  ],
+  [
+   "16 steals, only 6 turnovers",
+   "Steals 16–3; blocks 7–4. Chicago turned it over 19 times."
+  ]
+ ],
+ "battle": [
+  [
+   "Steals",
+   16,
+   3
+  ],
+  [
+   "Blocks",
+   7,
+   4
+  ],
+  [
+   "Field goals made",
+   49,
+   44
+  ],
+  [
+   "Offensive rebounds",
+   11,
+   7
+  ]
+ ],
+ "battle_labels": [
+  "SAS",
+  "CHI"
+ ],
+ "top": [
+  [
+   "Victor Wembanyama",
+   "SAS",
+   "13 of 18, 9 rebounds, 5 blocks",
+   32
+  ],
+  [
+   "Dylan Harper",
+   "SAS",
+   "10 assists, 4 steals",
+   18
+  ],
+  [
+   "De’Aaron Fox",
+   "SAS",
+   "9 assists, 3 steals",
+   17
+  ],
+  [
+   "Julian Champagnie",
+   "SAS",
+   "3 of 6 from three",
+   12
+  ]
+ ],
+ "linescore": {
+  "away": [
+   29,
+   27,
+   34,
+   34
+  ],
+  "home": [
+   41,
+   29,
+   19,
+   30
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-11-SAS-at-CHI.json",
+ "loser": {
+  "top": [
+   [
+    "Jalen Smith",
+    "CHI",
+    "8 of 9 · 5 of 5 from three",
+    23
+   ],
+   [
+    "Nic Claxton",
+    "CHI",
+    "off the bench · 6 rebounds",
+    17
+   ]
+  ],
+  "source": "box score"
+ }
+}

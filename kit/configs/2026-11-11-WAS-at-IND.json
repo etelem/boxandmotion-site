@@ -1,0 +1,161 @@
+{
+  "team": "IND",
+  "D": "  const D = {\n    date: 'Wed, Nov 11, 2026',\n    us: 114, them: 101, record: '4–8', usName: 'Pacers', themName: 'Wizards',\n    quarters: [[26, 25], [29, 25], [22, 27], [37, 24]],\n    leadUs: 16, leadThem: 8,\n    star: {name: 'Pascal Siakam', stats: [['Points', 28, 30], ['Free throws made of 12', 12, 12], ['Rebounds', 8, 10]]},\n    scorers: [\n      {name: 'Pascal Siakam', pts: 28, note: '8 reb · 5 ast · 12 of 12 FT'},\n      {name: 'Ivica Zubac', pts: 20, note: '12 rebounds · 9 of 15'},\n      {name: 'Andrew Nembhard', pts: 17, note: '10 assists · 3 of 5 from three'},\n      {name: 'Kelly Oubre Jr.', pts: 14, note: '6 rebounds · 4 steals'},\n      {name: 'Obi Toppin', pts: 8, note: 'off the bench · 2 threes'},\n    ],\n    edges: [\n      {label: 'Assists', us: 29, them: 12},\n      {label: 'Points in the paint', us: 60, them: 44},\n      {label: 'Bench points', us: 33, them: 22},\n      {label: 'Free throws made', us: 21, them: 16},\n    ],\n    gaps: [\n      {label: 'Rebounds', us: 52, them: 58},\n      {label: 'Threes made', us: 9, them: 11},\n    ],\n    next: {opp: 'vs Knicks', when: 'Fri, Nov 13, 7:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Andrew Nembhard's pull-up jumper with 9:04 left that capped Indiana's 14-0 run to open the fourth quarter and made it 91-77. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Nembhard pulls up",
+    "subP": "Nembhard pulls up, 9:04 left",
+    "subL": "Nembhard’s pull-up jumper with 9:04 left in the fourth",
+    "m0": "Pacers +12",
+    "m1": "Pacers +14",
+    "num": "2",
+    "cap1": "Nembhard capped a 14–0 run. Pacers by 14.",
+    "cap2": "91–77, 9:04 left in the 4th.",
+    "clock": [
+      552,
+      544
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Pacers vs Wizards Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Pacers 114, Wizards 101 · Nov 11, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Pacers vs.', 'Wizards'] : ['Pacers vs. Wizards']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Siakam 28, Zubac 20.', 'A 37–24 fourth did it.'] : ['Pascal Siakam scored 28, Ivica Zubac 20, and a 37–24 fourth quarter did it.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Pacers improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Two-game skid snapped'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Tied 77–77 after three,', 'then a 14–0 run'] : ['Tied 77–77 after three, then a 14–0 run to open the fourth']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Pacers ${D.leadUs}, Wizards ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Pacers’ margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Siakam: 28,', '12 of 12 at the line'] : ['Siakam: 28 points, 12 of 12 at the line']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['8 rebounds, 5 assists,', 'his 9th 20-point game.'] : ['8 rebounds, 5 assists, his ninth 20-point game of the season.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Siakam and Zubac:', '48 of the 114'] : ['Siakam and Zubac combined for 48 of 114']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 30;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Moved the ball,', 'owned the paint'] : ['Moved the ball and owned the paint']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Pacers in gold, Wizards in gray.', 'Indiana had 29 assists to 12.'] : ['Pacers in gold, Wizards in gray. Indiana had 29 assists to Washington’s 12.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'11th in the East'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Knicks’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '6–5';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['The Pacers’ first home win', 'of the season.'] : ['The Pacers’ first home win of the season.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Pacers 114 · Wizards 101 · Nov 11'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Nembhard pulls up'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Siakam'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 70;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+2', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+    ]
+  ],
+  "aria": "Animated recap of the Pacers' 114 to 101 home win over Washington: Andrew Nembhard's pull-up jumper with 9:04 left that capped a 14-0 fourth-quarter run, quarter-by-quarter scoring, Pascal Siakam's 28 points on 12-of-12 free throws, the top scorers, how the Pacers won, and Friday's game with the Knicks.",
+  "notes": [
+    "Box score from the Indiana Pacers' 114–101 home win over the Washington Wizards on Nov 11, 2026, from the CBS Sports box score, with game details from the AP (Mark Ambrogi, via theScore and infonews), Field Level Media, WISH-TV (via Yahoo Sports), Ball Exclusives (via Yardbarker) and the Sportbusy play-by-play. All 114 Indiana points and all 101 Washington points are accounted for in the box score, and the quarter scores add up to both totals (55–50 Indiana at the half, matching the AP; 77–77 after three). Bench points (33–22) are worked out from the box score's starters; points in the paint (60–44) are from Field Level Media. Rebounds include team rebounds. Records and the Pacers' standing are from the site's standings.",
+    "Biggest leads: Washington's 8, at 41–33 midway through the second quarter (AP); Indiana's 16, at 100–84 and again at 112–96 in the fourth (Sportbusy play-by-play). Indiana closed the first half on a 22–9 run (AP), Washington closed the third on an 18–8 run to tie it 77–77 (AP), and Indiana opened the fourth with a 14–0 run (AP, Field Level Media). It was the Pacers' first home win of the season (Field Level Media, WISH-TV) and snapped a two-game skid (AP); Siakam's ninth 20-point game of the season is from WISH-TV. Aaron Nesmith left in the fourth with a sore right knee (Field Level Media).",
+    "The play of the game is an original illustration of Andrew Nembhard's pull-up jumper that capped the 14–0 run and gave Indiana a 91–77 lead (Field Level Media; the AP confirms the 14–0 run to 91–77). The 9:04 clock is from the Sportbusy play-by-play, where it is the basket that made it 91–77. It is drawn as the template's pull-up. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Indiana Pacers or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Nembhard’s listed 6-foot-4 and 191 pounds (Basketball-Reference, RealGM), with arms scaled to his 6-foot-5.75 wingspan at the 2022 draft combine (Tankathon), in the Pacers' home white with No. 2 (Basketball-Reference, RealGM). He doesn't have an approved look yet, so he is drawn as a team-colour silhouette. It is an original figure with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "player": "Andrew Nembhard",
+    "home": true,
+    "tall": 0.9744,
+    "ape": 1.023,
+    "mass": 0.9549,
+    "label": "Andrew Nembhard, listed 6-4, 191 lb, 6-5.75 wingspan (2022 combine)"
+  },
+  "loser_top": [
+    [
+      "Kyshawn George",
+      25,
+      "9 rebounds · 5 of 8 from three"
+    ],
+    [
+      "Anthony Davis",
+      21,
+      "13 rebounds · 7 of 9 FT"
+    ]
+  ]
+}

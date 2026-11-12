@@ -1,0 +1,103 @@
+{
+ "headline": "Avdija's 28 finishes Portland's sweep of OKC",
+ "dek": "Deni Avdija scored 28 and Portland swept the back-to-back.",
+ "three": [
+  [
+   "Avdija: 28 points, 6 assists, 4 steals",
+   "12 by halftime, 6 of 6 at the line."
+  ],
+  [
+   "Up 6 at the half, won the fourth 30–23",
+   "Avdija and Lillard combined for 46 of 118."
+  ],
+  [
+   "Won it from three and at the line",
+   "Threes made 19–11; blocks 8–3. Portland made all 14 of its fourth-quarter free throws."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   19,
+   11
+  ],
+  [
+   "Blocks",
+   8,
+   3
+  ],
+  [
+   "Bench points",
+   34,
+   22
+  ],
+  [
+   "Free throws made",
+   25,
+   23
+  ]
+ ],
+ "battle_labels": [
+  "POR",
+  "OKC"
+ ],
+ "top": [
+  [
+   "Deni Avdija",
+   "POR",
+   "6 assists, 4 steals, 6 of 6 FT",
+   28
+  ],
+  [
+   "Sidy Cissoko",
+   "POR",
+   "6 of 9, 4 threes",
+   19
+  ],
+  [
+   "Jrue Holiday",
+   "POR",
+   "off the bench, 5 threes",
+   19
+  ],
+  [
+   "Damian Lillard",
+   "POR",
+   "6 of 6 FT, 3 assists",
+   18
+  ]
+ ],
+ "linescore": {
+  "away": [
+   32,
+   18,
+   35,
+   23
+  ],
+  "home": [
+   28,
+   28,
+   32,
+   30
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-11-OKC-at-POR.json",
+ "loser": {
+  "top": [
+   [
+    "Shai Gilgeous-Alexander",
+    "OKC",
+    "9 of 20 · 13 of 14 FT",
+    31
+   ],
+   [
+    "Isaiah Hartenstein",
+    "OKC",
+    "11 rebounds · season high",
+    20
+   ]
+  ],
+  "source": "box score"
+ }
+}

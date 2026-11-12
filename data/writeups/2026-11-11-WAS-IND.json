@@ -1,0 +1,103 @@
+{
+ "headline": "Siakam's 28 and a 14–0 run beat Washington",
+ "dek": "Pascal Siakam scored 28, Ivica Zubac 20, and a 37–24 fourth quarter did it.",
+ "three": [
+  [
+   "Siakam: 28 points, 12 of 12 at the line",
+   "8 rebounds, 5 assists, his ninth 20-point game of the season."
+  ],
+  [
+   "Tied 77–77 after three, then a 14–0 run to open the fourth",
+   "Siakam and Zubac combined for 48 of 114."
+  ],
+  [
+   "Moved the ball and owned the paint",
+   "Assists 29–12; points in the paint 60–44. Indiana had 29 assists to Washington’s 12."
+  ]
+ ],
+ "battle": [
+  [
+   "Assists",
+   29,
+   12
+  ],
+  [
+   "Points in the paint",
+   60,
+   44
+  ],
+  [
+   "Bench points",
+   33,
+   22
+  ],
+  [
+   "Free throws made",
+   21,
+   16
+  ]
+ ],
+ "battle_labels": [
+  "IND",
+  "WAS"
+ ],
+ "top": [
+  [
+   "Pascal Siakam",
+   "IND",
+   "8 reb, 5 ast, 12 of 12 FT",
+   28
+  ],
+  [
+   "Ivica Zubac",
+   "IND",
+   "12 rebounds, 9 of 15",
+   20
+  ],
+  [
+   "Andrew Nembhard",
+   "IND",
+   "10 assists, 3 of 5 from three",
+   17
+  ],
+  [
+   "Kelly Oubre Jr.",
+   "IND",
+   "6 rebounds, 4 steals",
+   14
+  ]
+ ],
+ "linescore": {
+  "away": [
+   25,
+   25,
+   27,
+   24
+  ],
+  "home": [
+   26,
+   29,
+   22,
+   37
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-11-WAS-at-IND.json",
+ "loser": {
+  "top": [
+   [
+    "Kyshawn George",
+    "WAS",
+    "9 rebounds · 5 of 8 from three",
+    25
+   ],
+   [
+    "Anthony Davis",
+    "WAS",
+    "13 rebounds · 7 of 9 FT",
+    21
+   ]
+  ],
+  "source": "box score"
+ }
+}
