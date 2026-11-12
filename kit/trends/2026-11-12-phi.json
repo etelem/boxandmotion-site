@@ -1,0 +1,96 @@
+{
+ "team": "PHI",
+ "compare": [
+  "HOU"
+ ],
+ "kicker": "GOOD OR LUCKY? \u00b7 THROUGH NOV 11",
+ "hook": [
+  "76ers are 9-3.",
+  "Are they for real?"
+ ],
+ "line_in": 5.9,
+ "loop_start": 0.45,
+ "total": 22.0,
+ "beats": [
+  {
+   "t": [
+    0.9,
+    5.6
+   ],
+   "zoom": true,
+   "teams": [
+    "PHI"
+   ],
+   "kicker": "THE RECORD",
+   "title": "Second-best in the East",
+   "text": "Only Boston (10-2) has a better record."
+  },
+  {
+   "t": [
+    5.8,
+    11.0
+   ],
+   "zoom": true,
+   "gap": true,
+   "teams": [
+    "PHI",
+    "HOU"
+   ],
+   "kicker": "THE MARGIN",
+   "title": "Winning by just 1.0 a game",
+   "text": "110.2 scored, 109.2 allowed. Houston, also 9-3, is +8.9."
+  },
+  {
+   "t": [
+    11.2,
+    16.6
+   ],
+   "panel": true,
+   "kicker": "THE REASON",
+   "title": "They win the close ones",
+   "text": ""
+  },
+  {
+   "t": [
+    16.8,
+    21.6
+   ],
+   "teams": [
+    "PHI"
+   ],
+   "gap": true,
+   "kicker": "THE VERDICT",
+   "title": "Good, with some luck",
+   "text": "Nobody stays perfect in close games forever. Real or lucky?"
+  }
+ ],
+ "panel": {
+  "kicker": "ALL 12 GAMES, GROUPED",
+  "groups": [
+   {
+    "n": 8,
+    "fill": "#FF5A1F",
+    "ink": "#ffffff",
+    "mark": "W",
+    "label": "Close late (within 5, last 5 min): 8-0"
+   },
+   {
+    "n": 1,
+    "fill": "#16181d",
+    "ink": "#ffffff",
+    "mark": "W",
+    "label": "Other win"
+   },
+   {
+    "n": 3,
+    "fill": "#ffffff",
+    "stroke": "#c9ccd2",
+    "ink": "#8a8f99",
+    "mark": "L",
+    "label": "Losses"
+   }
+  ],
+  "note": "Best clutch record in the NBA, and the most clutch games."
+ },
+ "sources": "Records and point differential: Yahoo Sports standings through Nov 11, checked against CBS Sports. Clutch record: CBS Sports and The Sixer Sense (clutch = within 5 points in the last 5 minutes). Line: best fit through all 30 teams."
+}
