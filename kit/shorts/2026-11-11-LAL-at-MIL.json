@@ -1,0 +1,52 @@
+{
+  "out": "short-2026-11-11-LAL-MIL.html",
+  "team": "LAL",
+  "home": false,
+  "number": "77",
+  "player": "Luka Dončić",
+  "build": {
+    "tall": 1.0256,
+    "ape": 1.0375,
+    "mass": 1.0213
+  },
+  "build_note": "Listed 6-8, 230 lb (Basketball-Reference), reported 6-11 wingspan (NBA Draft Room)",
+  "kicker": "LAKERS 123 · BUCKS 112 · NOV 11",
+  "hook": [
+    "Luka's floater",
+    "to close the third"
+  ],
+  "clock": "Q3 · 0:01",
+  "us": "LAL",
+  "them": "MIL",
+  "score_before": [
+    92,
+    73
+  ],
+  "score_make": [
+    94,
+    73
+  ],
+  "stamp": "FLOATER",
+  "beat": [
+    "Lakers by 21 after three.",
+    "Seventh straight win."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Lakers",
+    "them": "Bucks",
+    "us_pts": 123,
+    "them_pts": 112
+  },
+  "star": {
+    "name": "Luka Dončić",
+    "big": 32,
+    "big_label": "points",
+    "lines": [
+      "5 of 12 from three",
+      "16 in the first quarter"
+    ]
+  },
+  "story": "Up 11 at the half, 21 after three. The Lakers' seventh straight win; Milwaukee's eighth straight loss.",
+  "aria": "Original illustration of Luka Dončić's driving floater with one second left in the third quarter that made it 94–73 at Milwaukee. Not traced from footage, not to scale."
+}

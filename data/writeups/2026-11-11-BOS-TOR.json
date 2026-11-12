@@ -1,0 +1,103 @@
+{
+ "headline": "Tatum's free throws finish a 22-point comeback",
+ "dek": "Down 22 in the first half, Boston won it on Tatum’s late free throws.",
+ "three": [
+  [
+   "Tatum: 24 points, 10 of 12 at the line",
+   "Scored the first 10 of a 16–0 run, then the go-ahead free throws."
+  ],
+  [
+   "Down 22 in the second, then won the fourth 23–13",
+   "Tatum and White combined for 43 of 98."
+  ],
+  [
+   "Won it at the line and in the fourth",
+   "Free throws made 24–13; blocks 10–4. Boston held Toronto to 13 in the fourth."
+  ]
+ ],
+ "battle": [
+  [
+   "Free throws made",
+   24,
+   13
+  ],
+  [
+   "Blocks",
+   10,
+   4
+  ],
+  [
+   "Rebounds",
+   45,
+   42
+  ],
+  [
+   "Threes made",
+   14,
+   16
+  ]
+ ],
+ "battle_labels": [
+  "BOS",
+  "TOR"
+ ],
+ "top": [
+  [
+   "Jayson Tatum",
+   "BOS",
+   "10 of 12 FT, 8 assists, 7 rebounds",
+   24
+  ],
+  [
+   "Derrick White",
+   "BOS",
+   "7 of 15, 7 assists, 4 blocks",
+   19
+  ],
+  [
+   "Payton Pritchard",
+   "BOS",
+   "off the bench, 2 threes",
+   14
+  ],
+  [
+   "Neemias Queta",
+   "BOS",
+   "13 rebounds, 3 blocks",
+   11
+  ]
+ ],
+ "linescore": {
+  "away": [
+   29,
+   25,
+   21,
+   23
+  ],
+  "home": [
+   38,
+   23,
+   19,
+   13
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-11-BOS-at-TOR.json",
+ "loser": {
+  "top": [
+   [
+    "Ja'Kobe Walter",
+    "TOR",
+    "5 of 10 from three",
+    17
+   ],
+   [
+    "Allen Graves",
+    "TOR",
+    "off the bench · career high",
+    13
+   ]
+  ],
+  "source": "box score"
+ }
+}

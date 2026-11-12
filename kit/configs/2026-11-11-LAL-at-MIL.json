@@ -1,0 +1,161 @@
+{
+  "D": "  const D = {\n    date: 'Wed, Nov 11, 2026',\n    us: 123, them: 112, record: '11–2', usName: 'Lakers', themName: 'Bucks',\n    quarters: [[30, 28], [31, 22], [33, 23], [29, 39]],\n    leadUs: 24, leadThem: 5,\n    star: {name: 'Luka Dončić', stats: [['Points', 32, 40], ['Threes made of 12', 5, 12], ['Assists', 5, 8]]},\n    scorers: [\n      {name: 'Luka Dončić', pts: 32, note: '10 of 25 · 5 threes · 5 assists'},\n      {name: 'Sandro Mamukelashvili', pts: 23, note: 'off the bench · 5 of 8 from three'},\n      {name: 'Austin Reaves', pts: 18, note: '6 of 10 · 5 of 5 FT · 3 steals'},\n      {name: 'Walker Kessler', pts: 10, note: '11 rebounds · 5 of 10'},\n      {name: 'Collin Sexton', pts: 10, note: 'off the bench · 3 assists'},\n    ],\n    edges: [\n      {label: 'Fast-break points', us: 22, them: 12},\n      {label: 'Points in the paint', us: 48, them: 40},\n      {label: 'Assists', us: 32, them: 25},\n      {label: 'Steals', us: 14, them: 10},\n    ],\n    gaps: [\n      {label: 'Free throws made', us: 20, them: 29},\n    ],\n    next: {opp: 'at Suns', when: 'Sun, Nov 15, 4:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Luka Dončić's driving floater with one second left in the third quarter that made it 94–73. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Luka’s floater",
+    "subP": "Luka on the drive, 0:01 in the 3rd",
+    "subL": "Luka Dončić on the drive, a second left in the 3rd",
+    "m0": "Lakers +19",
+    "m1": "Lakers +21",
+    "num": "77",
+    "cap1": "Luka’s floater. Lakers by 21.",
+    "cap2": "94–73 going into the 4th.",
+    "clock": [
+      8,
+      1
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Lakers at Bucks Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Lakers 123, Bucks 112 · Nov 11, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Lakers at', 'Bucks'] : ['Lakers at Bucks']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Luka scored 32 for a', 'seventh straight win.'] : ['Luka Dončić scored 32 for a seventh straight win.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Lakers improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Seventh straight win'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Up 11 at the half,', 'up 21 after three'] : ['Up 11 at the half, up 21 after three']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Lakers ${D.leadUs}, Bucks ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Lakers’ margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Luka: 32 points,', '5 of 12 from three'] : ['Luka: 32 points, 5 of 12 from three']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['16 in the 1st quarter.', 'Out at 4:25, ankle tweak.'] : ['16 in the first quarter. Out with 4:25 left after an ankle tweak.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Luka and Sandro:', '55 of the 123'] : ['Luka and Mamukelashvili combined for 55 of the 123']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 40;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it on the break', 'and in the 3rd'] : ['Won it on the break and in the third']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Lakers in gold, Bucks in gray. L.A.', 'made 7 of 11 threes in the 3rd.'] : ['Lakers in gold, Bucks in gray. L.A. made 7 of 11 threes in the third.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'First in the West'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Suns’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '4–6';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Milwaukee has lost 8 straight.', 'L.A.: 4 wins in its last 5 there.'] : ['Milwaukee has lost 8 straight. L.A. has won 4 of its last 5 there.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Lakers 123 · Bucks 112 · Nov 11'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Luka’s floater'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Luka'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 60;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 170 : 200) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+2', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 120 * k, shotX + 80 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "T(board, bx + 24, by + 38, 'Q3', 'b m', 24);"
+    ]
+  ],
+  "team": "LAL",
+  "loser_top": [
+    [
+      "Tyler Herro",
+      27,
+      "8 of 16 · 7 assists"
+    ],
+    [
+      "Jaime Jaquez Jr.",
+      25,
+      "9 of 9 at the line"
+    ]
+  ],
+  "aria": "Animated recap of the Lakers' 123 to 112 road win at Milwaukee: Luka Dončić's driving floater with a second left in the third quarter that made it 94 to 73, quarter-by-quarter scoring, his 32 points, the top scorers, how the Lakers won, and the next game at Phoenix.",
+  "notes": [
+    "Box score from the Lakers' 123–112 road win over the Milwaukee Bucks on Nov 11, 2026, from the Covers.com box score, with game details from the AP (via WMTV), Field Level Media, Fadeaway World (via Yahoo Sports), Basketnews and the CBS Sports play-by-play. All 123 Lakers points and all 112 Bucks points are accounted for in the box score, and the quarter scores add up to both totals (61–50 at the half, 94–73 after three; AP, Field Level Media). Biggest leads: the Lakers' 24 and Milwaukee's 5 (Covers.com); the Lakers led by 24 with 4:25 left (Field Level Media). Team stats (fast-break points, points in the paint, steals) are from Covers.com. Records and conference ranks are from the site's standings (data/season.json) after Wednesday's games: the Lakers 11–2 (first in the west), Phoenix 4–6.",
+    "It was the Lakers' seventh straight win and Milwaukee's eighth straight loss; the Lakers have won four of their last five visits to Milwaukee and made 7 of 11 threes in the third quarter (Field Level Media). Dončić scored 16 in the first quarter on 5-of-9 shooting (Field Level Media). He was holding his right ankle after a shot while fouled by Kyle Kuzma late in the fourth, made the free throw and came out with 4:25 left; JJ Redick called it a light tweak (Field Level Media; Basketnews). Austin Reaves left in the third with a left heel injury (Field Level Media). The Lakers play at Phoenix on Sunday at 4:00 PM ET (AP; Sportbusy schedule).",
+    "The play of the game is an original illustration of Luka Dončić's driving floating bank shot, assisted by Jarred Vanderbilt, with one second left in the third quarter, which made it 94–73 (CBS Sports play-by-play; the AP and Field Level Media have the 94–73 score after three). It is drawn as a basket on a drive from 92–73; the bank finish itself isn't animated. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Los Angeles Lakers or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The player in the play of the game is drawn to Dončić’s listed 6-foot-8 and 230 pounds (Basketball-Reference), with arms scaled to his reported 6-foot-11 wingspan (NBA Draft Room), in the Lakers' road kit with his look from the site's looks file. His No. 77 is from Basketball-Reference. It is an original figure with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "player": "Luka Dončić",
+    "home": false,
+    "tall": 1.0256,
+    "ape": 1.0375,
+    "mass": 1.0213,
+    "label": "Luka Dončić, listed 6-8, 230 lb, reported 6-11 wingspan"
+  }
+}

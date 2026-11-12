@@ -1,0 +1,103 @@
+{
+ "headline": "Rockets end Golden State's eight-game streak",
+ "dek": "Şengün had 19, 13 rebounds and 9 assists. Golden State’s streak ends at 8.",
+ "three": [
+  [
+   "Şengün: 19 points, 13 rebounds, 9 assists",
+   "8 of 14 from the floor, one assist shy of a triple-double."
+  ],
+  [
+   "Up 15 after one, then pulled away in the fourth",
+   "Durant and Şengün combined for 39 of 115."
+  ],
+  [
+   "Won it in the paint and on the break",
+   "Points in the paint 50–34; fast-break points 19–7. Houston made 6 of 10 threes in the fourth."
+  ]
+ ],
+ "battle": [
+  [
+   "Points in the paint",
+   50,
+   34
+  ],
+  [
+   "Fast-break points",
+   19,
+   7
+  ],
+  [
+   "Field goals made",
+   44,
+   36
+  ],
+  [
+   "Assists",
+   26,
+   22
+  ]
+ ],
+ "battle_labels": [
+  "HOU",
+  "GSW"
+ ],
+ "top": [
+  [
+   "Kevin Durant",
+   "HOU",
+   "8 of 17, 5 assists",
+   20
+  ],
+  [
+   "Alperen Şengün",
+   "HOU",
+   "13 rebounds, 9 assists",
+   19
+  ],
+  [
+   "Amen Thompson",
+   "HOU",
+   "8 of 11, 7 rebounds",
+   19
+  ],
+  [
+   "Fred VanVleet",
+   "HOU",
+   "4 of 7 from three, 6 assists",
+   18
+  ]
+ ],
+ "linescore": {
+  "away": [
+   20,
+   31,
+   28,
+   29
+  ],
+  "home": [
+   35,
+   21,
+   29,
+   30
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-11-GSW-at-HOU.json",
+ "loser": {
+  "top": [
+   [
+    "Yaxel Lendeborg",
+    "GSW",
+    "10 rebounds · 9 of 19",
+    25
+   ],
+   [
+    "Brandin Podziemski",
+    "GSW",
+    "4 threes · 7 of 15",
+    22
+   ]
+  ],
+  "source": "box score"
+ }
+}
