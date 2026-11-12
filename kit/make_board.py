@@ -17,6 +17,26 @@ cfg = json.load(open(sys.argv[1])); out = sys.argv[2]
 team = (json.load(open(os.path.join(ROOT, 'data', 'teams.json')))[cfg['team']] if cfg.get('team')
         else cfg.get('colors', {'c1': '#FF5A1F', 'c2': '#16181d'}))   # explainers (no team) use the brand colors
 
+# optional drawn star (CFG.star = {id, name, num, home}): his approved look from kit/looks.json, drawn as a small standing
+# figure on his spot instead of a numbered circle (dribbles, runs on his drive, turns and passes)
+STAR_JS, STAR_CSS = '', ''
+if cfg.get('star'):
+    sys.path.insert(0, HERE)
+    from looks import look_for, kit_for
+    _st = cfg['star']; _look, _status, _sig = look_for(_st['name'])
+    _st['build'] = {**_look, **_st.get('build', {})}
+    _kit = kit_for(cfg['team'], _st.get('home', True))
+    _base = open(os.path.join(HERE, 'base-reel.html')).read().split('\n')
+    _a = next(i for i, l in enumerate(_base) if l.startswith('  const POSES = {'))
+    _b = next(i for i in range(_a, len(_base)) if _base[i] == '  }' and i > _a + 12)
+    STAR_JS = ('\n'.join(_base[_a:_b + 1]) + '\n' + open(os.path.join(HERE, 'figure-real.js')).read() + '''
+  POSES.run1 = {head: [26, -222], neck: [20, -198], hip: [0, -122], lk: [30, -70], lf: [22, 0], rk: [-20, -62], rf: [-46, -12], le: [-4, -162], lh: [6, -130], re: [36, -160], rh: [54, -110]};
+  POSES.run2 = {head: [26, -222], neck: [20, -198], hip: [0, -122], lk: [-20, -62], lf: [-46, -12], rk: [30, -70], rf: [22, 0], le: [-4, -162], lh: [6, -130], re: [36, -160], rh: [54, -110]};
+  POSES.pass = {head: [10, -232], neck: [6, -208], hip: [0, -128], lk: [-14, -68], lf: [-24, 0], rk: [16, -70], rf: [26, 0], le: [34, -178], lh: [64, -182], re: [30, -170], rh: [62, -174]};''')
+    STAR_CSS = (f".fig-o-star{{stroke:#16181d;fill:#16181d}}.fig-kit-star{{stroke:{_kit['jersey']};fill:{_kit['jersey']}}}"
+                f".fig-skin{{stroke:#c99d7a;fill:#c99d7a}}.fig-num{{font-family:'Archivo',sans-serif;font-weight:800;fill:{_kit['number']}}}"
+                f".fig-hair{{stroke:#3a2a1c;fill:#3a2a1c}}.fig-shoe{{stroke:#16181d;fill:#16181d}}.fig-band{{stroke:{_kit['number']};fill:none}}")
+
 HTML = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>__TITLE__ · Box &amp; Motion Hoops</title>
@@ -40,6 +60,7 @@ html.short .wrap,html.embed .wrap{border-radius:0;border:0}
 .m{fill:var(--dim)}
 .court{fill:none;stroke:var(--ink);stroke-linecap:round;stroke-linejoin:round}
 .beat{transition:opacity .2s}
+__STARCSS__
 html.short .beat{transition:none}
 </style></head><body>
 <div class="wrap">
@@ -56,7 +77,7 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
   let sndBtn = null, sndTxt = null, sndOn = false, audio = null;
   function sndClock() {
     if (!sndOn || !audio || audio.paused || audio.seeking || audio.readyState < 3) return null;
-    const c = audio.currentTime; audio.volume = Math.max(0, Math.min(1, (CFG.total + 1.5 - c) / 1.5)); return c;
+    const c = audio.currentTime; audio.volume = Math.max(0, Math.min(1, (TOTAL + 1.5 - c) / 1.5)); return c;
   }
   function sndSeek(x) { if (sndOn && audio) { try { audio.currentTime = x; } catch (e) {} } }
   function sndRun(go, x) { if (!sndOn || !audio) return; if (go) { sndSeek(x); audio.play().catch(() => {}); } else audio.pause(); }
@@ -72,11 +93,16 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
   const T = (p, x, y, txt, cls, size, anchor) => { const e = S('text', {x, y, class: cls, 'text-anchor': anchor || 'start'}, p); e.style.fontSize = size + 'px'; e.textContent = txt; return e; };
   const clamp = (v, a = 0, b = 1) => Math.max(a, Math.min(b, v));
   const lerp = (a, b, p) => a + (b - a) * p;
+__STARJS__
   const ease = (p) => p < .5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
   const svg = document.getElementById('sv');
   const short = document.documentElement.classList.contains('short');
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const TOTAL = CFG.total;
+  // "Find the open man" quiz (optional CFG.quiz = {t, hold, prompt, sub, answer, tag}): the board freezes at board time
+  // quiz.t for quiz.hold seconds with a countdown and a "?" over every offensive player, then rings the answer and plays on.
+  const Q = CFG.quiz || null, HOLD = Q ? Q.hold : 0;
+  const TOTAL = CFG.total + HOLD;
+  const BT = (t) => !Q || t < Q.t ? t : t < Q.t + HOLD ? Q.t : t - HOLD;   // play time -> board time
   // polyline helpers: length, point at fraction
   const plen = (pts) => { let L = 0; for (let i = 1; i < pts.length; i++) L += Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]); return L; };
   const pat = (pts, f) => { const L = plen(pts) * clamp(f); let acc = 0; for (let i = 1; i < pts.length; i++) { const d = Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]); if (acc + d >= L) { const q = d ? (L - acc) / d : 0; return [lerp(pts[i - 1][0], pts[i][0], q), lerp(pts[i - 1][1], pts[i][1], q)]; } acc += d; } return pts[pts.length - 1].slice(); };
@@ -188,6 +214,27 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
       }
       peeps[id] = pg;
     });
+    const SP = CFG.star || null; let star = null, starName = null, starHand = null, starHead = null;
+    if (SP) {
+      peeps[SP.id].style.display = 'none';
+      star = figureReal(people, 'star', s * 0.048, SP.num, SP.build || {});
+      starName = T(people, 0, 0, SP.label || '', 'b', short ? 24 : tall ? 16 : 15, 'middle'); starName.style.fontWeight = 600;
+    }
+    // where the ball leaves his hands on a pass (the pass pose's hands, facing the pass)
+    const starRelease = (a) => { const [fx, fy] = P(...posAt(SP.id, a.t[0])), K = s * 0.048 * ((SP.build || {}).tall || 1), d = SP.passDir || -1; return [fx + d * 66 * K, fy - 152 * K]; };
+    const starDraw = (t) => {
+      const [fx, fy] = P(...posAt(SP.id, t)), K = s * 0.048 * ((SP.build || {}).tall || 1);
+      const drive = CFG.actions.find((a) => a.type === 'move' && a.who === SP.id), pass = CFG.actions.find((a) => a.type === 'pass' && a.from === SP.id);
+      let pose = POSES.dribble, dir = 1, hasBall = true;
+      if (drive && t >= drive.t[0] && t < drive.t[1]) { const c = Math.sin((t - drive.t[0]) * 9) * .5 + .5; pose = mixPose(POSES.run1, POSES.run2, c); }
+      if (pass && t >= pass.t[0] - 0.3) { dir = SP.passDir || -1; pose = mixPose(POSES.dribble, POSES.pass, clamp((t - pass.t[0] + 0.3) / 0.3)); hasBall = t < pass.t[0]; }
+      star.draw(pose, fx, fy, 1, dir);
+      starHead = [fx + dir * pose.head[0] * K, fy + pose.head[1] * K];
+      const bob = pose === POSES.dribble ? Math.abs(Math.sin(t * 7)) : 0.5;
+      starHand = [fx + dir * (pose.rh[0] + 4) * K, fy + (pose.rh[1] + 22 + 70 * bob * (pose === POSES.dribble ? 1 : 0)) * K];
+      if (!hasBall) starHand = null;
+      starName.setAttribute('x', F(fx)); starName.setAttribute('y', F(fy + (short ? 30 : 20)));
+    };
     const ball = S('circle', {r: F(0.62 * s), fill: '#FF5A1F', stroke: '#16181d', 'stroke-width': F(s * 0.1)}, top2);
     const plus = T(top2, 0, 0, (CFG.actions.find((a) => a.type === 'shot') || {}).plus || '+3', 'd', short ? 72 : 48, 'middle'); plus.style.fill = '#FF5A1F';
 
@@ -216,12 +263,13 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
           el.setAttribute('d', on ? `M${F(c[0] - n[0] * w)} ${F(c[1] - n[1] * w)}L${F(c[0] + n[0] * w)} ${F(c[1] + n[1] * w)}` : 'M0 0');
         }
       });
+      if (SP) starDraw(t);
       // ball: with the holder, along a pass, or on the shot
       let bp = P(...posAt(CFG.ball, t)), br = 0.62 * s; let holder = CFG.ball;
       plus.style.opacity = 0;
       CFG.actions.forEach((a) => {
         if (a.type === 'pass' && t >= a.t[0]) {
-          if (t < a.t[1]) { const A = P(...posAt(a.from, a.t[0])), B = P(...posAt(a.to, a.t[1])), q = ease((t - a.t[0]) / (a.t[1] - a.t[0])); bp = [lerp(A[0], B[0], q), lerp(A[1], B[1], q)]; holder = null; }
+          if (t < a.t[1]) { const A = SP && a.from === SP.id ? starRelease(a) : P(...posAt(a.from, a.t[0])), B = P(...posAt(a.to, a.t[1])), q = ease((t - a.t[0]) / (a.t[1] - a.t[0])); bp = [lerp(A[0], B[0], q), lerp(A[1], B[1], q)]; holder = null; }
           else { holder = a.to; bp = P(...posAt(a.to, t)); }
         }
         if (a.type === 'shot' && t >= a.t[0]) {
@@ -231,7 +279,8 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
           if (t > a.t[1]) { plus.style.opacity = clamp((t - a.t[1]) / 0.25); plus.setAttribute('x', F(H2[0] + 5 * s)); plus.setAttribute('y', F(H2[1] + 1.5 * s)); }
         }
       });
-      if (holder) { bp = [bp[0] + R * 0.85, bp[1] - R * 0.85]; }
+      if (holder && SP && holder === SP.id && starHand) bp = starHand;
+      else if (holder) { bp = [bp[0] + R * 0.85, bp[1] - R * 0.85]; }
       ball.setAttribute('cx', F(bp[0])); ball.setAttribute('cy', F(bp[1])); ball.setAttribute('r', F(br));
       // clock: frozen until the catch, runs to the release
       if (CFG.clock) { const c = CFG.clock, cq = clamp((t - c.run) / (c.stop - c.run)); clock.textContent = fmtClock(lerp(c.start, c.end, cq)); }
@@ -240,6 +289,43 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
       let k = 0; CFG.beats.forEach((b, i) => { if (t >= b.t) k = i; });
       beats.forEach((b, i) => { b.style.opacity = short ? (i === k ? 1 : 0) : (i === k ? 1 : i < k ? .45 : .22); });
     };
+    if (Q) {
+      let qx, qy, qw;
+      if (short) { qx = M; qy = sbY + 90; qw = W - 2 * M; } else if (tall) { qx = M; qy = sbY + 44; qw = W - 2 * M; } else { qx = x1 + 40; qy = top + 100; qw = W - M - qx; }
+      const qg = S('g', {}, svg); qg.style.opacity = 0;
+      const ps = short ? 76 : tall ? 46 : 36;
+      const qt = T(qg, qx, qy + ps, Q.prompt, 'd', ps); qt.style.fill = '#FF5A1F';
+      if (qt.getComputedTextLength() > qw - ps * 1.9) qt.style.fontSize = (ps * (qw - ps * 1.9) / qt.getComputedTextLength()) + 'px';   // leave room for the countdown
+      const qs = T(qg, qx, qy + ps + (short ? 62 : 38), Q.sub || '', 'b', short ? 36 : tall ? 24 : 18); wrap(qs, qx, qw * 0.7);
+      const qn = T(qg, qx + qw, qy + ps * 2.1, '', 'd', ps * 2.4, 'end');
+      const qm = {};
+      Object.entries(CFG.players).forEach(([id, p]) => { if (p.side === 'o' && id !== Q.eyes) { const m = T(top2, 0, 0, '?', 'd', short ? 56 : 34, 'middle'); m.style.fill = '#FF5A1F'; m.style.opacity = 0; qm[id] = m; } });
+      const ring = S('circle', {cx: 0, cy: 0, r: F(R * 1.9), fill: 'none', stroke: '#FF5A1F', 'stroke-width': F(s * 0.34)}, top2); ring.style.opacity = 0;
+      const tag = T(top2, 0, 0, Q.tag || 'OPEN', 'k', short ? 34 : 20, 'start'); tag.style.opacity = 0;
+      // sightlines (optional quiz.eyes = id of the player whose read it is): faint lines to every teammate during the freeze,
+      // then only the answer's line, bold, until the pass leaves
+      const eyes = Q.eyes ? Object.keys(CFG.players).filter((id) => CFG.players[id].side === 'o' && id !== Q.eyes).map((id) => {
+        const ln = S('path', {fill: 'none', stroke: '#FF5A1F', 'stroke-linecap': 'round'}, trails); ln.style.opacity = 0; return [id, ln]; }) : [];
+      const drawB = draw;
+      draw = (t) => {
+        const b = BT(t); drawB(b);
+        const fz = t >= Q.t && t < Q.t + HOLD, after = t - Q.t - HOLD;
+        qg.style.opacity = fz ? 1 : 0;
+        if (fz) { beats.forEach((x) => { x.style.opacity = 0; }); qn.textContent = String(Math.ceil(Q.t + HOLD - t - 1e-6)); }
+        const pulse = 1 + 0.14 * Math.sin((t - Q.t) * 8);
+        Object.entries(qm).forEach(([id, m]) => { const [x, y] = P(...posAt(id, b)); m.setAttribute('transform', `translate(${F(x + R * 1.35)} ${F(y - R * 0.9)}) scale(${pulse.toFixed(3)})`); m.style.opacity = fz ? 1 : 0; });
+        const show = after >= 0 && after < 2.8 ? (after < 2.2 ? 1 : (2.8 - after) / 0.6) : 0;
+        const [ax, ay] = P(...posAt(Q.answer, b)), grow = after >= 0 ? 1 + 0.5 * Math.max(0, 1 - after / 0.35) : 1;
+        ring.setAttribute('transform', `translate(${F(ax)} ${F(ay)}) scale(${grow.toFixed(3)})`); ring.style.opacity = show;
+        eyes.forEach(([id, ln]) => {
+          const E0 = SP && Q.eyes === SP.id && starHead ? starHead : P(...posAt(Q.eyes, b)), E1 = P(...posAt(id, b)), ans = id === Q.answer;
+          const op = fz ? 0.55 : (ans && after >= 0 && after < (Q.lineHold || 0.6)) ? 1 : 0;
+          ln.setAttribute('d', `M${F(E0[0])} ${F(E0[1])}L${F(E1[0])} ${F(E1[1])}`); ln.style.opacity = op;
+          ln.setAttribute('stroke-width', F(s * (fz ? 0.16 : 0.3))); ln.setAttribute('stroke-dasharray', fz ? `${F(s * 0.6)} ${F(s * 0.6)}` : 'none');
+        });
+        tag.setAttribute('x', F(ax + R * 2.3)); tag.setAttribute('y', F(ay + R * 0.35)); tag.style.opacity = show;
+      };
+    }
     draw(window.__t || 0);
   }
 
@@ -265,7 +351,7 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
   slow.addEventListener('click', () => { speed = speed === 1 ? 0.4 : 1; slow.setAttribute('aria-pressed', String(speed !== 1)); sndRun(playing && speed === 1, t); });
   document.getElementById('again').addEventListener('click', () => { t = 0; playing = true; pp.textContent = 'Pause'; sndRun(speed === 1, 0); });
   const jumps = document.getElementById('jumps');
-  CFG.beats.forEach((b, i) => { const btn = document.createElement('button'); btn.type = 'button'; btn.textContent = (i + 1) + ' · ' + b.title; btn.addEventListener('click', () => { t = b.t + 0.05; draw(t); sndSeek(t); }); jumps.appendChild(btn); jumps.appendChild(document.createTextNode(' ')); });
+  CFG.beats.forEach((b, i) => { const btn = document.createElement('button'); btn.type = 'button'; btn.textContent = (i + 1) + ' · ' + b.title; btn.addEventListener('click', () => { t = (Q && b.t >= Q.t ? b.t + HOLD : b.t) + 0.05; draw(t); sndSeek(t); }); jumps.appendChild(btn); jumps.appendChild(document.createTextNode(' ')); });
   window.__A = {render: (x) => draw(x), build, total: TOTAL, loop: {start: Math.max(0, Math.min(...(CFG.actions || []).map((a) => a.t[0]), TOTAL) - 0.3), cut: TOTAL}}; // Shorts open on the first action and loop
   // tell a parent page how tall we are, so its iframe fits without scrolling
   const postH = () => { if (window.parent !== window) window.parent.postMessage({bmH: Math.ceil(document.querySelector('.wrap').getBoundingClientRect().height)}, '*'); };
@@ -275,7 +361,7 @@ if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add(
 </body></html>
 """
 out_html = (HTML.replace('__TITLE__', cfg['title']).replace('__ARIA__', cfg['aria'].replace('"', '&quot;'))
-            .replace('__C1__', team['c1']).replace('__C2__', team['c2']).replace('__CFG__', json.dumps(cfg)))
+            .replace('__C1__', team['c1']).replace('__C2__', team['c2']).replace('__CFG__', json.dumps(cfg)).replace('__STARJS__', STAR_JS).replace('__STARCSS__', STAR_CSS))
 os.makedirs(os.path.dirname(os.path.abspath(out)), exist_ok=True)
 open(out, 'w').write(out_html)
 print('wrote', out)

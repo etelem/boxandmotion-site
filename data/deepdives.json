@@ -63,6 +63,14 @@
    "published": "2026-11-10T02:30",
    "dek": "A ball screen with a second screen behind it, in four steps.",
    "youtube": "ZhqEgo4iLVY"
+  },
+  {
+   "config": "kit/xo/luka-pick-and-roll-read.json",
+   "anim": "luka-pick-and-roll-read.html",
+   "slug": "what-luka-sees-pick-and-roll",
+   "term": "What Luka sees",
+   "published": "2026-11-12T18:00",
+   "dek": "A pick-and-roll through Luka's eyes. The board stops; make his read."
   }
  ]
 }
