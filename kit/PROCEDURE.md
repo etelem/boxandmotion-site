@@ -84,7 +84,8 @@ Game key = `YYYY-MM-DD-AWAY-HOME`, e.g. `2026-11-06-POR-LAL` (team codes from da
    - Build and check: `python3 kit/make_playshort.py kit/shorts/<key>.json`, then look at frames (`?short=1`, `window.__A.render(t)`)
      around the release, the make, the beat, the final card and the end card: nothing clipped or overlapping. The end card
      (from `make_playshort.py`, don't edit it per game) shows boxandmotion.com large and points to the newsletter link on the channel.
-   - MP4: `bash kit/short_mp4.sh $PWD/src/anim/<out> kit/out/<key>-short.mp4 1`, copy it to `reels/<key>/short.mp4`,
+   - MP4: `MUSIC=kit/music/courtside-breakbeat.mp3 bash kit/short_mp4.sh $PWD/src/anim/<out> kit/out/<key>-short.mp4 1`
+     (music trial from Nov 13: Elan's "Courtside Breakbeat", from the start of the song; game Shorts only), copy it to `reels/<key>/short.mp4`,
      and SendUserFile it.
 
 ## Waiting for the site data (before publishing anything)
