@@ -128,13 +128,16 @@ footer a{color:var(--dim)}
 
 /* calm game cards (Nov 12): white card, play-of-the-game image, team color as a thin edge + dots */
 .gcard.calm .gimg{border-bottom:4px solid var(--team)}
-.gimg{display:block;position:relative;aspect-ratio:2/1;overflow:hidden;background:#111214}
+.gimg{display:block;position:relative;aspect-ratio:2/1;overflow:hidden;background:#f3f3f1}
 .gimg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
 .gcard.calm:hover .gimg img{transform:scale(1.03)}
-.gplay{position:absolute;left:12px;bottom:12px;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.92);color:#111214;display:grid;place-items:center;font-size:15px;padding-left:3px;box-sizing:border-box}
+.gplay{position:absolute;left:12px;top:12px;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.92);color:#111214;display:grid;place-items:center;font-size:15px;padding-left:3px;box-sizing:border-box}
 .gcard.calm .gk{color:var(--dim)}
 .ghead{font:700 20px/1.25 'IBM Plex Sans',system-ui,sans-serif;color:var(--ink);text-decoration:none;margin:2px 0 6px}
 .ghead:hover{text-decoration:underline}
 .tdot{width:10px;height:10px;border-radius:50%;display:inline-block;flex:none}
 .gcard.calm .sline{font-size:17px}.gcard.calm .rec{font-size:13px;font-weight:500}
 .glink{font-weight:600;font-size:15px;color:var(--ink);text-decoration:none}.glink:hover{text-decoration:underline}
+
+.gcard.calm .gplay{background:#111214;color:#fff}
+@media (min-width:900px){.gcard.calm.hero{flex-direction:row}.gcard.calm.hero .gimg{flex:0 0 58%;aspect-ratio:auto;min-height:300px;border-bottom:0;border-right:4px solid var(--team)}.gcard.calm.hero .gbody{justify-content:center;padding:28px}.gcard.calm.hero .ghead{font-size:28px}}

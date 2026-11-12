@@ -137,7 +137,9 @@ def page(path, title, body, active=None, desc="Every NBA game, explained in moti
 def rel(depth): return "../" * depth
 
 # ---- reusable bits ----
-def game_card(g, R, show_mine=True):
+CARDS = os.environ.get("BM_CARDS", "all")   # preview switch: "all" = image on every card, "top" = image only on the night's top game
+
+def game_card(g, R, show_mine=True, img_on=True, hero=False):
     """Calm game card (Nov 12): white card; the recap's play-of-the-game frame as the image (src/posters/<key>.jpg, like a
     YouTube thumbnail); the story headline; team colors only as a thin edge and small dots; one action (tap the card)."""
     w = g["win"]; wt = T[w]
@@ -148,10 +150,10 @@ def game_card(g, R, show_mine=True):
         lines += (f'<div class="sline {"win" if c==w else "lose"}"><span style="display:flex;align-items:center;gap:8px">'
                   f'<i class="tdot" style="background:{T[c]["c1"]}"></i>{E(T[c]["name"])} <span class="dim rec">{g["rec"][c]}</span></span><span>{sc}</span></div>')
     has_vid = g["video"] or g["reel"]
-    poster = os.path.isfile(f"src/posters/{g['key']}.jpg")
-    img = (f'<a class="gimg" href="{href}" aria-label="Watch the recap: {E(head)}"><img src="{R}posters/{g["key"]}.jpg" alt="" loading="lazy">'
+    poster = img_on and os.path.isfile(f"src/posters/{g['key']}-light.jpg")
+    img = (f'<a class="gimg" href="{href}" aria-label="Watch the recap: {E(head)}"><img src="{R}posters/{g["key"]}-light.jpg" alt="" loading="lazy">'
            f'<span class="gplay">▶</span></a>' if poster else '')
-    return f'''<div class="card gcard calm" data-teams="{g['away']} {g['home']}" style="--team:{wt['c1']}">
+    return f'''<div class="card gcard calm{' hero' if hero else ''}" data-teams="{g['away']} {g['home']}" style="--team:{wt['c1']}">
 {img}<div class="gbody"><div class="row" style="gap:8px;justify-content:space-between"><span class="k gk">Final{' · OT' if g['ot'] else ''} · {WEEKDAY(g['date'])}</span>{'<span class="tag hot mine-tag hidden">Your team</span>' if show_mine else ''}</div>
 <a class="ghead" href="{href}">{E(head)}</a>{lines}
 <div class="row" style="gap:14px;margin-top:4px"><a class="glink" href="{href}">{'▶ Watch the recap' if has_vid else 'Read the recap'}</a><a class="glink dim" href="{yt(g)}" target="_blank" rel="noopener">Highlights ↗</a></div></div></div>'''
@@ -494,11 +496,18 @@ def calendar(R, sel=None):
 
 # ---- last night ----
 R = "../"
+# top game of the night: the one that got the YouTube Short (if several, the biggest comeback/closest finish wins: smallest margin)
+_top = sorted([g for g in LAST if g["video"]] or LAST, key=lambda g: abs(g["as_"] - g["hs"]))[0]
+if CARDS == "top":
+    LN_CARDS = (f'<div class="grid" data-games>{game_card(_top, R, hero=True)}</div>'
+                f'<div class="grid g3" data-games>{"".join(game_card(g, R, img_on=False) for g in LAST if g is not _top)}</div>')
+else:
+    LN_CARDS = f'<div class="grid g3" data-games>{"".join(game_card(g, R) for g in LAST)}</div>'
 earlier = sorted({g["date"] for g in GAMES if g["date"] != LAST_DATE and g["date"] >= WEEK_START}, reverse=True)
 ear = "".join(f'<section class="sec"><p class="k">{WEEKDAY(d)}</p><div class="grid g3" data-games>{"".join(game_card(g, R) for g in GAMES if g["date"]==d)}</div></section>' for d in earlier)
 body = f'''<div class="between"><div class="sec" style="gap:8px"><p class="k">{WEEKDAY(LAST_DATE)} · {len(LAST)} games</p><h1 class="h1">Last night</h1></div>
 <div class="tabs"><button class="pill" data-mode="mine">Your teams</button><button class="pill" data-mode="all">All games</button><a class="pill" href="#archive">📅 Archive</a></div></div>
-<section class="sec"><div class="grid g3" data-games>{"".join(game_card(g, R) for g in LAST)}</div><p class="dim none-note hidden" style="margin:0">None of your teams played last night. <button class="pill sm" data-mode="all">Show all games</button></p></section>
+<section class="sec">{LN_CARDS}<p class="dim none-note hidden" style="margin:0">None of your teams played last night. <button class="pill sm" data-mode="all">Show all games</button></p></section>
 {'<h2 class="h2">Earlier this week</h2>' + ear if ear else ''}
 {calendar(R)}'''
 page("last-night/index.html", "Last night · Box & Motion Hoops", body, active="Last Night")
