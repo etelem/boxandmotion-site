@@ -88,7 +88,7 @@ Game key = `YYYY-MM-DD-AWAY-HOME`, e.g. `2026-11-06-POR-LAL` (team codes from da
 
 ## Waiting for the site data (before publishing anything)
 Build everything first (research, configs, reels, frame checks, the Short config). Publishing needs last night's games in
-`data/season.json`, which the site update adds at one of its checks (6:00, 6:30, 6:45, 7:00 or 7:30 AM ET).
+`data/season.json`, which the site update adds at one of its two checks (about 6:40 or 7:15 AM ET).
 - `git pull --rebase`. If the games aren't there, wait 10 minutes and pull again, until 8:00 AM ET.
 - **Once they're there, correct every record and rank in your configs from `data/season.json`** before the final build:
   the winner's record and conference rank on the record card (`standings` and `seeds`), the next opponent's record

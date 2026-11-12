@@ -3,9 +3,10 @@
 Refreshes scores, standings, "last night", upcoming games and playoff odds on boxandmotion.com.
 Cloudflare redeploys the site automatically whenever `main` changes on GitHub.
 
-## Five checks a morning (6:00, 6:30, 6:45, 7:00, 7:30 AM ET)
-The same procedure runs five times. Standings pages refresh at different times each morning (FOX: by ~6:10 on Nov 9,
-~6:47 on Nov 10), so the scores are verified once and the later checks only wait for current standings.
+## Two checks a morning (about 6:40 and 7:15 AM ET)
+The same procedure runs twice (cut from five on Nov 12, 2026 to save usage). Standings pages refresh at different times each
+morning (FOX or CBS current by 6:12-6:49 on Nov 8-11), so the scores are verified once and the second check only waits for
+current standings if the first found them stale. The first check also handles quiet nights.
 
 0. **Already done?** If `data/season.json` already has last night's games (its `updated_short` is last night's date, e.g.
    "Mon, Nov 9"), or there were no games and nothing changed, stop: one line in the report, no commit, no alert.
@@ -14,7 +15,7 @@ The same procedure runs five times. Standings pages refresh at different times e
    (step 1 below, standings part). Otherwise do the full steps.
 2. **Standings not current yet** (update.py says the records don't match, and the differences are exactly last night's
    results): save the verified `games` and `upcoming` to `data/pending/<date>.json`, add a line to the standings log,
-   commit `Standings check <time> ET: waiting for standings (<date>)` and push. No alert unless this is the 7:30 check.
+   commit `Standings check <time> ET: waiting for standings (<date>)` and push. No alert unless this is the 7:15 check (the last one).
 3. **Standings log:** every check that fetches standings appends one line to `data/standings-log.csv`:
    `<games date>,<check time ET>,<source>,<current|stale>` (e.g. `2026-11-09,06:30,FOX,stale`). It shows when standings
    usually appear, so checks that never matter can be dropped later.
@@ -52,7 +53,7 @@ The same procedure runs five times. Standings pages refresh at different times e
    ```
    If `update.py` reports records that don't match and the differences are exactly last night's results, the standings
    source hasn't refreshed yet: try the backup standings source (see Fallback sources), and if that is stale too, save the
-   scores as in "Five checks a morning" step 2 and leave it to the next check. If the differences are anything else (a game
+   scores as in "Two checks a morning" step 2 and leave it to the next check. If the differences are anything else (a game
    missing or not final), re-check the games once. Never edit standings by hand, and never push season.json changes that
    update.py refused.
 
@@ -87,19 +88,19 @@ Same `data/incoming.json`, same checks; only the sources change. Never ESPN.com 
   Plain Text Sports pages can come back as an old snapshot (check the "loaded at" time on the page); if one is from before the
   game, use the AP / Field Level Media story or the CBS Sports scoreboard as the second source instead.
   Add `"OT"` only if a source says overtime. Check the Covers line score adds up to the final. If a game isn't final yet
-  or two sources don't agree, don't save that night's scores: the next check verifies them again (the 7:30 check reports
+  or two sources don't agree, don't save that night's scores: the next check verifies them again (the 7:15 check reports
   what's still unconfirmed and alerts).
 - **Standings:** FOX Sports conference standings (`https://www.foxsports.com/nba/standings`): rank, wins and losses for
   all 30 teams. If FOX can't be opened or update.py shows FOX is stale (differences are exactly last night's results), use
   CBS Sports (`https://www.cbssports.com/nba/standings/`) the same way. If both are stale, the next check tries again
-  (see "Five checks a morning"); don't wait inside the run. ESPN.com and NBA.com stay off-limits (ESPN's standings also came
+  (see "Two checks a morning"); don't wait inside the run. ESPN.com and NBA.com stay off-limits (ESPN's standings also came
   back stale through WebFetch hours after the games when tested on Nov 10).
 - **Upcoming:** the next two days from the Plain Text Sports schedule (times are ET).
 - Commit message: `Nightly update: games through <date> (fallback sources)`, and say in the report that the fallback was used.
 - update.py's record check is the safety net: if it still refuses after the retry, change nothing and do not push.
 
 ## If the update fails, alert Elan
-Only the **7:30 check** (the last one) alerts for missing data: if it ends without last night's games in season.json
+Only the **7:15 check** (the last one) alerts for missing data: if it ends without last night's games in season.json
 (standings still stale on FOX and CBS, scores still unconfirmed, or update.py refused), send a **PushNotification** right
 away, not just a SendUserMessage, with the summary in `<routine_summary>` tags: first sentence "Site update failed: <reason
 in a few words>.", then what didn't match and that the recap runs will hold their reels until it's fixed. Earlier checks
