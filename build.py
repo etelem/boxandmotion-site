@@ -138,17 +138,23 @@ def rel(depth): return "../" * depth
 
 # ---- reusable bits ----
 def game_card(g, R, show_mine=True):
-    w, l = g["win"], g["lose"]
-    wt = T[w]
+    """Calm game card (Nov 12): white card; the recap's play-of-the-game frame as the image (src/posters/<key>.jpg, like a
+    YouTube thumbnail); the story headline; team colors only as a thin edge and small dots; one action (tap the card)."""
+    w = g["win"]; wt = T[w]
+    href = f"{R}games/{g['slug']}/index.html"
+    head = (S["featured"].get(g["key"]) or {}).get("headline") or f"{wt['name']} beat the {T[g['lose']]['name']}"
     lines = ""
     for c, sc in ((g["away"], g["as_"]), (g["home"], g["hs"])):
-        lines += f'<div class="sline {"win" if c==w else "lose"}"><span>{E(T[c]["name"])} <span class="dim" style="font-size:13px;font-weight:500">{g["rec"][c]}</span></span><span>{sc}</span></div>'
-    tag = '<span class="tag gold">▶ Recap video</span>' if (g["video"] or g["reel"]) else ('<span class="tag gold">Featured recap</span>' if g["featured"] else "")
-    return f'''<div class="card gcard" data-teams="{g['away']} {g['home']}">
-<a class="gtop" href="{R}games/{g['slug']}/index.html" style="background:radial-gradient(120% 140% at 100% 0%,{wt['c1']} 0%,{wt['dark']} 75%)">
-<span class="k">Final{' · OT' if g['ot'] else ''} · {WEEKDAY(g['date'])}</span><span class="d" style="font-size:30px">{E(wt['name'])} {max(g['as_'],g['hs'])}–{min(g['as_'],g['hs'])}</span></a>
-<div class="gbody"><div class="row" style="gap:6px">{'<span class="tag hot mine-tag hidden">Your team</span>' if show_mine else ''}{tag}</div>{lines}
-<div class="row" style="gap:8px;margin-top:6px"><a class="pill on sm" href="{R}games/{g['slug']}/index.html">{'▶ Watch recap' if (g['video'] or g['reel']) else 'Recap'}</a><a class="pill sm" href="{yt(g)}" target="_blank" rel="noopener">▶ Highlights</a></div></div></div>'''
+        lines += (f'<div class="sline {"win" if c==w else "lose"}"><span style="display:flex;align-items:center;gap:8px">'
+                  f'<i class="tdot" style="background:{T[c]["c1"]}"></i>{E(T[c]["name"])} <span class="dim rec">{g["rec"][c]}</span></span><span>{sc}</span></div>')
+    has_vid = g["video"] or g["reel"]
+    poster = os.path.isfile(f"src/posters/{g['key']}.jpg")
+    img = (f'<a class="gimg" href="{href}" aria-label="Watch the recap: {E(head)}"><img src="{R}posters/{g["key"]}.jpg" alt="" loading="lazy">'
+           f'<span class="gplay">▶</span></a>' if poster else '')
+    return f'''<div class="card gcard calm" data-teams="{g['away']} {g['home']}" style="--team:{wt['c1']}">
+{img}<div class="gbody"><div class="row" style="gap:8px;justify-content:space-between"><span class="k gk">Final{' · OT' if g['ot'] else ''} · {WEEKDAY(g['date'])}</span>{'<span class="tag hot mine-tag hidden">Your team</span>' if show_mine else ''}</div>
+<a class="ghead" href="{href}">{E(head)}</a>{lines}
+<div class="row" style="gap:14px;margin-top:4px"><a class="glink" href="{href}">{'▶ Watch the recap' if has_vid else 'Read the recap'}</a><a class="glink dim" href="{yt(g)}" target="_blank" rel="noopener">Highlights ↗</a></div></div></div>'''
 
 def star_btn(c, big=False, light=False):
     style = f"border-color:{T[c]['c2']};color:#fff" if light else ""
@@ -244,6 +250,7 @@ def player_card(R, P, big=False):
 shutil.rmtree(OUT, ignore_errors=True)  # start clean so removed pages disappear
 if os.path.isdir("reels"): shutil.copytree("reels", f"{OUT}/reels")
 if os.path.isdir("src/anim"): shutil.copytree("src/anim", f"{OUT}/anim")
+if os.path.isdir("src/posters"): shutil.copytree("src/posters", f"{OUT}/posters")
 if os.path.isdir("src/audio"): shutil.copytree("src/audio", f"{OUT}/audio")
 os.makedirs(f"{OUT}/assets", exist_ok=True)
 client = {"teams": {c: {"name": T[c]["name"], "slug": T[c]["slug"], "c1": T[c]["c1"], "c2": T[c]["c2"], "dark": T[c]["dark"],
