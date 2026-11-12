@@ -1,0 +1,83 @@
+{
+ "title": "Good, lucky or in trouble?",
+ "kicker": "THE TREND BOARD \u00b7 NOV 12",
+ "dek": "All 30 teams: record vs. how much they win by.",
+ "line_in": 6.5,
+ "loop_start": 0.3,
+ "total": 24.2,
+ "beats": [
+  {
+   "t": [
+    2.2,
+    6.3
+   ],
+   "teams": [
+    "SAS",
+    "BOS",
+    "MIN"
+   ],
+   "gap": false,
+   "kicker": "FOR REAL",
+   "title": "Winning big, every night",
+   "text": "Spurs and Celtics are 10-2 at +11.2 a game. The Wolves are +11.1."
+  },
+  {
+   "t": [
+    6.5,
+    10.6
+   ],
+   "teams": [
+    "LAL"
+   ],
+   "gap": true,
+   "kicker": "BEST RECORD",
+   "title": "Lakers: 11-2, +8.0",
+   "text": "A bit above the line. Turnovers fuel it: 24.5 points off them a game, most in the NBA."
+  },
+  {
+   "t": [
+    10.8,
+    14.9
+   ],
+   "teams": [
+    "PHI"
+   ],
+   "gap": true,
+   "kicker": "WINNING CLOSE ONES",
+   "title": "76ers: 9-3, only +1.0",
+   "text": "A league-best 8-0 in clutch games. Records like that usually cool off."
+  },
+  {
+   "t": [
+    15.1,
+    19.2
+   ],
+   "teams": [
+    "NYK",
+    "TOR"
+   ],
+   "gap": true,
+   "kicker": "BETTER THAN THE RECORD",
+   "title": "Knicks: 6-5, but +6.8",
+   "text": "Margins that big usually come with more wins. The Raptors (5-6, +2.6) are below the line too."
+  },
+  {
+   "t": [
+    19.4,
+    23.6
+   ],
+   "teams": [
+    "MIL",
+    "CHI",
+    "SAC",
+    "UTA"
+   ],
+   "gap": false,
+   "kicker": "IN TROUBLE",
+   "title": "Four teams with one win",
+   "text": "Bucks, Bulls, Kings and Jazz are losing by 11.5 to 15.5 points a game.",
+   "tags": false
+  }
+ ],
+ "sources": "Records and point differential: Yahoo Sports standings through Nov 11, checked against CBS Sports. 76ers clutch record: CBS Sports. Lakers points off turnovers: team stats via Heavy. The line is the best fit through all 30 teams."
+}
