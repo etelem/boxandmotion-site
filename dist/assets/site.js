@@ -34,12 +34,14 @@
     favs.forEach(function(c){
       var t=BM.teams[c]; if(!t) return;
       var a=document.createElement('a');
-      a.className='card tcard'; a.href=root+'teams/'+t.slug+'/index.html';
-      a.style.background='radial-gradient(120% 120% at 100% 0%,'+t.c1+' 0%,'+t.dark+' 70%)';
-      a.innerHTML='<span class="d" style="color:'+t.c2+'">★ '+t.name+'</span>'+
-        '<span>'+t.rec+' · '+t.seed+'</span>'+
-        '<span class="sub">Last: '+t.last+'</span>'+
-        '<span class="sub">Top-6 odds: <b>'+t.top6+'%</b> ('+t.chg+' this week)</span>';
+      // calm card like the game cards (Nov 13): white, team color only as a thin top line and a dot
+      a.className='card tcard calm'; a.href=root+'teams/'+t.slug+'/index.html';
+      a.style.setProperty('--team',t.c1);
+      var up=/^\+/.test(t.chg), down=/^[−-]\d/.test(t.chg);
+      a.innerHTML='<span class="trow1"><i class="tdot" style="background:'+t.c1+'"></i><span class="tname">'+t.name+'</span><span class="tstar" aria-label="Your team">★</span></span>'+
+        '<span class="trec">'+t.rec+' · '+t.seed+'</span>'+
+        '<span class="tline"><span class="dim">Last</span>'+t.last+'</span>'+
+        '<span class="tline"><span class="dim">Top-6 odds</span><b>'+t.top6+'%</b><span class="tchg'+(up?' up':down?' down':'')+'">'+t.chg+' this week</span></span>';
       box.appendChild(a);
     });
   }

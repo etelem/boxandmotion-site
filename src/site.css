@@ -155,3 +155,15 @@ footer a{color:var(--dim)}
 .wfine{margin:8px 0 0;font-size:14px;color:var(--dim);display:flex;gap:8px;flex-wrap:wrap}
 .wfine a{color:var(--dim);text-decoration:underline;text-underline-offset:3px}.wfine a:hover{color:var(--ink)}
 .wplay.ours{background:#fff;border:1px solid var(--line);padding:0}.wfine{align-items:center;flex-wrap:nowrap}.wfine+.wfine{margin-top:6px}.wmark{display:inline-flex}
+
+/* followed-team cards on the home page, calm like the game cards (Nov 13) */
+.tcard.calm{color:var(--ink);background:#fff;border:1px solid var(--line);min-height:0;gap:6px;text-decoration:none;position:relative;overflow:hidden;padding-top:24px}
+.tcard.calm::before{content:'';position:absolute;left:0;right:0;top:0;height:4px;background:var(--team)}
+.tcard.calm .trow1{display:flex;align-items:center;gap:10px}
+.tcard.calm .tname{font:800 24px/1.1 Archivo,system-ui,sans-serif;text-transform:uppercase;letter-spacing:-.01em}
+.tcard.calm .tstar{margin-left:auto;color:#FF5A1F;font-size:18px}
+.tcard.calm .trec{font-weight:600;font-size:17px}
+.tcard.calm .tline{display:flex;gap:8px;align-items:baseline;font-size:15px;flex-wrap:wrap}
+.tcard.calm .tline .dim{min-width:80px;font-size:13px}
+.tcard.calm .tchg{color:var(--dim);font-size:13px}.tcard.calm .tchg.up{color:#1f8a4c}.tcard.calm .tchg.down{color:#c2321f}
+.tcard.calm:hover{border-color:#cfd1d6}
