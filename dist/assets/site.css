@@ -330,3 +330,5 @@ footer.foot{padding-top:48px;padding-bottom:36px;margin-top:56px;border-top:1px 
 .sr .vis{height:290px;border-bottom:0;border-top:1px solid var(--line);padding-top:14px}
 .sr .snav{border-top:1px solid var(--line);padding-top:14px}
 .sr .vis .bignum{margin-top:-14px}
+.tn .tv{margin-left:auto;flex:none;font:600 11px 'Albert Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:5px 9px;border-radius:999px;background:var(--panel);color:var(--ink);white-space:nowrap}.tn.is-mine .tv{background:rgba(255,255,255,.18);color:#fff}
+.tn .tmid{display:flex;flex-direction:column;gap:6px;align-items:flex-start;min-width:0}.tn .tmid .tv{margin-left:0;padding:3px 8px;font-size:10px}

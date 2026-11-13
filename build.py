@@ -68,8 +68,8 @@ def result_for(g, c):
 def last_line(c):
     g = team_games(c)[0]; r, sc, opp = result_for(g, c); return f"{r} {sc} {opp}"
 def next_game(c):
-    for day, tm, a, h in S["upcoming"]:
-        if c in (a, h): return f"{day}, {'vs.' if c == h else 'at'} {T[h if c == a else a]['name']}, {tm} ET"
+    for day, tm, a, h, *tv in S["upcoming"]:
+        if c in (a, h): return f"{day}, {'vs.' if c == h else 'at'} {T[h if c == a else a]['name']}, {tm} ET" + (f" · {tv[0]}" if tv and tv[0] else "")
     return ""
 def yt(g):
     day = datetime.date.fromisoformat(g["date"]).strftime("%B %-d %Y")
@@ -326,8 +326,8 @@ big_cards = "".join(f'<a class="stat" href="games/{g["slug"]}/index.html"><div c
                     f'<div><div class="n"{" style=color:var(--warm)" if i == 1 else ""}>{p}</div><div class="who">{E(n.split(" ")[0])}</div><small>{E(note)}</small></div></a>'
                     for i, (d, tm, n, p, note, g) in enumerate(reversed(BIG)))
 TONIGHT_DAY = S["upcoming"][0][0] if S["upcoming"] else None
-tonight = "".join(f'<a class="tn" href="teams/{T[h]["slug"]}/index.html" data-teams="{a} {h}"><span class="tt">{tm}</span><span class="tteams"><span><i class="dot" style="{dot2(a)}"></i>{E(T[a]["name"])}</span><span class="at">at</span><span><i class="dot" style="{dot2(h)}"></i>{E(T[h]["name"])}</span></span></a>'
-                  for day, tm, a, h in S["upcoming"] if day == TONIGHT_DAY)
+tonight = "".join(f'<a class="tn" href="teams/{T[h]["slug"]}/index.html" data-teams="{a} {h}"><span class="tt">{tm}</span><span class="tmid"><span class="tteams"><span><i class="dot" style="{dot2(a)}"></i>{E(T[a]["name"])}</span><span class="at">at</span><span><i class="dot" style="{dot2(h)}"></i>{E(T[h]["name"])}</span></span>{f'<span class="tv">{E(tv[0])}</span>' if tv and tv[0] else ''}</span></a>'
+                  for day, tm, a, h, *tv in S["upcoming"] if day == TONIGHT_DAY)
 home = f'''<section class="hero">
 <div>
 <h1 class="h1">More than the<br><b>box score.</b></h1>

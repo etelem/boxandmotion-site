@@ -4,7 +4,7 @@ Input: data/incoming.json, written each morning from the sports feed:
 {
   "games":     [["2026-11-07", "DEN", 121, "IND", 104], ...],    # FINAL games only; date = US Eastern game date; away first
   "standings": [["Oklahoma City Thunder", 8, 2, 3], ...],          # all 30 teams: name or code, wins, losses, conference rank
-  "upcoming":  [["Sun, Nov 8", "3:30 PM", "PHI", "CHI"], ...]      # next ~2 days: day, ET time, away, home
+  "upcoming":  [["Sun, Nov 8", "3:30 PM", "PHI", "CHI", "NBC/Peacock"], ...]  # next ~2 days: day, ET time, away, home, national TV (optional)
 }
 An "OT" flag can be added as a 6th item on a game row.
 
@@ -67,8 +67,8 @@ if not errors:
         errors.append("records don't match the results (a game is missing from 'games', or one isn't final yet):\n    " + "\n    ".join(off))
 
 upcoming = []
-for day, tm, a, h in inc.get("upcoming", []):
-    upcoming.append([day, tm, code(a), code(h)])
+for day, tm, a, h, *tv in inc.get("upcoming", []):
+    upcoming.append([day, tm, code(a), code(h)] + ([tv[0]] if tv and tv[0] else []))
 
 if errors:
     print("NOT UPDATED. Fix these and run again:")

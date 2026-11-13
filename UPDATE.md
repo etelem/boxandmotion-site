@@ -30,12 +30,19 @@ current standings if the first found them stale. The first check also handles qu
    If the `fetch_sports_data` tool isn't available in this session (it isn't listed and ToolSearch doesn't find it), or it
    errors twice, use the **fallback sources** below instead. Never stop just because the feed is missing.
 
+   **National TV for upcoming games (added Nov 13, 2026):** for each upcoming game, look up its national network on
+   Sports Media Watch's NBA TV schedule (sportsmediawatch.com/nba-tv-schedule/) and confirm it on the network's own
+   schedule or a second outlet (NBC Sports, Prime Video/Amazon, ESPN Press Room, Awful Announcing). Only national outlets:
+   ABC, ESPN, NBC, Peacock, Prime Video, NBA TV (write e.g. "Prime Video", "NBC/Peacock", "ESPN"). If the two don't agree, or
+   only one source lists it, leave it off. Regional/local channels and League Pass are never listed. Add it as an optional
+   5th item on that game's `upcoming` row; the site shows it as a small tag on tonight's schedule and team pages' next game.
+
 2. Write `data/incoming.json`:
    ```json
    {
      "games":     [["2026-11-07", "DEN", 121, "IND", 104]],
      "standings": [["Oklahoma City Thunder", 8, 2, 3]],
-     "upcoming":  [["Sun, Nov 8", "3:30 PM", "PHI", "CHI"]]
+     "upcoming":  [["Sun, Nov 8", "3:30 PM", "PHI", "CHI", "NBC/Peacock"], ["Sun, Nov 8", "6:00 PM", "LAL", "SAS"]]
    }
    ```
    - `games`: every **closed** game from the feed (already-known games are skipped automatically).
