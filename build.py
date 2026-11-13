@@ -110,8 +110,8 @@ def page(path, title, body, active=None, desc="Every NBA game, more than the box
     nav = [("Last Night", "last-night/index.html"), ("Your Team", "your-team/index.html"), ("Learn", "learn/index.html"),
            ("Odds", "odds/index.html"), ("Teams", "teams/index.html")]
     links = "".join(f'<a href="{R}{h}"{" aria-current=page" if n == active else ""}>{n}</a>' for n, h in nav)
-    mlinks = "".join(f'<a href="{R}{h}"{" aria-current=page" if n == active else ""}>{n}</a>' for n, h in
-                     [("Home", "index.html")] + nav + [("The Sunday Box", "newsletter/index.html"), ("About", "about/index.html")])
+    mlinks = "".join(f'<a href="{h if h.startswith('http') else R + h}"{" aria-current=page" if n == active else ""}>{n}</a>' for n, h in
+                     [("Home", "index.html")] + nav + [("Get The Sunday Box", NEWSLETTER), ("About", "about/index.html")])
     html = f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{E(title)}</title><meta name="description" content="{E(desc)}">
@@ -125,7 +125,7 @@ def page(path, title, body, active=None, desc="Every NBA game, more than the box
 <a class="brand" href="{R}index.html"><span class="mark">{LOGO}</span><span class="word">Box &amp; Motion <span>Hoops</span></span></a>
 <nav class="gnav" aria-label="Main">{links}</nav>
 <span class="sp"></span>
-<a class="pill sm only-d{' on' if active == 'Sunday Box' else ''}" href="{R}newsletter/index.html">Get The Sunday Box</a>
+<a class="pill sm only-d{' on' if active == 'Sunday Box' else ''}" href="{NEWSLETTER}">Get The Sunday Box</a>
 <button class="burger" type="button" aria-label="Menu" aria-expanded="false" data-burger><svg width="20" height="14" aria-hidden="true"><path d="M1 2h18M1 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
 </div><div class="w"><nav class="mmenu" aria-label="Menu" data-menu>{mlinks}</nav></div></header>
 {band}
@@ -140,7 +140,7 @@ def page(path, title, body, active=None, desc="Every NBA game, more than the box
 
 def closer(R):
     return (f'<section class="closer"><div><h2 class="h2">The week, in one box.</h2><p>The Sunday Box: the games that mattered and the plays behind them. Free, every Sunday.</p></div>'
-            f'<a class="pill wht" href="{R}newsletter/index.html">Get The Sunday Box →</a></section>')
+            f'<a class="pill wht" href="{NEWSLETTER}">Get The Sunday Box →</a></section>')
 
 # ---- story score: which game leads the night ----
 def story_score(g):
@@ -323,7 +323,7 @@ tonight = "".join(f'<a class="tn" href="teams/{T[h]["slug"]}/index.html" data-te
 home = f'''<section class="hero">
 <div>
 <h1 class="h1">More than the <b>box score.</b></h1>
-<p class="hp">The box score tells you who scored. We show you how the game was won: the run, the matchup, the play that decided it. Plus <a href="learn/index.html">Learn the Game</a> and <a href="newsletter/index.html">The Sunday Box</a>.</p>
+<p class="hp">The box score tells you who scored. We show you how the game was won: the run, the matchup, the play that decided it. Plus <a href="learn/index.html">Learn the Game</a> and <a href="{NEWSLETTER}">The Sunday Box</a>.</p>
 <div class="ctas"><a class="pill or" href="last-night/index.html">See last night →</a><a class="pill" href="learn/index.html">Learn the game</a></div></div>
 <div><div class="gtabs" role="tablist">{tabs}</div>{heroes}</div>
 </section>
@@ -331,7 +331,7 @@ home = f'''<section class="hero">
 <a class="num" href="last-night/index.html"><div class="t"><span>01</span><span>↗</span></div><div><b>Last night</b><p>Every game, the story and the play that decided it.</p></div></a>
 <a class="num" href="your-team/index.html"><div class="t"><span>02</span><span>↗</span></div><div><b>Your team</b><p>Pick your teams. They show up first, in their colors.</p></div></a>
 <a class="num" href="learn/index.html"><div class="t"><span>03</span><span>↗</span></div><div><b>Learn the game</b><p>Moves and plays, drawn step by step.</p></div></a>
-<a class="num" href="newsletter/index.html"><div class="t"><span>04</span><span>↗</span></div><div><b>The Sunday Box</b><p>The week in one email.</p></div></a>
+<a class="num" href="{NEWSLETTER}"><div class="t"><span>04</span><span>↗</span></div><div><b>The Sunday Box</b><p>The week in one email.</p></div></a>
 </section>
 <section>
 <div class="shead"><div><p class="k">{WEEKDAY(LAST_DATE)} · {len(LAST)} games</p><h2 class="h2">Last night.</h2><p class="lead">Your teams first. Tap any game for the story and the play.</p></div><a class="pill sm" href="last-night/index.html">All games →</a></div>
@@ -763,7 +763,7 @@ body = f'''<section style="max-width:46em"><p class="k">About Box &amp; Motion</
 <a class="num" href="{R}last-night/index.html"><div class="t"><span>01</span><span>↗</span></div><div><b>Every game</b><p>The story, the play that decided it, and the official highlights.</p></div></a>
 <a class="num" href="{R}odds/index.html"><div class="t"><span>02</span><span>↗</span></div><div><b>Playoff odds</b><p>Our own model, updated every morning.</p></div></a>
 <a class="num" href="{R}learn/index.html"><div class="t"><span>03</span><span>↗</span></div><div><b>Learn the game</b><p>Moves, plays, coach’s boards and trends, drawn.</p></div></a>
-<a class="num" href="{R}newsletter/index.html"><div class="t"><span>04</span><span>↗</span></div><div><b>The Sunday Box</b><p>The week in one email. Free.</p></div></a></section>
+<a class="num" href="{NEWSLETTER}"><div class="t"><span>04</span><span>↗</span></div><div><b>The Sunday Box</b><p>The week in one email. Free.</p></div></a></section>
 <section style="max-width:46em" class="sec"><h2 class="h2">How we make it.</h2>
 <p style="margin:0">Scores and records come from league stats, and every number in a recap is checked against the box score or a named game story. The plays are original illustrations drawn from written accounts, not traced from footage and not to scale. We use AI tools to help draw and publish it all, and we skip anything we can’t verify rather than guess.</p>
 <p class="dim" style="margin:0">Box &amp; Motion is unofficial fan coverage and is not affiliated with the NBA or any team. Team names are used to identify teams; we don’t use team logos. Official video plays from the league’s own uploads; we never re-upload it.</p>
