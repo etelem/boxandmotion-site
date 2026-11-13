@@ -128,3 +128,14 @@ window.addEventListener('message', function (e) {
     if (p && p.catch) p.catch(function () { stop(); btn.textContent = 'Sound unavailable here'; });
   });
 })();
+
+// Shorts links (Elan, Nov 13): on a computer, open our Shorts in YouTube's normal player (it has full screen);
+// on phones and tablets keep /shorts/, which opens the YouTube app's Shorts feed.
+(function () {
+  var computer = window.matchMedia && matchMedia('(hover: hover) and (pointer: fine)').matches && !/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+  if (!computer) return;
+  document.querySelectorAll('a[href*="youtube.com/shorts/"]').forEach(function (a) {
+    var m = a.getAttribute('href').match(/youtube\.com\/shorts\/([A-Za-z0-9_-]{6,})/);
+    if (m) a.setAttribute('href', 'https://www.youtube.com/watch?v=' + m[1]);
+  });
+})();
