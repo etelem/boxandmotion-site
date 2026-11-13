@@ -237,7 +237,7 @@ tr.fav .bar{background:rgba(255,255,255,.25)}tr.fav .bar span{background:#fff}
 /* game page */
 .gh1{font-family:'Archivo',sans-serif;font-stretch:70%;font-weight:800;text-transform:uppercase;font-size:clamp(44px,7vw,92px);line-height:.92;letter-spacing:-.005em;margin:16px 0 12px;max-width:17ch}
 .jump{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-weight:700;color:var(--or);text-decoration:none}
-.sr{height:760px;display:flex;flex-direction:column;border-radius:32px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow);max-width:760px}
+.sr{display:flex;flex-direction:column;border-radius:32px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow);max-width:760px}
 .vis{flex:none;height:330px;padding:18px 20px 14px;background:var(--panel);border-bottom:1px solid var(--line);display:flex;flex-direction:column}
 .vis .top{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:600;letter-spacing:.12em;color:var(--dim)}
 .dots{display:flex;gap:2px}
@@ -268,8 +268,7 @@ tr.fav .bar{background:rgba(255,255,255,.25)}tr.fav .bar span{background:#fff}
 .tw .v{font:600 18px 'Archivo',sans-serif;font-variant-numeric:tabular-nums}
 .tw .lbl{grid-column:1/4;font-size:12.5px;color:var(--dim);font-weight:600;margin-bottom:-6px;text-align:center}
 .tw .tr{display:flex;height:12px;border-radius:999px;overflow:hidden;gap:3px}
-.scroller{flex:1;overflow-y:auto;scroll-snap-type:y mandatory;-webkit-overflow-scrolling:touch}
-.step{min-height:100%;padding:26px 24px;scroll-snap-align:start;display:flex;flex-direction:column;gap:10px;border-bottom:1px solid var(--line)}
+.steps{min-height:210px}.step{padding:22px 24px 6px;display:none;flex-direction:column;gap:10px}.step.on{display:flex;animation:stepin .25s ease}\n@keyframes stepin{from{opacity:0;transform:translateX(12px)}to{opacity:1;transform:none}}
 .sk{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--or);font-weight:700}
 .step h3{margin:0;font:400 28px/1.08 'Archivo',sans-serif;letter-spacing:-.03em}
 .step p{margin:0;color:var(--dim);font-size:16px}
@@ -316,3 +315,10 @@ footer.foot{padding-top:48px;padding-bottom:36px;margin-top:56px;border-top:1px 
 @media(max-width:520px){.cal{flex:1 1 100%}}
 .otable td:first-child a{white-space:nowrap}
 .hp a{color:var(--ink);font-weight:600;text-decoration:underline;text-decoration-color:var(--orange,#FF5A1F);text-underline-offset:3px}
+.snav{display:flex;align-items:center;gap:12px;padding:12px 20px 20px}
+.scount{font-size:13px;font-weight:600;color:var(--dim);letter-spacing:.04em}
+.snext{margin-left:auto;padding:12px 22px;font-size:16px}
+.sback{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:18px;cursor:pointer;color:var(--ink)}
+.dots button.seen i{background:var(--or);opacity:.45}
+.phwrap{display:flex;flex-direction:column;align-items:center;gap:14px}
+.lines td:first-child{white-space:nowrap}

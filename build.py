@@ -481,15 +481,19 @@ def scroll_story(g, f, ls, R):
     other = f'<p><b>From the {E(T[l]["name"])}’ side:</b> {E(got_away(lq, wq, g["ot"]))}</p>'
     panes.append(f'<div class="phead"><span class="hn">{ws}–{lsc}</span><span class="hc">{E(meta(g).split(" · ")[0])}{" · " + ot_label(g) if g["ot"] else ""}</span></div>{lead_chart(g, wq, lq, len(wq))}')
     steps.append(("Final" + (f", {ot_label(g)}" if g["ot"] else ""), f"{T[w]['name']} {ws}, {T[l]['name']} {lsc}.", tbl + other + meant))
-    dots = "".join(f'<button type="button" data-go="{i}" aria-label="Part {i+1}"{" class=on" if i == 0 else ""}><i></i></button>' for i in range(len(steps)))
+    n = len(steps)
+    dots = "".join(f'<button type="button" data-go="{i}" aria-label="Part {i+1}"{" class=on" if i == 0 else ""}><i></i></button>' for i in range(n))
     pane_html = "".join(f'<div class="pane{" on" if i == 0 else ""}" data-pane-i="{i}">{p}</div>' for i, p in enumerate(panes))
     step_html = ""
     for i, (k, h3, txt) in enumerate(steps):
         body = txt if txt.startswith("<") else f"<p>{E(txt)}</p>"
-        hint = '<span class="hint">Scroll to keep going ↓</span>' if i == 0 else ''
-        step_html += f'<div class="step"><span class="sk">{i+1} · {E(k)}</span><h3>{E(h3)}</h3>{body}{hint}</div>'
-    return (f'<div class="sr" data-story><div class="vis"><div class="top"><span>THE STORY · {len(steps)} PARTS</span><span class="dots">{dots}</span></div>{pane_html}</div>'
-            f'<div class="scroller">{step_html}</div></div>')
+        step_html += f'<div class="step{" on" if i == 0 else ""}"><span class="sk">{i+1} · {E(k)}</span><h3>{E(h3)}</h3>{body}</div>'
+    nav = (f'<div class="snav"><button type="button" class="sback" data-prev aria-label="Previous part" hidden>←</button>'
+           f'<span class="scount" data-count>1 of {n}</span>'
+           f'<button type="button" class="pill or snext" data-next>Next <span aria-hidden="true">→</span></button>'
+           f'<a class="pill or snext" href="#play" data-done hidden>See the play <span aria-hidden="true">↓</span></a></div>')
+    return (f'<div class="sr" data-story><div class="vis"><div class="top"><span>THE STORY · TAP NEXT</span><span class="dots">{dots}</span></div>{pane_html}</div>'
+            f'<div class="steps">{step_html}</div>{nav}</div>')
 
 COURT = '<svg class="pcourt" viewBox="0 0 350 197" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true"><g stroke="rgba(255,255,255,.14)" stroke-width="1.5"><path d="M175 0V197"/><circle cx="175" cy="98" r="34"/><rect x="0" y="62" width="62" height="72"/><rect x="288" y="62" width="62" height="72"/><path d="M0 18H24A86 86 0 0 1 24 178H0M350 18H326A86 86 0 0 0 326 178H350"/></g></svg>'
 for g in GAMES:
@@ -525,7 +529,8 @@ for g in GAMES:
 {f'<p class="lead" style="font-size:16px">{E(pdesc)}</p>' if pdesc else ''}
 <div class="ctas" style="margin-top:18px">{f'<a class="pill sm or" href="https://youtube.com/shorts/{v}" target="_blank" rel="noopener">▶ Our Short on YouTube</a>' if v else ''}</div>
 <p class="dim" style="font-size:13px;margin:14px 0 0">Original illustration, drawn from written accounts. Not traced from footage, not to scale.</p></div>
-<div class="phone"><iframe src="{clip}" title="The play of the game, drawn: {E(T[a]['name'])} at {E(T[h]['name'])}" loading="lazy" allow="autoplay"></iframe></div></div></section>'''
+<div class="phwrap"><div class="phone"><iframe src="{clip}" title="The play of the game, drawn: {E(T[a]['name'])} at {E(T[h]['name'])}" loading="lazy" allow="autoplay"></iframe></div>
+<button type="button" class="pill snd" data-snd="{R}audio/courtside-breakbeat.mp3">▶ Play with sound</button></div></div></section>'''
     nsec += 1
     day = datetime.date.fromisoformat(g["date"]).strftime("%B %-d %Y")
     pg = (f'https://www.youtube.com/watch?v={L["postgame"]}' if L.get("postgame") else

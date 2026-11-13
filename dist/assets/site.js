@@ -102,14 +102,22 @@
 
   // scroll story: the graphic on top follows the card you're reading; the dots jump between parts
   document.querySelectorAll('[data-story]').forEach(function(sr){
-    var sc=sr.querySelector('.scroller'), steps=[].slice.call(sr.querySelectorAll('.step')),
-        panes=[].slice.call(sr.querySelectorAll('.pane')), dots=[].slice.call(sr.querySelectorAll('[data-go]')), cur=-1;
-    function show(i){ if(i===cur) return; cur=i;
-      panes.forEach(function(p,j){p.classList.toggle('on',j===i)}); dots.forEach(function(d,j){d.classList.toggle('on',j===i)}); }
-    function onScroll(){ var y=sc.scrollTop+sc.clientHeight*0.35, i=0;
-      steps.forEach(function(s,j){ if(s.offsetTop-sc.offsetTop<=y) i=j; }); show(Math.min(i,panes.length-1)); }
-    sc.addEventListener('scroll',onScroll,{passive:true});
-    dots.forEach(function(d,j){d.addEventListener('click',function(){sc.scrollTo({top:steps[j].offsetTop-sc.offsetTop,behavior:'smooth'})})});
+    var steps=[].slice.call(sr.querySelectorAll('.step')), panes=[].slice.call(sr.querySelectorAll('.pane')),
+        dots=[].slice.call(sr.querySelectorAll('[data-go]')), n=steps.length, cur=0,
+        prev=sr.querySelector('[data-prev]'), next=sr.querySelector('[data-next]'), done=sr.querySelector('[data-done]'), count=sr.querySelector('[data-count]');
+    function show(i){ i=Math.max(0,Math.min(n-1,i)); cur=i;
+      steps.forEach(function(s,j){s.classList.toggle('on',j===i)});
+      panes.forEach(function(p,j){p.classList.toggle('on',j===Math.min(i,panes.length-1))});
+      dots.forEach(function(d,j){d.classList.toggle('on',j===i);d.classList.toggle('seen',j<i)});
+      if(prev) prev.hidden=(i===0); if(next) next.hidden=(i===n-1); if(done) done.hidden=(i!==n-1);
+      if(count) count.textContent=(i+1)+' of '+n; }
+    if(next) next.addEventListener('click',function(){show(cur+1)});
+    if(prev) prev.addEventListener('click',function(){show(cur-1)});
+    dots.forEach(function(d,j){d.addEventListener('click',function(){show(j)})});
+    var x0=null,y0=null;
+    sr.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;y0=e.touches[0].clientY},{passive:true});
+    sr.addEventListener('touchend',function(e){ if(x0===null) return; var dx=e.changedTouches[0].clientX-x0, dy=e.changedTouches[0].clientY-y0; x0=null;
+      if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)*1.5) show(cur+(dx<0?1:-1)); },{passive:true});
     show(0);
   });
 
