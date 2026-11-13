@@ -148,7 +148,7 @@ footer a{color:var(--dim)}
 /* game page "Watch" list (Nov 13): quiet rows instead of big buttons */
 .watch{display:flex;flex-direction:column;width:100%}
 .wrow{display:flex;align-items:center;gap:10px;padding:11px 2px;border-top:1px solid var(--line);color:var(--ink);text-decoration:none;font-size:16px}
-.wrow:last-of-type{border-bottom:1px solid var(--line)}
+.wrow:last-child,.wrow:has(+ .k){border-bottom:1px solid var(--line)}
 .wrow:hover .wt{text-decoration:underline}
 .wplay{width:26px;height:26px;border-radius:50%;background:#f1f1ef;display:grid;place-items:center;font-size:10px;padding-left:2px;box-sizing:border-box;flex:none}
 .wt{font-weight:600;flex:1}.ws{color:var(--dim);font-size:13px;white-space:nowrap}

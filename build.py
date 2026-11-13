@@ -112,9 +112,10 @@ def watch_links(g):
     rows = row(hl, "Watch the highlights on YouTube")
     rows += row(pg, "Watch the postgame on YouTube")
     rows += (row(f"https://youtube.com/shorts/{v}", "Watch our Short on YouTube", ours=True) if v else "")
+    follow = (row(NEWSLETTER, "Get The Sunday Box newsletter", ours=True)
+              + row("https://www.youtube.com/@boxandmotion?sub_confirmation=1", "Subscribe to us on YouTube", ours=True))
     return (f'<div class="watch"><p class="k" style="margin:0 0 2px">Watch</p>{rows}'
-            f'<p class="wfine"><span class="wmark">{MARK}</span><a href="{NEWSLETTER}" target="_blank" rel="noopener">Get The Sunday Box, our free Sunday newsletter</a></p>'
-            f'<p class="wfine"><span class="wmark">{MARK}</span><a href="https://www.youtube.com/@boxandmotion?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to @boxandmotion on YouTube</a></p></div>')
+            f'<p class="k" style="margin:18px 0 2px">Follow Box &amp; Motion</p>{follow}</div>')
 
 LOGO = '<svg width="28" height="28" viewBox="0 0 100 100" aria-hidden="true"><rect x="9" y="9" width="82" height="82" rx="9" fill="none" stroke="#111214" stroke-width="8"/><path d="M24 24L40 40M40 24L24 40" stroke="#111214" stroke-width="8" stroke-linecap="round"/><path d="M33 50C34 62 42 69 53 69" fill="none" stroke="#FF5A1F" stroke-width="6.5" stroke-linecap="round" stroke-dasharray="0 10.5"/><circle cx="68" cy="68" r="9.5" fill="none" stroke="#FF5A1F" stroke-width="7.5"/></svg>'
 FAVICON = "data:image/svg+xml," + quote_plus(LOGO.replace('width="28" height="28" ', '').replace('aria-hidden="true"', 'xmlns="http://www.w3.org/2000/svg"')).replace("+", "%20")
