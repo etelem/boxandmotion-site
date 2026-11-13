@@ -108,12 +108,12 @@ def watch_links(g):
         icon = f'<span class="wplay ours">{MARK}</span>' if ours else '<span class="wplay">▶</span>'
         return (f'<a class="wrow" href="{href}" target="_blank" rel="noopener">{icon}'
                 f'<span class="wt">{E(title)}</span><span class="ws">{E(src)} ↗</span></a>')
-    rows = (row(f"https://youtube.com/shorts/{v}", "Our recap Short", "@boxandmotion", ours=True) if v else "")
-    rows += row(hl, "Full game highlights", "NBA" if L.get("highlights") else "NBA · search")
+    rows = row(hl, "Full game highlights", "NBA" if L.get("highlights") else "NBA · search")
     rows += row(pg, L.get("postgame_label") or "Postgame interviews", "YouTube" if L.get("postgame") else "YouTube · search")
+    rows += (row(f"https://youtube.com/shorts/{v}", "Share it: our 27-second Short", "@boxandmotion", ours=True) if v else "")
     return (f'<div class="watch"><p class="k" style="margin:0 0 2px">Watch</p>{rows}'
-            f'<p class="wfine"><span class="wmark">{MARK}</span><a href="https://www.youtube.com/@boxandmotion?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to @boxandmotion on YouTube</a></p>'
-            f'<p class="wfine"><span class="wmark">{MARK}</span><a href="{NEWSLETTER}" target="_blank" rel="noopener">Get The Sunday Box, our free Sunday newsletter</a></p></div>')
+            f'<p class="wfine"><span class="wmark">{MARK}</span><a href="{NEWSLETTER}" target="_blank" rel="noopener">Get The Sunday Box, our free Sunday newsletter</a></p>'
+            f'<p class="wfine"><span class="wmark">{MARK}</span><a href="https://www.youtube.com/@boxandmotion?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to @boxandmotion on YouTube</a></p></div>')
 
 LOGO = '<svg width="28" height="28" viewBox="0 0 100 100" aria-hidden="true"><rect x="9" y="9" width="82" height="82" rx="9" fill="none" stroke="#111214" stroke-width="8"/><path d="M24 24L40 40M40 24L24 40" stroke="#111214" stroke-width="8" stroke-linecap="round"/><path d="M33 50C34 62 42 69 53 69" fill="none" stroke="#FF5A1F" stroke-width="6.5" stroke-linecap="round" stroke-dasharray="0 10.5"/><circle cx="68" cy="68" r="9.5" fill="none" stroke="#FF5A1F" stroke-width="7.5"/></svg>'
 FAVICON = "data:image/svg+xml," + quote_plus(LOGO.replace('width="28" height="28" ', '').replace('aria-hidden="true"', 'xmlns="http://www.w3.org/2000/svg"')).replace("+", "%20")
