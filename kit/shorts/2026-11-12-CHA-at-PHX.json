@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-12-CHA-PHX.html",
+  "team": "PHX",
+  "home": true,
+  "number": "1",
+  "player": "Devin Booker",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 0.9872,
+    "ape": 1.0422,
+    "mass": 0.9852
+  },
+  "build_note": "Listed 6-5, 206 lb (RealGM), 6-8.25 wingspan at the 2015 draft combine (theScore)",
+  "kicker": "SUNS 101 · HORNETS 96 · NOV 12",
+  "hook": [
+    "Booker from 28 feet",
+    "to hold off Charlotte"
+  ],
+  "clock": "Q4 · <0:30",
+  "us": "PHX",
+  "them": "CHA",
+  "score_before": [
+    94,
+    91
+  ],
+  "score_make": [
+    97,
+    91
+  ],
+  "stamp": "THREE",
+  "beat": [
+    "Up 6, final 30 seconds.",
+    "A 28-foot step-back."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Suns",
+    "them": "Hornets",
+    "us_pts": 101,
+    "them_pts": 96
+  },
+  "star": {
+    "name": "Devin Booker",
+    "big": 30,
+    "big_label": "points on 12-of-20 shooting",
+    "lines": [
+      "7 assists, 3 steals",
+      "13 in the first quarter"
+    ]
+  },
+  "story": "Phoenix blew a 17-point lead, trailed 76–72 after three and won the fourth 29–20.",
+  "aria": "Original illustration of Devin Booker's 28-foot step-back 3-pointer in the final 30 seconds that put the Suns up 97–91 over Charlotte. Not traced from footage, not to scale."
+}

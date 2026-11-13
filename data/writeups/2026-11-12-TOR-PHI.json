@@ -1,0 +1,109 @@
+{
+ "headline": "Maxey's 27 leads a comeback from 17 down",
+ "dek": "Down 17 early, the 76ers got 27 from Tyrese Maxey and 5 of 6 threes from Anfernee Simons.",
+ "three": [
+  [
+   "Maxey: 27 points and 8 assists",
+   "8 of 13 from the floor, 14 of them by halftime."
+  ],
+  [
+   "Down 17 in the first, tied 60–60 at the half, up 9 after three",
+   "Six 76ers scored 11 or more."
+  ],
+  [
+   "Won the second and third quarters, 72–54",
+   "Second-quarter points 36–27; third-quarter points 36–27. Toronto had 7 turnovers in the third."
+  ]
+ ],
+ "battle": [
+  [
+   "Second-quarter points",
+   36,
+   27
+  ],
+  [
+   "Third-quarter points",
+   36,
+   27
+  ],
+  [
+   "Fourth-quarter points",
+   27,
+   25
+  ],
+  [
+   "First-quarter points",
+   24,
+   33
+  ]
+ ],
+ "battle_labels": [
+  "PHI",
+  "TOR"
+ ],
+ "top": [
+  [
+   "Tyrese Maxey",
+   "PHI",
+   "8 of 13, 8 assists",
+   27
+  ],
+  [
+   "Joel Embiid",
+   "PHI",
+   "6 of 7 at the line",
+   20
+  ],
+  [
+   "Jaylen Brown",
+   "PHI",
+   "8 of 15, 6 rebounds",
+   18
+  ],
+  [
+   "Anfernee Simons",
+   "PHI",
+   "off the bench, 5 of 6 from three",
+   17
+  ]
+ ],
+ "linescore": {
+  "away": [
+   33,
+   27,
+   27,
+   25
+  ],
+  "home": [
+   24,
+   36,
+   36,
+   27
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-12-TOR-at-PHI.json",
+ "loser": {
+  "top": [
+   [
+    "RJ Barrett",
+    "TOR",
+    "13 of 20 · 14 rebounds · season high",
+    31
+   ],
+   [
+    "Immanuel Quickley",
+    "TOR",
+    "6 assists",
+    26
+   ],
+   [
+    "Collin Murray-Boyles",
+    "TOR",
+    "5 blocks",
+    14
+   ]
+  ],
+  "source": "box score"
+ }
+}

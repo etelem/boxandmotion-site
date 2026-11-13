@@ -1,0 +1,178 @@
+{
+  "team": "PHI",
+  "D": "  const D = {\n    date: 'Thu, Nov 12, 2026',\n    us: 123, them: 112, record: '10–3', usName: '76ers', themName: 'Raptors',\n    quarters: [[24, 33], [36, 27], [36, 27], [27, 25]],\n    leadUs: 15, leadThem: 17,\n    star: {name: 'Tyrese Maxey', stats: [['Points', 27, 35], ['Shots made of 13', 8, 13], ['Assists', 8, 10]]},\n    scorers: [\n      {name: 'Tyrese Maxey', pts: 27, note: '8 of 13 · 8 assists'},\n      {name: 'Joel Embiid', pts: 20, note: '6 of 7 at the line'},\n      {name: 'Jaylen Brown', pts: 18, note: '8 of 15 · 6 rebounds'},\n      {name: 'Anfernee Simons', pts: 17, note: 'off the bench · 5 of 6 from three'},\n      {name: 'VJ Edgecombe', pts: 15, note: '8 rebounds · 8 assists · 3 steals'},\n    ],\n    edges: [\n      {label: 'Second-quarter points', us: 36, them: 27},\n      {label: 'Third-quarter points', us: 36, them: 27},\n      {label: 'Fourth-quarter points', us: 27, them: 25},\n    ],\n    gaps: [\n      {label: 'First-quarter points', us: 24, them: 33},\n    ],\n    next: {opp: 'vs Pacers', when: 'Sun, Nov 15, 1:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Anfernee Simons' 3-pointer at the first-quarter buzzer that cut Toronto's lead from 33-21 to 33-24 and capped an 8-0 Philadelphia run, the start of the comeback from 17 down. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Simons at the horn",
+    "subP": "Simons from three, end of the 1st",
+    "subL": "Simons’ three at the first-quarter buzzer, down 33–21",
+    "m0": "Raptors +12",
+    "m1": "Raptors +9",
+    "num": "5",
+    "cap1": "Simons at the horn. Down 9, not 12.",
+    "cap2": "33–24 after one. Tied 60–60 at the half.",
+    "clock": [
+      6,
+      0
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>76ers vs Raptors Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">76ers 123, Raptors 112 · Nov 12, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['76ers vs.', 'Raptors'] : ['76ers vs. Raptors']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Down 17 early. Maxey 27,', 'Simons 5 of 6 from three.'] : ['Down 17 early, the 76ers got 27 from Tyrese Maxey and 5 of 6 threes from Anfernee Simons.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`76ers improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Won without LeBron James'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Down 17 in the 1st,', 'tied 60–60 at the half'] : ['Down 17 in the first, tied 60–60 at the half, up 9 after three']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Raptors by ${D.leadThem} in the 1st, at 33–16"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "76ers’ margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Maxey: 27', 'and 8 assists'] : ['Maxey: 27 points and 8 assists']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['8 of 13 from the floor,', '14 by halftime.'] : ['8 of 13 from the floor, 14 of them by halftime.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Six 76ers scored', '11 or more'] : ['Six 76ers scored 11 or more']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 35;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won the middle', 'quarters, 72–54'] : ['Won the second and third quarters, 72–54']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['76ers in blue, Raptors in gray. Toronto', 'had 7 turnovers in the third.'] : ['76ers in blue, Raptors in gray. Toronto had 7 turnovers in the third.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'Second in the East'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Pacers’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '4–8';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Embiid scored 20 after a', 'first-quarter knee scare.'] : ['Joel Embiid scored 20 after a first-quarter knee scare.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'76ers 123 · Raptors 112 · Nov 12'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Simons at the horn'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Maxey'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 40;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+3', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "    T(board, bx + 24, by + 38, 'Q1', 'b m', 24);"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 160, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 192, ly, D.themName"
+    ],
+    [
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = clk < 60 ? clk.toFixed(1) : `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+    ]
+  ],
+  "aria": "Animated recap of the 76ers' 123 to 112 home win over the Raptors: Anfernee Simons' 3-pointer at the first-quarter buzzer that cut Toronto's lead to 33 to 24 and started the comeback from 17 down, quarter-by-quarter scoring, Tyrese Maxey's 27 points and 8 assists, the top scorers, how the 76ers won, and the next game against Indiana.",
+  "figure": {
+    "player": "Anfernee Simons",
+    "home": true,
+    "tall": 0.9744,
+    "ape": 1.0691,
+    "mass": 0.9771,
+    "label": "Anfernee Simons, listed 6-4, 200 lb, 6-9.25 wingspan (2018 combine)"
+  },
+  "loser_top": [
+    [
+      "RJ Barrett",
+      31,
+      "13 of 20 · 14 rebounds · season high"
+    ],
+    [
+      "Immanuel Quickley",
+      26,
+      "6 assists"
+    ],
+    [
+      "Collin Murray-Boyles",
+      14,
+      "5 blocks"
+    ]
+  ],
+  "notes": [
+    "Box score from the 76ers' 123–112 win over the Toronto Raptors at Xfinity Mobile Arena on Nov 12, 2026, from the Bleacher Report box score (points, rebounds, assists, blocks and steals) and the FOX Sports line score and key lines, with game details from the Associated Press (via WRAL), Field Level Media (via KMJ and Yardbarker), NBC Sports Philadelphia, Philly Sports Reports, Metro Philadelphia and Yahoo Sports. All 123 Philadelphia points are accounted for by eight players in the box score. Barrett's 31 points (13 of 20) and 14 rebounds and Quickley's 26 points are from Bleacher Report, FOX Sports, Field Level Media and NBC Sports (the AP's early story had Quickley at 25); the lines found this morning account for 99 of Toronto's 112 points, and none of the other Raptors appear in this recap. The quarter scores add up to both totals (60–60 at the half, matching NBC Sports Philadelphia and Philly Sports Reports; 96–87 after three, matching the AP). Toronto's 17-point lead was 33–16 late in the first quarter: Field Level Media, Metro Philadelphia and Philly Sports Reports have 17, and the 8–0 run that ended the quarter at 33–24 starts from 33–16 (the AP has 16). Maxey's 8 of 13 is from FOX Sports, Brown's 8 of 15 and Embiid's 6 of 7 at the line from Yahoo Sports, Simons' 5 of 6 from three from NBC Sports Philadelphia. Records and ranks are from the site's standings after Thursday's games: Philadelphia 10–3 and second in the East, Indiana 4–8.",
+    "LeBron James missed his third straight game with a back injury (AP). Toronto was without Kawhi Leonard and Scottie Barnes (AP, Field Level Media). Embiid left briefly after a knee-to-knee collision in the first quarter and returned (AP, NBC Sports Philadelphia). Simons, Kentavious Caldwell-Pope and Jabari Walker went 9 of 13 from three off the bench (Bleacher Report); Edgecombe's 8 assists were a season high (NBC Sports Philadelphia). Toronto had seven turnovers in the third quarter (Field Level Media). Philadelphia hosts Indiana on Sunday at 1:00 PM ET (Field Level Media, Metro Philadelphia).",
+    "The play of the game is an original illustration of Anfernee Simons' 3-pointer at the first-quarter buzzer, which cut Toronto's lead from 33–21 to 33–24 and capped an 8–0 Philadelphia run to end the quarter (NBC Sports Philadelphia, Philly Sports Reports, Metro Philadelphia). Philly Sports Reports describes Simons as wide open; the move isn't described further, so it is drawn as the template's plain pull-up. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Philadelphia 76ers or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Simons' listed 6-foot-4 and 200 pounds (Wikipedia), with arms scaled to the 6-foot-9¼ wingspan measured at the 2018 draft combine (NBC Sports), in Philadelphia's home white with No. 5 (Wikipedia, RealGM). He has no approved look on file yet, so he is drawn as a team-colour silhouette in the kit. It is an original silhouette with a featureless face, not a portrait or a trace of footage."
+  ]
+}

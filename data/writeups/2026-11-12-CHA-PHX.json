@@ -1,0 +1,103 @@
+{
+ "headline": "Booker's 30 holds off Charlotte",
+ "dek": "Devin Booker scored 30. Phoenix blew a 17-point lead, then won the fourth 29–20.",
+ "three": [
+  [
+   "Booker: 30 points, 7 assists, 3 steals",
+   "12 of 20 from the floor, 13 in the first quarter."
+  ],
+  [
+   "Up 5 at the half, down 4 after three, then 29–20 in the fourth",
+   "Booker and Brooks combined for 45 of 101."
+  ],
+  [
+   "Won it on defense: 25 Hornets turnovers to 7",
+   "Turnovers forced 25–7; steals 11–4. Charlotte had 52 rebounds to 31."
+  ]
+ ],
+ "battle": [
+  [
+   "Turnovers forced",
+   25,
+   7
+  ],
+  [
+   "Steals",
+   11,
+   4
+  ],
+  [
+   "Fourth-quarter points",
+   29,
+   20
+  ],
+  [
+   "Rebounds",
+   31,
+   52
+  ]
+ ],
+ "battle_labels": [
+  "PHX",
+  "CHA"
+ ],
+ "top": [
+  [
+   "Devin Booker",
+   "PHX",
+   "12 of 20, 7 assists, 3 steals",
+   30
+  ],
+  [
+   "Dillon Brooks",
+   "PHX",
+   "6 of 13, 3 threes",
+   15
+  ],
+  [
+   "Collin Gillespie",
+   "PHX",
+   "off the bench, 3 threes",
+   13
+  ],
+  [
+   "Jalen Green",
+   "PHX",
+   "5 of 6 at the line",
+   12
+  ]
+ ],
+ "linescore": {
+  "away": [
+   22,
+   28,
+   26,
+   20
+  ],
+  "home": [
+   28,
+   27,
+   17,
+   29
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-12-CHA-at-PHX.json",
+ "loser": {
+  "top": [
+   [
+    "Coby White",
+    "CHA",
+    "season high · 8 of 16 in 20 minutes",
+    21
+   ],
+   [
+    "Naz Reid",
+    "CHA",
+    "8 rebounds · 6 of 18",
+    16
+   ]
+  ],
+  "source": "box score"
+ }
+}
