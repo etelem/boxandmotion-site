@@ -100,6 +100,14 @@ def c2_of(c):
     """A team's second color for the two-tone dot; very light ones (white, silver, cream) fall back to the dark shade."""
     t = T[c]; return t["dark"] if t["c2"].upper() in _LIGHT else t["c2"]
 def dot2(c): return f"background:linear-gradient(135deg,{T[c]['c1']} 55%,{c2_of(c)} 55%)"
+def ball(c, px=64, ring="#fff"):
+    """The team's two-color basketball: main color and second color split on the diagonal, with seams. No logos."""
+    a, b, k = T[c]['c1'], c2_of(c), f"bc{c}{px}"
+    return (f'<svg class="tball" width="{px}" height="{px}" viewBox="0 0 100 100" role="img" aria-label="{E(T[c]["name"])} colors">'
+            f'<defs><clipPath id="{k}"><circle cx="50" cy="50" r="46"/></clipPath></defs><g clip-path="url(#{k})">'
+            f'<rect width="100" height="100" fill="{a}"/><path d="M100 0V100H0Z" fill="{b}"/>'
+            f'<g fill="none" stroke="rgba(10,10,12,.55)" stroke-width="3.5"><path d="M50 0V100M0 50H100M17 8Q42 50 17 92M83 8Q58 50 83 92"/></g></g>'
+            f'<circle cx="50" cy="50" r="46" fill="none" stroke="{ring}" stroke-width="4"/></svg>')
 def grad(c): return f"linear-gradient(90deg,{c2_of(c)} 0 7px,transparent 7px),linear-gradient(120deg,{T[c]['c1']} 0%,{T[c]['dark']} 100%)"
 def tchip(c, score, lose=False, name=None):
     return (f'<span class="tchip{" lo" if lose else ""}"><i style="{dot2(c)}"></i>{E(name or T[c]["name"])}'
@@ -107,8 +115,8 @@ def tchip(c, score, lose=False, name=None):
 
 def page(path, title, body, active=None, desc="Every NBA game, more than the box score: the story, the play that decided it, drawn in motion.", band=""):
     depth = path.count("/"); R = "/" if path == "404.html" else "../" * depth
-    nav = [("Last Night", "last-night/index.html"), ("Your Team", "your-team/index.html"), ("Learn", "learn/index.html"),
-           ("Odds", "odds/index.html"), ("Teams", "teams/index.html")]
+    nav = [("Games", "last-night/index.html"), ("Teams", "teams/index.html"), ("Learn", "learn/index.html")]
+    active = {"Last Night": "Games", "Your Team": "Teams", "Odds": "Teams"}.get(active, active)
     links = "".join(f'<a href="{R}{h}"{" aria-current=page" if n == active else ""}>{n}</a>' for n, h in nav)
     mlinks = "".join(f'<a href="{h if h.startswith('http') else R + h}"{" aria-current=page" if n == active else ""}>{n}</a>' for n, h in
                      [("Home", "index.html")] + nav + [("Get The Sunday Box", NEWSLETTER), ("About", "about/index.html")])
@@ -569,6 +577,7 @@ R = "../"
 panes = "".join(f'<div class="tgrid{" hidden" if conf == "West" else ""}" data-pane="conf" data-value="{conf}">{"".join(tcard2(c, R) for c in sorted([c for c in T if T[c]["conf"] == conf], key=lambda c: S["seeds"][c]))}</div>' for conf in ("East", "West"))
 body = f'''<section><p class="k">Standings · after {S['updated'].replace('after ', '')}</p><h1 class="h1">All 30 teams.</h1>
 <p class="lead">In order by conference. Follow a team and it turns its colors here and everywhere on the site.</p>
+<div class="row" style="margin-top:16px"><a class="pill sm" href="../your-team/index.html">★ Your teams →</a><a class="pill sm" href="../odds/index.html">Playoff odds →</a></div>
 <div class="tabs" data-tabs="conf" style="margin-top:18px"><button class="pill on" data-tab="East">East</button><button class="pill" data-tab="West">West</button></div></section>
 <section>{panes}</section>'''
 page("teams/index.html", "Teams · Box & Motion Hoops", body, active="Teams")
@@ -578,7 +587,7 @@ for c, t in T.items():
     R = "../../"
     nx = next_game(c)
     band = f'''<section class="band" style="background:radial-gradient(90% 140% at 85% 0%,{t['c1']} 0%,{t['dark']} 80%)"><div class="w">
-<div class="between"><div><p class="k">{E(t['city'])} · {t['div']} division</p><h1 class="h1" style="font-size:clamp(56px,10vw,120px);margin-bottom:0">{E(t['name'])}</h1></div>
+<div class="between"><div><p class="k">{E(t['city'])} · {t['div']} division</p><div class="tname">{ball(c, 64)}<h1 class="h1" style="font-size:clamp(52px,10vw,120px);margin-bottom:0">{E(t['name'])}</h1></div></div>
 <button type="button" class="pill star" data-team="{c}" aria-pressed="false">★ <span class="lbl">Follow</span></button></div>
 <div class="stats"><div><span class="n">{rec(c)}</span><br><span style="opacity:.8">{seed(c)}</span></div>
 <a href="{R}odds/index.html"><span class="n">{O[c]['top6']}%</span><br><span style="opacity:.8">top-6 odds · {chg(O[c]['chg']) if O[c]['chg'] else 'no change'} this week →</span></a>

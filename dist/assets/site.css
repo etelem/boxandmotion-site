@@ -322,3 +322,5 @@ footer.foot{padding-top:48px;padding-bottom:36px;margin-top:56px;border-top:1px 
 .dots button.seen i{background:var(--or);opacity:.45}
 .phwrap{display:flex;flex-direction:column;align-items:center;gap:14px}
 .lines td:first-child{white-space:nowrap}
+.tname{display:flex;align-items:center;gap:16px}.tname .tball{flex:none;filter:drop-shadow(0 6px 16px rgba(0,0,0,.3))}
+@media(max-width:520px){.tname .tball{width:52px;height:52px}}
