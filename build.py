@@ -496,8 +496,8 @@ def scroll_story(g, f, ls, R):
            f'<span class="scount" data-count>1 of {n}</span>'
            f'<button type="button" class="pill or snext" data-next>Next <span aria-hidden="true">→</span></button>'
            f'<a class="pill or snext" href="#play" data-done hidden>See the play <span aria-hidden="true">↓</span></a></div>')
-    return (f'<div class="sr" data-story><div class="vis"><div class="top"><span>THE STORY · TAP NEXT</span><span class="dots">{dots}</span></div>{pane_html}</div>'
-            f'<div class="steps">{step_html}</div>{nav}</div>')
+    return (f'<div class="sr" data-story><div class="top stop"><span>THE STORY · TAP NEXT</span><span class="dots">{dots}</span></div>'
+            f'<div class="steps">{step_html}</div><div class="vis">{pane_html}</div>{nav}</div>')
 
 COURT = '<svg class="pcourt" viewBox="0 0 350 197" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true"><g stroke="rgba(255,255,255,.14)" stroke-width="1.5"><path d="M175 0V197"/><circle cx="175" cy="98" r="34"/><rect x="0" y="62" width="62" height="72"/><rect x="288" y="62" width="62" height="72"/><path d="M0 18H24A86 86 0 0 1 24 178H0M350 18H326A86 86 0 0 0 326 178H350"/></g></svg>'
 for g in GAMES:

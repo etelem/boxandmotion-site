@@ -325,3 +325,8 @@ footer.foot{padding-top:48px;padding-bottom:36px;margin-top:56px;border-top:1px 
 .tname{display:flex;align-items:center;gap:16px}.tname .tball{flex:none;filter:drop-shadow(0 6px 16px rgba(0,0,0,.3))}
 @media(max-width:520px){.tname .tball{width:52px;height:52px}}
 @media(max-width:700px){main.w{padding-top:6px}.hero{padding-top:0}}
+.sr .stop{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:600;letter-spacing:.12em;color:var(--dim);padding:18px 20px 0}
+.sr .steps{min-height:0}.sr .step{padding:14px 24px 18px}
+.sr .vis{height:290px;border-bottom:0;border-top:1px solid var(--line);padding-top:14px}
+.sr .snav{border-top:1px solid var(--line);padding-top:14px}
+.sr .vis .bignum{margin-top:-14px}
