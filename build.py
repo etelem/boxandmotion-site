@@ -110,7 +110,7 @@ def watch_links(g):
         return (f'<a class="wrow" href="{href}" target="_blank" rel="noopener">{icon}'
                 f'<span class="wt">{E(title)}</span><span class="ws">↗</span></a>')
     rows = row(hl, "Watch the highlights on YouTube")
-    rows += row(pg, "Watch postgame interviews on YouTube")
+    rows += row(pg, "Watch the postgame on YouTube")
     rows += (row(f"https://youtube.com/shorts/{v}", "Watch our Short on YouTube", ours=True) if v else "")
     return (f'<div class="watch"><p class="k" style="margin:0 0 2px">Watch</p>{rows}'
             f'<p class="wfine"><span class="wmark">{MARK}</span><a href="{NEWSLETTER}" target="_blank" rel="noopener">Get The Sunday Box, our free Sunday newsletter</a></p>'
