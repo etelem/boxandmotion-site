@@ -315,3 +315,4 @@ footer.foot{padding-top:48px;padding-bottom:36px;margin-top:56px;border-top:1px 
 .hfh{padding-top:.08em}
 @media(max-width:520px){.cal{flex:1 1 100%}}
 .otable td:first-child a{white-space:nowrap}
+.hp a{color:var(--ink);font-weight:600;text-decoration:underline;text-decoration-color:var(--orange,#FF5A1F);text-underline-offset:3px}

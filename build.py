@@ -105,7 +105,7 @@ def tchip(c, score, lose=False, name=None):
     return (f'<span class="tchip{" lo" if lose else ""}"><i style="{dot2(c)}"></i>{E(name or T[c]["name"])}'
             + (f' <b>{score}</b>' if score is not None else '') + '</span>')
 
-def page(path, title, body, active=None, desc="Every NBA game, read like a coach: the story, the play that decided it, drawn in motion.", band=""):
+def page(path, title, body, active=None, desc="Every NBA game, more than the box score: the story, the play that decided it, drawn in motion.", band=""):
     depth = path.count("/"); R = "/" if path == "404.html" else "../" * depth
     nav = [("Last Night", "last-night/index.html"), ("Your Team", "your-team/index.html"), ("Learn", "learn/index.html"),
            ("Odds", "odds/index.html"), ("Teams", "teams/index.html")]
@@ -322,8 +322,8 @@ tonight = "".join(f'<a class="tn" href="teams/{T[h]["slug"]}/index.html" data-te
                   for day, tm, a, h in S["upcoming"] if day == TONIGHT_DAY)
 home = f'''<section class="hero">
 <div><p class="k">Unofficial · drawn, not filmed</p>
-<h1 class="h1">Read every game like a <b>coach.</b></h1>
-<p class="hp">Last night’s games, the play that decided each one, and how it works. Every number checked against the box score.</p>
+<h1 class="h1">More than the <b>box score.</b></h1>
+<p class="hp">The box score tells you who scored. We show you how the game was won: the run, the matchup, the play that decided it. Plus <a href="learn/index.html">Learn the Game</a> and <a href="newsletter/index.html">The Sunday Box</a>.</p>
 <div class="ctas"><a class="pill or" href="last-night/index.html">See last night →</a><a class="pill" href="learn/index.html">Learn the game</a></div></div>
 <div><div class="gtabs" role="tablist">{tabs}</div>{heroes}</div>
 </section>
@@ -344,7 +344,7 @@ home = f'''<section class="hero">
 <section><div class="shead"><div><p class="k">Learn the game</p><h2 class="h2">New in the library.</h2></div><a class="pill sm" href="learn/index.html">See all {len(LEARN)} →</a></div>
 <div class="rail">{"".join(learn_card(R, x) for x in LEARN[:4])}</div></section>
 {closer(R)}'''
-page("index.html", "Box & Motion Hoops: every NBA game, read like a coach", home)
+page("index.html", "Box & Motion Hoops: every NBA game, more than the box score", home)
 
 # ---- last night ----
 def calendar(R, sel=None):
