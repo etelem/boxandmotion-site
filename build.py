@@ -104,13 +104,14 @@ def watch_links(g):
     hl = f'https://www.youtube.com/watch?v={L["highlights"]}' if L.get("highlights") else yt(g)
     pg = (f'https://www.youtube.com/watch?v={L["postgame"]}' if L.get("postgame") else
           "https://www.youtube.com/results?search_query=" + quote_plus(f'{T[w]["name"]} {T[l]["name"]} postgame interviews {day}'))
-    def row(href, title, src, ours=False):
+    # every row reads the same way: "Watch ... on YouTube" (Elan, Nov 13)
+    def row(href, title, ours=False):
         icon = f'<span class="wplay ours">{MARK}</span>' if ours else '<span class="wplay">▶</span>'
         return (f'<a class="wrow" href="{href}" target="_blank" rel="noopener">{icon}'
-                f'<span class="wt">{E(title)}</span><span class="ws">{E(src)} ↗</span></a>')
-    rows = row(hl, "Full game highlights", "NBA" if L.get("highlights") else "NBA · search")
-    rows += row(pg, L.get("postgame_label") or "Postgame interviews", "YouTube" if L.get("postgame") else "YouTube · search")
-    rows += (row(f"https://youtube.com/shorts/{v}", "Share our Short", "@boxandmotion", ours=True) if v else "")
+                f'<span class="wt">{E(title)}</span><span class="ws">↗</span></a>')
+    rows = row(hl, "Watch the highlights on YouTube")
+    rows += row(pg, "Watch postgame interviews on YouTube")
+    rows += (row(f"https://youtube.com/shorts/{v}", "Watch our Short on YouTube", ours=True) if v else "")
     return (f'<div class="watch"><p class="k" style="margin:0 0 2px">Watch</p>{rows}'
             f'<p class="wfine"><span class="wmark">{MARK}</span><a href="{NEWSLETTER}" target="_blank" rel="noopener">Get The Sunday Box, our free Sunday newsletter</a></p>'
             f'<p class="wfine"><span class="wmark">{MARK}</span><a href="https://www.youtube.com/@boxandmotion?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to @boxandmotion on YouTube</a></p></div>')
