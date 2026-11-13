@@ -94,6 +94,14 @@ MARK = ('<svg width="16" height="16" viewBox="0 0 100 100" aria-hidden="true"><r
         '<path d="M24 24L40 40M40 24L24 40" stroke="#111214" stroke-width="9" stroke-linecap="round"/><path d="M33 50C34 62 42 69 53 69" fill="none" stroke="#FF5A1F" stroke-width="7" stroke-linecap="round" stroke-dasharray="0 10.5"/>'
         '<circle cx="68" cy="68" r="9.5" fill="none" stroke="#FF5A1F" stroke-width="8"/></svg>')
 
+def ot_label(g):
+    if not g["ot"]: return ""
+    c = _cfg_for(g["key"]); m = re.search(r"\b([2-9])OT\b", json.dumps(c)) if c else None
+    return f"{m.group(1)}OT" if m else "OT"
+
+def ot_words(g):
+    return {"": "", "OT": " in overtime", "2OT": " in double overtime", "3OT": " in triple overtime"}.get(ot_label(g), f" in {ot_label(g)}")
+
 def watch_links(g):
     """Under the recap (Elan, Nov 13): one quiet "Watch" list with our Short and the official NBA highlights and postgame
     interviews (direct links from data/links.json when we have them, otherwise a search for that game), then a small
@@ -111,11 +119,11 @@ def watch_links(g):
                 f'<span class="wt">{E(title)}</span><span class="ws">↗</span></a>')
     rows = row(hl, "Watch the highlights on YouTube")
     rows += row(pg, "Watch the postgame on YouTube")
-    rows += (row(f"https://youtube.com/shorts/{v}", "Watch our Short on YouTube", ours=True) if v else "")
-    follow = (row(NEWSLETTER, "Get The Sunday Box newsletter", ours=True)
+    follow = ((row(f"https://youtube.com/shorts/{v}", "Watch our Short on YouTube", ours=True) if v else "")
+              + row(NEWSLETTER, "Get The Sunday Box newsletter", ours=True)
               + row("https://www.youtube.com/@boxandmotion?sub_confirmation=1", "Subscribe to us on YouTube", ours=True))
     return (f'<div class="watch"><p class="k" style="margin:0 0 2px">Watch</p>{rows}'
-            f'<p class="k" style="margin:18px 0 2px">Follow Box &amp; Motion</p>{follow}</div>')
+            f'<p class="k" style="margin:18px 0 2px">Box &amp; Motion</p>{follow}</div>')
 
 LOGO = '<svg width="28" height="28" viewBox="0 0 100 100" aria-hidden="true"><rect x="9" y="9" width="82" height="82" rx="9" fill="none" stroke="#111214" stroke-width="8"/><path d="M24 24L40 40M40 24L24 40" stroke="#111214" stroke-width="8" stroke-linecap="round"/><path d="M33 50C34 62 42 69 53 69" fill="none" stroke="#FF5A1F" stroke-width="6.5" stroke-linecap="round" stroke-dasharray="0 10.5"/><circle cx="68" cy="68" r="9.5" fill="none" stroke="#FF5A1F" stroke-width="7.5"/></svg>'
 FAVICON = "data:image/svg+xml," + quote_plus(LOGO.replace('width="28" height="28" ', '').replace('aria-hidden="true"', 'xmlns="http://www.w3.org/2000/svg"')).replace("+", "%20")
@@ -218,7 +226,7 @@ def game_card(g, R, show_mine=True, img_on=True, hero=False):
     img = (f'<a class="gimg" href="{href}" aria-label="Watch the recap: {E(head)}"><img src="{R}posters/{g["key"]}-light.jpg" alt="" loading="lazy">'
            f'<span class="gplay">▶</span></a>' if poster else '')
     return f'''<div class="card gcard calm{' hero' if hero else ''}" data-teams="{g['away']} {g['home']}" data-key="{g['key']}" style="--team:{wt['c1']}">
-{img}<div class="gbody"><div class="row" style="gap:8px;justify-content:space-between"><span class="k gk">Final{' · OT' if g['ot'] else ''} · {WEEKDAY(g['date'])}</span>{'<span class="tag hot mine-tag hidden">Your team</span>' if show_mine else ''}</div>
+{img}<div class="gbody"><div class="row" style="gap:8px;justify-content:space-between"><span class="k gk">Final{' · ' + ot_label(g) if g['ot'] else ''} · {WEEKDAY(g['date'])}</span>{'<span class="tag hot mine-tag hidden">Your team</span>' if show_mine else ''}</div>
 <a class="ghead" href="{href}">{E(head)}</a>{lines}
 <div class="row" style="gap:14px;margin-top:4px"><a class="glink" href="{href}">{'▶ Watch the recap' if has_vid else 'Read the recap'}</a><a class="glink dim" href="{yt(g)}" target="_blank" rel="noopener">Highlights ↗</a></div></div></div>'''
 
@@ -468,7 +476,7 @@ for g in GAMES:
         lsh = f'<div class="scroll"><table class="lines"><tr class="k"><th></th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th>{ot_cols}<th>Final</th></tr>{tr(a, ls["away"], g["as_"])}{tr(h, ls["home"], g["hs"])}</table></div>'
     ws, lsc = max(g["as_"], g["hs"]), min(g["as_"], g["hs"])
     margin = ws - lsc
-    auto = f"{T[w]['city']} beat {T[l]['city']} {ws}–{lsc}{' in overtime' if g['ot'] else ''}"
+    auto = f"{T[w]['city']} beat {T[l]['city']} {ws}–{lsc}{ot_words(g)}"
     auto += f", a {'one-point' if margin==1 else str(margin)+'-point'} {'road' if w==a else 'home'} win. The {T[w]['name']} move to {g['rec'][w]}; the {T[l]['name']} fall to {g['rec'][l]}."
     f = S["featured"].get(g["key"])
     feat = ""
@@ -480,11 +488,14 @@ for g in GAMES:
         feat = f'''<section class="sec"><h2 class="h2">Three things that decided it</h2><div class="grid g3">{three}</div></section>
 <section class="grid g2"><div class="sec" style="gap:6px"><h2 class="h2">Where it was won</h2><div class="kv k" style="border:0"><span></span><span>{la}</span><span>{lb}</span></div>{battle}</div>
 <div class="sec" style="gap:6px"><h2 class="h2">Top performers</h2>{top}</div></section>'''
-    lede = f'<p style="margin:0;font-size:22px;max-width:38em"><b>{E(f["headline"])}.</b> {E(f["dek"])}</p>' if f else f'<p style="margin:0;font-size:20px;max-width:38em">{E(auto)}</p>'
+    def _words(t): return set(re.findall(r"[a-z0-9]+", t.lower())) - {"a", "an", "the", "in", "of", "it", "and", "to"}
+    dek = f["dek"] if f else ""
+    if f and len(_words(f["headline"]) & _words(dek)) >= 0.6 * max(1, len(_words(f["headline"]))): dek = auto
+    lede = f'<p style="margin:0;font-size:22px;max-width:38em"><b>{E(f["headline"])}.</b> {E(dek)}</p>' if f else f'<p style="margin:0;font-size:20px;max-width:38em">{E(auto)}</p>'
     def team_link(c): return f'<a href="{R}teams/{T[c]["slug"]}/index.html">{E(T[c]["name"])}</a>'
     meant = "".join(f'<div style="flex:1 1 240px"><b class="d" style="font-size:28px">{E(T[c]["name"])}: {O[c]["top6"]}%</b><p style="margin:4px 0 0;color:#d5d6d9">top-6 odds now · {seed(c)} at {rec(c)}</p></div>' for c in (w, l))
     crumbs = f'<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}last-night/index.html">Games</a><span>/</span>{team_link(a)}<span>at</span>{team_link(h)}</nav>'
-    kicker = f'<p class="k">Final{" · OT" if g["ot"] else ""} · {WEEKDAY(g["date"])} · {E(city)}</p>'
+    kicker = f'<p class="k">Final{" · " + ot_label(g) if g["ot"] else ""} · {WEEKDAY(g["date"])} · {E(city)}</p>'
     names = f'<span style="color:{"#111214" if w==a else "#8a8c92"}">{E(T[a]["name"])} {g["as_"]}</span><span style="color:{"#111214" if w==h else "#8a8c92"}">{E(T[h]["name"])} {g["hs"]}</span>'
     v = g["video"]
     # three actions under every recap: watch the Short, subscribe on YouTube, subscribe to the newsletter
