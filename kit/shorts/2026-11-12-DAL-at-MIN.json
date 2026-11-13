@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-12-DAL-MIN.html",
+  "team": "MIN",
+  "home": true,
+  "number": "1",
+  "player": "LaMelo Ball",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 1.0128,
+    "ape": 1.0,
+    "mass": 0.9092
+  },
+  "build_note": "Listed 6-7, 180 lb (RealGM); no reliable wingspan reported, arms at a 1.0 ratio",
+  "kicker": "TIMBERWOLVES 133 · MAVERICKS 94 · NOV 12",
+  "hook": [
+    "LaMelo from 31 feet",
+    "in a 39-point rout"
+  ],
+  "clock": "Q3 · 11:17",
+  "us": "MIN",
+  "them": "DAL",
+  "score_before": [
+    67,
+    53
+  ],
+  "score_make": [
+    70,
+    53
+  ],
+  "stamp": "THREE",
+  "beat": [
+    "Wolves up 17 in the 3rd.",
+    "A 17–4 run made it 84–56."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Wolves",
+    "them": "Mavericks",
+    "us_pts": 133,
+    "them_pts": 94
+  },
+  "star": {
+    "name": "LaMelo Ball",
+    "big": 22,
+    "big_label": "points in 25 minutes",
+    "lines": [
+      "6 of 10 from three",
+      "9 assists, a season high"
+    ]
+  },
+  "story": "Ball and Bones Hyland made 11 of 16 threes. Minnesota led by 44 and won its fifth straight.",
+  "aria": "Original illustration of LaMelo Ball's 31-foot 3-pointer with 11 minutes 17 seconds left in the third quarter that made it 70–53 against Dallas at Target Center. Not traced from footage, not to scale."
+}

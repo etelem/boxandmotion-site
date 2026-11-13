@@ -1,0 +1,104 @@
+{
+ "headline": "Ball and Hyland make 11 threes in a 39-point win",
+ "dek": "LaMelo Ball and Bones Hyland made 11 threes. Minnesota won by 39.",
+ "three": [
+  [
+   "Ball: 6 threes and 9 assists",
+   "16 points by halftime, 22 in 25 minutes. He sat most of the fourth."
+  ],
+  [
+   "Up 15 at the half, then won the third 36–17",
+   "Hyland and Ball combined for 46 of 133."
+  ],
+  [
+   "Won it from deep and on the glass",
+   "Rebounds 50–38; assists 33–26. Dallas made 13 of 48 threes."
+  ]
+ ],
+ "battle": [
+  [
+   "Rebounds",
+   50,
+   38
+  ],
+  [
+   "Assists",
+   33,
+   26
+  ],
+  [
+   "Threes made",
+   15,
+   13
+  ]
+ ],
+ "battle_labels": [
+  "MIN",
+  "DAL"
+ ],
+ "top": [
+  [
+   "Bones Hyland",
+   "MIN",
+   "off the bench, 5 of 6 from three, 8 assists",
+   24
+  ],
+  [
+   "LaMelo Ball",
+   "MIN",
+   "6 of 10 from three, 9 assists",
+   22
+  ],
+  [
+   "Ayo Dosunmu",
+   "MIN",
+   "8 of 15, 2 threes",
+   18
+  ],
+  [
+   "Jaden McDaniels",
+   "MIN",
+   "7 of 12, 9 rebounds",
+   16
+  ]
+ ],
+ "linescore": {
+  "away": [
+   26,
+   26,
+   17,
+   25
+  ],
+  "home": [
+   34,
+   33,
+   36,
+   30
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-12-DAL-at-MIN.json",
+ "loser": {
+  "top": [
+   [
+    "Zaccharie Risacher",
+    "DAL",
+    "off the bench · 4 of 8 from three",
+    22
+   ],
+   [
+    "Naji Marshall",
+    "DAL",
+    "off the bench · 4 of 4 FT",
+    13
+   ],
+   [
+    "Cooper Flagg",
+    "DAL",
+    "5 of 12 · had 43 in his last game",
+    12
+   ]
+  ],
+  "source": "box score"
+ }
+}

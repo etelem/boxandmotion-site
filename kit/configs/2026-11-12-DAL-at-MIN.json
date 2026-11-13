@@ -1,0 +1,174 @@
+{
+  "team": "MIN",
+  "D": "  const D = {\n    date: 'Thu, Nov 12, 2026',\n    us: 133, them: 94, record: '9–3', usName: 'Timberwolves', themName: 'Mavericks',\n    quarters: [[34, 26], [33, 26], [36, 17], [30, 25]],\n    leadUs: 44, leadThem: 5,\n    star: {name: 'LaMelo Ball', stats: [['Points', 22, 30], ['Threes made of 10', 6, 10], ['Assists (season high)', 9, 10]]},\n    scorers: [\n      {name: 'Bones Hyland', pts: 24, note: 'off the bench · 5 of 6 from three · 8 assists'},\n      {name: 'LaMelo Ball', pts: 22, note: '6 of 10 from three · 9 assists'},\n      {name: 'Ayo Dosunmu', pts: 18, note: '8 of 15 · 2 threes'},\n      {name: 'Jaden McDaniels', pts: 16, note: '7 of 12 · 9 rebounds'},\n      {name: 'Jonathan Kuminga', pts: 14, note: '8 rebounds · 5 assists'},\n    ],\n    edges: [\n      {label: 'Field-goal percentage', us: 58, them: 37, unit: '%'},\n      {label: 'Rebounds', us: 50, them: 38},\n      {label: 'Assists', us: 33, them: 26},\n      {label: 'Threes made', us: 15, them: 13},\n    ],\n    gaps: [\n    ],\n    next: {opp: 'vs Bulls', when: 'Sat, Nov 14, 8:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "LaMelo Ball's 31-foot 3-pointer 43 seconds into the third quarter that made it 70–53, the start of a 17–4 Minnesota run. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Ball from 31",
+    "subP": "Ball from 31 feet, 11:17 in the 3rd",
+    "subL": "LaMelo Ball from 31 feet with 11:17 left in the third",
+    "m0": "Wolves +14",
+    "m1": "Wolves +17",
+    "num": "1",
+    "cap1": "Ball from 31 feet. Wolves by 17.",
+    "cap2": "70–53, and a 17–4 run was on.",
+    "clock": [
+      685,
+      677
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Timberwolves vs Mavericks Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Timberwolves 133, Mavericks 94 · Nov 12, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Timberwolves vs.', 'Mavericks'] : ['Timberwolves vs. Mavericks']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Ball and Hyland: 11 threes.', 'Minnesota by 39.'] : ['LaMelo Ball and Bones Hyland made 11 threes. Minnesota won by 39.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Timberwolves improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Fifth straight win'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Up 15 at the half,', 'won the 3rd 36–17'] : ['Up 15 at the half, then won the third 36–17']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Timberwolves ${D.leadUs}, Mavericks ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Timberwolves’ margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Ball: 6 threes,', '9 assists'] : ['Ball: 6 threes and 9 assists']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['16 by halftime, 22 in', '25 minutes.'] : ['16 points by halftime, 22 in 25 minutes. He sat most of the fourth.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Hyland and Ball:', '46 of the 133'] : ['Hyland and Ball combined for 46 of 133']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 30;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it from deep', 'and on the glass'] : ['Won it from deep and on the glass']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Timberwolves in blue, Mavericks in gray.', 'Dallas made 13 of 48 threes.'] : ['Timberwolves in blue, Mavericks in gray. Dallas made 13 of 48 threes.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'Third in the West'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Bulls’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '1–9';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Without Anthony Edwards.', 'Seventh straight win over Dallas.'] : ['Without Anthony Edwards, and a seventh straight win over Dallas.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Timberwolves 133 · Mavericks 94 · Nov 12'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Ball from 31'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Ball'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 65;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+3', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "T(board, bx + 24, by + 38, 'Q3', 'b m', 24);"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 272, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 304, ly, D.themName"
+    ]
+  ],
+  "aria": "Animated recap of the Timberwolves' 133 to 94 home win over the Mavericks: LaMelo Ball's 31-foot 3-pointer with 11:17 left in the third quarter that made it 70 to 53, quarter-by-quarter scoring, Ball's 22 points, 6 threes and 9 assists, the top scorers, how the Timberwolves won, and the next game at home against Chicago.",
+  "notes": [
+    "Box score from the Timberwolves' 133–94 home win over the Dallas Mavericks at Target Center on Nov 12, 2026, from the Land of Basketball box score, checked against the FOX Sports box score and play-by-play, with game details from the Associated Press (via ABC News and WRAL) and the Dallas Sports Journal. All 133 Minnesota points and all 94 Dallas points are accounted for in the box score, and the quarter scores add up to both totals (67–52 at the half and 103–69 after three, matching the AP). Team totals (field goals 52 of 90 to 35 of 94, threes 15 of 32 to 13 of 48, rebounds 50–38, assists 33–26) are from the box score. Minnesota's 44-point lead (129–85 with 2:47 left) and Dallas's 5-point lead (24–19 late in the first quarter) are read from the FOX Sports play-by-play; the AP also gives the 44. Records and ranks are from the site's standings after Thursday's games: Minnesota 9–3 (third in the West), Dallas 7–5, Chicago 1–9.",
+    "Dallas led 20–16 late in the first quarter before Bones Hyland checked in; Minnesota outscored the Mavericks 18–6 the rest of the quarter (Dallas Sports Journal; FOX Sports play-by-play). Ball scored 16 points in the first half and 10 in the second quarter, sat all but 2:49 of the fourth, and finished with a season-high 9 assists (AP; Dallas Sports Journal). Ball and Hyland made 11 of 16 threes; the rest of the team made 4 of 16 (Dallas Sports Journal). Cooper Flagg, who scored 43 against Indiana in his previous game, was held to 12 (AP). It was Minnesota's fifth straight win, its most lopsided of the season and its seventh straight win over Dallas; it ended the Mavericks' three-game winning streak (AP). Anthony Edwards was inactive (box score). Minnesota hosts Chicago on Saturday, Nov 14 at 8:00 PM ET (the site's schedule; TickPick lists 7:00 PM Central at Target Center).",
+    "The play of the game is an original illustration of LaMelo Ball's 3-pointer from 31 feet, 43 seconds into the third quarter, assisted by Jonathan Kuminga, that made it 70–53 (FOX Sports play-by-play has it at 11:17 after a Flagg free throw made it 67–53; the Dallas Sports Journal gives the distance). It began a 17–4 run that made it 84–56, capped by Ball's alley-oop to Rudy Gobert (AP; FOX Sports play-by-play). The play-by-play calls it a jump shot; the recaps don't describe the move further, so it is drawn as the template's plain pull-up. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Minnesota Timberwolves or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Ball’s listed 6-foot-7 and 180 pounds (RealGM), in Minnesota's home white with No. 1 (Heavy). No wingspan from a reliable measurement is reported, so his arms are drawn at a 1.0 ratio. He has no approved look on file yet, so he is drawn as a team-colour silhouette in the kit. It is an original silhouette with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "player": "LaMelo Ball",
+    "home": true,
+    "tall": 1.0128,
+    "ape": 1.0,
+    "mass": 0.9092,
+    "label": "LaMelo Ball, listed 6-7, 180 lb, reported wingspan equal to his height"
+  },
+  "loser_top": [
+    [
+      "Zaccharie Risacher",
+      22,
+      "off the bench · 4 of 8 from three"
+    ],
+    [
+      "Naji Marshall",
+      13,
+      "off the bench · 4 of 4 FT"
+    ],
+    [
+      "Cooper Flagg",
+      12,
+      "5 of 12 · had 43 in his last game"
+    ]
+  ]
+}
