@@ -321,7 +321,7 @@ TONIGHT_DAY = S["upcoming"][0][0] if S["upcoming"] else None
 tonight = "".join(f'<a class="tn" href="teams/{T[h]["slug"]}/index.html" data-teams="{a} {h}"><span class="tt">{tm}</span><span class="tteams"><span><i class="dot" style="{dot2(a)}"></i>{E(T[a]["name"])}</span><span class="at">at</span><span><i class="dot" style="{dot2(h)}"></i>{E(T[h]["name"])}</span></span></a>'
                   for day, tm, a, h in S["upcoming"] if day == TONIGHT_DAY)
 home = f'''<section class="hero">
-<div><p class="k">Unofficial · drawn, not filmed</p>
+<div>
 <h1 class="h1">More than the <b>box score.</b></h1>
 <p class="hp">The box score tells you who scored. We show you how the game was won: the run, the matchup, the play that decided it. Plus <a href="learn/index.html">Learn the Game</a> and <a href="newsletter/index.html">The Sunday Box</a>.</p>
 <div class="ctas"><a class="pill or" href="last-night/index.html">See last night →</a><a class="pill" href="learn/index.html">Learn the game</a></div></div>
