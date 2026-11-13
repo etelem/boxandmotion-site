@@ -90,6 +90,26 @@ def official_links(g):
             f'<div class="row" style="gap:10px"><a class="pill on" href="{hl}" target="_blank" rel="noopener">▶ {"Full game highlights (NBA)" if L.get("highlights") else "Game highlights on the NBA\'s channel"}</a>'
             f'<a class="pill" href="{pg}" target="_blank" rel="noopener">▶ {E(pgl)}</a></div></section>')
 
+def watch_links(g):
+    """Under the recap (Elan, Nov 13): one quiet "Watch" list with our Short and the official NBA highlights and postgame
+    interviews (direct links from data/links.json when we have them, otherwise a search for that game), then a small
+    subscribe line. Replaces the three big buttons and the separate "Official video" section."""
+    L = LINKS.get(g["key"], {}); v = g["video"]
+    day = datetime.date.fromisoformat(g["date"]).strftime("%B %-d %Y")
+    w, l = g["win"], g["lose"]
+    hl = f'https://www.youtube.com/watch?v={L["highlights"]}' if L.get("highlights") else yt(g)
+    pg = (f'https://www.youtube.com/watch?v={L["postgame"]}' if L.get("postgame") else
+          "https://www.youtube.com/results?search_query=" + quote_plus(f'{T[w]["name"]} {T[l]["name"]} postgame interviews {day}'))
+    def row(href, title, src):
+        return (f'<a class="wrow" href="{href}" target="_blank" rel="noopener"><span class="wplay">▶</span>'
+                f'<span class="wt">{E(title)}</span><span class="ws">{E(src)} ↗</span></a>')
+    rows = (row(f"https://youtube.com/shorts/{v}", "Our recap Short", "@boxandmotion") if v else "")
+    rows += row(hl, "Full game highlights", "NBA" if L.get("highlights") else "NBA · search")
+    rows += row(pg, L.get("postgame_label") or "Postgame interviews", "YouTube" if L.get("postgame") else "YouTube · search")
+    return (f'<div class="watch"><p class="k" style="margin:0 0 2px">Watch</p>{rows}'
+            f'<p class="wfine"><a href="https://www.youtube.com/@boxandmotion?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube</a>'
+            f'<span>·</span><a href="{NEWSLETTER}" target="_blank" rel="noopener">Get the newsletter</a></p></div>')
+
 LOGO = '<svg width="28" height="28" viewBox="0 0 100 100" aria-hidden="true"><rect x="9" y="9" width="82" height="82" rx="9" fill="none" stroke="#111214" stroke-width="8"/><path d="M24 24L40 40M40 24L24 40" stroke="#111214" stroke-width="8" stroke-linecap="round"/><path d="M33 50C34 62 42 69 53 69" fill="none" stroke="#FF5A1F" stroke-width="6.5" stroke-linecap="round" stroke-dasharray="0 10.5"/><circle cx="68" cy="68" r="9.5" fill="none" stroke="#FF5A1F" stroke-width="7.5"/></svg>'
 FAVICON = "data:image/svg+xml," + quote_plus(LOGO.replace('width="28" height="28" ', '').replace('aria-hidden="true"', 'xmlns="http://www.w3.org/2000/svg"')).replace("+", "%20")
 
@@ -461,10 +481,7 @@ for g in GAMES:
     names = f'<span style="color:{"#111214" if w==a else "#8a8c92"}">{E(T[a]["name"])} {g["as_"]}</span><span style="color:{"#111214" if w==h else "#8a8c92"}">{E(T[h]["name"])} {g["hs"]}</span>'
     v = g["video"]
     # three actions under every recap: watch the Short, subscribe on YouTube, subscribe to the newsletter
-    yt_btn = ('<div style="display:flex;flex-direction:column;gap:8px;width:100%">'
-              + (f'<a class="pill cta-btn" style="background:#FF0033;border-color:#FF0033;color:#fff" href="https://youtube.com/shorts/{v}" target="_blank" rel="noopener">▶ Watch on YouTube</a>' if v else '')
-              + '<a class="pill cta-btn" href="https://www.youtube.com/@boxandmotion?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube</a>'
-              + f'<a class="pill hot cta-btn" href="{NEWSLETTER}" target="_blank" rel="noopener">✉ Subscribe to the newsletter</a></div>')
+    yt_btn = watch_links(g)
     if g["reel"]:
         # our drawn recap plays right on the page (no YouTube frame); the YouTube Short is one tap away
         hero = f'''<span class="tag gold" style="align-self:flex-start;margin-bottom:-28px">▶ Our recap video · 66 seconds</span>
@@ -488,7 +505,7 @@ for g in GAMES:
     else:
         hero = f'''<section class="sec" style="gap:18px">{kicker}
 <h1 class="h1" style="display:flex;flex-wrap:wrap;gap:4px 28px;font-size:clamp(48px,8vw,100px)">{names}</h1>
-{lede}{lsh}</section>'''
+{lede}{lsh}{yt_btn}</section>'''
     # the other side: where it got away for the losing team, their top performers, and their next game
     lose_html = ""
     if ls:
@@ -507,8 +524,7 @@ for g in GAMES:
 {hero}
 {feat}
 <section class="card cta"><div style="display:flex;flex-wrap:wrap;gap:20px;flex:1 1 400px"><div style="flex-basis:100%"><p class="k">What it meant</p></div>{meant}</div>
-<a class="pill hot" href="{R}odds/index.html">All playoff odds</a></section>
-{official_links(g)}'''
+<a class="pill hot" href="{R}odds/index.html">All playoff odds</a></section>'''
     page(f"games/{g['slug']}/index.html", f"{T[a]['name']} {g['as_']}, {T[h]['name']} {g['hs']} · Box & Motion Hoops", body, active="Last Night",
          desc=(f["dek"] if f else auto))
 

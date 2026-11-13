@@ -144,3 +144,13 @@ footer a{color:var(--dim)}
 .games[data-images=top] .gcard.calm.hero{grid-column:1/-1}
 [data-images=top] .gcard.calm:not(.hero) .gimg,[data-images=none] .gcard.calm .gimg{display:none}
 @media (min-width:900px){[data-images=top] .gcard.calm.hero{flex-direction:row}[data-images=top] .gcard.calm.hero .gimg{flex:0 0 58%;aspect-ratio:auto;min-height:300px;border-bottom:0;border-right:4px solid var(--team)}[data-images=top] .gcard.calm.hero .gbody{justify-content:center;padding:28px}[data-images=top] .gcard.calm.hero .ghead{font-size:28px}}
+
+/* game page "Watch" list (Nov 13): quiet rows instead of big buttons */
+.watch{display:flex;flex-direction:column;width:100%}
+.wrow{display:flex;align-items:center;gap:10px;padding:11px 2px;border-top:1px solid var(--line);color:var(--ink);text-decoration:none;font-size:16px}
+.wrow:last-of-type{border-bottom:1px solid var(--line)}
+.wrow:hover .wt{text-decoration:underline}
+.wplay{width:26px;height:26px;border-radius:50%;background:#f1f1ef;display:grid;place-items:center;font-size:10px;padding-left:2px;box-sizing:border-box;flex:none}
+.wt{font-weight:600;flex:1}.ws{color:var(--dim);font-size:13px;white-space:nowrap}
+.wfine{margin:10px 0 0;font-size:14px;color:var(--dim);display:flex;gap:8px;flex-wrap:wrap}
+.wfine a{color:var(--dim);text-decoration:underline;text-underline-offset:3px}.wfine a:hover{color:var(--ink)}
