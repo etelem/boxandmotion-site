@@ -110,7 +110,7 @@ def watch_links(g):
                 f'<span class="wt">{E(title)}</span><span class="ws">{E(src)} ↗</span></a>')
     rows = row(hl, "Full game highlights", "NBA" if L.get("highlights") else "NBA · search")
     rows += row(pg, L.get("postgame_label") or "Postgame interviews", "YouTube" if L.get("postgame") else "YouTube · search")
-    rows += (row(f"https://youtube.com/shorts/{v}", "Share it: our 27-second Short", "@boxandmotion", ours=True) if v else "")
+    rows += (row(f"https://youtube.com/shorts/{v}", "Share our Short", "@boxandmotion", ours=True) if v else "")
     return (f'<div class="watch"><p class="k" style="margin:0 0 2px">Watch</p>{rows}'
             f'<p class="wfine"><span class="wmark">{MARK}</span><a href="{NEWSLETTER}" target="_blank" rel="noopener">Get The Sunday Box, our free Sunday newsletter</a></p>'
             f'<p class="wfine"><span class="wmark">{MARK}</span><a href="https://www.youtube.com/@boxandmotion?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to @boxandmotion on YouTube</a></p></div>')
