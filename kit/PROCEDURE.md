@@ -71,6 +71,9 @@ Game key = `YYYY-MM-DD-AWAY-HOME`, e.g. `2026-11-06-POR-LAL` (team codes from da
      "Curry's 41 wins it in overtime"). No hype beyond the facts, and nothing that isn't in the config.
    - Everything else comes from the config's verified numbers and captions: the dek, the three things that decided it,
      where it was won, top performers and the quarter line score, with an OT column when needed.
+   - Card image: `python3 kit/make_posters.py <key>` (from the repo root) saves `src/posters/<key>-light.jpg`, the play of
+     the game on the site's light court, framed by play type. The site shows it on the night's top game card (or on a
+     visitor's followed team's game). If it fails, carry on: the card simply shows no image. Commit it with the reel.
 7. **The YouTube Short (this run's ONE most notable game only).** Pick the game; its play must be a drive (layup or floater,
    with or without an and-one) or a jump shot (two or three). If its play is another kind (free throw, dunk, block, lob), use
    this run's next most notable game whose play fits; if none fits, post no Short and say so.

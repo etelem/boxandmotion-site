@@ -1,5 +1,5 @@
 """Build the Box & Motion Hoops static site from data/*.json into dist/."""
-import json, os, shutil, datetime
+import json, os, re, shutil, datetime
 from html import escape as E
 from urllib.parse import quote_plus
 
@@ -137,18 +137,63 @@ def page(path, title, body, active=None, desc="Every NBA game, explained in moti
 def rel(depth): return "../" * depth
 
 # ---- reusable bits ----
-def game_card(g, R, show_mine=True):
-    w, l = g["win"], g["lose"]
-    wt = T[w]
+# Game-card images (Elan, Nov 13): "top" = the image only on each night's top card (Last Night, home, archive days);
+# "all" = an image on every card. Switching is just this line + a rebuild; every recap gets its poster either way
+# (kit/make_posters.py, run by the morning recap runs).
+GAME_IMAGES = "top"
+
+def _cfg_for(key):
+    p = f"kit/configs/{key[:10]}-{key[11:14]}-at-{key[15:18]}.json"
+    return json.load(open(p)) if os.path.isfile(p) else None
+
+def story_score(g):
+    """Which game leads the night (Nov 13): facts the recap already verified, never guessed.
+    Close finish (<=3 or OT +3, 4-6 +2), comeback (winner down 15+ +3, 10-14 +2), big night (40+ or a triple-double +2,
+    50+ +3), upset (winner's record clearly worse: 3+ fewer net wins +2), milestone in the verified headline (streak,
+    season/career high +1). Ties: the game that got a YouTube Short, then the closer finish."""
+    margin = abs(g["as_"] - g["hs"]); pts = 3 if (margin <= 3 or g["ot"]) else 2 if margin <= 6 else 0
+    c = _cfg_for(g["key"]); D = c["D"] if c else ""
+    def num(k):
+        m = re.search(rf"\b{k}: *(\d+)", D); return int(m.group(1)) if m else 0
+    if c:
+        deficit = num("leadThem") if c.get("team") == g["win"] else num("leadUs")
+        pts += 3 if deficit >= 15 else 2 if deficit >= 10 else 0
+        stats = {k: int(v) for k, v in re.findall(r"\['(Points|Rebounds|Assists|Steals|Blocks)', (\d+)", D)}
+        sp = stats.get("Points", 0); tens = sum(1 for v in stats.values() if v >= 10)
+        pts += 3 if sp >= 50 else 2 if (sp >= 40 or tens >= 3) else 0
+    def net(t):
+        w, l = (int(x) for x in re.split(r"[-–]", g["rec"][t])); return w - l
+    if net(g["win"]) <= net(g["lose"]) - 3: pts += 2
+    head = ((S["featured"].get(g["key"]) or {}).get("headline") or "").lower()
+    if any(w in head for w in ("straight", "streak", "season-high", "season high", "career-high", "career high")): pts += 1
+    return (pts, 1 if g["video"] else 0, -margin)
+
+def games_block(games, R, show_mine=True, images=None):
+    """A night's games, best story first; the first card shown is the top card (with its image when images is "top").
+    site.js moves a visitor's followed teams to the front and re-picks the top card on their screen."""
+    gs = sorted(games, key=story_score, reverse=True)
+    if os.environ.get("BM_DEBUG"): print([(g["key"], story_score(g)) for g in gs])
+    cards = "".join(game_card(g, R, show_mine=show_mine, hero=(i == 0)) for i, g in enumerate(gs))
+    return f'<div class="grid g3 games" data-games data-images="{images or GAME_IMAGES}">{cards}</div>'
+
+def game_card(g, R, show_mine=True, img_on=True, hero=False):
+    """Calm game card (Nov 12): white card; the recap's play-of-the-game frame as the image (src/posters/<key>.jpg, like a
+    YouTube thumbnail); the story headline; team colors only as a thin edge and small dots; one action (tap the card)."""
+    w = g["win"]; wt = T[w]
+    href = f"{R}games/{g['slug']}/index.html"
+    head = (S["featured"].get(g["key"]) or {}).get("headline") or f"{wt['name']} beat the {T[g['lose']]['name']}"
     lines = ""
     for c, sc in ((g["away"], g["as_"]), (g["home"], g["hs"])):
-        lines += f'<div class="sline {"win" if c==w else "lose"}"><span>{E(T[c]["name"])} <span class="dim" style="font-size:13px;font-weight:500">{g["rec"][c]}</span></span><span>{sc}</span></div>'
-    tag = '<span class="tag gold">▶ Recap video</span>' if (g["video"] or g["reel"]) else ('<span class="tag gold">Featured recap</span>' if g["featured"] else "")
-    return f'''<div class="card gcard" data-teams="{g['away']} {g['home']}">
-<a class="gtop" href="{R}games/{g['slug']}/index.html" style="background:radial-gradient(120% 140% at 100% 0%,{wt['c1']} 0%,{wt['dark']} 75%)">
-<span class="k">Final{' · OT' if g['ot'] else ''} · {WEEKDAY(g['date'])}</span><span class="d" style="font-size:30px">{E(wt['name'])} {max(g['as_'],g['hs'])}–{min(g['as_'],g['hs'])}</span></a>
-<div class="gbody"><div class="row" style="gap:6px">{'<span class="tag hot mine-tag hidden">Your team</span>' if show_mine else ''}{tag}</div>{lines}
-<div class="row" style="gap:8px;margin-top:6px"><a class="pill on sm" href="{R}games/{g['slug']}/index.html">{'▶ Watch recap' if (g['video'] or g['reel']) else 'Recap'}</a><a class="pill sm" href="{yt(g)}" target="_blank" rel="noopener">▶ Highlights</a></div></div></div>'''
+        lines += (f'<div class="sline {"win" if c==w else "lose"}"><span style="display:flex;align-items:center;gap:8px">'
+                  f'<i class="tdot" style="background:{T[c]["c1"]}"></i>{E(T[c]["name"])} <span class="dim rec">{g["rec"][c]}</span></span><span>{sc}</span></div>')
+    has_vid = g["video"] or g["reel"]
+    poster = img_on and os.path.isfile(f"src/posters/{g['key']}-light.jpg")
+    img = (f'<a class="gimg" href="{href}" aria-label="Watch the recap: {E(head)}"><img src="{R}posters/{g["key"]}-light.jpg" alt="" loading="lazy">'
+           f'<span class="gplay">▶</span></a>' if poster else '')
+    return f'''<div class="card gcard calm{' hero' if hero else ''}" data-teams="{g['away']} {g['home']}" data-key="{g['key']}" style="--team:{wt['c1']}">
+{img}<div class="gbody"><div class="row" style="gap:8px;justify-content:space-between"><span class="k gk">Final{' · OT' if g['ot'] else ''} · {WEEKDAY(g['date'])}</span>{'<span class="tag hot mine-tag hidden">Your team</span>' if show_mine else ''}</div>
+<a class="ghead" href="{href}">{E(head)}</a>{lines}
+<div class="row" style="gap:14px;margin-top:4px"><a class="glink" href="{href}">{'▶ Watch the recap' if has_vid else 'Read the recap'}</a><a class="glink dim" href="{yt(g)}" target="_blank" rel="noopener">Highlights ↗</a></div></div></div>'''
 
 def star_btn(c, big=False, light=False):
     style = f"border-color:{T[c]['c2']};color:#fff" if light else ""
@@ -244,6 +289,7 @@ def player_card(R, P, big=False):
 shutil.rmtree(OUT, ignore_errors=True)  # start clean so removed pages disappear
 if os.path.isdir("reels"): shutil.copytree("reels", f"{OUT}/reels")
 if os.path.isdir("src/anim"): shutil.copytree("src/anim", f"{OUT}/anim")
+if os.path.isdir("src/posters"): shutil.copytree("src/posters", f"{OUT}/posters")
 if os.path.isdir("src/audio"): shutil.copytree("src/audio", f"{OUT}/audio")
 os.makedirs(f"{OUT}/assets", exist_ok=True)
 client = {"teams": {c: {"name": T[c]["name"], "slug": T[c]["slug"], "c1": T[c]["c1"], "c2": T[c]["c2"], "dark": T[c]["dark"],
@@ -273,7 +319,7 @@ home = f'''
 <section class="sec">
  <div class="between"><div class="sec" style="gap:6px"><p class="k">{WEEKDAY(LAST_DATE)}</p><h2 class="h2">Last night</h2></div>
  <div class="tabs"><button class="pill" data-mode="mine">Your teams</button><button class="pill" data-mode="all">All {len(LAST)} games</button></div></div>
- <div class="grid g3" data-games>{"".join(game_card(g, R) for g in LAST)}</div>
+ {games_block(LAST, R)}
  <p class="dim none-note hidden" style="margin:0">None of your teams played last night. <button class="pill sm" data-mode="all">Show all games</button></p>
  <a href="last-night/index.html" style="font-weight:600">All of last night and earlier this week →</a>
 </section>
@@ -487,11 +533,12 @@ def calendar(R, sel=None):
 
 # ---- last night ----
 R = "../"
+LN_CARDS = games_block(LAST, R)
 earlier = sorted({g["date"] for g in GAMES if g["date"] != LAST_DATE and g["date"] >= WEEK_START}, reverse=True)
-ear = "".join(f'<section class="sec"><p class="k">{WEEKDAY(d)}</p><div class="grid g3" data-games>{"".join(game_card(g, R) for g in GAMES if g["date"]==d)}</div></section>' for d in earlier)
+ear = "".join(f'<section class="sec"><p class="k">{WEEKDAY(d)}</p>{games_block([g for g in GAMES if g["date"]==d], R, images="none")}</section>' for d in earlier)
 body = f'''<div class="between"><div class="sec" style="gap:8px"><p class="k">{WEEKDAY(LAST_DATE)} · {len(LAST)} games</p><h1 class="h1">Last night</h1></div>
 <div class="tabs"><button class="pill" data-mode="mine">Your teams</button><button class="pill" data-mode="all">All games</button><a class="pill" href="#archive">📅 Archive</a></div></div>
-<section class="sec"><div class="grid g3" data-games>{"".join(game_card(g, R) for g in LAST)}</div><p class="dim none-note hidden" style="margin:0">None of your teams played last night. <button class="pill sm" data-mode="all">Show all games</button></p></section>
+<section class="sec">{LN_CARDS}<p class="dim none-note hidden" style="margin:0">None of your teams played last night. <button class="pill sm" data-mode="all">Show all games</button></p></section>
 {'<h2 class="h2">Earlier this week</h2>' + ear if ear else ''}
 {calendar(R)}'''
 page("last-night/index.html", "Last night · Box & Motion Hoops", body, active="Last Night")
@@ -506,7 +553,7 @@ for i, d in enumerate(DATES):
     body = f'''<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}last-night/index.html">Games</a><span>/</span><span>{WEEKDAY(d)}</span></nav>
 <div class="between"><div class="sec" style="gap:8px"><p class="k">{len(day_games)} game{'s' if len(day_games) != 1 else ''}</p><h1 class="h1">{WEEKDAY(d)}</h1></div>
 <div class="row">{prev_l}{next_l}</div></div>
-<section class="sec"><div class="grid g3">{"".join(game_card(g, R, show_mine=False) for g in day_games)}</div></section>
+<section class="sec">{games_block(day_games, R, show_mine=False).replace(" data-games", "")}</section>
 {calendar(R, d)}'''
     page(f"days/{d}/index.html", f"NBA games, {WEEKDAY(d)} · Box & Motion Hoops", body, active="Last Night",
          desc=f"Every NBA result from {WEEKDAY(d)}, with recaps in motion.")

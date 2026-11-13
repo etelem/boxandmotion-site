@@ -49,6 +49,14 @@
   function filterGames(){
     document.querySelectorAll('[data-games]').forEach(function(wrap){
       var useMine=mode==='mine'&&favs.length>0, shown=0;
+      // Top card: the visitor's followed teams go first (best story among them), then everyone else in story order
+      if(wrap.hasAttribute('data-images')){
+        var cards=[].slice.call(wrap.querySelectorAll('[data-teams]'));
+        cards.forEach(function(g,i){if(!g.hasAttribute('data-i')) g.setAttribute('data-i',i)});
+        var isMine=function(g){return g.getAttribute('data-teams').split(' ').some(function(t){return favs.indexOf(t)>-1})};
+        cards.sort(function(x,y){return (isMine(y)-isMine(x))||(x.getAttribute('data-i')-y.getAttribute('data-i'))});
+        cards.forEach(function(g){wrap.appendChild(g)});
+      }
       wrap.querySelectorAll('[data-teams]').forEach(function(g){
         var ts=g.getAttribute('data-teams').split(' ');
         var mine=ts.some(function(t){return favs.indexOf(t)>-1});
@@ -56,6 +64,10 @@
         var tag=g.querySelector('.mine-tag'); if(tag) tag.classList.toggle('hidden',!mine);
         if(!(useMine&&!mine)) shown++;
       });
+      if(wrap.hasAttribute('data-images')){
+        var first=null;
+        wrap.querySelectorAll('[data-teams]').forEach(function(g){var on=!first&&!g.classList.contains('hidden'); if(on) first=g; g.classList.toggle('hero',on)});
+      }
       var note=wrap.parentNode.querySelector('.none-note');
       if(note) note.classList.toggle('hidden',shown>0);
     });
