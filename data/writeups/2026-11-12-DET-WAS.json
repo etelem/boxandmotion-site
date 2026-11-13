@@ -1,0 +1,111 @@
+{
+ "headline": "Cade's career-high 52 wins it in double overtime",
+ "dek": "Cade Cunningham scored a career-high 52 in double overtime.",
+ "three": [
+  [
+   "Cade: 52 points, a career high",
+   "18 in the fourth, 12 in the two overtimes. 11 assists, no turnovers."
+  ],
+  [
+   "Up 3 at the half, tied 121–121 after four",
+   "Cunningham and Jenkins combined for 73 of the 144."
+  ],
+  [
+   "Won it on the break and at the line",
+   "Fast-break points 26–12; free throws made 33–26. Three Wizards scored 30 or more."
+  ]
+ ],
+ "battle": [
+  [
+   "Fast-break points",
+   26,
+   12
+  ],
+  [
+   "Free throws made",
+   33,
+   26
+  ],
+  [
+   "Turnovers forced",
+   16,
+   11
+  ],
+  [
+   "Steals",
+   10,
+   6
+  ]
+ ],
+ "battle_labels": [
+  "DET",
+  "WAS"
+ ],
+ "top": [
+  [
+   "Cade Cunningham",
+   "DET",
+   "16 of 25, 17 of 18 FT, 0 turnovers",
+   52
+  ],
+  [
+   "Daniss Jenkins",
+   "DET",
+   "6 of 11, 6 of 6 FT",
+   21
+  ],
+  [
+   "Ausar Thompson",
+   "DET",
+   "11 rebounds, 11 assists",
+   17
+  ],
+  [
+   "Duncan Robinson",
+   "DET",
+   "3 threes, 41 minutes",
+   13
+  ]
+ ],
+ "linescore": {
+  "away": [
+   33,
+   31,
+   30,
+   27,
+   23
+  ],
+  "home": [
+   32,
+   29,
+   29,
+   31,
+   19
+  ],
+  "ot": true
+ },
+ "source": "kit/configs/2026-11-12-DET-at-WAS.json",
+ "loser": {
+  "top": [
+   [
+    "Trae Young",
+    "WAS",
+    "14 assists · 17 of 17 FT",
+    37
+   ],
+   [
+    "Alex Sarr",
+    "WAS",
+    "12 of 14 · 4 threes",
+    30
+   ],
+   [
+    "Anthony Davis",
+    "WAS",
+    "15 rebounds · fouled out",
+    30
+   ]
+  ],
+  "source": "box score"
+ }
+}

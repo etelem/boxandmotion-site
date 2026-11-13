@@ -1,0 +1,179 @@
+{
+  "D": "  const D = {\n    date: 'Thu, Nov 12, 2026',\n    us: 144, them: 140, record: '8–3', usName: 'Pistons', themName: 'Wizards',\n    quarters: [[33, 32], [31, 29], [30, 29], [27, 31]],\n    leadUs: 11, leadThem: 10,\n    star: {name: 'Cade Cunningham', stats: [['Points', 52, 60], ['Free throws made of 18', 17, 18], ['Assists', 11, 15]]},\n    scorers: [\n      {name: 'Cade Cunningham', pts: 52, note: '16 of 25 · 17 of 18 FT · 0 turnovers'},\n      {name: 'Daniss Jenkins', pts: 21, note: '6 of 11 · 6 of 6 FT'},\n      {name: 'Ausar Thompson', pts: 17, note: '11 rebounds · 11 assists'},\n      {name: 'Duncan Robinson', pts: 13, note: '3 threes · 41 minutes'},\n      {name: 'Paul Reed', pts: 13, note: '11 rebounds · 5 of 9'},\n    ],\n    edges: [\n      {label: 'Fast-break points', us: 26, them: 12},\n      {label: 'Free throws made', us: 33, them: 26},\n      {label: 'Turnovers forced', us: 16, them: 11},\n      {label: 'Steals', us: 10, them: 6},\n    ],\n    gaps: [\n      {label: 'Points in the paint', us: 52, them: 62},\n      {label: 'Assists', us: 28, them: 33},\n    ],\n    next: {opp: 'at Heat', when: 'Sat, Nov 14, 8:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Cade Cunningham's baseline fadeaway with 25.3 seconds left in the second overtime that put the Pistons up 142–138. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "The fadeaway",
+    "subP": "Cade on the baseline, 25 seconds left",
+    "subL": "Cade Cunningham on the baseline, 25.3 seconds left in 2OT",
+    "m0": "Pistons +2",
+    "m1": "Pistons +4",
+    "num": "2",
+    "cap1": "Cade’s fadeaway. Pistons by 4.",
+    "cap2": "142–138 with 25.3 left in 2OT.",
+    "clock": [
+      33,
+      25
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Pistons at Wizards Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Pistons 144, Wizards 140 (2OT) · Nov 12, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Pistons at', 'Wizards'] : ['Pistons at Wizards']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Cade: a career-high 52', 'in double overtime.'] : ['Cade Cunningham scored a career-high 52 in double overtime.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Pistons improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Second straight win'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Up 3 at the half,', 'tied 121 after four'] : ['Up 3 at the half, tied 121–121 after four']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Pistons ${D.leadUs}, Wizards ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Pistons’ margin underneath. OTs: 11–11, 12–8."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Cade: 52,', 'a career high'] : ['Cade: 52 points, a career high']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['18 in the 4th, 12 in the OTs.', '11 assists, 0 turnovers.'] : ['18 in the fourth, 12 in the two overtimes. 11 assists, no turnovers.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Cade and Jenkins:', '73 of the 144'] : ['Cunningham and Jenkins combined for 73 of the 144']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 60;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it on the break', 'and at the line'] : ['Won it on the break and at the line']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Pistons in blue, Wizards in gray. Three', 'Wizards scored 30 or more.'] : ['Pistons in blue, Wizards in gray. Three Wizards scored 30 or more.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'Third in the East'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Heat’s record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '5–6';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Washington has lost 6 straight.', 'Detroit won Monday’s game 122–111.'] : ['Washington has lost 6 straight. Detroit won Monday’s meeting 122–111.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Pistons 144 · Wizards 140 · 2OT · Nov 12'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'The fadeaway'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Cade'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 60;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 170 : 200) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+2', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 120 * k, shotX + 80 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "T(board, bx + 24, by + 38, '2OT', 'b m', 24);"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 190, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 222, ly, D.themName"
+    ],
+    [
+      "['Points per quarter. Margin after each', 'quarter underneath.']",
+      "['Regulation by quarter, margin under.', 'Overtimes: 11–11, then 12–8.']"
+    ]
+  ],
+  "team": "DET",
+  "loser_top": [
+    [
+      "Trae Young",
+      37,
+      "14 assists · 17 of 17 FT"
+    ],
+    [
+      "Alex Sarr",
+      30,
+      "12 of 14 · 4 threes"
+    ],
+    [
+      "Anthony Davis",
+      30,
+      "15 rebounds · fouled out"
+    ]
+  ],
+  "aria": "Animated recap of the Pistons' 144 to 140 double-overtime road win at Washington: Cade Cunningham's baseline fadeaway with 25.3 seconds left in the second overtime that made it 142 to 138, quarter-by-quarter scoring, his career-high 52 points, the top scorers, how the Pistons won, and the next game at Miami.",
+  "notes": [
+    "Box score from the Pistons' 144–140 double-overtime road win over the Washington Wizards on Nov 12, 2026, from the Covers.com box score, with game details from the AP (via NBC Sports and Al Jazeera), Field Level Media (via Yardbarker), Pistons coverage on Yahoo Sports, ClutchPoints and SunStar. All 144 Pistons points and all 140 Wizards points are accounted for in the box score, and the quarter scores add up to both totals: 64–61 Detroit at the half, 94–90 after three, 121–121 after regulation (Covers.com). Overtime went 11–11 (132–132) and 12–8 (Field Level Media's scoring sequence; Covers.com's combined overtime column is 23–19). Biggest leads: Detroit 11, Washington 10; team stats (fast-break points, points in the paint, free throws, turnovers, steals) are from Covers.com. There were 20 lead changes (Yahoo Sports). Records and conference ranks are from the site's standings (data/season.json) after Thursday's games.",
+    "Cunningham set a career high with 52 (his previous best was 46, also against Washington, last season) on 16-of-25 shooting and 17 of 18 at the line, with 11 assists and no turnovers; per OptaSTATS he is the first player with 50 points and 10 assists and no turnovers since turnovers were first tracked in 1977-78 (AP). He had 22 after three quarters, 18 in the fourth (Yahoo Sports; Field Level Media) and 12 in the two overtimes (ClutchPoints). Ausar Thompson had his first career triple-double (17 points, 11 rebounds, 11 assists). Washington had three 30-point scorers (Trae Young 37, Anthony Davis 30, Alex Sarr 30) for the first time since the 1969 Baltimore Bullets (AP). It was Washington's sixth straight loss; Detroit beat the Wizards 122–111 on Monday (site scores). Detroit plays at Miami on Saturday at 8:00 PM ET (AP; Yahoo Sports).",
+    "How regulation and the first overtime ended: Cunningham's free throws made it 121–118 with under two seconds left and Young hit a 3 at the buzzer to tie it; Washington opened overtime with seven straight points to lead 128–121, Cunningham's 3 with 33 seconds left (Field Level Media; the AP says 30) tied it at 130, Duncan Robinson's long two (ruled a two on review) put Detroit up 132–130 with nine seconds left, and AJ Dybantsa's jumper tied it as time ran out (AP; Field Level Media; Yahoo Sports).",
+    "The play of the game is an original illustration of Cade Cunningham's baseline fadeaway jumper with 25.3 seconds left in the second overtime, which put Detroit up 142–138 after Bilal Coulibaly's dunk had cut it to 140–138 with 1:14 left (AP; Field Level Media; Al Jazeera). Young then made two free throws and Kevin Huerter's two free throws with about 11 seconds left made it 144–140 (Field Level Media). The fadeaway is drawn as a plain pull-up; the fade itself isn't animated. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Detroit Pistons or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The player in the play of the game is drawn to Cunningham’s listed 6-foot-6 and 220 pounds, with arms scaled to his reported 7-foot wingspan (CraftedNBA), in the Pistons' road kit with his look from the site's looks file. His No. 2 is from Yahoo Sports' coverage of his jersey. It is an original figure with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "player": "Cade Cunningham",
+    "home": false,
+    "tall": 1.0,
+    "ape": 1.0769,
+    "mass": 1.0116,
+    "label": "Cade Cunningham, listed 6-6, 220 lb, reported 7-0 wingspan"
+  }
+}

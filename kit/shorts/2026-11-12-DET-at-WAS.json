@@ -1,0 +1,58 @@
+{
+  "out": "short-2026-11-12-DET-WAS.html",
+  "team": "DET",
+  "home": false,
+  "number": "2",
+  "player": "Cade Cunningham",
+  "play_type": "jumper",
+  "three": false,
+  "build": {
+    "tall": 1.0,
+    "ape": 1.0769,
+    "mass": 1.0116
+  },
+  "build_note": "Listed 6-6, 220 lb, reported 7-0 wingspan (CraftedNBA)",
+  "kicker": "PISTONS 144 · WIZARDS 140 · 2OT · NOV 12",
+  "hook": [
+    "Cade's fadeaway",
+    "in double OT"
+  ],
+  "clock": "2OT · 0:25",
+  "us": "DET",
+  "them": "WAS",
+  "score_before": [
+    140,
+    138
+  ],
+  "score_make": [
+    142,
+    138
+  ],
+  "stamp": "FADEAWAY",
+  "beat": [
+    "Pistons by 4, 25 seconds left.",
+    "His 52 points: a career high."
+  ],
+  "final": {
+    "label": "FINAL · 2OT",
+    "us": "Pistons",
+    "them": "Wizards",
+    "us_pts": 144,
+    "them_pts": 140
+  },
+  "star": {
+    "name": "Cade Cunningham",
+    "big": 52,
+    "big_label": "points, a career high",
+    "lines": [
+      "11 assists, 0 turnovers",
+      "17 of 18 at the line"
+    ]
+  },
+  "story": "Tied 121 after regulation and 132 after one overtime. Detroit won the second 12–8; Washington's sixth straight loss.",
+  "aria": "Original illustration of Cade Cunningham's baseline fadeaway with 25.3 seconds left in the second overtime that put the Pistons up 142–138 at Washington. Not traced from footage, not to scale.",
+  "score_ft": [
+    142,
+    138
+  ]
+}
