@@ -5,73 +5,66 @@
   var favs=load();
   var BM=window.BM||{teams:{}};
   var root=document.body.getAttribute('data-root')||'';
+  function grad(c){var t=BM.teams[c];return t?'linear-gradient(90deg,'+t.c2+' 0 7px,transparent 7px),linear-gradient(120deg,'+t.c1+' 0%,'+t.dark+' 100%)':''}
 
-  function refreshStars(){
+  // phone menu
+  var burger=document.querySelector('[data-burger]'), menu=document.querySelector('[data-menu]');
+  if(burger&&menu) burger.addEventListener('click',function(){var o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o?'true':'false')});
+
+  // followed teams: stars, team-color fills (only for your teams), labels
+  function paint(){
     document.querySelectorAll('.star[data-team]').forEach(function(b){
       var on=favs.indexOf(b.getAttribute('data-team'))>-1;
-      b.classList.toggle('on',on);
-      b.setAttribute('aria-pressed',on?'true':'false');
+      b.classList.toggle('on',on); b.setAttribute('aria-pressed',on?'true':'false');
       var l=b.querySelector('.lbl'); if(l) l.textContent=on?'Following':'Follow';
     });
     document.querySelectorAll('tr[data-team]').forEach(function(r){r.classList.toggle('fav',favs.indexOf(r.getAttribute('data-team'))>-1)});
-    document.querySelectorAll('.favcount').forEach(function(e){e.textContent=favs.length?('★ My teams ('+favs.length+')'):'★ My teams'});
+    document.querySelectorAll('[data-team-card]').forEach(function(c){c.classList.toggle('is-mine',favs.indexOf(c.getAttribute('data-team-card'))>-1)});
+    document.querySelectorAll('[data-teams]').forEach(function(g){
+      var ts=g.getAttribute('data-teams').split(' '), mine=ts.filter(function(t){return favs.indexOf(t)>-1});
+      g.classList.toggle('is-mine',mine.length>0);
+      if(g.classList.contains('tn')) g.style.setProperty('--team-grad',mine.length?grad(mine[0]):'');
+    });
   }
   document.addEventListener('click',function(e){
     var b=e.target.closest('.star[data-team]'); if(!b) return;
     e.preventDefault();
     var t=b.getAttribute('data-team'), i=favs.indexOf(t);
     if(i>-1) favs.splice(i,1); else favs.push(t);
-    save(favs); refreshStars(); renderMine(); filterGames();
+    save(favs); paint(); renderMine(); filterGames();
   });
 
-  // Home: my teams cards
+  // Your Team page: one card per followed team, in its colors
   function renderMine(){
-    var box=document.getElementById('mine'); if(!box) return;
-    var empty=document.getElementById('mine-empty');
+    var box=document.getElementById('yt-cards'); if(!box) return;
+    var empty=document.getElementById('yt-empty');
     box.innerHTML='';
-    if(!favs.length){empty&&empty.classList.remove('hidden');return}
-    empty&&empty.classList.add('hidden');
+    if(empty) empty.classList.toggle('hidden',favs.length>0);
     favs.forEach(function(c){
       var t=BM.teams[c]; if(!t) return;
-      var a=document.createElement('a');
-      // calm card like the game cards (Nov 13): white, team color only as a thin top line and a dot
-      a.className='card tcard calm'; a.href=root+'teams/'+t.slug+'/index.html';
-      a.style.setProperty('--team',t.c1);
+      var a=document.createElement('a'); a.className='ytcard'; a.href=root+'teams/'+t.slug+'/index.html';
       var up=/^\+/.test(t.chg), down=/^[−-]\d/.test(t.chg);
-      a.innerHTML='<span class="trow1"><i class="tdot" style="background:'+t.c1+'"></i><span class="tname">'+t.name+'</span><span class="tstar" aria-label="Your team">★</span></span>'+
-        '<span class="trec">'+t.rec+' · '+t.seed+'</span>'+
-        '<span class="tline"><span class="dim">Last</span>'+t.last+'</span>'+
-        '<span class="tline"><span class="dim">Top-6 odds</span><b>'+t.top6+'%</b><span class="tchg'+(up?' up':down?' down':'')+'">'+t.chg+' this week</span></span>';
+      a.innerHTML='<div class="ytband" style="background:'+grad(c)+'"><span class="ytab">'+c+'</span><div><div class="ytname">'+t.city+' '+t.name+'</div><div class="ytrec">'+t.rec+' · '+t.seed+'</div></div></div>'+
+        '<div class="ytbody"><div class="ytrow"><span class="kk">Last game</span><span>'+t.last+'</span></div>'+
+        '<div class="ytrow"><span class="kk">Next</span><span>'+(t.next||'Not scheduled yet')+'</span></div>'+
+        '<div class="ytrow"><span class="kk">Top-6 odds</span><span><b>'+t.top6+'%</b> <span class="'+(up?'up':down?'down':'dim')+'">'+(t.chg==='—'?'no change':t.chg)+' this week</span></span></div>'+
+        '<div class="ytrow"><span class="kk">Projected</span><span>'+t.wins+' wins</span></div></div>';
       box.appendChild(a);
     });
   }
 
-  // Game filters (home + last night)
-  var mode='mine';
+  // game lists: your teams first (keeping story order otherwise); "Your teams / All games" filter
+  var mode='all';
   function filterGames(){
     document.querySelectorAll('[data-games]').forEach(function(wrap){
-      var useMine=mode==='mine'&&favs.length>0, shown=0;
-      // Top card: the visitor's followed teams go first (best story among them), then everyone else in story order
-      if(wrap.hasAttribute('data-images')){
-        var cards=[].slice.call(wrap.querySelectorAll('[data-teams]'));
-        cards.forEach(function(g,i){if(!g.hasAttribute('data-i')) g.setAttribute('data-i',i)});
-        var isMine=function(g){return g.getAttribute('data-teams').split(' ').some(function(t){return favs.indexOf(t)>-1})};
-        cards.sort(function(x,y){return (isMine(y)-isMine(x))||(x.getAttribute('data-i')-y.getAttribute('data-i'))});
-        cards.forEach(function(g){wrap.appendChild(g)});
-      }
-      wrap.querySelectorAll('[data-teams]').forEach(function(g){
-        var ts=g.getAttribute('data-teams').split(' ');
-        var mine=ts.some(function(t){return favs.indexOf(t)>-1});
-        g.classList.toggle('hidden',useMine&&!mine);
-        var tag=g.querySelector('.mine-tag'); if(tag) tag.classList.toggle('hidden',!mine);
-        if(!(useMine&&!mine)) shown++;
-      });
-      if(wrap.hasAttribute('data-images')){
-        var first=null;
-        wrap.querySelectorAll('[data-teams]').forEach(function(g){var on=!first&&!g.classList.contains('hidden'); if(on) first=g; g.classList.toggle('hero',on)});
-      }
-      var note=wrap.parentNode.querySelector('.none-note');
-      if(note) note.classList.toggle('hidden',shown>0);
+      var cards=[].slice.call(wrap.querySelectorAll('[data-teams]'));
+      cards.forEach(function(g,i){if(!g.hasAttribute('data-i')) g.setAttribute('data-i',i)});
+      var isMine=function(g){return g.getAttribute('data-teams').split(' ').some(function(t){return favs.indexOf(t)>-1})};
+      cards.sort(function(x,y){return (isMine(y)-isMine(x))||(x.getAttribute('data-i')-y.getAttribute('data-i'))});
+      cards.forEach(function(g){wrap.appendChild(g)});
+      var shown=0, useMine=mode==='mine'&&favs.length>0;
+      cards.forEach(function(g){var hide=useMine&&!isMine(g); g.classList.toggle('hidden',hide); if(!hide) shown++});
+      var note=wrap.parentNode.querySelector('.none-note'); if(note) note.classList.toggle('hidden',shown>0);
     });
     document.querySelectorAll('[data-mode]').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-mode')===(favs.length?mode:'all'))});
   }
@@ -80,7 +73,15 @@
     mode=b.getAttribute('data-mode'); filterGames();
   });
 
-  // Generic tabs
+  // home hero: tabs switch the big game card
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('[data-hero-tab]'); if(!b) return;
+    var i=b.getAttribute('data-hero-tab');
+    document.querySelectorAll('[data-hero-tab]').forEach(function(x){x.classList.toggle('on',x===b)});
+    document.querySelectorAll('[data-hero]').forEach(function(c){c.hidden=c.getAttribute('data-hero')!==i});
+  });
+
+  // tabs (East/West etc.)
   document.querySelectorAll('[data-tabs]').forEach(function(group){
     var name=group.getAttribute('data-tabs');
     group.addEventListener('click',function(e){
@@ -91,11 +92,39 @@
     });
   });
 
-  // Greeting
-  var gr=document.getElementById('greet');
-  if(gr){var h=new Date().getHours();gr.textContent=h<12?'Good morning.':h<18?'Good afternoon.':'Good evening.'}
+  // Learn filters
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('[data-filter]'); if(!b) return;
+    var k=b.getAttribute('data-filter');
+    document.querySelectorAll('[data-filter]').forEach(function(x){x.classList.toggle('on',x===b)});
+    document.querySelectorAll('[data-lib] [data-kind]').forEach(function(c){c.classList.toggle('hidden',k!=='all'&&c.getAttribute('data-kind')!==k)});
+  });
 
-  refreshStars(); renderMine(); filterGames();
+  // scroll story: the graphic on top follows the card you're reading; the dots jump between parts
+  document.querySelectorAll('[data-story]').forEach(function(sr){
+    var sc=sr.querySelector('.scroller'), steps=[].slice.call(sr.querySelectorAll('.step')),
+        panes=[].slice.call(sr.querySelectorAll('.pane')), dots=[].slice.call(sr.querySelectorAll('[data-go]')), cur=-1;
+    function show(i){ if(i===cur) return; cur=i;
+      panes.forEach(function(p,j){p.classList.toggle('on',j===i)}); dots.forEach(function(d,j){d.classList.toggle('on',j===i)}); }
+    function onScroll(){ var y=sc.scrollTop+sc.clientHeight*0.35, i=0;
+      steps.forEach(function(s,j){ if(s.offsetTop-sc.offsetTop<=y) i=j; }); show(Math.min(i,panes.length-1)); }
+    sc.addEventListener('scroll',onScroll,{passive:true});
+    dots.forEach(function(d,j){d.addEventListener('click',function(){sc.scrollTo({top:steps[j].offsetTop-sc.offsetTop,behavior:'smooth'})})});
+    show(0);
+  });
+
+  // official highlights: the NBA's own YouTube video loads only after a tap, in YouTube's player
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('button.player[data-yt]'); if(!b||b.querySelector('iframe')) return;
+    var f=document.createElement('iframe');
+    var st=b.getAttribute('data-start'), en=b.getAttribute('data-end');
+    f.src='https://www.youtube-nocookie.com/embed/'+encodeURIComponent(b.getAttribute('data-yt'))+'?autoplay=1&rel=0'+(st?'&start='+st:'')+(en?'&end='+en:'');
+    f.title='Official full game highlights'; f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    f.setAttribute('allowfullscreen',''); f.referrerPolicy='strict-origin-when-cross-origin';
+    b.appendChild(f);
+  });
+
+  paint(); renderMine(); filterGames();
 })();
 
 // animation iframes report their height
@@ -104,15 +133,7 @@ window.addEventListener('message', function (e) {
   document.querySelectorAll('iframe.anim').forEach(function (f) { if (f.contentWindow === e.source) f.style.height = e.data.bmH + 'px'; });
 });
 
-// phones: if the current tab is off the end of the scrolling tab row (About), bring it into view
-(function () {
-  var row = document.querySelector('.links'), cur = row && row.querySelector('a[aria-current]');
-  if (!cur || row.scrollWidth <= row.clientWidth) return;
-  var right = cur.offsetLeft + cur.offsetWidth - row.offsetLeft;
-  if (right > row.clientWidth) row.scrollLeft = right - row.clientWidth + 8;
-})();
-
-// deep dives: "Play with sound" restarts the animation and plays the Film Room track under it (one track at a time)
+// "Play with sound" restarts the animation and plays the track under it (one track at a time)
 (function () {
   var audio = null, current = null;
   function stop() { if (audio) audio.pause(); if (current) current.textContent = '▶ Play with sound'; current = null; }
@@ -122,7 +143,7 @@ window.addEventListener('message', function (e) {
     stop();
     if (!audio) { audio = new Audio(); audio.loop = true; audio.preload = 'auto'; }
     audio.src = btn.getAttribute('data-snd');
-    var frame = btn.parentNode.querySelector('iframe'); if (frame) frame.src = frame.src;   // start the animation from the top with the music
+    var frame = btn.parentNode.querySelector('iframe'); if (frame) frame.src = frame.src;
     var p = audio.play();
     current = btn; btn.textContent = 'Mute';
     if (p && p.catch) p.catch(function () { stop(); btn.textContent = 'Sound unavailable here'; });

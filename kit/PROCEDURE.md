@@ -1,8 +1,10 @@
 # Box & Motion Hoops: nightly recap reels (every game)
 
 What gets made (Elan's split, Nov 8, 2026):
-- **Website, every game:** the drawn ~66-second recap reel (it leads the game's page) plus the text recap.
-  Scenes: title, final, drawn play of the game, game flow, star, top scorers, how they won, up next, end card.
+- **Website, every game (redesign, Nov 13):** the game page is headline, scroll story (built from the writeup), the play of the
+  game, then the official highlights. The play is our Short animation if the game has one, otherwise the reel's `play` scene cut
+  into a looping clip (`?clip=play`, done by build.py). The ~66-second reel still gets built (the clip comes from it) but no
+  longer leads the page. Scenes: title, final, drawn play of the game, game flow, star, top scorers, how they won, up next, end card.
 - **YouTube, the best games only:** each run posts at most ONE Short: a ~27-second, play-first cut of its most notable
   verified game (biggest star line, close finish, or a big play). Three runs = 2-3 Shorts a night. The full reel is never
   posted to YouTube. Titles lead with the player ("Steph's and-one to win it in OT | Warriors 126, Magic 119").
@@ -91,6 +93,17 @@ Game key = `YYYY-MM-DD-AWAY-HOME`, e.g. `2026-11-06-POR-LAL` (team codes from da
      (music trial from Nov 13: Elan's "Courtside Breakbeat", from the start of the song; game Shorts only), copy it to `reels/<key>/short.mp4`,
      and SendUserFile it.
 
+## Official highlights for each game page (every game)
+Find the NBA's official YouTube upload for each of last night's games and add it to `data/links.json` under the game key
+(`<date>-<AWAY>-<HOME>`). Search YouTube for "<Away> vs <Home> full game highlights <Month day, year>" and use only the NBA's
+own channel. Never a re-upload, never a team or fan channel.
+- Its own video: `"<key>": {"highlights": "<video id>"}`.
+- No single video, but the NBA's nightly recap has a chapter for the game: `{"highlights": "<recap id>", "start": <s>, "end": <s>,
+  "from": "NBA's Nightly Recap | <Month day, year>"}`, with start/end in seconds from the chapter list in the description.
+- Nothing found by the time you publish: leave the game out. The page shows the YouTube search links instead. Don't guess an id.
+The game page plays the video in place (youtube-nocookie) after a tap and always keeps the "Full game highlights on YouTube" and
+"Postgame interviews on YouTube" links.
+
 ## Waiting for the site data (before publishing anything)
 Build everything first (research, configs, reels, frame checks, the Short config). Publishing needs last night's games in
 `data/season.json`, which the site update adds at one of its two checks (about 6:40 or 7:15 AM ET).
@@ -126,8 +139,8 @@ Build everything first (research, configs, reels, frame checks, the Short config
    hashtags (#NBA plus the two teams and the player). Instagram: `metadata.instagram = {"type": "reel", "shouldShareToFeed": true,
    "isAiGenerated": true}`. TikTok: `metadata.tiktok = {"isAiGenerated": true}`. If one of them errors (limits, a lapsed login),
    report it and carry on; YouTube is the one whose link goes on the site.
-   - Success: write the video id (the `v=` value of externalLink) to `reels/<key>/youtube.txt`. The game page keeps the reel and adds the
-     "Watch on YouTube" button.
+   - Success: write the video id (the `v=` value of externalLink) to `reels/<key>/youtube.txt`. The game page then shows our Short as the play of
+     the game, with the "Our Short on YouTube" button.
    - Error: leave the reel as is and report the error.
 3. Delete `reels/<key>/short.mp4` (`git rm`), then `bash kit/push_site.sh "YouTube links: <date>"` again
    (it commits everything under reels/).

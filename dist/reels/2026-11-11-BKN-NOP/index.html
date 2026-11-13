@@ -81,7 +81,7 @@ html.embed .stage,html.embed .stage.tall{flex:1 1 0;min-height:0;aspect-ratio:au
 html.embed .transport{flex:none}
 </style>
 
-<script>if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add("embed");</script>
+<script>if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add("embed");if (/[?&]clip=play/.test(location.search)) document.documentElement.classList.add("clip");</script><style>html.clip .transport,html.clip .chips{display:none!important}</style>
 <div class="wrap">
   <h1 class="page-title">Nets 145, Pelicans 111 · Nov 11, 2026</h1>
   <div class="stage" id="stage">
@@ -1010,7 +1010,7 @@ html.embed .transport{flex:none}
   const chips = document.getElementById('chips');
   const stamp = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
   const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let t = still ? TOTAL : 0, playing = !still, last = null, shownScene = -1;
+  let t = still ? TOTAL : 0, playing = !still, last = null, shownScene = -1; const CLIP = /[?&]clip=play/.test(location.search) ? SCENES.find((s) => s.id === 'play') : null; if (CLIP) { t = CLIP.t0; playing = true; }
   document.getElementById('still-note').hidden = !still;
   scrub.max = String(TOTAL);
 
@@ -1228,7 +1228,7 @@ html.embed .transport{flex:none}
         const off = el.currentTime - sound.offset - t;
         t += Math.abs(off) > 0.3 ? off : off * 0.15;
       }
-      t = Math.max(0, Math.min(TOTAL, t));
+      t = Math.max(0, Math.min(TOTAL, t)); if (CLIP && (t >= CLIP.t1 || t < CLIP.t0)) { t = CLIP.t0; jumped(); }
       if (t >= TOTAL) { playing = false; if (sound.mode === 'own') fadeOwn(); }
       pump();
       sync();
