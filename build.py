@@ -330,10 +330,10 @@ tonight = "".join(f'<a class="tn" href="teams/{T[h]["slug"]}/index.html" data-te
                   for day, tm, a, h in S["upcoming"] if day == TONIGHT_DAY)
 home = f'''<section class="hero">
 <div>
-<h1 class="h1">More than the <b>box score.</b></h1>
+<h1 class="h1">More than the<br><b>box score.</b></h1>
 <p class="hp">The box score tells you who scored. We show you how the game was won: the run, the matchup, the play that decided it. Plus <a href="learn/index.html">Learn the Game</a> and <a href="{NEWSLETTER}">The Sunday Box</a>.</p>
-<div class="ctas"><a class="pill or" href="last-night/index.html">See last night →</a><a class="pill" href="learn/index.html">Learn the game</a></div></div>
-<div><div class="gtabs" role="tablist">{tabs}</div>{heroes}</div>
+</div>
+<div><p class="k" style="margin:0 0 12px">Last night’s games · {WEEKDAY(LAST_DATE)}</p><div class="gtabs" role="tablist">{tabs}</div>{heroes}</div>
 </section>
 <section class="nums">
 <a class="num" href="last-night/index.html"><div class="t"><span>01</span><span>↗</span></div><div><b>Last night</b><p>Every game, the story and the play that decided it.</p></div></a>

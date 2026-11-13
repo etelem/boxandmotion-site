@@ -81,6 +81,17 @@
     document.querySelectorAll('[data-hero]').forEach(function(c){c.hidden=c.getAttribute('data-hero')!==i});
   });
 
+  // home hero: your teams' games go first and open first (Elan, Nov 13)
+  (function(){
+    var row=document.querySelector('.gtabs'); if(!row||!favs.length) return;
+    var tabs=[].slice.call(row.querySelectorAll('[data-hero-tab]'));
+    var mine=tabs.filter(function(b){ var c=document.querySelector('[data-hero="'+b.getAttribute('data-hero-tab')+'"]');
+      return c&&(c.getAttribute('data-teams')||'').split(' ').some(function(t){return favs.indexOf(t)>-1}); });
+    if(!mine.length) return;
+    for(var k=mine.length-1;k>=0;k--) row.insertBefore(mine[k],row.firstChild);
+    mine[0].click(); row.scrollLeft=0;
+  })();
+
   // tabs (East/West etc.)
   document.querySelectorAll('[data-tabs]').forEach(function(group){
     var name=group.getAttribute('data-tabs');
