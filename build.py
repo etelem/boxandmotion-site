@@ -90,6 +90,10 @@ def official_links(g):
             f'<div class="row" style="gap:10px"><a class="pill on" href="{hl}" target="_blank" rel="noopener">▶ {"Full game highlights (NBA)" if L.get("highlights") else "Game highlights on the NBA\'s channel"}</a>'
             f'<a class="pill" href="{pg}" target="_blank" rel="noopener">▶ {E(pgl)}</a></div></section>')
 
+MARK = ('<svg width="16" height="16" viewBox="0 0 100 100" aria-hidden="true"><rect x="9" y="9" width="82" height="82" rx="9" fill="none" stroke="#111214" stroke-width="9"/>'
+        '<path d="M24 24L40 40M40 24L24 40" stroke="#111214" stroke-width="9" stroke-linecap="round"/><path d="M33 50C34 62 42 69 53 69" fill="none" stroke="#FF5A1F" stroke-width="7" stroke-linecap="round" stroke-dasharray="0 10.5"/>'
+        '<circle cx="68" cy="68" r="9.5" fill="none" stroke="#FF5A1F" stroke-width="8"/></svg>')
+
 def watch_links(g):
     """Under the recap (Elan, Nov 13): one quiet "Watch" list with our Short and the official NBA highlights and postgame
     interviews (direct links from data/links.json when we have them, otherwise a search for that game), then a small
@@ -100,15 +104,16 @@ def watch_links(g):
     hl = f'https://www.youtube.com/watch?v={L["highlights"]}' if L.get("highlights") else yt(g)
     pg = (f'https://www.youtube.com/watch?v={L["postgame"]}' if L.get("postgame") else
           "https://www.youtube.com/results?search_query=" + quote_plus(f'{T[w]["name"]} {T[l]["name"]} postgame interviews {day}'))
-    def row(href, title, src):
-        return (f'<a class="wrow" href="{href}" target="_blank" rel="noopener"><span class="wplay">▶</span>'
+    def row(href, title, src, ours=False):
+        icon = f'<span class="wplay ours">{MARK}</span>' if ours else '<span class="wplay">▶</span>'
+        return (f'<a class="wrow" href="{href}" target="_blank" rel="noopener">{icon}'
                 f'<span class="wt">{E(title)}</span><span class="ws">{E(src)} ↗</span></a>')
-    rows = (row(f"https://youtube.com/shorts/{v}", "Our recap Short", "@boxandmotion") if v else "")
+    rows = (row(f"https://youtube.com/shorts/{v}", "Our recap Short", "@boxandmotion", ours=True) if v else "")
     rows += row(hl, "Full game highlights", "NBA" if L.get("highlights") else "NBA · search")
     rows += row(pg, L.get("postgame_label") or "Postgame interviews", "YouTube" if L.get("postgame") else "YouTube · search")
     return (f'<div class="watch"><p class="k" style="margin:0 0 2px">Watch</p>{rows}'
-            f'<p class="wfine"><a href="https://www.youtube.com/@boxandmotion?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube</a>'
-            f'<span>·</span><a href="{NEWSLETTER}" target="_blank" rel="noopener">Get the newsletter</a></p></div>')
+            f'<p class="wfine"><span class="wmark">{MARK}</span><a href="https://www.youtube.com/@boxandmotion?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to @boxandmotion on YouTube</a></p>'
+            f'<p class="wfine"><span class="wmark">{MARK}</span><a href="{NEWSLETTER}" target="_blank" rel="noopener">Get The Sunday Box, our free Sunday newsletter</a></p></div>')
 
 LOGO = '<svg width="28" height="28" viewBox="0 0 100 100" aria-hidden="true"><rect x="9" y="9" width="82" height="82" rx="9" fill="none" stroke="#111214" stroke-width="8"/><path d="M24 24L40 40M40 24L24 40" stroke="#111214" stroke-width="8" stroke-linecap="round"/><path d="M33 50C34 62 42 69 53 69" fill="none" stroke="#FF5A1F" stroke-width="6.5" stroke-linecap="round" stroke-dasharray="0 10.5"/><circle cx="68" cy="68" r="9.5" fill="none" stroke="#FF5A1F" stroke-width="7.5"/></svg>'
 FAVICON = "data:image/svg+xml," + quote_plus(LOGO.replace('width="28" height="28" ', '').replace('aria-hidden="true"', 'xmlns="http://www.w3.org/2000/svg"')).replace("+", "%20")

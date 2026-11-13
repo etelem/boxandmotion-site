@@ -152,5 +152,6 @@ footer a{color:var(--dim)}
 .wrow:hover .wt{text-decoration:underline}
 .wplay{width:26px;height:26px;border-radius:50%;background:#f1f1ef;display:grid;place-items:center;font-size:10px;padding-left:2px;box-sizing:border-box;flex:none}
 .wt{font-weight:600;flex:1}.ws{color:var(--dim);font-size:13px;white-space:nowrap}
-.wfine{margin:10px 0 0;font-size:14px;color:var(--dim);display:flex;gap:8px;flex-wrap:wrap}
+.wfine{margin:8px 0 0;font-size:14px;color:var(--dim);display:flex;gap:8px;flex-wrap:wrap}
 .wfine a{color:var(--dim);text-decoration:underline;text-underline-offset:3px}.wfine a:hover{color:var(--ink)}
+.wplay.ours{background:#fff;border:1px solid var(--line);padding:0}.wfine{align-items:center;flex-wrap:nowrap}.wfine+.wfine{margin-top:6px}.wmark{display:inline-flex}
