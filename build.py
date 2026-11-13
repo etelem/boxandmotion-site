@@ -341,10 +341,6 @@ home = f'''<section class="hero">
 <a class="num" href="learn/index.html"><div class="t"><span>03</span><span>↗</span></div><div><b>Learn the game</b><p>Moves and plays, drawn step by step.</p></div></a>
 <a class="num" href="{NEWSLETTER}"><div class="t"><span>04</span><span>↗</span></div><div><b>The Sunday Box</b><p>The week in one email.</p></div></a>
 </section>
-<section>
-<div class="shead"><div><p class="k">{WEEKDAY(LAST_DATE)} · {len(LAST)} games</p><h2 class="h2">Last night.</h2><p class="lead">Your teams first. Tap any game for the story and the play.</p></div><a class="pill sm" href="last-night/index.html">All games →</a></div>
-{games_block(LAST, R)}
-</section>
 {f"""<section><div class="shead"><div><p class="k">Tonight · {E(TONIGHT_DAY)} · times ET</p><h2 class="h2">On the schedule.</h2></div><a class="pill sm" href="odds/index.html">What’s at stake →</a></div>
 <div class="tonight">{tonight}</div></section>""" if tonight else ""}
 {f"""<section class="fifty"><div><p class="k">The 50-point nights</p><h2 class="h2">Big nights,<br>drawn big.</h2><p class="lead">When a player goes off, we draw the shot that got him there and check every number.</p></div>
