@@ -1,0 +1,170 @@
+{
+ "D": "  const D = {\n    date: 'Fri, Nov 13, 2026',\n    us: 142, them: 111, record: '8–4', usName: 'Grizzlies', themName: 'Pelicans',\n    quarters: [[35, 28], [35, 30], [35, 28], [37, 25]],\n    leadUs: 31, leadThem: 3,\n    star: {name: 'Jerami Grant', stats: [['Points, off the bench', 22, 30], ['Field goals made of 10', 7, 10], ['Free throws made of 5', 5, 5]]},\n    scorers: [\n      {name: 'Jerami Grant', pts: 22, note: 'off the bench · 7 of 10 · 3 threes'},\n      {name: 'Ty Jerome', pts: 17, note: '9 assists'},\n      {name: 'Cedric Coward', pts: 14, note: '7 rebounds · 6 assists'},\n      {name: 'Cam Spencer', pts: 14, note: 'off the bench · 3 of 5 from three'},\n      {name: 'GG Jackson', pts: 14, note: 'off the bench · 3 steals'},\n    ],\n    edges: [\n      {label: 'Bench points', us: 76, them: 27},\n      {label: 'Threes made', us: 18, them: 7},\n      {label: 'Assists', us: 36, them: 23},\n      {label: 'Second-chance points', us: 19, them: 6},\n    ],\n    gaps: [\n      {label: 'Points in the paint', us: 48, them: 52},\n      {label: 'Fast-break points', us: 8, them: 16},\n    ],\n    next: {opp: 'vs Nets', when: 'Sat, Nov 14, 8:00 PM ET', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Jerami Grant's 24-foot three with 3:42 left in the second quarter, his second three in seven seconds, that put Memphis up 62–46. An original illustration from written accounts; not traced from footage, not to scale.\n",
+  "head": "Grant again",
+  "subP": "Grant from deep, 3:42 left in the 2nd",
+  "subL": "Jerami Grant’s second three in 7 seconds, 3:42 left in the 2nd",
+  "m0": "Grizzlies +13",
+  "m1": "Grizzlies +16",
+  "num": "3",
+  "cap1": "Grant again. Grizzlies by 16.",
+  "cap2": "7 points in 7 seconds. 62–46.",
+  "clock": [
+   229,
+   222
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Grizzlies vs Pelicans Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Grizzlies 142, Pelicans 111 · Nov 13, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Grizzlies vs.', 'Pelicans'] : ['Grizzlies vs. Pelicans']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Ten Grizzlies scored', 'in double figures.'] : ['Ten Grizzlies scored in double figures, tying an NBA record.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Grizzlies improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'6–0 on the road'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Up 12 at the half,', 'won the second half 72–53'] : ['Up 12 at the half, then won the second half 72–53']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Grizzlies ${D.leadUs}, Pelicans ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin after each quarter underneath.",
+   "Grizzlies’ margin after each quarter underneath."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Grant: 22', 'off the bench'] : ['Grant: 22 points off the bench']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['7 of 10 from the field.', '7 points in 7 seconds.'] : ['7 of 10 from the field, with 7 points in 7 seconds in the second quarter.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['The bench scored', '76 of the 142'] : ['The Memphis bench scored 76 of the 142']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 30;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it from three', 'and off the bench'] : ['Won it from three and off the bench']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Grizzlies in blue, Pelicans in gray. Ten', 'Grizzlies scored 10 or more.'] : ['Grizzlies in blue, Pelicans in gray. Ten Grizzlies scored 10 or more.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'Eighth in the West'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Nets’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '3–8';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['New Orleans has lost five straight.', 'It won the Nov 2 meeting in OT.'] : ['New Orleans has lost five straight. It won the Nov 2 meeting 135–134 in OT.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Grizzlies 142 · Pelicans 111 · Nov 13'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Grant again'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Grant'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 80;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+3', 'd w', 72, 'end');"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q2', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 190, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 222, ly, D.themName"
+  ]
+ ],
+ "team": "MEM",
+ "loser_top": [
+  [
+   "Saddiq Bey",
+   30,
+   "6 of 9 from three · 10 rebounds"
+  ],
+  [
+   "Zion Williamson",
+   22,
+   "8 of 8 FT · 3 steals"
+  ]
+ ],
+ "aria": "Animated recap of the Grizzlies' 142 to 111 road win over the Pelicans: Jerami Grant's three with 3:42 left in the second quarter, his second in seven seconds, that made it 62 to 46, quarter-by-quarter scoring, Grant's 22 points off the bench, the top scorers, how the Grizzlies won with 10 players in double figures, and the next game at home against Brooklyn.",
+ "notes": [
+  "Box score from the Grizzlies' 142–111 win over the New Orleans Pelicans at the Smoothie King Center on Nov 13, 2026, an NBA Cup group game, from the StatMuse box score and play log, with game details from the Associated Press (via ABC News and Yahoo Sports), Field Level Media (via Yardbarker and Sports Capitol DC), The Commercial Appeal (via Yahoo Sports), Grizzlies on SI, Ball Exclusives (via Yardbarker) and Crescent City Sports. All 142 Memphis points and all 111 New Orleans points are accounted for in the box score, and the quarter scores add up to both totals: 70–58 Memphis at the half and 105–86 after three (StatMuse; Fox Sports; AP). Biggest leads: Memphis 31, New Orleans 3 (StatMuse). Bench points (76–27) are from The Commercial Appeal; the other team stats are StatMuse's. Records and ranks are from the site's standings (data/season.json) after Friday's games.",
+  "Memphis matched an NBA record with 10 players in double figures, a franchise record (AP; The Commercial Appeal): Jerami Grant 22, Ty Jerome 17, Cedric Coward 14, Cam Spencer 14, GG Jackson 14, Cam Boozer 12, Isaiah Stewart 12, Jaylen Wells 11, Taylor Hendricks 10 and Javon Small 10. Grant's 22 off the bench is a season high (Field Level Media). Memphis is 6–0 on the road (Field Level Media); New Orleans has lost five straight (Field Level Media) and won the Nov 2 meeting 135–134 in overtime (site scores). Memphis hosts Brooklyn on Saturday at 8:00 PM ET (site schedule).",
+  "How it broke open: Memphis scored 13 straight in the second quarter, from 49–46 to 62–46 (AP; StatMuse play log). New Orleans got within 80–77 on a Saddiq Bey three with 6:01 left in the third; Memphis answered with a 25–9 run to lead 105–86 after three (Yahoo Sports; StatMuse play log).",
+  "The play of the game is an original illustration of Grant's 24-foot three with 3:42 left in the second quarter, which made it 62–46. Seven seconds earlier he had made a 27-foot three and a free throw for an illegal closeout by Zion Williamson (AP: \"Grant had seven points in seven seconds, nailing a pair of 3s and adding a foul shot\"; StatMuse play log, 3:49 and 3:42). The shot is drawn as the template's plain catch-and-shoot three. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Memphis Grizzlies or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The player in the play of the game is drawn to Grant's listed 6-foot-7 and 210 pounds, with arms scaled to his 7-foot-2.75 wingspan measured at the 2014 draft combine (CraftedNBA; Tankathon), in Memphis's road blue with No. 3 (AP photo caption). He has no approved look on file yet, so he is drawn as a team-colour silhouette in the kit. It is an original silhouette with a featureless face, not a portrait or a trace of footage."
+ ],
+ "figure": {
+  "player": "Jerami Grant",
+  "home": false,
+  "tall": 1.0128,
+  "ape": 1.0981,
+  "mass": 0.982,
+  "label": "Jerami Grant, listed 6-7, 210 lb, 7-2.75 wingspan (2014 combine)"
+ }
+}
