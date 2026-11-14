@@ -781,7 +781,10 @@ def story_cards(g, f, ls, R, clip, pname, pdesc, v):
     if "final" in sc:  # the recap's counting-up final score opens the story (the owner, Nov 13)
         hs, lo = max(g["as_"], g["hs"]), min(g["as_"], g["hs"])
         cards.insert(0, ("Final", f"{T[w]['name']} {hs}, {T[l]['name']} {lo}{' (OT)' if len(wq) > 4 else ''}", "", ""))
-    SCENE_FOR = {"Final": "final", "The verdict": "edge", "How it went": "flow", "The star": "triple", "The help": "scorers"}
+    SCENE_FOR = {"Final": "final", "The verdict": "edge", "How it went": "flow", "The moment": "play", "The star": "triple", "The help": "scorers"}
+    # the play fills the card like the other recap scenes (Nov 13: the Short in a phone frame was too small); Short link + note underneath
+    short_link = (f'<a class="pill sm cs-short" href="https://youtube.com/shorts/{v}" target="_blank" rel="noopener">▶ Our Short on YouTube</a>' if v else "")
+    MOMENT_FOOT = f'<div class="cs-rfoot"><p class="cs-fine">Original illustration from written accounts; not traced from footage, not to scale.</p>{short_link}</div>'
     lq_ = reel_light_q(g["key"], g) if sc else ""
     n = len(cards); out = ""
     for i, (k, h3, txt, viz) in enumerate(cards):
@@ -791,7 +794,7 @@ def story_cards(g, f, ls, R, clip, pname, pdesc, v):
             src = f"{R}reels/{g['key']}/index.html?embed=1&clip={sid}&hold=1{lq_}"
             out += (f'<section class="cs-card reel{" on" if i == 0 else ""}" data-card="{i}" data-dur="{int((t1 - t0) * 1000) + 600}">'
                     f'<div class="cs-kick">{i + 1} of {n} · {E(k)}</div><h3 class="sr-only">{E(h3)}</h3>'
-                    f'<div class="cs-reel"><iframe data-src="{src}" title="{E(k)}: {E(h3)}" tabindex="-1"></iframe></div></section>')
+                    f'<div class="cs-reel"><iframe data-src="{src}" title="{E(k)}: {E(h3)}" tabindex="-1"></iframe></div>{MOMENT_FOOT if sid == "play" else ""}</section>')
             continue
         out += (f'<section class="cs-card{" on" if i == 0 else ""}" data-card="{i}"><div class="cs-kick">{i + 1} of {n} · {E(k)}</div>'
                 f'<h3>{E(h3)}</h3>{f"<p>{E(txt)}</p>" if txt else ""}<div class="cs-viz">{viz}</div></section>')
