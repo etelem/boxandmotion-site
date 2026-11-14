@@ -395,3 +395,20 @@ footer.foot{padding-top:48px;padding-bottom:36px;margin-top:56px;border-top:1px 
 .sr .stick{border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);overflow:clip;background:#fff}
 .sr .sspace:last-child{height:38vh}
 .sr .sspace:last-child{height:70vh}
+
+/* story v6: scorers and what-it-meant pictures */
+.scorers{flex:1;display:flex;flex-direction:column;justify-content:center;gap:10px}
+.sch{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:2px}
+.sch .hn{font:600 44px/1 'Archivo',sans-serif;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.sch .hc{font-size:15px;color:var(--dim);font-weight:600}
+.sc{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) 34px;gap:10px;align-items:center}
+.scn{display:flex;flex-direction:column;min-width:0}.scn b{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.scn span{font-size:12px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.scb{height:12px;border-radius:999px;background:rgba(17,18,20,.06);overflow:hidden}.scb span{display:block;height:100%;border-radius:999px;transform-origin:left}
+.scp{font:700 18px 'Archivo',sans-serif;text-align:right;font-variant-numeric:tabular-nums}
+.sr .pane.on .scb span{animation:growl .6s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0)*110ms)}
+.meant{flex:1;display:flex;flex-direction:column;justify-content:center;gap:22px}
+.mth{display:flex;justify-content:space-between;align-items:baseline;font-size:15px}.mth .dot{margin-right:8px}
+.mtb{height:14px;border-radius:999px;background:rgba(17,18,20,.06);overflow:hidden;margin:8px 0 6px}.mtb span{display:block;height:100%;border-radius:999px;transform-origin:left}
+.mtf{font-size:13px;color:var(--dim)}.mtf b{font:700 18px 'Archivo',sans-serif}
+.sr .pane.on .mtb span{animation:growl .7s cubic-bezier(.2,.8,.2,1) both}

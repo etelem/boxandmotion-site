@@ -477,6 +477,31 @@ def score_after(g, wq, lq, n):
     if sw == sl: return f"Tied {sw}–{sl}"
     return f"{T[w]['name'] if sw > sl else T[l]['name']} {max(sw, sl)}–{min(sw, sl)}"
 
+def _last(n):
+    parts = n.replace(".", ". ").split()
+    while len(parts) > 1 and parts[-1].rstrip(".") in ("Jr", "Sr", "II", "III", "IV"): parts.pop()
+    return parts[-1].strip()
+
+def _join(xs): return xs[0] if len(xs) == 1 else ", ".join(xs[:-1]) + " and " + xs[-1]
+
+def scorers_pane(team, total, rows, color, k):
+    """'73 of 144 by Cunningham and Jenkins' and a bar per scorer (from the writeup's verified top lines)."""
+    if not rows: return ""
+    lead = rows[:k]; s = sum(r[3] for r in lead); mx = max(r[3] for r in rows)
+    bars = "".join(f'<div class="sc" style="--i:{i}"><div class="scn"><b>{E(n)}</b><span>{E(note)}</span></div>'
+                   f'<div class="scb"><span style="width:{max(4, round(p / mx * 100))}%;background:{color}"></span></div><span class="scp" style="color:{color}">{p}</span></div>'
+                   for i, (n, tm, note, p) in enumerate(rows))
+    return (f'<div class="scorers"><div class="sch"><span class="hn" style="color:{color}"><span data-countto="{s}">{s}</span></span>'
+            f'<span class="hc">of {total} by {E(_join([_last(r[0]) for r in lead]))}</span></div>{bars}</div>')
+
+def meant_pane(w, l, cw, cl):
+    def row(c, col):
+        ch = O[c]["chg"]; chs = f'{"+" if ch > 0 else "−" if ch < 0 else ""}{abs(ch)}% this week' if ch else "no change this week"
+        return (f'<div class="mt"><div class="mth"><span><i class="dot" style="{dot2(c)}"></i><b>{E(T[c]["name"])}</b> {rec(c)}</span><span class="dim">{seed(c)}</span></div>'
+                f'<div class="mtb"><span style="width:{max(2, O[c]["top6"])}%;background:{col}"></span></div>'
+                f'<div class="mtf"><b style="color:{col}">{O[c]["top6"]}%</b> top-6 odds · <span class="{chgcls(ch)}">{chs}</span></div></div>')
+    return f'<div class="meant">{row(w, cw)}{row(l, cl)}</div>'
+
 def scroll_story(g, f, ls, R):
     a, h, w, l = g["away"], g["home"], g["win"], g["lose"]
     wq, lq = (ls["away"], ls["home"]) if w == a else (ls["home"], ls["away"])
@@ -493,21 +518,23 @@ def scroll_story(g, f, ls, R):
     top = (f.get("top") or [None])[0]
     panes, steps = [], []
     cw, cl = pair_colors(w, l)
-    # 1 · first half: the first-half scoreboard (nothing from later, no spoilers)
-    panes.append(half_board(g, wq, lq))
-    steps.append(("First half", "How it started.", s1))
-    # 2 · the first of the recap's three things, with the top scorer's number
-    if three:
-        if top:
-            n, tm, note, p = top
-            panes.append(f'<div class="bignum" style="--team-grad:{grad(tm)}"><div class="k" style="color:rgba(255,255,255,.85)">{E(n.upper())} · {E(T[tm]["name"].upper())}</div><div class="bn" data-countto="{p}">{p}</div><div class="bl">{E(note)}</div></div>')
-            steps.append(("The difference", three[0][0], three[0][1]))
-    # 3 · how it turned: the whole game's lead bars, the deciding period lit up; words from the line score
+    W, L = T[w]["name"], T[l]["name"]
+    # 1 · how it went: the lead after every period, the deciding one lit up; words from the line score
     k, ttitle, ttext = turn_period(g, wq, lq)
-    extra = f" {three[1][1]}" if len(three) > 1 else ""
     panes.append(lead_chart(g, wq, lq, hi=k))
-    steps.append(("How it turned", ttitle, ttext + extra))
-    # 4 · the third thing, with where it was won (each team in its own, clearly different color)
+    steps.append(("How it went", ttitle, ttext))
+    # 2 · who carried it: the winner's scorers ("73 of 144 by Cunningham and Jenkins")
+    wtop = [r for r in (f.get("top") or []) if r[1] == w]
+    if wtop:
+        panes.append(scorers_pane(w, ws, wtop, cw, 2))
+        h3, txt = (three[0][0], three[0][1]) if three else (f"{_last(wtop[0][0])} led the {W}", f"{wtop[0][0]}: {wtop[0][3]} points, {wtop[0][2]}.")
+        steps.append(("Who carried it", h3, txt))
+    # 3 · the other side: the loser's scorers, and where it got away
+    ltop = [r for r in ((f.get("loser") or {}).get("top") or []) if r[1] == l]
+    if ltop:
+        panes.append(scorers_pane(l, lsc, ltop, cl, len(ltop)))
+        steps.append((f"The {L}’ side", f"From the {L}’ side.", got_away(lq, wq, g["ot"])))
+    # 4 · where it was won: the writeup's stat bars
     if len(three) > 2 and f.get("battle"):
         la, lb = f.get("battle_labels", [w, l])
         col = lambda c: cw if c == w else cl if c == l else "#8a8c92"
@@ -516,16 +543,10 @@ def scroll_story(g, f, ls, R):
         nm = lambda c: E(T[c]["name"]) if c in T else E(c)
         panes.append(f'<div class="battle"><div class="lleg"><span style="color:{ca}">{nm(la)}</span><span style="color:{cb}">{nm(lb)}</span></div>{rows}</div>')
         steps.append(("Where it was won", three[2][0], three[2][1]))
-    # 5 · final: the line score in the picture; the other side and what it meant in words
-    names = period_names(g, len(wq))
-    tbl = (f'<div class="fboard"><table class="lines"><tr><th></th>{"".join(f"<th>{n}</th>" for n in names)}<th>F</th></tr>'
-           f'<tr><td><i class="dot" style="{dot2(a)}"></i>{a}</td>{"".join(f"<td>{x}</td>" for x in ls["away"])}<td><b>{g["as_"]}</b></td></tr>'
-           f'<tr><td><i class="dot" style="{dot2(h)}"></i>{h}</td>{"".join(f"<td>{x}</td>" for x in ls["home"])}<td><b>{g["hs"]}</b></td></tr></table></div>')
-    meant = (f'<p><b>What it meant:</b> {E(T[w]["name"])} {rec(w)}, {seed(w)}, {O[w]["top6"]}% top-6 odds. '
-             f'{E(T[l]["name"])} {rec(l)}, {seed(l)}, {O[l]["top6"]}%.</p>')
-    other = f'<p><b>From the {E(T[l]["name"])}’ side:</b> {E(got_away(lq, wq, g["ot"]))}</p>'
-    panes.append(tbl)
-    steps.append(("Final" + (f", {ot_label(g)}" if g["ot"] else ""), f"{T[w]['name']} {ws}, {T[l]['name']} {lsc}.", other + meant))
+    # 5 · what it meant: records, seeds and top-6 odds now
+    panes.append(meant_pane(w, l, cw, cl))
+    steps.append(("What it meant", f"{W} {ws}, {L} {lsc}" + (f" ({ot_label(g)})" if g["ot"] else "") + ".",
+                  f"The {W} move to {rec(w)}, {seed(w)}. The {L} fall to {rec(l)}, {seed(l)}."))
     n = len(steps)
     dots = "".join(f'<button type="button" data-go="{i}" aria-label="Part {i+1}"{" class=on" if i == 0 else ""}><i></i></button>' for i in range(n))
     pane_html = "".join(f'<div class="pane{" on" if i == 0 else ""}" data-pane-i="{i}">{p}</div>' for i, p in enumerate(panes))

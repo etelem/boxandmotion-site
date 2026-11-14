@@ -131,7 +131,7 @@
       if(panes[i]) countUp(panes[i]); }
     // part i is showing while spacer i is passing the top of the screen
     function onScroll(){ var y=hh()+window.innerHeight*0.25, i=0; spaces.forEach(function(s,j){ if(s.getBoundingClientRect().top<=y) i=j; }); show(i); }
-    function go(i){ var s=spaces[i]; if(!s) return; window.scrollTo({top:window.scrollY+s.getBoundingClientRect().top-hh()-window.innerHeight*0.25+4,behavior:'smooth'}); }
+    function go(i){ var s=spaces[i]; if(!s) return; window.scrollTo({top:window.scrollY+s.getBoundingClientRect().top-hh()-window.innerHeight*0.25+24,behavior:'smooth'}); }
     sr.addEventListener('click',function(e){ var b=e.target.closest('[data-go]'); if(b){ e.preventDefault(); go(+b.getAttribute('data-go')); return; }
       if(e.target.closest('[data-next]')){ e.preventDefault(); go(cur+1); } });
     window.addEventListener('scroll',onScroll,{passive:true});
