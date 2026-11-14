@@ -1,4 +1,4 @@
-"""Look sheet: every star in kit/looks.json drawn standing in his team's home kit, for Elan to approve.
+"""Look sheet: every star in kit/looks.json drawn standing in his team's home kit, for the owner to approve.
 Usage: python3 kit/make_looksheet.py -> kit/out/looksheet.html"""
 import os, sys, json, html
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(HERE)

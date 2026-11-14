@@ -1,6 +1,6 @@
 # Box & Motion Hoops: nightly recap reels (every game)
 
-What gets made (Elan's split, Nov 8, 2026):
+What gets made (the owner's split, Nov 8, 2026):
 - **Website, every game (redesign, Nov 13):** the game page is headline, scroll story (built from the writeup), the play of the
   game, then the official highlights. The play is our Short animation if the game has one, otherwise the reel's `play` scene cut
   into a looping clip (`?clip=play`, done by build.py). The ~66-second reel still gets built (the clip comes from it) but no
@@ -16,22 +16,22 @@ What gets made (Elan's split, Nov 8, 2026):
 - The player who made the play is drawn to his build (`figure` in the config): listed height and weight, arms scaled to a reported
   wingspan. Face stays featureless. Measurements from a named source that is not espn.com or nba.com (Basketball-Reference,
   RealGM, Wikipedia, team media guides via news coverage). Add a note saying what the figure is based on.
-- Every Short follows the house standard (Elan, Nov 10 and 12, 2026): it opens mid-motion (no static title beat), ends on a
+- Every Short follows the house standard (the owner, Nov 10 and 12, 2026): it opens mid-motion (no static title beat), ends on a
   3-second Box & Motion end card (@boxandmotion, boxandmotion.com, The Sunday Box newsletter), then blends back into its
   first frame so it loops. `kit/short_mp4.sh` does this automatically for any page that
   sets `window.__A.loop = {start, cut}` (all generators do); keep the default speed `1`, never a slow-motion second pass.
-- Figure style for every player (Elan, Nov 8: every recap should look and feel like the Luka step-back and Steph's Splash, not
+- Figure style for every player (the owner, Nov 8: every recap should look and feel like the Luka step-back and Steph's Splash, not
   stick figures): the star is drawn in his team's kit (home = white with team-colour numbers, Lakers gold at home; away = team
   colour) with his look from `kit/looks.json` (skin tone, hair, beard, gear) and the glowing outline. The face always stays blank;
   never traced, never cartoony. Set `"player"` (his name as in looks.json) and `"home"` (true/false) and the build/kit/look are
   applied automatically. If he isn't in looks.json yet, he is drawn as a team-colour silhouette in the kit: do NOT invent a look;
-  list him in the report under "needs a look" so Elan can approve one. Every make gets the signature-piece finish (glowing arc in
+  list him in the report under "needs a look" so the owner can approve one. Every make gets the signature-piece finish (glowing arc in
   the team accent, sparks, backspin, the net snapping, rings off the rim); stars with a signature finish get it too (Steph: SPLASH).
 - Check that the box score's player points add up to the team total; fill missing points from a full box score (StatMuse, FantasyData)
   or written recaps and say so in the notes.
 - No team or league logos, no traced footage, original music only, keep the unofficial-fan disclaimer (already in the template).
 - Don't scrape ESPN.com or NBA.com. Use AP/Reuters syndications, local papers, Yahoo, team beat sites, StatMuse, FantasyData.
-- Never show Elan's personal name. Brand is "Box & Motion Hoops".
+- Never show the owner's personal name. Brand is "Box & Motion Hoops".
 - If a game can't be verified (no written recap with a clock-and-score play yet, numbers don't add up), skip it and report why.
   Never publish a guess.
 
@@ -90,7 +90,7 @@ Game key = `YYYY-MM-DD-AWAY-HOME`, e.g. `2026-11-06-POR-LAL` (team codes from da
      around the release, the make, the beat, the final card and the end card: nothing clipped or overlapping. The end card
      (from `make_playshort.py`, don't edit it per game) shows boxandmotion.com large and points to the newsletter link on the channel.
    - MP4: `MUSIC=kit/music/courtside-breakbeat.mp3 bash kit/short_mp4.sh $PWD/src/anim/<out> kit/out/<key>-short.mp4 1`
-     (music trial from Nov 13: Elan's "Courtside Breakbeat", from the start of the song; game Shorts only), copy it to `reels/<key>/short.mp4`,
+     (music trial from Nov 13: the owner's "Courtside Breakbeat", from the start of the song; game Shorts only), copy it to `reels/<key>/short.mp4`,
      and SendUserFile it.
 
 ## Official highlights for each game page (every game)
@@ -121,7 +121,7 @@ Build everything first (research, configs, reels, frame checks, the Short config
    retrying if another run pushed first. Cloudflare redeploys in a minute or two. Then wait 3 minutes so the MP4s are live at
    `https://boxandmotion.com/reels/<key>/short.mp4`.
 2. **YouTube Shorts through Buffer** (Buffer connector). Organization "My organization" (`get_account`), YouTube channel "Box & Motion"
-   (`list_channels`, service youtube). Post this run's one Short (step 7). If Buffer or YouTube returns a daily-limit error, send the MP4 to Elan and say so:
+   (`list_channels`, service youtube). Post this run's one Short (step 7). If Buffer or YouTube returns a daily-limit error, send the MP4 to the owner and say so:
    `create_post` with `channelId`, `schedulingType: "automatic"`, `mode: "shareNow"`,
    `assets: [{"video": {"url": "https://boxandmotion.com/reels/<key>/short.mp4", "metadata": {"thumbnailOffset": <ms>}}}]`, where <ms>
    is the "thumbnail offset" make_playshort.py printed (the frame with the hook, the stamp and the star; never a chart or the end card),
@@ -131,7 +131,7 @@ Build everything first (research, configs, reels, frame checks, the Short config
    Description: one or two sentences, then "Every game: boxandmotion.com · Free Sunday newsletter: boxandmotion.beehiiv.com/subscribe"
    (Shorts links aren't clickable, so these are for people to read and copy), then "Box & Motion Hoops: every NBA game, in motion.
    Unofficial fan content, not affiliated with the NBA or any team." then "#NBA #Shorts" and the two team names as hashtags.
-   Never mention Elan's personal name.
+   Never mention the owner's personal name.
    Then `get_post` until it shows `externalLink` (wait up to 2 minutes) or an `error`.
    **TikTok and Instagram too:** `list_channels` also shows any TikTok and Instagram channels connected to Buffer. Post the same
    MP4 to each with `create_post` (`schedulingType: "automatic"`, `mode: "shareNow"`, same `assets`). Caption: the one-or-two
@@ -145,7 +145,7 @@ Build everything first (research, configs, reels, frame checks, the Short config
 3. Delete `reels/<key>/short.mp4` (`git rm`), then `bash kit/push_site.sh "YouTube links: <date>"` again
    (it commits everything under reels/).
 
-## If something blocks the morning, alert Elan
+## If something blocks the morning, alert the owner
 Send a **PushNotification** (summary in `<routine_summary>` tags, the first sentence says what broke) when any of these
 happen, not just a note in the report:
 - last night's games still aren't in `data/season.json` at 8:00 AM ET, so reels were held back;
@@ -155,5 +155,5 @@ happen, not just a note in the report:
 ## Report (SendUserMessage)
 Per game: result, star line, play of the game (who, clock, score), and a YouTube title + one-line description to paste.
 Then any board candidate you logged (one line each: game, coach, clock and score, what the play was), anything skipped or filled
-in from written recaps, and a Sources list. Remind Elan that a YouTube link pasted back can be
+in from written recaps, and a Sources list. Remind the owner that a YouTube link pasted back can be
 added to the game page.

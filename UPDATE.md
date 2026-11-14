@@ -106,7 +106,7 @@ Same `data/incoming.json`, same checks; only the sources change. Never ESPN.com 
 - Commit message: `Nightly update: games through <date> (fallback sources)`, and say in the report that the fallback was used.
 - update.py's record check is the safety net: if it still refuses after the retry, change nothing and do not push.
 
-## If the update fails, alert Elan
+## If the update fails, alert the owner
 Only the **7:15 check** (the last one) alerts for missing data: if it ends without last night's games in season.json
 (standings still stale on FOX and CBS, scores still unconfirmed, or update.py refused), send a **PushNotification** right
 away, not just a SendUserMessage, with the summary in `<routine_summary>` tags: first sentence "Site update failed: <reason

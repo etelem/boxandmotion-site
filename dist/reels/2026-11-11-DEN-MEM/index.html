@@ -81,7 +81,7 @@ html.embed .stage,html.embed .stage.tall{flex:1 1 0;min-height:0;aspect-ratio:au
 html.embed .transport{flex:none}
 </style>
 
-<script>if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add("embed");if (/[?&]clip=play/.test(location.search)) document.documentElement.classList.add("clip");</script><style>html.clip .transport,html.clip .chips{display:none!important}</style>
+<script>if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add("embed");if (/[?&]clip=/.test(location.search)) document.documentElement.classList.add("clip");</script><style>html.clip .transport,html.clip .chips{display:none!important}</style><script>(function(){var q=location.search;if(!/[?&]light=1/.test(q))return;var r=document.documentElement;r.classList.add("light");var c=q.match(/[?&]c=([0-9a-fA-F]{6})/),ct=q.match(/[?&]ct=([0-9a-fA-F]{6})/);if(c)r.style.setProperty("--blue","#"+c[1]);if(ct)r.style.setProperty("--blue-text","#"+ct[1]);var sw=q.match(/[?&]sw=([a-z]+)\.([a-z]+)/);if(sw)document.addEventListener("DOMContentLoaded",function(){var v=document.getElementById("reel"),a=" in "+sw[1],b=" in "+sw[2],fix=function(){v.querySelectorAll("text,tspan").forEach(function(n){if(!n.children.length&&n.textContent.indexOf(a)>=0)n.textContent=n.textContent.split(a).join(b);});};new MutationObserver(fix).observe(v,{childList:true,subtree:true});fix();});})();</script><style>html.light{--navy:#ffffff;--navy-mid:#f1f3f7;--navy-lift:#ffffff;--ink:#0b1a38;--muted:#5d6678;--silver:#8d95a3;--red-text:#c2410c;--hairline:rgba(11,26,56,.14);--track:rgba(11,26,56,.08);color-scheme:light}html.light .stage{background:#fff!important}html.light body{background:#fff}</style>
 <div class="wrap">
   <h1 class="page-title">Nuggets 123, Grizzlies 118 · Nov 11, 2026</h1>
   <div class="stage" id="stage">
@@ -1010,7 +1010,7 @@ html.embed .transport{flex:none}
   const chips = document.getElementById('chips');
   const stamp = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
   const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let t = still ? TOTAL : 0, playing = !still, last = null, shownScene = -1; const CLIP = /[?&]clip=play/.test(location.search) ? SCENES.find((s) => s.id === 'play') : null; if (CLIP) { t = CLIP.t0; playing = true; }
+  let t = still ? TOTAL : 0, playing = !still, last = null, shownScene = -1; const _cm = location.search.match(/[?&]clip=([a-z]+)/), HOLD = /[?&]hold=1/.test(location.search); const CLIP = _cm ? SCENES.find((s) => s.id === _cm[1]) : null; if (CLIP) { t = CLIP.t0; playing = true; }
   document.getElementById('still-note').hidden = !still;
   scrub.max = String(TOTAL);
 
@@ -1228,7 +1228,7 @@ html.embed .transport{flex:none}
         const off = el.currentTime - sound.offset - t;
         t += Math.abs(off) > 0.3 ? off : off * 0.15;
       }
-      t = Math.max(0, Math.min(TOTAL, t)); if (CLIP && (t >= CLIP.t1 || t < CLIP.t0)) { t = CLIP.t0; jumped(); }
+      t = Math.max(0, Math.min(TOTAL, t)); if (CLIP && t < CLIP.t0) { t = CLIP.t0; jumped(); } if (CLIP && t >= CLIP.t1 - (HOLD ? 0.35 : 0)) { if (HOLD) { t = CLIP.t1 - 0.35; playing = false; } else { t = CLIP.t0; jumped(); } }
       if (t >= TOTAL) { playing = false; if (sound.mode === 'own') fadeOwn(); }
       pump();
       sync();

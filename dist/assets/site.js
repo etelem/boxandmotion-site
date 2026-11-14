@@ -81,7 +81,7 @@
     document.querySelectorAll('[data-hero]').forEach(function(c){c.hidden=c.getAttribute('data-hero')!==i});
   });
 
-  // home hero: your teams' games go first and open first (Elan, Nov 13)
+  // home hero: your teams' games go first and open first (the owner, Nov 13)
   (function(){
     var row=document.querySelector('.gtabs'); if(!row||!favs.length) return;
     var tabs=[].slice.call(row.querySelectorAll('[data-hero-tab]'));
@@ -154,8 +154,8 @@
       else if(audio) audio.pause();
       snd.setAttribute('aria-pressed',on?'true':'false'); snd.setAttribute('aria-label',on?'Music off':'Music on'); }
     function load(i){ var c=cards[i]; if(!c) return; var f=c.querySelector('iframe[data-src]'); if(f&&!f.getAttribute('src')) f.src=f.getAttribute('data-src'); }
-    function dur(i){ return cards[i].querySelector('iframe')?11000:7000; }
-    function stopAuto(){ auto=false; clearTimeout(timer); playb.classList.remove('on'); playb.textContent='\u25B6\uFE0E Play'; segs.forEach(function(s){s.classList.remove('run')}); }
+    function dur(i){ var d=+cards[i].getAttribute('data-dur'); return d||(cards[i].querySelector('.cs-phone iframe')?11000:7000); }
+    function stopAuto(){ auto=false; clearTimeout(timer); playb.classList.remove('on'); playb.innerHTML='\u25B6\uFE0E<span class="pt"> Play</span>'; segs.forEach(function(s){s.classList.remove('run')}); }
     function arm(){ clearTimeout(timer); segs.forEach(function(s){s.classList.remove('run')}); if(!auto) return;
       var s=segs[cur]; s.classList.remove('on'); s.style.setProperty('--dur',dur(cur)+'ms'); void s.offsetWidth; s.classList.add('run');
       timer=setTimeout(function(){ if(cur<n-1) show(cur+1); else stopAuto(); }, dur(cur)); }
@@ -176,7 +176,7 @@
       if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)*1.4){ dx<0?next():prev(); } },{passive:true});
     cs.setAttribute('tabindex','0');
     cs.addEventListener('keydown',function(e){ if(e.key==='ArrowRight'){next();e.preventDefault();} if(e.key==='ArrowLeft'){prev();e.preventDefault();} if(e.key===' '){playb.click();e.preventDefault();} });
-    // music is on by default (Elan, Nov 13). Browsers only allow sound after the reader touches the page, so it starts on the
+    // music is on by default (the owner, Nov 13). Browsers only allow sound after the reader touches the page, so it starts on the
     // first tap, swipe or key in the story (or right away where the browser allows). ♪ turns it off; the choice is remembered.
     var pref=true; try{ pref=localStorage.getItem('bm_music')!=='off'; }catch(err){}
     function want(on){ pref=on; try{ localStorage.setItem('bm_music',on?'on':'off'); }catch(err){} music(on); }
@@ -186,7 +186,7 @@
     snd.setAttribute('aria-pressed',pref?'true':'false'); snd.setAttribute('aria-label',pref?'Music off':'Music on');
     if(pref){ try{ audio=new Audio(cs.getAttribute('data-snd')); audio.loop=true; var p0=audio.play(); if(p0&&p0.catch) p0.catch(function(){ snd.setAttribute('aria-pressed','true'); }); }catch(err){} }
     playb.addEventListener('click',function(){ if(auto){ stopAuto(); return; }
-      auto=true; playb.classList.add('on'); playb.textContent='\u275A\u275A Pause'; if(pref) music(true);
+      auto=true; playb.classList.add('on'); playb.innerHTML='\u275A\u275A<span class="pt"> Pause</span>'; if(pref) music(true);
       if(cur===n-1){ cur=-1; show(0); } else arm(); });
     function fitZ(){ var z=Math.max(1,Math.min(2,Math.min(innerWidth/1180,innerHeight/640))); cs.style.setProperty('--z',z.toFixed(3)); }
     window.addEventListener('resize',function(){ if(cs.classList.contains('full')) fitZ(); });
@@ -196,11 +196,11 @@
     document.addEventListener('fullscreenchange',function(){ if(!document.fullscreenElement&&cs.classList.contains('full')) setFull(false); });
     document.addEventListener('visibilitychange',function(){ if(document.hidden){ stopAuto(); if(audio) audio.pause(); } });
     show(0);
-    // auto-play by default (Elan, Nov 13): starts when the story is on screen, pauses when it scrolls away or the reader taps Pause.
+    // auto-play by default (the owner, Nov 13): starts when the story is on screen, pauses when it scrolls away or the reader taps Pause.
     // Readers who turned on reduced motion get no auto-play. Sound still waits for the first tap (browser rule).
     var userPaused=false, reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
     playb.addEventListener('click',function(){ userPaused=!auto; });
-    function startAuto(){ if(auto||userPaused||reduce||cur===n-1) return; auto=true; playb.classList.add('on'); playb.textContent='\u275A\u275A Pause';
+    function startAuto(){ if(auto||userPaused||reduce||cur===n-1) return; auto=true; playb.classList.add('on'); playb.innerHTML='\u275A\u275A<span class="pt"> Pause</span>';
       segs.forEach(function(s,j){ s.classList.toggle('on',false); }); arm(); }
     if('IntersectionObserver' in window){
       new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting&&e.intersectionRatio>=0.6) startAuto(); else if(auto&&!cs.classList.contains('full')){ stopAuto(); } }); },{threshold:[0,0.6]}).observe(cs);
@@ -244,7 +244,7 @@ window.addEventListener('message', function (e) {
   });
 })();
 
-// Shorts links (Elan, Nov 13): on a computer, open our Shorts in YouTube's normal player (it has full screen);
+// Shorts links (the owner, Nov 13): on a computer, open our Shorts in YouTube's normal player (it has full screen);
 // on phones and tablets keep /shorts/, which opens the YouTube app's Shorts feed.
 (function () {
   var computer = window.matchMedia && matchMedia('(hover: hover) and (pointer: fine)').matches && !/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);

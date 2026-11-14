@@ -15,7 +15,7 @@ const FPS = 30, HOLD = process.env.HOLD != null ? +process.env.HOLD : 0, XF = 0.
     const tag = document.createElement('div'); tag.id = 'slowtag'; tag.textContent = 'SLOW MOTION';
     Object.assign(tag.style, {position: 'absolute', right: '28px', top: '24px', font: "500 14px 'IBM Plex Mono',monospace", letterSpacing: '.16em', padding: '6px 10px', borderRadius: '999px', border: '1.5px solid currentColor', color: '#FF5A1F', display: 'none'});
     w.appendChild(tag);
-    // branded end card (Elan, Nov 12, 2026): YouTube handle, site and newsletter, shown for ~1.5 s before the loop-back
+    // branded end card (the owner, Nov 12, 2026): YouTube handle, site and newsletter, shown for ~1.5 s before the loop-back
     const strip = document.createElement('div'); strip.id = 'bmstrip';
     const row = (k, v) => `<div style="margin-top:22px"><div style="font:500 13px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#FF5A1F">${k}</div><div style="font:700 25px Archivo,'IBM Plex Sans',sans-serif;color:#fff;margin-top:4px">${v}</div></div>`;
     strip.innerHTML = "<div style=\"font:800 40px/1.05 Archivo,'IBM Plex Sans',sans-serif;color:#fff;letter-spacing:.01em\">BOX &amp; MOTION<br>HOOPS</div>"

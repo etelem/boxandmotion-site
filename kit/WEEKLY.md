@@ -1,10 +1,10 @@
 # Box & Motion Hoops: the weekly deep dives and The Sunday Box
 
 Every Saturday morning this run makes the week's two deep dives and drafts Sunday's newsletter. **Nothing goes public until
-Elan approves.** The run builds everything, sends him previews and waits in the same session for his reply.
+the owner approves.** The run builds everything, sends him previews and waits in the same session for his reply.
 
 The house rules in PROCEDURE.md still apply: every number checked against a box score or a named written source; no logos and
-no traced footage; never espn.com or nba.com as a source; never Elan's personal name anywhere; skip rather than guess. Figures
+no traced footage; never espn.com or nba.com as a source; never the owner's personal name anywhere; skip rather than guess. Figures
 follow the figure style rule at the top of PROCEDURE.md: the recap silhouette drawn to the player's build, plus ONE motion that
 shows his signature trait.
 
@@ -72,7 +72,7 @@ starting; the nightly update keeps that file current.
 3. **Build on a branch:** create `weekly-<date>`, run `python3 build.py`, commit and push the branch (not main). Main is
    unchanged, so nothing is public yet.
 
-## 4. Ask Elan, then publish
+## 4. Ask the owner, then publish
 Send with SendUserFile: both Shorts MP4s. Then a SendUserMessage with:
 - the hot player and why, his week's line, and the move;
 - the board: play, clock, score and the sources;
@@ -87,7 +87,7 @@ Then wait for his reply in this session. Change whatever he asks and send new pr
    `assets.video.url = https://boxandmotion.com/anim/<file>.mp4`.
    - Titles: "<Player>'s <move>, explained | Box & Motion scouting report" and "<Coach>'s <play>, on the board | <Team> vs <Opp>".
    - When the video ids come back, add them to the deep-dive data (`youtube` field), `git rm src/anim/*.mp4`, rebuild and push.
-3. Add the Short links to the newsletter draft. Schedule it for Sunday 8:00 AM ET (or the time Elan gave), then report the
+3. Add the Short links to the newsletter draft. Schedule it for Sunday 8:00 AM ET (or the time the owner gave), then report the
    scheduled time.
 Before ending your turn, use send_later to remind yourself in this session at Sunday 7:30 AM ET. If he still hasn't
 replied by then, publish nothing and send him one reminder.

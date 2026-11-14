@@ -1,5 +1,5 @@
 {
- "_about": "Each star's look for every recap and Short: skin tone, hair ('crop'|'swept'|'tousled'), hair colour, beard (+ stubble = beard opacity), gear. Face stays blank. 'approved' = Elan signed off; 'proposed' = drawn from reference photos, used until he changes it. Build (height, weight, wingspan) still comes from each game's config.",
+ "_about": "Each star's look for every recap and Short: skin tone, hair ('crop'|'swept'|'tousled'), hair colour, beard (+ stubble = beard opacity), gear. Face stays blank. 'approved' = the owner signed off; 'proposed' = drawn from reference photos, used until he changes it. Build (height, weight, wingspan) still comes from each game's config.",
  "Luka Dončić": {
   "status": "approved",
   "skin": "#e9c3a2",

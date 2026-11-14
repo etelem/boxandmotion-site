@@ -72,7 +72,7 @@ if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add(
 if (/[?&]short=1/.test(location.search)) document.documentElement.classList.add('short');
 (function () {
   const CFG = __CFG__;
-  // Music under the board (CFG.music; X's and O's use Elan's Streetball Groove since Nov 12, 2026; coach's boards default to Film Room). While it plays, the board follows the music's clock (sndClock), so nothing is re-synced mid-play;
+  // Music under the board (CFG.music; X's and O's use the owner's Streetball Groove since Nov 12, 2026; coach's boards default to Film Room). While it plays, the board follows the music's clock (sndClock), so nothing is re-synced mid-play;
   // Replay, the step buttons, pause, slow motion and the loop move the music once (sndSeek / sndRun).
   let sndBtn = null, sndTxt = null, sndOn = false, audio = null;
   function sndClock() {

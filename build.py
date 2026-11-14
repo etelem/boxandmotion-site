@@ -1,5 +1,5 @@
 """Build the Box & Motion Hoops static site from data/*.json into dist/.
-Nov 13 2026 revamp (Elan): white Swish-inspired look, "headline first" game cards (team chips in both team colors),
+Nov 13 2026 revamp (the owner): white Swish-inspired look, "headline first" game cards (team chips in both team colors),
 game pages = scroll story -> the play of the game (our drawing) -> full game highlights and postgame interviews.
 Team-color fills only for the visitor's followed teams (site.js). No logos, no nba.com/espn.com links."""
 import json, os, re, shutil, datetime
@@ -94,7 +94,7 @@ LOGO = '<svg width="28" height="28" viewBox="0 0 100 100" aria-hidden="true"><re
 FAVICON = "data:image/svg+xml," + quote_plus(LOGO.replace('width="28" height="28" ', '').replace('aria-hidden="true"', 'xmlns="http://www.w3.org/2000/svg"')).replace("+", "%20")
 MARK = LOGO.replace('width="28" height="28"', 'width="16" height="16"')
 
-# ---- team colors: both of a team's colors, always (Elan, Nov 13: "Lakers are purple AND gold") ----
+# ---- team colors: both of a team's colors, always (the owner, Nov 13: "Lakers are purple AND gold") ----
 _LIGHT = {"#FFFFFF", "#C4CED4", "#B8C4CA", "#A1A1A4", "#EEE1C6", "#C4CED3", "#BEC0C2"}
 def c2_of(c):
     """A team's second color for the two-tone dot; very light ones (white, silver, cream) fall back to the dark shade."""
@@ -173,7 +173,7 @@ def story_score(g):
     if any(w in head for w in ("straight", "streak", "season-high", "season high", "career-high", "career high")): pts += 1
     return (pts, 1 if g["video"] else 0, -margin)
 
-# ---- game card: headline first (Elan's pick, Nov 13) ----
+# ---- game card: headline first (the owner's pick, Nov 13) ----
 def headline(g):
     f = S["featured"].get(g["key"])
     if f and f.get("headline"): return f["headline"].rstrip(".")
@@ -275,19 +275,60 @@ if os.path.isdir("src/posters"): shutil.copytree("src/posters", f"{OUT}/posters"
 if os.path.isdir("src/audio"): shutil.copytree("src/audio", f"{OUT}/audio")
 os.makedirs(f"{OUT}/assets", exist_ok=True)
 
-# "The play of the game" for games without a Short (Elan, Nov 13): the reel loops just its play scene with ?clip=play.
+# "The play of the game" for games without a Short (the owner, Nov 13): the reel loops just its play scene with ?clip=play.
 CLIP_OK = set()
 for key in REELS:
     p = f"{OUT}/reels/{key}/index.html"; src = open(p).read()
     a1 = "let t = still ? TOTAL : 0, playing = !still, last = null, shownScene = -1;"
     a2 = "t = Math.max(0, Math.min(TOTAL, t));"
     if a1 in src and a2 in src and "id: 'play'" in src:
-        src = src.replace(a1, a1 + " const CLIP = /[?&]clip=play/.test(location.search) ? SCENES.find((s) => s.id === 'play') : null; if (CLIP) { t = CLIP.t0; playing = true; }", 1)
-        src = src.replace(a2, a2 + " if (CLIP && (t >= CLIP.t1 || t < CLIP.t0)) { t = CLIP.t0; jumped(); }", 1)
+        src = src.replace(a1, a1 + " const _cm = location.search.match(/[?&]clip=([a-z]+)/), HOLD = /[?&]hold=1/.test(location.search); const CLIP = _cm ? SCENES.find((s) => s.id === _cm[1]) : null; if (CLIP) { t = CLIP.t0; playing = true; }", 1)
+        src = src.replace(a2, a2 + " if (CLIP && t < CLIP.t0) { t = CLIP.t0; jumped(); } if (CLIP && t >= CLIP.t1 - (HOLD ? 0.35 : 0)) { if (HOLD) { t = CLIP.t1 - 0.35; playing = false; } else { t = CLIP.t0; jumped(); } }", 1)
         src = src.replace('<script>if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add("embed");</script>',
-                          '<script>if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add("embed");if (/[?&]clip=play/.test(location.search)) document.documentElement.classList.add("clip");</script>'
-                          '<style>html.clip .transport,html.clip .chips{display:none!important}</style>', 1)
+                          '<script>if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add("embed");if (/[?&]clip=/.test(location.search)) document.documentElement.classList.add("clip");</script>'
+                          '<style>html.clip .transport,html.clip .chips{display:none!important}</style>'
+                          # White-card mode for the story cards (the owner, Nov 13): ?light=1&c=<fill hex>&ct=<text hex>
+                          '<script>(function(){var q=location.search;if(!/[?&]light=1/.test(q))return;var r=document.documentElement;r.classList.add("light");'
+                          'var c=q.match(/[?&]c=([0-9a-fA-F]{6})/),ct=q.match(/[?&]ct=([0-9a-fA-F]{6})/);'
+                          'if(c)r.style.setProperty("--blue","#"+c[1]);if(ct)r.style.setProperty("--blue-text","#"+ct[1]);'
+                          'var sw=q.match(/[?&]sw=([a-z]+)\\.([a-z]+)/);if(sw)document.addEventListener("DOMContentLoaded",function(){var v=document.getElementById("reel"),a=" in "+sw[1],b=" in "+sw[2],'
+                          'fix=function(){v.querySelectorAll("text,tspan").forEach(function(n){if(!n.children.length&&n.textContent.indexOf(a)>=0)n.textContent=n.textContent.split(a).join(b);});};'
+                          'new MutationObserver(fix).observe(v,{childList:true,subtree:true});fix();});})();</script>'
+                          '<style>html.light{--navy:#ffffff;--navy-mid:#f1f3f7;--navy-lift:#ffffff;--ink:#0b1a38;--muted:#5d6678;--silver:#8d95a3;'
+                          '--red-text:#c2410c;--hairline:rgba(11,26,56,.14);--track:rgba(11,26,56,.08);color-scheme:light}'
+                          'html.light .stage{background:#fff!important}html.light body{background:#fff}</style>', 1)
         open(p, "w").write(src); CLIP_OK.add(key)
+
+def _lum(h):
+    h = h.lstrip("#"); ch = [int(h[i:i + 2], 16) / 255 for i in (0, 2, 4)]
+    ch = [x / 12.92 if x <= 0.03928 else ((x + 0.055) / 1.055) ** 2.4 for x in ch]
+    return 0.2126 * ch[0] + 0.7152 * ch[1] + 0.0722 * ch[2]
+
+def _toward_ink(h, need):
+    """Mix a team color toward the site navy until it reaches the contrast ratio `need` on white."""
+    h = h.lstrip("#"); a = [int(h[i:i + 2], 16) for i in (0, 2, 4)]; b = (11, 26, 56)
+    for k in range(0, 101, 4):
+        m = "".join(f"{round(x + (y - x) * k / 100):02x}" for x, y in zip(a, b))
+        if 1.05 / (_lum(m) + 0.05) >= need: return m
+    return "0b1a38"
+
+def reel_light_q(key, g):
+    """Query string that puts a reel scene on a white card. Keeps the reel's own team color (its captions name it, e.g. "Warriors in gold"),
+    deepened just enough to show on white: bars at 1.7:1, text at 4.5:1."""
+    p = f"reels/{key}/index.html"
+    m = re.search(r"--blue:#([0-9a-fA-F]{6})", open(p).read()) if os.path.isfile(p) else None
+    if not m: return "&light=1"
+    col = m.group(1)
+    if _lum(col) > 0.8:  # a white kit vanishes on a white card: draw it in black and say so in the captions
+        return "&light=1&c=1b1b1f&ct=1b1b1f&sw=white.black"
+    return f"&light=1&c={_toward_ink(col, 1.7)}&ct={_toward_ink(col, 4.5)}"
+
+def reel_scenes(key):
+    """Scene id -> (t0, t1) from the game's recap reel; empty when the game has no reel."""
+    p = f"reels/{key}/index.html"
+    if key not in CLIP_OK or not os.path.isfile(p): return {}
+    return {m.group(1): (float(m.group(2)), float(m.group(3)))
+            for m in re.finditer(r"\{id: '([a-z]+)', name: '[^']*', t0: ([\d.]+), t1: ([\d.]+)\}", open(p).read())}
 
 def play_scene(key):
     """The reel's play scene name and the config's one-line description of it (already fact-checked)."""
@@ -496,17 +537,17 @@ def star_stats(key):
     return m.group(1), stats
 
 def star_pane(name, team, stats, color):
-    tiles = ""
+    rows = ""
     for i, (lbl, v, mx) in enumerate(stats):
         mm = re.match(r"^(.*?) made of (\d+)$", lbl)
         if mm: lbl, shown, frac = mm.group(1), f"{v}/{mm.group(2)}", v / int(mm.group(2))
         else: shown, frac = str(v), (min(1, v / mx) if mx else 1)
         c = 2 * 3.14159 * 40
-        tiles += (f'<div class="st" style="--i:{i}"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="40" class="sttrack"/>'
-                  f'<circle cx="50" cy="50" r="40" class="stfill" stroke="{color}" stroke-dasharray="{c:.1f}" style="--off:{c * (1 - frac):.1f};--c:{c:.1f}"/></svg>'
-                  f'<span class="stv">{E(shown)}</span><span class="stl">{E(lbl)}</span></div>')
-    return (f'<div class="starp"><div class="k" style="margin:0 0 4px">{E(name.upper())} · {E(T[team]["name"].upper())}</div>'
-            f'<div class="sts">{tiles}</div></div>')
+        rows += (f'<div class="st" style="--i:{i}"><div class="stg"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="40" class="sttrack"/>'
+                 f'<circle cx="50" cy="50" r="40" class="stfill" stroke="{color}" stroke-dasharray="{c:.1f}" style="--off:{c * (1 - frac):.1f};--c:{c:.1f}"/></svg>'
+                 f'<span class="stv">{E(shown)}</span></div><span class="stl">{E(lbl)}</span></div>')
+    return (f'<div class="starp"><div class="k" style="margin:0 0 6px;text-align:center">{E(name.upper())} · {E(T[team]["name"].upper())}</div>'
+            f'<div class="stcol">{rows}</div></div>')
 
 def scorers_pane(team, total, rows, color, k):
     """'73 of 144 by Cunningham and Jenkins' and a bar per scorer (from the writeup's verified top lines)."""
@@ -596,7 +637,7 @@ def scroll_story(g, f, ls, R):
             f'<div class="steps">{step_html}</div><div class="vis">{pane_html}</div>{nav}</div><div class="spaces">{spacers}</div></div>')
 
 
-# ---- game story cards (Elan, Nov 13): swipe/tap like Instagram stories; order "why first" ----
+# ---- game story cards (the owner, Nov 13): swipe/tap like Instagram stories; order "why first" ----
 def _cfg_rows(D, key):
     m = re.search(key + r":\s*\[(.*?)\],\s*\n", D, flags=re.S)
     if not m: return []
@@ -625,9 +666,12 @@ def card_verdict(g, f, c, cw, cl):
         D = c.get("D", ""); edges, gaps = _cfg_rows(D, "edges"), _cfg_rows(D, "gaps")
         if c.get("team") == w: won, lost = edges, gaps
         else: won, lost = [(a, y, x, u) for a, x, y, u in gaps], [(a, y, x, u) for a, x, y, u in edges]
-    if not won and f.get("battle"):
+    if not [r for r in won if not re.search(r"quarter|half|overtime|\bOT\b", r[0], re.I)] and f.get("battle"):
         la = (f.get("battle_labels") or [w, l])[0]
         won = [(k, (a if la == w else b), (b if la == w else a), "") for k, a, b in f["battle"]]
+    # quarter / half / overtime scoring belongs to "How it went", not the verdict (the owner, Nov 13)
+    _per = re.compile(r"quarter|half|overtime|\bOT\b", re.I)
+    won = [r for r in won if not _per.search(r[0])]; lost = [r for r in lost if not _per.search(r[0])]
     if not won: return None
     def row(lbl, a, b, u, flip, i):
         ca, cb = ("#c9d3e6" if flip else cw), (cl if flip else "#d7d8db")
@@ -638,7 +682,7 @@ def card_verdict(g, f, c, cw, cl):
     if lost:
         html += f'<div class="cs-grp"><h4>Where the {E(L)} won</h4>' + "".join(row(*r, True, i + 4) for i, r in enumerate(lost[:2])) + '</div>'
     three = f.get("three") or []
-    h3, txt = (three[2][0] + ".", three[2][1]) if len(three) > 2 else (f"How the {W} won.", "")
+    h3, txt = (three[2][0] + ".", three[2][1]) if len(three) > 2 and not _per.search(three[2][0]) else (f"How the {W} won.", "")
     return ("The verdict", h3, txt, html)
 
 def card_flow(g, wq, lq, c, cw, cl):
@@ -716,10 +760,16 @@ def card_other(g, f, wq, lq, cl):
 
 def card_now(g, cw, cl):
     w, l = g["win"], g["lose"]; W, L = T[w]["name"], T[l]["name"]
-    nxt = lambda c: (f'<div class="mtn">Next: {E(next_game(c))}</div>' if next_game(c) else "")
-    html = meant_pane(w, l, cw, cl).replace('</div></div></div>', '</div></div></div>', 1)
-    html = html[:-6] + "".join(f'<div class="mtnx"><b>{E(T[c]["name"])}</b> {nxt(c)}</div>' for c in (w, l) if next_game(c)) + "</div>"
-    return ("Where they stand", f"{W} {rec(w)}. {L} {rec(l)}.", f"Records and top-6 playoff odds as of today ({S['updated_short']}).", html)
+    def block(c, col):
+        ch = O[c]["chg"]; chs = f'{"+" if ch > 0 else "−" if ch < 0 else ""}{abs(ch)}% this week' if ch else "no change this week"
+        nx = next_game(c)
+        return (f'<div class="sb"><div class="sbh"><span class="sbn"><i class="dot" style="{dot2(c)}"></i>{E(T[c]["name"])}</span>'
+                f'<span class="sbr">{rec(c)}</span></div><div class="sbs">{E(seed(c))}</div>'
+                f'<div class="sbbar"><span style="width:{max(2, O[c]["top6"])}%;background:{col}"></span></div>'
+                f'<div class="sbo"><b style="color:{col}">{O[c]["top6"]}%</b> chance of a top-6 seed · <span class="{chgcls(ch)}">{chs}</span></div>'
+                + (f'<div class="sbx"><span>Next</span> {E(nx)}</div>' if nx else '') + '</div>')
+    html = f'<div class="stand">{block(w, cw)}{block(l, cl)}</div>'
+    return ("Where they stand", f"{W} {rec(w)}. {L} {rec(l)}.", f"Records and playoff odds as of today ({S['updated_short']}).", html)
 
 def story_cards(g, f, ls, R, clip, pname, pdesc, v):
     w, l = g["win"], g["lose"]
@@ -727,15 +777,29 @@ def story_cards(g, f, ls, R, clip, pname, pdesc, v):
     cw, cl = pair_colors(w, l); c = _cfg_for(g["key"])
     cards = [x for x in (card_verdict(g, f, c, cw, cl), card_flow(g, wq, lq, c, cw, cl), card_moment(g, clip, pname, pdesc, v),
                          card_star(g, f, cw), card_help(g, f, cw), card_other(g, f, wq, lq, cl), card_now(g, cw, cl)) if x]
+    sc = reel_scenes(g["key"])
+    if "final" in sc:  # the recap's counting-up final score opens the story (the owner, Nov 13)
+        hs, lo = max(g["as_"], g["hs"]), min(g["as_"], g["hs"])
+        cards.insert(0, ("Final", f"{T[w]['name']} {hs}, {T[l]['name']} {lo}{' (OT)' if len(wq) > 4 else ''}", "", ""))
+    SCENE_FOR = {"Final": "final", "The verdict": "edge", "How it went": "flow", "The star": "triple", "The help": "scorers"}
+    lq_ = reel_light_q(g["key"], g) if sc else ""
     n = len(cards); out = ""
     for i, (k, h3, txt, viz) in enumerate(cards):
+        sid = SCENE_FOR.get(k)
+        if sid and sid in sc:
+            t0, t1 = sc[sid]
+            src = f"{R}reels/{g['key']}/index.html?embed=1&clip={sid}&hold=1{lq_}"
+            out += (f'<section class="cs-card reel{" on" if i == 0 else ""}" data-card="{i}" data-dur="{int((t1 - t0) * 1000) + 600}">'
+                    f'<div class="cs-kick">{i + 1} of {n} · {E(k)}</div><h3 class="sr-only">{E(h3)}</h3>'
+                    f'<div class="cs-reel"><iframe data-src="{src}" title="{E(k)}: {E(h3)}" tabindex="-1"></iframe></div></section>')
+            continue
         out += (f'<section class="cs-card{" on" if i == 0 else ""}" data-card="{i}"><div class="cs-kick">{i + 1} of {n} · {E(k)}</div>'
                 f'<h3>{E(h3)}</h3>{f"<p>{E(txt)}</p>" if txt else ""}<div class="cs-viz">{viz}</div></section>')
     return (f'<div class="cs" data-cards data-snd="{R}audio/courtside-breakbeat.mp3"><div class="cs-bars">{"<span><i></i></span>" * n}</div>{out}'
             '<button type="button" class="cs-tap prev" aria-label="Back"></button><button type="button" class="cs-tap next" aria-label="Next"></button>'
             '<div class="cs-foot"><span class="l"><button type="button" class="cs-btn ghost ic" data-fs aria-label="Full screen">⤢</button>'
             '<button type="button" class="cs-btn ghost ic" data-sound aria-pressed="false" aria-label="Music on">♪</button>'
-            '<button type="button" class="cs-btn ghost" data-play>▶\ufe0e Play</button><span class="cs-ct" data-ct>1 of ' + str(n) + '</span></span>'
+            '<button type="button" class="cs-btn ghost" data-play>▶\ufe0e<span class="pt"> Play</span></button><span class="cs-ct" data-ct>1 of ' + str(n) + '</span></span>'
             '<span class="r"><button type="button" class="cs-btn ghost" data-back hidden aria-label="Back">←</button>'
             '<button type="button" class="cs-btn" data-go>Next →</button><a class="cs-btn" href="#watch" data-done hidden>Highlights ↓</a></span></div></div>')
 
