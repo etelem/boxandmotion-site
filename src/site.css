@@ -332,3 +332,51 @@ footer.foot{padding-top:48px;padding-bottom:36px;margin-top:56px;border-top:1px 
 .sr .vis .bignum{margin-top:-14px}
 .tn .tv{margin-left:auto;flex:none;font:600 11px 'Albert Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:5px 9px;border-radius:999px;background:var(--panel);color:var(--ink);white-space:nowrap}.tn.is-mine .tv{background:rgba(255,255,255,.18);color:#fff}
 .tn .tmid{display:flex;flex-direction:column;gap:6px;align-items:flex-start;min-width:0}.tn .tmid .tv{margin-left:0;padding:3px 8px;font-size:10px}
+/* story v3 (Nov 13): every part the same height (stacked), pictures animate in, no repeats */
+.sr .steps{display:grid}.sr .step{grid-area:1/1;display:flex;visibility:hidden;animation:none}
+.sr .step.on{visibility:visible;animation:stepin .25s ease}
+.sr .vis{display:grid;height:auto;min-height:250px}.sr .pane{grid-area:1/1;display:flex;visibility:hidden}.sr .pane.on{visibility:visible}
+.sr .lchart{min-height:200px}
+.sr .pane.on .lup .lbar{animation:growup .55s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0)*90ms)}
+.sr .pane.on .ldn .lbar{animation:growdn .55s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0)*90ms)}
+.sr .pane.on .lcol .lv,.sr .pane.on .ltie{animation:fadein .3s ease both;animation-delay:calc(var(--i,0)*90ms + .3s)}
+@keyframes growup{from{transform:scaleY(0)}to{transform:none}}.lup .lbar{transform-origin:bottom}
+@keyframes growdn{from{transform:scaleY(0)}to{transform:none}}.ldn .lbar{transform-origin:top}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+.lcol.dim{opacity:.35}.lcol.hi .lq{color:var(--ink)}
+.lcol.hi::before{content:"";position:absolute;inset:-6px -2px -24px;border-radius:12px;background:rgba(255,90,31,.10);z-index:-1}
+.lcol{z-index:0}
+.sr .pane.on .tw .ta{animation:growl .6s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0)*110ms)}
+.sr .pane.on .tw .tb{animation:growr .6s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0)*110ms)}
+.tw .ta{transform-origin:left}.tw .tb{transform-origin:right}
+@keyframes growl{from{transform:scaleX(0)}to{transform:none}}@keyframes growr{from{transform:scaleX(0)}to{transform:none}}
+.battle{flex:1;display:flex;flex-direction:column;justify-content:center}
+.hboard,.fboard{flex:1;display:flex;align-items:center}
+.hboard table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hboard th{font:600 11px 'Albert Sans',sans-serif;letter-spacing:.08em;color:var(--dim);text-align:right;padding:0 6px 8px}
+.hboard td{padding:12px 6px;text-align:right;font:500 20px 'Archivo',sans-serif;border-top:1px solid var(--line)}
+.hboard td:first-child{text-align:left;font:600 16px 'Albert Sans',sans-serif;white-space:nowrap}
+.hboard td.hb{font:700 40px/1 'Archivo',sans-serif;letter-spacing:-.03em}
+.hboard .dot,.fboard .dot{margin-right:8px}
+.fboard{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;align-self:center;width:100%}
+.fboard .lines th,.fboard .lines td{padding:10px 4px}.fboard .lines td{font-size:16px}
+.fboard .lines td:first-child,.fboard .lines th:first-child{padding-left:12px}.fboard .lines td:last-child,.fboard .lines th:last-child{padding-right:12px}
+.sr .pane.on .fboard,.sr .pane.on .hboard,.sr .pane.on .bignum{animation:fadein .35s ease both}
+@media (prefers-reduced-motion:reduce){.sr .pane.on *,.sr .step.on{animation:none!important}}
+.fboard{display:block;flex:none}
+/* story v4 (Nov 13): scroll the page; the picture stays pinned under the header */
+.sr{overflow:clip}
+.sr .stick{position:sticky;top:var(--hh,72px);z-index:2;background:#fff;border-bottom:1px solid var(--line)}
+.sr .stick .vis{border-top:0;min-height:240px;padding:10px 20px 14px}
+.sr .steps{display:block}
+.sr .step{display:flex;visibility:visible;grid-area:auto;min-height:62vh;padding:26px 24px 30px;border-top:1px solid var(--line);opacity:.35;transition:opacity .35s;animation:none}
+.sr .step:first-child{border-top:0}
+.sr .step.on{opacity:1;animation:none}
+.sr .step:last-child{min-height:0}
+.sr .sfoot{margin-top:auto;padding-top:18px;display:flex;align-items:center;gap:12px}
+.sr .shint{font-size:13px;color:var(--dim);font-weight:600}
+.sr .shint::after{content:" ↓";display:inline-block;animation:bob 1.4s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+.sr .snext{margin-left:auto}
+.sr .snav{display:none}
+@media(min-width:900px){.sr .step{min-height:48vh}}

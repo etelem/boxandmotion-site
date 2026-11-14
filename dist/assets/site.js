@@ -114,22 +114,26 @@
   // scroll story: the graphic on top follows the card you're reading; the dots jump between parts
   document.querySelectorAll('[data-story]').forEach(function(sr){
     var steps=[].slice.call(sr.querySelectorAll('.step')), panes=[].slice.call(sr.querySelectorAll('.pane')),
-        dots=[].slice.call(sr.querySelectorAll('[data-go]')), n=steps.length, cur=0,
-        prev=sr.querySelector('[data-prev]'), next=sr.querySelector('[data-next]'), done=sr.querySelector('[data-done]'), count=sr.querySelector('[data-count]');
-    function show(i){ i=Math.max(0,Math.min(n-1,i)); cur=i;
+        dots=[].slice.call(sr.querySelectorAll('.dots [data-go]')), stick=sr.querySelector('.stick'), hdr=document.querySelector('header.top'), cur=-1;
+    function hh(){ return hdr?hdr.getBoundingClientRect().height:0; }
+    sr.style.setProperty('--hh',hh()+'px');
+    function countUp(pn){ if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      pn.querySelectorAll('[data-countto]').forEach(function(el){ var to=+el.getAttribute('data-countto'), t0=null;
+        function st(ts){ if(!t0) t0=ts; var k=Math.min(1,(ts-t0)/650); el.textContent=Math.round(to*(1-Math.pow(1-k,3))); if(k<1) requestAnimationFrame(st); }
+        requestAnimationFrame(st); }); }
+    function show(i){ if(i===cur) return; cur=i;
       steps.forEach(function(s,j){s.classList.toggle('on',j===i)});
-      panes.forEach(function(p,j){p.classList.toggle('on',j===Math.min(i,panes.length-1))});
+      panes.forEach(function(p,j){p.classList.toggle('on',j===i)});
       dots.forEach(function(d,j){d.classList.toggle('on',j===i);d.classList.toggle('seen',j<i)});
-      if(prev) prev.hidden=(i===0); if(next) next.hidden=(i===n-1); if(done) done.hidden=(i!==n-1);
-      if(count) count.textContent=(i+1)+' of '+n; }
-    if(next) next.addEventListener('click',function(){show(cur+1)});
-    if(prev) prev.addEventListener('click',function(){show(cur-1)});
-    dots.forEach(function(d,j){d.addEventListener('click',function(){show(j)})});
-    var x0=null,y0=null;
-    sr.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;y0=e.touches[0].clientY},{passive:true});
-    sr.addEventListener('touchend',function(e){ if(x0===null) return; var dx=e.changedTouches[0].clientX-x0, dy=e.changedTouches[0].clientY-y0; x0=null;
-      if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)*1.5) show(cur+(dx<0?1:-1)); },{passive:true});
-    show(0);
+      if(panes[i]) countUp(panes[i]); }
+    function line(){ var b=stick.getBoundingClientRect().bottom; return b+(window.innerHeight-b)*0.45; }
+    function onScroll(){ var y=line(), i=0; steps.forEach(function(s,j){ if(s.getBoundingClientRect().top<=y) i=j; }); show(i); }
+    function go(i){ var s=steps[i]; if(!s) return; var top=window.scrollY+s.getBoundingClientRect().top-stick.getBoundingClientRect().height-hh()+2;
+      window.scrollTo({top:top,behavior:'smooth'}); }
+    sr.addEventListener('click',function(e){ var b=e.target.closest('[data-go]'); if(b){ e.preventDefault(); go(+b.getAttribute('data-go')); } });
+    window.addEventListener('scroll',onScroll,{passive:true});
+    window.addEventListener('resize',function(){ sr.style.setProperty('--hh',hh()+'px'); onScroll(); });
+    show(0); onScroll();
   });
 
   // official highlights: the NBA's own YouTube video loads only after a tap, in YouTube's player

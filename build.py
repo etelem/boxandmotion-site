@@ -419,19 +419,58 @@ def period_names(g, n):
     if n == 5: return ["Q1", "Q2", "Q3", "Q4", "OTs" if ot_label(g) not in ("", "OT") else "OT"]
     return ["Q1", "Q2", "Q3", "Q4"] + ["OT" if i == 0 else f"{i+1}OT" for i in range(n - 4)]
 
-def lead_chart(g, wq, lq, shown):
-    """Winner's lead after each period: bars up in the winner's color, down in the loser's; a ring for a tie."""
-    w, l = g["win"], g["lose"]; leads = []; cw = cl = 0
-    for x, y in zip(wq, lq): cw += x; cl += y; leads.append(cw - cl)
+def _rgb(c): c = c.lstrip("#"); return tuple(int(c[i:i+2], 16) for i in (0, 2, 4))
+def _dist(a, b): return sum((x - y) ** 2 for x, y in zip(_rgb(a), _rgb(b))) ** 0.5
+def pair_colors(w, l):
+    """Colors for winner vs loser in charts: each team's main color, unless they look alike; then the loser's second color."""
+    cw, cl = T[w]["c1"], T[l]["c1"]
+    if _dist(cw, cl) < 140:
+        alt = c2_of(l)
+        cl = alt if _dist(cw, alt) >= 140 else "#8a8c92"
+    return cw, cl
+
+def lead_chart(g, wq, lq, hi=None):
+    """Winner's lead after each period: bars up in the winner's color, down in the loser's; a ring for a tie. Bars grow in when shown."""
+    w, l = g["win"], g["lose"]; cw, cl = pair_colors(w, l); leads = []; sw = sl = 0
+    for x, y in zip(wq, lq): sw += x; sl += y; leads.append(sw - sl)
     mx = max(1, max(abs(v) for v in leads)); names = period_names(g, len(leads)); cols = ""
     for i, v in enumerate(leads):
         up = round(v / mx * 88) if v > 0 else 0; dn = round(-v / mx * 88) if v < 0 else 0
-        cols += (f'<div class="lcol{" off" if i >= shown else ""}"><div class="lup"><span class="lv">{("+" + str(v)) if v > 0 else ("Tied" if v == 0 else "")}</span>'
-                 + ('<span class="ltie"></span>' if v == 0 else '') + f'<span class="lbar" style="height:{up}px;background:{T[w]["c1"]}"></span></div>'
-                 f'<div class="ldn"><span class="lbar" style="height:{dn}px;background:{T[l]["c1"]}"></span><span class="lv">{("+" + str(-v)) if v < 0 else ""}</span></div>'
+        cols += (f'<div class="lcol{" hi" if hi == i else ""}{" dim" if hi is not None and hi != i else ""}" style="--i:{i}"><div class="lup"><span class="lv">{("+" + str(v)) if v > 0 else ("Tied" if v == 0 else "")}</span>'
+                 + ('<span class="ltie"></span>' if v == 0 else '') + f'<span class="lbar" style="height:{up}px;background:{cw}"></span></div>'
+                 f'<div class="ldn"><span class="lbar" style="height:{dn}px;background:{cl}"></span><span class="lv">{("+" + str(-v)) if v < 0 else ""}</span></div>'
                  f'<span class="lq">{names[i]}</span></div>')
-    return (f'<div class="lleg"><span style="color:{T[w]["c1"]}">↑ {E(T[w]["name"])} lead</span><span style="color:{T[l]["c1"]}">{E(T[l]["name"])} lead ↓</span></div>'
+    return (f'<div class="lleg"><span style="color:{cw}">↑ {E(T[w]["name"])} ahead</span><span style="color:{cl}">{E(T[l]["name"])} ahead ↓</span></div>'
             f'<div class="lchart"><span class="zero"></span>{cols}</div>')
+
+def half_board(g, wq, lq):
+    """Part 1: the first-half scoreboard, quarter by quarter. Nothing from the second half (no spoilers)."""
+    w, l = g["win"], g["lose"]; cw, cl = pair_colors(w, l)
+    row = lambda c, col, q: (f'<tr><td><i class="dot" style="{dot2(c)}"></i>{E(T[c]["name"])}</td><td>{q[0]}</td><td>{q[1]}</td>'
+                             f'<td class="hb" style="color:{col}"><span data-countto="{q[0] + q[1]}">{q[0] + q[1]}</span></td></tr>')
+    first, second = (w, l) if g["away"] == w else (l, w)
+    qa, qb = (wq, lq) if first == w else (lq, wq)
+    return (f'<div class="hboard"><table><tr><th></th><th>Q1</th><th>Q2</th><th>Half</th></tr>'
+            f'{row(first, cw if first == w else cl, qa)}{row(second, cw if second == w else cl, qb)}</table></div>')
+
+def turn_period(g, wq, lq):
+    """The period the winner won by the most, and a plain sentence about it, from the line score only."""
+    n = len(wq); k = max(range(n), key=lambda i: (wq[i] - lq[i], -i))
+    pn = (["first quarter", "second quarter", "third quarter", "fourth quarter"][k] if k < 4
+          else ("overtime" if ot_label(g) in ("", "OT") else "the two overtimes" if ot_label(g) == "2OT" else "the overtimes"))
+    name = pn if pn.startswith("the") else "the " + pn
+    W, L = T[g["win"]]["name"], T[g["lose"]]["name"]
+    bw, bl = sum(wq[:k]), sum(lq[:k]); aw, al = bw + wq[k], bl + lq[k]
+    when = ["", "after one quarter", "at the half", "after three quarters", "after four quarters"][k] if k <= 4 else "after the first overtime"
+    if k == 0: before = "From the opening tip"
+    elif bw == bl: before = f"Tied {bw}–{bl} {when}"
+    elif bw > bl: before = f"Up {bw - bl} {when}"
+    else: before = f"Down {bl - bw} {when}"
+    if aw > al: after = f"to lead {aw}–{al}" if k < n - 1 else f"to win {aw}–{al}"
+    elif aw == al: after = f"to tie it {aw}–{al}"
+    else: after = f"to cut it to {al - aw}"
+    title = f"Won {name} {wq[k]}–{lq[k]}"
+    return k, title, f"{before}, the {W} won {name} {wq[k]}–{lq[k]} {after}."
 
 def score_after(g, wq, lq, n):
     w, l = g["win"], g["lose"]; sw, sl = sum(wq[:n]), sum(lq[:n])
@@ -453,51 +492,54 @@ def scroll_story(g, f, ls, R):
     three = f.get("three") or []
     top = (f.get("top") or [None])[0]
     panes, steps = [], []
-    # 1 · first half: lead bars through the half
-    panes.append(f'<div class="phead"><span class="hn">{hw}–{hl}</span><span class="hc">{E(T[w]["name"])}–{E(T[l]["name"])} at the half</span></div>{lead_chart(g, wq, lq, 2)}')
+    cw, cl = pair_colors(w, l)
+    # 1 · first half: the first-half scoreboard (nothing from later, no spoilers)
+    panes.append(half_board(g, wq, lq))
     steps.append(("First half", "How it started.", s1))
     # 2 · the first of the recap's three things, with the top scorer's number
     if three:
         if top:
             n, tm, note, p = top
-            panes.append(f'<div class="bignum" style="--team-grad:{grad(tm)}"><div class="k" style="color:rgba(255,255,255,.85)">{E(n.upper())} · {E(T[tm]["name"].upper())}</div><div class="bn">{p}</div><div class="bl">{E(note)}</div></div>')
-        else:
-            panes.append(f'<div class="phead"><span class="hn">{ws}–{lsc}</span></div>{lead_chart(g, wq, lq, len(wq))}')
-        steps.append(("The difference", three[0][0], three[0][1]))
-    # 3 · the second thing, with the whole game's lead bars
-    if len(three) > 1:
-        panes.append(f'<div class="phead"><span class="hn">{sum(wq[:3])}–{sum(lq[:3])}</span><span class="hc">{E(T[w]["name"])}–{E(T[l]["name"])} after three</span></div>{lead_chart(g, wq, lq, len(wq))}')
-        steps.append(("How it turned", three[1][0], three[1][1]))
-    # 4 · the third thing, with where it was won
+            panes.append(f'<div class="bignum" style="--team-grad:{grad(tm)}"><div class="k" style="color:rgba(255,255,255,.85)">{E(n.upper())} · {E(T[tm]["name"].upper())}</div><div class="bn" data-countto="{p}">{p}</div><div class="bl">{E(note)}</div></div>')
+            steps.append(("The difference", three[0][0], three[0][1]))
+    # 3 · how it turned: the whole game's lead bars, the deciding period lit up; words from the line score
+    k, ttitle, ttext = turn_period(g, wq, lq)
+    extra = f" {three[1][1]}" if len(three) > 1 else ""
+    panes.append(lead_chart(g, wq, lq, hi=k))
+    steps.append(("How it turned", ttitle, ttext + extra))
+    # 4 · the third thing, with where it was won (each team in its own, clearly different color)
     if len(three) > 2 and f.get("battle"):
         la, lb = f.get("battle_labels", [w, l])
-        ca, cb = (T[la]["c1"] if la in T else "#111214"), (T[lb]["c1"] if lb in T else "#8a8c92")
-        rows = "".join(f'<div class="tw"><span class="lbl">{E(k)}</span><span class="v" style="color:{ca}">{v1}</span><div class="tr"><span style="flex:{max(v1,0.5)};background:{ca}"></span><span style="flex:{max(v2,0.5)};background:{cb}"></span></div><span class="v" style="color:{cb};text-align:right">{v2}</span></div>' for k, v1, v2 in f["battle"])
-        panes.append(f'<div style="flex:1;display:flex;flex-direction:column;justify-content:center"><div class="lleg"><span style="color:{ca}">{E(la)}</span><span style="color:{cb}">{E(lb)}</span></div>{rows}</div>')
+        col = lambda c: cw if c == w else cl if c == l else "#8a8c92"
+        ca, cb = col(la), col(lb)
+        rows = "".join(f'<div class="tw" style="--i:{j}"><span class="lbl">{E(k2)}</span><span class="v" style="color:{ca}">{v1}</span><div class="tr"><span class="ta" style="flex:{max(v1,0.5)};background:{ca}"></span><span class="tb" style="flex:{max(v2,0.5)};background:{cb}"></span></div><span class="v" style="color:{cb};text-align:right">{v2}</span></div>' for j, (k2, v1, v2) in enumerate(f["battle"]))
+        nm = lambda c: E(T[c]["name"]) if c in T else E(c)
+        panes.append(f'<div class="battle"><div class="lleg"><span style="color:{ca}">{nm(la)}</span><span style="color:{cb}">{nm(lb)}</span></div>{rows}</div>')
         steps.append(("Where it was won", three[2][0], three[2][1]))
-    # 5 · final: line score, the other side, what it meant
+    # 5 · final: the line score in the picture; the other side and what it meant in words
     names = period_names(g, len(wq))
-    tbl = (f'<div class="tbox"><table class="lines"><tr><th></th>{"".join(f"<th>{n}</th>" for n in names)}<th>F</th></tr>'
+    tbl = (f'<div class="fboard"><table class="lines"><tr><th></th>{"".join(f"<th>{n}</th>" for n in names)}<th>F</th></tr>'
            f'<tr><td><i class="dot" style="{dot2(a)}"></i>{a}</td>{"".join(f"<td>{x}</td>" for x in ls["away"])}<td><b>{g["as_"]}</b></td></tr>'
            f'<tr><td><i class="dot" style="{dot2(h)}"></i>{h}</td>{"".join(f"<td>{x}</td>" for x in ls["home"])}<td><b>{g["hs"]}</b></td></tr></table></div>')
-    meant = (f'<p><b>What it meant:</b> the {E(T[w]["name"])} are {rec(w)}, {seed(w)}, with {O[w]["top6"]}% top-6 odds now. '
-             f'The {E(T[l]["name"])} are {rec(l)}, {seed(l)}, at {O[l]["top6"]}%.</p>')
+    meant = (f'<p><b>What it meant:</b> {E(T[w]["name"])} {rec(w)}, {seed(w)}, {O[w]["top6"]}% top-6 odds. '
+             f'{E(T[l]["name"])} {rec(l)}, {seed(l)}, {O[l]["top6"]}%.</p>')
     other = f'<p><b>From the {E(T[l]["name"])}’ side:</b> {E(got_away(lq, wq, g["ot"]))}</p>'
-    panes.append(f'<div class="phead"><span class="hn">{ws}–{lsc}</span><span class="hc">{E(meta(g).split(" · ")[0])}{" · " + ot_label(g) if g["ot"] else ""}</span></div>{lead_chart(g, wq, lq, len(wq))}')
-    steps.append(("Final" + (f", {ot_label(g)}" if g["ot"] else ""), f"{T[w]['name']} {ws}, {T[l]['name']} {lsc}.", tbl + other + meant))
+    panes.append(tbl)
+    steps.append(("Final" + (f", {ot_label(g)}" if g["ot"] else ""), f"{T[w]['name']} {ws}, {T[l]['name']} {lsc}.", other + meant))
     n = len(steps)
     dots = "".join(f'<button type="button" data-go="{i}" aria-label="Part {i+1}"{" class=on" if i == 0 else ""}><i></i></button>' for i in range(n))
     pane_html = "".join(f'<div class="pane{" on" if i == 0 else ""}" data-pane-i="{i}">{p}</div>' for i, p in enumerate(panes))
     step_html = ""
     for i, (k, h3, txt) in enumerate(steps):
         body = txt if txt.startswith("<") else f"<p>{E(txt)}</p>"
-        step_html += f'<div class="step{" on" if i == 0 else ""}"><span class="sk">{i+1} · {E(k)}</span><h3>{E(h3)}</h3>{body}</div>'
-    nav = (f'<div class="snav"><button type="button" class="sback" data-prev aria-label="Previous part" hidden>←</button>'
-           f'<span class="scount" data-count>1 of {n}</span>'
-           f'<button type="button" class="pill or snext" data-next>Next <span aria-hidden="true">→</span></button>'
-           f'<a class="pill or snext" href="#play" data-done hidden>See the play <span aria-hidden="true">↓</span></a></div>')
-    return (f'<div class="sr" data-story><div class="top stop"><span>THE STORY · TAP NEXT</span><span class="dots">{dots}</span></div>'
-            f'<div class="steps">{step_html}</div><div class="vis">{pane_html}</div>{nav}</div>')
+        if i < n - 1:
+            foot = (f'<div class="sfoot">{"<span class=shint>Scroll to keep going</span>" if i == 0 else ""}'
+                    f'<button type="button" class="pill sm snext" data-go="{i + 1}">Next <span aria-hidden="true">↓</span></button></div>')
+        else:
+            foot = '<div class="sfoot"><a class="pill or snext" href="#play">See the play <span aria-hidden="true">↓</span></a></div>'
+        step_html += f'<div class="step{" on" if i == 0 else ""}" data-step="{i}"><span class="sk">{i+1} of {n} · {E(k)}</span><h3>{E(h3)}</h3>{body}{foot}</div>'
+    return (f'<div class="sr" data-story><div class="stick"><div class="top stop"><span>THE STORY · SCROLL</span><span class="dots">{dots}</span></div>'
+            f'<div class="vis">{pane_html}</div></div><div class="steps">{step_html}</div></div>')
 
 COURT = '<svg class="pcourt" viewBox="0 0 350 197" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true"><g stroke="rgba(255,255,255,.14)" stroke-width="1.5"><path d="M175 0V197"/><circle cx="175" cy="98" r="34"/><rect x="0" y="62" width="62" height="72"/><rect x="288" y="62" width="62" height="72"/><path d="M0 18H24A86 86 0 0 1 24 178H0M350 18H326A86 86 0 0 0 326 178H350"/></g></svg>'
 for g in GAMES:
