@@ -1,0 +1,178 @@
+{
+  "team": "SAS",
+  "D": "  const D = {\n    date: 'Fri, Nov 13, 2026',\n    us: 123, them: 85, record: '11–2', usName: 'Spurs', themName: 'Warriors',\n    quarters: [[38, 14], [25, 19], [34, 27], [26, 25]],\n    leadUs: 43, leadThem: 0,\n    star: {name: 'Stephon Castle', stats: [['Points (season high)', 32, 40], ['Shots made of 18', 12, 18], ['Threes made of 8', 5, 8]]},\n    scorers: [\n      {name: 'Stephon Castle', pts: 32, note: '12 of 18 · 5 threes · season high'},\n      {name: 'Keldon Johnson', pts: 18, note: '4 rebounds · 4 assists'},\n      {name: 'Victor Wembanyama', pts: 12, note: '12 rebounds · 6 assists · 21 minutes'},\n      {name: 'Harrison Barnes', pts: 11, note: 'the three that made it 43'},\n      {name: 'Dylan Harper', pts: 9, note: '4 assists'},\n    ],\n    edges: [\n      {label: 'Rebounds', us: 60, them: 43},\n      {label: 'Points in the paint', us: 56, them: 28},\n      {label: 'Fast-break points', us: 21, them: 3},\n      {label: 'Field-goal percentage', us: 48, them: 33, unit: '%'},\n    ],\n    gaps: [\n    ],\n    next: {opp: 'at Jazz', when: 'Sun, Nov 15, 5:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Stephon Castle's 3-pointer off a Victor Wembanyama pass with 10:08 left in the first quarter that made it 10-0, part of the Spurs' 18-0 start. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Castle from three",
+    "subP": "Castle from three, 10:08 in the 1st",
+    "subL": "Stephon Castle from three with 10:08 left in the first, up 7–0",
+    "m0": "Spurs +7",
+    "m1": "Spurs +10",
+    "num": "5",
+    "cap1": "Castle from three. Spurs by 10.",
+    "cap2": "The start reached 18–0.",
+    "clock": [
+      614,
+      608
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Spurs vs Warriors Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Spurs 123, Warriors 85 · Nov 13, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Spurs vs.', 'Warriors'] : ['Spurs vs. Warriors']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Castle 32, an 18–0 start.', 'No Curry, Spurs by 38.'] : ['Stephon Castle scored a season-high 32 and the Spurs opened 18–0 on a Warriors team without Stephen Curry.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Spurs improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'11th straight win'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Up 30 at the half,', 'won every quarter'] : ['Up 30 at the half, and they won every quarter']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Spurs ${D.leadUs}, after an 18–0 start"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Spurs’ margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Castle: 32,', 'a season high'] : ['Castle: 32 points, a season high']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['12 of 18, 5 threes,', '18 by halftime.'] : ['12 of 18 from the floor with 5 threes, 18 of them by halftime.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Castle and Johnson:', '50 of the 123'] : ['Castle and Keldon Johnson combined for 50 of 123']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 40;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it everywhere:', '60–43 on the boards'] : ['Won it everywhere: 60–43 on the boards']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Spurs in silver, Warriors in gray. Golden', 'State missed its first 11 shots.'] : ['Spurs in silver, Warriors in gray. Golden State missed its first 11 shots.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'Second in the West'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Jazz’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '1–12';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['18–0 to open: the best start', 'in the play-by-play era.'] : ['18–0 to open: the best start to a game in the play-by-play era.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Spurs 123 · Warriors 85 · Nov 13'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Castle from three'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Castle'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 65;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+3', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "T(board, bx + 24, by + 38, 'Q1', 'b m', 24);"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 160, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 192, ly, D.themName"
+    ],
+    [
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+    ]
+  ],
+  "aria": "Animated recap of the Spurs' 123 to 85 home win over the Warriors: Stephon Castle's 3-pointer with 10:08 left in the first quarter that made it 10 to 0 during an 18 to 0 start, quarter-by-quarter scoring, Castle's season-high 32 points, the top scorers, how the Spurs won, and the next game at Utah.",
+  "figure": {
+    "player": "Stephon Castle",
+    "home": true,
+    "tall": 1.0,
+    "ape": 1.0385,
+    "mass": 1.0,
+    "label": "Stephon Castle, listed 6-6, 215 lb, 6-9 wingspan (2024 combine)"
+  },
+  "loser_top": [
+    [
+      "LJ Cryer",
+      20,
+      "off the bench · 6 of 11 from three · career high"
+    ],
+    [
+      "Charles Bassey",
+      11,
+      "5 of 7 · 5 rebounds"
+    ],
+    [
+      "Yaxel Lendeborg",
+      3,
+      "1 of 13 · 7 rebounds"
+    ]
+  ],
+  "notes": [
+    "Box score from the Spurs' 123–85 win over the Golden State Warriors on Nov 13, 2026 (NBA Cup, West Group C). The line score (38–25–34–26 to 14–19–27–25) is from Yahoo Sports and Sport Preferred and matches Field Level Media (38–14 after one, 63–33 at the half) and the AP (34–27 in the third; San Antonio won all four quarters). Spurs points, rebounds and assists are from the Bleacher Report box score; Castle's 12 of 18, 5 of 8 from three and 18 first-half points from Yahoo Sports and Field Level Media; Wembanyama's 12 points, 12 rebounds, 6 assists and 21 minutes from theScore and Field Level Media. The Spurs lines found this morning account for 96 of San Antonio's 123 points; the other 27 came from players not in Bleacher Report's list of top performers. Every Warriors point (85) is accounted for in the Yahoo Sports player ratings; LJ Cryer's 20 (7 of 17, 6 of 11 from three) is from Yahoo Sports, Bleacher Report and NBC Bay Area (Field Level Media has 19). Team totals (rebounds 60–43, paint 56–28, fast-break 21–3, 48 to 33 percent shooting) are from Yahoo Sports. Records and ranks are from the site's standings after Friday's games.",
+    "San Antonio scored the first 18 points over the opening 4:29, eight of them by Castle, and Golden State missed its first 11 shots (Field Level Media); it was the biggest game-opening run of the play-by-play era (the NBA via ClutchPoints, Field Level Media). The lead reached 43 on a Harrison Barnes 3-pointer with 57 seconds left in the third (Field Level Media). Stephen Curry missed the game with an oblique tear (Field Level Media, Bleacher Report). The Spurs have won 11 straight after an 0–2 start (Field Level Media, San Antonio Express-News via Yahoo Sports) and are 2–0 in group play. They play at Utah on Sunday at 5:00 PM ET (AP).",
+    "The play of the game is an original illustration of Stephon Castle's 3-pointer with 10:08 left in the first quarter, off a pass from Victor Wembanyama, that made it 10–0 (SI.com live play-by-play; Castle's two threes and a jumper are the eight points Field Level Media credits him in the 18–0 run). The move isn't described further, so it is drawn as the template's plain pull-up. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the San Antonio Spurs or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Castle's listed 6-foot-6 and 215 pounds (RealGM), with arms scaled to the 6-foot-9 wingspan measured at the 2024 draft combine (Bleacher Report), in San Antonio's home white with No. 5 (RealGM). He has no approved look on file yet, so he is drawn as a team-colour silhouette in the kit. It is an original silhouette with a featureless face, not a portrait or a trace of footage."
+  ]
+}

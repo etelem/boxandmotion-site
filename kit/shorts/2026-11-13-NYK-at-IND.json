@@ -1,0 +1,58 @@
+{
+  "out": "short-2026-11-13-NYK-IND.html",
+  "team": "IND",
+  "home": true,
+  "number": "43",
+  "player": "Pascal Siakam",
+  "play_type": "jumper",
+  "three": false,
+  "build": {
+    "tall": 1.0256,
+    "ape": 1.0,
+    "mass": 1.0541
+  },
+  "build_note": "Listed 6-8, 245 lb (RealGM); no wingspan from a named source",
+  "kicker": "PACERS 106 · KNICKS 104 · NOV 13",
+  "hook": [
+    "Siakam's jumper",
+    "held up by 2"
+  ],
+  "clock": "Q4 · 1:49",
+  "us": "IND",
+  "them": "NYK",
+  "score_before": [
+    104,
+    98
+  ],
+  "score_make": [
+    106,
+    98
+  ],
+  "score_ft": [
+    106,
+    98
+  ],
+  "stamp": "15-FOOTER",
+  "beat": [
+    "Pacers by 8, 1:49 left.",
+    "Their last points. Won by 2."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Pacers",
+    "them": "Knicks",
+    "us_pts": 106,
+    "them_pts": 104
+  },
+  "star": {
+    "name": "Pascal Siakam",
+    "big": 19,
+    "big_label": "points, a team high",
+    "lines": [
+      "5 of 13 from the floor",
+      "7 of 12 at the line"
+    ]
+  },
+  "story": "The Knicks cut it to 106–104 with 10 seconds left. Towns missed a turnaround at the horn.",
+  "aria": "Original illustration of Pascal Siakam's 15-foot jumper with 1:49 left that put the Pacers up 106–98 against the Knicks, their last points in a 106–104 win. Not traced from footage, not to scale."
+}

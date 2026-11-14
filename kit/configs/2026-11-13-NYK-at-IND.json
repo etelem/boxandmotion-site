@@ -1,0 +1,178 @@
+{
+  "team": "IND",
+  "D": "  const D = {\n    date: 'Fri, Nov 13, 2026',\n    us: 106, them: 104, record: '5–8', usName: 'Pacers', themName: 'Knicks',\n    quarters: [[26, 27], [32, 22], [27, 35], [21, 20]],\n    leadUs: 14, leadThem: 9,\n    star: {name: 'Pascal Siakam', stats: [['Points', 19, 25], ['Free throws made of 12', 7, 12], ['Threes made of 4', 2, 4]]},\n    scorers: [\n      {name: 'Pascal Siakam', pts: 19, note: '5 of 13 · 7 of 12 at the line'},\n      {name: 'Aaron Nesmith', pts: 18, note: '7 of 10 · 7 rebounds'},\n      {name: 'Kelly Oubre Jr.', pts: 16, note: '5 rebounds · 2 steals'},\n      {name: 'Ivica Zubac', pts: 12, note: '13 rebounds'},\n      {name: 'Andrew Nembhard', pts: 12, note: '6 assists'},\n    ],\n    edges: [\n      {label: 'Rebounds', us: 50, them: 43},\n      {label: 'Free throws made', us: 18, them: 10},\n      {label: 'Second-quarter points', us: 32, them: 22},\n    ],\n    gaps: [\n      {label: 'Third-quarter points', us: 27, them: 35},\n    ],\n    next: {opp: 'at 76ers', when: 'Sun, Nov 15, 1:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Pascal Siakam's 15-foot jumper with 1:49 left that put the Pacers up 106-98, their last points of the night. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Siakam from 15",
+    "subP": "Siakam from 15 feet, 1:49 left",
+    "subL": "Pascal Siakam from 15 feet with 1:49 left, up 104–98",
+    "m0": "Pacers +6",
+    "m1": "Pacers +8",
+    "num": "43",
+    "cap1": "Siakam from 15. Pacers by 8.",
+    "cap2": "Their last basket. It held, 106–104.",
+    "clock": [
+      116,
+      109
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Pacers vs Knicks Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Pacers 106, Knicks 104 · Nov 13, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Pacers vs.', 'Knicks'] : ['Pacers vs. Knicks']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Siakam’s jumper held up.', 'Towns missed at the horn.'] : ['Pascal Siakam’s jumper was the last Pacers basket, and Karl-Anthony Towns missed at the horn.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Pacers improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Second straight win'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Up 9 at the half,', 'up 1 after three'] : ['Up 9 at the half, up 1 after three, then 21–20 in the fourth']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Pacers ${D.leadUs}, at 83–69 in the 3rd"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Pacers’ margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Siakam: 19,', 'and the last basket'] : ['Siakam: 19 points and the last basket']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['5 of 13 from the floor,', '7 of 12 at the line.'] : ['5 of 13 from the floor, 7 of 12 at the line.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Siakam and Nesmith:', '37 of the 106'] : ['Siakam and Nesmith combined for 37 of 106']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 25;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it on the glass', 'and at the line'] : ['Won it on the glass and at the line']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Pacers in gold, Knicks in gray. Both', 'teams shot 43 percent.'] : ['Pacers in gold, Knicks in gray. Both teams shot 43 percent.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'11th in the East'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'76ers’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '10–3';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Without Tyrese Haliburton.', 'Knicks fall to 0–2 in the Cup.'] : ['Without Tyrese Haliburton. The Knicks fall to 0–2 in NBA Cup group play.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Pacers 106 · Knicks 104 · Nov 13'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Siakam from 15'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Siakam'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 60;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 170 : 200) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+2', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 120 * k, shotX + 80 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 178, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 210, ly, D.themName"
+    ],
+    [
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+    ]
+  ],
+  "aria": "Animated recap of the Pacers' 106 to 104 home win over the Knicks: Pascal Siakam's 15-foot jumper with 1:49 left that made it 106 to 98, quarter-by-quarter scoring, Siakam's 19 points, the top scorers, how the Pacers won, and the next game at Philadelphia.",
+  "figure": {
+    "player": "Pascal Siakam",
+    "home": true,
+    "tall": 1.0256,
+    "ape": 1.0,
+    "mass": 1.0541,
+    "label": "Pascal Siakam, listed 6-8, 245 lb, no wingspan from a named source"
+  },
+  "loser_top": [
+    [
+      "Jalen Brunson",
+      33,
+      "11 of 22 · 11 assists"
+    ],
+    [
+      "Karl-Anthony Towns",
+      23,
+      "15 rebounds · 12th straight double-double"
+    ],
+    [
+      "Mikal Bridges",
+      18,
+      "cut it to 2 with 10 seconds left"
+    ]
+  ],
+  "notes": [
+    "Box score from the Pacers' 106–104 win over the New York Knicks at Gainbridge Fieldhouse on Nov 13, 2026 (NBA Cup, East Group B): the quarter line score (26–32–27–21 to 27–22–35–20) from FOX Sports, matching the halftime (58–49) and after-three (85–84) scores in Bleacher Report, Posting and Toasting (Yahoo Sports) and the Associated Press. Points, rebounds and assists from the Bleacher Report box score; Siakam's 5 of 13 and 7 of 12 at the line from RotoWire (CBS Sports); Nesmith's 7 of 10 and 2 of 3 from three from Yahoo Sports; Brunson's 11 of 22 from Posting and Toasting; Towns' 9 of 19 from FOX Sports. Team rebounds (50–43), free throws (18 of 25 to 10 of 13) and 43 percent shooting for both teams are from the AP. The five Pacers in double figures (Yahoo Sports) account for 77 of Indiana's 106 points; no other Pacer reached 12. Indiana's biggest lead was 14 at 83–69 in the third (Bleacher Report, Posting and Toasting); New York led by 9 at 18–9 in the first. Records and ranks are from the site's standings after Friday's games.",
+    "Indiana was without Tyrese Haliburton (Yahoo Sports, VAVEL); Nesmith had been limited by right knee soreness on Wednesday and was declared available Friday (AP). New York closed the third on a 15–2 run to get within 85–84 (Bleacher Report, AP); Indiana scored only 2 points in the final 4:59 (Circle City Spin). Brunson's layup cut it to 106–102 with 26 seconds left, Siakam missed two free throws with 23 seconds left, Bridges scored with 10 seconds left, Indiana turned it over with 2.8 seconds left and Towns missed a 15-foot turnaround at the buzzer (AP, Field Level Media, Posting and Toasting). Towns' 12th straight double-double to start the season is a Knicks record (Bleacher Report). The Knicks are 0–2 in group play (Field Level Media). Indiana plays at Philadelphia on Sunday at 1:00 PM ET (AP, Covers).",
+    "The play of the game is an original illustration of Pascal Siakam's 15-foot jumper with 1:49 left that put Indiana up 106–98 (AP via ABC News and CBS New York; Circle City Spin describes it as a tough jumper over Jalen Brunson). The move isn't described further, so it is drawn as the template's plain pull-up. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Indiana Pacers or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Siakam's listed 6-foot-8 and 245 pounds (RealGM), in Indiana's home white with No. 43 (RealGM). No wingspan from a named source was found, so his arms are drawn to his height. He has no approved look on file yet, so he is drawn as a team-colour silhouette in the kit. It is an original silhouette with a featureless face, not a portrait or a trace of footage."
+  ]
+}
