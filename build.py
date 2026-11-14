@@ -664,7 +664,9 @@ def card_flow(g, wq, lq, c, cw, cl):
         bits.append(f"{st} {when[i]}")
     if n > 4: bits.append(f"won {'overtime' if n == 5 and ot_label(g) in ('', 'OT') else 'the overtimes'} {sum(wq[4:])}–{sum(lq[4:])}")
     else: bits[-1] = f"won {ws}–{lsc}"
-    txt = f"The {W}: " + ", ".join(bits) + "."
+    if title.startswith("Down "): txt = f"Down as many as {deficit}, the {W} came back: " + ", ".join(bits) + "."
+    elif title.startswith("A ") and "lead, gone" in title: txt = f"Up as many as {mx_lead}, the {W} let it slip: " + ", ".join(bits) + "."
+    else: txt = f"The {W}: " + ", ".join(bits) + "."
     worst = max(range(n), key=lambda i: lq[i] - wq[i]); hi = worst if lq[worst] - wq[worst] >= 8 else k
     mxp = max(max(wq), max(lq), 1)
     cols = ""
@@ -733,7 +735,7 @@ def story_cards(g, f, ls, R, clip, pname, pdesc, v):
             '<button type="button" class="cs-tap prev" aria-label="Back"></button><button type="button" class="cs-tap next" aria-label="Next"></button>'
             '<div class="cs-foot"><span class="l"><button type="button" class="cs-btn ghost ic" data-fs aria-label="Full screen">⤢</button>'
             '<button type="button" class="cs-btn ghost ic" data-sound aria-pressed="false" aria-label="Music on">♪</button>'
-            '<button type="button" class="cs-btn ghost" data-play>▶ Play</button><span class="cs-ct" data-ct>1 of ' + str(n) + '</span></span>'
+            '<button type="button" class="cs-btn ghost" data-play>▶\ufe0e Play</button><span class="cs-ct" data-ct>1 of ' + str(n) + '</span></span>'
             '<span class="r"><button type="button" class="cs-btn ghost" data-back hidden aria-label="Back">←</button>'
             '<button type="button" class="cs-btn" data-go>Next →</button><a class="cs-btn" href="#watch" data-done hidden>Highlights ↓</a></span></div></div>')
 

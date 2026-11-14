@@ -155,7 +155,7 @@
       snd.setAttribute('aria-pressed',on?'true':'false'); snd.setAttribute('aria-label',on?'Music off':'Music on'); }
     function load(i){ var c=cards[i]; if(!c) return; var f=c.querySelector('iframe[data-src]'); if(f&&!f.getAttribute('src')) f.src=f.getAttribute('data-src'); }
     function dur(i){ return cards[i].querySelector('iframe')?11000:7000; }
-    function stopAuto(){ auto=false; clearTimeout(timer); playb.classList.remove('on'); playb.textContent='▶ Play'; segs.forEach(function(s){s.classList.remove('run')}); }
+    function stopAuto(){ auto=false; clearTimeout(timer); playb.classList.remove('on'); playb.textContent='\u25B6\uFE0E Play'; segs.forEach(function(s){s.classList.remove('run')}); }
     function arm(){ clearTimeout(timer); segs.forEach(function(s){s.classList.remove('run')}); if(!auto) return;
       var s=segs[cur]; s.classList.remove('on'); s.style.setProperty('--dur',dur(cur)+'ms'); void s.offsetWidth; s.classList.add('run');
       timer=setTimeout(function(){ if(cur<n-1) show(cur+1); else stopAuto(); }, dur(cur)); }
@@ -186,7 +186,7 @@
     snd.setAttribute('aria-pressed',pref?'true':'false'); snd.setAttribute('aria-label',pref?'Music off':'Music on');
     if(pref){ try{ audio=new Audio(cs.getAttribute('data-snd')); audio.loop=true; var p0=audio.play(); if(p0&&p0.catch) p0.catch(function(){ snd.setAttribute('aria-pressed','true'); }); }catch(err){} }
     playb.addEventListener('click',function(){ if(auto){ stopAuto(); return; }
-      auto=true; playb.classList.add('on'); playb.textContent='❚❚ Pause'; if(pref) music(true);
+      auto=true; playb.classList.add('on'); playb.textContent='\u275A\u275A Pause'; if(pref) music(true);
       if(cur===n-1){ cur=-1; show(0); } else arm(); });
     function setFull(on){ cs.classList.toggle('full',on); document.body.classList.toggle('cs-lock',on); fsb.textContent=on?'✕':'⤢'; fsb.setAttribute('aria-label',on?'Exit full screen':'Full screen'); }
     fsb.addEventListener('click',function(){ var on=!cs.classList.contains('full'); setFull(on);
