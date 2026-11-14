@@ -1,0 +1,104 @@
+{
+ "headline": "Castle scores 32 as the Spurs rout Golden State",
+ "dek": "Stephon Castle scored a season-high 32 and the Spurs opened 18–0 on a Warriors team without Stephen Curry.",
+ "three": [
+  [
+   "Castle: 32 points, a season high",
+   "12 of 18 from the floor with 5 threes, 18 of them by halftime."
+  ],
+  [
+   "Up 30 at the half, and they won every quarter",
+   "Castle and Keldon Johnson combined for 50 of 123."
+  ],
+  [
+   "Won it everywhere: 60–43 on the boards",
+   "Rebounds 60–43; points in the paint 56–28. Golden State missed its first 11 shots."
+  ]
+ ],
+ "battle": [
+  [
+   "Rebounds",
+   60,
+   43
+  ],
+  [
+   "Points in the paint",
+   56,
+   28
+  ],
+  [
+   "Fast-break points",
+   21,
+   3
+  ]
+ ],
+ "battle_labels": [
+  "SAS",
+  "GSW"
+ ],
+ "top": [
+  [
+   "Stephon Castle",
+   "SAS",
+   "12 of 18, 5 threes, season high",
+   32
+  ],
+  [
+   "Keldon Johnson",
+   "SAS",
+   "4 rebounds, 4 assists",
+   18
+  ],
+  [
+   "Victor Wembanyama",
+   "SAS",
+   "12 rebounds, 6 assists, 21 minutes",
+   12
+  ],
+  [
+   "Harrison Barnes",
+   "SAS",
+   "the three that made it 43",
+   11
+  ]
+ ],
+ "linescore": {
+  "away": [
+   14,
+   19,
+   27,
+   25
+  ],
+  "home": [
+   38,
+   25,
+   34,
+   26
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-13-GSW-at-SAS.json",
+ "loser": {
+  "top": [
+   [
+    "LJ Cryer",
+    "GSW",
+    "off the bench · 6 of 11 from three · career high",
+    20
+   ],
+   [
+    "Charles Bassey",
+    "GSW",
+    "5 of 7 · 5 rebounds",
+    11
+   ],
+   [
+    "Yaxel Lendeborg",
+    "GSW",
+    "1 of 13 · 7 rebounds",
+    3
+   ]
+  ],
+  "source": "box score"
+ }
+}

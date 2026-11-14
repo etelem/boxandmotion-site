@@ -1,0 +1,103 @@
+{
+ "headline": "Grant leads a Grizzlies rout in New Orleans",
+ "dek": "Ten Grizzlies scored in double figures, tying an NBA record.",
+ "three": [
+  [
+   "Grant: 22 points off the bench",
+   "7 of 10 from the field, with 7 points in 7 seconds in the second quarter."
+  ],
+  [
+   "Up 12 at the half, then won the second half 72–53",
+   "The Memphis bench scored 76 of the 142."
+  ],
+  [
+   "Won it from three and off the bench",
+   "Bench points 76–27; threes made 18–7. Ten Grizzlies scored 10 or more."
+  ]
+ ],
+ "battle": [
+  [
+   "Bench points",
+   76,
+   27
+  ],
+  [
+   "Threes made",
+   18,
+   7
+  ],
+  [
+   "Assists",
+   36,
+   23
+  ],
+  [
+   "Second-chance points",
+   19,
+   6
+  ]
+ ],
+ "battle_labels": [
+  "MEM",
+  "NOP"
+ ],
+ "top": [
+  [
+   "Jerami Grant",
+   "MEM",
+   "off the bench, 7 of 10, 3 threes",
+   22
+  ],
+  [
+   "Ty Jerome",
+   "MEM",
+   "9 assists",
+   17
+  ],
+  [
+   "Cedric Coward",
+   "MEM",
+   "7 rebounds, 6 assists",
+   14
+  ],
+  [
+   "Cam Spencer",
+   "MEM",
+   "off the bench, 3 of 5 from three",
+   14
+  ]
+ ],
+ "linescore": {
+  "away": [
+   35,
+   35,
+   35,
+   37
+  ],
+  "home": [
+   28,
+   30,
+   28,
+   25
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-13-MEM-at-NOP.json",
+ "loser": {
+  "top": [
+   [
+    "Saddiq Bey",
+    "NOP",
+    "6 of 9 from three · 10 rebounds",
+    30
+   ],
+   [
+    "Zion Williamson",
+    "NOP",
+    "8 of 8 FT · 3 steals",
+    22
+   ]
+  ],
+  "source": "box score"
+ }
+}

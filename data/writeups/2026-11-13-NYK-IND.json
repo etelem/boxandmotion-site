@@ -1,0 +1,109 @@
+{
+ "headline": "Siakam and the Pacers hold off the Knicks",
+ "dek": "Pascal Siakam’s jumper was the last Pacers basket, and Karl-Anthony Towns missed at the horn.",
+ "three": [
+  [
+   "Siakam: 19 points and the last basket",
+   "5 of 13 from the floor, 7 of 12 at the line."
+  ],
+  [
+   "Up 9 at the half, up 1 after three, then 21–20 in the fourth",
+   "Siakam and Nesmith combined for 37 of 106."
+  ],
+  [
+   "Won it on the glass and at the line",
+   "Rebounds 50–43; free throws made 18–10. Both teams shot 43 percent."
+  ]
+ ],
+ "battle": [
+  [
+   "Rebounds",
+   50,
+   43
+  ],
+  [
+   "Free throws made",
+   18,
+   10
+  ],
+  [
+   "Second-quarter points",
+   32,
+   22
+  ],
+  [
+   "Third-quarter points",
+   27,
+   35
+  ]
+ ],
+ "battle_labels": [
+  "IND",
+  "NYK"
+ ],
+ "top": [
+  [
+   "Pascal Siakam",
+   "IND",
+   "5 of 13, 7 of 12 at the line",
+   19
+  ],
+  [
+   "Aaron Nesmith",
+   "IND",
+   "7 of 10, 7 rebounds",
+   18
+  ],
+  [
+   "Kelly Oubre Jr.",
+   "IND",
+   "5 rebounds, 2 steals",
+   16
+  ],
+  [
+   "Ivica Zubac",
+   "IND",
+   "13 rebounds",
+   12
+  ]
+ ],
+ "linescore": {
+  "away": [
+   27,
+   22,
+   35,
+   20
+  ],
+  "home": [
+   26,
+   32,
+   27,
+   21
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-13-NYK-at-IND.json",
+ "loser": {
+  "top": [
+   [
+    "Jalen Brunson",
+    "NYK",
+    "11 of 22 · 11 assists",
+    33
+   ],
+   [
+    "Karl-Anthony Towns",
+    "NYK",
+    "15 rebounds · 12th straight double-double",
+    23
+   ],
+   [
+    "Mikal Bridges",
+    "NYK",
+    "cut it to 2 with 10 seconds left",
+    18
+   ]
+  ],
+  "source": "box score"
+ }
+}

@@ -1,0 +1,109 @@
+{
+ "headline": "Adebayo's 37 and 14 sink Cleveland",
+ "dek": "Bam Adebayo and Giannis Antetokounmpo scored 37 each, the first Heat pair since LeBron James and Dwyane Wade in 2013.",
+ "three": [
+  [
+   "Bam: 37 points and 14 rebounds",
+   "13 of 19 from the floor, 18 of them in the fourth."
+  ],
+  [
+   "Down 3 at the half, up 1 after three, then won the fourth 41–30",
+   "Adebayo and Antetokounmpo combined for 74 of 133."
+  ],
+  [
+   "Won it inside: 56–40 in the paint",
+   "Points in the paint 56–40; rebounds 46–36. Cleveland made 18 threes to Miami’s 12."
+  ]
+ ],
+ "battle": [
+  [
+   "Points in the paint",
+   56,
+   40
+  ],
+  [
+   "Rebounds",
+   46,
+   36
+  ],
+  [
+   "Assists",
+   37,
+   28
+  ],
+  [
+   "Free throws made",
+   29,
+   19
+  ]
+ ],
+ "battle_labels": [
+  "MIA",
+  "CLE"
+ ],
+ "top": [
+  [
+   "Bam Adebayo",
+   "MIA",
+   "13 of 19, 14 rebounds, 18 in the 4th",
+   37
+  ],
+  [
+   "Giannis Antetokounmpo",
+   "MIA",
+   "15 of 20, 9 rebounds",
+   37
+  ],
+  [
+   "Davion Mitchell",
+   "MIA",
+   "17 assists, ties his career high",
+   22
+  ],
+  [
+   "Ryan Conwell",
+   "MIA",
+   "off the bench, 4 threes",
+   20
+  ]
+ ],
+ "linescore": {
+  "away": [
+   27,
+   30,
+   34,
+   30
+  ],
+  "home": [
+   29,
+   25,
+   38,
+   41
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-13-CLE-at-MIA.json",
+ "loser": {
+  "top": [
+   [
+    "Donovan Mitchell",
+    "CLE",
+    "5 of 12 from three · 7 assists",
+    25
+   ],
+   [
+    "Tyrese Proctor",
+    "CLE",
+    "7 of 9 · 5 of 7 from three",
+    22
+   ],
+   [
+    "James Harden",
+    "CLE",
+    "8 of 8 at the line · 8 assists",
+    20
+   ]
+  ],
+  "source": "box score"
+ }
+}

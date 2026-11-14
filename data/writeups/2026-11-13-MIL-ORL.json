@@ -1,0 +1,103 @@
+{
+ "headline": "Franz Wagner's 35 and 12 assists beat Milwaukee",
+ "dek": "Franz Wagner: 35 points, 12 assists and 9 rebounds.",
+ "three": [
+  [
+   "Wagner: 35 points and 12 assists",
+   "18 in the first half. His fourth straight 30-point game."
+  ],
+  [
+   "Up 15 at the half, then held on to win by 8",
+   "Wagner and Bane combined for 56 of 107."
+  ],
+  [
+   "Won it in the paint and in transition",
+   "Points in the paint 44–26; fast-break points 19–4. Milwaukee made 18 of 31 free throws."
+  ]
+ ],
+ "battle": [
+  [
+   "Points in the paint",
+   44,
+   26
+  ],
+  [
+   "Fast-break points",
+   19,
+   4
+  ],
+  [
+   "Assists",
+   29,
+   20
+  ],
+  [
+   "Points off turnovers",
+   21,
+   16
+  ]
+ ],
+ "battle_labels": [
+  "ORL",
+  "MIL"
+ ],
+ "top": [
+  [
+   "Franz Wagner",
+   "ORL",
+   "13 of 22, 12 assists, 9 rebounds",
+   35
+  ],
+  [
+   "Desmond Bane",
+   "ORL",
+   "6 of 10 from three",
+   21
+  ],
+  [
+   "Wendell Carter Jr.",
+   "ORL",
+   "8 rebounds, 5 of 9",
+   12
+  ],
+  [
+   "Goga Bitadze",
+   "ORL",
+   "off the bench, 5 of 5",
+   12
+  ]
+ ],
+ "linescore": {
+  "away": [
+   15,
+   22,
+   35,
+   27
+  ],
+  "home": [
+   23,
+   29,
+   32,
+   23
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-13-MIL-at-ORL.json",
+ "loser": {
+  "top": [
+   [
+    "Jaime Jaquez Jr.",
+    "MIL",
+    "off the bench · 5 of 7 from three",
+    22
+   ],
+   [
+    "Tyler Herro",
+    "MIL",
+    "5 of 17 · 6 of 7 FT",
+    18
+   ]
+  ],
+  "source": "box score"
+ }
+}

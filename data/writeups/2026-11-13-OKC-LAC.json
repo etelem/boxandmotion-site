@@ -1,0 +1,109 @@
+{
+ "headline": "Garland's late and-one beats the Thunder",
+ "dek": "Darius Garland’s three-point play with 50.4 seconds left won it.",
+ "three": [
+  [
+   "Garland: 24 points and the winning and-one",
+   "7 assists, 5 of 5 at the line, 8 of 17 from the floor."
+  ],
+  [
+   "Up 13 at the half, then closed on a 7–0 run",
+   "Lopez and Garland combined for 50 of 113."
+  ],
+  [
+   "Won it from three and at the line",
+   "Threes made 16–11; free throws made 17–13. Shai Gilgeous-Alexander scored 40 for OKC."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   16,
+   11
+  ],
+  [
+   "Free throws made",
+   17,
+   13
+  ],
+  [
+   "Blocks",
+   7,
+   4
+  ],
+  [
+   "Points in the paint",
+   40,
+   58
+  ]
+ ],
+ "battle_labels": [
+  "LAC",
+  "OKC"
+ ],
+ "top": [
+  [
+   "Brook Lopez",
+   "LAC",
+   "11 of 21, 3 threes, 7 rebounds",
+   26
+  ],
+  [
+   "Darius Garland",
+   "LAC",
+   "7 assists, 5 of 5 FT, the go-ahead and-one",
+   24
+  ],
+  [
+   "Derrick Jones Jr.",
+   "LAC",
+   "4 blocks, 4 of 7 from three",
+   14
+  ],
+  [
+   "Keaton Wagler",
+   "LAC",
+   "rookie, 4 of 4 FT",
+   14
+  ]
+ ],
+ "linescore": {
+  "away": [
+   27,
+   17,
+   40,
+   28
+  ],
+  "home": [
+   33,
+   24,
+   25,
+   31
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-13-OKC-at-LAC.json",
+ "loser": {
+  "top": [
+   [
+    "Shai Gilgeous-Alexander",
+    "OKC",
+    "15 of 26 · 8 of 11 FT",
+    40
+   ],
+   [
+    "Jared McCain",
+    "OKC",
+    "7 of 11 from three",
+    23
+   ],
+   [
+    "Isaiah Hartenstein",
+    "OKC",
+    "16 rebounds · 9 of 10",
+    21
+   ]
+  ],
+  "source": "box score"
+ }
+}

@@ -1,0 +1,103 @@
+{
+ "headline": "Şengün's 43 holds off the Jazz",
+ "dek": "Alperen Şengün scored 43 on 17-of-24 shooting.",
+ "three": [
+  [
+   "Şengün: 43 points, a season high",
+   "17 of 24 from the floor, with 12 rebounds and 5 assists."
+  ],
+  [
+   "Down 10 in the third, then a 15–2 run to end it",
+   "Şengün and Durant combined for 65 of 125."
+  ],
+  [
+   "Won it inside and on the glass",
+   "Points in the paint 52–46; rebounds 47–41. Utah’s Darryn Peterson scored a career-high 28."
+  ]
+ ],
+ "battle": [
+  [
+   "Points in the paint",
+   52,
+   46
+  ],
+  [
+   "Rebounds",
+   47,
+   41
+  ],
+  [
+   "Turnovers forced",
+   13,
+   8
+  ],
+  [
+   "Blocks",
+   8,
+   4
+  ]
+ ],
+ "battle_labels": [
+  "HOU",
+  "UTA"
+ ],
+ "top": [
+  [
+   "Alperen Şengün",
+   "HOU",
+   "17 of 24, 12 rebounds, 5 assists",
+   43
+  ],
+  [
+   "Kevin Durant",
+   "HOU",
+   "10 of 10 FT, 6 assists",
+   22
+  ],
+  [
+   "Fred VanVleet",
+   "HOU",
+   "3 of 6 from three, 0 turnovers",
+   17
+  ],
+  [
+   "Tari Eason",
+   "HOU",
+   "11 rebounds, 6 offensive",
+   14
+  ]
+ ],
+ "linescore": {
+  "away": [
+   27,
+   26,
+   36,
+   29
+  ],
+  "home": [
+   27,
+   36,
+   29,
+   33
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-13-UTA-at-HOU.json",
+ "loser": {
+  "top": [
+   [
+    "Darryn Peterson",
+    "UTA",
+    "career high · 7 rebounds",
+    28
+   ],
+   [
+    "Keyonte George",
+    "UTA",
+    "7 assists · 23 in the second half",
+    27
+   ]
+  ],
+  "source": "box score"
+ }
+}

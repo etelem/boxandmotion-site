@@ -1,0 +1,109 @@
+{
+ "headline": "Avdija's 34 carries Portland past Sacramento",
+ "dek": "Deni Avdija scored 34 on 11-of-13 shooting. Damian Lillard added 29.",
+ "three": [
+  [
+   "Avdija: 34 points on 11 of 13",
+   "14 in the fourth. He and Lillard went 20 of 20 at the line."
+  ],
+  [
+   "Up 11 at the half, and never trailed after it",
+   "Avdija and Lillard combined for 63 of 120."
+  ],
+  [
+   "Won it from three and at the line",
+   "Threes made 17–11; free throws made 29–18. Portland made 29 of 31 free throws."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   17,
+   11
+  ],
+  [
+   "Free throws made",
+   29,
+   18
+  ],
+  [
+   "Bench points",
+   27,
+   17
+  ],
+  [
+   "Blocks",
+   6,
+   4
+  ]
+ ],
+ "battle_labels": [
+  "POR",
+  "SAC"
+ ],
+ "top": [
+  [
+   "Deni Avdija",
+   "POR",
+   "11 of 13, 9 of 9 FT",
+   34
+  ],
+  [
+   "Damian Lillard",
+   "POR",
+   "6 of 13 from three, 11 of 11 FT",
+   29
+  ],
+  [
+   "Toumani Camara",
+   "POR",
+   "5 of 7, 2 steals",
+   14
+  ],
+  [
+   "Donovan Clingan",
+   "POR",
+   "11 rebounds",
+   13
+  ]
+ ],
+ "linescore": {
+  "away": [
+   34,
+   30,
+   29,
+   27
+  ],
+  "home": [
+   25,
+   28,
+   25,
+   29
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-13-POR-at-SAC.json",
+ "loser": {
+  "top": [
+   [
+    "De'Andre Hunter",
+    "SAC",
+    "7 of 13 · 8 of 9 FT",
+    24
+   ],
+   [
+    "Domantas Sabonis",
+    "SAC",
+    "12 rebounds · 5 assists",
+    21
+   ],
+   [
+    "Darius Acuff Jr.",
+    "SAC",
+    "6 of 19 · 6 assists",
+    17
+   ]
+  ],
+  "source": "box score"
+ }
+}

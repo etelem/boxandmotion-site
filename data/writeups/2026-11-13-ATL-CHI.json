@@ -1,0 +1,111 @@
+{
+ "headline": "Powell's 33 carries the Bulls in overtime",
+ "dek": "Norman Powell scored 33, nine of them in overtime.",
+ "three": [
+  [
+   "Powell: 33 points on 12-of-19 shooting",
+   "9 in overtime, in his first game back from back spasms."
+  ],
+  [
+   "Up 7 at the half, then won overtime 15–7",
+   "Powell and Giddey combined for 48 of 125."
+  ],
+  [
+   "Won it from three and on the glass",
+   "Threes made 20–8; assists 34–29. Atlanta made 8 of 40 threes."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   20,
+   8
+  ],
+  [
+   "Assists",
+   34,
+   29
+  ],
+  [
+   "Rebounds",
+   51,
+   48
+  ],
+  [
+   "Field goals made",
+   45,
+   47
+  ]
+ ],
+ "battle_labels": [
+  "CHI",
+  "ATL"
+ ],
+ "top": [
+  [
+   "Norman Powell",
+   "CHI",
+   "12 of 19, 4 threes, 9 in overtime",
+   33
+  ],
+  [
+   "Josh Giddey",
+   "CHI",
+   "14 assists, 10 rebounds",
+   15
+  ],
+  [
+   "Jalen Smith",
+   "CHI",
+   "12 rebounds, 6 of 15",
+   15
+  ],
+  [
+   "Isaac Okoro",
+   "CHI",
+   "5 of 10, 41 minutes",
+   15
+  ]
+ ],
+ "linescore": {
+  "away": [
+   24,
+   29,
+   30,
+   27,
+   7
+  ],
+  "home": [
+   33,
+   27,
+   24,
+   26,
+   15
+  ],
+  "ot": true
+ },
+ "source": "kit/configs/2026-11-13-ATL-at-CHI.json",
+ "loser": {
+  "top": [
+   [
+    "Jalen Johnson",
+    "ATL",
+    "triple-double · 11 rebounds, 10 assists",
+    27
+   ],
+   [
+    "CJ McCollum",
+    "ATL",
+    "off the bench · 9 of 16",
+    20
+   ],
+   [
+    "Onyeka Okongwu",
+    "ATL",
+    "7 of 13 · 6 rebounds",
+    17
+   ]
+  ],
+  "source": "box score"
+ }
+}
