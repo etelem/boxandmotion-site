@@ -1,0 +1,24 @@
+{
+  "out": "franz-wagner-eurostep.html",
+  "team": "ORL",
+  "number": "22",
+  "name": "Franz Wagner",
+  "title": "The Euro step",
+  "sub": "34.0 points a game, Nov 7–13",
+  "build": {
+    "tall": 1.0513,
+    "ape": 1.0244,
+    "mass": 0.9866
+  },
+  "build_note": "Listed 6-10, 220 lb (RealGM, Basketball-Reference); reported 7-0 wingspan (CraftedNBA). No approved look yet: drawn as the team-colour silhouette.",
+  "kit": {
+    "jersey": "#0077C0",
+    "number": "#FFFFFF"
+  },
+  "steps": [
+    ["1", "The gather", "Picks it up high, at full speed."],
+    ["2", "Step one", "A long stride to one side. The help bites."],
+    ["3", "Step two", "Back across, around him, soft floater."]
+  ],
+  "aria": "Animated illustration of Franz Wagner's Euro step: he drives at full speed, gathers the ball high with both hands, takes one long stride to one side so the help defender slides over, then a second long stride back across and around him, and finishes with a soft one-hand floater. Footprints and a line on the floor show the zig-zag of the two strides. An original drawing, not traced from footage, not to scale."
+}
