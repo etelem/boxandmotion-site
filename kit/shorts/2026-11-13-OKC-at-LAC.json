@@ -1,0 +1,56 @@
+{
+  "out": "short-2026-11-13-OKC-LAC.html",
+  "team": "LAC",
+  "home": true,
+  "number": "10",
+  "player": "Darius Garland",
+  "build": {
+    "tall": 0.9359,
+    "ape": 1.0,
+    "mass": 0.9769
+  },
+  "build_note": "Listed 6-1, 192 lb (Basketball-Reference); no reliable wingspan reported, arms at a 1.0 ratio",
+  "kicker": "CLIPPERS 113 · THUNDER 112 · NOV 13",
+  "hook": [
+    "Garland's and-one",
+    "with 50 seconds left"
+  ],
+  "clock": "Q4 · 0:50",
+  "us": "LAC",
+  "them": "OKC",
+  "score_before": [
+    110,
+    112
+  ],
+  "score_make": [
+    112,
+    112
+  ],
+  "score_ft": [
+    113,
+    112
+  ],
+  "stamp": "AND-ONE",
+  "ft_line": [
+    "+1 at the line.",
+    "Clippers lead for good."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Clippers",
+    "them": "Thunder",
+    "us_pts": 113,
+    "them_pts": 112
+  },
+  "star": {
+    "name": "Darius Garland",
+    "big": 24,
+    "big_label": "points and 7 assists",
+    "lines": [
+      "5 of 5 at the line",
+      "Clippers scored the last 7"
+    ]
+  },
+  "story": "Shai Gilgeous-Alexander scored 40 and OKC led 112–106 with 2:43 left. The Clippers scored the last 7.",
+  "aria": "Animated Short: Darius Garland drives at the basket with 50.4 seconds left, Clippers down 112–110, and finishes the layup through contact, then makes the free throw for a 113–112 lead. Clippers win 113–112. An original illustration, not traced from footage, not to scale."
+}

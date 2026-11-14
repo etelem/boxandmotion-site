@@ -1,0 +1,185 @@
+{
+  "team": "HOU",
+  "D": "  const D = {\n    date: 'Fri, Nov 13, 2026',\n    us: 125, them: 118, record: '10–3', usName: 'Rockets', themName: 'Jazz',\n    quarters: [[27, 27], [36, 26], [29, 36], [33, 29]],\n    leadThem: 10,\n    star: {name: 'Alperen Şengün', stats: [['Points', 43, 50], ['Field goals made of 24', 17, 24], ['Rebounds', 12, 15]]},\n    scorers: [\n      {name: 'Alperen Şengün', pts: 43, note: '17 of 24 · 12 rebounds · 5 assists'},\n      {name: 'Kevin Durant', pts: 22, note: '10 of 10 FT · 6 assists'},\n      {name: 'Fred VanVleet', pts: 17, note: '3 of 3 from three · 0 turnovers'},\n      {name: 'Tari Eason', pts: 14, note: '11 rebounds · 6 offensive'},\n      {name: 'Amen Thompson', pts: 12, note: '10 rebounds · 3 assists'},\n    ],\n    edges: [\n      {label: 'Points in the paint', us: 52, them: 46},\n      {label: 'Rebounds', us: 47, them: 41},\n      {label: 'Turnovers forced', us: 13, them: 8},\n      {label: 'Blocks', us: 8, them: 4},\n    ],\n    gaps: [\n      {label: 'Three-point percentage', us: 35, them: 37, unit: '%'},\n    ],\n    next: {opp: 'at Wizards', when: 'Sun, Nov 15', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Fred VanVleet's bank shot as the shot clock ran out with 11 seconds left that made it 123–118. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Beat the clock",
+    "subP": "VanVleet beats the shot clock, 11 left",
+    "subL": "Fred VanVleet banks it in as the shot clock expires, 11 seconds left",
+    "m0": "Rockets lead",
+    "m1": "Rockets +5",
+    "num": "5",
+    "cap1": "VanVleet banks it in. Rockets by 5.",
+    "cap2": "123–118 with 11 seconds left.",
+    "clock": [
+      19,
+      11
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Rockets vs Jazz Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Rockets 125, Jazz 118 · Nov 13, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Rockets vs.', 'Jazz'] : ['Rockets vs. Jazz']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Şengün: 43 points', 'on 17-of-24 shooting.'] : ['Alperen Şengün scored 43 on 17-of-24 shooting.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Rockets improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Third straight win'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Down 10 in the 3rd,', 'then a 15–2 run'] : ['Down 10 in the third, then a 15–2 run to end it']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Jazz ${D.leadThem}, at 87–77"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Rockets’ margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Şengün: 43,', 'a season high'] : ['Şengün: 43 points, a season high']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['17 of 24 from the floor.', '12 rebounds, 5 assists.'] : ['17 of 24 from the floor, with 12 rebounds and 5 assists.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Şengün and Durant:', '65 of the 125'] : ['Şengün and Durant combined for 65 of 125']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 50;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it inside', 'and on the glass'] : ['Won it inside and on the glass']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Rockets in silver, Jazz in gray. Darryn', 'Peterson scored a career-high 28.'] : ['Rockets in silver, Jazz in gray. Utah’s Darryn Peterson scored a career-high 28.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'4th in the West'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Wizards’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '4–9';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Şengün’s second career 40-point game.', 'Utah has lost 11 straight.'] : ['Şengün’s second career 40-point game. Utah has lost 11 straight.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Rockets 125 · Jazz 118 · Nov 13'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Beat the clock'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Şengün'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 60;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 300 : 360) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+      "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+    ],
+    [
+      "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+      "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+    ],
+    [
+      "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+      "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'', 'd w', 72, 'end');"
+    ],
+    [
+      "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+      "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 175, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 207, ly, D.themName"
+    ]
+  ],
+  "aria": "Animated recap of the Rockets' 125 to 118 home win over the Jazz: Fred VanVleet's bank shot as the shot clock ran out with 11 seconds left that made it 123 to 118, quarter-by-quarter scoring, Alperen Şengün's 43 points on 17-of-24 shooting, the top scorers, how the Rockets won, and the next game at Washington.",
+  "notes": [
+    "Final score and quarter scores (27–27 after one, 63–53 Houston at the half, 92–89 after three, 125–118 final) from the Associated Press (via the Deseret News, ABC News and KUTV) and Field Level Media; the quarter scores add up to both totals. A full box score could not be read this morning (the box-score pages were still showing the pregame or a first-quarter snapshot), so the player lines are filled in from written recaps and say so: Şengün's 43 points, 12 rebounds, 5 assists and 17-of-24 shooting (AP; Yahoo Sports), Kevin Durant's 22 points, 6 assists and 10-of-10 free throws (AP; Fadeaway World via Yahoo Sports), Fred VanVleet's 17 and 3-of-3 from three, Tari Eason's 14 and 11 rebounds, Amen Thompson's 12 and 10 rebounds (Fadeaway World; Field Level Media). Those lines account for 108 of Houston's 125 points, plus 11 from Bogdanovic (Fadeaway World); the remaining 6 Houston points weren't itemized in the sources reached, so no other Rocket could have been a top-five scorer. Team stats (rebounds 47–41, points in the paint 52–46, blocks 8–4, turnovers 8–13, threes 35.3% to 36.6%) are from Fadeaway World. Utah's 10-point lead (87–77 with 3:31 left in the third) is from Field Level Media; Houston's biggest lead wasn't reported. Records and ranks are from the site's standings after Friday's games.",
+    "Utah's 3-point shooting drove a 9–0 run that tied it at 69 and an 11–0 run capped by Ace Bailey's three-point play; Bailey's 3-pointer made it 87–77 with 3:31 left in the third. Şengün and VanVleet then led a 15–2 run to close the quarter, Şengün scoring on a second-chance basket, a driving layup and a free throw in succession (Field Level Media). It was Şengün's season high and the second 40-point game of his career (AP). Darryn Peterson scored a career-high 28 and Keyonte George 27 for Utah, which has lost 11 straight (AP; Field Level Media). Jaxson Hayes left with a left knee injury and did not return (Field Level Media). Houston has won three straight (AP) and plays at Washington on Sunday, Nov 15.",
+    "The play of the game is an original illustration of Fred VanVleet's bank shot as the shot clock expired with 11 seconds left, which extended the lead to 123–118 (Field Level Media; Fadeaway World: \"a clutch bucket as the shot clock expired to put the Rockets up five\"). The sources don't give the distance, whether it was a two or a three, or the score just before it, so the board shows only that Houston led, and the shot is drawn as the template's plain pull-up from mid-range. Durant's two free throws then made it 125–118 (Fadeaway World). The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Houston Rockets or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to VanVleet’s listed 6-foot-0 and 197 pounds (RealGM), in Houston's home white with No. 5 (RealGM). No wingspan from a reliable measurement is reported, so his arms are drawn at a 1.0 ratio. He has no approved look on file yet, so he is drawn as a team-colour silhouette in the kit. It is an original silhouette with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "player": "Fred VanVleet",
+    "home": true,
+    "tall": 0.9231,
+    "ape": 1.0,
+    "mass": 0.9963,
+    "label": "Fred VanVleet, listed 6-0, 197 lb, no reported wingspan"
+  },
+  "loser_top": [
+    [
+      "Darryn Peterson",
+      28,
+      "career high · 7 rebounds"
+    ],
+    [
+      "Keyonte George",
+      27,
+      "7 assists · 23 in the second half"
+    ]
+  ]
+}

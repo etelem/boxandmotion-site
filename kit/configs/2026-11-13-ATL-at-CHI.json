@@ -1,0 +1,190 @@
+{
+  "team": "CHI",
+  "D": "  const D = {\n    date: 'Fri, Nov 13, 2026',\n    us: 125, them: 117, record: '2–9', usName: 'Bulls', themName: 'Hawks',\n    quarters: [[33, 24], [27, 29], [24, 30], [26, 27]],\n    leadUs: 18,\n    star: {name: 'Norman Powell', stats: [['Points', 33, 40], ['Field goals made of 19', 12, 19], ['Points in overtime', 9, 15]]},\n    scorers: [\n      {name: 'Norman Powell', pts: 33, note: '12 of 19 · 4 threes · 9 in overtime'},\n      {name: 'Josh Giddey', pts: 15, note: '14 assists · 10 rebounds'},\n      {name: 'Jalen Smith', pts: 15, note: '12 rebounds · 6 of 15'},\n      {name: 'Isaac Okoro', pts: 15, note: '5 of 10 · 41 minutes'},\n      {name: 'Patrick Williams', pts: 13, note: 'off the bench · 4 of 6 from three'},\n    ],\n    edges: [\n      {label: 'Threes made', us: 20, them: 8},\n      {label: 'Three-point percentage', us: 40, them: 20, unit: '%'},\n      {label: 'Assists', us: 34, them: 29},\n      {label: 'Rebounds', us: 51, them: 48},\n    ],\n    gaps: [\n      {label: 'Field goals made', us: 45, them: 47},\n    ],\n    next: {opp: 'at Timberwolves', when: 'Sat, Nov 14, 8:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Matas Buzelis' corner 3-pointer with 23.5 seconds left in overtime that put the Bulls up 123–117. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Buzelis from the corner",
+    "subP": "Buzelis in the corner, 23 seconds left in OT",
+    "subL": "Matas Buzelis from the corner with 23.5 seconds left in overtime",
+    "m0": "Bulls +3",
+    "m1": "Bulls +6",
+    "num": "14",
+    "cap1": "Buzelis from the corner. Bulls by 6.",
+    "cap2": "123–117 with 23.5 left in OT.",
+    "clock": [
+      31,
+      23
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Bulls vs Hawks Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Bulls 125, Hawks 117 (OT) · Nov 13, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Bulls vs.', 'Hawks'] : ['Bulls vs. Hawks']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Powell: 33, nine', 'of them in overtime.'] : ['Norman Powell scored 33, nine of them in overtime.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Bulls improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Second win of the season'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Up 7 at the half,', 'won overtime 15–7'] : ['Up 7 at the half, then won overtime 15–7']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Bulls ${D.leadUs}"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Bulls’ margin underneath. OT: 15–7."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Powell: 33,', '12 of 19 shooting'] : ['Powell: 33 points on 12-of-19 shooting']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['9 in overtime, in his', 'first game back.'] : ['9 in overtime, in his first game back from back spasms.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Powell and Giddey:', '48 of the 125'] : ['Powell and Giddey combined for 48 of 125']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 40;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it from three', 'and on the glass'] : ['Won it from three and on the glass']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Bulls in white, Hawks in gray. Atlanta', 'made 8 of 40 threes.'] : ['Bulls in white, Hawks in gray. Atlanta made 8 of 40 threes.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'14th in the East'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Timberwolves’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '9–3';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Snapped an 8-game losing streak.', 'Giddey: his first triple-double.'] : ['Snapped an 8-game losing streak, with Giddey’s first triple-double of the season.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Bulls 125 · Hawks 117 · OT · Nov 13'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Corner three'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Powell'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 60;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - 375 * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+      "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+    ],
+    [
+      "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+      "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+    ],
+    [
+      "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+      "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+3', 'd w', 72, 'end');"
+    ],
+    [
+      "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+      "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "T(board, bx + 24, by + 38, 'OT', 'b m', 24);"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 140, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 172, ly, D.themName"
+    ]
+  ],
+  "aria": "Animated recap of the Bulls' 125 to 117 overtime home win over the Hawks: Matas Buzelis' corner 3-pointer with 23.5 seconds left in overtime that made it 123 to 117, quarter-by-quarter scoring, Norman Powell's 33 points with 9 in overtime, the top scorers, how the Bulls won, and the next game at Minnesota.",
+  "notes": [
+    "Box score from the Bulls' 125–117 overtime home win over the Atlanta Hawks at the United Center on Nov 13, 2026 (an NBA Cup group game), from the Covers.com box score, with game details from the Associated Press (via FOX Sports and ABC News), the Chicago Sun-Times, the Chicago Tribune and Hawks coverage on Yahoo Sports, Yardbarker, Bleacher Nation, SI and ClutchPoints. All 125 Chicago points and all 117 Atlanta points are accounted for in the box score, and the quarter scores add up to both totals: 60–53 Chicago at the half, 84–83 after three, 110–110 after regulation, 15–7 in overtime. Team totals (field goals 45 of 91 to 47 of 107, threes 20 of 50 to 8 of 40, rebounds 51–48, assists 34–29) are from the box score. Chicago's 18-point first-half lead is from Bleacher Nation, SI, Yardbarker and the Sun-Times; Atlanta's only lead after the first quarter came in overtime (AP; Yahoo Sports). The AP story lists Jalen Johnson with 16 points; the box score and every other source have 27, which is used here. Records and ranks are from the site's standings after Friday's games.",
+    "Atlanta's 13–4 run in the fourth quarter tied it at 103, with CJ McCollum scoring five straight (Bleacher Nation; Yahoo Sports), and Jalen Johnson's running dunk tied it at 110 with 1:08 left (Yahoo Sports). Onyeka Okongwu's driving layup gave Atlanta a 112–110 lead in overtime; Powell answered with a three-point play and scored 9 of Chicago's 15 overtime points (AP; Yahoo Sports; the Sun-Times). Powell, back from a two-game absence with back spasms, had a season-high 33 (Yahoo Sports; ClutchPoints). Josh Giddey's 15 points, 14 assists and 10 rebounds were his first triple-double of the season (the Sun-Times). The win snapped an eight-game losing streak; Chicago's only other win was at Milwaukee on Oct 23 (AP). The Bulls made a season-best 20 threes (Chicago Tribune via Yahoo Sports). Rookie Caleb Wilson missed the game with a broken right hand (the Sun-Times). Chicago plays at Minnesota on Saturday, Nov 14 at 8:00 PM ET (the site's schedule; Yardbarker).",
+    "The play of the game is an original illustration of Matas Buzelis' corner 3-pointer with 23.5 seconds left in overtime that made it 123–117 (the Sun-Times and the Chicago Tribune give 23.5 seconds; the AP says 23; Bleacher Nation calls it a corner three; the Hawks story on Yahoo Sports gives the 123–117 score). The recaps don't describe the move further, so it is drawn as the template's plain catch-and-shoot pull-up. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Chicago Bulls or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Buzelis’ listed 6-foot-8 and 196 pounds (RealGM), in Chicago's home white with No. 14 (RealGM). No wingspan from a reliable measurement is reported, so his arms are drawn at a 1.0 ratio. He has no approved look on file yet, so he is drawn as a team-colour silhouette in the kit. It is an original silhouette with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "player": "Matas Buzelis",
+    "home": true,
+    "tall": 1.0256,
+    "ape": 1.0,
+    "mass": 0.9428,
+    "label": "Matas Buzelis, listed 6-8, 196 lb, no reported wingspan"
+  },
+  "loser_top": [
+    [
+      "Jalen Johnson",
+      27,
+      "triple-double · 11 rebounds, 10 assists"
+    ],
+    [
+      "CJ McCollum",
+      20,
+      "off the bench · 9 of 16"
+    ],
+    [
+      "Onyeka Okongwu",
+      17,
+      "7 of 13 · 6 rebounds"
+    ]
+  ]
+}
