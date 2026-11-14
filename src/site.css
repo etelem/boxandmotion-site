@@ -739,3 +739,6 @@ body.cs-lock{overflow:hidden}
 .mo-how{margin:8px 0 0;font-size:17px;line-height:1.45}
 .mo-x{margin-top:14px}.mo-x .twitter-tweet{margin:0 auto!important}
 .mo-x .mo-fb{display:block;width:100%;aspect-ratio:9/16;max-height:80vh;border:0;border-radius:26px;background:#fff}
+/* phones and tablets (the owner, Nov 14): the menu is a narrower panel under ☰, right-aligned, floating over the page */
+@media(max-width:959px){.top .w{position:relative}
+  .mmenu{position:absolute;right:20px;top:4px;width:min(240px,calc(100vw - 40px));z-index:40;margin:0}}
