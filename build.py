@@ -119,7 +119,7 @@ def page(path, title, body, active=None, desc="Every NBA game, more than the box
     active = {"Last Night": "Games", "Your Team": "Teams", "Odds": "Teams"}.get(active, active)
     links = "".join(f'<a href="{R}{h}"{" aria-current=page" if n == active else ""}>{n}</a>' for n, h in nav)
     mlinks = "".join(f'<a href="{h if h.startswith('http') else R + h}"{" aria-current=page" if n == active else ""}>{n}</a>' for n, h in
-                     [("Home", "index.html")] + nav + [("Get The Sunday Box", NEWSLETTER), ("About", "about/index.html")])
+                     [("Home", "index.html")] + nav[:2] + [("Your teams", "your-team/index.html"), ("Playoff odds", "odds/index.html")] + nav[2:] + [("Get The Sunday Box", NEWSLETTER), ("About", "about/index.html")])
     html = f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{E(title)}</title><meta name="description" content="{E(desc)}">

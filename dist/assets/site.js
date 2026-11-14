@@ -194,6 +194,15 @@
     document.addEventListener('fullscreenchange',function(){ if(!document.fullscreenElement&&cs.classList.contains('full')) setFull(false); });
     document.addEventListener('visibilitychange',function(){ if(document.hidden){ stopAuto(); if(audio) audio.pause(); } });
     show(0);
+    // auto-play by default (Elan, Nov 13): starts when the story is on screen, pauses when it scrolls away or the reader taps Pause.
+    // Readers who turned on reduced motion get no auto-play. Sound still waits for the first tap (browser rule).
+    var userPaused=false, reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    playb.addEventListener('click',function(){ userPaused=!auto; });
+    function startAuto(){ if(auto||userPaused||reduce||cur===n-1) return; auto=true; playb.classList.add('on'); playb.textContent='\u275A\u275A Pause';
+      segs.forEach(function(s,j){ s.classList.toggle('on',false); }); arm(); }
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting&&e.intersectionRatio>=0.6) startAuto(); else if(auto&&!cs.classList.contains('full')){ stopAuto(); } }); },{threshold:[0,0.6]}).observe(cs);
+    } else startAuto();
   });
 
   // official highlights: the NBA's own YouTube video loads only after a tap, in YouTube's player

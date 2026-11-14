@@ -514,3 +514,7 @@ body.cs-lock{overflow:hidden}
   .cs.full .cs-card{grid-template-columns:minmax(0,.8fr) minmax(0,1.3fr)}
   .cs.full .cs-phone{max-height:72vh}
 }
+/* menu button on computers too (Nov 13): opens a small panel under it, right-aligned */
+.burger{display:flex}
+@media(min-width:960px){.hd{position:relative}.top .w{position:relative}
+  .mmenu{position:absolute;right:20px;top:4px;width:260px;z-index:40;margin:0}}
