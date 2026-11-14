@@ -139,6 +139,44 @@
     setH(); show(0); onScroll();
   });
 
+  // game story cards: tap the right side / swipe left to go on, left side / swipe right to go back
+  document.querySelectorAll('[data-cards]').forEach(function(cs){
+    var cards=[].slice.call(cs.querySelectorAll('.cs-card')), n=cards.length, cur=-1, segs=[].slice.call(cs.querySelectorAll('.cs-bars span')),
+        go=cs.querySelector('[data-go]'), back=cs.querySelector('[data-back]'), done=cs.querySelector('[data-done]'), ct=cs.querySelector('[data-ct]'),
+        snd=cs.querySelector('[data-sound]'), fsb=cs.querySelector('[data-fs]'), audio=null;
+    function count(card){ if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      card.querySelectorAll('[data-countto]').forEach(function(el){ var to=+el.getAttribute('data-countto'), t0=null;
+        function st(ts){ if(!t0) t0=ts; var k=Math.min(1,(ts-t0)/650); el.textContent=Math.round(to*(1-Math.pow(1-k,3))); if(k<1) requestAnimationFrame(st); }
+        requestAnimationFrame(st); }); }
+    function stopSound(){ if(audio) audio.pause(); if(snd){ snd.textContent='▶ Sound'; } }
+    function load(i){ var c=cards[i]; if(!c) return; var f=c.querySelector('iframe[data-src]'); if(f&&!f.getAttribute('src')) f.src=f.getAttribute('data-src'); }
+    function show(i){ i=Math.max(0,Math.min(n-1,i)); if(i===cur) return; cur=i;
+      cards.forEach(function(c,j){ c.classList.toggle('on',j===i); c.classList.toggle('past',j<i); });
+      segs.forEach(function(s,j){ s.classList.toggle('done',j<i); s.classList.toggle('on',j===i); });
+      load(i); load(i+1);
+      var play=!!cards[i].querySelector('iframe'); if(snd){ snd.hidden=!play; } if(ct){ ct.hidden=play; ct.textContent=(i+1)+' of '+n; } if(!play) stopSound();
+      back.hidden=(i===0); go.hidden=(i===n-1); done.hidden=(i!==n-1); count(cards[i]); }
+    function next(){ show(cur+1); } function prev(){ show(cur-1); }
+    cs.querySelector('.cs-tap.next').addEventListener('click',next); cs.querySelector('.cs-tap.prev').addEventListener('click',prev);
+    go.addEventListener('click',next); back.addEventListener('click',prev);
+    done.addEventListener('click',function(){ if(cs.classList.contains('full')) fsb.click(); });
+    var x0=null,y0=null;
+    cs.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;y0=e.touches[0].clientY},{passive:true});
+    cs.addEventListener('touchend',function(e){ if(x0===null) return; var dx=e.changedTouches[0].clientX-x0, dy=e.changedTouches[0].clientY-y0; x0=null;
+      if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)*1.4){ dx<0?next():prev(); } },{passive:true});
+    cs.setAttribute('tabindex','0');
+    cs.addEventListener('keydown',function(e){ if(e.key==='ArrowRight'){next();e.preventDefault();} if(e.key==='ArrowLeft'){prev();e.preventDefault();} });
+    if(snd) snd.addEventListener('click',function(){ if(audio&&!audio.paused){ stopSound(); return; }
+      if(!audio){ audio=new Audio(cs.getAttribute('data-snd')); audio.loop=true; }
+      var f=cards[cur].querySelector('iframe'); if(f) f.src=f.getAttribute('data-src');
+      audio.currentTime=0; var p=audio.play(); snd.textContent='Mute'; if(p&&p.catch) p.catch(function(){ stopSound(); snd.textContent='Sound unavailable'; }); });
+    function setFull(on){ cs.classList.toggle('full',on); document.body.classList.toggle('cs-lock',on); fsb.textContent=on?'✕':'⤢'; fsb.setAttribute('aria-label',on?'Exit full screen':'Full screen'); }
+    fsb.addEventListener('click',function(){ var on=!cs.classList.contains('full'); setFull(on);
+      try{ if(on&&cs.requestFullscreen) cs.requestFullscreen().catch(function(){}); else if(!on&&document.fullscreenElement) document.exitFullscreen(); }catch(err){} });
+    document.addEventListener('fullscreenchange',function(){ if(!document.fullscreenElement&&cs.classList.contains('full')) setFull(false); });
+    show(0);
+  });
+
   // official highlights: the NBA's own YouTube video loads only after a tap, in YouTube's player
   document.addEventListener('click',function(e){
     var b=e.target.closest('button.player[data-yt]'); if(!b||b.querySelector('iframe')) return;

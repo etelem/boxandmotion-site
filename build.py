@@ -484,12 +484,36 @@ def _last(n):
 
 def _join(xs): return xs[0] if len(xs) == 1 else ", ".join(xs[:-1]) + " and " + xs[-1]
 
+def star_stats(key):
+    """The recap's verified star line (kit/configs/<date>-<AWAY>-at-<HOME>.json, D.star): name and three stats."""
+    d, a, h = key[:10], key[11:14], key[15:18]
+    fn = f"kit/configs/{d}-{a}-at-{h}.json"
+    if not os.path.exists(fn): return None
+    m = re.search(r"star:\s*\{name:\s*'([^']+)',\s*stats:\s*(\[\[.*?\]\])\}", json.load(open(fn)).get("D", ""))
+    if not m: return None
+    try: stats = json.loads(m.group(2).replace("'", '"'))
+    except Exception: return None
+    return m.group(1), stats
+
+def star_pane(name, team, stats, color):
+    tiles = ""
+    for i, (lbl, v, mx) in enumerate(stats):
+        mm = re.match(r"^(.*?) made of (\d+)$", lbl)
+        if mm: lbl, shown, frac = mm.group(1), f"{v}/{mm.group(2)}", v / int(mm.group(2))
+        else: shown, frac = str(v), (min(1, v / mx) if mx else 1)
+        c = 2 * 3.14159 * 40
+        tiles += (f'<div class="st" style="--i:{i}"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="40" class="sttrack"/>'
+                  f'<circle cx="50" cy="50" r="40" class="stfill" stroke="{color}" stroke-dasharray="{c:.1f}" style="--off:{c * (1 - frac):.1f};--c:{c:.1f}"/></svg>'
+                  f'<span class="stv">{E(shown)}</span><span class="stl">{E(lbl)}</span></div>')
+    return (f'<div class="star"><div class="k" style="margin:0 0 4px">{E(name.upper())} · {E(T[team]["name"].upper())}</div>'
+            f'<div class="sts">{tiles}</div></div>')
+
 def scorers_pane(team, total, rows, color, k):
     """'73 of 144 by Cunningham and Jenkins' and a bar per scorer (from the writeup's verified top lines)."""
     if not rows: return ""
     lead = rows[:k]; s = sum(r[3] for r in lead); mx = max(r[3] for r in rows)
-    bars = "".join(f'<div class="sc" style="--i:{i}"><div class="scn"><b>{E(n)}</b><span>{E(note)}</span></div>'
-                   f'<div class="scb"><span style="width:{max(4, round(p / mx * 100))}%;background:{color}"></span></div><span class="scp" style="color:{color}">{p}</span></div>'
+    bars = "".join(f'<div class="sc{"" if i < k else " rest"}" style="--i:{i}"><div class="scn"><b>{E(n)}</b><span>{E(note)}</span></div>'
+                   f'<div class="scb"><span style="width:{max(4, round(p / mx * 100))}%;background:{color if i < k else "#c3c5ca"}"></span></div><span class="scp" style="color:{color if i < k else "var(--dim)"}">{p}</span></div>'
                    for i, (n, tm, note, p) in enumerate(rows))
     return (f'<div class="scorers"><div class="sch"><span class="hn" style="color:{color}"><span data-countto="{s}">{s}</span></span>'
             f'<span class="hc">of {total} by {E(_join([_last(r[0]) for r in lead]))}</span></div>{bars}</div>')
@@ -523,11 +547,22 @@ def scroll_story(g, f, ls, R):
     k, ttitle, ttext = turn_period(g, wq, lq)
     panes.append(lead_chart(g, wq, lq, hi=k))
     steps.append(("How it went", ttitle, ttext))
-    # 2 · who carried it: the winner's scorers ("73 of 144 by Cunningham and Jenkins")
+    # 2 · the star: his verified line from the recap (points, and the two numbers that told his night)
+    st = star_stats(g["key"])
+    if st:
+        sname, sstats = st
+        panes.append(star_pane(sname, w, sstats, cw))
+        h3, txt = (three[0][0], three[0][1]) if three else (sname, "")
+        steps.append(("The star", h3, txt))
+    # 3 · who carried it: the winner's scorers ("73 of 144 by Cunningham and Jenkins")
     wtop = [r for r in (f.get("top") or []) if r[1] == w]
     if wtop:
         panes.append(scorers_pane(w, ws, wtop, cw, 2))
-        h3, txt = (three[0][0], three[0][1]) if three else (f"{_last(wtop[0][0])} led the {W}", f"{wtop[0][0]}: {wtop[0][3]} points, {wtop[0][2]}.")
+        lead, rest = wtop[:2], wtop[2:]
+        h3 = f"{_join([_last(r[0]) for r in lead])}: {sum(r[3] for r in lead)} of {ws}."
+        if len(rest) == 1: txt = f"{_last(rest[0][0])} added {rest[0][3]}."
+        elif rest: txt = "Then " + ", ".join(f"{_last(r[0])} {r[3]}" for r in rest) + "."
+        else: txt = f"The {W}' top two scorers."
         steps.append(("Who carried it", h3, txt))
     # 3 · the other side: the loser's scorers, and where it got away
     ltop = [r for r in ((f.get("loser") or {}).get("top") or []) if r[1] == l]
@@ -560,6 +595,147 @@ def scroll_story(g, f, ls, R):
     return (f'<div class="sr" data-story><div class="stick"><div class="top stop"><span>THE STORY · SCROLL</span><span class="dots">{dots}</span></div>'
             f'<div class="steps">{step_html}</div><div class="vis">{pane_html}</div>{nav}</div><div class="spaces">{spacers}</div></div>')
 
+
+# ---- game story cards (Elan, Nov 13): swipe/tap like Instagram stories; order "why first" ----
+def _cfg_rows(D, key):
+    m = re.search(key + r":\s*\[(.*?)\],\s*\n", D, flags=re.S)
+    if not m: return []
+    out = []
+    for r in re.finditer(r"\{label:\s*'([^']+)',\s*us:\s*(-?[\d.]+),\s*them:\s*(-?[\d.]+)(?:,\s*unit:\s*'([^']*)')?\}", m.group(1)):
+        num = lambda s: int(float(s)) if float(s).is_integer() else float(s)
+        out.append((r.group(1), num(r.group(2)), num(r.group(3)), r.group(4) or ""))
+    return out
+
+def _cfg_num(D, k):
+    m = re.search(rf"\b{k}:\s*(\d+)", D); return int(m.group(1)) if m else None
+
+def _ord(i): return ["first", "second", "third", "fourth"][i] if i < 4 else "overtime"
+
+def _lead_k(rows):
+    """Top two scorers, plus anyone tied with the second (Sarr and Davis both had 30)."""
+    if len(rows) <= 2: return len(rows)
+    k = 2
+    while k < len(rows) and rows[k][3] == rows[1][3]: k += 1
+    return k
+
+def card_verdict(g, f, c, cw, cl):
+    w, l = g["win"], g["lose"]; W, L = T[w]["name"], T[l]["name"]
+    won, lost = [], []
+    if c:
+        D = c.get("D", ""); edges, gaps = _cfg_rows(D, "edges"), _cfg_rows(D, "gaps")
+        if c.get("team") == w: won, lost = edges, gaps
+        else: won, lost = [(a, y, x, u) for a, x, y, u in gaps], [(a, y, x, u) for a, x, y, u in edges]
+    if not won and f.get("battle"):
+        la = (f.get("battle_labels") or [w, l])[0]
+        won = [(k, (a if la == w else b), (b if la == w else a), "") for k, a, b in f["battle"]]
+    if not won: return None
+    def row(lbl, a, b, u, flip, i):
+        ca, cb = ("#c9d3e6" if flip else cw), (cl if flip else "#d7d8db")
+        return (f'<div class="cs-tw{" flip" if flip else ""}" style="--i:{i}"><span class="lbl">{E(lbl)}</span>'
+                f'<span class="v" style="color:{cw}">{a}{u}</span><div class="bar"><span style="flex:{max(a, .5)};background:{ca}"></span>'
+                f'<span style="flex:{max(b, .5)};background:{cb}"></span></div><span class="v r" style="color:{cl}">{b}{u}</span></div>')
+    html = f'<div class="cs-grp"><h4>Where the {E(W)} won</h4>' + "".join(row(*r, False, i) for i, r in enumerate(won[:4])) + '</div>'
+    if lost:
+        html += f'<div class="cs-grp"><h4>Where the {E(L)} won</h4>' + "".join(row(*r, True, i + 4) for i, r in enumerate(lost[:2])) + '</div>'
+    three = f.get("three") or []
+    h3, txt = (three[2][0] + ".", three[2][1]) if len(three) > 2 else (f"How the {W} won.", "")
+    return ("The verdict", h3, txt, html)
+
+def card_flow(g, wq, lq, c, cw, cl):
+    w, l = g["win"], g["lose"]; W, L = T[w]["name"], T[l]["name"]
+    n = len(wq); names = period_names(g, n); ws, lsc = sum(wq), sum(lq)
+    run, s = [], 0
+    for x, y in zip(wq, lq): s += x - y; run.append(s)
+    D = c.get("D", "") if c else ""
+    us = c.get("team") == w if c else True
+    lead_w = _cfg_num(D, "leadUs" if us else "leadThem"); lead_l = _cfg_num(D, "leadThem" if us else "leadUs")
+    mx_lead = lead_w if lead_w is not None else max([0] + run)
+    deficit = lead_l if lead_l is not None else max([0] + [-r for r in run])
+    k, ttitle, _ = turn_period(g, wq, lq)
+    peak = max(range(n), key=lambda i: run[i])
+    if mx_lead >= 15 and any(r <= 0 for r in run[peak + 1:]): title = f"A {mx_lead}-point lead, gone."
+    elif deficit >= 15: title = f"Down {deficit}, all the way back."
+    elif ws - lsc >= 20: title = f"Won by {ws - lsc}."
+    else: title = ttitle + "."
+    when = ["after one", "at the half", "after three", "after four"]
+    bits = []
+    for i in range(min(n, 4)):
+        r = run[i]; st = "tied" if r == 0 else (f"up {r}" if r > 0 else f"down {-r}")
+        bits.append(f"{st} {when[i]}")
+    if n > 4: bits.append(f"won {'overtime' if n == 5 and ot_label(g) in ('', 'OT') else 'the overtimes'} {sum(wq[4:])}–{sum(lq[4:])}")
+    else: bits[-1] = f"won {ws}–{lsc}"
+    txt = f"The {W}: " + ", ".join(bits) + "."
+    worst = max(range(n), key=lambda i: lq[i] - wq[i]); hi = worst if lq[worst] - wq[worst] >= 8 else k
+    mxp = max(max(wq), max(lq), 1)
+    cols = ""
+    for i in range(n):
+        d = wq[i] - lq[i]; cls = "up" if d > 0 else "dn" if d < 0 else "ev"
+        cols += (f'<div class="cs-vq{" hi" if i == hi else ""}" style="--i:{i}"><div class="cs-vb">'
+                 f'<div class="cs-vbar"><b>{wq[i]}</b><span style="height:{round(wq[i] / mxp * 150)}px;background:{cw}"></span></div>'
+                 f'<div class="cs-vbar"><b class="m">{lq[i]}</b><span style="height:{round(lq[i] / mxp * 150)}px;background:{cl};opacity:.55"></span></div></div>'
+                 f'<span class="cs-vl">{names[i]}</span><span class="cs-vm {cls}" style="{"color:" + cw if d > 0 else ""}">{("+" if d > 0 else "−" if d < 0 else "") + str(abs(d)) if d else "Even"}</span></div>')
+    leads = (f'<p class="cs-note">Biggest leads: {E(W)} {lead_w}, {E(L)} {lead_l}.</p>' if lead_w is not None and lead_l is not None else "")
+    html = (f'<div class="cs-vleg"><span><i style="background:{cw}"></i>{E(W)}</span><span><i style="background:{cl};opacity:.55"></i>{E(L)}</span>'
+            f'<span class="dim">points per period · won or lost by, underneath</span></div><div class="cs-vrow">{cols}</div>{leads}')
+    return ("How it went", title, txt, html)
+
+def card_moment(g, clip, pname, pdesc, v):
+    if not clip: return None
+    short = (f'<a class="pill sm cs-short" href="https://youtube.com/shorts/{v}" target="_blank" rel="noopener">▶ Our Short on YouTube</a>' if v else "")
+    html = (f'<div class="cs-phone"><iframe data-src="{clip}" title="The play of the game, drawn" allow="autoplay"></iframe></div>'
+            f'<p class="cs-fine">Original illustration from written accounts; not traced from footage, not to scale.</p>{short}')
+    return ("The moment", (pname or "The play") + ".", pdesc or "", html)
+
+def card_star(g, f, cw):
+    st = star_stats(g["key"])
+    if not st: return None
+    three = f.get("three") or []
+    h3, txt = (three[0][0] + ".", three[0][1]) if three else (st[0] + ".", "")
+    return ("The star", h3, txt, star_pane(st[0], g["win"], st[1], cw))
+
+def card_help(g, f, cw):
+    w = g["win"]; ws = max(g["as_"], g["hs"])
+    wtop = [r for r in (f.get("top") or []) if r[1] == w]
+    if not wtop: return None
+    k = _lead_k(wtop); lead, rest = wtop[:k], wtop[k:]
+    h3 = f"{_join([_last(r[0]) for r in lead])}: {sum(r[3] for r in lead)} of {ws}."
+    if len(rest) == 1: txt = f"{_last(rest[0][0])} added {rest[0][3]}."
+    elif rest: txt = "Then " + ", ".join(f"{_last(r[0])} {r[3]}" for r in rest) + "."
+    else: txt = ""
+    return ("The help", h3, txt, scorers_pane(w, ws, wtop, cw, k))
+
+def card_other(g, f, wq, lq, cl):
+    l = g["lose"]; L = T[l]["name"]; lsc = min(g["as_"], g["hs"])
+    ltop = [r for r in ((f.get("loser") or {}).get("top") or []) if r[1] == l]
+    if not ltop: return None
+    k = _lead_k(ltop)
+    return (f"The {L}’ side", f"{_join([_last(r[0]) for r in ltop[:k]])}: {sum(r[3] for r in ltop[:k])} of {lsc}.",
+            got_away(lq, wq, g["ot"]), scorers_pane(l, lsc, ltop, cl, k))
+
+def card_now(g, cw, cl):
+    w, l = g["win"], g["lose"]; W, L = T[w]["name"], T[l]["name"]
+    nxt = lambda c: (f'<div class="mtn">Next: {E(next_game(c))}</div>' if next_game(c) else "")
+    html = meant_pane(w, l, cw, cl).replace('</div></div></div>', '</div></div></div>', 1)
+    html = html[:-6] + "".join(f'<div class="mtnx"><b>{E(T[c]["name"])}</b> {nxt(c)}</div>' for c in (w, l) if next_game(c)) + "</div>"
+    return ("Where they stand", f"{W} {rec(w)}. {L} {rec(l)}.", f"Records and top-6 playoff odds as of today ({S['updated_short']}).", html)
+
+def story_cards(g, f, ls, R, clip, pname, pdesc, v):
+    w, l = g["win"], g["lose"]
+    wq, lq = (ls["away"], ls["home"]) if w == g["away"] else (ls["home"], ls["away"])
+    cw, cl = pair_colors(w, l); c = _cfg_for(g["key"])
+    cards = [x for x in (card_verdict(g, f, c, cw, cl), card_flow(g, wq, lq, c, cw, cl), card_moment(g, clip, pname, pdesc, v),
+                         card_star(g, f, cw), card_help(g, f, cw), card_other(g, f, wq, lq, cl), card_now(g, cw, cl)) if x]
+    n = len(cards); out = ""
+    for i, (k, h3, txt, viz) in enumerate(cards):
+        out += (f'<section class="cs-card{" on" if i == 0 else ""}" data-card="{i}"><div class="cs-kick">{i + 1} of {n} · {E(k)}</div>'
+                f'<h3>{E(h3)}</h3>{f"<p>{E(txt)}</p>" if txt else ""}<div class="cs-viz">{viz}</div></section>')
+    return (f'<div class="cs" data-cards data-snd="{R}audio/courtside-breakbeat.mp3"><div class="cs-bars">{"<span><i></i></span>" * n}</div>{out}'
+            '<button type="button" class="cs-tap prev" aria-label="Back"></button><button type="button" class="cs-tap next" aria-label="Next"></button>'
+            '<div class="cs-foot"><span class="l"><button type="button" class="cs-btn ghost ic" data-fs aria-label="Full screen">⤢</button>'
+            '<button type="button" class="cs-btn ghost" data-sound hidden>▶ Sound</button><span class="cs-ct" data-ct>1 of ' + str(n) + '</span></span>'
+            '<span class="r"><button type="button" class="cs-btn ghost" data-back hidden aria-label="Back">←</button>'
+            '<button type="button" class="cs-btn" data-go>Next →</button><a class="cs-btn" href="#watch" data-done hidden>Highlights ↓</a></span></div></div>')
+
 COURT = '<svg class="pcourt" viewBox="0 0 350 197" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true"><g stroke="rgba(255,255,255,.14)" stroke-width="1.5"><path d="M175 0V197"/><circle cx="175" cy="98" r="34"/><rect x="0" y="62" width="62" height="72"/><rect x="288" y="62" width="62" height="72"/><path d="M0 18H24A86 86 0 0 1 24 178H0M350 18H326A86 86 0 0 0 326 178H350"/></g></svg>'
 for g in GAMES:
     R = "../../"
@@ -581,21 +757,9 @@ for g in GAMES:
         clip = f"{R}reels/{g['key']}/index.html?embed=1&clip=play"
     pname, pdesc = play_scene(g["key"])
     nsec = 0
-    story = ""
-    if f and ls and f.get("three"):
-        nsec += 1
-        story = f'''<section id="story"><p class="k">{nsec} · What happened</p><h2 class="h2">The game, in {len(f.get("three", []))+2 if f.get("battle") else len(f.get("three", []))+1} parts.</h2>
-{scroll_story(g, f, ls, R)}</section>'''
-    play = ""
-    if clip:
-        nsec += 1
-        play = f'''<section id="play"><div class="playsec"><div><p class="k">{nsec} · The play of the game</p>
-<h2 class="h2">{E(pname or "The play, drawn")}.</h2>
-{f'<p class="lead" style="font-size:16px">{E(pdesc)}</p>' if pdesc else ''}
-<div class="ctas" style="margin-top:18px">{f'<a class="pill sm or" href="https://youtube.com/shorts/{v}" target="_blank" rel="noopener">▶ Our Short on YouTube</a>' if v else ''}</div>
-<p class="dim" style="font-size:13px;margin:14px 0 0">Original illustration, drawn from written accounts. Not traced from footage, not to scale.</p></div>
-<div class="phwrap"><div class="phone"><iframe src="{clip}" title="The play of the game, drawn: {E(T[a]['name'])} at {E(T[h]['name'])}" loading="lazy" allow="autoplay"></iframe></div>
-<button type="button" class="pill snd" data-snd="{R}audio/courtside-breakbeat.mp3">▶ Play with sound</button></div></div></section>'''
+    story = play = ""
+    if f and ls:
+        story = f'<section id="story" class="cs-sec">{story_cards(g, f, ls, R, clip, pname, pdesc, v)}</section>'
     nsec += 1
     day = datetime.date.fromisoformat(g["date"]).strftime("%B %-d %Y")
     pg = (f'https://www.youtube.com/watch?v={L["postgame"]}' if L.get("postgame") else
@@ -606,14 +770,14 @@ for g in GAMES:
     embed = (f'<button type="button" class="player" data-yt="{E(L["highlights"])}"{se} style="--team-grad:linear-gradient(135deg,{T[w]["c1"]} 0%,{T[w]["dark"]} 58%,{T[l]["dark"]} 82%,{T[l]["c1"]} 100%)" aria-label="Play the official {E(T[a]["name"])} at {E(T[h]["name"])} highlights">'
              f'{COURT}<span class="pchip">OFFICIAL · NBA ON YOUTUBE</span><span class="pb"><svg width="24" height="26" viewBox="0 0 24 26" aria-hidden="true"><path d="M3 2L22 13L3 24Z" fill="#111214"/></svg></span>'
              f'<span class="pcap"><b>{E(T[a]["name"])} at {E(T[h]["name"])} · full game highlights</b><span>{from_txt}</span></span></button>') if L.get("highlights") else ""
-    watch = f'''<section><div class="watchsec"><p class="k">{nsec} · Full game highlights and postgame</p><h2 class="h2">Full game highlights.</h2>{embed}
+    watch = f'''<section id="watch"><div class="watchsec"><p class="k">Full game highlights and postgame</p><h2 class="h2">Full game highlights.</h2>{embed}
 <a class="wrow" href="{hl_url}" target="_blank" rel="noopener"><span class="ic">▶</span><span class="tx">Full game highlights on YouTube</span><span class="ar">↗</span></a>
 <a class="wrow" href="{pg}" target="_blank" rel="noopener"><span class="ic">▶</span><span class="tx">Postgame interviews on YouTube</span><span class="ar">↗</span></a></div></section>'''
     top_flag = '<span class="flag" style="margin-left:8px">Top game</span>' if g in LAST_R[:1] else ''
     head = f'''<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}last-night/index.html">Games</a><span>/</span><a href="{R}teams/{T[a]["slug"]}/index.html">{E(T[a]["name"])}</a><span>at</span><a href="{R}teams/{T[h]["slug"]}/index.html">{E(T[h]["name"])}</a></nav>
 <section><div class="hftop">{tchip(w, ws)}{tchip(l, lsc, lose=True)}{top_flag}</div>
 <h1 class="gh1">{E(headline(g))}</h1><div class="hfmeta" style="margin-bottom:10px">{E(meta(g))}</div>
-<p class="lead">{E(dek)}</p>{'<a class="jump" href="#play">▶ Jump to the play</a>' if clip and story else ''}</section>'''
+<p class="lead">{E(dek)}</p></section>'''
     body = head + story + play + watch + closer(R)
     page(f"games/{g['slug']}/index.html", f"{T[a]['name']} {g['as_']}, {T[h]['name']} {g['hs']} · Box & Motion Hoops", body, active="Last Night", desc=dek)
 
