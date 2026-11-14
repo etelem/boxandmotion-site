@@ -60,6 +60,8 @@ Game key = `YYYY-MM-DD-AWAY-HOME`, e.g. `2026-11-06-POR-LAL` (team codes from da
    `figure`, and only the RIGHT-hand side of each `subs` pair (never a left-hand side). Set `"team"` to the winner's code and DELETE
    any `"palette"` key, so the reel is drawn in the winner's colors. Edges/gaps: only "more is better" stats; set the `max` values above
    the largest number. The footer line must be another verified fact (streak, last meeting with the next opponent).
+   Start the game-flow scene's headline with the winner's name ("Clippers up 13 at the half, closed on a 7–0 run", the owner, Nov 14);
+   build.py adds it when a headline starts with Up/Down/Won/Led and leaves out the name, but write it in.
    `figure`: `{"player": "<name as in kit/looks.json>", "home": true|false, "tall": height_in/78, "ape": wingspan_in/height_in (1.0 if no wingspan is reported), "mass": sqrt((lb/height_in)/(215/78)), "label": "..."}`.
    His look and kit come from `player`/`home` (see the figure style rule at the top).
 4. **Build.** `python3 make_reel.py configs/<key>.json out/<key>-reel.html`. Leftovers may only list words that really belong to this game.

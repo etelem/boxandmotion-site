@@ -298,6 +298,26 @@ for key in REELS:
                           '<style>html.light{--navy:#ffffff;--navy-mid:#f1f3f7;--navy-lift:#ffffff;--ink:#0b1a38;--muted:#5d6678;--silver:#8d95a3;'
                           '--red-text:#c2410c;--hairline:rgba(11,26,56,.14);--track:rgba(11,26,56,.08);color-scheme:light}'
                           'html.light .stage{background:#fff!important}html.light body{background:#fff}</style>', 1)
+        # story mode (?bare=1, the owner, Nov 14): the scroll-down game story shows scenes without their scoreline header and court
+        # lines, in the site's Archivo; Game of runs headlines start with the team ("Clippers up 13 at the half").
+        b1 = "built.court.style.opacity = lerp(0.2, 0.06, clamp((t - 3.4) / 0.8));"
+        b2 = "built.header.style.opacity = prog(t, SCENES[1].t0, 0.6);"
+        if b1 in src and b2 in src:
+            src = src.replace("window.__bmRestart = function () {", "const BARE = /[?&]bare=1/.test(location.search); window.__bmRestart = function () {", 1)
+            src = src.replace(b1, "built.court.style.opacity = BARE ? 0 : lerp(0.2, 0.06, clamp((t - 3.4) / 0.8));", 1)
+            src = src.replace(b2, "built.header.style.opacity = BARE ? 0 : prog(t, SCENES[1].t0, 0.6);", 1)
+            src = src.replace("family=Albert+Sans:wght@400;500;600&family=Fraunces", "family=Albert+Sans:wght@400;500;600&family=Archivo:wght@400;500&family=Fraunces", 1)
+            src = src.replace('<script>if (/[?&]embed=1/.test(location.search))',
+                              '<script>if (/[?&]bare=1/.test(location.search)) document.documentElement.classList.add("bare");</script>'
+                              '<style>html.bare{--font-display:\'Archivo\',system-ui,sans-serif}html.bare .d{letter-spacing:-.03em;font-weight:500}</style>'
+                              '<script>if (/[?&]embed=1/.test(location.search))', 1)
+        mn = re.search(r"usName: '([^']+)'", src); fl = src.find("function sceneFlow(")
+        if mn and fl >= 0:
+            mh = re.compile(r"heading\(L, g, P \? \['([^']*)'(.*?)\] : \['([^']*)'").search(src, fl)
+            VERB = r"^(Up|Down|Led|Trailed|Won|Lost|Tied|Never|Ahead|Behind|Held|Built|Blew|Pulled|Closed|Opened|Scored|Outscored|Answered|Rallied|Survived|Took|Trailing|Leading)\b"
+            if mh and mh.start() - fl < 400 and re.match(VERB, mh.group(1)):
+                nm = mn.group(1); pre = lambda t: t if t.startswith(nm) or not re.match(VERB, t) else nm + " " + t[0].lower() + t[1:]
+                src = src[:mh.start()] + f"heading(L, g, P ? ['{pre(mh.group(1))}'{mh.group(2)}] : ['{pre(mh.group(3))}'" + src[mh.end():]
         open(p, "w").write(src); CLIP_OK.add(key)
 
 def _lum(h):
@@ -808,6 +828,203 @@ def story_cards(g, f, ls, R, clip, pname, pdesc, v):
             '<span class="r"><button type="button" class="cs-btn ghost" data-back hidden aria-label="Back">←</button>'
             '<button type="button" class="cs-btn" data-go>Next →</button><a class="cs-btn" href="#watch" data-done hidden>Highlights ↓</a></span></div></div>')
 
+# ---- game story as one scroll-down page (the owner, Nov 14; replaces the swipe cards) ----
+# Order: Final score · Game of runs · How the <winner> won it · <Star>'s night · The moment · The <loser>'s side · Where they stand.
+# Colors: the winner in its main color everywhere (recap scenes too); the loser grey in the winner's parts, its own color in its
+# own section and in Where they stand. Every number comes from the game's verified recap config or writeup; a part is skipped
+# when its data is missing, never guessed.
+def poss(n): return n + ("’" if n.endswith("s") else "’s")
+ZONE = {"Threes made": "three", "Free throws made": "ft", "Points in the paint": "paint"}
+ZONE_KEYS = {"three": r"three|\b3s\b|from deep|outside|the arc|long range", "ft": r"\bline\b|free throw|foul", "paint": r"paint|inside|interior|\brim\b"}
+EXTRA = {"Rebounds": ("rebounds", "on the boards", r"board|rebound|glass"), "Offensive rebounds": ("offensive rebounds", "on the offensive glass", r"offensive|glass|second"),
+         "Assists": ("assists", "on assists", r"assist|passing|ball movement"), "Fast-break points": ("fast-break pts", "in transition", r"fast break|fast-break|transition|\bbreak\b|\bin the open floor"),
+         "Bench points": ("bench pts", "off the bench", r"bench"), "Steals": ("steals", "on steals", r"steal"), "Blocks": ("blocks", "on blocks", r"block"),
+         "Turnovers forced": ("turnovers forced", "on turnovers", r"turnover"), "Points off turnovers": ("pts off turnovers", "off turnovers", r"turnover"),
+         "Second-chance points": ("second-chance pts", "on second chances", r"second chance|second-chance|offensive")}
+ZONE_WORD = {"three": "from three", "ft": "at the line", "paint": "inside"}
+ZONE_PLACE = {"three": "outside the arc", "ft": "at the line", "paint": "in the paint"}
+
+def _sides(g, c):
+    """(won, lost) stat rows from the recap config, each as (label, team's value, other team's value), from the winner's side and the loser's."""
+    w = g["win"]
+    if not c: return [], []
+    D = c.get("D", ""); edges, gaps = _cfg_rows(D, "edges"), _cfg_rows(D, "gaps")
+    if c.get("team") != w: edges, gaps = gaps, edges
+    per = re.compile(r"quarter|half|overtime|\bOT\b|percentage", re.I)
+    won = [(lb, a, b) for lb, a, b, u in edges if a > b and not u and not per.search(lb)]
+    lost = [(lb, b, a) for lb, a, b, u in gaps if b > a and not u and not per.search(lb)]
+    return won, lost
+
+def _zone_label(z, a, b, tt):
+    d = a - b
+    if z == "three":
+        return (f'<div class="ct-lab three ph" style="--d:.8s"><span class="ct-n">+{3 * d} pts from 3</span>'
+                f'<span class="ct-s">({3 * a} vs {3 * b}) · {a} threes to {b}</span></div>')
+    if z == "ft":
+        return (f'<div class="ct-lab ft ph" style="--d:1.3s"><span class="ct-n sm">+{d} pts</span><span class="ct-s">at the line<br>({a} vs {b})</span></div>')
+    return (f'<div class="ct-lab paint ph" style="--d:1.0s"><span class="ct-n sm">+{d} pts</span><span class="ct-s">in the paint<br>({a} vs {b})</span></div>')
+
+def court_html(zones, other, color, other_name, lo):
+    """Half court with this team's zones lit (outside the arc, the free-throw line, the paint) and a grey note where the other team won."""
+    lit = {z for z, *_ in zones}; tt = _toward_ink(color, 4.5) if _lum(color.lstrip("#")) > 0.18 else color.lstrip("#")
+    tt = "#" + tt.lstrip("#")
+    grey, line = "#c3c5ca", "#8d95a3"
+    svg = ('<svg viewBox="0 0 342 340" aria-hidden="true">'
+           + (f'<rect class="ct-zone" x="0" y="0" width="342" height="330" rx="14" fill="{color}"></rect>' if "three" in lit else "")
+           + '<path d="M20 330 L20 255 A151 151 0 0 1 322 255 L322 330 Z" fill="#ffffff"></path>'
+           + (f'<rect class="ct-zone" x="113" y="190" width="116" height="140" fill="{color}"></rect>' if "paint" in lit else "")
+           + f'<path class="{"ct-draw" if "three" in lit else ""}" d="M20 330 L20 255 A151 151 0 0 1 322 255 L322 330" fill="none" stroke="{color if "three" in lit else grey}" stroke-width="{2.5 if "three" in lit else 2}" pathLength="1"></path>'
+           + f'<rect class="{"ct-draw" if "paint" in lit else ""}" x="113" y="190" width="116" height="140" fill="none" stroke="{color if "paint" in lit else grey}" stroke-width="{2.5 if "paint" in lit else 2}" pathLength="1"></rect>'
+           + f'<path d="M127 190 A44 44 0 0 1 215 190" fill="none" stroke="{color if "ft" in lit else grey}" stroke-width="2"></path>'
+           + f'<line x1="0" y1="330" x2="342" y2="330" stroke="{line}" stroke-width="2"></line><line x1="150" y1="318" x2="192" y2="318" stroke="{line}" stroke-width="3"></line>'
+           + '<circle cx="171" cy="305" r="9" fill="none" stroke="#FF5A1F" stroke-width="3"></circle></svg>')
+    labs = "".join(_zone_label(z, a, b, tt) for z, a, b in zones)
+    notes = ""
+    for z in other:
+        if z == "paint" and "paint" not in lit: notes += f'<div class="ct-note paint ph" style="--d:1.7s">inside: the {E(poss(other_name))} ground</div>'
+        if z == "three" and "three" not in lit: notes += f'<div class="ct-note three ph" style="--d:1.7s">outside: the {E(poss(other_name))} edge</div>'
+    return f'<div class="ct{" lo" if lo else ""} ph" style="--d:.3s;--tc:{color};--tt:{tt}">{svg}{labs}{notes}</div>'
+
+def _pick(rows, text, always_extra=False):
+    """Rows to show: the court zones the headline talks about (all zones when it names none) and at most one other stat."""
+    zones = [(ZONE[lb], a, b) for lb, a, b in rows if lb in ZONE]
+    named = [z for z in zones if re.search(ZONE_KEYS[z[0]], text or "", re.I)]
+    if named: zones = named
+    extras = [(lb, a, b) for lb, a, b in rows if lb in EXTRA]
+    ex_named = [e for e in extras if re.search(EXTRA[e[0]][2], text or "", re.I)]
+    best = sorted(extras, key=lambda e: -(e[1] - e[2]) / max(1, e[2]))
+    extra = (ex_named or ([] if zones and not always_extra else best))[:1 if zones else 2]
+    return zones, extra
+
+def tiles_html(rows, color):
+    tt = "#" + _toward_ink(color, 4.5).lstrip("#")
+    out = ""
+    for i, (lb, a, b) in enumerate(rows[:2]):
+        unit = EXTRA.get(lb, (lb.lower(),))[0]; d = round(0.65 + 0.5 * i, 2)
+        out += (f'<div class="sd-t ph" style="--d:{d}s"><span class="sd-n" style="color:{tt}">+<span data-countto="{a - b}" data-delay="{int(d * 1000)}">{a - b}</span></span>'
+                f'<span class="sd-u">{E(unit)}</span><span class="sd-d">{a} to {b}</span></div>')
+    return f'<div class="sd-g">{out}</div>'
+
+def who_led(rows, color, d0):
+    tt = "#" + _toward_ink(color, 4.5).lstrip("#")
+    out = ""
+    for i, (n, tm, note, pts) in enumerate(rows[:3]):
+        d = round(d0 + 0.3 * (i + 1), 2)
+        out += (f'<div class="sd-r ph" style="--d:{d}s"><div><b>{E(n)}</b><span>{E(note.replace(", ", " · "))}</span></div>'
+                f'<span class="sd-p" style="color:{tt}"><span data-countto="{pts}" data-delay="{int(d * 1000)}">{pts}</span><small>pts</small></span></div>')
+    return (f'<div class="sd-k ph" style="--d:{d0}s">Who led them</div><div class="sd-rs">{out}</div>') if out else ""
+
+def side_section(i, kick, h3, txt, rows, color, other_rows, other_name, lo, cap_lead, scorer_rows, team_name, final_txt=""):
+    zones, extra = _pick(rows, h3 + " " + txt, always_extra=lo)
+    other_z = [ZONE[lb] for lb, *_ in other_rows if lb in ZONE]
+    parts = [f'<section class="cs-card sd" data-card="{i}"><div class="cs-kick">{E(kick)}</div><h3 class="ph" style="--d:0s">{E(h3)}</h3>']
+    if txt: parts.append(f'<p class="ph" style="--d:.1s">{E(txt)}</p>')
+    d_who = 1.9
+    if zones:
+        parts.append(court_html(zones, other_z, color, other_name, lo))
+        bits = [f"+{a - b} {EXTRA[lb][0]} ({a} vs {b})" for lb, a, b in extra]
+        if cap_lead:
+            places = [ZONE_PLACE[z] for z, *_ in zones]; pl = _join(places); pl = pl[0].upper() + pl[1:]
+            cap = f"{pl} is where the {team_name} pulled ahead." + (f" Also {_join(bits)}." if bits else "") + (f" {final_txt}" if final_txt else "")
+        else:
+            cap = (f"Also {_join(bits)}." if bits else "")
+        if cap: parts.append(f'<p class="ct-cap ph" style="--d:1.7s">{E(cap)}</p>')
+        d_who = 2.3
+    elif extra:
+        parts.append(f'<div class="sd-k ph" style="--d:.45s;color:{"#" + _toward_ink(color, 4.5).lstrip("#")}">Where they did well</div>' + tiles_html(extra, color))
+    parts.append(who_led(scorer_rows, color, d_who))
+    return "".join(parts) + "</section>"
+
+def star_section(i, g, f, color):
+    st = star_stats(g["key"])
+    if not st: return ""
+    name, stats = st; three = f.get("three") or []
+    h3 = three[0][0] if three else f"{name}."
+    m_ = re.match(r"^[A-Z][\w.'’-]*(?: [A-Z][\w.'’-]*){0,2}: ", h3)
+    if m_ and len(h3) > len(m_.group(0)) + 3: h3 = h3[len(m_.group(0)):]; h3 = h3[0].upper() + h3[1:]
+    h3 = h3.rstrip(".") + "."
+    txt = three[0][1] if three else ""
+    C = 2 * 3.14159 * 42; rings = ""
+    for k, (lb, v, mx) in enumerate(stats[:3]):
+        mm = re.match(r"^(.*?) made of (\d+)$", lb)
+        if mm: label, frac = f"{mm.group(1).lower()}<br>({v} of {mm.group(2)})", v / max(1, int(mm.group(2)))
+        else: label, frac = E(lb[0].lower() + lb[1:]), (min(1, v / mx) if mx else 1)
+        d = round(0.4 + 0.4 * k, 2)
+        rings += (f'<div class="gn-s ph" style="--d:{d}s"><div class="gn-g"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="42" class="gn-tr"></circle>'
+                  f'<circle cx="50" cy="50" r="42" class="gn-f" style="--c:{C:.1f};--off:{C * (1 - frac):.1f};--d:{d}s"></circle></svg>'
+                  + (f'<span class="gn-v"><span data-countto="{v}" data-delay="{int(d * 1000)}">{v}</span></span>' if float(v).is_integer() else f'<span class="gn-v">{v}</span>')
+                  + f'</div><span class="gn-l">{label}</span></div>')
+    tt = "#" + _toward_ink(color, 4.5).lstrip("#")
+    return (f'<section class="cs-card gn" data-card="{i}" style="--tc:{color};--tt:{tt}"><div class="cs-kick">{E(poss(_last(name)))} night</div>'
+            f'<h3 class="ph" style="--d:0s">{E(h3)}</h3>' + (f'<p class="ph" style="--d:.1s">{E(txt)}</p>' if txt else "")
+            + f'<div class="gn-row">{rings}</div></section>')
+
+def stand_section(i, g, cw, cl):
+    w, l = g["win"], g["lose"]
+    def col(c, color, d):
+        ch = O[c]["chg"]; chs = f'{"+" if ch > 0 else "−" if ch < 0 else ""}{abs(ch)}% this week' if ch else "no change this week"
+        nx = next_game(c); nxh = ""
+        if nx:
+            bits = nx.split(", "); nxh = E(", ".join(bits[:2])) + "".join("<br>" + E(b) for b in bits[2:])
+        tt = "#" + _toward_ink(color, 4.5).lstrip("#")
+        return (f'<div class="ws-c ph" style="--d:{d}s"><div class="ws-n"><i class="dot" style="{dot2(c)}"></i>{E(T[c]["name"])}</div>'
+                f'<div class="ws-r">{rec(c)}</div><div class="ws-s">{E(seed(c))}</div>'
+                f'<div class="ws-o"><b style="color:{tt}">{O[c]["top6"]}%</b> top-6 odds</div><div class="ws-ch {chgcls(ch)}">{chs}</div>'
+                + (f'<div class="ws-x"><span>Next</span>{nxh}</div>' if nxh else "") + '</div>')
+    return (f'<section class="cs-card ws" data-card="{i}"><div class="cs-kick">Where they stand</div><p class="ws-as ph" style="--d:0s">As of {E(S["updated_short"])}</p>'
+            f'<div class="ws-g">{col(w, cw, .2)}{col(l, cl, .45)}</div></section>')
+
+def flow_story(g, f, ls, R, clip, pname, pdesc, v):
+    w, l = g["win"], g["lose"]; W, L = T[w]["name"], T[l]["name"]
+    wq, lq = (ls["away"], ls["home"]) if w == g["away"] else (ls["home"], ls["away"])
+    cw, cl = pair_colors(w, l); c = _cfg_for(g["key"]); sc = reel_scenes(g["key"])
+    ws, lsc = max(g["as_"], g["hs"]), min(g["as_"], g["hs"])
+    tw = "#" + _toward_ink(cw, 4.5).lstrip("#")
+    q = f"&light=1&bare=1&c={cw.lstrip('#')}&ct={tw.lstrip('#')}"
+    secs = []
+    def scene(kick, sid, h3, foot=""):
+        if sid not in sc: return ""
+        src = f"{R}reels/{g['key']}/index.html?embed=1&clip={sid}&hold=1{q}"
+        return (f'<section class="cs-card reel" data-card="{{i}}"><div class="cs-kick">{E(kick)}</div><h3 class="sr-only">{E(h3)}</h3>'
+                f'<div class="cs-reel"><iframe data-src="{src}" title="{E(kick)}: {E(h3)}" tabindex="-1"></iframe></div>{foot}</section>')
+    secs.append(scene("Final score", "final", f"{W} {ws}, {L} {lsc}"))
+    fl = scene("Game of runs · score by quarter", "flow", "Score by quarter")
+    if not fl:
+        k, title, txt, html = card_flow(g, wq, lq, c, cw, cl)
+        fl = (f'<section class="cs-card" data-card="{{i}}"><div class="cs-kick">Game of runs · score by quarter</div><h3>{E(title)}</h3>'
+              f'<p>{E(txt)}</p><div class="cs-viz">{html}</div></section>')
+    secs.append(fl)
+    won, lost = _sides(g, c)
+    if not won and f.get("battle"):
+        la = (f.get("battle_labels") or [w, l])[0]
+        rows = [(k, (a if la == w else b), (b if la == w else a)) for k, a, b in f["battle"]]
+        won = [(k, a, b) for k, a, b in rows if a > b]; lost = [(k, b, a) for k, a, b in rows if b > a]
+    three = f.get("three") or []
+    _per = re.compile(r"quarter|half|overtime|\bOT\b", re.I)
+    h3w = (three[2][0].rstrip(".") + ".") if len(three) > 2 and not _per.search(three[2][0]) else f"How the {W} won it."
+    wtop = [r for r in (f.get("top") or []) if r[1] == w]
+    final_txt = f"Enough to win {ws}–{lsc}." if ws - lsc <= 5 else ""
+    secs.append(side_section("{i}", f"How the {W} won it", h3w, "", won, cw, lost, L, False, True, wtop, W, final_txt))
+    secs.append(star_section("{i}", g, f, cw))
+    short_link = (f'<a class="pill sm cs-short" href="https://youtube.com/shorts/{v}" target="_blank" rel="noopener">▶ Our Short on YouTube</a>' if v else "")
+    foot = f'<div class="cs-rfoot"><p class="cs-fine">Original illustration from written accounts; not traced from footage, not to scale.</p>{short_link}</div>'
+    mo = scene("The moment", "play", (pname or "The play"), foot)
+    if not mo and clip:
+        mo = (f'<section class="cs-card" data-card="{{i}}"><div class="cs-kick">The moment</div><h3>{E((pname or "The play") + ".")}</h3>'
+              + (f'<p>{E(pdesc)}</p>' if pdesc else "") + f'<div class="cs-phone"><iframe data-src="{clip}" title="The play of the game, drawn" allow="autoplay"></iframe></div>{foot}</section>')
+    secs.append(mo)
+    ltop = [r for r in ((f.get("loser") or {}).get("top") or []) if r[1] == l]
+    zl, exl = _pick(lost, "", always_extra=True)
+    words = [ZONE_WORD[z] for z, *_ in zl] + [EXTRA[lb][1] for lb, *_ in exl]
+    ga = got_away(lq, wq, g["ot"])
+    h3l, txl = (f"Won {_join(words)}.", ga) if words else (ga, "")
+    if lost or ltop:
+        secs.append(side_section("{i}", f"The {poss(L)} side", h3l, txl, lost, cl, won, W, True, False, ltop, L))
+    secs.append(stand_section("{i}", g, cw, cl))
+    secs = [x for x in secs if x]
+    out = "".join(x.replace('data-card="{i}"', f'data-card="{n}"') for n, x in enumerate(secs))
+    return f'<div class="cs flow" data-flow><span class="rail" aria-hidden="true"></span>{out}</div>'
+
 COURT = '<svg class="pcourt" viewBox="0 0 350 197" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true"><g stroke="rgba(255,255,255,.14)" stroke-width="1.5"><path d="M175 0V197"/><circle cx="175" cy="98" r="34"/><rect x="0" y="62" width="62" height="72"/><rect x="288" y="62" width="62" height="72"/><path d="M0 18H24A86 86 0 0 1 24 178H0M350 18H326A86 86 0 0 0 326 178H350"/></g></svg>'
 for g in GAMES:
     R = "../../"
@@ -831,7 +1048,7 @@ for g in GAMES:
     nsec = 0
     story = play = ""
     if f and ls:
-        story = f'<section id="story" class="cs-sec">{story_cards(g, f, ls, R, clip, pname, pdesc, v)}</section>'
+        story = f'<section id="story" class="cs-sec">{flow_story(g, f, ls, R, clip, pname, pdesc, v)}</section>'
     nsec += 1
     day = datetime.date.fromisoformat(g["date"]).strftime("%B %-d %Y")
     pg = (f'https://www.youtube.com/watch?v={L["postgame"]}' if L.get("postgame") else

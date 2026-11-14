@@ -1,5 +1,5 @@
 <title>Rockets vs Nuggets Recap</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600&family=Archivo:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,500&display=swap">
 <style>
 /* Layout: one cinematic stage (16:9, tall on phones) carrying seven scenes, a transport bar and scene chips beneath it, then notes. */
 :root{
@@ -81,7 +81,7 @@ html.embed .stage,html.embed .stage.tall{flex:1 1 0;min-height:0;aspect-ratio:au
 html.embed .transport{flex:none}
 </style>
 
-<script>if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add("embed");if (/[?&]clip=/.test(location.search)) document.documentElement.classList.add("clip");</script><style>html.clip .transport,html.clip .chips{display:none!important}</style><script>(function(){var q=location.search;if(!/[?&]light=1/.test(q))return;var r=document.documentElement;r.classList.add("light");var c=q.match(/[?&]c=([0-9a-fA-F]{6})/),ct=q.match(/[?&]ct=([0-9a-fA-F]{6})/);if(c)r.style.setProperty("--blue","#"+c[1]);if(ct)r.style.setProperty("--blue-text","#"+ct[1]);var sw=q.match(/[?&]sw=([a-z]+)\.([a-z]+)/);if(sw)document.addEventListener("DOMContentLoaded",function(){var v=document.getElementById("reel"),a=" in "+sw[1],b=" in "+sw[2],fix=function(){v.querySelectorAll("text,tspan").forEach(function(n){if(!n.children.length&&n.textContent.indexOf(a)>=0)n.textContent=n.textContent.split(a).join(b);});};new MutationObserver(fix).observe(v,{childList:true,subtree:true});fix();});})();</script><style>html.light{--navy:#ffffff;--navy-mid:#f1f3f7;--navy-lift:#ffffff;--ink:#0b1a38;--muted:#5d6678;--silver:#8d95a3;--red-text:#c2410c;--hairline:rgba(11,26,56,.14);--track:rgba(11,26,56,.08);color-scheme:light}html.light .stage{background:#fff!important}html.light body{background:#fff}</style>
+<script>if (/[?&]bare=1/.test(location.search)) document.documentElement.classList.add("bare");</script><style>html.bare{--font-display:'Archivo',system-ui,sans-serif}html.bare .d{letter-spacing:-.03em;font-weight:500}</style><script>if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add("embed");if (/[?&]clip=/.test(location.search)) document.documentElement.classList.add("clip");</script><style>html.clip .transport,html.clip .chips{display:none!important}</style><script>(function(){var q=location.search;if(!/[?&]light=1/.test(q))return;var r=document.documentElement;r.classList.add("light");var c=q.match(/[?&]c=([0-9a-fA-F]{6})/),ct=q.match(/[?&]ct=([0-9a-fA-F]{6})/);if(c)r.style.setProperty("--blue","#"+c[1]);if(ct)r.style.setProperty("--blue-text","#"+ct[1]);var sw=q.match(/[?&]sw=([a-z]+)\.([a-z]+)/);if(sw)document.addEventListener("DOMContentLoaded",function(){var v=document.getElementById("reel"),a=" in "+sw[1],b=" in "+sw[2],fix=function(){v.querySelectorAll("text,tspan").forEach(function(n){if(!n.children.length&&n.textContent.indexOf(a)>=0)n.textContent=n.textContent.split(a).join(b);});};new MutationObserver(fix).observe(v,{childList:true,subtree:true});fix();});})();</script><style>html.light{--navy:#ffffff;--navy-mid:#f1f3f7;--navy-lift:#ffffff;--ink:#0b1a38;--muted:#5d6678;--silver:#8d95a3;--red-text:#c2410c;--hairline:rgba(11,26,56,.14);--track:rgba(11,26,56,.08);color-scheme:light}html.light .stage{background:#fff!important}html.light body{background:#fff}</style>
 <div class="wrap">
   <h1 class="page-title">Rockets 110, Nuggets 100 · Nov 9, 2026</h1>
   <div class="stage" id="stage">
@@ -624,7 +624,7 @@ html.embed .transport{flex:none}
 
   function sceneFlow(L, g) {
     const {W, H, M, fs, P} = L;
-    const head = heading(L, g, P ? ['Up 14 at the half,', 'survived an 18–2 run'] : ['Up 14 at the half, then survived an 18–2 Denver run']);
+    const head = heading(L, g, P ? ['Rockets up 14 at the half,', 'survived an 18–2 run'] : ['Rockets up 14 at the half, then survived an 18–2 Denver run']);
     const subY = subline(L, g, head.y, P ? ['Points per quarter. Margin after each', 'quarter underneath.'] : ['Points per quarter, with the Rockets’ margin after each quarter underneath.']);
     const top = subY + fs.s * 2.2, bottom = P ? H * 0.7 : H - M - fs.s * 4.4;
     const max = 50, colW = (W - 2 * M) / 4, bw = Math.min(70, colW * 0.24);
@@ -989,8 +989,8 @@ html.embed .transport{flex:none}
     if (!built) return;
     const drawIn = prog(t, 0.2, 2.6);
     built.shapes.forEach((n) => n.setAttribute('stroke-dashoffset', (1 - drawIn).toFixed(3)));
-    built.court.style.opacity = lerp(0.2, 0.06, clamp((t - 3.4) / 0.8));
-    built.header.style.opacity = prog(t, SCENES[1].t0, 0.6);
+    built.court.style.opacity = BARE ? 0 : lerp(0.2, 0.06, clamp((t - 3.4) / 0.8));
+    built.header.style.opacity = BARE ? 0 : prog(t, SCENES[1].t0, 0.6);
     built.scenes.forEach((sc, i) => {
       const fadeIn = i === 0 ? 1 : clamp((t - sc.t0) / 0.45);
       const fadeOut = i === built.scenes.length - 1 ? 1 : clamp((sc.t1 - t) / 0.35);
@@ -1010,7 +1010,7 @@ html.embed .transport{flex:none}
   const chips = document.getElementById('chips');
   const stamp = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
   const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let t = still ? TOTAL : 0, playing = !still, last = null, shownScene = -1; const _cm = location.search.match(/[?&]clip=([a-z]+)/), HOLD = /[?&]hold=1/.test(location.search); const CLIP = _cm ? SCENES.find((s) => s.id === _cm[1]) : null; if (CLIP) { t = CLIP.t0; playing = true; } window.__bmRestart = function () { if (!CLIP) return; t = CLIP.t0; playing = true; last = null; jumped(); sync(); };
+  let t = still ? TOTAL : 0, playing = !still, last = null, shownScene = -1; const _cm = location.search.match(/[?&]clip=([a-z]+)/), HOLD = /[?&]hold=1/.test(location.search); const CLIP = _cm ? SCENES.find((s) => s.id === _cm[1]) : null; if (CLIP) { t = CLIP.t0; playing = true; } const BARE = /[?&]bare=1/.test(location.search); window.__bmRestart = function () { if (!CLIP) return; t = CLIP.t0; playing = true; last = null; jumped(); sync(); };
   document.getElementById('still-note').hidden = !still;
   scrub.max = String(TOTAL);
 

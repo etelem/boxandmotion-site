@@ -282,3 +282,28 @@ window.addEventListener('message', function (e) {
     if (m) a.setAttribute('href', 'https://www.youtube.com/watch?v=' + m[1]);
   });
 })();
+
+// game story as one scroll-down page (the owner, Nov 14): scenes load a little before they come on screen, then replay from the top each time they come into view
+(function(){
+  var cs=document.querySelector('[data-flow]'); if(!cs) return;
+  var cards=[].slice.call(cs.querySelectorAll('.cs-card'));
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function load(f){ if(f&&!f.getAttribute('src')){ f.addEventListener('load',function(){ f.setAttribute('data-ready','1'); }); f.src=f.getAttribute('data-src'); } }
+  function replay(f){ if(!f||f.getAttribute('data-ready')!=='1') return;
+    try{ var w=f.contentWindow; if(w&&typeof w.__bmRestart==='function') w.__bmRestart(); }catch(e){} }
+  function count(card){ if(reduce) return; card.querySelectorAll('[data-countto]').forEach(function(el){ var to=+el.getAttribute('data-countto'), wait=+(el.getAttribute('data-delay')||0), t0=null; el.textContent='0';
+    function st(ts){ if(!t0) t0=ts+wait; var k=Math.max(0,Math.min(1,(ts-t0)/800)); el.textContent=Math.round(to*(1-Math.pow(1-k,3))); if(k<1) requestAnimationFrame(st); } requestAnimationFrame(st); }); }
+  if(!('IntersectionObserver' in window)){ cards.forEach(function(c){ c.classList.add('on'); load(c.querySelector('iframe[data-src]')); }); return; }
+  var near=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting) load(e.target.querySelector('iframe[data-src]')); }); },{rootMargin:'900px 0px'});
+  cards.forEach(function(c){ near.observe(c); });
+  var seen=new IntersectionObserver(function(es){ es.forEach(function(e){ var c=e.target;
+      if(e.isIntersecting&&!c.classList.contains('on')){ c.classList.add('on'); replay(c.querySelector('iframe[data-src]')); count(c); }
+      else if(!e.isIntersecting&&e.boundingClientRect.top>0){ c.classList.remove('on'); } }); },{threshold:0.35});
+  cards.forEach(function(c){ seen.observe(c); });
+  // the line down the side fills to the point you've read to
+  var rail=cs.querySelector('.rail'), ticking=false;
+  function fill(){ ticking=false; var r=cs.getBoundingClientRect(), h=r.height-20, at=innerHeight*0.6-r.top-10;
+    rail.style.height=Math.max(0,Math.min(h,at)).toFixed(0)+'px'; }
+  addEventListener('scroll',function(){ if(!ticking){ ticking=true; requestAnimationFrame(fill); } },{passive:true});
+  addEventListener('resize',fill); fill();
+})();
