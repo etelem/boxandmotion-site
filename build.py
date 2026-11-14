@@ -1024,7 +1024,7 @@ def flow_story(g, f, ls, R, clip, pname, pdesc, v, links=None):
               f'<div class="mo-x" data-xid="{xm.group(1)}" data-fallback="{E(fb)}">'
               f'<button type="button" class="player mo-player" style="--team-grad:linear-gradient(135deg,{T[w]["c1"]} 0%,{T[w]["dark"]} 70%,#111214 100%)" aria-label="Play the real play: the NBA&#39;s post of it on X">'
               f'{COURT}<span class="pchip">THE REAL PLAY · NBA ON X</span><span class="pb"><svg width="24" height="26" viewBox="0 0 24 26" aria-hidden="true"><path d="M3 2L22 13L3 24Z" fill="#111214"/></svg></span>'
-              f'<span class="pcap"><b>Watch the real play</b><span>The NBA&#39;s clip on X. Tap to load it here.</span></span></button></div>'
+              f'<span class="pcap"><b>Watch the real play</b><span>The NBA&#39;s clip on X.</span></span></button></div>'
               f'{strip}{how}' + (f'<div class="cs-rfoot">{short_link}</div>' if short_link else "") + '</section>')
     elif m and m.get("id") and m.get("start") is not None and m.get("end"):
         # the real play: the NBA's own YouTube video, cued to the moment, in YouTube's player after a tap

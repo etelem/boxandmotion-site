@@ -235,20 +235,27 @@
     } else startAuto();
   });
 
-  // the moment on X: the NBA's own post loads only after a tap, in X's player (do-not-track on); if it can't load, our drawing plays instead
-  document.addEventListener('click',function(e){
-    var b=e.target.closest('.mo-x > button.player'); if(!b) return;
-    var box=b.parentNode, id=box.getAttribute('data-xid'), done=false;
-    var fallback=function(){ if(done) return; done=true; var fb=box.getAttribute('data-fallback'); if(!fb){ b.querySelector('.pcap span').textContent='Couldn’t load the clip. Open it on X.'; return; }
+  // the moment on X: the NBA's own post loads by itself as the reader scrolls near it (X's player, do-not-track on);
+  // a tap on the card also starts it; if it can't load, our drawing plays instead
+  function loadX(box){
+    if(box.getAttribute('data-x-started')) return; box.setAttribute('data-x-started','1');
+    var b=box.querySelector('button.player'), id=box.getAttribute('data-xid'), done=false;
+    var say=function(t){ var s=b&&b.querySelector('.pcap span'); if(s) s.textContent=t; };
+    var fallback=function(){ if(done) return; done=true; var fb=box.getAttribute('data-fallback'); if(!fb){ say('Couldn’t load the clip. Open it on X.'); return; }
       var f=document.createElement('iframe'); f.src=fb; f.title='The play, drawn'; f.className='mo-fb'; box.replaceChildren(f); };
-    b.querySelector('.pcap span').textContent='Loading…';
+    say('Loading the NBA’s clip…');
     var go=function(){ window.twttr.widgets.createTweet(id, box, {dnt:true, conversation:'none', align:'center', theme:'light'})
-      .then(function(el){ if(el){ done=true; b.remove(); } else fallback(); }, fallback); };
+      .then(function(el){ if(el){ done=true; if(b) b.remove(); } else fallback(); }, fallback); };
+    setTimeout(fallback, 12000);
     if(window.twttr&&window.twttr.widgets) return go();
     var s=document.createElement('script'); s.src='https://platform.twitter.com/widgets.js'; s.async=true; s.charset='utf-8';
     s.onload=function(){ (window.twttr&&window.twttr.ready)?window.twttr.ready(go):fallback(); }; s.onerror=fallback; document.head.appendChild(s);
-    setTimeout(fallback, 12000);
-  });
+  }
+  document.addEventListener('click',function(e){ var b=e.target.closest('.mo-x > button.player'); if(b) loadX(b.parentNode); });
+  (function(){ var xs=document.querySelectorAll('.mo-x'); if(!xs.length) return;
+    if(!('IntersectionObserver' in window)){ xs.forEach(loadX); return; }
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ io.unobserve(en.target); loadX(en.target); } }); }, {rootMargin:'700px 0px'});
+    xs.forEach(function(x){ io.observe(x); }); })();
 
   // official highlights: the NBA's own YouTube video loads only after a tap, in YouTube's player
   document.addEventListener('click',function(e){
