@@ -420,7 +420,7 @@ html:has([data-story]){scroll-snap-type:y proximity}
 .sr .sspace:last-child{height:60vh}
 
 /* star stats (Nov 13) */
-.star{flex:1;display:flex;flex-direction:column;justify-content:center}
+.starp{flex:1;display:flex;flex-direction:column;justify-content:center}
 .sts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:10px}
 .st{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center}
 .st svg{width:100%;max-width:112px;transform:rotate(-90deg)}
@@ -518,3 +518,55 @@ body.cs-lock{overflow:hidden}
 .burger{display:flex}
 @media(min-width:960px){.hd{position:relative}.top .w{position:relative}
   .mmenu{position:absolute;right:20px;top:4px;width:260px;z-index:40;margin:0}}
+/* bigger team color dots everywhere (Nov 13: too small on computer and phone) */
+.dot{width:16px;height:16px;margin-right:8px;vertical-align:-3px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+.tn .tteams{font-size:16px;gap:6px 10px}.tn .tteams>span{display:inline-flex;align-items:center}
+@media(min-width:960px){.dot{width:18px;height:18px;vertical-align:-4px}.tn .tteams{font-size:17px}}
+.tcard2 .star{flex:none;white-space:nowrap;display:inline-flex;align-items:center;gap:6px;width:auto}.tcard2 .tnm .dot{margin-right:6px}
+
+/* ===== responsive pass (Nov 13): phone, tablet, computer ===== */
+/* animation pages: on wide screens the drawing sits in a phone-sized column with the words beside it */
+.movesec{display:grid;gap:20px}
+.mvtext{display:flex;flex-direction:column;gap:14px;min-width:0}
+@media(min-width:900px){
+  .movesec{grid-template-columns:minmax(0,500px) minmax(0,1fr);gap:48px;align-items:start}
+  .movesec.rev .mvtext{order:2}.movesec.rev .mvanim{order:1}
+  .mvtext{position:sticky;top:100px;padding-top:8px}
+  .mvtext .beats{font-size:18px}
+}
+/* Luka / scouting stat boxes: keep numbers on one line */
+.card .n{white-space:nowrap}
+/* tonight's games and the Teams list: 1 column on phones, 2 on tablets, 3 on computers */
+@media(min-width:640px){.tonight,.tgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1100px){.tonight,.tgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.tn .tteams{flex-wrap:nowrap}.tn .tteams>span{white-space:nowrap}
+@media(max-width:380px){.tn .tteams{flex-wrap:wrap}}
+
+/* story cards: fill the space on tablets and computers, scale up in full screen */
+.cs{margin:0 auto}
+@media(min-width:640px){
+  .cs{max-width:none;height:min(700px,calc(100vh - 110px))}
+  .cs-card{padding:40px 32px 14px}
+  .cs-card h3{font-size:32px}.cs-card>p{font-size:17px}
+  .cs-viz{zoom:1.15}
+}
+@media(min-width:900px){
+  .cs{max-width:1180px;height:min(640px,calc(100vh - 120px))}
+  .cs-card{align-content:center;grid-template-rows:auto auto auto;padding:44px 48px 18px}
+  .cs-card .cs-viz{align-self:center;grid-row:1/4}
+  .cs-card h3{font-size:clamp(34px,3.2vw,46px)}
+  .cs-card>p{font-size:clamp(17px,1.4vw,20px);max-width:30em}
+  .cs-viz{zoom:1.2}
+}
+@media(min-width:1280px){.cs-viz{zoom:1.35}}
+.cs-viz:has(.cs-phone){zoom:1!important}
+.cs.full .cs-card>.cs-kick,.cs.full .cs-card>h3,.cs.full .cs-card>p{zoom:var(--z,1)}
+.cs.full .cs-viz{zoom:calc(var(--z,1)*1.25)}
+.cs.full .cs-viz:has(.cs-phone){zoom:1!important}
+.cs.full .cs-phone{max-height:calc(100vh - 140px)}
+.cs.full .cs-foot{zoom:1}
+@media(min-width:900px){
+  .cs-card{grid-template-rows:1fr auto auto auto 1fr;align-content:stretch}
+  .cs-kick{grid-row:2;margin-top:0}.cs-card h3{grid-row:3}.cs-card>p{grid-row:4}
+  .cs-card .cs-viz{grid-row:1/6}
+}

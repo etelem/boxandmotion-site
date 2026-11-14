@@ -188,7 +188,9 @@
     playb.addEventListener('click',function(){ if(auto){ stopAuto(); return; }
       auto=true; playb.classList.add('on'); playb.textContent='\u275A\u275A Pause'; if(pref) music(true);
       if(cur===n-1){ cur=-1; show(0); } else arm(); });
-    function setFull(on){ cs.classList.toggle('full',on); document.body.classList.toggle('cs-lock',on); fsb.textContent=on?'✕':'⤢'; fsb.setAttribute('aria-label',on?'Exit full screen':'Full screen'); }
+    function fitZ(){ var z=Math.max(1,Math.min(2,Math.min(innerWidth/1180,innerHeight/640))); cs.style.setProperty('--z',z.toFixed(3)); }
+    window.addEventListener('resize',function(){ if(cs.classList.contains('full')) fitZ(); });
+    function setFull(on){ if(on) fitZ(); cs.classList.toggle('full',on); document.body.classList.toggle('cs-lock',on); fsb.textContent=on?'✕':'⤢'; fsb.setAttribute('aria-label',on?'Exit full screen':'Full screen'); }
     fsb.addEventListener('click',function(){ var on=!cs.classList.contains('full'); setFull(on);
       try{ if(on&&cs.requestFullscreen) cs.requestFullscreen().catch(function(){}); else if(!on&&document.fullscreenElement) document.exitFullscreen(); }catch(err){} });
     document.addEventListener('fullscreenchange',function(){ if(!document.fullscreenElement&&cs.classList.contains('full')) setFull(false); });

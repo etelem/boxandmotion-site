@@ -505,7 +505,7 @@ def star_pane(name, team, stats, color):
         tiles += (f'<div class="st" style="--i:{i}"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="40" class="sttrack"/>'
                   f'<circle cx="50" cy="50" r="40" class="stfill" stroke="{color}" stroke-dasharray="{c:.1f}" style="--off:{c * (1 - frac):.1f};--c:{c:.1f}"/></svg>'
                   f'<span class="stv">{E(shown)}</span><span class="stl">{E(lbl)}</span></div>')
-    return (f'<div class="star"><div class="k" style="margin:0 0 4px">{E(name.upper())} · {E(T[team]["name"].upper())}</div>'
+    return (f'<div class="starp"><div class="k" style="margin:0 0 4px">{E(name.upper())} · {E(T[team]["name"].upper())}</div>'
             f'<div class="sts">{tiles}</div></div>')
 
 def scorers_pane(team, total, rows, color, k):
@@ -880,10 +880,10 @@ body = f'''{learn_crumbs(R, f'<a href="{R}teams/lakers/index.html">Lakers</a>', 
 <div class="card pad"><span class="n" style="font-size:44px">{len(pts)}</span><br><span class="dim">games played</span></div>
 <div class="card pad"><span class="n" style="font-size:44px">53</span><br><span class="dim">season high</span></div>
 <div class="card pad"><span class="n" style="font-size:44px">{rec('LAL')}</span><br><span class="dim">Lakers record</span></div></div></section>
-<section class="sec"><div><p class="k">Signature move</p><h2 class="h2">The step-back three.</h2>
-<p class="lead">He sells the drive with a hard jab, crosses the ball back between his legs to his left as he hops back off both feet, and rises before the defender recovers. At 6-foot-8 he releases over most guards, so a late contest rarely bothers the shot.</p></div>
-{anim_frame(R, "luka-stepback.html", "Animated illustration of Luka Dončić's step-back three", "reels/soundtrack.mp3")}
-<div class="row">{short_btn("5FgwWO0aF8s")}</div></section>
+<section class="movesec rev"><div class="mvtext"><p class="k">Signature move</p><h2 class="h2">The step-back three.</h2>
+<p class="lead">He sells the drive with a hard jab, crosses the ball back between his legs to his left as he hops back off both feet, and rises before the defender recovers. At 6-foot-8 he releases over most guards, so a late contest rarely bothers the shot.</p>
+<div class="row">{short_btn("5FgwWO0aF8s")}</div></div>
+<div class="mvanim">{anim_frame(R, "luka-stepback.html", "Animated illustration of Luka Dončić's step-back three", "reels/soundtrack.mp3")}</div></section>
 <section class="sec"><h2 class="h2">Game log.</h2>
 <div class="tbox"><div class="scroll"><table class="otable" style="min-width:720px"><tr><th>Date</th><th>Game</th><th>Result</th><th class="num">Pts</th><th class="num">Reb</th><th class="num">Ast</th><th class="num">FG</th><th class="num">3PT</th><th class="num">TO</th><th>Flag</th></tr>{logrows}</table></div></div>
 <p class="dim" style="margin:0;font-size:14px">Flags are automatic: any game 10 or more points from his season average ({avg:.1f}). Hot nights so far: {HOTS}. A dash means the stat isn't in our feed yet.</p></section>'''
@@ -901,9 +901,9 @@ for P in PLAYERS:
 <section style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-end"><div class="sec" style="flex:999 1 480px;gap:12px"><p class="k">Scouting report · {E(P['week'])}</p>
 <h1 class="h1">{E(P['name'])}.</h1><p class="lead" style="font-size:20px">{E(P['lede'])}</p><p class="dim" style="margin:0">{E(P['bio'])}</p></div>
 <div style="flex:1 1 280px;display:grid;grid-template-columns:1fr 1fr;gap:12px">{stats}</div></section>
-<section class="sec"><div><p class="k">Signature move</p><h2 class="h2">{E(P['move']['title'])}.</h2><p class="lead">{E(P['move']['text'])}</p></div>
-{anim_frame(R, P['move']['anim'], P['name'] + ': ' + P['move']['title'], "reels/soundtrack.mp3")}
-<ol class="beats">{steps}</ol><div class="row">{short_btn(P["move"].get("youtube"))}</div></section>
+<section class="movesec rev"><div class="mvtext"><p class="k">Signature move</p><h2 class="h2">{E(P['move']['title'])}.</h2><p class="lead">{E(P['move']['text'])}</p>
+<ol class="beats">{steps}</ol><div class="row">{short_btn(P["move"].get("youtube"))}</div></div>
+<div class="mvanim">{anim_frame(R, P['move']['anim'], P['name'] + ': ' + P['move']['title'], "reels/soundtrack.mp3")}</div></section>
 <section class="sec"><h2 class="h2">His week.</h2>
 <div class="tbox"><div class="scroll"><table class="otable" style="min-width:640px"><tr><th>Date</th><th>Game</th><th>Result</th><th class="num">Pts</th><th class="num">Reb</th><th class="num">Ast</th><th class="num">FG</th><th class="num">3PT</th></tr>{logrows}</table></div></div></section>
 <section class="card pad"><b>Sources</b><ul style="margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:4px">{srcs}</ul></section>'''
@@ -916,9 +916,9 @@ for m in MOVES:
     body = f'''{learn_crumbs(R, f'<a href="{R}teams/{t["slug"]}/index.html">{E(t["name"])}</a>', f'<span>{E(m["player"])}</span>')}
 <section><p class="k">Signature move · {E(t['city'])} {E(t['name'])}{' · No. ' + E(m['number']) if m['number'] else ''}</p>
 <h1 class="h1">{E(m['title'])}.</h1><p class="lead" style="font-size:20px">{E(m['dek'])}</p></section>
-<section class="sec">{anim_frame(R, m['anim'], m['player'] + ': ' + m['title'], "reels/soundtrack.mp3")}
-<ol class="beats">{steps}</ol>
-<div class="row">{short_btn(m.get("youtube"))}<a class="pill" href="{R}teams/{t['slug']}/index.html">{E(t['name'])} page →</a></div></section>
+<section class="movesec"><div class="mvanim">{anim_frame(R, m['anim'], m['player'] + ': ' + m['title'], "reels/soundtrack.mp3")}</div>
+<div class="mvtext"><ol class="beats">{steps}</ol>
+<div class="row">{short_btn(m.get("youtube"))}<a class="pill" href="{R}teams/{t['slug']}/index.html">{E(t['name'])} page →</a></div></div></section>
 {closer(R)}'''
     page(f"moves/{m['slug']}/index.html", f"{m['player']}: {m['title']} · Box & Motion Hoops", body, active="Learn", desc=m["dek"])
 
@@ -936,8 +936,8 @@ for x in TRENDS:
     t = T[x["team"]]
     body = f'''{learn_crumbs(R, f'<a href="{R}teams/{t["slug"]}/index.html">{E(t["name"])}</a>', "<span>Trend board</span>")}
 <section><p class="k">Trend board · good, lucky or in trouble?</p><h1 class="h1">{E(x['title'])}</h1><p class="lead" style="font-size:20px">{E(x['dek'])}</p></section>
-<section class="sec" style="max-width:560px">{anim_frame(R, x['anim'], x['title'], "reels/soundtrack.mp3")}
-<div class="row">{short_btn(x.get("youtube"))}<a class="pill" href="{R}teams/{t['slug']}/index.html">{E(t['name'])} page →</a></div></section>
+<section class="movesec"><div class="mvanim">{anim_frame(R, x['anim'], x['title'], "reels/soundtrack.mp3")}</div>
+<div class="mvtext"><div class="row">{short_btn(x.get("youtube"))}<a class="pill" href="{R}teams/{t['slug']}/index.html">{E(t['name'])} page →</a></div></div></section>
 {closer(R)}'''
     page(f"trends/{x['slug']}/index.html", f"{x['title']} · Box & Motion Hoops", body, active="Learn", desc=x["dek"])
 
