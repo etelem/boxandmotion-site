@@ -412,3 +412,9 @@ footer.foot{padding-top:48px;padding-bottom:36px;margin-top:56px;border-top:1px 
 .mtb{height:14px;border-radius:999px;background:rgba(17,18,20,.06);overflow:hidden;margin:8px 0 6px}.mtb span{display:block;height:100%;border-radius:999px;transform-origin:left}
 .mtf{font-size:13px;color:var(--dim)}.mtf b{font:700 18px 'Archivo',sans-serif}
 .sr .pane.on .mtb span{animation:growl .7s cubic-bezier(.2,.8,.2,1) both}
+/* calmer story scroll on phones (Nov 13): more scroll per part, and each part is a soft stop */
+html:has([data-story]){scroll-snap-type:y proximity}
+.sr .sspace{height:95vh;scroll-snap-align:start;scroll-snap-stop:always;scroll-margin-top:calc(var(--hh,72px) + 25vh - 24px)}
+.sr .sspace:last-child{height:95vh}
+@media(min-width:900px){.sr .sspace,.sr .sspace:last-child{height:70vh}}
+.sr .sspace:last-child{height:60vh}
