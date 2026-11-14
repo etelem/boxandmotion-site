@@ -732,7 +732,8 @@ def story_cards(g, f, ls, R, clip, pname, pdesc, v):
     return (f'<div class="cs" data-cards data-snd="{R}audio/courtside-breakbeat.mp3"><div class="cs-bars">{"<span><i></i></span>" * n}</div>{out}'
             '<button type="button" class="cs-tap prev" aria-label="Back"></button><button type="button" class="cs-tap next" aria-label="Next"></button>'
             '<div class="cs-foot"><span class="l"><button type="button" class="cs-btn ghost ic" data-fs aria-label="Full screen">⤢</button>'
-            '<button type="button" class="cs-btn ghost" data-sound hidden>▶ Sound</button><span class="cs-ct" data-ct>1 of ' + str(n) + '</span></span>'
+            '<button type="button" class="cs-btn ghost ic" data-sound aria-pressed="false" aria-label="Music on">♪</button>'
+            '<button type="button" class="cs-btn ghost" data-play>▶ Play</button><span class="cs-ct" data-ct>1 of ' + str(n) + '</span></span>'
             '<span class="r"><button type="button" class="cs-btn ghost" data-back hidden aria-label="Back">←</button>'
             '<button type="button" class="cs-btn" data-go>Next →</button><a class="cs-btn" href="#watch" data-done hidden>Highlights ↓</a></span></div></div>')
 

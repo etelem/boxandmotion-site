@@ -496,3 +496,21 @@ body.cs-lock{overflow:hidden}
 .cs-card.on .stfill{animation:ring .9s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0)*130ms)}
 @media (prefers-reduced-motion:reduce){.cs-card,.cs-card *{animation:none!important;transition:none!important}}
 @media(min-width:900px){.cs{margin:0 auto}}
+
+/* cards v2 (Nov 13): music across cards, auto-play like the old recap, computer layout */
+.cs-btn.ic[aria-pressed="true"]{background:var(--or);color:#fff;box-shadow:0 8px 22px rgba(255,90,31,.3)}
+.cs-btn[data-play].on{background:var(--ink);color:#fff;box-shadow:none}
+.cs-bars span.run i{transition:width var(--dur,7s) linear;width:100%}
+@media(max-width:420px){.cs-ct{display:none}}
+@media(min-width:900px){
+  .cs{max-width:1080px;height:min(600px,calc(100vh - 140px));min-height:520px;margin:0 auto}
+  .cs-card{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.25fr);grid-template-rows:auto auto 1fr;column-gap:48px;padding:44px 44px 18px}
+  .cs-kick{grid-column:1;grid-row:1;margin-top:18px}
+  .cs-card h3{grid-column:1;grid-row:2;font-size:38px;line-height:1.04}
+  .cs-card>p{grid-column:1;grid-row:3;align-self:start;font-size:17px}
+  .cs-card .cs-viz{grid-column:2;grid-row:1/4;margin-top:0}
+  .cs-vb{height:230px}.cs-vbar{max-width:34px}
+  .cs-phone{max-height:470px}
+  .cs.full .cs-card{grid-template-columns:minmax(0,.8fr) minmax(0,1.3fr)}
+  .cs.full .cs-phone{max-height:72vh}
+}
