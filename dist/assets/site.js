@@ -235,6 +235,21 @@
     } else startAuto();
   });
 
+  // the moment on X: the NBA's own post loads only after a tap, in X's player (do-not-track on); if it can't load, our drawing plays instead
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('.mo-x > button.player'); if(!b) return;
+    var box=b.parentNode, id=box.getAttribute('data-xid'), done=false;
+    var fallback=function(){ if(done) return; done=true; var fb=box.getAttribute('data-fallback'); if(!fb){ b.querySelector('.pcap span').textContent='Couldn’t load the clip. Open it on X.'; return; }
+      var f=document.createElement('iframe'); f.src=fb; f.title='The play, drawn'; f.className='mo-fb'; box.replaceChildren(f); };
+    b.querySelector('.pcap span').textContent='Loading…';
+    var go=function(){ window.twttr.widgets.createTweet(id, box, {dnt:true, conversation:'none', align:'center', theme:'light'})
+      .then(function(el){ if(el){ done=true; b.remove(); } else fallback(); }, fallback); };
+    if(window.twttr&&window.twttr.widgets) return go();
+    var s=document.createElement('script'); s.src='https://platform.twitter.com/widgets.js'; s.async=true; s.charset='utf-8';
+    s.onload=function(){ (window.twttr&&window.twttr.ready)?window.twttr.ready(go):fallback(); }; s.onerror=fallback; document.head.appendChild(s);
+    setTimeout(fallback, 12000);
+  });
+
   // official highlights: the NBA's own YouTube video loads only after a tap, in YouTube's player
   document.addEventListener('click',function(e){
     var b=e.target.closest('button.player[data-yt]'); if(!b||b.querySelector('iframe')) return;

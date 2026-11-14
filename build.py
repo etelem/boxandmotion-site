@@ -974,7 +974,7 @@ def stand_section(i, g, cw, cl):
     return (f'<section class="cs-card ws" data-card="{i}"><div class="cs-kick">Where they stand</div><p class="ws-as ph" style="--d:0s">As of {E(S["updated_short"])}</p>'
             f'<div class="ws-g">{col(w, cw, .2)}{col(l, cl, .45)}</div></section>')
 
-def flow_story(g, f, ls, R, clip, pname, pdesc, v):
+def flow_story(g, f, ls, R, clip, pname, pdesc, v, links=None):
     w, l = g["win"], g["lose"]; W, L = T[w]["name"], T[l]["name"]
     wq, lq = (ls["away"], ls["home"]) if w == g["away"] else (ls["home"], ls["away"])
     cw, cl = pair_colors(w, l); c = _cfg_for(g["key"]); sc = reel_scenes(g["key"])
@@ -1009,6 +1009,37 @@ def flow_story(g, f, ls, R, clip, pname, pdesc, v):
     short_link = (f'<a class="pill sm cs-short" href="https://youtube.com/shorts/{v}" target="_blank" rel="noopener">▶ Our Short on YouTube</a>' if v else "")
     foot = f'<div class="cs-rfoot"><p class="cs-fine">Original illustration from written accounts; not traced from footage, not to scale.</p>{short_link}</div>'
     mo = scene("The moment", "play", (pname or "The play"), foot)
+    m = (links or {}).get("moment")
+    xm = re.match(r"https://(?:x|twitter)\.com/nba/status/(\d+)", (m or {}).get("x") or "")
+    if xm:
+        # the real play: the NBA's own post on X, loaded in X's player only after a tap (nothing downloaded)
+        pl = (c or {}).get("play") if isinstance((c or {}).get("play"), dict) else {}
+        strip = ""
+        if pl.get("m0") and pl.get("m1"):
+            strip = (f'<div class="mo-strip"><span>{E(pl["m0"])}</span><span class="mo-ar" aria-hidden="true">→</span>'
+                     f'<b style="color:{tw}">{E(pl["m1"])}</b>' + (f'<span class="mo-when">{E(pl["subP"])}</span>' if pl.get("subP") else "") + '</div>')
+        how = f'<p class="mo-how">{E(pl["cap2"])}</p>' if pl.get("cap2") else ""
+        fb = (f'{R}reels/{g["key"]}/index.html?embed=1&clip=play&hold=1{q}' if "play" in sc else "")
+        mo = (f'<section class="cs-card" data-card="{{i}}"><div class="cs-kick">The moment</div><h3>{E((pname or "The play") + ".")}</h3>'
+              f'<div class="mo-x" data-xid="{xm.group(1)}" data-fallback="{E(fb)}">'
+              f'<button type="button" class="player mo-player" style="--team-grad:linear-gradient(135deg,{T[w]["c1"]} 0%,{T[w]["dark"]} 70%,#111214 100%)" aria-label="Play the real play: the NBA&#39;s post of it on X">'
+              f'{COURT}<span class="pchip">THE REAL PLAY · NBA ON X</span><span class="pb"><svg width="24" height="26" viewBox="0 0 24 26" aria-hidden="true"><path d="M3 2L22 13L3 24Z" fill="#111214"/></svg></span>'
+              f'<span class="pcap"><b>Watch the real play</b><span>The NBA&#39;s clip on X. Tap to load it here.</span></span></button></div>'
+              f'{strip}{how}' + (f'<div class="cs-rfoot">{short_link}</div>' if short_link else "") + '</section>')
+    elif m and m.get("id") and m.get("start") is not None and m.get("end"):
+        # the real play: the NBA's own YouTube video, cued to the moment, in YouTube's player after a tap
+        pl = (c or {}).get("play") if isinstance((c or {}).get("play"), dict) else {}
+        strip = ""
+        if pl.get("m0") and pl.get("m1"):
+            strip = (f'<div class="mo-strip"><span>{E(pl["m0"])}</span><span class="mo-ar" aria-hidden="true">→</span>'
+                     f'<b style="color:{tw}">{E(pl["m1"])}</b>' + (f'<span class="mo-when">{E(pl["subP"])}</span>' if pl.get("subP") else "") + '</div>')
+        how = f'<p class="mo-how">{E(pl["cap2"])}</p>' if pl.get("cap2") else ""
+        mo = (f'<section class="cs-card" data-card="{{i}}"><div class="cs-kick">The moment</div><h3>{E((pname or "The play") + ".")}</h3>'
+              f'<button type="button" class="player mo-player" data-yt="{E(m["id"])}" data-start="{int(m["start"])}" data-end="{int(m["end"])}" '
+              f'style="--team-grad:linear-gradient(135deg,{T[w]["c1"]} 0%,{T[w]["dark"]} 70%,#111214 100%)" aria-label="Play the real play: the NBA&#39;s video of it on YouTube">'
+              f'{COURT}<span class="pchip">THE REAL PLAY · NBA ON YOUTUBE</span><span class="pb"><svg width="24" height="26" viewBox="0 0 24 26" aria-hidden="true"><path d="M3 2L22 13L3 24Z" fill="#111214"/></svg></span>'
+              f'<span class="pcap"><b>Watch the real play</b><span>{E(m.get("from") or "From the NBA on YouTube")}. Tap to play here.</span></span></button>'
+              f'{strip}{how}' + (f'<div class="cs-rfoot">{short_link}</div>' if short_link else "") + '</section>')
     if not mo and clip:
         mo = (f'<section class="cs-card" data-card="{{i}}"><div class="cs-kick">The moment</div><h3>{E((pname or "The play") + ".")}</h3>'
               + (f'<p>{E(pdesc)}</p>' if pdesc else "") + f'<div class="cs-phone"><iframe data-src="{clip}" title="The play of the game, drawn" allow="autoplay"></iframe></div>{foot}</section>')
@@ -1048,7 +1079,7 @@ for g in GAMES:
     nsec = 0
     story = play = ""
     if f and ls:
-        story = f'<section id="story" class="cs-sec">{flow_story(g, f, ls, R, clip, pname, pdesc, v)}</section>'
+        story = f'<section id="story" class="cs-sec">{flow_story(g, f, ls, R, clip, pname, pdesc, v, L)}</section>'
     nsec += 1
     day = datetime.date.fromisoformat(g["date"]).strftime("%B %-d %Y")
     pg = (f'https://www.youtube.com/watch?v={L["postgame"]}' if L.get("postgame") else
