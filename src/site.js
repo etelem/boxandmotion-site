@@ -9,7 +9,13 @@
 
   // phone menu
   var burger=document.querySelector('[data-burger]'), menu=document.querySelector('[data-menu]');
-  if(burger&&menu) burger.addEventListener('click',function(){var o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o?'true':'false')});
+  if(burger&&menu){
+    var shut=function(){menu.classList.remove('open');burger.setAttribute('aria-expanded','false')};
+    burger.addEventListener('click',function(e){e.stopPropagation();var o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o?'true':'false')});
+    // the menu floats over the page, so a tap anywhere else or Escape closes it
+    document.addEventListener('click',function(e){if(menu.classList.contains('open')&&!menu.contains(e.target))shut()});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')shut()});
+  }
 
   // followed teams: stars, team-color fills (only for your teams), labels
   function paint(){
