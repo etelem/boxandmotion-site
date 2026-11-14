@@ -1013,7 +1013,7 @@ html.embed .transport{flex:none}
   const chips = document.getElementById('chips');
   const stamp = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
   const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let t = still ? TOTAL : 0, playing = !still, last = null, shownScene = -1; const _cm = location.search.match(/[?&]clip=([a-z]+)/), HOLD = /[?&]hold=1/.test(location.search); const CLIP = _cm ? SCENES.find((s) => s.id === _cm[1]) : null; if (CLIP) { t = CLIP.t0; playing = true; }
+  let t = still ? TOTAL : 0, playing = !still, last = null, shownScene = -1; const _cm = location.search.match(/[?&]clip=([a-z]+)/), HOLD = /[?&]hold=1/.test(location.search); const CLIP = _cm ? SCENES.find((s) => s.id === _cm[1]) : null; if (CLIP) { t = CLIP.t0; playing = true; } window.__bmRestart = function () { if (!CLIP) return; t = CLIP.t0; playing = true; last = null; jumped(); sync(); };
   document.getElementById('still-note').hidden = !still;
   scrub.max = String(TOTAL);
 

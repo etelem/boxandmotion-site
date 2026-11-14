@@ -176,7 +176,12 @@
         var p=audio.play(); if(p&&p.catch) p.catch(function(){}); }
       else if(audio) audio.pause();
       snd.setAttribute('aria-pressed',on?'true':'false'); snd.setAttribute('aria-label',on?'Music off':'Music on'); }
-    function load(i){ var c=cards[i]; if(!c) return; var f=c.querySelector('iframe[data-src]'); if(f&&!f.getAttribute('src')) f.src=f.getAttribute('data-src'); }
+    function load(i){ var c=cards[i]; if(!c) return; var f=c.querySelector('iframe[data-src]');
+      if(f&&!f.getAttribute('src')){ f.addEventListener('load',function(){ f.setAttribute('data-ready','1'); }); f.src=f.getAttribute('data-src'); } }
+    // replay a card's scene in place (no reload, which blinks; Nov 14). A frame still loading starts from the top by itself.
+    function replay(f){ if(!f||f.getAttribute('data-ready')!=='1') return;
+      try{ var w=f.contentWindow; if(w&&typeof w.__bmRestart==='function'){ w.__bmRestart(); return; } }catch(err){}
+      f.removeAttribute('data-ready'); f.src=f.getAttribute('data-src'); }
     function dur(i){ var d=+cards[i].getAttribute('data-dur'); return d||(cards[i].querySelector('.cs-phone iframe')?11000:7000); }
     function stopAuto(){ auto=false; clearTimeout(timer); playb.classList.remove('on'); playb.innerHTML='\u25B6\uFE0E<span class="pt"> Play</span>'; segs.forEach(function(s){s.classList.remove('run')}); }
     function arm(){ clearTimeout(timer); segs.forEach(function(s){s.classList.remove('run')}); if(!auto) return;
@@ -185,8 +190,8 @@
     function show(i){ i=Math.max(0,Math.min(n-1,i)); if(i===cur) return; cur=i;
       cards.forEach(function(c,j){ c.classList.toggle('on',j===i); c.classList.toggle('past',j<i); });
       segs.forEach(function(s,j){ s.classList.toggle('done',j<i); s.classList.toggle('on',j===i&&!auto); });
-      load(i); load(i+1);
-      var f=cards[i].querySelector('iframe'); if(f&&f.getAttribute('src')) f.src=f.getAttribute('data-src');
+      var f=cards[i].querySelector('iframe[data-src]'), had=!!(f&&f.getAttribute('src'));
+      load(i); load(i+1); load(i-1); if(had) replay(f);
       if(ct) ct.textContent=(i+1)+' of '+n;
       back.hidden=(i===0); go.hidden=(i===n-1); done.hidden=(i!==n-1); count(cards[i]); arm(); }
     function next(){ show(cur+1); } function prev(){ show(cur-1); }
