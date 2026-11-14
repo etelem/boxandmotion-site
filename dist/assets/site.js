@@ -114,9 +114,11 @@
   // scroll story: the graphic on top follows the card you're reading; the dots jump between parts
   document.querySelectorAll('[data-story]').forEach(function(sr){
     var steps=[].slice.call(sr.querySelectorAll('.step')), panes=[].slice.call(sr.querySelectorAll('.pane')),
-        dots=[].slice.call(sr.querySelectorAll('.dots [data-go]')), stick=sr.querySelector('.stick'), hdr=document.querySelector('header.top'), cur=-1;
+        spaces=[].slice.call(sr.querySelectorAll('[data-space]')), dots=[].slice.call(sr.querySelectorAll('.dots [data-go]')),
+        next=sr.querySelector('[data-next]'), done=sr.querySelector('[data-done]'), hint=sr.querySelector('[data-hint]'),
+        hdr=document.querySelector('header.top'), n=steps.length, cur=-1;
     function hh(){ return hdr?hdr.getBoundingClientRect().height:0; }
-    sr.style.setProperty('--hh',hh()+'px');
+    function setH(){ sr.style.setProperty('--hh',hh()+'px'); }
     function countUp(pn){ if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches) return;
       pn.querySelectorAll('[data-countto]').forEach(function(el){ var to=+el.getAttribute('data-countto'), t0=null;
         function st(ts){ if(!t0) t0=ts; var k=Math.min(1,(ts-t0)/650); el.textContent=Math.round(to*(1-Math.pow(1-k,3))); if(k<1) requestAnimationFrame(st); }
@@ -125,15 +127,16 @@
       steps.forEach(function(s,j){s.classList.toggle('on',j===i)});
       panes.forEach(function(p,j){p.classList.toggle('on',j===i)});
       dots.forEach(function(d,j){d.classList.toggle('on',j===i);d.classList.toggle('seen',j<i)});
+      if(hint) hint.hidden=(i!==0); if(next) next.hidden=(i===n-1); if(done) done.hidden=(i!==n-1);
       if(panes[i]) countUp(panes[i]); }
-    function line(){ var b=stick.getBoundingClientRect().bottom; return b+(window.innerHeight-b)*0.45; }
-    function onScroll(){ var y=line(), i=0; steps.forEach(function(s,j){ if(s.getBoundingClientRect().top<=y) i=j; }); show(i); }
-    function go(i){ var s=steps[i]; if(!s) return; var top=window.scrollY+s.getBoundingClientRect().top-stick.getBoundingClientRect().height-hh()+2;
-      window.scrollTo({top:top,behavior:'smooth'}); }
-    sr.addEventListener('click',function(e){ var b=e.target.closest('[data-go]'); if(b){ e.preventDefault(); go(+b.getAttribute('data-go')); } });
+    // part i is showing while spacer i is passing the top of the screen
+    function onScroll(){ var y=hh()+window.innerHeight*0.25, i=0; spaces.forEach(function(s,j){ if(s.getBoundingClientRect().top<=y) i=j; }); show(i); }
+    function go(i){ var s=spaces[i]; if(!s) return; window.scrollTo({top:window.scrollY+s.getBoundingClientRect().top-hh()-window.innerHeight*0.25+4,behavior:'smooth'}); }
+    sr.addEventListener('click',function(e){ var b=e.target.closest('[data-go]'); if(b){ e.preventDefault(); go(+b.getAttribute('data-go')); return; }
+      if(e.target.closest('[data-next]')){ e.preventDefault(); go(cur+1); } });
     window.addEventListener('scroll',onScroll,{passive:true});
-    window.addEventListener('resize',function(){ sr.style.setProperty('--hh',hh()+'px'); onScroll(); });
-    show(0); onScroll();
+    window.addEventListener('resize',function(){ setH(); onScroll(); });
+    setH(); show(0); onScroll();
   });
 
   // official highlights: the NBA's own YouTube video loads only after a tap, in YouTube's player

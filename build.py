@@ -529,17 +529,15 @@ def scroll_story(g, f, ls, R):
     n = len(steps)
     dots = "".join(f'<button type="button" data-go="{i}" aria-label="Part {i+1}"{" class=on" if i == 0 else ""}><i></i></button>' for i in range(n))
     pane_html = "".join(f'<div class="pane{" on" if i == 0 else ""}" data-pane-i="{i}">{p}</div>' for i, p in enumerate(panes))
-    step_html = ""
-    for i, (k, h3, txt) in enumerate(steps):
-        body = txt if txt.startswith("<") else f"<p>{E(txt)}</p>"
-        if i < n - 1:
-            foot = (f'<div class="sfoot">{"<span class=shint>Scroll to keep going</span>" if i == 0 else ""}'
-                    f'<button type="button" class="pill sm snext" data-go="{i + 1}">Next <span aria-hidden="true">↓</span></button></div>')
-        else:
-            foot = '<div class="sfoot"><a class="pill or snext" href="#play">See the play <span aria-hidden="true">↓</span></a></div>'
-        step_html += f'<div class="step{" on" if i == 0 else ""}" data-step="{i}"><span class="sk">{i+1} of {n} · {E(k)}</span><h3>{E(h3)}</h3>{body}{foot}</div>'
+    step_html = "".join(
+        f'<div class="step{" on" if i == 0 else ""}" data-step="{i}"><span class="sk">{i+1} of {n} · {E(k)}</span><h3>{E(h3)}</h3>'
+        + (txt if txt.startswith("<") else f"<p>{E(txt)}</p>") + '</div>' for i, (k, h3, txt) in enumerate(steps))
+    nav = ('<div class="snav"><span class="shint" data-hint>Scroll to keep going</span>'
+           '<button type="button" class="pill sm snext" data-next>Next <span aria-hidden="true">↓</span></button>'
+           '<a class="pill or snext" href="#play" data-done hidden>See the play <span aria-hidden="true">↓</span></a></div>')
+    spacers = "".join(f'<div class="sspace" data-space="{i}"></div>' for i in range(n))
     return (f'<div class="sr" data-story><div class="stick"><div class="top stop"><span>THE STORY · SCROLL</span><span class="dots">{dots}</span></div>'
-            f'<div class="vis">{pane_html}</div></div><div class="steps">{step_html}</div></div>')
+            f'<div class="steps">{step_html}</div><div class="vis">{pane_html}</div>{nav}</div><div class="spaces">{spacers}</div></div>')
 
 COURT = '<svg class="pcourt" viewBox="0 0 350 197" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true"><g stroke="rgba(255,255,255,.14)" stroke-width="1.5"><path d="M175 0V197"/><circle cx="175" cy="98" r="34"/><rect x="0" y="62" width="62" height="72"/><rect x="288" y="62" width="62" height="72"/><path d="M0 18H24A86 86 0 0 1 24 178H0M350 18H326A86 86 0 0 0 326 178H350"/></g></svg>'
 for g in GAMES:

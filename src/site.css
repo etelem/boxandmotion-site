@@ -380,3 +380,18 @@ footer.foot{padding-top:48px;padding-bottom:36px;margin-top:56px;border-top:1px 
 .sr .snext{margin-left:auto}
 .sr .snav{display:none}
 @media(min-width:900px){.sr .step{min-height:48vh}}
+/* story v5 (Nov 13): words on top, picture under; the whole card pins and scrolling the page moves through the parts */
+.sr .stick{border-bottom:0}
+.sr .steps{display:grid}
+.sr .step{grid-area:1/1;min-height:0;padding:12px 24px 14px;border-top:0;opacity:1;visibility:hidden}
+.sr .step.on{visibility:visible;animation:stepin .3s ease}
+.sr .stick .vis{border-top:1px solid var(--line);min-height:230px}
+.sr .snav{display:flex;align-items:center;gap:12px;padding:12px 20px 16px;border-top:1px solid var(--line)}
+.sr .snav .snext{margin-left:auto}
+.sr .shint[hidden]{display:none}
+.sr .sspace{height:62vh}.sr .sspace:last-child{height:12vh}
+@media(min-width:900px){.sr .sspace{height:45vh}}
+.sr{border:0;box-shadow:none;background:transparent;border-radius:0;overflow:visible}
+.sr .stick{border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);overflow:clip;background:#fff}
+.sr .sspace:last-child{height:38vh}
+.sr .sspace:last-child{height:70vh}
