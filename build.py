@@ -276,13 +276,14 @@ if os.path.isdir("src/audio"): shutil.copytree("src/audio", f"{OUT}/audio")
 os.makedirs(f"{OUT}/assets", exist_ok=True)
 
 # "The play of the game" for games without a Short (the owner, Nov 13): the reel loops just its play scene with ?clip=play.
+# window.__bmRestart() replays the clip in place, so the story cards never reload the frame (a reload blinks; Nov 14).
 CLIP_OK = set()
 for key in REELS:
     p = f"{OUT}/reels/{key}/index.html"; src = open(p).read()
     a1 = "let t = still ? TOTAL : 0, playing = !still, last = null, shownScene = -1;"
     a2 = "t = Math.max(0, Math.min(TOTAL, t));"
     if a1 in src and a2 in src and "id: 'play'" in src:
-        src = src.replace(a1, a1 + " const _cm = location.search.match(/[?&]clip=([a-z]+)/), HOLD = /[?&]hold=1/.test(location.search); const CLIP = _cm ? SCENES.find((s) => s.id === _cm[1]) : null; if (CLIP) { t = CLIP.t0; playing = true; }", 1)
+        src = src.replace(a1, a1 + " const _cm = location.search.match(/[?&]clip=([a-z]+)/), HOLD = /[?&]hold=1/.test(location.search); const CLIP = _cm ? SCENES.find((s) => s.id === _cm[1]) : null; if (CLIP) { t = CLIP.t0; playing = true; } window.__bmRestart = function () { if (!CLIP) return; t = CLIP.t0; playing = true; last = null; jumped(); sync(); };", 1)
         src = src.replace(a2, a2 + " if (CLIP && t < CLIP.t0) { t = CLIP.t0; jumped(); } if (CLIP && t >= CLIP.t1 - (HOLD ? 0.35 : 0)) { if (HOLD) { t = CLIP.t1 - 0.35; playing = false; } else { t = CLIP.t0; jumped(); } }", 1)
         src = src.replace('<script>if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add("embed");</script>',
                           '<script>if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add("embed");if (/[?&]clip=/.test(location.search)) document.documentElement.classList.add("clip");</script>'
