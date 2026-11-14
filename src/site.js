@@ -62,17 +62,34 @@
   // game lists: your teams first (keeping story order otherwise); "Your teams / All games" filter
   var mode='all';
   function filterGames(){
+    var isMine=function(g){return g.getAttribute('data-teams').split(' ').some(function(t){return favs.indexOf(t)>-1})};
+    var useMine=mode==='mine'&&favs.length>0;
+    // no teams followed yet: "Your teams" says so and links to the Teams page instead of doing nothing
+    document.querySelectorAll('.nofav-note').forEach(function(n){n.classList.toggle('hidden',!(mode==='mine'&&!favs.length))});
+    // last night's top game is filtered too (it sat outside the list, so the page looked unchanged)
+    var topMine=false;
+    document.querySelectorAll('[data-topgame]').forEach(function(sec){
+      var c=sec.querySelector('[data-teams]'); var mine=!!c&&isMine(c); if(mine) topMine=true;
+      sec.classList.toggle('hidden',useMine&&!mine);
+    });
     document.querySelectorAll('[data-games]').forEach(function(wrap){
       var cards=[].slice.call(wrap.querySelectorAll('[data-teams]'));
       cards.forEach(function(g,i){if(!g.hasAttribute('data-i')) g.setAttribute('data-i',i)});
-      var isMine=function(g){return g.getAttribute('data-teams').split(' ').some(function(t){return favs.indexOf(t)>-1})};
       cards.sort(function(x,y){return (isMine(y)-isMine(x))||(x.getAttribute('data-i')-y.getAttribute('data-i'))});
       cards.forEach(function(g){wrap.appendChild(g)});
-      var shown=0, useMine=mode==='mine'&&favs.length>0;
+      var shown=0;
       cards.forEach(function(g){var hide=useMine&&!isMine(g); g.classList.toggle('hidden',hide); if(!hide) shown++});
-      var note=wrap.parentNode.querySelector('.none-note'); if(note) note.classList.toggle('hidden',shown>0);
+      var top=wrap.closest('section')&&wrap.closest('section').previousElementSibling;
+      var note=wrap.parentNode.querySelector('.none-note');
+      if(note) note.classList.toggle('hidden',shown>0||(top&&top.hasAttribute('data-topgame')&&topMine));
+      // a day with none of your games disappears in "Your teams" mode
+      var day=wrap.closest('.sec'); if(day&&!note) day.classList.toggle('hidden',useMine&&shown===0);
     });
-    document.querySelectorAll('[data-mode]').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-mode')===(favs.length?mode:'all'))});
+    document.querySelectorAll('[data-mine-label]').forEach(function(k){
+      if(!k.hasAttribute('data-all-label')) k.setAttribute('data-all-label',k.textContent);
+      k.textContent=k.getAttribute(useMine&&!topMine?'data-mine-label':'data-all-label');
+    });
+    document.querySelectorAll('[data-mode]').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-mode')===mode)});
   }
   document.addEventListener('click',function(e){
     var b=e.target.closest('[data-mode]'); if(!b) return;

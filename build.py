@@ -416,8 +416,9 @@ ear = "".join(f'<section class="sec"><p class="k">{WEEKDAY(d)}</p>{games_block([
 body = f'''<section><p class="k">{WEEKDAY(LAST_DATE)} · {len(LAST)} games</p><h1 class="h1">Last night.</h1>
 <p class="lead">The top game up front, your teams next, then the rest. Tap any game for the full story.</p>
 <div class="tabs" style="margin-top:18px"><button class="pill" data-mode="mine">Your teams</button><button class="pill" data-mode="all">All games</button><a class="pill" href="#archive">Archive</a></div></section>
-<section style="max-width:780px"><p class="k" style="margin-bottom:10px">Top game of the night</p>{hf_card(top_g, R, big=True, top=True)}</section>
-<section><p class="k" style="margin-bottom:12px">The rest of the night</p>{games_block([g for g in LAST if g is not top_g], R, show_top=False, three=True)}
+<p class="dim nofav-note hidden" style="margin:12px 0 0">You're not following any teams yet. <a class="pill sm" href="{R}teams/index.html">Pick your teams</a></p>
+<section style="max-width:780px" data-topgame><p class="k" style="margin-bottom:10px">Top game of the night</p>{hf_card(top_g, R, big=True, top=True)}</section>
+<section><p class="k" style="margin-bottom:12px" data-mine-label="Your teams last night">The rest of the night</p>{games_block([g for g in LAST if g is not top_g], R, show_top=False, three=True)}
 <p class="dim none-note hidden" style="margin:10px 0 0">None of your teams played last night. <button class="pill sm" data-mode="all">Show all games</button></p></section>
 {'<section class="sec"><h2 class="h2">Earlier this week.</h2>' + ear + '</section>' if ear else ''}
 {calendar(R)}'''
