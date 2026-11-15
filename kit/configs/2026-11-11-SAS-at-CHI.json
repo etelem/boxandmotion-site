@@ -50,8 +50,8 @@
       "Spurs ${D.leadUs}, Bulls ${D.leadThem}"
     ],
     [
-      "Lakers’ margin after each quarter underneath.",
-      "Spurs’ margin after each quarter underneath."
+      "Lakers’ margin in each quarter underneath.",
+      "Spurs’ margin in each quarter underneath."
     ],
     [
       "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",

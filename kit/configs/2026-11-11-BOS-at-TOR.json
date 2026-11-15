@@ -49,8 +49,8 @@
       "Celtics ${D.leadUs}, Raptors ${D.leadThem}"
     ],
     [
-      "Lakers’ margin after each quarter underneath.",
-      "Celtics’ margin after each quarter underneath."
+      "Lakers’ margin in each quarter underneath.",
+      "Celtics’ margin in each quarter underneath."
     ],
     [
       "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
