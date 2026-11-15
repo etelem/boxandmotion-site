@@ -300,7 +300,9 @@ def anim_frame(R, file, label, music=None):
     return (f'<div class="anim-wrap" style="display:flex;flex-direction:column;gap:10px">'
             f'<iframe class="anim" src="{R}anim/{file}?embed=1" title="{E(label)}" loading="lazy" style="width:100%;border:0;display:block;height:560px"></iframe>'
             f'{btn}</div>')
-def short_btn(v): return f'<a class="pill or" href="https://youtube.com/shorts/{v}" target="_blank" rel="noopener">▶ Watch the Short</a>' if v else ""
+YT_SUB = "https://www.youtube.com/@boxandmotion?sub_confirmation=1"
+def sub_btn(cls="pill sm"): return f'<a class="{cls} ytsub" href="{YT_SUB}" target="_blank" rel="noopener">Subscribe</a>'
+def short_btn(v): return (f'<span class="ytpair"><a class="pill or" href="https://youtube.com/shorts/{v}" target="_blank" rel="noopener">▶ Watch on YouTube</a>{sub_btn("pill")}</span>' if v else "")
 def learn_crumbs(R, *rest): return f'<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}learn/index.html">Film Room</a>' + "".join(f"<span>/</span>{x}" for x in rest) + '</nav>'
 
 # ---- output dir, copied media, client data ----
@@ -485,11 +487,12 @@ big_cards = "".join(big_card(i, *x) for i, x in enumerate(reversed(BIG)))
 TONIGHT_DAY = S["upcoming"][0][0] if S["upcoming"] else None
 tonight = "".join(f'<a class="tn" href="teams/{T[h]["slug"]}/index.html" data-teams="{a} {h}"><span class="tt">{tm}</span><span class="tmid"><span class="tteams"><span><i class="dot" style="{dot2(a)}"></i>{E(T[a]["name"])}</span><span class="at">at</span><span><i class="dot" style="{dot2(h)}"></i>{E(T[h]["name"])}</span></span>{f'<span class="tv">{E(tv[0])}</span>' if tv and tv[0] else ''}</span></a>'
                   for day, tm, a, h, *tv in S["upcoming"] if day == TONIGHT_DAY)
-home = f'''<section class="lastn"><div class="sh2"><p class="k">Last night in the NBA · {WEEKDAY(LAST_DATE)}</p><a class="more" href="last-night/index.html">Every game →</a></div><h2 class="h2">Last night’s games.</h2><div class="gtabs" role="tablist">{tabs}</div>{heroes}</section>
-{f"""<section class="sec"><div class="sh2"><p class="k">Tonight · {E(TONIGHT_DAY)} · times ET</p><a class="more" href="odds/index.html">Current playoff odds →</a></div><h2 class="h2">On the schedule.</h2>
-<div class="tonight">{tonight}</div></section>""" if tonight else ""}
-<section class="sec"><div class="sh2"><p class="k">Film Room · new this week</p><a class="more" href="learn/index.html">See all {len(LEARN)} →</a></div><h2 class="h2">New in the Film Room.</h2>
-<div class="feed">{"".join(feed_item(R, x) for x in [y for y in LEARN if FEED_INFO.get(y[4])][:4])}</div><a class="pill feed-all" href="learn/index.html">See all {len(LEARN)} in the Film Room →</a></section>
+home = f'''<section class="lastn"><div class="sh2"><p class="k">Last night in the NBA · {WEEKDAY(LAST_DATE)}</p></div><h2 class="h2">Last night’s games.</h2><div class="gtabs" role="tablist">{tabs}</div>{heroes}<a class="pill sec-more" href="last-night/index.html">All {len(LAST_R)} games from last night →</a></section>
+{f"""<section class="sec"><div class="sh2"><p class="k">Tonight · {E(TONIGHT_DAY)} · times ET</p></div><h2 class="h2">On the schedule.</h2>
+<div class="tonight">{tonight}</div><a class="pill sec-more" href="odds/index.html">Current playoff odds →</a></section>""" if tonight else ""}
+<section class="sec"><div class="sh2"><p class="k">Film Room · new this week</p></div><h2 class="h2">New in the Film Room.</h2>
+<div class="feed">{"".join(feed_item(R, x) for x in [y for y in LEARN if FEED_INFO.get(y[4])][:4])}</div><div class="ytband"><span class="ytlogo" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M9 7.5v9l7.5-4.5z" fill="currentColor"/></svg></span><div class="ytt"><b>New every week on YouTube</b><span>@boxandmotion · Shorts of every move, play and board</span></div>{sub_btn("pill")}</div>
+<a class="pill feed-all" href="learn/index.html">See all {len(LEARN)} in the Film Room →</a></section>
 {f"""<section class="fifty"><div><p class="k">The 50-point nights</p><h2 class="h2">Big nights and<br>signature moves.</h2><p class="lead">Tap a card for the game he went off in, or ▶ for his signature move.</p></div>
 <div class="stack">{big_cards}</div></section>""" if BIG else ""}
 {closer(R)}'''
@@ -832,7 +835,7 @@ def card_flow(g, wq, lq, c, cw, cl):
 
 def card_moment(g, clip, pname, pdesc, v):
     if not clip: return None
-    short = (f'<a class="pill sm cs-short" href="https://youtube.com/shorts/{v}" target="_blank" rel="noopener">▶ Our Short on YouTube</a>' if v else "")
+    short = (f'<span class="ytpair cs-short"><a class="pill sm" href="https://youtube.com/shorts/{v}" target="_blank" rel="noopener">▶ Watch on YouTube</a>{sub_btn()}</span>' if v else "")
     html = (f'<div class="cs-phone"><iframe data-src="{clip}" title="The play of the game, drawn" allow="autoplay"></iframe></div>'
             f'<p class="cs-fine">Original illustration from written accounts; not traced from footage, not to scale.</p>{short}')
     return ("The moment", (pname or "The play") + ".", pdesc or "", html)
@@ -888,7 +891,7 @@ def story_cards(g, f, ls, R, clip, pname, pdesc, v):
         cards.insert(0, ("Final", f"{T[w]['name']} {hs}, {T[l]['name']} {lo}{' (OT)' if len(wq) > 4 else ''}", "", ""))
     SCENE_FOR = {"Final": "final", "The verdict": "edge", "How it went": "flow", "The moment": "play", "The star": "triple", "The help": "scorers"}
     # the play fills the card like the other recap scenes (Nov 13: the Short in a phone frame was too small); Short link + note underneath
-    short_link = (f'<a class="pill sm cs-short" href="https://youtube.com/shorts/{v}" target="_blank" rel="noopener">▶ Our Short on YouTube</a>' if v else "")
+    short_link = (f'<span class="ytpair cs-short"><a class="pill sm" href="https://youtube.com/shorts/{v}" target="_blank" rel="noopener">▶ Watch on YouTube</a>{sub_btn()}</span>' if v else "")
     MOMENT_FOOT = f'<div class="cs-rfoot"><p class="cs-fine">Original illustration from written accounts; not traced from footage, not to scale.</p>{short_link}</div>'
     lq_ = reel_light_q(g["key"], g) if sc else ""
     n = len(cards); out = ""
@@ -1092,7 +1095,7 @@ def flow_story(g, f, ls, R, clip, pname, pdesc, v, links=None):
     final_txt = f"Enough to win {ws}–{lsc}." if ws - lsc <= 5 else ""
     secs.append(side_section("{i}", f"How the {W} won it", h3w, "", won, cw, lost, L, False, True, wtop, W, final_txt))
     secs.append(star_section("{i}", g, f, cw))
-    short_link = (f'<a class="pill sm cs-short" href="https://youtube.com/shorts/{v}" target="_blank" rel="noopener">▶ Our Short on YouTube</a>' if v else "")
+    short_link = (f'<span class="ytpair cs-short"><a class="pill sm" href="https://youtube.com/shorts/{v}" target="_blank" rel="noopener">▶ Watch on YouTube</a>{sub_btn()}</span>' if v else "")
     foot = f'<div class="cs-rfoot"><p class="cs-fine">Original illustration from written accounts; not traced from footage, not to scale.</p>{short_link}</div>'
     mo = scene("The moment", "play", (pname or "The play"), foot)
     ph = PLAY_HEAD.get(g["key"])
@@ -1331,7 +1334,7 @@ for x in XO:
     body = f'''{learn_crumbs(R, "<span>X’s &amp; O’s</span>")}
 <section><p class="k">X’s &amp; O’s · the playbook</p><h1 class="h1">{E(x['title'])}</h1><p class="lead" style="font-size:20px">{E(x['sub'])}.</p></section>
 <section class="sec">{anim_frame(R, x['anim'], x['title'])}
-<div class="row">{short_btn(x.get("youtube"))}<a class="pill" href="{R}learn/index.html">More to learn →</a></div></section>
+<div class="row">{short_btn(x.get("youtube"))}<a class="pill" href="{R}learn/index.html">More in the Film Room →</a></div></section>
 {closer(R)}'''
     page(f"xo/{x['slug']}/index.html", f"{x['title']} · Box & Motion Hoops", body, active="Learn", desc=f"{x['title']} {x['sub']}, explained in motion.")
 
