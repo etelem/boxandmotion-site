@@ -780,3 +780,8 @@ main.w:has(>.sec){gap:64px}
 @media(max-width:899px){.yours .ytgrid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:86%;overflow-x:auto;scroll-snap-type:x mandatory;margin:12px -20px 0;padding:0 20px 6px;scroll-padding:0 20px;scrollbar-width:none}
 .yours .ytgrid::-webkit-scrollbar{display:none}.yours .ytcard{scroll-snap-align:start;box-shadow:none}
 .yours .ytband{min-height:0;padding:16px 18px}.yours .ytab{font-size:38px}.yours .ytrow{padding:9px 0;font-size:14px}}
+
+/* Odds page (Nov 15): one bar color, not team colors ("too busy"); your teams' rows keep the white bar */
+.otable .bar span{background:var(--ink)}
+tr.fav .bar span{background:#fff}
+.h1s{display:block;font-size:.42em;letter-spacing:-.02em;color:var(--dim);margin-top:.25em}

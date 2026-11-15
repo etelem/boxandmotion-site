@@ -444,7 +444,7 @@ home = f'''<section class="hero">
 <a class="num" href="learn/index.html"><div class="t"><span>03</span><span>↗</span></div><div><b>Learn the game</b><p>Moves and plays, drawn step by step.</p></div></a>
 <a class="num" href="{NEWSLETTER}"><div class="t"><span>04</span><span>↗</span></div><div><b>The Sunday Box</b><p>The week in one email.</p></div></a>
 </div></section>
-{f"""<section class="sec"><div class="sh2"><p class="k">Tonight · {E(TONIGHT_DAY)} · times ET</p><a class="more" href="odds/index.html">What’s at stake →</a></div><h2 class="h2">On the schedule.</h2>
+{f"""<section class="sec"><div class="sh2"><p class="k">Tonight · {E(TONIGHT_DAY)} · times ET</p><a class="more" href="odds/index.html">Current playoff odds →</a></div><h2 class="h2">On the schedule.</h2>
 <div class="tonight">{tonight}</div></section>""" if tonight else ""}
 {f"""<section class="fifty"><div><p class="k">The 50-point nights</p><h2 class="h2">Big nights and<br>signature moves.</h2><p class="lead">Tap a card for the game he went off in, or ▶ for his signature move.</p></div>
 <div class="stack">{big_cards}</div></section>""" if BIG else ""}
@@ -1195,12 +1195,12 @@ def otable(conf, hidden=False):
 <td style="width:36%"><div class="bar"><span style="width:{O[c]['top6']}%"></span></div></td><td class="num"><b class="n" style="font-size:18px">{O[c]['top6']}%</b></td>
 <td class="num hide-sm">{O[c]['top10']}%</td><td class="num hide-sm">{O[c]['wins']}</td><td class="num {chgcls(O[c]['chg'])}">{chg(O[c]['chg'])}</td></tr>''' for c in sorted([c for c in T if T[c]["conf"] == conf], key=lambda c: (-O[c]["top6"], -O[c]["top10"])))
     return f'<div class="tbox{" hidden" if hidden else ""}" data-pane="conf" data-value="{conf}"><div class="scroll"><table class="otable"><tr><th>Team</th><th>Record</th><th>Top-6 seed</th><th></th><th class="num hide-sm">Play-in+</th><th class="num hide-sm">Proj. wins</th><th class="num">This week</th></tr>{rows}</table></div></div>'
-body = f'''<section><p class="k">Playoff odds · updated {S['updated']}</p><h1 class="h1">Who’s in, who’s sweating.</h1>
+body = f'''<section><p class="k">Updated {S['updated']}</p><h1 class="h1">Current playoff odds <span class="h1s">(top-6 seed)</span></h1>
 <p class="lead">Each team’s chance of a top-6 seed (a guaranteed playoff spot) and of the play-in or better. “This week” is the change since Monday morning. Your teams are in color.</p>
 <div class="tabs" data-tabs="conf" style="margin-top:18px"><button class="pill on" data-tab="East">East</button><button class="pill" data-tab="West">West</button></div></section>
 <section>{otable("East")}{otable("West", True)}</section>
 <section class="card pad"><b>How the odds work</b><p class="dim" style="margin:6px 0 0">Each team starts from a projected win total and is updated with every result (the projection counts like 30 games, so early records move it but don't take over). We then simulate the rest of the 82-game season 20,000 times, with some uncertainty in every team's strength, and count how often each team finishes top six and top ten in its conference. This is model v0: it uses records only, not injuries, schedule strength or point differential.</p></section>'''
-page("odds/index.html", "Playoff odds · Box & Motion Hoops", body, active="Odds")
+page("odds/index.html", "Current playoff odds · Box & Motion Hoops", body, active="Odds")
 
 # ---- Learn (the old Deep dives page lives on at /deep-dives/ too) ----
 R = "../"
