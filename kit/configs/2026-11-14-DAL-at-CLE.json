@@ -1,0 +1,174 @@
+{
+  "team": "CLE",
+  "D": "  const D = {\n    date: 'Sat, Nov 14, 2026',\n    us: 127, them: 117, record: '7–7', usName: 'Cavaliers', themName: 'Mavericks',\n    quarters: [[33, 33], [38, 20], [34, 38], [22, 26]],\n    leadUs: 22,\n    star: {name: 'Tyrese Proctor', stats: [['Points', 24, 30], ['Rebounds', 11, 15], ['Assists', 10, 15]]},\n    scorers: [\n      {name: 'Tyrese Proctor', pts: 24, note: 'triple-double · 11 rebounds, 10 assists'},\n      {name: 'Mario Hezonja', pts: 22, note: '9 of 12 · season high'},\n      {name: 'Meleek Thomas', pts: 20, note: '8 of 17 · 3 threes'},\n      {name: 'Thomas Bryant', pts: 19, note: '11 rebounds · season high'},\n      {name: 'Jaylon Tyson', pts: 18, note: '3 threes · 5 of 5 at the line'},\n    ],\n    edges: [\n      {label: 'Rebounds', us: 54, them: 39},\n      {label: 'Points in the paint', us: 54, them: 42},\n      {label: 'Assists', us: 31, them: 23},\n      {label: 'Field goals made', us: 48, them: 39},\n    ],\n    gaps: [\n      {label: 'Free throws made', us: 16, them: 25},\n    ],\n    next: {opp: 'vs Bulls', when: 'Mon, Nov 16, 7:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Tyrese Proctor's 30-foot 3-pointer with 1.5 seconds left in the second quarter that put the Cavaliers up 71-53 at halftime. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Proctor at the half",
+    "subP": "Proctor from 30 feet, 1.5 left in the 2nd",
+    "subL": "Tyrese Proctor from 30 feet with 1.5 seconds left in the first half",
+    "m0": "Cavaliers +15",
+    "m1": "Cavaliers +18",
+    "num": "24",
+    "cap1": "Proctor from 30. Cavaliers by 18.",
+    "cap2": "71–53 at halftime, a 28–9 run.",
+    "clock": [
+      8,
+      1.5
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Cavaliers vs Mavericks Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Cavaliers 127, Mavericks 117 · Nov 14, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Cavaliers vs.', 'Mavericks'] : ['Cavaliers vs. Mavericks']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Proctor’s triple-double.', 'Five scored 18 or more.'] : ['Tyrese Proctor had a triple-double, and five Cavaliers scored 18 or more.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Cavaliers improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Back to .500'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Cavaliers up 18 at the half,', 'after a 28–9 run'] : ['Cavaliers up 18 at the half, after a 28–9 run to close it']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Cavaliers ${D.leadUs}, at 113–91 in the 4th"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Cavaliers’ margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Proctor: 24, 11', 'boards, 10 assists'] : ['Proctor: 24 points, 11 rebounds, 10 assists']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['His first career', 'triple-double.'] : ['His first career triple-double, with career highs in points and assists.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Five Cavaliers scored', '18 or more'] : ['Five Cavaliers scored 18 or more']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 30;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it on the glass', 'and in the paint'] : ['Won it on the glass and in the paint']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Cavaliers in gold, Mavericks in gray.', 'Dallas made 14 of 44 threes.'] : ['Cavaliers in gold, Mavericks in gray. Dallas made 14 of 44 threes.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'6th in the East'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Bulls’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '3–9';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Without Mitchell, Mobley,', 'Harden and Allen.'] : ['Without Donovan Mitchell, Evan Mobley, James Harden and Jarrett Allen.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Cavaliers 127 · Mavericks 117 · Nov 14'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Proctor at the half'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Proctor'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 60;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 415 : 415) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 140 * k, shotX + 85 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "    T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "    T(board, bx + 24, by + 38, 'Q2', 'b m', 24);"
+    ],
+    [
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = clk < 60 ? clk.toFixed(1) : `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 200, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 232, ly, D.themName"
+    ]
+  ],
+  "aria": "Animated recap of the Cavaliers' 127 to 117 home win over the Mavericks: Tyrese Proctor's 30-foot 3-pointer with 1.5 seconds left in the first half that made it 71 to 53, quarter-by-quarter scoring, Proctor's triple-double of 24 points, 11 rebounds and 10 assists, the top scorers, how the Cavaliers won, and the next game against Chicago.",
+  "notes": [
+    "Box score from the Cavaliers' 127–117 home win over the Dallas Mavericks at Rocket Arena on Nov 14, 2026, from the CBS Sports box score and play-by-play, with game details from the Associated Press (via CBS Sports), Dallas Sports Journal and Field Level Media (via The Ticket). All 127 Cleveland points and all 117 Dallas points are accounted for in the box score, and the quarter scores add up to both totals: 33–33 after one, 71–53 Cleveland at the half, 105–91 after three. Team totals (field goals 48 of 90 to 39 of 93, threes 15 of 40 to 14 of 44, free throws 16 of 18 to 25 of 31, assists 31–23) are from the box score; rebounds 54–39 are the players' rebounds in the box score (Dallas Sports Journal gives the same 54–39; CBS's team line, which adds team rebounds, has 60–45). Points in the paint (54–42) are from Dallas Sports Journal. Cleveland's 22-point lead came at 113–91 with 10:27 left in the fourth, on the second of Proctor's back-to-back pull-up threes (CBS play-by-play; Dallas Sports Journal). Records and ranks are from the site's standings after Saturday's games.",
+    "Dallas's last lead was 44–43 on Daniel Gafford's putback dunk with 6:25 left in the second quarter; Cleveland closed the half on a 28–9 run (CBS play-by-play; Dallas Sports Journal). Kyrie Irving scored 34 for Dallas, 20 of them in the third quarter (AP; Dallas Sports Journal). Proctor's 24 points, 11 rebounds and 10 assists were his first career triple-double (AP; Field Level Media), with career highs in points and assists (Dallas Sports Journal). Cleveland played without Donovan Mitchell, Evan Mobley, James Harden and Jarrett Allen on the second night of a back-to-back, after losing at Miami on Friday (Dallas Sports Journal; Field Level Media). Cleveland hosts Chicago on Monday, Nov 16 at 7:00 PM ET (Yardbarker).",
+    "The play of the game is an original illustration of Tyrese Proctor's 3-pointer with 1.5 seconds left in the second quarter that made it 71–53 at halftime (Dallas Sports Journal calls it a 30-footer with 1.5 seconds left; the CBS play-by-play has the three, assisted by Jaylon Tyson, at 0:01 with the score going from 68–53 to 71–53). The recaps don't describe the move further, so it is drawn as the template's plain catch-and-shoot pull-up from about 30 feet. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Cleveland Cavaliers or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Proctor’s listed 6-foot-4 and 185 pounds (RealGM), in Cleveland's home white with No. 24 (RealGM). No wingspan from a reliable measurement is reported, so his arms are drawn at a 1.0 ratio. He has no approved look on file yet, so he is drawn as a team-colour silhouette in the kit. It is an original silhouette with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "player": "Tyrese Proctor",
+    "home": true,
+    "tall": 0.9744,
+    "ape": 1.0,
+    "mass": 0.9398,
+    "label": "Tyrese Proctor, listed 6-4, 185 lb, no reported wingspan"
+  },
+  "loser_top": [
+    [
+      "Kyrie Irving",
+      34,
+      "20 in the third · 7 of 16 from three"
+    ],
+    [
+      "Cooper Flagg",
+      18,
+      "8 rebounds · 0 of 6 from three"
+    ],
+    [
+      "Caleb Martin",
+      15,
+      "6 of 7 · 8 rebounds"
+    ]
+  ]
+}

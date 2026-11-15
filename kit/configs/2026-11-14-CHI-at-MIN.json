@@ -1,0 +1,178 @@
+{
+  "team": "CHI",
+  "D": "  const D = {\n    date: 'Sat, Nov 14, 2026',\n    us: 117, them: 106, record: '3–9', usName: 'Bulls', themName: 'Timberwolves',\n    quarters: [[29, 17], [29, 28], [30, 35], [29, 26]],\n    leadUs: 16,\n    star: {name: 'Norman Powell', stats: [['Points', 24, 30], ['Field goals made of 19', 10, 19], ['Threes made of 5', 3, 5]]},\n    scorers: [\n      {name: 'Norman Powell', pts: 24, note: '10 of 19 · 3 threes'},\n      {name: 'Matas Buzelis', pts: 18, note: '9 rebounds · 6 of 6 at the line'},\n      {name: 'Buddy Hield', pts: 16, note: 'off the bench · 4 of 6 from three'},\n      {name: 'Tre Jones', pts: 16, note: 'off the bench · 7 of 9'},\n      {name: 'Patrick Williams', pts: 14, note: 'off the bench · 3 steals'},\n    ],\n    edges: [\n      {label: 'Bench points', us: 50, them: 33},\n      {label: 'Threes made', us: 14, them: 9},\n      {label: 'Assists', us: 29, them: 23},\n      {label: 'Field goals made', us: 44, them: 38},\n    ],\n    gaps: [\n      {label: 'Free throws made', us: 15, them: 21},\n    ],\n    next: {opp: 'at Cavaliers', when: 'Mon, Nov 16, 7:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Buddy Hield's step-back jumper with 5:43 left in the third quarter that made it 67-64 and ended Minnesota's 13-0 run. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Hield stops the run",
+    "subP": "Hield steps back, 5:43 left in the 3rd",
+    "subL": "Buddy Hield’s step-back with 5:43 left in the third, up 65–64",
+    "m0": "Bulls +1",
+    "m1": "Bulls +3",
+    "num": "7",
+    "cap1": "Hield steps back. Bulls by 3.",
+    "cap2": "67–64. Minnesota’s 13–0 run is over.",
+    "clock": [
+      351,
+      343
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Bulls at Timberwolves Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Bulls 117, Timberwolves 106 · Nov 14, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Bulls at', 'Timberwolves'] : ['Bulls at Timberwolves']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Powell 24. The bench 50.', 'Wolves: 9 of 38 from three.'] : ['Norman Powell scored 24, the Bulls’ bench scored 50, and Minnesota made 9 of 38 threes.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Bulls improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Second straight win'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Bulls up 13 at the half,', 'held off a 13–0 run'] : ['Bulls up 13 at the half, then held off a 13–0 Minnesota run']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Bulls ${D.leadUs}, at 111–95 in the 4th"
+    ],
+    [
+      "Lakers’ margin after each quarter underneath.",
+      "Bulls’ margin after each quarter underneath."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Powell: 24,', '10 of 19 shooting'] : ['Powell: 24 points on 10-of-19 shooting']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['3 of 5 from three,', 'a night after his 33.'] : ['3 of 5 from three, a night after his 33 against Atlanta.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Hield, Jones, Williams:', '46 off the bench'] : ['Hield, Jones and Williams scored 46 off the bench']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 30;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it from three', 'and off the bench'] : ['Won it from three and off the bench']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Bulls in white, Timberwolves in gray.', 'Minnesota missed its first 13 threes.'] : ['Bulls in white, Timberwolves in gray. Minnesota missed its first 13 threes.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'14th in the East'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Cavaliers’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '7–7';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Ended Minnesota’s five-game', 'win streak.'] : ['Ended Minnesota’s five-game win streak.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Bulls 117 · Timberwolves 106 · Nov 14'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Hield stops the run'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Powell'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 60;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 170 : 200) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+2', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 120 * k, shotX + 80 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "    T(board, bx + 24, by + 38, 'Q3', 'b m', 24);"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 140, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 172, ly, D.themName"
+    ],
+    [
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+    ]
+  ],
+  "aria": "Animated recap of the Bulls' 117 to 106 road win over the Timberwolves: Buddy Hield's step-back jumper with 5 minutes 43 seconds left in the third quarter that made it 67 to 64 and ended a 13 to 0 Minnesota run, quarter-by-quarter scoring, Norman Powell's 24 points, the top scorers, how the Bulls won, and the next game at Cleveland.",
+  "figure": {
+    "player": "Buddy Hield",
+    "home": false,
+    "tall": 0.9744,
+    "ape": 1.0,
+    "mass": 1.0248,
+    "label": "Buddy Hield, listed 6-4, 220 lb, no wingspan used"
+  },
+  "loser_top": [
+    [
+      "Ayo Dosunmu",
+      24,
+      "10 of 16 · 14 in the third"
+    ],
+    [
+      "LaMelo Ball",
+      19,
+      "7 of 25 · 4 steals"
+    ],
+    [
+      "Jaden McDaniels",
+      18,
+      "7 of 11 · 6 assists"
+    ]
+  ],
+  "notes": [
+    "Box score from the Bulls' 117–106 road win over the Minnesota Timberwolves at Target Center on Nov 14, 2026, from the CBS Sports box score and play-by-play, with game details from the Associated Press (via ABC News and CBS Sports), Field Level Media (via The Ticket), Bleacher Nation and Yardbarker. All 117 Chicago points and all 106 Minnesota points are accounted for in the box score, and the quarter scores add up to both totals: 29–17 after one, 58–45 Chicago at the half, 88–80 after three. Team totals (field goals 44 of 90 to 38 of 91, threes 14 of 30 to 9 of 38, free throws 15 of 18 to 21 of 28, assists 29–23) and bench points (50–33) are from the box score. The AP story lists Norman Powell with 23 points; the box score (10 of 19, 3 threes, 1 of 2 at the line) and Field Level Media have 24, which is used here (Bleacher Nation's 51 bench points match the AP count). Rebounds are left out because the sources disagree. Chicago's 16-point lead came at 111–95 with 4:33 left (CBS play-by-play; Yardbarker says as many as 16). Records and ranks are from the site's standings after Saturday's games.",
+    "Minnesota missed its first 13 threes and finished 9 of 38 (AP). Minnesota's 13–0 third-quarter run cut a 65–51 deficit to 65–64 (CBS play-by-play; Bleacher Nation); Ayo Dosunmu scored 14 of his 24 in the third (AP). Minnesota got within 113–106 with 1:28 left before Patrick Williams' three made it 116–106 with 1:10 left (CBS play-by-play). The win ended Minnesota's five-game winning streak and gave Chicago consecutive wins for the first time this season (Field Level Media), after Friday's overtime win over Atlanta, in which Powell scored 33. Chicago played without Caleb Wilson, Jalen Smith and Nic Claxton (Bleacher Nation), and arrived on game day after a flight delay (AP). Chicago plays at Cleveland on Monday, Nov 16 at 7:00 PM ET (Yardbarker; AP).",
+    "The play of the game is an original illustration of Buddy Hield's jumper with 5:43 left in the third quarter that made it 67–64 and ended Minnesota's 13–0 run (the CBS play-by-play lists it as a two-point step-back jump shot at 5:43, 65–64 to 67–64; Bleacher Nation says Hield 'stopped the bleeding with a pull-up iso jumper'). The shot's distance isn't reported, so it is drawn as the template's pull-up from mid-range. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Chicago Bulls or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Hield’s listed 6-foot-4 and 220 pounds (RealGM), in Chicago's road red with No. 7 (RealGM). No wingspan from a reliable measurement is used, so his arms are drawn at a 1.0 ratio. He has no approved look on file yet, so he is drawn as a team-colour silhouette in the kit. It is an original silhouette with a featureless face, not a portrait or a trace of footage."
+  ]
+}
