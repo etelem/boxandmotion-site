@@ -9,8 +9,10 @@ follow the figure style rule at the top of PROCEDURE.md: the recap silhouette dr
 shows his signature trait.
 
 ## The week
-The games from last Saturday through Friday night: every game in `data/season.json` dated in that window. Pull before
-starting; the nightly update keeps that file current.
+- Deep dives (scouting report, board): the games from last Saturday through Friday night.
+- The Sunday Box: the games from last **Sunday** through Friday night, drafted here. Saturday night's games are added on Sunday
+  morning by the Sunday top-up (section 5 below), so each game appears in exactly one issue.
+Every game in `data/season.json` dated in those windows. Pull before starting; the nightly update keeps that file current.
 
 ## 1. Scouting report: the week's hottest player
 1. **Pick him.** Use fetch_sports_data (game_stats for the week's games) to rank players by the week: points per game (2+ games),
@@ -87,7 +89,28 @@ Then wait for his reply in this session. Change whatever he asks and send new pr
    `assets.video.url = https://boxandmotion.com/anim/<file>.mp4`.
    - Titles: "<Player>'s <move>, explained | Box & Motion scouting report" and "<Coach>'s <play>, on the board | <Team> vs <Opp>".
    - When the video ids come back, add them to the deep-dive data (`youtube` field), `git rm src/anim/*.mp4`, rebuild and push.
-3. Add the Short links to the newsletter draft. Schedule it for Sunday 8:00 AM ET (or the time the owner gave), then report the
-   scheduled time.
+3. Add the Short links to the newsletter draft. Schedule it for Sunday 9:00 AM ET (or the time the owner gave), then report the
+   scheduled time. (9:00, not earlier, so the Sunday top-up can add Saturday's games first.)
 Before ending your turn, use send_later to remind yourself in this session at Sunday 7:30 AM ET. If he still hasn't
 replied by then, publish nothing and send him one reminder.
+
+## 5. Sunday top-up: add Saturday night (its own scheduled run, Sundays 8:13 AM ET)
+The issue is drafted on Saturday morning, before Saturday's games. This run adds them before the 9:00 AM send.
+1. Clone the repo (`--depth 1`). Check `data/season.json`: `updated_short` must be Saturday's date. If it isn't, pull again
+   every 10 minutes until 8:45 AM ET. Still missing at 8:45: change nothing, send a PushNotification ("Sunday Box: Saturday's
+   games weren't in by 8:45, the issue goes out without them") and stop. If there were no games on Saturday, change nothing
+   and stop with one line.
+2. Find this week's issue in beehiiv (publication "Box & Motion"): the newest post titled "The Sunday Box: ...", either a draft
+   or scheduled for today. None: tell the owner the weekly draft is missing and stop. Call `learn_post_authoring` before editing.
+3. Edit it, in one save, using only site data (`data/season.json`, `data/odds.json`, `data/writeups/`, `reels/<key>/youtube.txt`):
+   - Add **Saturday night** right after "The week in one line": one line per Saturday game, "<Winner> <pts>, <Loser> <pts>",
+     plus the recap headline from `data/writeups/<date>-<key>.json` when it's published, linked to the game page on
+     boxandmotion.com, and "Watch the Short" when `reels/<key>/youtube.txt` has an id.
+   - Game of the week: keep it, unless a Saturday game beats it on build.py's `story_score`; then swap it and say so in the report.
+   - Playoff race movers: refresh every number from the latest `data/odds.json`.
+   - "The week in one line": change it only if Saturday changed the story.
+   Skip any line you can't fill from the data; never guess.
+4. Keep the post's status: if it's scheduled, keep the scheduled time; if it's still a draft (not approved yet), leave it a draft.
+   Send a new test email to boxandmotionhoops@gmail.com.
+5. End with a SendUserMessage: the Saturday lines added, whether the game of the week changed, and whether the issue is scheduled
+   (and when) or still waiting for "approve". If an edit fails, leave the issue exactly as it was and say what failed.
