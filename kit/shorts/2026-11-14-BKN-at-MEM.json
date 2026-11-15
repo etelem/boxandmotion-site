@@ -1,0 +1,48 @@
+{
+  "out": "short-2026-11-14-BKN-MEM.html",
+  "team": "MEM",
+  "home": true,
+  "number": "24",
+  "player": "Cam Spencer",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 0.9615,
+    "ape": 1.0267,
+    "mass": 0.9958
+  },
+  "build_note": "Listed 6-3, 205 lb (RealGM); 6-5 wingspan at the 2024 draft combine (Sportskeeda)",
+  "kicker": "GRIZZLIES 129 · NETS 110 · NOV 14",
+  "hook": [
+    "Spencer's three",
+    "at the halftime horn"
+  ],
+  "clock": "Q2 · BUZZER",
+  "us": "MEM",
+  "them": "BKN",
+  "score_before": [68, 54],
+  "score_make": [71, 54],
+  "stamp": "AT THE HORN",
+  "beat": [
+    "Grizzlies by 17 at the half.",
+    "3 of 3 from deep on the night."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Grizzlies",
+    "them": "Nets",
+    "us_pts": 129,
+    "them_pts": 110
+  },
+  "star": {
+    "name": "Cam Spencer",
+    "big": 17,
+    "big_label": "points and 8 assists",
+    "lines": [
+      "3 of 3 from three",
+      "13 points by halftime"
+    ]
+  },
+  "story": "Memphis made 9 of 11 threes in a 38-point first quarter and led by as many as 26. Seven Grizzlies scored in double figures.",
+  "aria": "Animated Short: Cam Spencer pulls up from three at the halftime buzzer, Grizzlies up 68–54, and makes it for a 71–54 halftime lead. Grizzlies win 129–110. An original illustration, not traced from footage, not to scale."
+}

@@ -1,0 +1,103 @@
+{
+ "headline": "Coward and a deep bench run past the Nets",
+ "dek": "Cedric Coward had 23 and 12. Seven Grizzlies scored in double figures.",
+ "three": [
+  [
+   "Coward: 23 points and 12 rebounds",
+   "4 of 6 from three, with 2 steals and 2 blocks."
+  ],
+  [
+   "Grizzlies up 17 at the half, then a 16–1 run in the third",
+   "The Memphis bench scored 58 of the 129."
+  ],
+  [
+   "Won it in the paint and off turnovers",
+   "Points in the paint 62–46; points off turnovers 30–15. Memphis scored 30 points off 16 Brooklyn turnovers."
+  ]
+ ],
+ "battle": [
+  [
+   "Points in the paint",
+   62,
+   46
+  ],
+  [
+   "Points off turnovers",
+   30,
+   15
+  ],
+  [
+   "Bench points",
+   58,
+   32
+  ],
+  [
+   "Free throws made",
+   22,
+   11
+  ]
+ ],
+ "battle_labels": [
+  "MEM",
+  "BKN"
+ ],
+ "top": [
+  [
+   "Cedric Coward",
+   "MEM",
+   "12 rebounds, 4 of 6 from three",
+   23
+  ],
+  [
+   "Taylor Hendricks",
+   "MEM",
+   "off the bench, career high, 9 of 13",
+   22
+  ],
+  [
+   "Javon Small",
+   "MEM",
+   "off the bench, 6 of 6 FT",
+   19
+  ],
+  [
+   "Cam Spencer",
+   "MEM",
+   "8 assists, 3 of 3 from three",
+   17
+  ]
+ ],
+ "linescore": {
+  "away": [
+   23,
+   31,
+   30,
+   26
+  ],
+  "home": [
+   38,
+   33,
+   32,
+   26
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-14-BKN-at-MEM.json",
+ "loser": {
+  "top": [
+   [
+    "Julius Randle",
+    "BKN",
+    "8 of 16 · 5 assists · 3 steals",
+    22
+   ],
+   [
+    "Day'Ron Sharpe",
+    "BKN",
+    "11 rebounds, 9 offensive",
+    16
+   ]
+  ],
+  "source": "box score"
+ }
+}
