@@ -113,13 +113,13 @@ def tchip(c, score, lose=False, name=None):
     return (f'<span class="tchip{" lo" if lose else ""}"><i style="{dot2(c)}"></i>{E(name or T[c]["name"])}'
             + (f' <b>{score}</b>' if score is not None else '') + '</span>')
 
-HDNAV = [("Last night’s games", "last-night/index.html"), ("Your teams", "teams/index.html#yours"), ("Learn the game", "learn/index.html"),
+HDNAV = [("Last night’s games", "last-night/index.html"), ("Your teams", "teams/index.html#yours"), ("Film Room", "learn/index.html"),
          ("Playoff odds", "odds/index.html")]   # header buttons on computers/tablets (owner, Nov 15, nav option B)
-HDACT = {"Last Night": "Last night’s games", "Teams": "Your teams", "Your Team": "Your teams", "Learn": "Learn the game", "Odds": "Playoff odds"}
+HDACT = {"Last Night": "Last night’s games", "Teams": "Your teams", "Your Team": "Your teams", "Learn": "Film Room", "Odds": "Playoff odds"}
 # bottom tab bar on phones (owner, Nov 15, option B): Games · Teams · Learn · Odds; About lives in the footer
 TABS = [("Games", "Last night’s games", "last-night/index.html", '<path d="M4 6h16M4 12h16M4 18h10"/>'),
         ("Teams", "Your teams", "teams/index.html#yours", '<circle cx="12" cy="12" r="8"/><path d="M4 12h16M12 4c2.5 2.5 2.5 13.5 0 16M12 4c-2.5 2.5-2.5 13.5 0 16"/>'),
-        ("Learn", "Learn the game", "learn/index.html", '<path d="M6 6l4 4M10 6l-4 4"/><circle cx="17" cy="17" r="3"/><path d="M9 14c1 3 3 4 5 4" stroke-dasharray="1 2.4"/>'),
+        ("Film Room", "Film Room", "learn/index.html", '<path d="M6 6l4 4M10 6l-4 4"/><circle cx="17" cy="17" r="3"/><path d="M9 14c1 3 3 4 5 4" stroke-dasharray="1 2.4"/>'),
         ("Odds", "Playoff odds", "odds/index.html", '<path d="M4 19h16M7 16v-4M12 16V8M17 16v-7"/>')]
 def _hhref(R, h): return h if h.startswith("http") else R + h
 def page(path, title, body, active=None, desc="Every NBA game, more than the box score: the story, the play that decided it, drawn in motion.", band=""):
@@ -150,7 +150,7 @@ def page(path, title, body, active=None, desc="Every NBA game, more than the box
 {band}
 <main class="w">{body}</main>
 <footer class="w foot"><span class="word">Box &amp; Motion <span>Hoops</span></span>
-<div class="fl"><a href="{R}last-night/index.html">Last Night</a><a href="{R}teams/index.html#yours">Your Teams</a><a href="{R}learn/index.html">Learn</a><a href="{R}odds/index.html">Odds</a><a href="{R}teams/index.html">Teams</a><a href="{R}newsletter/index.html">The Sunday Box</a><a href="https://www.youtube.com/@boxandmotion" target="_blank" rel="noopener">YouTube</a><a href="{R}about/index.html">About</a></div>
+<div class="fl"><a href="{R}last-night/index.html">Last Night</a><a href="{R}teams/index.html#yours">Your Teams</a><a href="{R}learn/index.html">Film Room</a><a href="{R}odds/index.html">Odds</a><a href="{R}teams/index.html">Teams</a><a href="{R}newsletter/index.html">The Sunday Box</a><a href="https://www.youtube.com/@boxandmotion" target="_blank" rel="noopener">YouTube</a><a href="{R}about/index.html">About</a></div>
 <div class="legal">Unofficial fan site. Not affiliated with or endorsed by the NBA or any team. Drawings are original, not traced from footage; no logos. Video plays from official uploads only. Updated {S['updated']}.</div></footer>
 </div><script src="{R}assets/data.js"></script><script src="{R}assets/site.js"></script></body></html>"""
     full = os.path.join(OUT, path); os.makedirs(os.path.dirname(full) or OUT, exist_ok=True)
@@ -266,7 +266,7 @@ LEARN = ([("2026-11-07", "report", "Luka Dončić: 40 a night", "Scouting report
           ("2026-11-07", "board", "JJ Redick: how they closed at Utah", "Coach's board · Lakers", "coaches/jj-redick/index.html", _thumb("lakers-utah-close.html"))]
          + [(b["published"], "board", f'{b["coach"]}: {b["title"]}', f"Coach's board · {T[b['team']]['name']}", f'coaches/{b["coach_slug"]}/index.html', _thumb(b["anim"])) for b in BOARDS]
          + [(m["published"], "move", m["title"], f"Signature move · {m['player']}", f'moves/{m["slug"]}/index.html', _thumb(m["anim"])) for m in MOVES]
-         + [(x["published"], "xo", x["title"], "X's & O's · learn the game", f'xo/{x["slug"]}/index.html', _thumb(x["anim"])) for x in XO]
+         + [(x["published"], "xo", x["title"], "X's & O's · the playbook", f'xo/{x["slug"]}/index.html', _thumb(x["anim"])) for x in XO]
          + [(P["published"], "report", P["name"], f"Scouting report · {T[P['team']]['name']}", f'players/{P["slug"]}/index.html', _thumb(P["move"]["anim"])) for P in PLAYERS]
          + [(x["published"], "trend", x["title"], f"Trend board · {T[x['team']]['name']}", f'trends/{x["slug"]}/index.html', _thumb(x["anim"])) for x in TRENDS])
 LEARN.sort(key=lambda x: x[0], reverse=True)
@@ -279,7 +279,7 @@ for x in TRENDS: FEED_INFO[f'trends/{x["slug"]}/index.html'] = (x["anim"], x.get
 for b in BOARDS: FEED_INFO.setdefault(f'coaches/{b["coach_slug"]}/index.html', (b["anim"], b.get("dek", "")))
 for P in PLAYERS: FEED_INFO[f'players/{P["slug"]}/index.html'] = (P["move"]["anim"], P.get("dek", ""))
 FEED_INFO.setdefault("players/luka-doncic/index.html", ("luka-stepback.html", "40 a night, and the step-back three that gets him there."))
-KIND_WORD = {"move": "Watch the move", "xo": "Learn the play", "board": "See the play", "trend": "See the answer", "report": "Read the report"}
+KIND_WORD = {"move": "Watch the move", "xo": "Break down the play", "board": "See the play", "trend": "See the answer", "report": "Read the report"}
 def feed_item(R, item):
     pub, kind, title, sub, href, img = item
     anim, dek = FEED_INFO.get(href, (None, ""))
@@ -301,7 +301,7 @@ def anim_frame(R, file, label, music=None):
             f'<iframe class="anim" src="{R}anim/{file}?embed=1" title="{E(label)}" loading="lazy" style="width:100%;border:0;display:block;height:560px"></iframe>'
             f'{btn}</div>')
 def short_btn(v): return f'<a class="pill or" href="https://youtube.com/shorts/{v}" target="_blank" rel="noopener">▶ Watch the Short</a>' if v else ""
-def learn_crumbs(R, *rest): return f'<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}learn/index.html">Learn</a>' + "".join(f"<span>/</span>{x}" for x in rest) + '</nav>'
+def learn_crumbs(R, *rest): return f'<nav aria-label="Breadcrumb" class="crumbs"><a href="{R}learn/index.html">Film Room</a>' + "".join(f"<span>/</span>{x}" for x in rest) + '</nav>'
 
 # ---- output dir, copied media, client data ----
 shutil.rmtree(OUT, ignore_errors=True)  # start clean so removed pages disappear
@@ -488,8 +488,8 @@ tonight = "".join(f'<a class="tn" href="teams/{T[h]["slug"]}/index.html" data-te
 home = f'''<section class="lastn"><div class="sh2"><p class="k">Last night in the NBA · {WEEKDAY(LAST_DATE)}</p><a class="more" href="last-night/index.html">Every game →</a></div><h2 class="h2">Last night’s games.</h2><div class="gtabs" role="tablist">{tabs}</div>{heroes}</section>
 {f"""<section class="sec"><div class="sh2"><p class="k">Tonight · {E(TONIGHT_DAY)} · times ET</p><a class="more" href="odds/index.html">Current playoff odds →</a></div><h2 class="h2">On the schedule.</h2>
 <div class="tonight">{tonight}</div></section>""" if tonight else ""}
-<section class="sec"><div class="sh2"><p class="k">Learn the game</p><a class="more" href="learn/index.html">See all {len(LEARN)} →</a></div><h2 class="h2">New in the library.</h2>
-<div class="feed">{"".join(feed_item(R, x) for x in [y for y in LEARN if FEED_INFO.get(y[4])][:4])}</div><a class="pill feed-all" href="learn/index.html">See all {len(LEARN)} in the library →</a></section>
+<section class="sec"><div class="sh2"><p class="k">Film Room · new this week</p><a class="more" href="learn/index.html">See all {len(LEARN)} →</a></div><h2 class="h2">New in the Film Room.</h2>
+<div class="feed">{"".join(feed_item(R, x) for x in [y for y in LEARN if FEED_INFO.get(y[4])][:4])}</div><a class="pill feed-all" href="learn/index.html">See all {len(LEARN)} in the Film Room →</a></section>
 {f"""<section class="fifty"><div><p class="k">The 50-point nights</p><h2 class="h2">Big nights and<br>signature moves.</h2><p class="lead">Tap a card for the game he went off in, or ▶ for his signature move.</p></div>
 <div class="stack">{big_cards}</div></section>""" if BIG else ""}
 {closer(R)}'''
@@ -1250,12 +1250,12 @@ page("odds/index.html", "Current playoff odds · Box & Motion Hoops", body, acti
 # ---- Learn (the old Deep dives page lives on at /deep-dives/ too) ----
 R = "../"
 chips = "".join(f'<button type="button" class="chip{" on" if k == "all" else ""}" data-filter="{k}">{E(lbl)}</button>' for k, lbl in KINDS if k == "all" or any(x[1] == k for x in LEARN))
-learn_body = lambda R: f'''<section><p class="k">Learn the game</p><h1 class="h1">See how the game works.</h1>
+learn_body = lambda R: f'''<section><p class="k">Film Room</p><h1 class="h1">Breaking down the tape.</h1>
 <p class="lead">Signature moves, set plays, coach’s boards, trends and scouting reports, drawn so you can actually see them.</p></section>
 <section><div class="row" style="margin-bottom:18px">{chips}</div><div class="lib" data-lib>{"".join(learn_card(R, x) for x in LEARN)}</div></section>
 {closer(R)}'''
-page("learn/index.html", "Learn the game · Box & Motion Hoops", learn_body(R), active="Learn")
-page("deep-dives/index.html", "Learn the game · Box & Motion Hoops", learn_body(R), active="Learn")
+page("learn/index.html", "Film Room · Box & Motion Hoops", learn_body(R), active="Learn")
+page("deep-dives/index.html", "Film Room · Box & Motion Hoops", learn_body(R), active="Learn")
 
 # ---- player: Luka ----
 R = "../../"
@@ -1329,7 +1329,7 @@ for m in MOVES:
 # ---- X's and O's explainers ----
 for x in XO:
     body = f'''{learn_crumbs(R, "<span>X’s &amp; O’s</span>")}
-<section><p class="k">X’s &amp; O’s · learn the game</p><h1 class="h1">{E(x['title'])}</h1><p class="lead" style="font-size:20px">{E(x['sub'])}.</p></section>
+<section><p class="k">X’s &amp; O’s · the playbook</p><h1 class="h1">{E(x['title'])}</h1><p class="lead" style="font-size:20px">{E(x['sub'])}.</p></section>
 <section class="sec">{anim_frame(R, x['anim'], x['title'])}
 <div class="row">{short_btn(x.get("youtube"))}<a class="pill" href="{R}learn/index.html">More to learn →</a></div></section>
 {closer(R)}'''
@@ -1395,7 +1395,7 @@ page("newsletter/index.html", "The Sunday Box newsletter · Box & Motion Hoops",
 # ---- about + 404 ----
 body = f'''<section style="max-width:46em"><p class="k">About Box &amp; Motion</p>
 <h1 class="h1">More than the<br><b style="color:var(--or)">box score.</b></h1>
-<p class="lead hp" style="font-size:20px;max-width:none"><b>Every NBA game, every night.</b> We show you how the game was won: the run, the matchup, the play that decided it. Plus <a href="{R}learn/index.html">Learn the Game</a> and <a href="{NEWSLETTER}">The Sunday Box</a>.</p></section>
+<p class="lead hp" style="font-size:20px;max-width:none"><b>Every NBA game, every night.</b> We show you how the game was won: the run, the matchup, the play that decided it. Plus the <a href="{R}learn/index.html">Film Room</a> and <a href="{NEWSLETTER}">The Sunday Box</a>.</p></section>
 <section class="grid g2">
 <div class="card pad" style="display:flex;flex-direction:column;gap:8px"><p class="k">Who we are</p><b class="d" style="font-size:30px">Fans with a day job in data</b>
 <p style="margin:0">Our team has a background in analytics and AI enablement. We love basketball, and we don’t have time to watch every game anymore. We still want to know what actually happened.</p></div>
@@ -1404,7 +1404,7 @@ body = f'''<section style="max-width:46em"><p class="k">About Box &amp; Motion</
 <section class="nums">
 <a class="num" href="{R}last-night/index.html"><div class="t"><span>01</span><span>↗</span></div><div><b>Every game</b><p>The story, the play that decided it, and the official highlights.</p></div></a>
 <a class="num" href="{R}odds/index.html"><div class="t"><span>02</span><span>↗</span></div><div><b>Playoff odds</b><p>Our own model, updated every morning.</p></div></a>
-<a class="num" href="{R}learn/index.html"><div class="t"><span>03</span><span>↗</span></div><div><b>Learn the game</b><p>Moves, plays, coach’s boards and trends, drawn.</p></div></a>
+<a class="num" href="{R}learn/index.html"><div class="t"><span>03</span><span>↗</span></div><div><b>Film Room</b><p>Moves, plays, coach’s boards and trends, drawn.</p></div></a>
 <a class="num" href="{NEWSLETTER}"><div class="t"><span>04</span><span>↗</span></div><div><b>The Sunday Box</b><p>The week in one email. Free.</p></div></a></section>
 <section style="max-width:46em" class="sec"><h2 class="h2">How we make it.</h2>
 <p style="margin:0">Scores and records come from league stats, and every number in a recap is checked against the box score or a named game story. The plays are original illustrations drawn from written accounts, not traced from footage and not to scale. We use AI tools to help draw and publish it all, and we skip anything we can’t verify rather than guess.</p>
