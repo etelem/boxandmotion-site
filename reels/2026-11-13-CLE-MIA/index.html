@@ -625,7 +625,7 @@ html.embed .transport{flex:none}
   function sceneFlow(L, g) {
     const {W, H, M, fs, P} = L;
     const head = heading(L, g, P ? ['Down 3 at the half,', 'won the 4th 41–30'] : ['Down 3 at the half, up 1 after three, then won the fourth 41–30']);
-    const subY = subline(L, g, head.y, P ? ['Points per quarter. Each quarter’s', 'margin underneath.'] : ['Points per quarter, with the Heat’s margin in each quarter underneath.']);
+    const subY = subline(L, g, head.y, P ? ['Points per quarter. Each quarter’s', 'margin, then the game score after it.'] : ['Points per quarter, with the Heat’s margin in each quarter, then the game score after it.']);
     const top = subY + fs.s * 2.2, bottom = P ? H * 0.7 : H - M - fs.s * 4.4;
     const max = 50, colW = (W - 2 * M) / 4, bw = Math.min(70, colW * 0.24);
     const y = (v) => bottom - v / max * (bottom - top);
@@ -641,7 +641,10 @@ html.embed .transport{flex:none}
       T(group, cx, bottom + fs.s * 1.35, `Q${i + 1}`, 'b m', fs.s, 'middle');
       const lead = p - m;   // each quarter's own margin (the owner, Nov 13 and Nov 15)
       const tag = T(g, cx, bottom + fs.s * 1.35 + (P ? 64 : 72), lead === 0 ? 'Tied' : `${lead > 0 ? '+' : '–'}${Math.abs(lead)}`, lead > 0 ? 'd g' : 'd m', P ? 54 : 60, 'middle');
-      return {group, barP, barM, nP, nM, tag, p, m};
+      // the game score after this quarter, smaller, in the team color when ahead (the owner, Nov 15)
+      const run = runP - runM, tag2 = T(g, cx, bottom + fs.s * 1.35 + (P ? 64 : 72) + fs.s * 1.5, run === 0 ? 'Tied' : (run > 0 ? 'Up ' : 'Down ') + Math.abs(run), run > 0 ? 'b g' : 'b m', fs.s * 0.95, 'middle');
+      if (run > 0) tag2.style.fontWeight = 600;
+      return {group, barP, barM, nP, nM, tag, tag2, p, m};
     });
     const legend = S('g', {}, g);
     const ly = P ? H - M - fs.s * 2.4 : top - fs.s * 0.6;
@@ -660,6 +663,7 @@ html.embed .transport{flex:none}
         c.barM.setAttribute('height', hm.toFixed(1)); c.barM.setAttribute('y', (bottom - hm).toFixed(1));
         c.nP.style.opacity = c.nM.style.opacity = p;
         show(c.tag, prog(lt, 0.9 + i * 0.9, 0.5), 14);
+        show(c.tag2, prog(lt, 1.1 + i * 0.9, 0.5), 14);
       });
       legend.style.opacity = prog(lt, 0.3, 0.5);
       leads.style.opacity = prog(lt, 4.6, 0.6);

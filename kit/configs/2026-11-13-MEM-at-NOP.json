@@ -49,8 +49,8 @@
    "Grizzlies ${D.leadUs}, Pelicans ${D.leadThem}"
   ],
   [
-   "Lakers’ margin in each quarter underneath.",
-   "Grizzlies’ margin in each quarter underneath."
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Grizzlies’ margin in each quarter, then the game score after it."
   ],
   [
    "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",

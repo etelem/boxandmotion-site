@@ -49,8 +49,8 @@
    "Sixers ${D.leadUs}, Bulls ${D.leadThem}"
   ],
   [
-   "Lakers’ margin in each quarter underneath.",
-   "Sixers’ margin in each quarter underneath."
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Sixers’ margin in each quarter, then the game score after it."
   ],
   [
    "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
