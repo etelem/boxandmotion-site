@@ -283,6 +283,7 @@ os.makedirs(f"{OUT}/assets", exist_ok=True)
 # "The play of the game" for games without a Short (the owner, Nov 13): the reel loops just its play scene with ?clip=play.
 # window.__bmRestart() replays the clip in place, so the story cards never reload the frame (a reload blinks; Nov 14).
 CLIP_OK = set()
+PLAY_HEAD = {}   # reel key -> (The moment's headline, its line), shown as page text in the story
 FLOW_HEAD = {}   # reel key -> (Game of runs headline, its line), shown as page text in the story
 for key in REELS:
     p = f"{OUT}/reels/{key}/index.html"; src = open(p).read()
@@ -357,6 +358,21 @@ for key in REELS:
             src = src.replace(fn + "const {W, H, M, fs, P} = L;", fn + big, 1)
         src = src.replace("    const qClock = T(board, bx + 306, by + 76, '', 'd', 46, 'end');",
                           "    const qClock = T(board, bx + 306, by + 76, '', 'd', 46, 'end');\n    if (/[?&]bare=1/.test(location.search)) { const _bw = S('g', {transform: `translate(${bx} ${by}) scale(1.35) translate(${-bx} ${-by})`}, board); [...board.childNodes].filter((n) => n !== _bw).forEach((n) => _bw.appendChild(n)); }", 1)
+        # The moment's headline as page text, like the other parts (owner, Nov 15): the play scene skips its own
+        # kicker/headline/line when bare=1 and moves the clock box up; flow_story prints the headline and line
+        pi = src.find("function scenePlay(")
+        if pi >= 0:
+            pb = src[pi:pi + 4000]
+            jsl = lambda t: t.replace("\\'", "'")
+            mh = re.search(r"const head = fitAll\(\[T\(g, M, L\.top \+ fs\.h \* 1\.1, '((?:[^'\\]|\\.)*)', 'd', fs\.h\)\]", pb)
+            ms = re.search(r"const sub = T\(g, M, L\.top \+ fs\.h \* 1\.1 \+ fs\.s \* 1\.5, P \? '((?:[^'\\]|\\.)*)' :[^\n]*\n", pb)
+            ob = "const bx = M, by = L.top + fs.h * 1.1 + fs.s * (P ? 3.4 : 3.6);"
+            ok = "const kicker = T(g, M, L.top + 6, 'Play of the game', 'k', fs.k);"
+            if mh and ms and ob in pb and ok in pb:
+                PLAY_HEAD[key] = (jsl(mh.group(1)), jsl(ms.group(1)))
+                pb2 = pb.replace(ms.group(0), ms.group(0) + "    if (/[?&]bare=1/.test(location.search)) [kicker, head, sub].forEach((n) => { n.style.visibility = 'hidden'; });\n", 1)
+                pb2 = pb2.replace(ob, "const bx = M, by = /[?&]bare=1/.test(location.search) ? L.M : L.top + fs.h * 1.1 + fs.s * (P ? 3.4 : 3.6);", 1)
+                src = src[:pi] + pb2 + src[pi + len(pb):]
         open(p, "w").write(src); CLIP_OK.add(key)
 
 def _lum(h):
@@ -1061,6 +1077,9 @@ def flow_story(g, f, ls, R, clip, pname, pdesc, v, links=None):
     short_link = (f'<a class="pill sm cs-short" href="https://youtube.com/shorts/{v}" target="_blank" rel="noopener">▶ Our Short on YouTube</a>' if v else "")
     foot = f'<div class="cs-rfoot"><p class="cs-fine">Original illustration from written accounts; not traced from footage, not to scale.</p>{short_link}</div>'
     mo = scene("The moment", "play", (pname or "The play"), foot)
+    ph = PLAY_HEAD.get(g["key"])
+    if mo and ph:
+        mo = mo.replace(f'<h3 class="sr-only">{E(pname or "The play")}</h3>', f'<h3>{E(ph[0])}</h3><p>{E(ph[1])}</p>', 1)
     m = (links or {}).get("moment")
     xm = re.match(r"https://(?:x|twitter)\.com/nba/status/(\d+)", (m or {}).get("x") or "")
     if xm:

@@ -475,8 +475,9 @@ html.embed .transport{flex:none}
     const kicker = T(g, M, L.top + 6, 'Play of the game', 'k', fs.k);
     const head = fitAll([T(g, M, L.top + fs.h * 1.1, 'George from deep', 'd', fs.h)], P ? W - 2 * M : W * 0.42)[0];
     const sub = T(g, M, L.top + fs.h * 1.1 + fs.s * 1.5, P ? 'George from three, 9:34 in the 4th' : 'Paul George’s three with 9:34 left', 'b m', fs.s);
+    if (/[?&]bare=1/.test(location.search)) [kicker, head, sub].forEach((n) => { n.style.visibility = 'hidden'; });
     const board = S('g', {}, g);
-    const bx = M, by = L.top + fs.h * 1.1 + fs.s * (P ? 3.4 : 3.6);
+    const bx = M, by = /[?&]bare=1/.test(location.search) ? L.M : L.top + fs.h * 1.1 + fs.s * (P ? 3.4 : 3.6);
     S('rect', {x: bx, y: by, width: 330, height: 92, rx: 12, class: 'f-navy', opacity: 0.85}, board);
     S('rect', {x: bx, y: by, width: 330, height: 92, rx: 12, class: 's-hair', 'stroke-width': 2}, board);
     T(board, bx + 24, by + 38, 'Q4', 'b m', 24);
