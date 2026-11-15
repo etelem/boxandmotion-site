@@ -329,3 +329,11 @@ window.addEventListener('message', function (e) {
   addEventListener('scroll',function(){ if(!ticking){ ticking=true; requestAnimationFrame(fill); } },{passive:true});
   addEventListener('resize',fill); fill();
 })();
+(function(){
+  // home library feed: load each animation when it comes near the screen (Nov 15)
+  var fs=[].slice.call(document.querySelectorAll('iframe[data-lazy]')); if(!fs.length) return;
+  var go=function(f){ if(!f.src) f.src=f.getAttribute('data-lazy'); };
+  if(!('IntersectionObserver' in window)){ fs.forEach(go); return; }
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ go(e.target); io.unobserve(e.target); } }); },{rootMargin:'600px 0px'});
+  fs.forEach(function(f){ io.observe(f); });
+})();

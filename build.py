@@ -113,16 +113,18 @@ def tchip(c, score, lose=False, name=None):
     return (f'<span class="tchip{" lo" if lose else ""}"><i style="{dot2(c)}"></i>{E(name or T[c]["name"])}'
             + (f' <b>{score}</b>' if score is not None else '') + '</span>')
 
-HDNAV = [("Games", "last-night/index.html"), ("Teams", "teams/index.html"), ("Playoff odds", "odds/index.html"), ("Learn", "learn/index.html")]
+HDNAV = [("Last night’s games", "last-night/index.html"), ("Your teams", "teams/index.html#yours"), ("Learn the game", "learn/index.html"),
+         ("Playoff odds", "odds/index.html"), ("Get The Sunday Box", NEWSLETTER), ("About", "about/index.html")]   # the owner's list, Nov 15
+HDACT = {"Last Night": "Last night’s games", "Teams": "Your teams", "Learn": "Learn the game", "Odds": "Playoff odds", "Sunday Box": "Get The Sunday Box", "About": "About"}
+def _hhref(R, h): return h if h.startswith("http") else R + h
 def page(path, title, body, active=None, desc="Every NBA game, more than the box score: the story, the play that decided it, drawn in motion.", band=""):
     depth = path.count("/"); R = "/" if path == "404.html" else "../" * depth
     # header buttons on computers and tablets (owner, Nov 15): same pill style as "Get The Sunday Box"
-    hdpills = "".join(f'<a class="pill sm{" on" if {"Last Night": "Games", "Odds": "Playoff odds"}.get(active, active) == n else ""}" href="{R}{h}">{n}</a>' for n, h in HDNAV)
+    hdpills = "".join(f'<a class="pill sm{" on" if HDACT.get(active) == n else ""}" href="{_hhref(R, h)}">{n}</a>' for n, h in HDNAV)
     nav = [("Games", "last-night/index.html"), ("Teams", "teams/index.html"), ("Learn", "learn/index.html")]
     active = {"Last Night": "Games", "Your Team": "Teams", "Odds": "Teams"}.get(active, active)
     links = "".join(f'<a href="{R}{h}"{" aria-current=page" if n == active else ""}>{n}</a>' for n, h in nav)
-    mlinks = "".join(f'<a href="{h if h.startswith('http') else R + h}"{" aria-current=page" if n == active else ""}>{n}</a>' for n, h in
-                     nav + [("Get The Sunday Box", NEWSLETTER), ("About", "about/index.html")])  # five items (Nov 13: "too many items"); the logo is Home; Your teams and Odds live on the Teams page and in the footer
+    mlinks = "".join(f'<a href="{_hhref(R, h)}"{" aria-current=page" if HDACT.get(active) == n else ""}>{n}</a>' for n, h in HDNAV + [("All 30 teams", "teams/index.html")])  # same six as the header buttons (Nov 15)
     html = f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{E(title)}</title><meta name="description" content="{E(desc)}">
@@ -137,7 +139,6 @@ def page(path, title, body, active=None, desc="Every NBA game, more than the box
 <nav class="gnav" aria-label="Main">{links}</nav>
 <span class="sp"></span>
 <nav class="hdpills" aria-label="Sections">{hdpills}</nav>
-<a class="pill sm only-d{' on' if active == 'Sunday Box' else ''}" href="{NEWSLETTER}">Get The Sunday Box</a>
 <button class="burger" type="button" aria-label="Menu" aria-expanded="false" data-burger><svg width="20" height="14" aria-hidden="true"><path d="M1 2h18M1 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
 </div><div class="w"><nav class="mmenu" aria-label="Menu" data-menu>{mlinks}</nav></div></header>
 {band}
@@ -251,7 +252,9 @@ PLAYERS.sort(key=lambda x: x["published"], reverse=True)
 
 def _thumb(anim):
     j = os.path.splitext(anim)[0] + ".jpg"
-    return f"posters/learn/{j}" if os.path.isfile(f"src/posters/learn/{j}") else None
+    for d in ("learn-v", "learn"):   # tall 9:16 covers first (kit/learn_posters.js, Nov 15), else the old 2:1 ones
+        if os.path.isfile(f"src/posters/{d}/{j}"): return f"posters/{d}/{j}"
+    return None
 # (published, kind, title, meta line, href, thumbnail)
 LEARN = ([("2026-11-07", "report", "Luka Dončić: 40 a night", "Scouting report · Lakers", "players/luka-doncic/index.html", _thumb("luka-stepback.html")),
           ("2026-11-07", "board", "JJ Redick: how they closed at Utah", "Coach's board · Lakers", "coaches/jj-redick/index.html", _thumb("lakers-utah-close.html"))]
@@ -262,6 +265,24 @@ LEARN = ([("2026-11-07", "report", "Luka Dončić: 40 a night", "Scouting report
          + [(x["published"], "trend", x["title"], f"Trend board · {T[x['team']]['name']}", f'trends/{x["slug"]}/index.html', _thumb(x["anim"])) for x in TRENDS])
 LEARN.sort(key=lambda x: x[0], reverse=True)
 KINDS = [("all", "All"), ("move", "Moves"), ("xo", "X’s & O’s"), ("board", "Coach’s board"), ("trend", "Trends"), ("report", "Scouting reports")]
+# the library as a feed on home (owner, Nov 15): each piece is its own section with its animation playing (?short=1 = the vertical cut)
+FEED_INFO = {}   # href -> (anim file, one line)
+for m in MOVES: FEED_INFO[f'moves/{m["slug"]}/index.html'] = (m["anim"], m.get("dek", ""))
+for x in XO: FEED_INFO[f'xo/{x["slug"]}/index.html'] = (x["anim"], x.get("dek", ""))
+for x in TRENDS: FEED_INFO[f'trends/{x["slug"]}/index.html'] = (x["anim"], x.get("dek", "") or "One team, one question, one reason.")
+for b in BOARDS: FEED_INFO.setdefault(f'coaches/{b["coach_slug"]}/index.html', (b["anim"], b.get("dek", "")))
+for P in PLAYERS: FEED_INFO[f'players/{P["slug"]}/index.html'] = (P["move"]["anim"], P.get("dek", ""))
+FEED_INFO.setdefault("players/luka-doncic/index.html", ("luka-stepback.html", "40 a night, and the step-back three that gets him there."))
+KIND_WORD = {"move": "Watch the move", "xo": "Learn the play", "board": "See the play", "trend": "See the answer", "report": "Read the report"}
+def feed_item(R, item):
+    pub, kind, title, sub, href, img = item
+    anim, dek = FEED_INFO.get(href, (None, ""))
+    if not anim: return ""
+    return (f'<article class="feed-item"><a class="feed-vid" href="{R}{href}" aria-label="{E(title)}">'
+            f'<iframe data-lazy="{R}anim/{anim}?short=1&embed=1" title="{E(title)}" tabindex="-1" loading="lazy"></iframe></a>'
+            f'<div class="feed-tx"><p class="k">{E(sub)}</p><h3 class="h2">{E(title)}</h3>' + (f'<p class="lead">{E(dek)}</p>' if dek else "")
+            + f'<a class="pill sm" href="{R}{href}">{KIND_WORD.get(kind, "Open")} →</a></div></article>')
+
 def learn_card(R, item):
     pub, kind, title, sub, href, img = item
     pic = f'<img src="{R}{img}" alt="" loading="lazy">' if img else '<span class="noimg"></span>'
@@ -458,21 +479,14 @@ big_cards = "".join(big_card(i, *x) for i, x in enumerate(reversed(BIG)))
 TONIGHT_DAY = S["upcoming"][0][0] if S["upcoming"] else None
 tonight = "".join(f'<a class="tn" href="teams/{T[h]["slug"]}/index.html" data-teams="{a} {h}"><span class="tt">{tm}</span><span class="tmid"><span class="tteams"><span><i class="dot" style="{dot2(a)}"></i>{E(T[a]["name"])}</span><span class="at">at</span><span><i class="dot" style="{dot2(h)}"></i>{E(T[h]["name"])}</span></span>{f'<span class="tv">{E(tv[0])}</span>' if tv and tv[0] else ''}</span></a>'
                   for day, tm, a, h, *tv in S["upcoming"] if day == TONIGHT_DAY)
-home = f'''<nav class="homepills" aria-label="Sections">{"".join(f'<a class="pill sm" href="{h}">{n}</a>' for n, h in HDNAV)}<a class="pill sm" href="{NEWSLETTER}">Get The Sunday Box</a></nav>
+home = f'''<nav class="homepills" aria-label="Sections">{"".join(f'<a class="pill sm" href="{_hhref("", h)}">{n}</a>' for n, h in HDNAV)}</nav>
 <section class="lastn"><div class="sh2"><p class="k">Last night in the NBA · {WEEKDAY(LAST_DATE)}</p><a class="more" href="last-night/index.html">Every game →</a></div><h2 class="h2">Last night’s games.</h2><div class="gtabs" role="tablist">{tabs}</div>{heroes}</section>
-<section class="sec"><div class="sh2"><p class="k">Start here</p></div><h2 class="h2">Four ways in.</h2>
-<div class="nums">
-<a class="num" href="last-night/index.html"><div class="t"><span>01</span><span>↗</span></div><div><b>Last night</b><p>Every game, the story and the play that decided it.</p></div></a>
-<a class="num" href="teams/index.html#yours"><div class="t"><span>02</span><span>↗</span></div><div><b>Your team</b><p>Pick your teams. They show up first, in their colors.</p></div></a>
-<a class="num" href="learn/index.html"><div class="t"><span>03</span><span>↗</span></div><div><b>Learn the game</b><p>Moves and plays, drawn step by step.</p></div></a>
-<a class="num" href="{NEWSLETTER}"><div class="t"><span>04</span><span>↗</span></div><div><b>The Sunday Box</b><p>The week in one email.</p></div></a>
-</div></section>
 {f"""<section class="sec"><div class="sh2"><p class="k">Tonight · {E(TONIGHT_DAY)} · times ET</p><a class="more" href="odds/index.html">Current playoff odds →</a></div><h2 class="h2">On the schedule.</h2>
 <div class="tonight">{tonight}</div></section>""" if tonight else ""}
+<section class="sec"><div class="sh2"><p class="k">Learn the game</p><a class="more" href="learn/index.html">See all {len(LEARN)} →</a></div><h2 class="h2">New in the library.</h2>
+<div class="feed">{"".join(feed_item(R, x) for x in [y for y in LEARN if FEED_INFO.get(y[4])][:4])}</div><a class="pill feed-all" href="learn/index.html">See all {len(LEARN)} in the library →</a></section>
 {f"""<section class="fifty"><div><p class="k">The 50-point nights</p><h2 class="h2">Big nights and<br>signature moves.</h2><p class="lead">Tap a card for the game he went off in, or ▶ for his signature move.</p></div>
 <div class="stack">{big_cards}</div></section>""" if BIG else ""}
-<section class="sec"><div class="sh2"><p class="k">Learn the game</p><a class="more" href="learn/index.html">See all {len(LEARN)} →</a></div><h2 class="h2">New in the library.</h2>
-<div class="rail">{"".join(learn_card(R, x) for x in LEARN[:4])}</div></section>
 {closer(R)}'''
 page("index.html", "Box & Motion Hoops: every NBA game, more than the box score", home)
 
