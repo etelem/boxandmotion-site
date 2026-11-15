@@ -283,6 +283,7 @@ os.makedirs(f"{OUT}/assets", exist_ok=True)
 # "The play of the game" for games without a Short (the owner, Nov 13): the reel loops just its play scene with ?clip=play.
 # window.__bmRestart() replays the clip in place, so the story cards never reload the frame (a reload blinks; Nov 14).
 CLIP_OK = set()
+FLOW_HEAD = {}   # reel key -> (Game of runs headline, its line), shown as page text in the story
 for key in REELS:
     p = f"{OUT}/reels/{key}/index.html"; src = open(p).read()
     a1 = "let t = still ? TOTAL : 0, playing = !still, last = null, shownScene = -1;"
@@ -328,6 +329,26 @@ for key in REELS:
             if mh and mh.start() - fl < 400 and re.match(VERB, mh.group(1)):
                 nm = mn.group(1); pre = lambda t: t if t.startswith(nm) or not re.match(VERB, t) else nm + " " + t[0].lower() + t[1:]
                 src = src[:mh.start()] + f"heading(L, g, P ? ['{pre(mh.group(1))}'{mh.group(2)}] : ['{pre(mh.group(3))}'" + src[mh.end():]
+        # Game of runs headline as page text in the story (owner, Nov 15: it was smaller than the other parts' headlines):
+        # the reel skips drawing it when bare=1, and flow_story prints the same words as the part's h3 and line.
+        fl = src.find("function sceneFlow(")
+        if fl >= 0 and "const heading = (L, g, lines) => {" in src:
+            end = src.find("\n  function ", fl + 10)
+            body = src[fl:end if end > 0 else len(src)]
+            jsl = lambda t: [x.replace("\\'", "'") for x in re.findall(r"'((?:[^'\\]|\\.)*)'", t)]
+            mh = re.search(r"heading\(L, g, P \? \[(.*?)\] :", body); ms = re.search(r"subline\(L, g, head\.y, P \? \[(.*?)\] :", body)
+            if mh and ms and jsl(mh.group(1)):
+                FLOW_HEAD[key] = (" ".join(jsl(mh.group(1))), " ".join(jsl(ms.group(1))))
+                body2 = body.replace("heading(L, g,", "_hdB(L, g,", 1).replace("subline(L, g, head.y,", "_sbB(L, g, head.y,", 1)
+                src = src[:fl] + body2 + src[fl + len(body):]
+                src = src.replace("  const subline = (L, g, y, lines) => {",
+                                  "  const _BARE = /[?&]bare=1/.test(location.search);\n"
+                                  "  const _hdB = (L, g, l) => _BARE ? {nodes: [], y: L.M - L.fs.s * 1.35} : heading(L, g, l);\n"
+                                  "  const _sbB = (L, g, y, l) => _BARE ? y : subline(L, g, y, l);\n"
+                                  "  const subline = (L, g, y, lines) => {", 1)
+        # Game of runs legend on wide screens: "Biggest lead" sat at a fixed spot and ran into long names ("Timberwolves"); measure and right-align
+        src = re.sub(r"(    const leads = T\(g, P \? M : lx \+ 350, [^\n]*\n)",
+                     lambda m: m.group(1) + "    if (!P) { const _tl = legend.lastChild.getComputedTextLength(), _ll = leads.getComputedTextLength(), _x0 = W - M - (172 + _tl + 36 + _ll); legend.setAttribute('transform', `translate(${_x0 - lx},0)`); leads.setAttribute('x', _x0 + 172 + _tl + 36); }\n", src, count=1)
         open(p, "w").write(src); CLIP_OK.add(key)
 
 def _lum(h):
@@ -1008,7 +1029,10 @@ def flow_story(g, f, ls, R, clip, pname, pdesc, v, links=None):
         return (f'<section class="cs-card reel" data-card="{{i}}"><div class="cs-kick">{E(kick)}</div><h3 class="sr-only">{E(h3)}</h3>'
                 f'<div class="cs-reel"><iframe data-src="{src}" title="{E(kick)}: {E(h3)}" tabindex="-1"></iframe></div>{foot}</section>')
     secs.append(scene("Final score", "final", f"{W} {ws}, {L} {lsc}"))
+    fh = FLOW_HEAD.get(g["key"])
     fl = scene("Game of runs · score by quarter", "flow", "Score by quarter")
+    if fl and fh:
+        fl = fl.replace('<h3 class="sr-only">Score by quarter</h3>', f'<h3>{E(fh[0])}</h3><p>{E(fh[1])}</p>', 1)
     if not fl:
         k, title, txt, html = card_flow(g, wq, lq, c, cw, cl)
         fl = (f'<section class="cs-card" data-card="{{i}}"><div class="cs-kick">Game of runs · score by quarter</div><h3>{E(title)}</h3>'

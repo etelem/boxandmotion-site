@@ -204,6 +204,9 @@ html.embed .transport{flex:none}
     const nodes = fitAll(lines.map((s, i) => T(g, L.M, L.top + L.fs.h * (0.9 + i * 1.12), s, 'd', L.fs.h)), L.W - 2 * L.M);
     return {nodes, y: L.top + L.fs.h * (0.9 + (lines.length - 1) * 1.12)};
   };
+  const _BARE = /[?&]bare=1/.test(location.search);
+  const _hdB = (L, g, l) => _BARE ? {nodes: [], y: L.M - L.fs.s * 1.35} : heading(L, g, l);
+  const _sbB = (L, g, y, l) => _BARE ? y : subline(L, g, y, l);
   const subline = (L, g, y, lines) => {
     lines.forEach((s, i) => T(g, L.M, y + L.fs.s * (1.35 + i * 1.25), s, 'b m', L.fs.s));
     return y + L.fs.s * (1.35 + (lines.length - 1) * 1.25);
@@ -622,8 +625,8 @@ html.embed .transport{flex:none}
 
   function sceneFlow(L, g) {
     const {W, H, M, fs, P} = L;
-    const head = heading(L, g, P ? ['Hornets up 16 at the half,', 'led by 33'] : ['Hornets up 16 at the half, led by as many as 33']);
-    const subY = subline(L, g, head.y, P ? ['Points per quarter. Each quarter’s', 'margin, then the game score after it.'] : ['Points per quarter, with the Hornets’ margin in each quarter, then the game score after it.']);
+    const head = _hdB(L, g, P ? ['Hornets up 16 at the half,', 'led by 33'] : ['Hornets up 16 at the half, led by as many as 33']);
+    const subY = _sbB(L, g, head.y, P ? ['Points per quarter. Each quarter’s', 'margin, then the game score after it.'] : ['Points per quarter, with the Hornets’ margin in each quarter, then the game score after it.']);
     const top = subY + fs.s * 2.2, bottom = P ? H * 0.7 : H - M - fs.s * 4.4;
     const max = 50, colW = (W - 2 * M) / 4, bw = Math.min(70, colW * 0.24);
     const y = (v) => bottom - v / max * (bottom - top);
@@ -652,6 +655,7 @@ html.embed .transport{flex:none}
     S('rect', {x: lx + 200, y: ly - 18, width: 22, height: 22, rx: 4, class: 'f-muted', opacity: 0.5}, legend);
     T(legend, lx + 232, ly, D.themName, 'b m', fs.s);
     const leads = T(g, P ? M : lx + 350, P ? H - M : ly, `Biggest lead: Hornets ${D.leadUs}, Cavaliers ${D.leadThem}`, 'b m', fs.s);
+    if (!P) { const _tl = legend.lastChild.getComputedTextLength(), _ll = leads.getComputedTextLength(), _x0 = W - M - (172 + _tl + 36 + _ll); legend.setAttribute('transform', `translate(${_x0 - lx},0)`); leads.setAttribute('x', _x0 + 172 + _tl + 36); }
     if (P) fitAll([leads], W - 2 * M);
     return (lt) => {
       cols.forEach((c, i) => {
