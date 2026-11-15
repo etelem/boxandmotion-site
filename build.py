@@ -1146,7 +1146,9 @@ def flow_story(g, f, ls, R, clip, pname, pdesc, v, links=None):
     secs.append(stand_section("{i}", g, cw, cl))
     secs = [x for x in secs if x]
     out = "".join(x.replace('data-card="{i}"', f'data-card="{n}"') for n, x in enumerate(secs))
-    return f'<div class="cs flow" data-flow><span class="rail" aria-hidden="true"></span>{out}</div>'
+    snd = (f'<button type="button" class="flow-snd" data-flowsnd="{R}audio/courtside-breakbeat.mp3" aria-pressed="false" aria-label="Turn music on">'
+           '<span class="eq" aria-hidden="true"><i></i><i></i><i></i></span><span class="t">Music</span></button>')
+    return f'<div class="cs flow" data-flow><span class="rail" aria-hidden="true"></span>{out}{snd}</div>'
 
 COURT = '<svg class="pcourt" viewBox="0 0 350 197" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true"><g stroke="rgba(255,255,255,.14)" stroke-width="1.5"><path d="M175 0V197"/><circle cx="175" cy="98" r="34"/><rect x="0" y="62" width="62" height="72"/><rect x="288" y="62" width="62" height="72"/><path d="M0 18H24A86 86 0 0 1 24 178H0M350 18H326A86 86 0 0 0 326 178H350"/></g></svg>'
 for g in GAMES:

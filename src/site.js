@@ -337,3 +337,28 @@ window.addEventListener('message', function (e) {
   var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ go(e.target); io.unobserve(e.target); } }); },{rootMargin:'600px 0px'});
   fs.forEach(function(f){ io.observe(f); });
 })();
+
+// music for the scroll-down game story (Nov 15): an optional loop of our own track. Off until the reader taps ♪ Music
+// (phones block sound until a tap anyway). The button floats in the corner only while the story is on screen; the music
+// fades out when the story scrolls away or the tab is hidden and back in when it returns. The choice is remembered.
+(function(){
+  var cs=document.querySelector('[data-flow]'), b=cs&&cs.querySelector('[data-flowsnd]'); if(!b) return;
+  var a=null, on=false, inView=false, fadeT=null;
+  try{ on=localStorage.getItem('bm_flowmusic')==='on'; }catch(e){}
+  function fade(to,done){ clearInterval(fadeT); fadeT=setInterval(function(){ var v=a.volume+(to>a.volume?.05:-.05);
+      if(Math.abs(to-v)<.05){ a.volume=to; clearInterval(fadeT); if(done) done(); } else a.volume=Math.max(0,Math.min(1,v)); },40); }
+  function play(){ if(!a){ a=new Audio(b.getAttribute('data-flowsnd')); a.loop=true; a.volume=0; }
+    var p=a.play(); if(p&&p.catch) p.catch(function(){}); fade(.55); }
+  function stop(){ if(a&&!a.paused) fade(0,function(){ a.pause(); }); }
+  function paint(){ b.setAttribute('aria-pressed',on?'true':'false'); b.setAttribute('aria-label',on?'Turn music off':'Turn music on');
+    b.classList.toggle('on',on); b.querySelector('.t').textContent=on?'Music on':'Music'; }
+  function sync(){ (on&&inView&&!document.hidden)?play():stop(); }
+  b.addEventListener('click',function(){ on=!on; try{ localStorage.setItem('bm_flowmusic',on?'on':'off'); }catch(e){} paint(); sync(); });
+  // a reader who turned music on before gets it back on their first tap in the story (the browser needs a tap)
+  cs.addEventListener('pointerdown',function(e){ if(on&&inView&&(!a||a.paused)&&!b.contains(e.target)) play(); },{passive:true});
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){ inView=es[0].isIntersecting; b.classList.toggle('show',inView); sync(); },{threshold:0.08}).observe(cs);
+  } else { inView=true; b.classList.add('show'); }
+  document.addEventListener('visibilitychange',sync);
+  paint();
+})();
