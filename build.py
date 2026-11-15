@@ -1229,7 +1229,7 @@ for P in PLAYERS:
 # ---- signature moves ----
 for m in MOVES:
     t = T[m["team"]]
-    steps = "".join(f'<li><b>{E(a)}.</b> {E(b2)}</li>' for a, b2 in m["steps"])
+    steps = "".join(f'<li><b>{E(a)}.</b> {E(b2)}</li>' for a, b2 in (st[-2:] for st in m["steps"]))
     body = f'''{learn_crumbs(R, f'<a href="{R}teams/{t["slug"]}/index.html">{E(t["name"])}</a>', f'<span>{E(m["player"])}</span>')}
 <section><p class="k">Signature move · {E(t['city'])} {E(t['name'])}{' · No. ' + E(m['number']) if m['number'] else ''}</p>
 <h1 class="h1">{E(m['title'])}.</h1><p class="lead" style="font-size:20px">{E(m['dek'])}</p></section>
