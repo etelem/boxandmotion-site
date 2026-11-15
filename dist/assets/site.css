@@ -772,3 +772,11 @@ main.w:has(>.sec){gap:64px}
 .lastn>.h2{margin:8px 0 18px}
 
 .hp b{color:var(--ink);font-weight:600}
+
+/* Teams page: your teams first (merged with the old Your Team page, Nov 15) */
+.yours .sh2 .k{color:var(--ink)}
+.yours .sh2 .k::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--or);margin-right:9px;vertical-align:1px}
+.yours{scroll-margin-top:90px}
+@media(max-width:899px){.yours .ytgrid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:86%;overflow-x:auto;scroll-snap-type:x mandatory;margin:12px -20px 0;padding:0 20px 6px;scroll-padding:0 20px;scrollbar-width:none}
+.yours .ytgrid::-webkit-scrollbar{display:none}.yours .ytcard{scroll-snap-align:start;box-shadow:none}
+.yours .ytband{min-height:0;padding:16px 18px}.yours .ytab{font-size:38px}.yours .ytrow{padding:9px 0;font-size:14px}}

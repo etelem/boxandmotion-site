@@ -139,7 +139,7 @@ def page(path, title, body, active=None, desc="Every NBA game, more than the box
 {band}
 <main class="w">{body}</main>
 <footer class="w foot"><span class="word">Box &amp; Motion <span>Hoops</span></span>
-<div class="fl"><a href="{R}last-night/index.html">Last Night</a><a href="{R}your-team/index.html">Your Team</a><a href="{R}learn/index.html">Learn</a><a href="{R}odds/index.html">Odds</a><a href="{R}teams/index.html">Teams</a><a href="{R}newsletter/index.html">The Sunday Box</a><a href="https://www.youtube.com/@boxandmotion" target="_blank" rel="noopener">YouTube</a><a href="{R}about/index.html">About</a></div>
+<div class="fl"><a href="{R}last-night/index.html">Last Night</a><a href="{R}teams/index.html#yours">Your Teams</a><a href="{R}learn/index.html">Learn</a><a href="{R}odds/index.html">Odds</a><a href="{R}teams/index.html">Teams</a><a href="{R}newsletter/index.html">The Sunday Box</a><a href="https://www.youtube.com/@boxandmotion" target="_blank" rel="noopener">YouTube</a><a href="{R}about/index.html">About</a></div>
 <div class="legal">Unofficial fan site. Not affiliated with or endorsed by the NBA or any team. Drawings are original, not traced from footage; no logos. Video plays from official uploads only. Updated {S['updated']}.</div></footer>
 </div><script src="{R}assets/data.js"></script><script src="{R}assets/site.js"></script></body></html>"""
     full = os.path.join(OUT, path); os.makedirs(os.path.dirname(full) or OUT, exist_ok=True)
@@ -440,7 +440,7 @@ home = f'''<section class="hero">
 <section class="sec"><div class="sh2"><p class="k">Start here</p></div><h2 class="h2">Four ways in.</h2>
 <div class="nums">
 <a class="num" href="last-night/index.html"><div class="t"><span>01</span><span>↗</span></div><div><b>Last night</b><p>Every game, the story and the play that decided it.</p></div></a>
-<a class="num" href="your-team/index.html"><div class="t"><span>02</span><span>↗</span></div><div><b>Your team</b><p>Pick your teams. They show up first, in their colors.</p></div></a>
+<a class="num" href="teams/index.html#yours"><div class="t"><span>02</span><span>↗</span></div><div><b>Your team</b><p>Pick your teams. They show up first, in their colors.</p></div></a>
 <a class="num" href="learn/index.html"><div class="t"><span>03</span><span>↗</span></div><div><b>Learn the game</b><p>Moves and plays, drawn step by step.</p></div></a>
 <a class="num" href="{NEWSLETTER}"><div class="t"><span>04</span><span>↗</span></div><div><b>The Sunday Box</b><p>The week in one email.</p></div></a>
 </div></section>
@@ -1145,14 +1145,12 @@ for g in GAMES:
     body = head + story + play + watch + closer(R)
     page(f"games/{g['slug']}/index.html", f"{T[a]['name']} {g['as_']}, {T[h]['name']} {g['hs']} · Box & Motion Hoops", body, active="Last Night", desc=dek)
 
-# ---- your team ----
+# ---- your team: merged into the Teams page (owner, Nov 15); the old address forwards to Teams, your teams first ----
 R = "../"
-picker = "".join(star_btn(c, T[c]["name"]).replace('<span class="lbl">', '<span>').replace("pill sm star", "star") for c in sorted(T, key=lambda c: T[c]["name"]))
-body = f'''<section><p class="k">Your team</p><h1 class="h1">Your teams, first.</h1>
-<p class="lead">Pick the teams you follow. They lead the home page and Last Night, and show up in their colors across the site. Saved on this device, no sign-up.</p></section>
-<section><div class="picker">{picker}</div></section>
-<section><p class="dim" id="yt-empty">Pick a team above to see it here.</p><div class="ytgrid" id="yt-cards"></div></section>'''
-page("your-team/index.html", "Your team · Box & Motion Hoops", body, active="Your Team")
+body = ('<section><p class="k">Your teams</p><h1 class="h1">Your teams moved.</h1><p class="lead">They now sit at the top of '
+        '<a href="../teams/index.html#yours">Teams</a>, with every team below to follow.</p></section>'
+        '<script>location.replace("../teams/index.html#yours")</script>')
+page("your-team/index.html", "Your teams · Box & Motion Hoops", body, active="Teams")
 
 # ---- teams index ----
 def tcard2(c, R):
@@ -1161,10 +1159,10 @@ def tcard2(c, R):
 R = "../"
 panes = "".join(f'<div class="tgrid{" hidden" if conf == "West" else ""}" data-pane="conf" data-value="{conf}">{"".join(tcard2(c, R) for c in sorted([c for c in T if T[c]["conf"] == conf], key=lambda c: S["seeds"][c]))}</div>' for conf in ("East", "West"))
 body = f'''<section><p class="k">Standings · after {S['updated'].replace('after ', '')}</p><h1 class="h1">All 30 teams.</h1>
-<p class="lead">In order by conference. Follow a team and it turns its colors here and everywhere on the site.</p>
-<div class="row" style="margin-top:16px"><a class="pill sm" href="../your-team/index.html">★ Your teams →</a><a class="pill sm" href="../odds/index.html">Playoff odds →</a></div>
-<div class="tabs" data-tabs="conf" style="margin-top:18px"><button class="pill on" data-tab="East">East</button><button class="pill" data-tab="West">West</button></div></section>
-<section>{panes}</section>'''
+<p class="lead">Follow your teams and they show up first, here and across the site, in their colors. Saved on this device, no sign-up.</p>
+<div class="row" style="margin-top:16px"><a class="pill sm" href="../odds/index.html">Playoff odds →</a></div></section>
+<section id="yours" class="yours"><div class="sh2"><p class="k">Your teams</p></div><p class="dim" id="yt-empty" style="margin:8px 0 0">Tap ★ Follow on any team below and it shows up here, with its last game, next game and playoff odds.</p><div class="ytgrid" id="yt-cards" style="margin-top:12px"></div></section>
+<section><div class="tabs" data-tabs="conf" style="margin-bottom:16px"><button class="pill on" data-tab="East">East</button><button class="pill" data-tab="West">West</button></div>{panes}</section>'''
 page("teams/index.html", "Teams · Box & Motion Hoops", body, active="Teams")
 
 # ---- team pages ----
