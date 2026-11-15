@@ -311,6 +311,11 @@ for key in REELS:
             src = src.replace("window.__bmRestart = function () {", "const BARE = /[?&]bare=1/.test(location.search); window.__bmRestart = function () {", 1)
             src = src.replace(b1, "built.court.style.opacity = BARE ? 0 : lerp(0.2, 0.06, clamp((t - 3.4) / 0.8));", 1)
             src = src.replace(b2, "built.header.style.opacity = BARE ? 0 : prog(t, SCENES[1].t0, 0.6);", 1)
+            # Final score in the winner's color in the story (owner, Nov 15): the winner's number and name, not ink
+            src = src.replace("const us = T(g, cx - gap, base, '0', 'd', size, 'end');",
+                              "const us = T(g, cx - gap, base, '0', /[?&]bare=1/.test(location.search) ? 'd g' : 'd', size, 'end');", 1)
+            src = src.replace("T(labels, cx - gap, base + fs.b * 1.5, D.usName, 'b w', fs.b, 'end');",
+                              "const _un = T(labels, cx - gap, base + fs.b * 1.5, D.usName, 'b w', fs.b, 'end'); if (/[?&]bare=1/.test(location.search)) _un.style.fill = 'var(--blue-text)';", 1)
             src = src.replace("family=Albert+Sans:wght@400;500;600&family=Fraunces", "family=Albert+Sans:wght@400;500;600&family=Archivo:wght@400;500&family=Fraunces", 1)
             src = src.replace('<script>if (/[?&]embed=1/.test(location.search))',
                               '<script>if (/[?&]bare=1/.test(location.search)) document.documentElement.classList.add("bare");</script>'

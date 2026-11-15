@@ -231,10 +231,10 @@ html.embed .transport{flex:none}
     T(g, cx, base - size * 0.92, 'Final', 'k', fs.k, 'middle');
     const dash = T(g, cx, base, '–', 'd', size, 'middle');
     const gap = dash.getComputedTextLength() / 2 + size * 0.04;
-    const us = T(g, cx - gap, base, '0', 'd', size, 'end');
+    const us = T(g, cx - gap, base, '0', /[?&]bare=1/.test(location.search) ? 'd g' : 'd', size, 'end');
     const them = T(g, cx + gap, base, '0', 'd m', size, 'start');
     const labels = S('g', {}, g);
-    T(labels, cx - gap, base + fs.b * 1.5, D.usName, 'b w', fs.b, 'end');
+    const _un = T(labels, cx - gap, base + fs.b * 1.5, D.usName, 'b w', fs.b, 'end'); if (/[?&]bare=1/.test(location.search)) _un.style.fill = 'var(--blue-text)';
     T(labels, cx + gap, base + fs.b * 1.5, D.themName, 'b m', fs.b, 'start');
     const extra = S('g', {}, g);
     const line1 = S('text', {x: cx, y: base + fs.b * 3.4, class: 'b', 'text-anchor': 'middle'}, extra);
