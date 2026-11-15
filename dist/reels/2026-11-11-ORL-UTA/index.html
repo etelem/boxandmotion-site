@@ -233,7 +233,7 @@ html.embed .transport{flex:none}
   }
 
   function sceneFinal(L, g) {
-    const {W, H, M, fs, P} = L;
+    const {W, H, M, P} = L; const fs = /[?&]bare=1/.test(location.search) ? Object.assign({}, L.fs, {s: L.fs.s * 1.45, b: L.fs.b * 1.4, h: L.fs.h * 1.25}) : L.fs;
     const cx = W / 2, base = P ? H * 0.47 : H * 0.56, size = P ? 220 : 300;
     T(g, cx, base - size * 0.92, 'Final', 'k', fs.k, 'middle');
     const dash = T(g, cx, base, '–', 'd', size, 'middle');
@@ -463,7 +463,7 @@ html.embed .transport{flex:none}
   }
   const STAR_BUILD = {"tall": 1.0513, "ape": 1.0244, "mass": 0.9866};
   function scenePlay(L, g, defs) {
-    const {W, H, M, fs, P} = L;
+    const {W, H, M, P} = L; const fs = /[?&]bare=1/.test(location.search) ? Object.assign({}, L.fs, {s: L.fs.s * 1.45, b: L.fs.b * 1.4, h: L.fs.h * 1.25}) : L.fs;
     const k = P ? 0.82 : 1;
     const floor = P ? H * 0.8 : H - M - 70;
     const hoopX = P ? W - M - 30 : W - M - 120;
@@ -484,6 +484,7 @@ html.embed .transport{flex:none}
     const sUs = T(board, bx + 24, by + 78, 'Tied', 'b w', 26);
     T(board, bx + 306, by + 30, 'Clock', 'b m', 18, 'end');
     const qClock = T(board, bx + 306, by + 76, '', 'd', 46, 'end');
+    if (/[?&]bare=1/.test(location.search)) { const _bw = S('g', {transform: `translate(${bx} ${by}) scale(1.35) translate(${-bx} ${-by})`}, board); [...board.childNodes].filter((n) => n !== _bw).forEach((n) => _bw.appendChild(n)); }
 
     const court = S('g', {class: 's-silver', 'stroke-width': 3, 'stroke-linecap': 'round'}, g);
     const lines = [

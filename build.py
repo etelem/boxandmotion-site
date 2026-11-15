@@ -349,6 +349,14 @@ for key in REELS:
         # Game of runs legend on wide screens: "Biggest lead" sat at a fixed spot and ran into long names ("Timberwolves"); measure and right-align
         src = re.sub(r"(    const leads = T\(g, P \? M : lx \+ 350, [^\n]*\n)",
                      lambda m: m.group(1) + "    if (!P) { const _tl = legend.lastChild.getComputedTextLength(), _ll = leads.getComputedTextLength(), _x0 = W - M - (172 + _tl + 36 + _ll); legend.setAttribute('transform', `translate(${_x0 - lx},0)`); leads.setAttribute('x', _x0 + 172 + _tl + 36); }\n", src, count=1)
+        # bigger text in the game story (owner, Nov 15: "Bulls improve to 3-9" and The moment's text were too small on phones):
+        # only the final score scene and the play scene, only when bare=1 (the chart labels stay as they are)
+        big = ("const {W, H, M, P} = L; const fs = /[?&]bare=1/.test(location.search) ? "
+               "Object.assign({}, L.fs, {s: L.fs.s * 1.45, b: L.fs.b * 1.4, h: L.fs.h * 1.25}) : L.fs;")
+        for fn in ("function sceneFinal(L, g) {\n    ", "function scenePlay(L, g, defs) {\n    "):
+            src = src.replace(fn + "const {W, H, M, fs, P} = L;", fn + big, 1)
+        src = src.replace("    const qClock = T(board, bx + 306, by + 76, '', 'd', 46, 'end');",
+                          "    const qClock = T(board, bx + 306, by + 76, '', 'd', 46, 'end');\n    if (/[?&]bare=1/.test(location.search)) { const _bw = S('g', {transform: `translate(${bx} ${by}) scale(1.35) translate(${-bx} ${-by})`}, board); [...board.childNodes].filter((n) => n !== _bw).forEach((n) => _bw.appendChild(n)); }", 1)
         open(p, "w").write(src); CLIP_OK.add(key)
 
 def _lum(h):
