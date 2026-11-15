@@ -625,7 +625,7 @@ html.embed .transport{flex:none}
   function sceneFlow(L, g) {
     const {W, H, M, fs, P} = L;
     const head = heading(L, g, P ? ['Magic down 2 after three,', 'won the fourth 38–21'] : ['Magic down 2 after three, then won the fourth 38–21']);
-    const subY = subline(L, g, head.y, P ? ['Points per quarter. Margin after each', 'quarter underneath.'] : ['Points per quarter, with the Magic’s margin after each quarter underneath.']);
+    const subY = subline(L, g, head.y, P ? ['Points per quarter. Each quarter’s', 'margin underneath.'] : ['Points per quarter, with the Magic’s margin in each quarter underneath.']);
     const top = subY + fs.s * 2.2, bottom = P ? H * 0.7 : H - M - fs.s * 4.4;
     const max = 50, colW = (W - 2 * M) / 4, bw = Math.min(70, colW * 0.24);
     const y = (v) => bottom - v / max * (bottom - top);
@@ -639,7 +639,7 @@ html.embed .transport{flex:none}
       const nP = T(group, cx - bw / 2 - 5, y(p) - 12, String(p), 'b w', fs.s, 'middle');
       const nM = T(group, cx + bw / 2 + 5, y(m) - 12, String(m), 'b m', fs.s, 'middle');
       T(group, cx, bottom + fs.s * 1.35, `Q${i + 1}`, 'b m', fs.s, 'middle');
-      const lead = runP - runM;
+      const lead = p - m;   // each quarter's own margin (the owner, Nov 13 and Nov 15)
       const tag = T(g, cx, bottom + fs.s * 1.35 + (P ? 64 : 72), lead === 0 ? 'Tied' : `${lead > 0 ? '+' : '–'}${Math.abs(lead)}`, lead > 0 ? 'd g' : 'd m', P ? 54 : 60, 'middle');
       return {group, barP, barM, nP, nM, tag, p, m};
     });
