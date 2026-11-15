@@ -384,9 +384,18 @@ for g in GAMES:
     for n, tm, note, p in (S["featured"].get(g["key"]) or {}).get("top", [])[:1]:
         if p >= 50: BIG.append((g["date"], tm, n, p, note, g))
 BIG = sorted(BIG, key=lambda x: x[0], reverse=True)[:3]
-big_cards = "".join(f'<a class="stat" href="games/{g["slug"]}/index.html"><div class="row"><span class="ab">{tm}</span><small>{SHORTDAY(d)}</small></div>'
-                    f'<div><div class="n"{" style=color:var(--warm)" if i == 1 else ""}>{p}</div><div class="who">{E(n.split(" ")[0])}</div><small>{E(note)}</small></div></a>'
-                    for i, (d, tm, n, p, note, g) in enumerate(reversed(BIG)))
+# each card opens its game; a player with a signature move (or a scouting report with his move) also gets a "His move" pill
+HIS_MOVE = {"Luka Dončić": "players/luka-doncic/index.html"}
+HIS_MOVE.update({P["name"]: f'players/{P["slug"]}/index.html' for P in PLAYERS})
+HIS_MOVE.update({m["player"]: f'moves/{m["slug"]}/index.html' for m in MOVES})
+def big_card(i, d, tm, n, p, note, g):
+    mv = HIS_MOVE.get(n)
+    pill = f'<a class="mv" href="{mv}">▶ His move</a>' if mv else ""
+    return (f'<div class="stat"><div class="row"><span class="ab">{tm}</span><small>{SHORTDAY(d)}</small></div>'
+            f'<div><div class="n"{" style=color:var(--warm)" if i == 1 else ""}>{p}</div>'
+            f'<a class="who go" href="games/{g["slug"]}/index.html" aria-label="{E(n)}: {p} points, see the game">{E(n.split(" ")[0])}</a>'
+            f'<small>{E(note)}</small>{pill}</div></div>')
+big_cards = "".join(big_card(i, *x) for i, x in enumerate(reversed(BIG)))
 TONIGHT_DAY = S["upcoming"][0][0] if S["upcoming"] else None
 tonight = "".join(f'<a class="tn" href="teams/{T[h]["slug"]}/index.html" data-teams="{a} {h}"><span class="tt">{tm}</span><span class="tmid"><span class="tteams"><span><i class="dot" style="{dot2(a)}"></i>{E(T[a]["name"])}</span><span class="at">at</span><span><i class="dot" style="{dot2(h)}"></i>{E(T[h]["name"])}</span></span>{f'<span class="tv">{E(tv[0])}</span>' if tv and tv[0] else ''}</span></a>'
                   for day, tm, a, h, *tv in S["upcoming"] if day == TONIGHT_DAY)
@@ -405,7 +414,7 @@ home = f'''<section class="hero">
 </section>
 {f"""<section><div class="shead"><div><p class="k">Tonight · {E(TONIGHT_DAY)} · times ET</p><h2 class="h2">On the schedule.</h2></div><a class="pill sm" href="odds/index.html">What’s at stake →</a></div>
 <div class="tonight">{tonight}</div></section>""" if tonight else ""}
-{f"""<section class="fifty"><div><p class="k">The 50-point nights</p><h2 class="h2">Big nights,<br>drawn big.</h2><p class="lead">When a player goes off, we draw the shot that got him there and check every number.</p></div>
+{f"""<section class="fifty"><div><p class="k">The 50-point nights</p><h2 class="h2">Big nights and<br>signature moves.</h2><p class="lead">Tap a card for the game he went off in, or ▶ for his signature move.</p></div>
 <div class="stack">{big_cards}</div></section>""" if BIG else ""}
 <section><div class="shead"><div><p class="k">Learn the game</p><h2 class="h2">New in the library.</h2></div><a class="pill sm" href="learn/index.html">See all {len(LEARN)} →</a></div>
 <div class="rail">{"".join(learn_card(R, x) for x in LEARN[:4])}</div></section>

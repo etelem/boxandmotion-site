@@ -133,10 +133,13 @@ a.card:hover{transform:translateY(-3px)}
 .stat:hover{transform:rotate(0) translateY(-6px) scale(1.04)}
 .stat .n{font-size:clamp(36px,6vw,56px);line-height:.9}
 .stat small{display:block;color:var(--dim);font-size:12.5px;line-height:1.35}
-.stat .who{font-weight:600;font-size:14px}
+.stat .who{display:block;font-weight:600;font-size:14px;color:var(--ink);text-decoration:none}
+.stat{position:relative}.stat .go::after{content:"";position:absolute;inset:0;border-radius:inherit}
+.stat .mv{position:relative;z-index:1;display:inline-block;margin-top:8px;padding:5px 10px;border-radius:999px;background:var(--or);color:#fff;font-size:12px;font-weight:600;text-decoration:none;white-space:nowrap}
+.stat .mv:hover{background:var(--or-ink)}
 .stat .row{justify-content:space-between;flex-wrap:nowrap}
 .ab{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(17,18,20,.07);font-size:9.5px;font-weight:700}
-@media(max-width:520px){.stack{gap:0}.stat{width:40%;margin:0 -3%;padding:12px;border-radius:20px}.stat small{font-size:11px}}
+@media(max-width:520px){.stack{gap:0}.stat{width:40%;margin:0 -3%;padding:12px;border-radius:20px}.stat small{font-size:11px}.stat .mv{font-size:11px;padding:4px 8px;margin-top:6px}}
 .closer{border-radius:44px;background:radial-gradient(90% 120% at 100% 0%,#ff8a4a,var(--or) 45%,#a8330a);color:#fff;padding:40px 26px;display:grid;gap:22px;align-items:center}
 @media(min-width:960px){.closer{grid-template-columns:1.2fr auto;padding:56px}}
 .closer .h2{color:#fff;margin:0}
