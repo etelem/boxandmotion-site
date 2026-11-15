@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-14-DAL-CLE.html",
+  "team": "CLE",
+  "home": true,
+  "number": "24",
+  "player": "Tyrese Proctor",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 0.9744,
+    "ape": 1.0,
+    "mass": 0.9398
+  },
+  "build_note": "Listed 6-4, 185 lb (RealGM); no reliable wingspan reported, arms at a 1.0 ratio",
+  "kicker": "CAVALIERS 127 · MAVERICKS 117 · NOV 14",
+  "hook": [
+    "Proctor from 30",
+    "to end the half"
+  ],
+  "clock": "Q2 · 1.5 left",
+  "us": "CLE",
+  "them": "DAL",
+  "score_before": [
+    68,
+    53
+  ],
+  "score_make": [
+    71,
+    53
+  ],
+  "stamp": "THREE",
+  "beat": [
+    "Cavaliers by 18 at the half,",
+    "after a 28–9 run."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Cavaliers",
+    "them": "Mavericks",
+    "us_pts": 127,
+    "them_pts": 117
+  },
+  "star": {
+    "name": "Tyrese Proctor",
+    "big": 24,
+    "big_label": "points, 11 rebounds, 10 assists",
+    "lines": [
+      "his first career triple-double",
+      "without Mitchell, Mobley and Harden"
+    ]
+  },
+  "story": "Kyrie Irving scored 34, 20 of them in the third. Cleveland led by 18 at the half and won 127–117.",
+  "aria": "Animated Short: Tyrese Proctor's 30-foot 3-pointer with 1.5 seconds left in the second quarter that put the Cavaliers up 71–53 at halftime. Cavaliers win 127–117. An original illustration, not traced from footage, not to scale."
+}

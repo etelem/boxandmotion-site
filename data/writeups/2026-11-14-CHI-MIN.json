@@ -1,0 +1,109 @@
+{
+ "headline": "Powell and the bench end Minnesota's streak",
+ "dek": "Norman Powell scored 24, the Bulls’ bench scored 50, and Minnesota made 9 of 38 threes.",
+ "three": [
+  [
+   "Powell: 24 points on 10-of-19 shooting",
+   "3 of 5 from three, a night after his 33 against Atlanta."
+  ],
+  [
+   "Bulls up 13 at the half, then held off a 13–0 Minnesota run",
+   "Hield, Jones and Williams scored 46 off the bench."
+  ],
+  [
+   "Won it from three and off the bench",
+   "Bench points 50–33; threes made 14–9. Minnesota missed its first 13 threes."
+  ]
+ ],
+ "battle": [
+  [
+   "Bench points",
+   50,
+   33
+  ],
+  [
+   "Threes made",
+   14,
+   9
+  ],
+  [
+   "Assists",
+   29,
+   23
+  ],
+  [
+   "Field goals made",
+   44,
+   38
+  ]
+ ],
+ "battle_labels": [
+  "CHI",
+  "MIN"
+ ],
+ "top": [
+  [
+   "Norman Powell",
+   "CHI",
+   "10 of 19, 3 threes",
+   24
+  ],
+  [
+   "Matas Buzelis",
+   "CHI",
+   "9 rebounds, 6 of 6 at the line",
+   18
+  ],
+  [
+   "Buddy Hield",
+   "CHI",
+   "off the bench, 4 of 6 from three",
+   16
+  ],
+  [
+   "Tre Jones",
+   "CHI",
+   "off the bench, 7 of 9",
+   16
+  ]
+ ],
+ "linescore": {
+  "away": [
+   29,
+   29,
+   30,
+   29
+  ],
+  "home": [
+   17,
+   28,
+   35,
+   26
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-14-CHI-at-MIN.json",
+ "loser": {
+  "top": [
+   [
+    "Ayo Dosunmu",
+    "MIN",
+    "10 of 16 · 14 in the third",
+    24
+   ],
+   [
+    "LaMelo Ball",
+    "MIN",
+    "7 of 25 · 4 steals",
+    19
+   ],
+   [
+    "Jaden McDaniels",
+    "MIN",
+    "7 of 11 · 6 assists",
+    18
+   ]
+  ],
+  "source": "box score"
+ }
+}

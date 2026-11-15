@@ -1,0 +1,109 @@
+{
+ "headline": "Proctor's first triple-double sinks Dallas",
+ "dek": "Tyrese Proctor had a triple-double, and five Cavaliers scored 18 or more.",
+ "three": [
+  [
+   "Proctor: 24 points, 11 rebounds, 10 assists",
+   "His first career triple-double, with career highs in points and assists."
+  ],
+  [
+   "Cavaliers up 18 at the half, after a 28–9 run to close it",
+   "Five Cavaliers scored 18 or more."
+  ],
+  [
+   "Won it on the glass and in the paint",
+   "Rebounds 54–39; points in the paint 54–42. Dallas made 14 of 44 threes."
+  ]
+ ],
+ "battle": [
+  [
+   "Rebounds",
+   54,
+   39
+  ],
+  [
+   "Points in the paint",
+   54,
+   42
+  ],
+  [
+   "Assists",
+   31,
+   23
+  ],
+  [
+   "Field goals made",
+   48,
+   39
+  ]
+ ],
+ "battle_labels": [
+  "CLE",
+  "DAL"
+ ],
+ "top": [
+  [
+   "Tyrese Proctor",
+   "CLE",
+   "triple-double, 11 rebounds, 10 assists",
+   24
+  ],
+  [
+   "Mario Hezonja",
+   "CLE",
+   "9 of 12, season high",
+   22
+  ],
+  [
+   "Meleek Thomas",
+   "CLE",
+   "8 of 17, 3 threes",
+   20
+  ],
+  [
+   "Thomas Bryant",
+   "CLE",
+   "11 rebounds, season high",
+   19
+  ]
+ ],
+ "linescore": {
+  "away": [
+   33,
+   20,
+   38,
+   26
+  ],
+  "home": [
+   33,
+   38,
+   34,
+   22
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-14-DAL-at-CLE.json",
+ "loser": {
+  "top": [
+   [
+    "Kyrie Irving",
+    "DAL",
+    "20 in the third · 7 of 16 from three",
+    34
+   ],
+   [
+    "Cooper Flagg",
+    "DAL",
+    "8 rebounds · 0 of 6 from three",
+    18
+   ],
+   [
+    "Caleb Martin",
+    "DAL",
+    "6 of 7 · 8 rebounds",
+    15
+   ]
+  ],
+  "source": "box score"
+ }
+}
