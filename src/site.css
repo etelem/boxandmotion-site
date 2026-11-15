@@ -758,3 +758,11 @@ main.w>.sec{border-top:1px solid var(--ink);padding-top:16px}
 .fifty .k{color:rgba(255,255,255,.72)}.fifty .h2{color:#fff}.fifty .lead{color:rgba(255,255,255,.75)}
 .fifty .stat{background:#fff;border-color:#fff}
 main.w:has(>.sec){gap:44px}
+
+/* Sunday Box band in the logo's style (Nov 15): white, thick black rounded frame, X ··· O play across the top, orange "box." and button */
+.closer.logo{background:#fff;color:var(--ink);border:6px solid var(--ink);border-radius:36px}
+.closer.logo .h2{color:var(--ink)}.closer.logo em{font-style:normal;color:var(--or)}.closer.logo p{color:var(--dim)}
+.closer.logo .play{width:100%;max-width:520px;height:auto;display:block;margin-bottom:6px}
+.closer.logo .pill.wht{background:var(--or);border-color:var(--or);color:#fff}
+.closer.logo .pill.wht:hover{background:var(--or-ink);border-color:var(--or-ink)}
+@media(min-width:960px){.closer.logo .play{grid-column:1/-1}}

@@ -146,8 +146,13 @@ def page(path, title, body, active=None, desc="Every NBA game, more than the box
     open(full, "w").write(html)
     return R
 
+# the logo's play (X, dotted orange path, orange O) across the top of the Sunday Box band (owner's call, Nov 15)
+CLOSER_PLAY = ('<svg class="play" viewBox="0 0 600 60" aria-hidden="true">'
+               '<path d="M8 8L36 36M36 8L8 36" stroke="#111214" stroke-width="7" stroke-linecap="round"/>'
+               '<path d="M60 22C150 22 170 46 260 46S420 22 540 30" fill="none" stroke="#FF5A1F" stroke-width="6" stroke-linecap="round" stroke-dasharray="0 14"/>'
+               '<circle cx="568" cy="30" r="15" fill="none" stroke="#FF5A1F" stroke-width="7"/></svg>')
 def closer(R):
-    return (f'<section class="closer"><div><h2 class="h2">The week, in one box.</h2><p>The Sunday Box: the games that mattered and the plays behind them. Free, every Sunday.</p></div>'
+    return (f'<section class="closer logo">{CLOSER_PLAY}<div><h2 class="h2">The week, in one <em>box.</em></h2><p>The Sunday Box: the games that mattered and the plays behind them. Free, every Sunday.</p></div>'
             f'<a class="pill wht" href="{NEWSLETTER}">Get The Sunday Box →</a></section>')
 
 # ---- story score: which game leads the night ----
