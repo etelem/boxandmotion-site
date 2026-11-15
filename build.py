@@ -1379,11 +1379,11 @@ for cslug, bl in by_coach.items():
 
 # ---- newsletter ----
 R = "../"
-body = f'''<section class="closer" style="grid-template-columns:minmax(0,1fr)"><div><p class="k" style="color:rgba(255,255,255,.85)">The newsletter · free · every Sunday</p>
-<h1 class="h1" style="color:#fff;margin-bottom:10px">The Sunday Box.</h1>
+body = f'''<section class="closer logo nlhero" style="grid-template-columns:minmax(0,1fr)">{CLOSER_PLAY}<div><p class="k">The newsletter · free · every Sunday</p>
+<h1 class="h1" style="margin-bottom:10px">The Sunday <em>Box.</em></h1>
 <p style="font-size:19px">The week in basketball, in one email you can read with your coffee: the games that mattered, the plays behind them, and what to watch next.</p>
 <div class="ctas" style="margin-top:22px"><a class="pill wht" href="{NEWSLETTER}" target="_blank" rel="noopener">Subscribe free →</a></div>
-<p style="font-size:14px;opacity:.85">Unsubscribe anytime.</p></div></section>
+<p style="font-size:14px">Unsubscribe anytime.</p></div></section>
 <section class="nums">
 <div class="num"><div class="t"><span>01</span></div><div><b>The games that mattered</b><p>Not every score. The few that changed something, and why.</p></div></div>
 <div class="num"><div class="t"><span>02</span></div><div><b>One play, drawn</b><p>The week’s best play as a drawing you can follow step by step.</p></div></div>

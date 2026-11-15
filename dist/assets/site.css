@@ -859,3 +859,8 @@ tr.fav .bar span{background:#fff}
   .tabbar .tab.on{color:var(--or-ink)}
   body{padding-bottom:84px}
 }
+
+/* Sunday Box page hero in the logo's style (Nov 15) */
+.closer.logo .h1{color:var(--ink)}.closer.logo .k{color:var(--dim)}
+.nlhero p{color:var(--dim)}
+.nlhero p.k{font-size:12px;margin:0 0 6px}
