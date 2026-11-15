@@ -412,7 +412,7 @@ tonight = "".join(f'<a class="tn" href="teams/{T[h]["slug"]}/index.html" data-te
 home = f'''<section class="hero">
 <div>
 <h1 class="h1">More than the<br><b>box score.</b></h1>
-<p class="hp">The box score tells you who scored. We show you how the game was won: the run, the matchup, the play that decided it. Plus <a href="learn/index.html">Learn the Game</a> and <a href="{NEWSLETTER}">The Sunday Box</a>.</p>
+<p class="hp"><b>Every NBA game, every night.</b> We show you how the game was won: the run, the matchup, the play that decided it. Plus <a href="learn/index.html">Learn the Game</a> and <a href="{NEWSLETTER}">The Sunday Box</a>.</p>
 </div>
 <div class="lastn"><div class="sh2"><p class="k">Last night · {WEEKDAY(LAST_DATE)}</p><a class="more" href="last-night/index.html">Every game →</a></div><h2 class="h2">Last night’s games.</h2><div class="gtabs" role="tablist">{tabs}</div>{heroes}</div>
 </section>

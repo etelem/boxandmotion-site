@@ -770,3 +770,5 @@ main.w:has(>.sec){gap:64px}
 .lastn .sh2 .k{color:var(--ink)}
 .lastn .sh2 .k::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--or);margin-right:9px;vertical-align:1px}
 .lastn>.h2{margin:8px 0 18px}
+
+.hp b{color:var(--ink);font-weight:600}
