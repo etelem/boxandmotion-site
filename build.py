@@ -114,8 +114,13 @@ def tchip(c, score, lose=False, name=None):
             + (f' <b>{score}</b>' if score is not None else '') + '</span>')
 
 HDNAV = [("Last night’s games", "last-night/index.html"), ("Your teams", "teams/index.html#yours"), ("Learn the game", "learn/index.html"),
-         ("Playoff odds", "odds/index.html"), ("Get The Sunday Box", NEWSLETTER), ("About", "about/index.html")]   # the owner's list, Nov 15
-HDACT = {"Last Night": "Last night’s games", "Teams": "Your teams", "Learn": "Learn the game", "Odds": "Playoff odds", "Sunday Box": "Get The Sunday Box", "About": "About"}
+         ("Playoff odds", "odds/index.html")]   # header buttons on computers/tablets (owner, Nov 15, nav option B)
+HDACT = {"Last Night": "Last night’s games", "Teams": "Your teams", "Your Team": "Your teams", "Learn": "Learn the game", "Odds": "Playoff odds"}
+# bottom tab bar on phones (owner, Nov 15, option B): Games · Teams · Learn · Odds; About lives in the footer
+TABS = [("Games", "Last night’s games", "last-night/index.html", '<path d="M4 6h16M4 12h16M4 18h10"/>'),
+        ("Teams", "Your teams", "teams/index.html#yours", '<circle cx="12" cy="12" r="8"/><path d="M4 12h16M12 4c2.5 2.5 2.5 13.5 0 16M12 4c-2.5 2.5-2.5 13.5 0 16"/>'),
+        ("Learn", "Learn the game", "learn/index.html", '<path d="M6 6l4 4M10 6l-4 4"/><circle cx="17" cy="17" r="3"/><path d="M9 14c1 3 3 4 5 4" stroke-dasharray="1 2.4"/>'),
+        ("Odds", "Playoff odds", "odds/index.html", '<path d="M4 19h16M7 16v-4M12 16V8M17 16v-7"/>')]
 def _hhref(R, h): return h if h.startswith("http") else R + h
 def page(path, title, body, active=None, desc="Every NBA game, more than the box score: the story, the play that decided it, drawn in motion.", band=""):
     depth = path.count("/"); R = "/" if path == "404.html" else "../" * depth
@@ -124,7 +129,7 @@ def page(path, title, body, active=None, desc="Every NBA game, more than the box
     nav = [("Games", "last-night/index.html"), ("Teams", "teams/index.html"), ("Learn", "learn/index.html")]
     active = {"Last Night": "Games", "Your Team": "Teams", "Odds": "Teams"}.get(active, active)
     links = "".join(f'<a href="{R}{h}"{" aria-current=page" if n == active else ""}>{n}</a>' for n, h in nav)
-    mlinks = "".join(f'<a href="{_hhref(R, h)}"{" aria-current=page" if HDACT.get(active) == n else ""}>{n}</a>' for n, h in HDNAV + [("All 30 teams", "teams/index.html")])  # same six as the header buttons (Nov 15)
+    tabbar = "".join(f'<a class="tab{" on" if HDACT.get(active) == full else ""}" href="{R}{h}"{" aria-current=page" if HDACT.get(active) == full else ""}><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">{ic}</svg><span>{n}</span></a>' for n, full, h, ic in TABS)
     html = f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{E(title)}</title><meta name="description" content="{E(desc)}">
@@ -139,8 +144,9 @@ def page(path, title, body, active=None, desc="Every NBA game, more than the box
 <nav class="gnav" aria-label="Main">{links}</nav>
 <span class="sp"></span>
 <nav class="hdpills" aria-label="Sections">{hdpills}</nav>
-<button class="burger" type="button" aria-label="Menu" aria-expanded="false" data-burger><svg width="20" height="14" aria-hidden="true"><path d="M1 2h18M1 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-</div><div class="w"><nav class="mmenu" aria-label="Menu" data-menu>{mlinks}</nav></div></header>
+<a class="sbx" href="{NEWSLETTER}">Sunday Box</a>
+</div></header>
+<nav class="tabbar" aria-label="Sections">{tabbar}</nav>
 {band}
 <main class="w">{body}</main>
 <footer class="w foot"><span class="word">Box &amp; Motion <span>Hoops</span></span>
@@ -479,8 +485,7 @@ big_cards = "".join(big_card(i, *x) for i, x in enumerate(reversed(BIG)))
 TONIGHT_DAY = S["upcoming"][0][0] if S["upcoming"] else None
 tonight = "".join(f'<a class="tn" href="teams/{T[h]["slug"]}/index.html" data-teams="{a} {h}"><span class="tt">{tm}</span><span class="tmid"><span class="tteams"><span><i class="dot" style="{dot2(a)}"></i>{E(T[a]["name"])}</span><span class="at">at</span><span><i class="dot" style="{dot2(h)}"></i>{E(T[h]["name"])}</span></span>{f'<span class="tv">{E(tv[0])}</span>' if tv and tv[0] else ''}</span></a>'
                   for day, tm, a, h, *tv in S["upcoming"] if day == TONIGHT_DAY)
-home = f'''<nav class="homepills" aria-label="Sections">{"".join(f'<a class="pill sm" href="{_hhref("", h)}">{n}</a>' for n, h in HDNAV)}</nav>
-<section class="lastn"><div class="sh2"><p class="k">Last night in the NBA · {WEEKDAY(LAST_DATE)}</p><a class="more" href="last-night/index.html">Every game →</a></div><h2 class="h2">Last night’s games.</h2><div class="gtabs" role="tablist">{tabs}</div>{heroes}</section>
+home = f'''<section class="lastn"><div class="sh2"><p class="k">Last night in the NBA · {WEEKDAY(LAST_DATE)}</p><a class="more" href="last-night/index.html">Every game →</a></div><h2 class="h2">Last night’s games.</h2><div class="gtabs" role="tablist">{tabs}</div>{heroes}</section>
 {f"""<section class="sec"><div class="sh2"><p class="k">Tonight · {E(TONIGHT_DAY)} · times ET</p><a class="more" href="odds/index.html">Current playoff odds →</a></div><h2 class="h2">On the schedule.</h2>
 <div class="tonight">{tonight}</div></section>""" if tonight else ""}
 <section class="sec"><div class="sh2"><p class="k">Learn the game</p><a class="more" href="learn/index.html">See all {len(LEARN)} →</a></div><h2 class="h2">New in the library.</h2>

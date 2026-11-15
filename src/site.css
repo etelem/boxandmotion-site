@@ -800,7 +800,7 @@ tr.fav .bar span{background:#fff}
 @media(max-width:899px){.homepills{margin-bottom:-36px}}
 
 /* Header: the six buttons (Nov 15); on mid-size screens they drop to their own row under the logo */
-@media(min-width:900px) and (max-width:1239px){.hd{flex-wrap:wrap}.hdpills{order:5;width:100%;margin:2px 0 0;overflow-x:auto;scrollbar-width:none}.hdpills::-webkit-scrollbar{display:none}}
+@media(min-width:900px) and (max-width:1019px){.hd{flex-wrap:wrap}.hdpills{order:5;width:100%;margin:2px 0 0;overflow-x:auto;scrollbar-width:none}.hdpills::-webkit-scrollbar{display:none}}
 .hdpills .pill{white-space:nowrap}
 /* Last night's top card taller on computers (Nov 15) */
 @media(min-width:900px){.lastn .hfbig{min-height:480px;justify-content:space-between;padding:36px}.lastn .hfbig .hfh{font-size:clamp(56px,6.4vw,96px)}}
@@ -845,4 +845,17 @@ tr.fav .bar span{background:#fff}
   .feed-item{grid-template-columns:auto minmax(0,1fr);gap:64px;min-height:calc(100vh - 90px);padding:28px 0}
   .feed-vid{height:min(calc(100vh - 150px),860px);width:auto}
   .feed-tx .h2{font-size:clamp(40px,4.4vw,64px)}
+}
+
+/* Nav option B (Nov 15): computers/tablets = 4 outlined buttons + orange Sunday Box; phones = logo + orange Sunday Box + bottom tab bar. No ☰. */
+.burger,.mmenu{display:none!important}
+.sbx{display:inline-flex;align-items:center;min-height:42px;padding:0 20px;border-radius:999px;background:var(--or);color:#fff!important;font:700 14px 'Albert Sans',sans-serif;text-decoration:none;white-space:nowrap;flex:none}
+.sbx:hover{background:var(--or-ink)}
+.tabbar{display:none}
+@media(max-width:899px){
+  .sbx{min-height:36px;padding:0 13px;font-size:13px}.hd{gap:8px}.brand .word{font-size:15px}
+  .tabbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:repeat(4,1fr);background:rgba(255,255,255,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:8px 8px calc(10px + env(safe-area-inset-bottom))}
+  .tabbar .tab{display:flex;flex-direction:column;align-items:center;gap:3px;color:var(--dim);text-decoration:none;font:600 11.5px 'Albert Sans',sans-serif;padding:4px 0}
+  .tabbar .tab.on{color:var(--or-ink)}
+  body{padding-bottom:84px}
 }
