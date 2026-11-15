@@ -329,3 +329,14 @@ window.addEventListener('message', function (e) {
   addEventListener('scroll',function(){ if(!ticking){ ticking=true; requestAnimationFrame(fill); } },{passive:true});
   addEventListener('resize',fill); fill();
 })();
+(function(){
+  // home: the "your team" line shows your first followed team's record, last result and next game (Nov 15)
+  var yl=document.querySelector('[data-ytline]'); if(!yl) return;
+  var favs=[]; try{favs=JSON.parse(localStorage.getItem('bm_favs')||'[]')||[]}catch(e){}
+  var BM=window.BM||{teams:{}}, root=document.body.getAttribute('data-root')||'', t=BM.teams[favs[0]];
+  if(!t) return;
+  var more=favs.length>1?' · +'+(favs.length-1)+' more':'';
+  yl.href=root+'teams/'+t.slug+'/index.html'; yl.classList.add('is-mine');
+  yl.style.setProperty('--team-grad','linear-gradient(90deg,'+t.c2+' 0 7px,transparent 7px),linear-gradient(120deg,'+t.c1+' 0%,'+t.dark+' 100%)');
+  yl.querySelector('.yt-tx').innerHTML='<b>'+t.name+' '+t.rec+'</b>'+more+'<small>'+(t.last?'Last: '+t.last:'')+(t.next?' · Next: '+t.next:'')+'</small>';
+})();

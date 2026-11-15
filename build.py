@@ -430,26 +430,25 @@ big_cards = "".join(big_card(i, *x) for i, x in enumerate(reversed(BIG)))
 TONIGHT_DAY = S["upcoming"][0][0] if S["upcoming"] else None
 tonight = "".join(f'<a class="tn" href="teams/{T[h]["slug"]}/index.html" data-teams="{a} {h}"><span class="tt">{tm}</span><span class="tmid"><span class="tteams"><span><i class="dot" style="{dot2(a)}"></i>{E(T[a]["name"])}</span><span class="at">at</span><span><i class="dot" style="{dot2(h)}"></i>{E(T[h]["name"])}</span></span>{f'<span class="tv">{E(tv[0])}</span>' if tv and tv[0] else ''}</span></a>'
                   for day, tm, a, h, *tv in S["upcoming"] if day == TONIGHT_DAY)
+# playoff odds note under tonight's schedule (owner, Nov 15): this week's biggest moves + link to the odds page
+_mv = sorted(T, key=lambda c: O[c]["chg"])
+movers = [c for c in _mv[::-1][:2] if O[c]["chg"] > 0] + [c for c in _mv[:2] if O[c]["chg"] < 0]
+mv_html = " ".join(f'<a class="mv-chip {chgcls(O[c]["chg"])}" href="teams/{T[c]["slug"]}/index.html"><i class="dot" style="{dot2(c)}"></i>{E(T[c]["name"])} <b>{chg(O[c]["chg"])}</b></a>' for c in movers)
+odds_note = (f'<div class="oddsnote"><div class="sh2"><p class="k">Playoff odds · this week</p><a class="more" href="odds/index.html">All odds →</a></div>'
+             + (f'<div class="mvrow">{mv_html}</div>' if mv_html else '') + '</div>')
 home = f'''<section class="hero">
 <div>
 <h1 class="h1">More than the<br><b>box score.</b></h1>
 <p class="hp"><b>Every NBA game, every night.</b> We show you how the game was won: the run, the matchup, the play that decided it. Plus <a href="learn/index.html">Learn the Game</a> and <a href="{NEWSLETTER}">The Sunday Box</a>.</p>
 </div>
-<div class="lastn"><div class="sh2"><p class="k">Last night · {WEEKDAY(LAST_DATE)}</p><a class="more" href="last-night/index.html">Every game →</a></div><h2 class="h2">Last night’s games.</h2><div class="gtabs" role="tablist">{tabs}</div>{heroes}</div>
+<div class="lastn"><div class="sh2"><p class="k">Last night · {WEEKDAY(LAST_DATE)}</p><a class="more" href="last-night/index.html">Every game →</a></div><h2 class="h2">Last night’s games.</h2><div class="gtabs" role="tablist">{tabs}</div>{heroes}<a class="ytline" href="your-team/index.html" data-ytline><span class="yt-star">★</span><span class="yt-tx"><b>Pick your teams.</b> They show up first, in their colors.</span><span class="yt-go">→</span></a></div>
 </section>
-<section class="sec"><div class="sh2"><p class="k">Start here</p></div><h2 class="h2">Four ways in.</h2>
-<div class="nums">
-<a class="num" href="last-night/index.html"><div class="t"><span>01</span><span>↗</span></div><div><b>Last night</b><p>Every game, the story and the play that decided it.</p></div></a>
-<a class="num" href="your-team/index.html"><div class="t"><span>02</span><span>↗</span></div><div><b>Your team</b><p>Pick your teams. They show up first, in their colors.</p></div></a>
-<a class="num" href="learn/index.html"><div class="t"><span>03</span><span>↗</span></div><div><b>Learn the game</b><p>Moves and plays, drawn step by step.</p></div></a>
-<a class="num" href="{NEWSLETTER}"><div class="t"><span>04</span><span>↗</span></div><div><b>The Sunday Box</b><p>The week in one email.</p></div></a>
-</div></section>
-{f"""<section class="sec"><div class="sh2"><p class="k">Tonight · {E(TONIGHT_DAY)} · times ET</p><a class="more" href="odds/index.html">What’s at stake →</a></div><h2 class="h2">On the schedule.</h2>
-<div class="tonight">{tonight}</div></section>""" if tonight else ""}
-{f"""<section class="fifty"><div><p class="k">The 50-point nights</p><h2 class="h2">Big nights and<br>signature moves.</h2><p class="lead">Tap a card for the game he went off in, or ▶ for his signature move.</p></div>
-<div class="stack">{big_cards}</div></section>""" if BIG else ""}
 <section class="sec"><div class="sh2"><p class="k">Learn the game</p><a class="more" href="learn/index.html">See all {len(LEARN)} →</a></div><h2 class="h2">New in the library.</h2>
 <div class="rail">{"".join(learn_card(R, x) for x in LEARN[:4])}</div></section>
+{f"""<section class="sec"><div class="sh2"><p class="k">Tonight · {E(TONIGHT_DAY)} · times ET</p></div><h2 class="h2">On the schedule.</h2>
+<div class="tonight">{tonight}</div>{odds_note}</section>""" if tonight else f'<section class="sec">{odds_note}</section>'}
+{f"""<section class="fifty"><div><p class="k">The 50-point nights</p><h2 class="h2">Big nights and<br>signature moves.</h2><p class="lead">Tap a card for the game he went off in, or ▶ for his signature move.</p></div>
+<div class="stack">{big_cards}</div></section>""" if BIG else ""}
 {closer(R)}'''
 page("index.html", "Box & Motion Hoops: every NBA game, more than the box score", home)
 
