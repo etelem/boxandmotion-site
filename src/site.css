@@ -785,3 +785,7 @@ main.w:has(>.sec){gap:64px}
 .otable .bar span{background:var(--ink)}
 tr.fav .bar span{background:#fff}
 .h1s{display:block;font-size:.42em;letter-spacing:-.02em;color:var(--dim);margin-top:.25em}
+/* Computers and tablets (Nov 15): last night's games under the hero, not beside it; hero headline and text side by side */
+@media(min-width:960px){.hero{grid-template-columns:minmax(0,1fr);gap:56px;align-items:start}
+.hero>div:first-child{display:grid;grid-template-columns:auto minmax(0,1fr);gap:56px;align-items:end}
+.hero>div:first-child .hp{justify-self:end;max-width:36ch;margin-bottom:12px}}
