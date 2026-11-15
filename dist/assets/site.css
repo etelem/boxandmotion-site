@@ -889,3 +889,5 @@ tr.fav .bar span{background:#fff}
 @keyframes eqb{0%,100%{height:4px}50%{height:14px}}
 @media(prefers-reduced-motion:reduce){.flow-snd.on .eq i{animation:none;height:10px}}
 @media(max-width:899px){.flow-snd{left:14px;bottom:calc(84px + env(safe-area-inset-bottom))}}
+/* a little more air between the header and "Last night in the NBA" on phones (Nov 15) */
+@media(max-width:899px){.lastn{padding-top:18px}.lastn>.h2{margin:10px 0 22px}}
