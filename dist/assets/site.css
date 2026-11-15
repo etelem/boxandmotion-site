@@ -864,3 +864,4 @@ tr.fav .bar span{background:#fff}
 .closer.logo .h1{color:var(--ink)}.closer.logo .k{color:var(--dim)}
 .nlhero p{color:var(--dim)}
 .nlhero p.k{font-size:12px;margin:0 0 6px}
+@media(max-width:374px){.brand .word{font-size:13px}.sbx{padding:0 9px;font-size:12px}.hd{gap:4px}}

@@ -144,7 +144,7 @@ def page(path, title, body, active=None, desc="Every NBA game, more than the box
 <nav class="gnav" aria-label="Main">{links}</nav>
 <span class="sp"></span>
 <nav class="hdpills" aria-label="Sections">{hdpills}</nav>
-<a class="sbx" href="{NEWSLETTER}">Sunday Box</a>
+<a class="sbx" href="{NEWSLETTER}">The Sunday Box</a>
 </div></header>
 <nav class="tabbar" aria-label="Sections">{tabbar}</nav>
 {band}
