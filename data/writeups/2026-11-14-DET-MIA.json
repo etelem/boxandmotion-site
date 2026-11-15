@@ -1,0 +1,103 @@
+{
+ "headline": "Giannis's 34 makes it four straight",
+ "dek": "Giannis Antetokounmpo had 34 points, 14 rebounds and 8 assists, and Miami is over .500 for the first time this season.",
+ "three": [
+  [
+   "Giannis: 34 points on 13 of 17",
+   "14 rebounds, 8 assists and 3 blocks."
+  ],
+  [
+   "Heat up 8 at the half, then won the third quarter 35–26",
+   "Antetokounmpo, Thompson and Adebayo combined for 80 of 137."
+  ],
+  [
+   "Won it from three and on the break",
+   "Fast-break points 28–11; threes made 16–11. Nine different Heat players had a block."
+  ]
+ ],
+ "battle": [
+  [
+   "Fast-break points",
+   28,
+   11
+  ],
+  [
+   "Threes made",
+   16,
+   11
+  ],
+  [
+   "Blocks",
+   14,
+   6
+  ],
+  [
+   "Free throws made",
+   33,
+   28
+  ]
+ ],
+ "battle_labels": [
+  "MIA",
+  "DET"
+ ],
+ "top": [
+  [
+   "Giannis Antetokounmpo",
+   "MIA",
+   "13 of 17, 14 rebounds, 8 assists",
+   34
+  ],
+  [
+   "Klay Thompson",
+   "MIA",
+   "6 of 11 from three, 20 minutes",
+   26
+  ],
+  [
+   "Bam Adebayo",
+   "MIA",
+   "3 steals, 2 blocks",
+   20
+  ],
+  [
+   "Davion Mitchell",
+   "MIA",
+   "9 assists, 3 of 5 from three",
+   15
+  ]
+ ],
+ "linescore": {
+  "away": [
+   39,
+   21,
+   26,
+   31
+  ],
+  "home": [
+   37,
+   31,
+   35,
+   34
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-14-DET-at-MIA.json",
+ "loser": {
+  "top": [
+   [
+    "Cade Cunningham",
+    "DET",
+    "14 of 14 FT · 8 assists",
+    33
+   ],
+   [
+    "Kevin Huerter",
+    "DET",
+    "off the bench · 9 of 15 · 7 assists",
+    20
+   ]
+  ],
+  "source": "box score"
+ }
+}

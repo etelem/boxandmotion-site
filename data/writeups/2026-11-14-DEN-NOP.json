@@ -1,0 +1,103 @@
+{
+ "headline": "Jokić and Murray close the road trip with a win",
+ "dek": "Nikola Jokić had 26 points and 10 assists, and Jamal Murray added 23.",
+ "three": [
+  [
+   "Jokić: 26 points and 10 assists",
+   "9 of 14 from the floor, 7 of 7 at the line, 8 rebounds."
+  ],
+  [
+   "Nuggets up 5 at the half, then opened the fourth on a 9–0 run",
+   "Jokić, Murray and Braun combined for 66 of 116."
+  ],
+  [
+   "Won it inside the arc and at the line",
+   "Two-pointers made 38–24; free throws made 28–21. New Orleans made 13 threes to Denver’s 4."
+  ]
+ ],
+ "battle": [
+  [
+   "Two-pointers made",
+   38,
+   24
+  ],
+  [
+   "Free throws made",
+   28,
+   21
+  ],
+  [
+   "Assists",
+   29,
+   25
+  ],
+  [
+   "Steals",
+   9,
+   6
+  ]
+ ],
+ "battle_labels": [
+  "DEN",
+  "NOP"
+ ],
+ "top": [
+  [
+   "Nikola Jokić",
+   "DEN",
+   "9 of 14, 10 assists, 8 rebounds",
+   26
+  ],
+  [
+   "Jamal Murray",
+   "DEN",
+   "9 of 16, 9 assists, 7 rebounds",
+   23
+  ],
+  [
+   "Christian Braun",
+   "DEN",
+   "4 steals, 7 rebounds",
+   17
+  ],
+  [
+   "Cameron Johnson",
+   "DEN",
+   "5 of 6 FT, 5 rebounds",
+   12
+  ]
+ ],
+ "linescore": {
+  "away": [
+   29,
+   27,
+   30,
+   30
+  ],
+  "home": [
+   23,
+   28,
+   31,
+   26
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-14-DEN-at-NOP.json",
+ "loser": {
+  "top": [
+   [
+    "Zion Williamson",
+    "NOP",
+    "9 of 16 · 6 rebounds",
+    24
+   ],
+   [
+    "Saddiq Bey",
+    "NOP",
+    "6 of 6 FT · 4 assists",
+    16
+   ]
+  ],
+  "source": "box score"
+ }
+}

@@ -1,0 +1,58 @@
+{
+  "out": "short-2026-11-14-DEN-NOP.html",
+  "team": "DEN",
+  "home": false,
+  "number": "0",
+  "player": "Christian Braun",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 1.0,
+    "ape": 1.0064,
+    "mass": 1.0116
+  },
+  "build_note": "Listed 6-6, 220 lb (Wikipedia); 6-6½ wingspan at the 2022 combine (Kansas City Star via Yahoo)",
+  "kicker": "NUGGETS 116 · PELICANS 108 · NOV 14",
+  "hook": [
+    "Braun's steal,",
+    "then the three"
+  ],
+  "clock": "Q4 · 3:32",
+  "us": "DEN",
+  "them": "NOP",
+  "score_before": [
+    106,
+    96
+  ],
+  "score_make": [
+    109,
+    96
+  ],
+  "score_ft": [
+    109,
+    96
+  ],
+  "stamp": "THREE",
+  "beat": [
+    "22 seconds after his steal.",
+    "Nuggets by 13, 3:32 left."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Nuggets",
+    "them": "Pelicans",
+    "us_pts": 116,
+    "them_pts": 108
+  },
+  "star": {
+    "name": "Christian Braun",
+    "big": 17,
+    "big_label": "points",
+    "lines": [
+      "4 steals, 7 rebounds",
+      "Jokić: 26 and 10 assists"
+    ]
+  },
+  "story": "Denver finished its road trip 3–1. New Orleans has lost six straight.",
+  "aria": "Original illustration of Christian Braun's 3-pointer off a Jamal Murray pass with 3:32 left, 22 seconds after his steal, that put the Nuggets up 109–96 against the Pelicans in a 116–108 win. Not traced from footage, not to scale."
+}
