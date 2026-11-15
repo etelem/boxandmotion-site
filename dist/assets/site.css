@@ -772,16 +772,3 @@ main.w:has(>.sec){gap:64px}
 .lastn>.h2{margin:8px 0 18px}
 
 .hp b{color:var(--ink);font-weight:600}
-
-/* Home: one-line "your team" link under last night's card; playoff-odds moves under tonight's schedule (Nov 15) */
-.ytline{display:flex;align-items:center;gap:12px;margin-top:12px;padding:14px 16px;border:1px solid var(--line);border-radius:18px;color:var(--ink);text-decoration:none;font-size:15px;line-height:1.35}
-.ytline:hover{border-color:var(--ink)}
-.ytline .yt-star{color:var(--or);font-size:18px;flex:none}.ytline .yt-tx{flex:1;min-width:0;color:var(--dim)}.ytline .yt-tx b{color:var(--ink);font-weight:600}
-.ytline .yt-go{flex:none;color:var(--or-ink);font-weight:600}
-.ytline.is-mine{background:var(--team-grad);border-color:transparent}.ytline.is-mine .yt-tx,.ytline.is-mine .yt-tx b,.ytline.is-mine .yt-star,.ytline.is-mine .yt-go{color:#fff}
-.ytline .yt-tx small{display:block;opacity:.85}
-.mvrow{display:flex;flex-wrap:wrap;gap:8px}
-.mv-chip{display:inline-flex;align-items:center;gap:7px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;font-size:14px;color:var(--ink);text-decoration:none}
-.mv-chip b{font-weight:700}
-.oddsnote{margin-top:22px;display:flex;flex-direction:column;gap:12px}
-.mv-chip.up b{color:#0f7a4d}.mv-chip.down b{color:#b3261e}
