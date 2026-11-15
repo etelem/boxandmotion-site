@@ -113,8 +113,11 @@ def tchip(c, score, lose=False, name=None):
     return (f'<span class="tchip{" lo" if lose else ""}"><i style="{dot2(c)}"></i>{E(name or T[c]["name"])}'
             + (f' <b>{score}</b>' if score is not None else '') + '</span>')
 
+HDNAV = [("Games", "last-night/index.html"), ("Teams", "teams/index.html"), ("Playoff odds", "odds/index.html"), ("Learn", "learn/index.html")]
 def page(path, title, body, active=None, desc="Every NBA game, more than the box score: the story, the play that decided it, drawn in motion.", band=""):
     depth = path.count("/"); R = "/" if path == "404.html" else "../" * depth
+    # header buttons on computers and tablets (owner, Nov 15): same pill style as "Get The Sunday Box"
+    hdpills = "".join(f'<a class="pill sm{" on" if {"Last Night": "Games", "Odds": "Playoff odds"}.get(active, active) == n else ""}" href="{R}{h}">{n}</a>' for n, h in HDNAV)
     nav = [("Games", "last-night/index.html"), ("Teams", "teams/index.html"), ("Learn", "learn/index.html")]
     active = {"Last Night": "Games", "Your Team": "Teams", "Odds": "Teams"}.get(active, active)
     links = "".join(f'<a href="{R}{h}"{" aria-current=page" if n == active else ""}>{n}</a>' for n, h in nav)
@@ -133,6 +136,7 @@ def page(path, title, body, active=None, desc="Every NBA game, more than the box
 <a class="brand" href="{R}index.html"><span class="mark">{LOGO}</span><span class="word">Box &amp; Motion <span>Hoops</span></span></a>
 <nav class="gnav" aria-label="Main">{links}</nav>
 <span class="sp"></span>
+<nav class="hdpills" aria-label="Sections">{hdpills}</nav>
 <a class="pill sm only-d{' on' if active == 'Sunday Box' else ''}" href="{NEWSLETTER}">Get The Sunday Box</a>
 <button class="burger" type="button" aria-label="Menu" aria-expanded="false" data-burger><svg width="20" height="14" aria-hidden="true"><path d="M1 2h18M1 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
 </div><div class="w"><nav class="mmenu" aria-label="Menu" data-menu>{mlinks}</nav></div></header>
@@ -454,13 +458,8 @@ big_cards = "".join(big_card(i, *x) for i, x in enumerate(reversed(BIG)))
 TONIGHT_DAY = S["upcoming"][0][0] if S["upcoming"] else None
 tonight = "".join(f'<a class="tn" href="teams/{T[h]["slug"]}/index.html" data-teams="{a} {h}"><span class="tt">{tm}</span><span class="tmid"><span class="tteams"><span><i class="dot" style="{dot2(a)}"></i>{E(T[a]["name"])}</span><span class="at">at</span><span><i class="dot" style="{dot2(h)}"></i>{E(T[h]["name"])}</span></span>{f'<span class="tv">{E(tv[0])}</span>' if tv and tv[0] else ''}</span></a>'
                   for day, tm, a, h, *tv in S["upcoming"] if day == TONIGHT_DAY)
-home = f'''<section class="hero">
-<div>
-<h1 class="h1">More than the<br><b>box score.</b></h1>
-<p class="hp"><b>Every NBA game, every night.</b> We show you how the game was won: the run, the matchup, the play that decided it. Plus <a href="learn/index.html">Learn the Game</a> and <a href="{NEWSLETTER}">The Sunday Box</a>.</p>
-</div>
-<div class="lastn"><div class="sh2"><p class="k">Last night · {WEEKDAY(LAST_DATE)}</p><a class="more" href="last-night/index.html">Every game →</a></div><h2 class="h2">Last night’s games.</h2><div class="gtabs" role="tablist">{tabs}</div>{heroes}</div>
-</section>
+home = f'''<nav class="homepills" aria-label="Sections">{"".join(f'<a class="pill sm" href="{h}">{n}</a>' for n, h in HDNAV)}<a class="pill sm" href="{NEWSLETTER}">Get The Sunday Box</a></nav>
+<section class="lastn"><div class="sh2"><p class="k">Last night in the NBA · {WEEKDAY(LAST_DATE)}</p><a class="more" href="last-night/index.html">Every game →</a></div><h2 class="h2">Last night’s games.</h2><div class="gtabs" role="tablist">{tabs}</div>{heroes}</section>
 <section class="sec"><div class="sh2"><p class="k">Start here</p></div><h2 class="h2">Four ways in.</h2>
 <div class="nums">
 <a class="num" href="last-night/index.html"><div class="t"><span>01</span><span>↗</span></div><div><b>Last night</b><p>Every game, the story and the play that decided it.</p></div></a>
@@ -1376,8 +1375,8 @@ page("newsletter/index.html", "The Sunday Box newsletter · Box & Motion Hoops",
 
 # ---- about + 404 ----
 body = f'''<section style="max-width:46em"><p class="k">About Box &amp; Motion</p>
-<h1 class="h1">We want more out of our box scores.</h1>
-<p class="lead" style="font-size:20px">A box score tells you who scored. It doesn’t tell you how the game was won: the run that flipped it, the matchup a coach kept going back to, the play drawn up out of a timeout.</p></section>
+<h1 class="h1">More than the<br><b style="color:var(--or)">box score.</b></h1>
+<p class="lead hp" style="font-size:20px;max-width:none"><b>Every NBA game, every night.</b> We show you how the game was won: the run, the matchup, the play that decided it. Plus <a href="{R}learn/index.html">Learn the Game</a> and <a href="{NEWSLETTER}">The Sunday Box</a>.</p></section>
 <section class="grid g2">
 <div class="card pad" style="display:flex;flex-direction:column;gap:8px"><p class="k">Who we are</p><b class="d" style="font-size:30px">Fans with a day job in data</b>
 <p style="margin:0">Our team has a background in analytics and AI enablement. We love basketball, and we don’t have time to watch every game anymore. We still want to know what actually happened.</p></div>

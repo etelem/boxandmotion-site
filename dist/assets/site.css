@@ -789,3 +789,12 @@ tr.fav .bar span{background:#fff}
 @media(min-width:960px){.hero{grid-template-columns:minmax(0,1fr);gap:56px;align-items:start}
 .hero>div:first-child{display:grid;grid-template-columns:auto minmax(0,1fr);gap:56px;align-items:end}
 .hero>div:first-child .hp{justify-self:end;max-width:36ch;margin-bottom:12px}}
+
+/* Header buttons on computers and tablets; a button row at the top of home on phones; home starts at last night's games (Nov 15) */
+.hdpills{display:none;gap:8px;margin-right:8px}
+@media(min-width:900px){.hdpills{display:flex}}
+.hdpills .pill.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.homepills{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -20px;padding:2px 20px 4px}
+.homepills::-webkit-scrollbar{display:none}.homepills .pill{flex:none}
+@media(min-width:900px){.homepills{display:none}}
+@media(max-width:899px){.homepills{margin-bottom:-36px}}
