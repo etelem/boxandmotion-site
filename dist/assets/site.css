@@ -746,8 +746,7 @@ body.cs-lock{overflow:hidden}
 @media(max-width:959px){.top .w{position:relative}
   .mmenu{position:absolute;right:20px;top:4px;width:min(240px,calc(100vw - 40px));z-index:40;margin:0}}
 
-/* Home sections (owner's call, Nov 15): every section opens with a black line, an orange dot + label, then the headline; small orange text link on the label row */
-main.w>.sec{border-top:1px solid var(--ink);padding-top:16px}
+/* Home sections (owner's call, Nov 15; lines dropped the same day): every section opens with an orange dot + label, then the headline; small orange text link on the label row */
 .sh2{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 12px}
 .sec .sh2 .k,.fifty .k{color:var(--ink)}
 .sec .sh2 .k::before,.fifty .k::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--or);margin-right:9px;vertical-align:1px}
@@ -757,7 +756,7 @@ main.w>.sec{border-top:1px solid var(--ink);padding-top:16px}
 /* 50-point nights on a dark panel (Nov 15): no glow, solid white cards */
 .fifty .k{color:rgba(255,255,255,.72)}.fifty .h2{color:#fff}.fifty .lead{color:rgba(255,255,255,.75)}
 .fifty .stat{background:#fff;border-color:#fff}
-main.w:has(>.sec){gap:44px}
+main.w:has(>.sec){gap:64px}
 
 /* Sunday Box band in the logo's style (Nov 15): white, thick black rounded frame, X ··· O play across the top, orange "box." and button */
 .closer.logo{background:#fff;color:var(--ink);border:6px solid var(--ink);border-radius:36px}
@@ -766,3 +765,8 @@ main.w:has(>.sec){gap:44px}
 .closer.logo .pill.wht{background:var(--or);border-color:var(--or);color:#fff}
 .closer.logo .pill.wht:hover{background:var(--or-ink);border-color:var(--or-ink)}
 @media(min-width:960px){.closer.logo .play{grid-column:1/-1}}
+
+/* Last night's games gets the same header as the other home sections (Nov 15) */
+.lastn .sh2 .k{color:var(--ink)}
+.lastn .sh2 .k::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--or);margin-right:9px;vertical-align:1px}
+.lastn>.h2{margin:8px 0 18px}
