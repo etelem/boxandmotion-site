@@ -406,17 +406,18 @@ home = f'''<section class="hero">
 </div>
 <div><p class="k" style="margin:0 0 12px">Last night’s games · {WEEKDAY(LAST_DATE)}</p><div class="gtabs" role="tablist">{tabs}</div>{heroes}</div>
 </section>
-<section class="nums">
+<section class="sec"><div class="sh2"><p class="k">Start here</p></div><h2 class="h2">Four ways in.</h2>
+<div class="nums">
 <a class="num" href="last-night/index.html"><div class="t"><span>01</span><span>↗</span></div><div><b>Last night</b><p>Every game, the story and the play that decided it.</p></div></a>
 <a class="num" href="your-team/index.html"><div class="t"><span>02</span><span>↗</span></div><div><b>Your team</b><p>Pick your teams. They show up first, in their colors.</p></div></a>
 <a class="num" href="learn/index.html"><div class="t"><span>03</span><span>↗</span></div><div><b>Learn the game</b><p>Moves and plays, drawn step by step.</p></div></a>
 <a class="num" href="{NEWSLETTER}"><div class="t"><span>04</span><span>↗</span></div><div><b>The Sunday Box</b><p>The week in one email.</p></div></a>
-</section>
-{f"""<section><div class="shead"><div><p class="k">Tonight · {E(TONIGHT_DAY)} · times ET</p><h2 class="h2">On the schedule.</h2></div><a class="pill sm" href="odds/index.html">What’s at stake →</a></div>
+</div></section>
+{f"""<section class="sec"><div class="sh2"><p class="k">Tonight · {E(TONIGHT_DAY)} · times ET</p><a class="more" href="odds/index.html">What’s at stake →</a></div><h2 class="h2">On the schedule.</h2>
 <div class="tonight">{tonight}</div></section>""" if tonight else ""}
 {f"""<section class="fifty"><div><p class="k">The 50-point nights</p><h2 class="h2">Big nights and<br>signature moves.</h2><p class="lead">Tap a card for the game he went off in, or ▶ for his signature move.</p></div>
 <div class="stack">{big_cards}</div></section>""" if BIG else ""}
-<section><div class="shead"><div><p class="k">Learn the game</p><h2 class="h2">New in the library.</h2></div><a class="pill sm" href="learn/index.html">See all {len(LEARN)} →</a></div>
+<section class="sec"><div class="sh2"><p class="k">Learn the game</p><a class="more" href="learn/index.html">See all {len(LEARN)} →</a></div><h2 class="h2">New in the library.</h2>
 <div class="rail">{"".join(learn_card(R, x) for x in LEARN[:4])}</div></section>
 {closer(R)}'''
 page("index.html", "Box & Motion Hoops: every NBA game, more than the box score", home)
