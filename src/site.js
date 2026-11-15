@@ -345,15 +345,18 @@ window.addEventListener('message', function (e) {
   var cs=document.querySelector('[data-flow]'), b=cs&&cs.querySelector('[data-flowsnd]'); if(!b) return;
   var a=null, on=false, inView=false, fadeT=null;
   try{ on=localStorage.getItem('bm_flowmusic')==='on'; }catch(e){}
-  function fade(to,done){ clearInterval(fadeT); fadeT=setInterval(function(){ var v=a.volume+(to>a.volume?.05:-.05);
-      if(Math.abs(to-v)<.05){ a.volume=to; clearInterval(fadeT); if(done) done(); } else a.volume=Math.max(0,Math.min(1,v)); },40); }
+  // iPhones ignore audio.volume (it stays at 1), so a fade there can never "arrive": count steps instead and always finish (Nov 15 fix)
+  function fade(to,done){ clearInterval(fadeT); var from=a.volume, n=0;
+    fadeT=setInterval(function(){ n++; try{ a.volume=Math.max(0,Math.min(1,from+(to-from)*n/12)); }catch(e){}
+      if(n>=12){ clearInterval(fadeT); if(done) done(); } },35); }
   function play(){ if(!a){ a=new Audio(b.getAttribute('data-flowsnd')); a.loop=true; a.volume=0; }
     var p=a.play(); if(p&&p.catch) p.catch(function(){}); fade(.55); }
   function stop(){ if(a&&!a.paused) fade(0,function(){ a.pause(); }); }
   function paint(){ b.setAttribute('aria-pressed',on?'true':'false'); b.setAttribute('aria-label',on?'Turn music off':'Turn music on');
     b.classList.toggle('on',on); b.querySelector('.t').textContent=on?'Music on':'Music'; }
   function sync(){ (on&&inView&&!document.hidden)?play():stop(); }
-  b.addEventListener('click',function(){ on=!on; try{ localStorage.setItem('bm_flowmusic',on?'on':'off'); }catch(e){} paint(); sync(); });
+  b.addEventListener('click',function(){ on=!on; try{ localStorage.setItem('bm_flowmusic',on?'on':'off'); }catch(e){} paint();
+    if(!on&&a){ clearInterval(fadeT); a.pause(); } else sync(); });
   // a reader who turned music on before gets it back on their first tap in the story (the browser needs a tap)
   cs.addEventListener('pointerdown',function(e){ if(on&&inView&&(!a||a.paused)&&!b.contains(e.target)) play(); },{passive:true});
   if('IntersectionObserver' in window){
