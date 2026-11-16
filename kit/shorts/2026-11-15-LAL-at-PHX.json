@@ -1,0 +1,49 @@
+{
+  "out": "short-2026-11-15-LAL-PHX.html",
+  "team": "LAL",
+  "home": false,
+  "number": "5",
+  "player": "Quentin Grimes",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 0.9872,
+    "ape": 1.039,
+    "mass": 0.9876
+  },
+  "build_note": "Listed 6-5, 207 lb (Wikipedia); 6-8 wingspan at the 2021 combine (NBADraft.net)",
+  "kicker": "LAKERS 131 · SUNS 123 · NOV 15",
+  "hook": [
+    "Grimes banks it in",
+    "to stop the comeback"
+  ],
+  "clock": "Q4 · 0:32",
+  "us": "LAL",
+  "them": "PHX",
+  "score_before": [126, 121],
+  "score_make": [129, 121],
+  "score_ft": [129, 121],
+  "stamp": "DAGGER",
+  "beat": [
+    "Phoenix cut it from 31 to 5.",
+    "Lakers by 8, 32 seconds left."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Lakers",
+    "them": "Suns",
+    "us_pts": 131,
+    "them_pts": 123
+  },
+  "star": {
+    "name": "Luka Dončić",
+    "big": 43,
+    "big_label": "points",
+    "lines": [
+      "9 assists, 20 in the 1st quarter",
+      "Grimes: 22 on 5 of 6 from three"
+    ]
+  },
+  "story": "The Lakers' eighth straight win. Phoenix won the fourth quarter 43–27.",
+  "aria": "Original illustration of Quentin Grimes' pull-up 3-pointer off the glass with 32 seconds left that put the Lakers up 129–121 against the Suns in a 131–123 win, after Phoenix cut a 31-point lead to 5. Not traced from footage, not to scale."
+}

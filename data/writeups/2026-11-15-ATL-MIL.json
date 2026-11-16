@@ -1,0 +1,109 @@
+{
+ "headline": "Hawks erase a 22-point deficit in Milwaukee",
+ "dek": "Down 22 early, the Hawks came all the way back.",
+ "three": [
+  [
+   "McCollum: 20 points, 9 of 9 at the line",
+   "He scored Atlanta’s last 9 points and had 4 steals."
+  ],
+  [
+   "Hawks were down 22 early, then won the 2nd quarter 37–16",
+   "McCollum and Alexander-Walker scored 20 each."
+  ],
+  [
+   "Won it at the line and in transition",
+   "Free throws made 25–14; fast-break points 25–14. Milwaukee had 20 turnovers."
+  ]
+ ],
+ "battle": [
+  [
+   "Free throws made",
+   25,
+   14
+  ],
+  [
+   "Fast-break points",
+   25,
+   14
+  ],
+  [
+   "Points in the paint",
+   38,
+   32
+  ],
+  [
+   "Turnovers forced",
+   20,
+   17
+  ]
+ ],
+ "battle_labels": [
+  "ATL",
+  "MIL"
+ ],
+ "top": [
+  [
+   "Nickeil Alexander-Walker",
+   "ATL",
+   "7 of 15, 5 reb, 4 ast",
+   20
+  ],
+  [
+   "CJ McCollum",
+   "ATL",
+   "9 of 9 at the line, 4 steals",
+   20
+  ],
+  [
+   "Onyeka Okongwu",
+   "ATL",
+   "11 reb, 3 threes",
+   16
+  ],
+  [
+   "Corey Kispert",
+   "ATL",
+   "off the bench, 3 threes",
+   14
+  ]
+ ],
+ "linescore": {
+  "away": [
+   18,
+   37,
+   32,
+   26
+  ],
+  "home": [
+   37,
+   16,
+   27,
+   26
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-15-ATL-at-MIL.json",
+ "loser": {
+  "top": [
+   [
+    "Kasparas Jakucionis",
+    "MIL",
+    "career high · 4 threes, 3 steals",
+    25
+   ],
+   [
+    "Gary Trent Jr.",
+    "MIL",
+    "4 of 12 from three",
+    18
+   ],
+   [
+    "Kyle Kuzma",
+    "MIL",
+    "3 of 6 from three",
+    14
+   ]
+  ],
+  "source": "box score"
+ }
+}

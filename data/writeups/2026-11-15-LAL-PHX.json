@@ -1,0 +1,109 @@
+{
+ "headline": "Luka scores 43 as the Lakers hold off Phoenix",
+ "dek": "Luka scored 43. The Lakers led by 31, then held on.",
+ "three": [
+  [
+   "Luka: 43 points, 9 assists",
+   "20 in the first quarter, 12 of 14 at the line."
+  ],
+  [
+   "Lakers up 10 at the half, held off Phoenix’s 43–27 fourth",
+   "Luka and Grimes combined for 65 of 131."
+  ],
+  [
+   "Won it from three and at the line",
+   "Threes made 16–13; free throws made 29–24. Phoenix’s bench scored 78."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   16,
+   13
+  ],
+  [
+   "Free throws made",
+   29,
+   24
+  ],
+  [
+   "Steals",
+   11,
+   4
+  ],
+  [
+   "Blocks",
+   8,
+   3
+  ]
+ ],
+ "battle_labels": [
+  "LAL",
+  "PHX"
+ ],
+ "top": [
+  [
+   "Luka Dončić",
+   "LAL",
+   "9 ast, 12 of 14 at the line",
+   43
+  ],
+  [
+   "Quentin Grimes",
+   "LAL",
+   "5 of 6 from three, season-high 5 threes",
+   22
+  ],
+  [
+   "Collin Sexton",
+   "LAL",
+   "off the bench, 6 of 11",
+   16
+  ],
+  [
+   "Walker Kessler",
+   "LAL",
+   "12 reb, 6 offensive",
+   14
+  ]
+ ],
+ "linescore": {
+  "away": [
+   33,
+   31,
+   40,
+   27
+  ],
+  "home": [
+   24,
+   30,
+   26,
+   43
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-15-LAL-at-PHX.json",
+ "loser": {
+  "top": [
+   [
+    "Collin Gillespie",
+    "PHX",
+    "5 of 10 from three",
+    26
+   ],
+   [
+    "Luke Kennard",
+    "PHX",
+    "3 threes · 6 reb",
+    18
+   ],
+   [
+    "Devin Booker",
+    "PHX",
+    "7 ast · 9 of 9 at the line",
+    17
+   ]
+  ],
+  "source": "box score"
+ }
+}

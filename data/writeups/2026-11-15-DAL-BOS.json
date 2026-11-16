@@ -1,0 +1,109 @@
+{
+ "headline": "Tatum scores 32 after a 42–9 first quarter",
+ "dek": "42–9 after one quarter, and Tatum scored 32.",
+ "three": [
+  [
+   "Tatum: 32 points in 30 minutes",
+   "21 in the third quarter, then sat the fourth."
+  ],
+  [
+   "Celtics up 33 after one, led by as many as 41",
+   "Six Celtics scored 10 or more."
+  ],
+  [
+   "Won it from three and on the glass",
+   "Threes made 23–14; rebounds 52–38. Dallas scored 9 in the first quarter."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   23,
+   14
+  ],
+  [
+   "Rebounds",
+   52,
+   38
+  ],
+  [
+   "Assists",
+   34,
+   27
+  ],
+  [
+   "Second-chance points",
+   29,
+   16
+  ]
+ ],
+ "battle_labels": [
+  "BOS",
+  "DAL"
+ ],
+ "top": [
+  [
+   "Jayson Tatum",
+   "BOS",
+   "21 in the 3rd, 6 reb, 6 ast",
+   32
+  ],
+  [
+   "Derrick White",
+   "BOS",
+   "4 threes, 6 of 11",
+   16
+  ],
+  [
+   "Baylor Scheierman",
+   "BOS",
+   "off the bench, 5 reb",
+   12
+  ],
+  [
+   "Jordan Walsh",
+   "BOS",
+   "2 threes, and-one in the 1st",
+   11
+  ]
+ ],
+ "linescore": {
+  "away": [
+   9,
+   28,
+   34,
+   23
+  ],
+  "home": [
+   42,
+   25,
+   37,
+   27
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-15-DAL-at-BOS.json",
+ "loser": {
+  "top": [
+   [
+    "Zaccharie Risacher",
+    "DAL",
+    "off the bench · 8 of 9",
+    18
+   ],
+   [
+    "Cooper Flagg",
+    "DAL",
+    "5 of 15 · 5 of 5 at the line",
+    17
+   ],
+   [
+    "Naji Marshall",
+    "DAL",
+    "3 of 5 from three",
+    13
+   ]
+  ],
+  "source": "box score"
+ }
+}
