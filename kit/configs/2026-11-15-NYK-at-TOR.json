@@ -1,0 +1,185 @@
+{
+  "team": "NYK",
+  "D": "  const D = {\n    date: 'Sun, Nov 15, 2026',\n    us: 112, them: 108, record: '7–6', usName: 'Knicks', themName: 'Raptors',\n    quarters: [[23, 17], [24, 26], [20, 31], [28, 21]],\n    leadUs: 10, leadThem: 13,\n    star: {name: 'Karl-Anthony Towns', stats: [['Points', 28, 30], ['Rebounds', 17, 20], ['Assists', 3, 5]]},\n    scorers: [\n      {name: 'Karl-Anthony Towns', pts: 28, note: '17 rebounds · 10 of 21'},\n      {name: 'Jalen Brunson', pts: 28, note: '9 assists · the go-ahead three in OT'},\n      {name: 'Landry Shamet', pts: 23, note: 'off the bench · 4 of 7 from three'},\n      {name: 'OG Anunoby', pts: 21, note: '9 rebounds · 7 of 8 FT'},\n      {name: 'Mikal Bridges', pts: 5, note: '7 rebounds · 2 steals'},\n    ],\n    edges: [\n      {label: 'Free throws made', us: 23, them: 11},\n      {label: 'Threes made', us: 13, them: 11},\n      {label: 'Steals', us: 9, them: 6},\n      {label: 'Blocks', us: 5, them: 4},\n    ],\n    gaps: [\n      {label: 'Field goals made', us: 38, them: 43},\n    ],\n    next: {opp: 'at Raptors', when: 'Tue, Nov 17, 7:30 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Jalen Brunson's corner 3-pointer off an inbounds pass from Mikal Bridges with 33 seconds left in overtime that broke a 106–106 tie. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Brunson from the corner",
+    "subP": "Brunson in the corner, 33 seconds left in OT",
+    "subL": "Jalen Brunson from the corner with 33 seconds left in overtime",
+    "m0": "Tied",
+    "m1": "Knicks +3",
+    "num": "11",
+    "cap1": "Brunson from the corner. Knicks by 3.",
+    "cap2": "109–106 with 33 seconds left in OT.",
+    "clock": [
+      35,
+      33
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Knicks vs Raptors Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Knicks 112, Raptors 108 (OT) · Nov 15, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Knicks vs.', 'Raptors'] : ['Knicks vs. Raptors']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Down 13 in the 4th.', 'Won it in OT.'] : ['Down 13 in the fourth, the Knicks won in overtime; Jalen Brunson’s corner three put them ahead for good.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Knicks improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'14 straight wins over Toronto'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Knicks down 7 after three,', 'won overtime 17–13'] : ['Knicks down 7 after three, then won overtime 17–13']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Knicks ${D.leadUs}, Raptors ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin in each quarter, then the game score after it.",
+      "Knicks’ margin underneath. OT: 17–13."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Towns: 28', 'and 17 rebounds'] : ['Towns: 28 points and 17 rebounds']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['On his 31st birthday.', 'Double-double in all 13.'] : ['On his 31st birthday, with a double-double in all 13 games this season.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Towns and Brunson:', '56 of the 112'] : ['Towns and Brunson combined for 56 of 112']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 30;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it at the line', 'and from three'] : ['Won it at the line and from three']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Knicks in blue, Raptors in gray. Toronto', 'made 11 of 19 free throws.'] : ['Knicks in blue, Raptors in gray. Toronto made 11 of 19 free throws.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'6th in the East'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Raptors’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '5–8';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Same two teams Tuesday in Toronto.', 'Snapped a 2-game losing streak.'] : ['Same two teams again Tuesday in Toronto. The Knicks snapped a 2-game losing streak.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Knicks 112 · Raptors 108 · OT · Nov 15'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Corner three'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Towns'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 60;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - 375 * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+      "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+    ],
+    [
+      "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+      "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+    ],
+    [
+      "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+      "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+3', 'd w', 72, 'end');"
+    ],
+    [
+      "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+      "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "T(board, bx + 24, by + 38, 'OT', 'b m', 24);"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 160, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 192, ly, D.themName"
+    ]
+  ],
+  "aria": "Animated recap of the Knicks' 112 to 108 overtime road win over the Raptors: Jalen Brunson's corner 3-pointer with 33 seconds left in overtime that broke a 106 to 106 tie, quarter-by-quarter scoring, Karl-Anthony Towns' 28 points and 17 rebounds, the top scorers, how the Knicks won, and the next game.",
+  "figure": {
+    "player": "Jalen Brunson",
+    "home": false,
+    "tall": 0.9487,
+    "ape": 1.027,
+    "mass": 0.9651,
+    "label": "Jalen Brunson, listed 6-2, 190 lb, 6-4 wingspan (2018 combine)"
+  },
+  "loser_top": [
+    [
+      "Scottie Barnes",
+      30,
+      "13 of 27 · tied it with 13.6 left in the 4th"
+    ],
+    [
+      "Jamal Shead",
+      19,
+      "off the bench · 7 of 12"
+    ]
+  ],
+  "notes": [
+    "Box score from the Knicks' 112–108 overtime road win over the Toronto Raptors at Scotiabank Arena on Nov 15, 2026, from the CBS Sports box score and play-by-play, with game details from The Canadian Press (via CFJC Today), the Associated Press (via CBS New York), Field Level Media (via Yardbarker), the New York Post and the Toronto Sun (both via Yahoo Sports), and ClutchPoints. All 112 New York points and all 108 Toronto points are accounted for in the box score, and the period scores (23–24–20–28–17 to 17–26–31–21–13) add up to both totals: 47–43 New York at the half, 74–67 Toronto after three and 95–95 after regulation. Team totals (free throws 23 of 28 to 11 of 19, threes 13 of 36 to 11 of 35, steals 9–6, blocks 5–4, field goals 38 of 87 to 43 of 98) are from CBS. Toronto's biggest lead, 13 at 84–71 with 8:55 left, is from Field Level Media, the New York Post and AP (The Canadian Press says 12); New York's biggest lead, 10 in the second quarter, is from the CBS play-by-play. Records and ranks are from the site's standings after Sunday's games: New York 7–6 and 6th in the East, Toronto 5–8.",
+    "The Knicks closed regulation on a 7–0 run to lead 92–90, and Towns' three with 19.7 seconds left made it 95–92 before Scottie Barnes tied it with a 27-foot three with 13.6 seconds left (The Canadian Press; the CBS play-by-play). New York won overtime 17–13. Karl-Anthony Towns, 31 on game day (born Nov 15, 1995, RealGM), has a double-double in all 13 games this season (Field Level Media). New York has won 14 straight against Toronto (AP; The Canadian Press) and snapped a two-game losing streak; Toronto has lost four straight (Toronto Sun). Barnes returned from a four-game absence with a groin strain and scored 30 (The Canadian Press). The same teams meet again in Toronto on Tuesday, Nov 17 at 7:30 PM ET (Covers schedules; The Canadian Press).",
+    "The play of the game is an original illustration of Jalen Brunson's 3-pointer from the left corner off an inbounds pass from Mikal Bridges under the basket, right after a Knicks timeout, that broke a 106–106 tie with 33 seconds left in overtime (Field Level Media; New York Post; the CBS play-by-play gives the clock and score). It is drawn as the template's plain catch-and-shoot from the corner; the fade and the defender are not drawn to the exact positions. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the New York Knicks or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Jalen Brunson's listed 6-foot-2 and 190 pounds with No. 11 (RealGM), arms scaled to the 6-foot-4 wingspan measured at the 2018 draft combine (VU Hoops), in New York's road blue with his approved look. It is an original figure with a featureless face, not a portrait or a trace of footage."
+  ]
+}
