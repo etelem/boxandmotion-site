@@ -87,6 +87,17 @@
  ],
  "trends": [
   {
+   "config": "kit/trends/2026-11-16-lal.json",
+   "data": "kit/trends/2026-11-16-standings.csv",
+   "anim": "trend-lakers-for-real.html",
+   "slug": "lakers-are-they-for-real",
+   "team": "LAL",
+   "title": "Lakers are 12-2. Are they for real?",
+   "short": "Are the Lakers for real?",
+   "published": "2026-11-16T09:15",
+   "dek": "Tied for the West's best record and +7.9 a game, with no win closer than 5 points. The catch: the defense."
+  },
+  {
    "config": "kit/trends/2026-11-12-phi.json",
    "data": "kit/trends/2026-11-12-standings.csv",
    "anim": "trend-76ers-for-real.html",

@@ -1,0 +1,96 @@
+{
+ "team": "LAL",
+ "compare": [
+  "SAS"
+ ],
+ "kicker": "GOOD OR LUCKY? \u00b7 THROUGH NOV 15",
+ "hook": [
+  "Lakers are 12-2.",
+  "Are they for real?"
+ ],
+ "line_in": 5.9,
+ "loop_start": 0.45,
+ "total": 22.0,
+ "beats": [
+  {
+   "t": [
+    0.9,
+    5.6
+   ],
+   "zoom": true,
+   "teams": [
+    "LAL"
+   ],
+   "kicker": "THE RECORD",
+   "title": "Tied for best in the West",
+   "text": "Only San Antonio (12-2) matches it."
+  },
+  {
+   "t": [
+    5.8,
+    11.0
+   ],
+   "zoom": true,
+   "gap": true,
+   "teams": [
+    "LAL",
+    "SAS"
+   ],
+   "kicker": "THE MARGIN",
+   "title": "Winning by 7.9 a game",
+   "text": "122.8 scored, 114.9 allowed. San Antonio, also 12-2, is +12.9."
+  },
+  {
+   "t": [
+    11.2,
+    16.6
+   ],
+   "panel": true,
+   "kicker": "THE REASON",
+   "title": "No coin-flip wins",
+   "text": ""
+  },
+  {
+   "t": [
+    16.8,
+    21.6
+   ],
+   "teams": [
+    "LAL"
+   ],
+   "gap": true,
+   "kicker": "THE VERDICT",
+   "title": "For real",
+   "text": "No close-game luck. The catch: 114.9 allowed, 18th."
+  }
+ ],
+ "panel": {
+  "kicker": "ALL 14 GAMES, GROUPED",
+  "groups": [
+   {
+    "n": 6,
+    "fill": "#FF5A1F",
+    "ink": "#ffffff",
+    "mark": "W",
+    "label": "Won by 10 or more: 6"
+   },
+   {
+    "n": 6,
+    "fill": "#16181d",
+    "ink": "#ffffff",
+    "mark": "W",
+    "label": "Won by 5 to 9: 6"
+   },
+   {
+    "n": 2,
+    "fill": "#ffffff",
+    "stroke": "#c9ccd2",
+    "ink": "#8a8f99",
+    "mark": "L",
+    "label": "Losses: by 7 and 17"
+   }
+  ],
+  "note": "Not one win by fewer than 5 points."
+ },
+ "sources": "Records and point differential: CBS Sports standings through Nov 15, checked against Fox Sports and our own game data. Game scores: CBS Sports Lakers schedule. Line: best fit through all 30 teams."
+}

@@ -17,7 +17,8 @@ FONTS = ''.join(f"@font-face{{font-family:'{fam}';font-weight:{w};src:url(data:f
                                        ('IBM Plex Sans', 600, 'ibm-plex-sans', 'ibm-plex-sans-latin-600-normal.woff2'),
                                        ('IBM Plex Mono', 500, 'ibm-plex-mono', 'ibm-plex-mono-latin-500-normal.woff2')])
 X0, X1, Y0, Y1 = 62, 512, 372, 790
-DMIN, DMAX, PMIN, PMAX = -17, 13, 0.0, 1.0
+DMIN, PMIN, PMAX = -17, 0.0, 1.0
+DMAX = max(13, max(float(r['diff']) for r in rows) + 2.5)   # widen the right edge when a team is past +10.5 so its dot isn't clipped
 px = lambda d: X0 + (d - DMIN) / (DMAX - DMIN) * (X1 - X0)
 py = lambda p: Y1 - (p - PMIN) / (PMAX - PMIN) * (Y1 - Y0)
 pts = []
@@ -36,8 +37,8 @@ for _ in range(300):   # nudge overlapping dots a few px apart
 n = len(pts); mx = sum(p['d'] for p in pts) / n; my = sum(p['p'] for p in pts) / n
 slope = sum((p['d'] - mx) * (p['p'] - my) for p in pts) / sum((p['d'] - mx) ** 2 for p in pts); icpt = my - slope * mx
 for p in pts: p['fit'] = py(icpt + slope * p['d'])
-DATA = {'pts': pts, 'line': [[px(d), py(icpt + slope * d)] for d in (-16, 12.5)], 'box': [X0, X1, Y0, Y1], 'zero': [px(0), py(.5)],
-        'xt': [[px(v), ('+' if v > 0 else '') + str(v)] for v in (-15, -10, -5, 0, 5, 10)],
+DATA = {'pts': pts, 'line': [[px(d), py(icpt + slope * d)] for d in (-16, DMAX - .5)], 'box': [X0, X1, Y0, Y1], 'zero': [px(0), py(.5)],
+        'xt': [[px(v), ('+' if v > 0 else '') + str(v)] for v in (-15, -10, -5, 0, 5, 10, 15) if v <= DMAX - 1],
         'yt': [[py(v), '1.000' if v == 1 else f'.{int(round(v * 1000)):03d}'] for v in (0, .25, .5, .75, 1)], **cfg}
 
 HTML = r"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -102,7 +103,7 @@ html,body{margin:0;background:#f4f4f2}.wrap{width:540px;height:960px;margin:0 au
   const gp = S('g', {}, sv); S('rect', {x: M - 8, y: Y0 - 20, width: 540 - 2 * M + 16, height: Y1 - Y0 + 70, rx: 14, fill: '#fff', stroke: '#e3e4e8'}, gp);
   T(gp, M + 10, Y0 + 18, D.panel.kicker, 'k', 13);
   const boxes = [], G = D.panel.groups; let gi = 0;
-  const bw = 66, bh = 66, gapx = 12, cols = 6, bx0 = (540 - (cols * bw + (cols - 1) * gapx)) / 2, by0 = Y0 + 46;
+  const nb = G.reduce((a, g) => a + g.n, 0), gapx = 12, cols = Math.max(6, Math.ceil(nb / 2)), bw = Math.min(66, Math.floor((480 - (cols - 1) * gapx) / cols)), bh = bw, bx0 = (540 - (cols * bw + (cols - 1) * gapx)) / 2, by0 = Y0 + 46;
   G.forEach((grp) => { for (let k = 0; k < grp.n; k++, gi++) { const c = gi % cols, r = Math.floor(gi / cols), x = bx0 + c * (bw + gapx), y = by0 + r * (bh + 16);
     const g = S('g', {transform: `translate(${x},${y})`}, gp);
     S('rect', {width: bw, height: bh, rx: 10, fill: grp.fill, stroke: grp.stroke || 'none', 'stroke-width': 2}, g);
