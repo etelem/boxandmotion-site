@@ -1,0 +1,105 @@
+{
+ "headline": "Knicks come back from 13 down to win in overtime",
+ "dek": "Down 13 in the fourth, the Knicks won in overtime; Jalen Brunson’s corner three put them ahead for good.",
+ "three": [
+  [
+   "Towns: 28 points and 17 rebounds",
+   "On his 31st birthday, with a double-double in all 13 games this season."
+  ],
+  [
+   "Knicks down 7 after three, then won overtime 17–13",
+   "Towns and Brunson combined for 56 of 112."
+  ],
+  [
+   "Won it at the line and from three",
+   "Free throws made 23–11; threes made 13–11. Toronto made 11 of 19 free throws."
+  ]
+ ],
+ "battle": [
+  [
+   "Free throws made",
+   23,
+   11
+  ],
+  [
+   "Threes made",
+   13,
+   11
+  ],
+  [
+   "Steals",
+   9,
+   6
+  ],
+  [
+   "Blocks",
+   5,
+   4
+  ]
+ ],
+ "battle_labels": [
+  "NYK",
+  "TOR"
+ ],
+ "top": [
+  [
+   "Karl-Anthony Towns",
+   "NYK",
+   "17 rebounds, 10 of 21",
+   28
+  ],
+  [
+   "Jalen Brunson",
+   "NYK",
+   "9 assists, the go-ahead three in OT",
+   28
+  ],
+  [
+   "Landry Shamet",
+   "NYK",
+   "off the bench, 4 of 7 from three",
+   23
+  ],
+  [
+   "OG Anunoby",
+   "NYK",
+   "9 rebounds, 7 of 8 FT",
+   21
+  ]
+ ],
+ "linescore": {
+  "away": [
+   23,
+   24,
+   20,
+   28,
+   17
+  ],
+  "home": [
+   17,
+   26,
+   31,
+   21,
+   13
+  ],
+  "ot": true
+ },
+ "source": "kit/configs/2026-11-15-NYK-at-TOR.json",
+ "loser": {
+  "top": [
+   [
+    "Scottie Barnes",
+    "TOR",
+    "13 of 27 · tied it with 13.6 left in the 4th",
+    30
+   ],
+   [
+    "Jamal Shead",
+    "TOR",
+    "off the bench · 7 of 12",
+    19
+   ]
+  ],
+  "source": "box score"
+ }
+}

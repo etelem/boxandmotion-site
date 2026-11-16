@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-15-NYK-TOR.html",
+  "team": "NYK",
+  "home": false,
+  "number": "11",
+  "player": "Jalen Brunson",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 0.9487,
+    "ape": 1.027,
+    "mass": 0.9652
+  },
+  "build_note": "Listed 6-2, 190 lb (RealGM); 6-4 wingspan at the 2018 draft combine (VU Hoops)",
+  "kicker": "KNICKS 112 · RAPTORS 108 · OT · NOV 15",
+  "hook": [
+    "Brunson in the corner,",
+    "33 left in OT, tied"
+  ],
+  "clock": "OT · 0:33",
+  "us": "NYK",
+  "them": "TOR",
+  "score_before": [
+    106,
+    106
+  ],
+  "score_make": [
+    109,
+    106
+  ],
+  "stamp": "THREE",
+  "beat": [
+    "The lead for good,",
+    "after trailing by 13 in the 4th."
+  ],
+  "final": {
+    "label": "FINAL · OT",
+    "us": "Knicks",
+    "them": "Raptors",
+    "us_pts": 112,
+    "them_pts": 108
+  },
+  "star": {
+    "name": "Jalen Brunson",
+    "big": 28,
+    "big_label": "points, 9 assists",
+    "lines": [
+      "Towns: 28 and 17 on his birthday",
+      "14 straight wins over Toronto"
+    ]
+  },
+  "story": "Toronto led by 13 in the fourth and Scottie Barnes forced overtime. Brunson's corner three put New York ahead for good, 112–108.",
+  "aria": "Animated Short: Jalen Brunson's corner 3-pointer off an inbounds pass with 33 seconds left in overtime that broke a 106–106 tie. Knicks win 112–108 in overtime. An original illustration, not traced from footage, not to scale."
+}

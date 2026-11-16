@@ -1,0 +1,98 @@
+{
+ "headline": "Clippers rally past Hornets behind Garland's 27",
+ "dek": "Darius Garland scored 27 and the Clippers came back from 13 down.",
+ "three": [
+  [
+   "Garland: 27 points on 10 of 18",
+   "7 assists, 6 rebounds and 3 of 7 from three."
+  ],
+  [
+   "Clippers down 1 at the half, then won the fourth quarter 29–22",
+   "The Clippers’ bench scored 55 of 113."
+  ],
+  [
+   "Won it in the paint and with the pass",
+   "Assists 32–23; points in the paint 42–36. Charlotte outrebounded L.A. 46–37."
+  ]
+ ],
+ "battle": [
+  [
+   "Assists",
+   32,
+   23
+  ],
+  [
+   "Points in the paint",
+   42,
+   36
+  ],
+  [
+   "Rebounds",
+   37,
+   46
+  ]
+ ],
+ "battle_labels": [
+  "LAC",
+  "CHA"
+ ],
+ "top": [
+  [
+   "Darius Garland",
+   "LAC",
+   "10 of 18, 7 assists",
+   27
+  ],
+  [
+   "Max Strus",
+   "LAC",
+   "off the bench, 4 of 5 from three",
+   14
+  ],
+  [
+   "Derrick Jones Jr.",
+   "LAC",
+   "5 of 5, 3 of 3 from three",
+   13
+  ],
+  [
+   "Isaiah Jackson",
+   "LAC",
+   "off the bench, 3 blocks",
+   13
+  ]
+ ],
+ "linescore": {
+  "away": [
+   21,
+   31,
+   31,
+   22
+  ],
+  "home": [
+   22,
+   29,
+   33,
+   29
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-15-CHA-at-LAC.json",
+ "loser": {
+  "top": [
+   [
+    "Coby White",
+    "CHA",
+    "7 of 13 · 16 in under six minutes of the 3rd",
+    21
+   ],
+   [
+    "Naz Reid",
+    "CHA",
+    "7 of 20 · 3 of 11 from three",
+    17
+   ]
+  ],
+  "source": "box score"
+ }
+}
