@@ -1,0 +1,166 @@
+{
+  "team": "SAS",
+  "D": "  const D = {\n    date: 'Sun, Nov 15, 2026',\n    us: 110, them: 102, record: '12–2', usName: 'Spurs', themName: 'Jazz',\n    quarters: [[31, 33], [27, 22], [23, 26], [29, 21]],\n    leadUs: 10, leadThem: 10,\n    star: {name: 'Dylan Harper', stats: [['Points (career high)', 31, 35], ['Rebounds', 9, 10], ['Assists', 4, 5]]},\n    scorers: [\n      {name: 'Dylan Harper', pts: 31, note: '12 of 23 · 18 in the 4th · career high'},\n      {name: 'Victor Wembanyama', pts: 26, note: '10 rebounds · 6 assists · 5 blocks'},\n      {name: 'Stephon Castle', pts: 20, note: '9 assists · 4 steals · 8 of 9 FT'},\n      {name: 'Keldon Johnson', pts: 11, note: '10 rebounds · 4 of 5'},\n      {name: 'Jordan McLaughlin', pts: 10, note: 'off the bench · 4 of 5'},\n    ],\n    edges: [\n      {label: 'Fast-break points', us: 27, them: 5},\n      {label: 'Free throws made', us: 18, them: 3},\n      {label: 'Steals', us: 12, them: 7},\n      {label: 'Rebounds', us: 48, them: 40},\n    ],\n    gaps: [\n      {label: 'Threes made', us: 10, them: 17},\n    ],\n    next: {opp: 'vs Pistons', when: 'Tue, Nov 17, 8:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Victor Wembanyama's pull-up jumper with 1:42 left that broke a 102-102 tie and started the Spurs' 8-0 finish. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Wemby for the lead",
+    "subP": "Wembanyama pulls up, 1:42 left",
+    "subL": "Wembanyama’s pull-up jumper with 1:42 left, tied at 102",
+    "m0": "Tied",
+    "m1": "Spurs +2",
+    "num": "1",
+    "cap1": "Wembanyama for the lead. Spurs by 2.",
+    "cap2": "Then the last 8 points: 110–102.",
+    "clock": [
+      110,
+      102
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Spurs at Jazz Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Spurs 110, Jazz 102 · Nov 15, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Spurs at', 'Jazz'] : ['Spurs at Jazz']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Harper 31, the last 8', 'points: twelve straight.'] : ['Dylan Harper scored a career-high 31 and the Spurs scored the last 8 points for their 12th straight win.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Spurs improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'12th straight win'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Spurs up 3 at the half,', 'closed on an 8–0 run'] : ['Spurs up 3 at the half, closed on an 8–0 run']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Spurs ${D.leadUs}, Jazz ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin in each quarter, then the game score after it.",
+      "Spurs’ margin in each quarter, then the game score after it."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Harper: 31,', 'a career high'] : ['Harper: 31 points, a career high']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['18 in the fourth quarter,', '12 of 23 from the floor.'] : ['18 in the fourth quarter, 12 of 23 from the floor.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Harper and Wembanyama:', '57 of the 110'] : ['Harper and Wembanyama combined for 57 of 110']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 35;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it in transition', 'and at the line'] : ['Won it in transition and at the line']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Spurs in silver, Jazz in gray. Utah', 'made a season-high 17 threes.'] : ['Spurs in silver, Jazz in gray. Utah made a season-high 17 threes.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'1st in the West'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Pistons’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '8–4';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Their first 12-game win streak', 'since November 2010.'] : ['Their first 12-game winning streak since November 2010.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Spurs 110 · Jazz 102 · Nov 15'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Wemby for the lead'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Harper'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 50;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 170 : 200) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+2', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 120 * k, shotX + 80 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+    ]
+  ],
+  "aria": "Animated recap of the Spurs' 110 to 102 road win over the Jazz: Victor Wembanyama's pull-up jumper with 1 minute 42 seconds left that broke a 102 to 102 tie, quarter-by-quarter scoring, Dylan Harper's career-high 31 points, the top scorers, how the Spurs won, and the next game against Detroit.",
+  "notes": [
+    "Box score from the San Antonio Spurs' 110–102 road win over the Utah Jazz at the Delta Center on Nov 15, 2026, from the CBS Sports box score and play-by-play, with game details from the Associated Press (via CBS Sports), Field Level Media (via The Ticket) and the Deseret News. All 110 San Antonio points and all 102 Utah points are accounted for in the box score, and the quarter scores add up to both totals: 33–31 Utah after one, 58–55 San Antonio at the half, 81–81 after three. Team totals (field goals 41 of 85 to 41 of 89, threes 10 of 33 to 17 of 40, free throws 18 of 20 to 3 of 6, steals 12–7) are from the box score; rebounds 48–40 are the players' rebounds in the box score. Fast-break points (27–5) are from the AP story. Biggest leads from the CBS play-by-play: Utah 10 at 33–23 late in the first quarter, San Antonio 10 at 67–57 early in the third. Records and ranks are from the site's standings after Sunday's games.",
+    "Utah led 98–94 on two Keyonte George free throws with 4:01 left; Dylan Harper hit back-to-back threes, the second at 3:18 to tie it 100–100, and Stephon Castle's two free throws at 2:30 made it 102–100 (CBS play-by-play; Field Level Media). After George's pull-up tied it at 102 with 2:04 left, the Spurs scored the final eight points: Wembanyama's jumper, Keldon Johnson's putback after a Wembanyama block, Castle's steal and dunk with 47 seconds left, and two Harper free throws with 36.6 seconds left (CBS play-by-play; Field Level Media). Harper's 31 points were a career high, 18 of them in the fourth quarter (Field Level Media; Deseret News). It was San Antonio's 12th straight win, its first 12-game streak since November 2010, and Utah's 12th straight loss; Utah's 17 threes were a season high (Field Level Media). De'Aaron Fox missed the game with left hip tightness (Field Level Media). San Antonio hosts Detroit on Tuesday, Nov 17 at 8:00 PM ET (Covers schedule).",
+    "The play of the game is an original illustration of Victor Wembanyama's pull-up jumper with 1:42 left that made it 104–102 (CBS play-by-play lists a two-point pull-up jumper; Field Level Media calls it a 12-foot jumper). The recaps don't describe the move further, so it is drawn as the template's plain pull-up from about 12 feet. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the San Antonio Spurs or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Wembanyama’s listed 7-foot-4 and 235 pounds (Basketball-Reference, Wikipedia), with arms scaled to his reported 8-foot wingspan (Wikipedia), in the Spurs' road kit with No. 1 (Wikipedia) and his approved look. It is an original figure with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "player": "Victor Wembanyama",
+    "home": false,
+    "tall": 1.1282,
+    "ape": 1.0909,
+    "mass": 0.9843,
+    "label": "Victor Wembanyama, listed 7-4, 235 lb, reported 8-0 wingspan"
+  },
+  "loser_top": [
+    [
+      "Mo Bamba",
+      26,
+      "6 of 6 from three · 10 of 13"
+    ],
+    [
+      "Darryn Peterson",
+      17,
+      "3 threes · 4 assists"
+    ],
+    [
+      "Brice Sensabaugh",
+      14,
+      "off the bench · 7 rebounds"
+    ]
+  ]
+}
