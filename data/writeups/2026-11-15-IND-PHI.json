@@ -1,0 +1,109 @@
+{
+ "headline": "Brown and Maxey hold off Siakam’s fourth",
+ "dek": "Jaylen Brown scored 31 and Tyrese Maxey 27, and the Sixers held off Pascal Siakam’s 19-point fourth quarter.",
+ "three": [
+  [
+   "Brown: 31 points, a game high",
+   "12 of 18 from the floor, 3 of 6 from three."
+  ],
+  [
+   "Sixers up 1 at the half, won the third 39–30",
+   "Brown and Maxey combined for 58 of 131."
+  ],
+  [
+   "Won it from three and on the break",
+   "Threes made 18–8; fast-break points 20–7. Indiana made 8 of 32 threes."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   18,
+   8
+  ],
+  [
+   "Fast-break points",
+   20,
+   7
+  ],
+  [
+   "Points in the paint",
+   48,
+   62
+  ],
+  [
+   "Assists",
+   29,
+   32
+  ]
+ ],
+ "battle_labels": [
+  "PHI",
+  "IND"
+ ],
+ "top": [
+  [
+   "Jaylen Brown",
+   "PHI",
+   "12 of 18, 3 of 6 from three",
+   31
+  ],
+  [
+   "Tyrese Maxey",
+   "PHI",
+   "5 of 10 from three, 6 assists",
+   27
+  ],
+  [
+   "LeBron James",
+   "PHI",
+   "11 assists, 7 rebounds",
+   15
+  ],
+  [
+   "Dean Wade",
+   "PHI",
+   "off the bench, 7 rebounds",
+   12
+  ]
+ ],
+ "linescore": {
+  "away": [
+   35,
+   22,
+   30,
+   37
+  ],
+  "home": [
+   29,
+   29,
+   39,
+   34
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-15-IND-at-PHI.json",
+ "loser": {
+  "top": [
+   [
+    "Pascal Siakam",
+    "IND",
+    "19 in the 4th · 12 of 19",
+    31
+   ],
+   [
+    "Kelly Oubre Jr.",
+    "IND",
+    "6 of 11 · 4 rebounds",
+    16
+   ],
+   [
+    "Quenton Jackson",
+    "IND",
+    "8 assists · 6 rebounds",
+    15
+   ]
+  ],
+  "source": "box score"
+ }
+}

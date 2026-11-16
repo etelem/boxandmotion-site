@@ -1,0 +1,109 @@
+{
+ "headline": "Harper’s 31 and an 8–0 finish make it 12 straight",
+ "dek": "Dylan Harper scored a career-high 31 and the Spurs scored the last 8 points for their 12th straight win.",
+ "three": [
+  [
+   "Harper: 31 points, a career high",
+   "18 in the fourth quarter, 12 of 23 from the floor."
+  ],
+  [
+   "Spurs up 3 at the half, closed on an 8–0 run",
+   "Harper and Wembanyama combined for 57 of 110."
+  ],
+  [
+   "Won it in transition and at the line",
+   "Fast-break points 27–5; free throws made 18–3. Utah made a season-high 17 threes."
+  ]
+ ],
+ "battle": [
+  [
+   "Fast-break points",
+   27,
+   5
+  ],
+  [
+   "Free throws made",
+   18,
+   3
+  ],
+  [
+   "Steals",
+   12,
+   7
+  ],
+  [
+   "Rebounds",
+   48,
+   40
+  ]
+ ],
+ "battle_labels": [
+  "SAS",
+  "UTA"
+ ],
+ "top": [
+  [
+   "Dylan Harper",
+   "SAS",
+   "12 of 23, 18 in the 4th, career high",
+   31
+  ],
+  [
+   "Victor Wembanyama",
+   "SAS",
+   "10 rebounds, 6 assists, 5 blocks",
+   26
+  ],
+  [
+   "Stephon Castle",
+   "SAS",
+   "9 assists, 4 steals, 8 of 9 FT",
+   20
+  ],
+  [
+   "Keldon Johnson",
+   "SAS",
+   "10 rebounds, 4 of 5",
+   11
+  ]
+ ],
+ "linescore": {
+  "away": [
+   31,
+   27,
+   23,
+   29
+  ],
+  "home": [
+   33,
+   22,
+   26,
+   21
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-15-SAS-at-UTA.json",
+ "loser": {
+  "top": [
+   [
+    "Mo Bamba",
+    "UTA",
+    "6 of 6 from three · 10 of 13",
+    26
+   ],
+   [
+    "Darryn Peterson",
+    "UTA",
+    "3 threes · 4 assists",
+    17
+   ],
+   [
+    "Brice Sensabaugh",
+    "UTA",
+    "off the bench · 7 rebounds",
+    14
+   ]
+  ],
+  "source": "box score"
+ }
+}

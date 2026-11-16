@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-15-SAS-UTA.html",
+  "team": "SAS",
+  "home": false,
+  "number": "1",
+  "player": "Victor Wembanyama",
+  "play_type": "jumper",
+  "three": false,
+  "build": {
+    "tall": 1.1282,
+    "ape": 1.0909,
+    "mass": 0.9843
+  },
+  "build_note": "Listed 7-4, 235 lb (Basketball-Reference, Wikipedia), reported 8-0 wingspan (Wikipedia)",
+  "kicker": "SPURS 110 · JAZZ 102 · NOV 15",
+  "hook": [
+    "Wemby breaks the tie",
+    "for 12 straight"
+  ],
+  "clock": "Q4 · 1:42",
+  "us": "SAS",
+  "them": "UTA",
+  "score_before": [
+    102,
+    102
+  ],
+  "score_make": [
+    104,
+    102
+  ],
+  "stamp": "GO-AHEAD",
+  "beat": [
+    "Spurs by 2, 1:42 left.",
+    "Then the last 8 points."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Spurs",
+    "them": "Jazz",
+    "us_pts": 110,
+    "them_pts": 102
+  },
+  "star": {
+    "name": "Victor Wembanyama",
+    "big": 26,
+    "big_label": "points on 10-of-21 shooting",
+    "lines": [
+      "10 rebounds, 5 blocks",
+      "Spurs' 12th straight win"
+    ]
+  },
+  "story": "Tied 81–81 after three. Tied again at 102 with 2:04 left, the Spurs scored the last 8 and won 110–102.",
+  "aria": "Original illustration of Victor Wembanyama's pull-up jumper with 1:42 left that broke a 102–102 tie at Utah. Not traced from footage, not to scale."
+}
