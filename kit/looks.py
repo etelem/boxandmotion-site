@@ -6,6 +6,10 @@ HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(HERE)
 LOOKS = json.load(open(os.path.join(HERE, 'looks.json')))
 TEAMS = json.load(open(os.path.join(ROOT, 'data', 'teams.json')))
 LOOK_KEYS = ('skin', 'hair', 'hairColor', 'beard', 'stubble', 'wristband', 'legSleeve', 'kneeSleeve', 'kneeSleeveFront', 'ankleBrace', 'frame')
+# Default skin for a player with no look on file (the owner, Nov 17): a darker tone unless we KNOW otherwise. Lighter tones come
+# only from a look drawn from reference photos in kit/looks.json, never from guessing by name.
+DEFAULT_SKIN = '#6b4430'
+DEFAULT_HAIR = '#121010'   # dark hair to go with it (light mode otherwise draws a white cap)
 AWAY_NUM = {'LAL': '#FDB927', 'GSW': '#FFC72C', 'DEN': '#FEC524', 'IND': '#FDBB30', 'CLE': '#FDBB30', 'UTA': '#F9A01B'}
 
 def _key(s):

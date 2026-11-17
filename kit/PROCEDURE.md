@@ -24,7 +24,7 @@ What gets made (the owner's split, Nov 8, 2026):
   stick figures): the star is drawn in his team's kit (home = white with team-colour numbers, Lakers gold at home; away = team
   colour) with his look from `kit/looks.json` (skin tone, hair, beard, gear) and the glowing outline. The face always stays blank;
   never traced, never cartoony. Set `"player"` (his name as in looks.json) and `"home"` (true/false) and the build/kit/look are
-  applied automatically. If he isn't in looks.json yet, he is drawn as a team-colour silhouette in the kit: do NOT invent a look;
+  applied automatically. If he isn't in looks.json yet, he is drawn in his kit with the default darker skin tone (`DEFAULT_SKIN` in kit/looks.py; the owner, Nov 17: "assume the figure should be darker unless you know it's a white player"): do NOT invent a look or pick a lighter tone from his name; a lighter tone only comes from a look drawn from reference photos;
   list him in the report under "needs a look" so the owner can approve one. Every make gets the signature-piece finish (glowing arc in
   the team accent, sparks, backspin, the net snapping, rings off the rim); stars with a signature finish get it too (Steph: SPLASH).
 - Check that the box score's player points add up to the team total; fill missing points from a full box score (StatMuse, FantasyData)

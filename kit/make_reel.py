@@ -6,7 +6,7 @@ import sys, json, os, re
 HERE = os.path.dirname(os.path.abspath(__file__))
 FIGURE_REAL = open(os.path.join(HERE, 'figure-real.js')).read()
 sys.path.insert(0, HERE)
-from looks import look_for, kit_for, kit_css, LOOK_KEYS
+from looks import look_for, kit_for, kit_css, LOOK_KEYS, DEFAULT_SKIN, DEFAULT_HAIR
 TEAMS_JSON = os.path.join(HERE, '..', 'data', 'teams.json')
 
 def _rgb(h): h = h.lstrip('#'); return [int(h[i:i + 2], 16) for i in (0, 2, 4)]
@@ -113,6 +113,7 @@ def build(c, out):
         if fig.get('player'):
             look, _status, _sig = look_for(fig['player'])
         sb = dict(look); sb.update({k: fig[k] for k in ('tall', 'ape', 'mass') + LOOK_KEYS if k in fig})
+        sb.setdefault('skin', DEFAULT_SKIN); sb.setdefault('hairColor', DEFAULT_HAIR)   # no look on file: darker default (owner, Nov 17)
         r("  function scenePlay(L, g, defs) {", FIGURE_REAL + f"  const STAR_BUILD = {json.dumps(sb)};\n  function scenePlay(L, g, defs) {{")
         r(f"const shooter = figure(g, 'phi', k, {num!r});", f"const shooter = figureReal(g, 'phi', k, {num!r}, STAR_BUILD);")
         lift = re.search(r"lift = lt < 6\.3 \? (\d+) \* up", t).group(1)

@@ -17,11 +17,12 @@ FIGURE = '\n'.join(base[start:end + 1])
 FIGURE_REAL = open(os.path.join(HERE, 'figure-real.js')).read()
 CFG = json.load(open(sys.argv[1]))
 PAL = team_palette(CFG['team'])
-from looks import look_for, kit_for, kit_css
+from looks import look_for, kit_for, kit_css, DEFAULT_SKIN, DEFAULT_HAIR
 if CFG.get('player'):
     _look, _status, _sig = look_for(CFG['player'])
     CFG['build'] = {**_look, **CFG.get('build', {})}
     if _sig == 'splash' and 'signature' not in CFG: CFG['signature'] = 'splash'
+CFG.setdefault('build', {}).setdefault('skin', DEFAULT_SKIN); CFG['build'].setdefault('hairColor', DEFAULT_HAIR)   # no look on file: darker default (owner, Nov 17)
 if not CFG.get('kit'):
     CFG['kit'] = kit_for(CFG['team'], CFG.get('home', True))
 if not CFG.get('accent'):

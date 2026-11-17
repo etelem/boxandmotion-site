@@ -274,7 +274,7 @@ LEARN = ([("2026-11-07", "report", "Luka Dončić: 40 a night", "Scouting report
          + [(x["published"], "xo", x["title"], "X's & O's · the playbook", f'xo/{x["slug"]}/index.html', _thumb(x["anim"])) for x in XO]
          + [(P["published"], "report", P["name"], f"Scouting report · {T[P['team']]['name']}", f'players/{P["slug"]}/index.html', _thumb(P["move"]["anim"])) for P in PLAYERS]
          + [(x["published"], "trend", x["title"], f"Trend board · {T[x['team']]['name']}", f'trends/{x["slug"]}/index.html', _thumb(x["anim"])) for x in TRENDS]
-         + [(x["published"], "why", x["title"], f"What changed · {T[x['team']]['name']}", f'changed/{x["slug"]}/index.html', None) for x in WHY])
+         + [(x["published"], "why", x["title"], f"What changed · {T[x['team']]['name']}", f'changed/{x["slug"]}/index.html', _thumb(x["anim"]) if x.get("anim") else None) for x in WHY])
 LEARN.sort(key=lambda x: x[0], reverse=True)
 KINDS = [("all", "All"), ("move", "Moves"), ("xo", "X’s & O’s"), ("board", "Coach’s board"), ("trend", "Trends"), ("why", "What changed"), ("report", "Scouting reports")]
 # the library as a feed on home (owner, Nov 15): each piece is its own section with its animation playing (?short=1 = the vertical cut)
@@ -284,6 +284,8 @@ for x in XO: FEED_INFO[f'xo/{x["slug"]}/index.html'] = (x["anim"], x.get("dek", 
 for x in TRENDS: FEED_INFO[f'trends/{x["slug"]}/index.html'] = (x["anim"], x.get("dek", "") or "One team, one question, one reason.")
 for b in BOARDS: FEED_INFO.setdefault(f'coaches/{b["coach_slug"]}/index.html', (b["anim"], b.get("dek", "")))
 for P in PLAYERS: FEED_INFO[f'players/{P["slug"]}/index.html'] = (P["move"]["anim"], P.get("dek", ""))
+for x in WHY:
+    if x.get("anim"): FEED_INFO[f'changed/{x["slug"]}/index.html'] = (x["anim"], x.get("dek", ""))
 FEED_INFO.setdefault("players/luka-doncic/index.html", ("luka-stepback.html", "40 a night, and the step-back three that gets him there."))
 KIND_WORD = {"move": "Watch the move", "xo": "Break down the play", "board": "See the play", "trend": "See the answer", "why": "See what changed", "report": "Read the report"}
 def feed_item(R, item):

@@ -4,15 +4,103 @@
  "published": "2026-11-17T12:00",
  "through": "Nov 16",
  "title": "Heat have won 5 straight. What changed?",
- "short": "What changed for the Heat?",
+ "short": {
+  "kicker": "WHAT CHANGED · THROUGH NOV 16",
+  "hook": [
+   "Heat: 5 straight wins.",
+   "What changed?"
+  ],
+  "decisions": [
+   {
+    "title": "New starting five",
+    "line": "Larsson in, Wiggins to the bench. The new five: +23 per 100.",
+    "viz": [
+     "out",
+     "Wiggins",
+     "in",
+     "Larsson"
+    ]
+   },
+   {
+    "title": "Giannis and Bam, split up",
+    "line": "Staggered minutes. Giannis: 30.0 a game over the streak.",
+    "viz": [
+     "num",
+     "30.0",
+     "points a game"
+    ]
+   },
+   {
+    "title": "More pick-and-roll",
+    "line": "Bam screens and rolls; Giannis waits in the dunker spot.",
+    "viz": [
+     "text",
+     "Bam rolls · Giannis in the dunker spot"
+    ]
+   },
+   {
+    "title": "Fewer open threes",
+    "line": "Opponents from three: 41.8% in the first 7, 33.7% in the last 5.",
+    "viz": [
+     "bars",
+     "41.8",
+     "33.7"
+    ]
+   }
+  ],
+  "verdict": [
+   "Real, with a catch:",
+   "the rebounding."
+  ],
+  "verdict_line": "Outrebounded in 3 of the 5 wins. Next: Giannis vs. Milwaukee, Wed.",
+  "sources": "Records, points and streak numbers: box scores. Lineup change: Sun Sentinel. +23 per 100, opponents' first 7 games: CBS Sports (through Nov 14). Pick-and-roll: Yahoo Sports."
+ },
  "dek": "From 0-4 to five wins in a row: a new starting five, Giannis and Bam split up, a defense that stopped giving up open threes, and Davion Mitchell's breakout.",
- "headline": ["5 straight wins.", "Here's what changed."],
+ "headline": [
+  "5 straight wins.",
+  "Here's what changed."
+ ],
  "lede": "Miami opened 0-4. Since then the Heat are 8-2, including 5-0 since Erik Spoelstra changed his starting five. At 8-6 they're fourth in the East.",
  "compare": {
   "kicker": "Before and after the change",
   "cols": [
-   {"label": "First 9 games", "rec": "3-6", "rows": [["Scored", "116.0"], ["Allowed", "122.6"], ["Margin", "−6.6"]]},
-   {"label": "Last 5 games", "rec": "5-0", "hot": true, "rows": [["Scored", "125.4"], ["Allowed", "113.0"], ["Margin", "+12.4"]]}
+   {
+    "label": "First 9 games",
+    "rec": "3-6",
+    "rows": [
+     [
+      "Scored",
+      "116.0"
+     ],
+     [
+      "Allowed",
+      "122.6"
+     ],
+     [
+      "Margin",
+      "−6.6"
+     ]
+    ]
+   },
+   {
+    "label": "Last 5 games",
+    "rec": "5-0",
+    "hot": true,
+    "rows": [
+     [
+      "Scored",
+      "125.4"
+     ],
+     [
+      "Allowed",
+      "113.0"
+     ],
+     [
+      "Margin",
+      "+12.4"
+     ]
+    ]
+   }
   ],
   "note": "Points per game, from the box scores."
  },
@@ -21,14 +109,36 @@
    "kicker": "Coach's decision 1",
    "title": "A new starting five.",
    "text": "Ten games in, at Sacramento on Nov 8, Spoelstra changed his starting lineup for the first time: Pelle Larsson in, Andrew Wiggins to the bench. The new five has outscored opponents by 23 points per 100 possessions. Wiggins has given the bench 10.8 points a game over the streak, and rookie Ryan Conwell's minutes have gone up.",
-   "lineup": {"out": "Andrew Wiggins", "in": "Pelle Larsson", "keep": ["Davion Mitchell", "Klay Thompson", "Giannis Antetokounmpo", "Bam Adebayo"]},
+   "lineup": {
+    "out": "Andrew Wiggins",
+    "in": "Pelle Larsson",
+    "keep": [
+     "Davion Mitchell",
+     "Klay Thompson",
+     "Giannis Antetokounmpo",
+     "Bam Adebayo"
+    ]
+   },
    "foot": "Larsson missed the Cleveland and Detroit games with an illness. Miami won both anyway."
   },
   {
    "kicker": "Coach's decision 2",
    "title": "Giannis and Bam, split up.",
    "text": "Spoelstra now staggers his two stars' minutes, so each gets long stretches as the main option. With Giannis and Klay Thompson on the floor and Bam resting, Miami has outscored opponents by 31.6 points per 100 possessions.",
-   "stats": [["30.0", "Giannis points a game, last 5"], ["12.2", "his rebounds a game"], ["67%", "his shooting (62 of 92)"]]
+   "stats": [
+    [
+     "30.0",
+     "Giannis points a game, last 5"
+    ],
+    [
+     "12.2",
+     "his rebounds a game"
+    ],
+    [
+     "67%",
+     "his shooting (62 of 92)"
+    ]
+   ]
   },
   {
    "kicker": "Coach's decision 3",
@@ -39,13 +149,41 @@
    "kicker": "Coach's decision 4",
    "title": "Fewer open threes.",
    "text": "The Heat are switching screens more and mixing in zone. Wide-open threes allowed (no defender within six feet) fell from 16 a game to 9.1, the fewest in the league. Some of the early damage was luck: in the first seven games, opponents' shooting ran about 6 points above what their shot quality predicted, the worst gap in the league.",
-   "bars": {"label": "Opponents' three-point shooting", "rows": [["First 7 games", 41.8, "41.8%"], ["Last 5 games", 33.7, "33.7%"]], "max": 50}
+   "bars": {
+    "label": "Opponents' three-point shooting",
+    "rows": [
+     [
+      "First 7 games",
+      41.8,
+      "41.8%"
+     ],
+     [
+      "Last 5 games",
+      33.7,
+      "33.7%"
+     ]
+    ],
+    "max": 50
+   }
   },
   {
    "kicker": "The breakout",
    "title": "Davion Mitchell runs it.",
    "text": "Mitchell leads all qualified players with 9.2 assists a game, up from 4.1 for his career, and he's at 16.8 points. Over the streak: 17.8 points and 11.0 assists, with a 22-point, 17-assist night against Cleveland. Thompson is shooting 42% on almost 10 threes a game.",
-   "stats": [["11.0", "Mitchell assists a game, last 5"], ["17", "assists vs. Cleveland"], ["42%", "Thompson from three"]]
+   "stats": [
+    [
+     "11.0",
+     "Mitchell assists a game, last 5"
+    ],
+    [
+     "17",
+     "assists vs. Cleveland"
+    ],
+    [
+     "42%",
+     "Thompson from three"
+    ]
+   ]
   },
   {
    "kicker": "The catch",
@@ -55,14 +193,51 @@
   }
  ],
  "sources": [
-  ["Box scores, all 14 Heat games (our game data feed)", "", "Records, points per game, Giannis and Mitchell over the streak, opponents' threes and rebounds in the last 5"],
-  ["Sun Sentinel via Yahoo Sports: Heat change lineup, Giannis steps forward in Sacramento", "https://sports.yahoo.com/articles/heat-change-lineup-giannis-steps-043400105.html", "First lineup change in 10 games, Larsson for Wiggins"],
-  ["Heavy: Spoelstra's lineup change has sparked the Heat", "https://heavy.com/sports/nba/miami-heat/heat-coach-erik-spoelstras-lineup-change-has-sparked-the-heat/", "Conwell's added minutes"],
-  ["CBS Sports: How have the Heat turned their season around?", "https://www.cbssports.com/nba/news/how-heat-turned-season-around-giannis-bam/", "New five +23 per 100, staggering, Giannis-Klay +31.6, open threes, opponent luck, Mitchell and Thompson season numbers (through Nov 14)"],
-  ["Yahoo Sports: The Heat offense has found a blueprint", "https://sports.yahoo.com/articles/miami-heat-offense-found-blueprint-000040501.html", "Pick-and-roll roles for Bam and Giannis"],
-  ["Miami Herald via Yahoo Sports: Heat already looks different. Mitchell on Spoelstra", "https://sports.yahoo.com/articles/heat-already-looks-different-did-161849016.html", "More ball screens but still the fewest; more switching and zone"],
-  ["Hot Hot Hoops: Game preview, Heat host Rockets", "https://hothothoops.com/2026/11/16/game-preview-surging-heat-face-another-tough-test-in-hosting-houston-rockets", "Larsson's two-game illness absence"],
-  ["BVM Sports: Heat extend win streak to five", "https://bvmsports.com/2026/11/16/heat-extend-win-streak-to-five-with-128-110-rout-of-rockets/", "Adebayo's hip tightness"],
-  ["AP via CBS Sports: Heat dominate Rockets for fifth straight", "https://www.cbssports.com/nba/gametracker/boxscore/NBA_20261116_HOU@MIA/", "8-2 since 0-4, Monday's result"]
- ]
+  [
+   "Box scores, all 14 Heat games (our game data feed)",
+   "",
+   "Records, points per game, Giannis and Mitchell over the streak, opponents' threes and rebounds in the last 5"
+  ],
+  [
+   "Sun Sentinel via Yahoo Sports: Heat change lineup, Giannis steps forward in Sacramento",
+   "https://sports.yahoo.com/articles/heat-change-lineup-giannis-steps-043400105.html",
+   "First lineup change in 10 games, Larsson for Wiggins"
+  ],
+  [
+   "Heavy: Spoelstra's lineup change has sparked the Heat",
+   "https://heavy.com/sports/nba/miami-heat/heat-coach-erik-spoelstras-lineup-change-has-sparked-the-heat/",
+   "Conwell's added minutes"
+  ],
+  [
+   "CBS Sports: How have the Heat turned their season around?",
+   "https://www.cbssports.com/nba/news/how-heat-turned-season-around-giannis-bam/",
+   "New five +23 per 100, staggering, Giannis-Klay +31.6, open threes, opponent luck, Mitchell and Thompson season numbers (through Nov 14)"
+  ],
+  [
+   "Yahoo Sports: The Heat offense has found a blueprint",
+   "https://sports.yahoo.com/articles/miami-heat-offense-found-blueprint-000040501.html",
+   "Pick-and-roll roles for Bam and Giannis"
+  ],
+  [
+   "Miami Herald via Yahoo Sports: Heat already looks different. Mitchell on Spoelstra",
+   "https://sports.yahoo.com/articles/heat-already-looks-different-did-161849016.html",
+   "More ball screens but still the fewest; more switching and zone"
+  ],
+  [
+   "Hot Hot Hoops: Game preview, Heat host Rockets",
+   "https://hothothoops.com/2026/11/16/game-preview-surging-heat-face-another-tough-test-in-hosting-houston-rockets",
+   "Larsson's two-game illness absence"
+  ],
+  [
+   "BVM Sports: Heat extend win streak to five",
+   "https://bvmsports.com/2026/11/16/heat-extend-win-streak-to-five-with-128-110-rout-of-rockets/",
+   "Adebayo's hip tightness"
+  ],
+  [
+   "AP via CBS Sports: Heat dominate Rockets for fifth straight",
+   "https://www.cbssports.com/nba/gametracker/boxscore/NBA_20261116_HOU@MIA/",
+   "8-2 since 0-4, Monday's result"
+  ]
+ ],
+ "anim": "changed-heat-what-changed.html"
 }
