@@ -1,0 +1,109 @@
+{
+ "headline": "Suns’ depth wins in Denver",
+ "dek": "Seven Suns scored in double figures for Phoenix’s first road win of the season.",
+ "three": [
+  [
+   "Booker: 20 points and 8 assists",
+   "9 of 10 at the line, and the 17-footer that pushed it back to 10."
+  ],
+  [
+   "Suns up 3 at the half, then won the third quarter 34–29",
+   "Seven Suns scored 10 or more."
+  ],
+  [
+   "Won it on the glass and from three",
+   "Rebounds 51–35; threes made 16–9. Nikola Jokić had 28 points, 15 rebounds and 7 assists."
+  ]
+ ],
+ "battle": [
+  [
+   "Rebounds",
+   51,
+   35
+  ],
+  [
+   "Threes made",
+   16,
+   9
+  ],
+  [
+   "Second-chance points",
+   22,
+   11
+  ],
+  [
+   "Bench points",
+   42,
+   19
+  ]
+ ],
+ "battle_labels": [
+  "PHX",
+  "DEN"
+ ],
+ "top": [
+  [
+   "Devin Booker",
+   "PHX",
+   "8 assists, 9 of 10 at the line",
+   20
+  ],
+  [
+   "Mikal Bridges",
+   "PHX",
+   "7 of 15, 8 rebounds",
+   16
+  ],
+  [
+   "Jalen Green",
+   "PHX",
+   "5 of 10, 3 steals",
+   16
+  ],
+  [
+   "Dillon Brooks",
+   "PHX",
+   "3 threes, 4 assists",
+   15
+  ]
+ ],
+ "linescore": {
+  "away": [
+   20,
+   36,
+   34,
+   27
+  ],
+  "home": [
+   24,
+   29,
+   29,
+   23
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-16-PHX-at-DEN.json",
+ "loser": {
+  "top": [
+   [
+    "Nikola Jokić",
+    "DEN",
+    "15 rebounds · 7 assists",
+    28
+   ],
+   [
+    "Jamal Murray",
+    "DEN",
+    "18 in the fourth · 9 of 9 at the line",
+    28
+   ],
+   [
+    "Aaron Gordon",
+    "DEN",
+    "4 of 6 · 2 threes",
+    11
+   ]
+  ],
+  "source": "box score"
+ }
+}

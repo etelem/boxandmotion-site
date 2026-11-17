@@ -1,0 +1,49 @@
+{
+ "out": "short-2026-11-16-CHI-CLE.html",
+ "team": "CLE",
+ "home": true,
+ "number": "45",
+ "player": "Donovan Mitchell",
+ "play_type": "drive",
+ "build": {
+  "tall": 0.9487,
+  "ape": 1.1081,
+  "mass": 1.0267
+ },
+ "build_note": "Listed 6-2, 215 lb (Basketball-Reference), 6-10 wingspan from 2017 draft measurements (Tankathon)",
+ "kicker": "CAVALIERS 126 · BULLS 115 · NOV 16",
+ "hook": [
+  "Mitchell, 20 in the 4th,",
+  "seals it on the run"
+ ],
+ "clock": "Q4 · 1:13",
+ "us": "CLE",
+ "them": "CHI",
+ "margins": [
+  "Cavaliers +8",
+  "Cavaliers +10"
+ ],
+ "stamp": "DAGGER",
+ "beat": [
+  "Cavaliers by 10, 1:13 left.",
+  "8 of 8 in the fourth quarter."
+ ],
+ "final": {
+  "label": "FINAL",
+  "us": "Cavaliers",
+  "them": "Bulls",
+  "us_pts": 126,
+  "them_pts": 115
+ },
+ "star": {
+  "name": "Donovan Mitchell",
+  "big": 39,
+  "big_label": "points on 16-of-25 shooting",
+  "lines": [
+   "A season high, 20 in the fourth",
+   "4 rebounds, 4 assists, 3 steals"
+  ]
+ },
+ "story": "Chicago led by 8 in the second. Cleveland led by 17 in the third, then held off a late Bulls push to 119–113.",
+ "aria": "Original illustration of Donovan Mitchell's running layup with 1:13 left that put the Cavaliers back up 10 over the Bulls. Cavaliers win 126–115. Not traced from footage, not to scale."
+}

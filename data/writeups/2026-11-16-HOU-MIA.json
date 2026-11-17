@@ -1,0 +1,109 @@
+{
+ "headline": "Heat never trail, win a fifth straight",
+ "dek": "Giannis Antetokounmpo had 20 and 13, and eight Heat players scored in double figures.",
+ "three": [
+  [
+   "Giannis: 20 points, 13 rebounds, 6 assists",
+   "8 of 11 from the floor, 3 blocks in 28 minutes."
+  ],
+  [
+   "Heat up 16 at the half, and never trailed",
+   "Eight Heat players scored 10 or more."
+  ],
+  [
+   "Won it from three and on the break",
+   "Fast-break points 24–8; threes made 18–10. Miami never trailed."
+  ]
+ ],
+ "battle": [
+  [
+   "Fast-break points",
+   24,
+   8
+  ],
+  [
+   "Threes made",
+   18,
+   10
+  ],
+  [
+   "Points in the paint",
+   54,
+   44
+  ],
+  [
+   "Steals",
+   11,
+   4
+  ]
+ ],
+ "battle_labels": [
+  "MIA",
+  "HOU"
+ ],
+ "top": [
+  [
+   "Giannis Antetokounmpo",
+   "MIA",
+   "8 of 11, 13 rebounds, 3 blocks",
+   20
+  ],
+  [
+   "Klay Thompson",
+   "MIA",
+   "5 of 8 from three",
+   17
+  ],
+  [
+   "Andrew Wiggins",
+   "MIA",
+   "off the bench, 3 blocks",
+   17
+  ],
+  [
+   "Davion Mitchell",
+   "MIA",
+   "10 assists, 4 steals",
+   16
+  ]
+ ],
+ "linescore": {
+  "away": [
+   15,
+   31,
+   35,
+   29
+  ],
+  "home": [
+   29,
+   33,
+   39,
+   27
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-16-HOU-at-MIA.json",
+ "loser": {
+  "top": [
+   [
+    "Alperen Şengün",
+    "HOU",
+    "8 of 11 · 6 of 7 at the line",
+    23
+   ],
+   [
+    "Kevin Durant",
+    "HOU",
+    "8 of 19 · 2 threes",
+    22
+   ],
+   [
+    "Jabari Smith Jr.",
+    "HOU",
+    "10 rebounds",
+    12
+   ]
+  ],
+  "source": "box score"
+ }
+}
