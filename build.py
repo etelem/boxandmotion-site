@@ -1403,7 +1403,7 @@ for x in WHY:
 <div class="wc-story" data-wc><span class="rail" aria-hidden="true"></span>{cmp_part}{"".join(why_part(P, t) for P in x["parts"])}</div>
 <section class="wc-src"><details><summary><span>Sources</span><span class="dim">{len(x["sources"])} sources · where every number comes from</span></summary>
 <ol>{srcs}</ol><p class="dim wc-foot">Season splits from CBS Sports run through Nov 14; everything else through {E(x['through'])}. Where the sources don't give a number, we leave it out.</p></details></section>
-<div class="row"><a class="pill" href="{R}teams/{t['slug']}/index.html">{E(t['name'])} page →</a><a class="pill" href="{R}learn/index.html">More in the Film Room →</a></div>
+<div class="row">{short_btn(x.get("youtube"))}<a class="pill" href="{R}teams/{t['slug']}/index.html">{E(t['name'])} page →</a><a class="pill" href="{R}learn/index.html">More in the Film Room →</a></div>
 {closer(R)}'''
     page(f"changed/{x['slug']}/index.html", f"{x['title']} · Box & Motion Hoops", body, active="Learn", desc=x["dek"])
 
