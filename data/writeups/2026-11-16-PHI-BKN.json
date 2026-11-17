@@ -1,0 +1,103 @@
+{
+ "headline": "Embiid’s 37 and a late three hold off Brooklyn",
+ "dek": "Joel Embiid scored a season-high 37 and Jaylen Brown added 31 points and 13 rebounds.",
+ "three": [
+  [
+   "Embiid: 37 points, a season high",
+   "24 by halftime, 13 of 22 from the floor."
+  ],
+  [
+   "76ers up 19 at the half, held on after Brooklyn won the third 36–27",
+   "Embiid, Brown and Maxey combined for 92 of 135."
+  ],
+  [
+   "Won it at the line and on the glass",
+   "Free throws made 32–22; rebounds 47–38. Brooklyn missed 12 free throws."
+  ]
+ ],
+ "battle": [
+  [
+   "Free throws made",
+   32,
+   22
+  ],
+  [
+   "Rebounds",
+   47,
+   38
+  ],
+  [
+   "Steals",
+   9,
+   7
+  ],
+  [
+   "Field goals made",
+   45,
+   44
+  ]
+ ],
+ "battle_labels": [
+  "PHI",
+  "BKN"
+ ],
+ "top": [
+  [
+   "Joel Embiid",
+   "PHI",
+   "13 of 22, 24 by halftime",
+   37
+  ],
+  [
+   "Jaylen Brown",
+   "PHI",
+   "13 rebounds, 10 of 13 FT",
+   31
+  ],
+  [
+   "Tyrese Maxey",
+   "PHI",
+   "9 assists, 4 of 8 from three",
+   24
+  ],
+  [
+   "VJ Edgecombe",
+   "PHI",
+   "9 rebounds, 2 steals",
+   14
+  ]
+ ],
+ "linescore": {
+  "away": [
+   33,
+   45,
+   27,
+   30
+  ],
+  "home": [
+   26,
+   33,
+   36,
+   28
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-16-PHI-at-BKN.json",
+ "loser": {
+  "top": [
+   [
+    "Julius Randle",
+    "BKN",
+    "13 of 20 · 5 of 5 FT",
+    33
+   ],
+   [
+    "Michael Porter Jr.",
+    "BKN",
+    "12 in the third quarter",
+    25
+   ]
+  ],
+  "source": "box score"
+ }
+}

@@ -1,0 +1,103 @@
+{
+ "headline": "Bane and the Magic take the fourth in Boston",
+ "dek": "Down 2 after three, the Magic won the fourth 40–28 behind 24 from Desmond Bane.",
+ "three": [
+  [
+   "Bane: 24 points and 8 rebounds",
+   "8 of 13 from the floor and 5 of 5 at the line."
+  ],
+  [
+   "Magic up 9 at the half, then won the fourth 40–28",
+   "Bane, Wagner and Black combined for 65 of 115."
+  ],
+  [
+   "Won it at the line and on the glass",
+   "Free throws made 20–9; rebounds 46–40. Boston made 20 threes to Orlando’s 13."
+  ]
+ ],
+ "battle": [
+  [
+   "Free throws made",
+   20,
+   9
+  ],
+  [
+   "Rebounds",
+   46,
+   40
+  ],
+  [
+   "Assists",
+   30,
+   23
+  ],
+  [
+   "Field goals made",
+   41,
+   38
+  ]
+ ],
+ "battle_labels": [
+  "ORL",
+  "BOS"
+ ],
+ "top": [
+  [
+   "Desmond Bane",
+   "ORL",
+   "8 rebounds, 8 of 13, 5 of 5 FT",
+   24
+  ],
+  [
+   "Franz Wagner",
+   "ORL",
+   "9 assists, 8 rebounds",
+   21
+  ],
+  [
+   "Anthony Black",
+   "ORL",
+   "7 of 13, 3 steals",
+   20
+  ],
+  [
+   "Tristan da Silva",
+   "ORL",
+   "3 of 5 from three, 3 steals",
+   13
+  ]
+ ],
+ "linescore": {
+  "away": [
+   20,
+   30,
+   25,
+   40
+  ],
+  "home": [
+   17,
+   24,
+   36,
+   28
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-16-ORL-at-BOS.json",
+ "loser": {
+  "top": [
+   [
+    "Jayson Tatum",
+    "BOS",
+    "12 rebounds · 9 of 23",
+    24
+   ],
+   [
+    "Paul George",
+    "BOS",
+    "5 of 9 from three",
+    22
+   ]
+  ],
+  "source": "box score"
+ }
+}

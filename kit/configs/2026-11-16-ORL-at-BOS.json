@@ -1,0 +1,161 @@
+{
+  "team": "ORL",
+  "D": "  const D = {\n    date: 'Mon, Nov 16, 2026',\n    us: 115, them: 105, record: '6–7', usName: 'Magic', themName: 'Celtics',\n    quarters: [[20, 17], [30, 24], [25, 36], [40, 28]],\n    leadUs: 11,\n    star: {name: 'Desmond Bane', stats: [['Points', 24, 25], ['Rebounds', 8, 10], ['Assists', 5, 10]]},\n    scorers: [\n      {name: 'Desmond Bane', pts: 24, note: '8 rebounds · 8 of 13 · 5 of 5 FT'},\n      {name: 'Franz Wagner', pts: 21, note: '9 assists · 8 rebounds'},\n      {name: 'Anthony Black', pts: 20, note: '7 of 13 · 3 steals'},\n      {name: 'Tristan da Silva', pts: 13, note: '3 of 5 from three · 3 steals'},\n      {name: 'Jalen Suggs', pts: 12, note: '7 rebounds · 2 blocks'},\n    ],\n    edges: [\n      {label: 'Free throws made', us: 20, them: 9},\n      {label: 'Rebounds', us: 46, them: 40},\n      {label: 'Assists', us: 30, them: 23},\n      {label: 'Field goals made', us: 41, them: 38},\n    ],\n    gaps: [\n      {label: 'Threes made', us: 13, them: 20},\n    ],\n    next: {opp: 'vs 76ers', when: 'Wed, Nov 18, 7:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Desmond Bane's pull-up jumper with 1:33 left that made it 110-99, right after Franz Wagner's alley-oop to Wendell Carter Jr. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Bane makes it 11",
+    "subP": "Bane pulls up, 1:33 left",
+    "subL": "Desmond Bane’s pull-up jumper with 1:33 left, Magic up 9",
+    "m0": "Magic +9",
+    "m1": "Magic +11",
+    "num": "3",
+    "cap1": "Bane pulls up. Magic by 11.",
+    "cap2": "110–99 with 1:33 left.",
+    "clock": [
+      101,
+      93
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Magic at Celtics Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Magic 115, Celtics 105 · Nov 16, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Magic at', 'Celtics'] : ['Magic at Celtics']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Down 2 after three,', 'won the 4th 40–28.'] : ['Down 2 after three, the Magic won the fourth 40–28 behind 24 from Desmond Bane.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Magic improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'4th straight win'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Magic up 9 at the half,', 'won the 4th 40–28'] : ['Magic up 9 at the half, then won the fourth 40–28']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Magic ${D.leadUs}"
+    ],
+    [
+      "Lakers’ margin in each quarter, then the game score after it.",
+      "Magic’s margin in each quarter, then the game score after it."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Bane: 24', 'and 8 rebounds'] : ['Bane: 24 points and 8 rebounds']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['8 of 13 from the floor,', '5 of 5 at the line.'] : ['8 of 13 from the floor and 5 of 5 at the line.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Bane, Wagner and Black:', '65 of the 115'] : ['Bane, Wagner and Black combined for 65 of 115']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 30;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it at the line', 'and on the glass'] : ['Won it at the line and on the glass']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Magic in blue, Celtics in gray. Boston', 'made 20 threes to Orlando’s 13.'] : ['Magic in blue, Celtics in gray. Boston made 20 threes to Orlando’s 13.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'8th in the East'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'76ers’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '12–3';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Ended Boston’s 6-game win streak,', 'on its second night in a row.'] : ['Ended Boston’s 6-game win streak, on the Celtics’ second night of a back-to-back.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Magic 115 · Celtics 105 · Nov 16'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Bane makes it 11'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Bane'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 50;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 170 : 200) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+2', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 120 * k, shotX + 80 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+    ]
+  ],
+  "aria": "Animated recap of the Magic's 115 to 105 road win over the Celtics: Desmond Bane's pull-up jumper with 1:33 left that made it 110 to 99, quarter-by-quarter scoring, Bane's 24 points and 8 rebounds, the top scorers, how the Magic won, and the next game.",
+  "notes": [
+    "Box score from the Magic's 115–105 road win over the Boston Celtics at TD Garden on Nov 16, 2026, from the FantasyTeamAdvice box score, with game details from the Associated Press (Kyle Hightower, via CBS Boston, Boston.com and Fox Sports), NBC Sports Boston and VAVEL. All 115 Orlando points and all 105 Boston points are accounted for in the box score, and the quarter scores (20–30–25–40 to 17–24–36–28) add up to both totals: 50–41 Orlando at the half (AP) and 77–75 Boston after three (AP). Team totals (field goals 41 of 82 to 38 of 90, free throws 20 of 25 to 9 of 17, threes 13 of 34 to 20 of 56, rebounds 46–40, assists 30–23) are summed from the player rows; Orlando's 41 of 82 matches AP. Orlando's biggest lead, 11, is from NBC Sports Boston; Boston's is left out because the accounts differ. Records and ranks are from the site's standings after Monday's games.",
+    "Orlando won the fourth quarter 40–28 for its fourth straight win and ended Boston's six-game win streak; Boston was on the second night of a back-to-back (AP). Jayson Tatum had 24 points and 12 rebounds but also five of Boston's 11 turnovers (AP). The Magic host Philadelphia on Wednesday, Nov 18 (AP; tip time from SportBusy).",
+    "The play of the game is an original illustration of Desmond Bane's jumper with 1:33 left that gave Orlando a 110–99 lead, right after Franz Wagner's alley-oop to Wendell Carter Jr. (AP; NBC Sports Boston; VAVEL calls it a pull-up jumper). The recaps don't describe the spot or the move further, so it is drawn as the template's plain pull-up from mid-range. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Orlando Magic or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Desmond Bane's listed 6-foot-6 and 215 pounds with No. 3 (RealGM, Wikipedia), in Orlando's road blue. No wingspan is used, so his arms are drawn to the standard proportion. He has no approved look yet, so he is drawn as a team-colour silhouette. It is an original figure with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "player": "Desmond Bane",
+    "home": false,
+    "tall": 1.0,
+    "ape": 1.0,
+    "mass": 1.0,
+    "label": "Desmond Bane, listed 6-6, 215 lb (no wingspan used)"
+  },
+  "loser_top": [
+    [
+      "Jayson Tatum",
+      24,
+      "12 rebounds · 9 of 23"
+    ],
+    [
+      "Paul George",
+      22,
+      "5 of 9 from three"
+    ]
+  ]
+}

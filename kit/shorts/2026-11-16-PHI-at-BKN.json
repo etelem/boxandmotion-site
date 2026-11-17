@@ -1,0 +1,50 @@
+{
+  "out": "short-2026-11-16-PHI-BKN.html",
+  "team": "PHI",
+  "home": false,
+  "number": "21",
+  "player": "Joel Embiid",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 1.0769,
+    "ape": 1.0685,
+    "mass": 1.0799
+  },
+  "build_note": "Listed 7-0, 270 lb (RealGM); 7-5.75 wingspan reported before the 2014 draft (theScore)",
+  "kicker": "76ERS 135 · NETS 123 · NOV 16",
+  "hook": [
+    "Embiid steps back,",
+    "52 left, up 4"
+  ],
+  "clock": "Q4 · 0:52",
+  "us": "PHI",
+  "them": "BKN",
+  "stamp": "THREE",
+  "beat": [
+    "Brooklyn had cut",
+    "a 24-point lead to 4."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "76ers",
+    "them": "Nets",
+    "us_pts": 135,
+    "them_pts": 123
+  },
+  "star": {
+    "name": "Joel Embiid",
+    "big": 37,
+    "big_label": "points, a season high",
+    "lines": [
+      "Brown: 31 and 13 rebounds",
+      "Without LeBron James"
+    ]
+  },
+  "story": "Philadelphia led by 24 and Brooklyn cut it to four with 1:14 left. Embiid's step-back three ended it, 135–123.",
+  "aria": "Animated Short: Joel Embiid's step-back 3-pointer with 52 seconds left after Brooklyn cut Philadelphia's lead to four. 76ers win 135–123. An original illustration, not traced from footage, not to scale.",
+  "margins": [
+    "76ers +4",
+    "76ers +7"
+  ]
+}
