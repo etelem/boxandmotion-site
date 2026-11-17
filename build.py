@@ -255,6 +255,11 @@ if os.path.isdir("data/players"):
     for fn in sorted(os.listdir("data/players")):
         if fn.endswith(".json"): PLAYERS.append(json.load(open(f"data/players/{fn}")))
 PLAYERS.sort(key=lambda x: x["published"], reverse=True)
+WHY = []   # "What changed" pieces (owner, Nov 17): why a team is playing well or badly, told through the coach's decisions
+if os.path.isdir("data/whatchanged"):
+    for fn in sorted(os.listdir("data/whatchanged")):
+        if fn.endswith(".json"): WHY.append(json.load(open(f"data/whatchanged/{fn}")))
+WHY.sort(key=lambda x: x["published"], reverse=True)
 
 def _thumb(anim):
     j = os.path.splitext(anim)[0] + ".jpg"
@@ -268,9 +273,10 @@ LEARN = ([("2026-11-07", "report", "Luka Dončić: 40 a night", "Scouting report
          + [(m["published"], "move", m["title"], f"Signature move · {m['player']}", f'moves/{m["slug"]}/index.html', _thumb(m["anim"])) for m in MOVES]
          + [(x["published"], "xo", x["title"], "X's & O's · the playbook", f'xo/{x["slug"]}/index.html', _thumb(x["anim"])) for x in XO]
          + [(P["published"], "report", P["name"], f"Scouting report · {T[P['team']]['name']}", f'players/{P["slug"]}/index.html', _thumb(P["move"]["anim"])) for P in PLAYERS]
-         + [(x["published"], "trend", x["title"], f"Trend board · {T[x['team']]['name']}", f'trends/{x["slug"]}/index.html', _thumb(x["anim"])) for x in TRENDS])
+         + [(x["published"], "trend", x["title"], f"Trend board · {T[x['team']]['name']}", f'trends/{x["slug"]}/index.html', _thumb(x["anim"])) for x in TRENDS]
+         + [(x["published"], "why", x["title"], f"What changed · {T[x['team']]['name']}", f'changed/{x["slug"]}/index.html', None) for x in WHY])
 LEARN.sort(key=lambda x: x[0], reverse=True)
-KINDS = [("all", "All"), ("move", "Moves"), ("xo", "X’s & O’s"), ("board", "Coach’s board"), ("trend", "Trends"), ("report", "Scouting reports")]
+KINDS = [("all", "All"), ("move", "Moves"), ("xo", "X’s & O’s"), ("board", "Coach’s board"), ("trend", "Trends"), ("why", "What changed"), ("report", "Scouting reports")]
 # the library as a feed on home (owner, Nov 15): each piece is its own section with its animation playing (?short=1 = the vertical cut)
 FEED_INFO = {}   # href -> (anim file, one line)
 for m in MOVES: FEED_INFO[f'moves/{m["slug"]}/index.html'] = (m["anim"], m.get("dek", ""))
@@ -279,7 +285,7 @@ for x in TRENDS: FEED_INFO[f'trends/{x["slug"]}/index.html'] = (x["anim"], x.get
 for b in BOARDS: FEED_INFO.setdefault(f'coaches/{b["coach_slug"]}/index.html', (b["anim"], b.get("dek", "")))
 for P in PLAYERS: FEED_INFO[f'players/{P["slug"]}/index.html'] = (P["move"]["anim"], P.get("dek", ""))
 FEED_INFO.setdefault("players/luka-doncic/index.html", ("luka-stepback.html", "40 a night, and the step-back three that gets him there."))
-KIND_WORD = {"move": "Watch the move", "xo": "Break down the play", "board": "See the play", "trend": "See the answer", "report": "Read the report"}
+KIND_WORD = {"move": "Watch the move", "xo": "Break down the play", "board": "See the play", "trend": "See the answer", "why": "See what changed", "report": "Read the report"}
 def feed_item(R, item):
     pub, kind, title, sub, href, img = item
     anim, dek = FEED_INFO.get(href, (None, ""))
@@ -1349,6 +1355,40 @@ for x in TRENDS:
 <div class="mvtext"><div class="row">{short_btn(x.get("youtube"))}<a class="pill" href="{R}teams/{t['slug']}/index.html">{E(t['name'])} page →</a></div></div></section>
 {closer(R)}'''
     page(f"trends/{x['slug']}/index.html", f"{x['title']} · Box & Motion Hoops", body, active="Learn", desc=x["dek"])
+
+# ---- "What changed" (data/whatchanged/*.json): one team's turn, explained through the coach's decisions, with a Sources footnote ----
+def why_part(P, t):
+    c = t["c1"]; h = ""
+    if P.get("lineup"):
+        L = P["lineup"]; keep = "".join(f'<li>{E(n)}</li>' for n in L["keep"])
+        h += (f'<div class="wc-lu"><div><p class="k">Out</p><p class="wc-out">{E(L["out"])}</p></div><span class="wc-arr" aria-hidden="true">→</span>'
+              f'<div><p class="k">In</p><p class="wc-in" style="color:{c}">{E(L["in"])}</p></div></div>'
+              f'<p class="k" style="margin-top:14px">Still starting</p><ul class="wc-keep">{keep}</ul>')
+    if P.get("stats"):
+        h += '<div class="wc-stats">' + "".join(f'<div><span class="n" style="color:{c if i == 0 else "var(--ink)"}">{E(v)}</span><span class="dim">{E(l)}</span></div>' for i, (v, l) in enumerate(P["stats"])) + '</div>'
+    if P.get("bars"):
+        B = P["bars"]; h += f'<p class="k" style="margin-top:6px">{E(B["label"])}</p><div class="wc-bars">' + "".join(
+            f'<div class="wc-bar"><span>{E(l)}</span><i><b style="width:{v / B["max"] * 100:.1f}%;background:{c if j == len(B["rows"]) - 1 else "#c9ccd2"}"></b></i><em>{E(lab)}</em></div>' for j, (l, v, lab) in enumerate(B["rows"])) + '</div>'
+    if P.get("foot"): h += f'<p class="dim wc-foot">{E(P["foot"])}</p>'
+    if P.get("verdict"): h += f'<p class="wc-verdict"><span class="k">Verdict</span>{E(P["verdict"])}</p>'
+    return (f'<section class="wc-part"><p class="k" style="color:var(--or-ink)">{E(P["kicker"])}</p><h2 class="h2">{E(P["title"])}</h2>'
+            f'<p class="lead wc-tx">{E(P["text"])}</p>{h}</section>')
+
+for x in WHY:
+    t = T[x["team"]]; C = x["compare"]
+    cols = "".join(f'<div class="wc-col{" hot" if col.get("hot") else ""}"' + (f' style="--tc:{t["c1"]}"' if col.get("hot") else "") + f'><p class="k">{E(col["label"])}</p><p class="wc-rec">{E(col["rec"])}</p>'
+                   + "".join(f'<div class="wc-row"><span>{E(a)}</span><b>{E(v)}</b></div>' for a, v in col["rows"]) + '</div>' for col in C["cols"])
+    srcs = "".join(f'<li>' + (f'<a href="{E(u)}" target="_blank" rel="noopener">{E(l)}</a>' if u else f'<b>{E(l)}</b>') + f'<span class="dim">Used for: {E(w)}</span></li>' for l, u, w in x["sources"])
+    body = f'''{learn_crumbs(R, f'<a href="{R}teams/{t["slug"]}/index.html">{E(t["name"])}</a>', "<span>What changed</span>")}
+<section class="wc-head"><p class="k">What changed · {E(t['city'])} {E(t['name'])} · through {E(x['through'])}</p><h1 class="h1">{E(x['headline'][0])}<br><b>{E(x['headline'][1])}</b></h1>
+<p class="lead" style="font-size:20px;max-width:52ch">{E(x['lede'])}</p></section>
+<section class="wc-cmp"><p class="k">{E(C['kicker'])}</p><div class="wc-cols">{cols}</div><p class="dim wc-foot">{E(C['note'])}</p></section>
+<div class="wc-story">{"".join(why_part(P, t) for P in x["parts"])}</div>
+<section class="wc-src"><details><summary><span>Sources</span><span class="dim">{len(x["sources"])} sources · where every number comes from</span></summary>
+<ol>{srcs}</ol><p class="dim wc-foot">Season splits from CBS Sports run through Nov 14; everything else through {E(x['through'])}. Where the sources don't give a number, we leave it out.</p></details></section>
+<div class="row"><a class="pill" href="{R}teams/{t['slug']}/index.html">{E(t['name'])} page →</a><a class="pill" href="{R}learn/index.html">More in the Film Room →</a></div>
+{closer(R)}'''
+    page(f"changed/{x['slug']}/index.html", f"{x['title']} · Box & Motion Hoops", body, active="Learn", desc=x["dek"])
 
 # ---- coach: Redick ----
 body = f'''{learn_crumbs(R, f'<a href="{R}teams/lakers/index.html">Lakers</a>', "<span>JJ Redick</span>")}
