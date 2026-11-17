@@ -11,6 +11,10 @@ What gets made (the owner's split, Nov 8, 2026):
 
 ## Rules (non-negotiable)
 - Every number and claim is verified against the box score or a named written source. Cite sources in the reel's notes.
+- Sources toggle (the owner, Nov 17: the closed "+ Sources" bar goes at the bottom of every game page): ALSO save the config key
+  `"sources": [["<Outlet>: <headline or page>", "<url>", "<used for>"], ...]` with one row per source you actually used
+  (box score page, play-by-play, each game story), the link you read it at, and what it was used for. build.py shows these as
+  links; configs without it fall back to the notes paragraphs. Never espn.com or nba.com; skip a row rather than guess a URL.
 - The play of the game names the player who made it on screen: in the subline before the shot ("Luka in the lane, 28 seconds left")
   and in the caption after it ("Luka had the dagger. Lakers by 6."). Never just "a jumper" or "a free throw".
 - The player who made the play is drawn to his build (`figure` in the config): listed height and weight, arms scaled to a reported

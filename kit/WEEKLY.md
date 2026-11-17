@@ -114,3 +114,8 @@ The issue is drafted on Saturday morning, before Saturday's games. This run adds
    Send a new test email to boxandmotionhoops@gmail.com.
 5. End with a SendUserMessage: the Saturday lines added, whether the game of the week changed, and whether the issue is scheduled
    (and when) or still waiting for "approve". If an edit fails, leave the issue exactly as it was and say what failed.
+
+## Sources toggle (the owner, Nov 17)
+Every deep dive (scouting report, coach's board, trend board, What changed) ends with the same closed "+ Sources" bar
+(build.py `sources_toggle`). Save sources as `[[label, url, used_for]]`; trend boards keep their one `sources` line in the
+config. The Sunday Box can't hold a toggle: until a per-issue sources page exists, keep the short sources line at the bottom.

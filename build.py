@@ -162,6 +162,18 @@ CLOSER_PLAY = ('<svg class="play" viewBox="0 0 600 60" aria-hidden="true">'
                '<path d="M8 8L36 36M36 8L8 36" stroke="#111214" stroke-width="7" stroke-linecap="round"/>'
                '<path d="M60 22C150 22 170 46 260 46S420 22 540 30" fill="none" stroke="#FF5A1F" stroke-width="6" stroke-linecap="round" stroke-dasharray="0 14"/>'
                '<circle cx="568" cy="30" r="15" fill="none" stroke="#FF5A1F" stroke-width="7"/></svg>')
+# ---- Sources toggle (the owner, Nov 17: "I like this sources toggle at the bottom, add this ongoing"): one closed "+ Sources" bar at the
+# bottom of every page that has numbers. items = [[label, url, used_for]] (url and used_for may be empty); paras = plain paragraphs
+# (older game recaps, whose sources are written into the config's notes with no links).
+def sources_toggle(items=None, paras=None, sub="where every number comes from", note=""):
+    items = [list(i) + ["", ""][: 3 - len(i)] for i in (items or [])]; paras = [p for p in (paras or []) if p.strip()]
+    if not items and not paras: return ""
+    lis = "".join('<li>' + (f'<a href="{E(u)}" target="_blank" rel="noopener">{E(l)}</a>' if u else f'<b>{E(l)}</b>')
+                  + (f'<span class="dim">Used for: {E(w)}</span>' if w else '') + '</li>' for l, u, w in items)
+    head = f'{len(items)} source{"" if len(items) == 1 else "s"} · {sub}' if items else sub[:1].upper() + sub[1:]
+    body = (f'<ol>{lis}</ol>' if lis else '') + "".join(f'<p class="srcp">{E(p)}</p>' for p in paras) + (f'<p class="dim wc-foot">{E(note)}</p>' if note else '')
+    return (f'<section class="wc-src"><details><summary><span>Sources</span><span class="dim">{E(head)}</span></summary>{body}</details></section>')
+
 def closer(R):
     return (f'<section class="closer logo">{CLOSER_PLAY}<div><h2 class="h2">The week, in one <em>box.</em></h2><p>The Sunday Box: the games that mattered and the plays behind them. Free, every Sunday.</p></div>'
             f'<a class="pill wht" href="{NEWSLETTER}">Get The Sunday Box →</a></section>')
@@ -1200,7 +1212,11 @@ for g in GAMES:
 <section><div class="hftop">{tchip(w, ws)}{tchip(l, lsc, lose=True)}{top_flag}</div>
 <h1 class="gh1">{E(headline(g))}</h1><div class="hfmeta" style="margin-bottom:10px">{E(meta(g))}</div>
 <p class="lead">{E(dek)}</p></section>'''
-    body = head + story + play + watch + closer(R)
+    _c = _cfg_for(g["key"]) or {}
+    _paras = [re.sub(r"drawn as a team-colou?r silhouette( in the kit)?", "drawn in the kit with our default skin tone", p) for p in (_c.get("notes") or [])
+              if not p.startswith("The music")] if not _c.get("sources") else []
+    srcbox = sources_toggle(_c.get("sources"), _paras, sub="box score, game stories and the drawn play")
+    body = head + story + play + watch + srcbox + closer(R)
     page(f"games/{g['slug']}/index.html", f"{T[a]['name']} {g['as_']}, {T[h]['name']} {g['hs']} · Box & Motion Hoops", body, active="Last Night", desc=dek)
 
 # ---- your team: merged into the Teams page (owner, Nov 15); the old address forwards to Teams, your teams first ----
@@ -1257,7 +1273,11 @@ body = f'''<section><p class="k">Updated {S['updated']}</p><h1 class="h1">Curren
 <p class="lead">Each team’s chance of a top-6 seed (a guaranteed playoff spot) and of the play-in or better. “This week” is the change since Monday morning. Your teams are in color.</p>
 <div class="tabs" data-tabs="conf" style="margin-top:18px"><button class="pill on" data-tab="East">East</button><button class="pill" data-tab="West">West</button></div></section>
 <section>{otable("East")}{otable("West", True)}</section>
-<section class="card pad"><b>How the odds work</b><p class="dim" style="margin:6px 0 0">Each team starts from a projected win total and is updated with every result (the projection counts like 30 games, so early records move it but don't take over). We then simulate the rest of the 82-game season 20,000 times, with some uncertainty in every team's strength, and count how often each team finishes top six and top ten in its conference. This is model v0: it uses records only, not injuries, schedule strength or point differential.</p></section>'''
+<section class="card pad"><b>How the odds work</b><p class="dim" style="margin:6px 0 0">Each team starts from a projected win total and is updated with every result (the projection counts like 30 games, so early records move it but don't take over). We then simulate the rest of the 82-game season 20,000 times, with some uncertainty in every team's strength, and count how often each team finishes top six and top ten in its conference. This is model v0: it uses records only, not injuries, schedule strength or point differential.</p></section>
+{sources_toggle([["FOX Sports NBA standings", "https://www.foxsports.com/nba/standings", "Wins, losses and conference rank after each night (backup: CBS Sports standings)"],
+                 ["CBS Sports NBA standings", "https://www.cbssports.com/nba/standings/", "Backup standings when FOX hasn't updated yet"],
+                 ["Game results: our nightly box-score feed", "", "Last night's scores, checked against the standings before anything changes"],
+                 ["Box & Motion playoff model v0", "", "Projected win totals saved Oct 30, updated with every result; 20,000 simulations of the rest of the season"]])}'''
 page("odds/index.html", "Current playoff odds · Box & Motion Hoops", body, active="Odds")
 
 # ---- Learn (the old Deep dives page lives on at /deep-dives/ too) ----
@@ -1303,7 +1323,8 @@ body = f'''{learn_crumbs(R, f'<a href="{R}teams/lakers/index.html">Lakers</a>', 
 <div class="mvanim">{anim_frame(R, "luka-stepback.html", "Animated illustration of Luka Dončić's step-back three", "reels/soundtrack.mp3")}</div></section>
 <section class="sec"><h2 class="h2">Game log.</h2>
 <div class="tbox"><div class="scroll"><table class="otable" style="min-width:720px"><tr><th>Date</th><th>Game</th><th>Result</th><th class="num">Pts</th><th class="num">Reb</th><th class="num">Ast</th><th class="num">FG</th><th class="num">3PT</th><th class="num">TO</th><th>Flag</th></tr>{logrows}</table></div></div>
-<p class="dim" style="margin:0;font-size:14px">Flags are automatic: any game 10 or more points from his season average ({avg:.1f}). Hot nights so far: {HOTS}. A dash means the stat isn't in our feed yet.</p></section>'''
+<p class="dim" style="margin:0;font-size:14px">Flags are automatic: any game 10 or more points from his season average ({avg:.1f}). Hot nights so far: {HOTS}. A dash means the stat isn't in our feed yet.</p></section>
+{sources_toggle([["Our nightly box-score feed", "", "Every game in the log, his season average and the hot/quiet flags"]], sub="where the game log comes from")}'''
 page("players/luka-doncic/index.html", "Luka Dončić scouting report · Box & Motion Hoops", body, active="Learn",
      desc=f"Luka Dončić: {avg:.1f} points per game, game log, hot and quiet nights, and the step-back.")
 
@@ -1313,7 +1334,6 @@ for P in PLAYERS:
     stats = "".join(f'<div class="card pad"><span class="n" style="font-size:44px{";color:" + t["c1"] if i == 0 else ""}">{E(v)}</span><br><span class="dim">{E(l)}</span></div>' for i, (v, l) in enumerate(P["stats"]))
     logrows = "".join("<tr>" + "".join(f'<td{" class=num" if 3 <= j else ""}>{"<b>" + E(str(v)) + "</b>" if j == 3 else E("—" if v is None else str(v))}</td>' for j, v in enumerate(r)) + "</tr>" for r in P["log"])
     steps = "".join(f'<li><b>{E(a)}.</b> {E(b2)}</li>' for a, b2 in P["move"]["steps"])
-    srcs = "".join(f'<li><a href="{E(u)}" target="_blank" rel="noopener">{E(l)}</a></li>' for l, u in P["sources"])
     body = f'''{learn_crumbs(R, f'<a href="{R}teams/{t["slug"]}/index.html">{E(t["name"])}</a>', f'<span>{E(P["name"])}</span>')}
 <section style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-end"><div class="sec" style="flex:999 1 480px;gap:12px"><p class="k">Scouting report · {E(P['week'])}</p>
 <h1 class="h1">{E(P['name'])}.</h1><p class="lead" style="font-size:20px">{E(P['lede'])}</p><p class="dim" style="margin:0">{E(P['bio'])}</p></div>
@@ -1323,7 +1343,7 @@ for P in PLAYERS:
 <div class="mvanim">{anim_frame(R, P['move']['anim'], P['name'] + ': ' + P['move']['title'], "reels/soundtrack.mp3")}</div></section>
 <section class="sec"><h2 class="h2">His week.</h2>
 <div class="tbox"><div class="scroll"><table class="otable" style="min-width:640px"><tr><th>Date</th><th>Game</th><th>Result</th><th class="num">Pts</th><th class="num">Reb</th><th class="num">Ast</th><th class="num">FG</th><th class="num">3PT</th></tr>{logrows}</table></div></div></section>
-<section class="card pad"><b>Sources</b><ul style="margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:4px">{srcs}</ul></section>'''
+{sources_toggle(P["sources"])}'''
     page(f"players/{P['slug']}/index.html", f"{P['name']} scouting report · Box & Motion Hoops", body, active="Learn", desc=P["lede"])
 
 # ---- signature moves ----
@@ -1349,12 +1369,16 @@ for x in XO:
     page(f"xo/{x['slug']}/index.html", f"{x['title']} · Box & Motion Hoops", body, active="Learn", desc=f"{x['title']} {x['sub']}, explained in motion.")
 
 # ---- trend boards ----
+def _trend_src(x):
+    try: return json.load(open(x["config"])).get("sources", "")
+    except Exception: return ""
 for x in TRENDS:
     t = T[x["team"]]
     body = f'''{learn_crumbs(R, f'<a href="{R}teams/{t["slug"]}/index.html">{E(t["name"])}</a>', "<span>Trend board</span>")}
 <section><p class="k">Trend board · good, lucky or in trouble?</p><h1 class="h1">{E(x['title'])}</h1><p class="lead" style="font-size:20px">{E(x['dek'])}</p></section>
 <section class="movesec"><div class="mvanim">{anim_frame(R, x['anim'], x['title'], "reels/soundtrack.mp3")}</div>
 <div class="mvtext"><div class="row">{short_btn(x.get("youtube"))}<a class="pill" href="{R}teams/{t['slug']}/index.html">{E(t['name'])} page →</a></div></div></section>
+{sources_toggle(paras=[_trend_src(x)], sub="where every number comes from")}
 {closer(R)}'''
     page(f"trends/{x['slug']}/index.html", f"{x['title']} · Box & Motion Hoops", body, active="Learn", desc=x["dek"])
 
@@ -1394,15 +1418,13 @@ for x in WHY:
     def kd(): k[0] += 0.3; return f'{k[0] - 0.3:.2f}s'
     cols = "".join(f'<div class="wc-col ph{" hot" if col.get("hot") else ""}" style="--d:{0.2 + 0.5 * ci:.2f}s' + (f';--tc:{t["c1"]}' if col.get("hot") else "") + f'"><p class="k">{E(col["label"])}</p><p class="wc-rec">{wc_rec(col["rec"])}</p>'
                    + "".join(f'<div class="wc-row"><span>{E(a)}</span><b>{wc_num(v)}</b></div>' for a, v in col["rows"]) + '</div>' for ci, col in enumerate(C["cols"]))
-    srcs = "".join(f'<li>' + (f'<a href="{E(u)}" target="_blank" rel="noopener">{E(l)}</a>' if u else f'<b>{E(l)}</b>') + f'<span class="dim">Used for: {E(w)}</span></li>' for l, u, w in x["sources"])
     cmp_part = (f'<section class="wc-part wc-cmp"><p class="k" style="color:var(--or-ink)">{E(C["kicker"])}</p><div class="wc-cols">{cols}</div>'
                 f'<p class="dim wc-foot ph" style="--d:1.2s">{E(C["note"])}</p></section>')
     body = f'''{learn_crumbs(R, f'<a href="{R}teams/{t["slug"]}/index.html">{E(t["name"])}</a>', "<span>What changed</span>")}
 <section class="wc-head"><p class="k">What changed · {E(t['city'])} {E(t['name'])} · through {E(x['through'])}</p><h1 class="h1">{E(x['headline'][0])}<br><b>{E(x['headline'][1])}</b></h1>
 <p class="lead" style="font-size:20px;max-width:52ch">{E(x['lede'])}</p></section>
 <div class="wc-story" data-wc><span class="rail" aria-hidden="true"></span>{cmp_part}{"".join(why_part(P, t) for P in x["parts"])}</div>
-<section class="wc-src"><details><summary><span>Sources</span><span class="dim">{len(x["sources"])} sources · where every number comes from</span></summary>
-<ol>{srcs}</ol><p class="dim wc-foot">Season splits from CBS Sports run through Nov 14; everything else through {E(x['through'])}. Where the sources don't give a number, we leave it out.</p></details></section>
+{sources_toggle(x["sources"], note=f"Season splits from CBS Sports run through Nov 14; everything else through {x['through']}. Where the sources don't give a number, we leave it out.")}
 <div class="row">{short_btn(x.get("youtube"))}<a class="pill" href="{R}teams/{t['slug']}/index.html">{E(t['name'])} page →</a><a class="pill" href="{R}learn/index.html">More in the Film Room →</a></div>
 {closer(R)}'''
     page(f"changed/{x['slug']}/index.html", f"{x['title']} · Box & Motion Hoops", body, active="Learn", desc=x["dek"])
@@ -1425,7 +1447,6 @@ for cslug, bl in by_coach.items():
     b = bl[0]; c = b["team"]; t = T[c]
     g = next((x for x in GAMES if x["slug"] == b["game"]), None)
     steps = "".join(f'<li><b>{E(x["title"])}.</b> {E(x["text"])}</li>' for x in b["beats"])
-    srcs = "".join(f'<li><a href="{E(u)}" target="_blank" rel="noopener">{E(l)}</a></li>' for l, u in b["sources"])
     more = "".join(f'<li>{E(x["title"])} ({E(x["situation"])})</li>' for x in bl[1:])
     recap = short_btn(b.get("youtube")) + (f'<a class="pill" href="{R}games/{g["slug"]}/index.html">Game recap →</a>' if g else "")
     body = f'''{learn_crumbs(R, f'<a href="{R}teams/{t["slug"]}/index.html">{E(t["name"])}</a>', f'<span>{E(b["coach"])}</span>')}
@@ -1434,7 +1455,7 @@ for cslug, bl in by_coach.items():
 <section class="sec"><div><p class="k">{E(b['situation'])}</p><h2 class="h2">{E(b['title'])}.</h2><p class="lead">{E(b['dek'])}</p></div>
 {anim_frame(R, b["anim"], b["coach"] + ": " + b["title"])}
 <ol class="beats">{steps}</ol><div class="row">{recap}</div></section>
-<section class="card pad"><b>Sources</b><p class="dim" style="margin:4px 0 8px">Every action on the board comes from these game stories. Where they don't say where a player stood, the spot is our illustration.</p><ul style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px">{srcs}</ul></section>
+{sources_toggle(b["sources"], sub="where every action on the board comes from", note="Where the game stories don't say where a player stood, the spot is our illustration.")}
 {f'<section class="sec"><h2 class="h2">Earlier boards.</h2><ul>{more}</ul></section>' if more else ''}'''
     page(f"coaches/{cslug}/index.html", f"{b['coach']}: {b['title']} · Box & Motion Hoops", body, active="Learn",
          desc=f"{b['coach']}'s {b['title'].lower()}: {b['dek']}")
