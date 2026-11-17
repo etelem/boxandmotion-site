@@ -1,0 +1,178 @@
+{
+  "team": "MIA",
+  "D": "  const D = {\n    date: 'Mon, Nov 16, 2026',\n    us: 128, them: 110, record: '8–6', usName: 'Heat', themName: 'Rockets',\n    quarters: [[29, 15], [33, 31], [39, 35], [27, 29]],\n    leadUs: 26,\n    star: {name: 'Giannis Antetokounmpo', stats: [['Points', 20, 25], ['Rebounds', 13, 15], ['Assists', 6, 10]]},\n    scorers: [\n      {name: 'Giannis Antetokounmpo', pts: 20, note: '8 of 11 · 13 rebounds · 3 blocks'},\n      {name: 'Klay Thompson', pts: 17, note: '5 of 8 from three'},\n      {name: 'Andrew Wiggins', pts: 17, note: 'off the bench · 3 blocks'},\n      {name: 'Davion Mitchell', pts: 16, note: '10 assists · 4 steals'},\n      {name: 'Bobby Portis Jr.', pts: 16, note: 'off the bench · 6 rebounds'},\n    ],\n    edges: [\n      {label: 'Fast-break points', us: 24, them: 8},\n      {label: 'Threes made', us: 18, them: 10},\n      {label: 'Points in the paint', us: 54, them: 44},\n      {label: 'Steals', us: 11, them: 4},\n    ],\n    gaps: [\n      {label: 'Rebounds', us: 40, them: 52},\n      {label: 'Free throws made', us: 18, them: 24},\n    ],\n    next: {opp: 'vs Bucks', when: 'Wed, Nov 18, 7:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Bobby Portis Jr.'s 3-pointer off a Davion Mitchell pass with 2 seconds left in the first quarter that made it 29–15. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Portis at the horn",
+    "subP": "Portis from three, 2 seconds left in the 1st",
+    "subL": "Bobby Portis Jr. from three with 2 seconds left in the first quarter",
+    "m0": "Heat +11",
+    "m1": "Heat +14",
+    "num": "95",
+    "cap1": "Portis at the horn. Heat by 14.",
+    "cap2": "29–15 after one quarter.",
+    "clock": [
+      10,
+      2
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Heat vs Rockets Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Heat 128, Rockets 110 · Nov 16, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Heat vs.', 'Rockets'] : ['Heat vs. Rockets']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Giannis: 20 and 13.', 'Eight in double figures.'] : ['Giannis Antetokounmpo had 20 and 13, and eight Heat players scored in double figures.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Heat improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Fifth straight win'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Heat up 16 at the half,', 'never trailed'] : ['Heat up 16 at the half, and never trailed']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Heat ${D.leadUs}, at 126–100 in the 4th"
+    ],
+    [
+      "Lakers’ margin in each quarter, then the game score after it.",
+      "Heat’s margin in each quarter, then the game score after it."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Giannis: 20,', '13 boards, 6 assists'] : ['Giannis: 20 points, 13 rebounds, 6 assists']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['8 of 11 from the floor,', '3 blocks in 28 minutes.'] : ['8 of 11 from the floor, 3 blocks in 28 minutes.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Eight Heat players', 'scored 10 or more'] : ['Eight Heat players scored 10 or more']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 25;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it from three', 'and on the break'] : ['Won it from three and on the break']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Heat in orange, Rockets in gray.', 'Miami never trailed.'] : ['Heat in orange, Rockets in gray. Miami never trailed.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'4th in the East'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Bucks’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '1–13';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Next: Giannis faces the Bucks,', 'his old team, on Wednesday.'] : ['Next: Giannis faces the Bucks, his former team, for the first time on Wednesday.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Heat 128 · Rockets 110 · Nov 16'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Portis at the horn'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Giannis'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 60;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+3', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "T(board, bx + 24, by + 38, 'Q1', 'b m', 24);"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 160, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 192, ly, D.themName"
+    ],
+    [
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = clk < 60 ? clk.toFixed(1) : `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+    ]
+  ],
+  "aria": "Animated recap of the Heat's 128 to 110 home win over the Rockets: Bobby Portis Jr.'s 3-pointer with 2 seconds left in the first quarter that made it 29 to 15, quarter-by-quarter scoring, Giannis Antetokounmpo's 20 points and 13 rebounds, the top scorers, how the Heat won, and the next game against Milwaukee.",
+  "notes": [
+    "Box score from the Heat's 128–110 win over the Houston Rockets at Kaseya Center in Miami on Nov 16, 2026, from the SI.com box score and play-by-play and the Covers.com box score, with game details from the Associated Press (via ABC13 and Yahoo Sports), the South Florida Sun Sentinel (via Yahoo Sports), Rockets Wire (via Yahoo Sports), Hot Hot Hoops and CBS Sports. All 128 Miami points and all 110 Houston points are accounted for in the box score, and the quarter scores add up to both totals: 29–15 after one, 62–46 at the half, 101–81 after three. Team totals (field goals 46 of 92 to 38 of 92, threes 18 of 50 to 10 of 36, free throws 18 of 25 to 24 of 30, rebounds 40–52, steals 11–4, blocks 8–2) are from the SI.com box score; points in the paint (54–44) and fast-break points (24–8) are from Covers. Miami never trailed (AP; SI.com). Its biggest lead, 26, came at 126–100 on a Bobby Portis Jr. dunk with 3:42 left (Covers; SI.com play-by-play). Records and ranks are from the site's standings after Monday's games.",
+    "Houston started 1 for 9 (AP) and cut a 12–2 deficit to 12–10 in the first quarter (SI.com play-by-play; Hot Hot Hoops). The Rockets got within single digits early in the third quarter before Miami pulled away (Rockets Wire; SI.com play-by-play). Giannis Antetokounmpo had 20 points, 13 rebounds, 6 assists and 3 blocks in 28 minutes on 8 of 11 shooting (SI.com; AP); his first basket came with 3:52 left in the first half (Sun Sentinel). Davion Mitchell had 16 points, 10 assists and 4 steals (SI.com; CBS Sports). Klay Thompson made 5 threes (SI.com; AP). Eight Heat players scored in double figures (SI.com box score; Hot Hot Hoops). It was Miami's fifth straight win (AP; Sun Sentinel). Bam Adebayo missed the second half with right hip tightness (AP; Sun Sentinel). Houston, on the second night of a back-to-back, was without Amen Thompson and Marcus Smart (AP). The Heat host Milwaukee, Antetokounmpo's former team, on Wednesday, Nov 18 (AP).",
+    "The play of the game is an original illustration of Bobby Portis Jr.'s 3-pointer with 2 seconds left in the first quarter, assisted by Davion Mitchell, that made it 29–15 (SI.com play-by-play; Hot Hot Hoops: \"Bobby Portis Jr. would cap off the quarter with a last-second three, putting the Heat up fourteen\"). It capped Miami's answer to Houston's 8–0 first-quarter run. It is drawn as the template's plain pull-up from beyond the arc. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Miami Heat or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Portis' measured 6-foot-10½ in shoes and 235 pounds, with his arms scaled to his 7-foot-1½ wingspan, from the 2014 Nike Skills Academy (NBADraft.net), in the Heat's home white with No. 95 (Fox News/OutKick; Larry Brown Sports). He has no approved look on file yet, so he is drawn as a team-colour silhouette in the kit. It is an original silhouette with a featureless face, not a portrait or a trace of footage."
+  ],
+  "figure": {
+    "player": "Bobby Portis Jr.",
+    "home": true,
+    "tall": 1.0577,
+    "ape": 1.0364,
+    "mass": 1.0166,
+    "label": "Bobby Portis Jr., 6-10½ in shoes, 235 lb, 7-1½ wingspan (2014 Nike Skills Academy)"
+  },
+  "loser_top": [
+    [
+      "Alperen Şengün",
+      23,
+      "8 of 11 · 6 of 7 at the line"
+    ],
+    [
+      "Kevin Durant",
+      22,
+      "8 of 19 · 2 threes"
+    ],
+    [
+      "Jabari Smith Jr.",
+      12,
+      "10 rebounds"
+    ]
+  ]
+}
