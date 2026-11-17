@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-16-MEM-WAS.html",
+  "team": "MEM",
+  "home": false,
+  "number": "27",
+  "player": "Cameron Boozer",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 1.0513,
+    "ape": 1.0427,
+    "mass": 1.0517
+  },
+  "build_note": "Listed 6-10, 250 lb (Basketball-Reference); 7-1.5 wingspan at the 2026 draft combine (Yahoo Sports; On3)",
+  "kicker": "GRIZZLIES 136 · WIZARDS 120 · NOV 16",
+  "hook": [
+    "Boozer from deep,",
+    "8:52 left in the 3rd"
+  ],
+  "clock": "Q3 · 8:52",
+  "us": "MEM",
+  "them": "WAS",
+  "score_before": [
+    68,
+    73
+  ],
+  "score_make": [
+    71,
+    73
+  ],
+  "stamp": "THREE",
+  "beat": [
+    "His second three in 24 seconds.",
+    "Then Edey tied it at 73."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Grizzlies",
+    "them": "Wizards",
+    "us_pts": 136,
+    "them_pts": 120
+  },
+  "star": {
+    "name": "Cameron Boozer",
+    "big": 29,
+    "big_label": "points, a career high",
+    "lines": [
+      "7 of 13 from three · 7 assists",
+      "Memphis won the 3rd 42–18"
+    ]
+  },
+  "story": "Washington led by 12 late in the first half. Boozer's back-to-back threes keyed a 10–0 run, and Memphis won the third quarter 42–18.",
+  "aria": "Animated Short: Cameron Boozer's 3-pointer with 8 minutes 52 seconds left in the third quarter, his second in 24 seconds, that cut Washington's lead to 73–71. Grizzlies win 136–120. An original illustration, not traced from footage, not to scale."
+}

@@ -1,0 +1,103 @@
+{
+ "headline": "Boozer's career-high 29 powers Memphis past Washington",
+ "dek": "Cameron Boozer scored a career-high 29 and Memphis won the third quarter 42–18.",
+ "three": [
+  [
+   "Boozer: 29 points, a career high",
+   "7 of 13 from three, plus 7 assists."
+  ],
+  [
+   "Grizzlies down 10 at the half, then won the third 42–18",
+   "Boozer and Edey combined for 52 of 136."
+  ],
+  [
+   "Won it on the pass and on the glass",
+   "Assists 42–25; rebounds 48–31. Memphis tied its franchise record with 42 assists."
+  ]
+ ],
+ "battle": [
+  [
+   "Assists",
+   42,
+   25
+  ],
+  [
+   "Rebounds",
+   48,
+   31
+  ],
+  [
+   "Threes made",
+   16,
+   11
+  ],
+  [
+   "Field goals made",
+   53,
+   40
+  ]
+ ],
+ "battle_labels": [
+  "MEM",
+  "WAS"
+ ],
+ "top": [
+  [
+   "Cameron Boozer",
+   "MEM",
+   "7 of 13 from three, 7 assists, career high",
+   29
+  ],
+  [
+   "Zach Edey",
+   "MEM",
+   "10 rebounds, 10 of 15, season high",
+   23
+  ],
+  [
+   "Cedric Coward",
+   "MEM",
+   "8 rebounds, 6 assists, 7 of 10",
+   18
+  ],
+  [
+   "Javon Small",
+   "MEM",
+   "off the bench, 12 assists",
+   12
+  ]
+ ],
+ "linescore": {
+  "away": [
+   33,
+   26,
+   42,
+   35
+  ],
+  "home": [
+   35,
+   34,
+   18,
+   33
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-16-MEM-at-WAS.json",
+ "loser": {
+  "top": [
+   [
+    "Anthony Davis",
+    "WAS",
+    "8 of 15 · 7 of 8 FT",
+    23
+   ],
+   [
+    "AJ Dybantsa",
+    "WAS",
+    "3 steals · 6 of 8 FT",
+    21
+   ]
+  ],
+  "source": "box score"
+ }
+}

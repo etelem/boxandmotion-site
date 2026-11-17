@@ -1,0 +1,103 @@
+{
+ "headline": "Shannon's career-high 34 lifts Minnesota past Portland",
+ "dek": "Terrence Shannon Jr. scored a career-high 34 off the bench and went 15 of 16 at the line.",
+ "three": [
+  [
+   "Shannon: 34 points, a career high",
+   "15 of 16 at the line, 8 of 11 from the floor."
+  ],
+  [
+   "Timberwolves up 8 at the half, up 14 after three",
+   "Shannon and Gobert combined for 52 of 106."
+  ],
+  [
+   "Won it at the line and on the break",
+   "Free throws made 30–12; fast-break points 18–7. Portland made 37 of 95 shots."
+  ]
+ ],
+ "battle": [
+  [
+   "Free throws made",
+   30,
+   12
+  ],
+  [
+   "Fast-break points",
+   18,
+   7
+  ],
+  [
+   "Rebounds",
+   53,
+   49
+  ],
+  [
+   "Steals",
+   7,
+   5
+  ]
+ ],
+ "battle_labels": [
+  "MIN",
+  "POR"
+ ],
+ "top": [
+  [
+   "Terrence Shannon Jr.",
+   "MIN",
+   "off the bench, 8 of 11, 15 of 16 FT",
+   34
+  ],
+  [
+   "Rudy Gobert",
+   "MIN",
+   "15 rebounds, 8 of 14 FT",
+   18
+  ],
+  [
+   "Jaden McDaniels",
+   "MIN",
+   "6 rebounds, 2 steals, 2 blocks",
+   13
+  ],
+  [
+   "Jonathan Kuminga",
+   "MIN",
+   "9 rebounds",
+   13
+  ]
+ ],
+ "linescore": {
+  "away": [
+   26,
+   25,
+   22,
+   25
+  ],
+  "home": [
+   26,
+   33,
+   28,
+   19
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-16-POR-at-MIN.json",
+ "loser": {
+  "top": [
+   [
+    "Deni Avdija",
+    "POR",
+    "11 of 19 · 3 of 3 from three · 8 rebounds",
+    27
+   ],
+   [
+    "Donovan Clingan",
+    "POR",
+    "10 rebounds · 5 blocks · 5 of 5",
+    10
+   ]
+  ],
+  "source": "box score"
+ }
+}
