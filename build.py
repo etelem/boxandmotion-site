@@ -1357,33 +1357,48 @@ for x in TRENDS:
     page(f"trends/{x['slug']}/index.html", f"{x['title']} · Box & Motion Hoops", body, active="Learn", desc=x["dek"])
 
 # ---- "What changed" (data/whatchanged/*.json): one team's turn, explained through the coach's decisions, with a Sources footnote ----
+# Same feel as the game-page scroll story (Nov 17): a rail down the left that fills as you read, a dot per part that turns orange,
+# numbers that count up and rows/bars that phase in one at a time when the part comes into view (site.js [data-wc]).
+import re as _re
+def wc_num(s):
+    m = _re.fullmatch(r"([+−-]?)(\d+(?:\.\d+)?)(%?)", str(s))
+    if not m: return E(str(s))
+    pre, v, suf = m.groups(); dec = len(v.split(".")[1]) if "." in v else 0
+    return f'<span class="wc-n" data-to="{v}" data-dec="{dec}" data-pre="{E(pre)}" data-suf="{suf}">{E(str(s))}</span>'
+def wc_rec(s):
+    a, _, c = str(s).partition("-")
+    return f"{wc_num(a)}-{wc_num(c)}" if c else wc_num(s)
+
 def why_part(P, t):
-    c = t["c1"]; h = ""
+    c = t["c1"]; h = ""; d = [0.45]
+    def nd(): d[0] += 0.35; return f'{d[0] - 0.35:.2f}s'
     if P.get("lineup"):
-        L = P["lineup"]; keep = "".join(f'<li>{E(n)}</li>' for n in L["keep"])
-        h += (f'<div class="wc-lu"><div><p class="k">Out</p><p class="wc-out">{E(L["out"])}</p></div><span class="wc-arr" aria-hidden="true">→</span>'
-              f'<div><p class="k">In</p><p class="wc-in" style="color:{c}">{E(L["in"])}</p></div></div>'
-              f'<p class="k" style="margin-top:14px">Still starting</p><ul class="wc-keep">{keep}</ul>')
+        L = P["lineup"]; keep = "".join(f'<li class="ph" style="--d:{nd()}">{E(n)}</li>' for n in L["keep"])
+        h += (f'<div class="wc-lu"><div class="ph" style="--d:{nd()}"><p class="k">Out</p><p class="wc-out">{E(L["out"])}</p></div><span class="wc-arr ph" style="--d:{d[0]:.2f}s" aria-hidden="true">→</span>'
+              f'<div class="ph" style="--d:{nd()}"><p class="k">In</p><p class="wc-in" style="color:{c}">{E(L["in"])}</p></div></div>'
+              f'<p class="k ph" style="margin-top:14px;--d:{d[0]:.2f}s">Still starting</p><ul class="wc-keep">{keep}</ul>')
     if P.get("stats"):
-        h += '<div class="wc-stats">' + "".join(f'<div><span class="n" style="color:{c if i == 0 else "var(--ink)"}">{E(v)}</span><span class="dim">{E(l)}</span></div>' for i, (v, l) in enumerate(P["stats"])) + '</div>'
+        h += '<div class="wc-stats">' + "".join(f'<div class="ph" style="--d:{nd()}"><span class="n" style="color:{c if i == 0 else "var(--ink)"}">{wc_num(v)}</span><span class="dim">{E(l)}</span></div>' for i, (v, l) in enumerate(P["stats"])) + '</div>'
     if P.get("bars"):
-        B = P["bars"]; h += f'<p class="k" style="margin-top:6px">{E(B["label"])}</p><div class="wc-bars">' + "".join(
-            f'<div class="wc-bar"><span>{E(l)}</span><i><b style="width:{v / B["max"] * 100:.1f}%;background:{c if j == len(B["rows"]) - 1 else "#c9ccd2"}"></b></i><em>{E(lab)}</em></div>' for j, (l, v, lab) in enumerate(B["rows"])) + '</div>'
-    if P.get("foot"): h += f'<p class="dim wc-foot">{E(P["foot"])}</p>'
-    if P.get("verdict"): h += f'<p class="wc-verdict"><span class="k">Verdict</span>{E(P["verdict"])}</p>'
+        B = P["bars"]; h += f'<p class="k ph" style="margin-top:6px;--d:{nd()}">{E(B["label"])}</p><div class="wc-bars">' + "".join(
+            f'<div class="wc-bar ph" style="--d:{nd()}"><span>{E(l)}</span><i><b style="--w:{v / B["max"] * 100:.1f}%;background:{c if j == len(B["rows"]) - 1 else "#c9ccd2"}"></b></i><em>{wc_num(lab)}</em></div>' for j, (l, v, lab) in enumerate(B["rows"])) + '</div>'
+    if P.get("foot"): h += f'<p class="dim wc-foot ph" style="--d:{nd()}">{E(P["foot"])}</p>'
+    if P.get("verdict"): h += f'<p class="wc-verdict ph" style="--d:{nd()}"><span class="k">Verdict</span>{E(P["verdict"])}</p>'
     return (f'<section class="wc-part"><p class="k" style="color:var(--or-ink)">{E(P["kicker"])}</p><h2 class="h2">{E(P["title"])}</h2>'
             f'<p class="lead wc-tx">{E(P["text"])}</p>{h}</section>')
 
 for x in WHY:
-    t = T[x["team"]]; C = x["compare"]
-    cols = "".join(f'<div class="wc-col{" hot" if col.get("hot") else ""}"' + (f' style="--tc:{t["c1"]}"' if col.get("hot") else "") + f'><p class="k">{E(col["label"])}</p><p class="wc-rec">{E(col["rec"])}</p>'
-                   + "".join(f'<div class="wc-row"><span>{E(a)}</span><b>{E(v)}</b></div>' for a, v in col["rows"]) + '</div>' for col in C["cols"])
+    t = T[x["team"]]; C = x["compare"]; k = [0.3]
+    def kd(): k[0] += 0.3; return f'{k[0] - 0.3:.2f}s'
+    cols = "".join(f'<div class="wc-col ph{" hot" if col.get("hot") else ""}" style="--d:{0.2 + 0.5 * ci:.2f}s' + (f';--tc:{t["c1"]}' if col.get("hot") else "") + f'"><p class="k">{E(col["label"])}</p><p class="wc-rec">{wc_rec(col["rec"])}</p>'
+                   + "".join(f'<div class="wc-row"><span>{E(a)}</span><b>{wc_num(v)}</b></div>' for a, v in col["rows"]) + '</div>' for ci, col in enumerate(C["cols"]))
     srcs = "".join(f'<li>' + (f'<a href="{E(u)}" target="_blank" rel="noopener">{E(l)}</a>' if u else f'<b>{E(l)}</b>') + f'<span class="dim">Used for: {E(w)}</span></li>' for l, u, w in x["sources"])
+    cmp_part = (f'<section class="wc-part wc-cmp"><p class="k" style="color:var(--or-ink)">{E(C["kicker"])}</p><div class="wc-cols">{cols}</div>'
+                f'<p class="dim wc-foot ph" style="--d:1.2s">{E(C["note"])}</p></section>')
     body = f'''{learn_crumbs(R, f'<a href="{R}teams/{t["slug"]}/index.html">{E(t["name"])}</a>', "<span>What changed</span>")}
 <section class="wc-head"><p class="k">What changed · {E(t['city'])} {E(t['name'])} · through {E(x['through'])}</p><h1 class="h1">{E(x['headline'][0])}<br><b>{E(x['headline'][1])}</b></h1>
 <p class="lead" style="font-size:20px;max-width:52ch">{E(x['lede'])}</p></section>
-<section class="wc-cmp"><p class="k">{E(C['kicker'])}</p><div class="wc-cols">{cols}</div><p class="dim wc-foot">{E(C['note'])}</p></section>
-<div class="wc-story">{"".join(why_part(P, t) for P in x["parts"])}</div>
+<div class="wc-story" data-wc><span class="rail" aria-hidden="true"></span>{cmp_part}{"".join(why_part(P, t) for P in x["parts"])}</div>
 <section class="wc-src"><details><summary><span>Sources</span><span class="dim">{len(x["sources"])} sources · where every number comes from</span></summary>
 <ol>{srcs}</ol><p class="dim wc-foot">Season splits from CBS Sports run through Nov 14; everything else through {E(x['through'])}. Where the sources don't give a number, we leave it out.</p></details></section>
 <div class="row"><a class="pill" href="{R}teams/{t['slug']}/index.html">{E(t['name'])} page →</a><a class="pill" href="{R}learn/index.html">More in the Film Room →</a></div>

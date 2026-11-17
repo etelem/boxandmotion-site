@@ -365,3 +365,24 @@ window.addEventListener('message', function (e) {
   document.addEventListener('visibilitychange',sync);
   paint();
 })();
+
+// "What changed" story (the owner, Nov 17): same feel as the game-page scroll story. Each part fades up and its dot turns orange
+// when it comes into view; numbers count up and rows/bars phase in one at a time; scrolling back above a part resets it so it replays.
+(function(){
+  var cs=document.querySelector('[data-wc]'); if(!cs) return;
+  var parts=[].slice.call(cs.querySelectorAll('.wc-part'));
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function fmt(el,v){ var dec=+el.getAttribute('data-dec')||0; el.textContent=(el.getAttribute('data-pre')||'')+v.toFixed(dec)+(el.getAttribute('data-suf')||''); }
+  function count(p){ if(reduce) return; p.querySelectorAll('.wc-n').forEach(function(el){ var to=+el.getAttribute('data-to'), host=el.closest('.ph'),
+      wait=host?parseFloat(getComputedStyle(host).getPropertyValue('--d'))*1000||0:0, t0=null; fmt(el,0);
+    function st(ts){ if(!t0) t0=ts+wait; var k=Math.max(0,Math.min(1,(ts-t0)/900)); fmt(el,to*(1-Math.pow(1-k,3))); if(k<1) requestAnimationFrame(st); } requestAnimationFrame(st); }); }
+  if(!('IntersectionObserver' in window)||reduce){ parts.forEach(function(p){ p.classList.add('on'); }); }
+  else { var seen=new IntersectionObserver(function(es){ es.forEach(function(e){ var p=e.target;
+      if(e.isIntersecting&&!p.classList.contains('on')){ p.classList.add('on'); count(p); }
+      else if(!e.isIntersecting&&e.boundingClientRect.top>0){ p.classList.remove('on'); } }); },{threshold:0.3});
+    parts.forEach(function(p){ seen.observe(p); }); }
+  var rail=cs.querySelector('.rail'), ticking=false;
+  function fill(){ ticking=false; var r=cs.getBoundingClientRect(), h=r.height-20, at=innerHeight*0.6-r.top-10; rail.style.height=Math.max(0,Math.min(h,at)).toFixed(0)+'px'; }
+  addEventListener('scroll',function(){ if(!ticking){ ticking=true; requestAnimationFrame(fill); } },{passive:true});
+  addEventListener('resize',fill); fill();
+})();
