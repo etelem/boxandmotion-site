@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-17-CHA-LAL.html",
+  "team": "LAL",
+  "home": true,
+  "number": "5",
+  "player": "Quentin Grimes",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 0.9872,
+    "ape": 1.039,
+    "mass": 0.9876
+  },
+  "build_note": "Listed 6-5, 207 lb (Wikipedia); 6-8 wingspan at the 2021 combine (NBADraft.net)",
+  "kicker": "LAKERS 118 · HORNETS 114 · OT · NOV 17",
+  "hook": [
+    "Grimes' 10th three",
+    "ties it at 1.7"
+  ],
+  "clock": "Q4 · 1.7",
+  "us": "LAL",
+  "them": "CHA",
+  "score_before": [
+    108,
+    111
+  ],
+  "score_make": [
+    111,
+    111
+  ],
+  "stamp": "THREE",
+  "beat": [
+    "Down 3 with seconds left.",
+    "Tied at 111. On to overtime."
+  ],
+  "final": {
+    "label": "FINAL · OT",
+    "us": "Lakers",
+    "them": "Hornets",
+    "us_pts": 118,
+    "them_pts": 114
+  },
+  "star": {
+    "name": "Quentin Grimes",
+    "big": 47,
+    "big_label": "points, a career high",
+    "lines": [
+      "10 of 14 from three, 21 in the 4th",
+      "Luka: 36 and 7 assists"
+    ]
+  },
+  "story": "Charlotte led by 18 in the second half. Grimes' 10th three forced overtime and the Lakers won 118–114, their ninth straight.",
+  "aria": "Animated Short: Quentin Grimes' 3-pointer from Luka Dončić with 1.7 seconds left in regulation that tied the Hornets 111–111, his 10th three of the night. Lakers win 118–114 in overtime. An original illustration, not traced from footage, not to scale."
+}

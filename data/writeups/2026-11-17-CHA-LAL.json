@@ -1,0 +1,105 @@
+{
+ "headline": "Grimes' 47 and a tying three win it in overtime",
+ "dek": "Quentin Grimes scored a career-high 47 and tied it with 1.7 seconds left; the Lakers won in overtime.",
+ "three": [
+  [
+   "Grimes: 47 points, a career high",
+   "10 of 14 from three, 21 in the fourth quarter."
+  ],
+  [
+   "Lakers down 13 after three, won the fourth 30–17",
+   "Grimes and Luka combined for 83 of 118."
+  ],
+  [
+   "Won it on the break and on the glass",
+   "Fast-break points 27–9; offensive rebounds 19–12. Charlotte turned it over 18 times."
+  ]
+ ],
+ "battle": [
+  [
+   "Fast-break points",
+   27,
+   9
+  ],
+  [
+   "Offensive rebounds",
+   19,
+   12
+  ],
+  [
+   "Turnovers forced",
+   18,
+   13
+  ],
+  [
+   "Free throws made",
+   18,
+   16
+  ]
+ ],
+ "battle_labels": [
+  "LAL",
+  "CHA"
+ ],
+ "top": [
+  [
+   "Quentin Grimes",
+   "LAL",
+   "career high, 10 of 14 from three",
+   47
+  ],
+  [
+   "Luka Dončić",
+   "LAL",
+   "7 ast, 5 threes",
+   36
+  ],
+  [
+   "Collin Sexton",
+   "LAL",
+   "off the bench, 3 of 4 FT",
+   10
+  ],
+  [
+   "Matisse Thybulle",
+   "LAL",
+   "6 reb, 3 steals",
+   7
+  ]
+ ],
+ "linescore": {
+  "away": [
+   34,
+   32,
+   28,
+   17,
+   3
+  ],
+  "home": [
+   30,
+   29,
+   22,
+   30,
+   7
+  ],
+  "ot": true
+ },
+ "source": "kit/configs/2026-11-17-CHA-at-LAL.json",
+ "loser": {
+  "top": [
+   [
+    "Brandon Miller",
+    "CHA",
+    "5 of 12 from three · sat out OT",
+    28
+   ],
+   [
+    "Naz Reid",
+    "CHA",
+    "11 rebounds · 4 threes",
+    23
+   ]
+  ],
+  "source": "box score"
+ }
+}
