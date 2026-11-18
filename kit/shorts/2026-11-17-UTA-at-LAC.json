@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-17-UTA-LAC.html",
+  "team": "UTA",
+  "home": false,
+  "number": "28",
+  "player": "Brice Sensabaugh",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 1.0,
+    "ape": 1.0,
+    "mass": 1.0455
+  },
+  "build_note": "Listed 6-6, 235 lb (Wikipedia); no wingspan reported",
+  "kicker": "JAZZ 132 · CLIPPERS 107 · NOV 17",
+  "hook": [
+    "Sensabaugh again:",
+    "back-to-back threes"
+  ],
+  "clock": "Q4 · 8:51",
+  "us": "UTA",
+  "them": "LAC",
+  "score_before": [
+    100,
+    93
+  ],
+  "score_make": [
+    103,
+    93
+  ],
+  "stamp": "THREE",
+  "beat": [
+    "25 points in the fourth,",
+    "10 of 11 from the floor."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Jazz",
+    "them": "Clippers",
+    "us_pts": 132,
+    "them_pts": 107
+  },
+  "star": {
+    "name": "Brice Sensabaugh",
+    "big": 40,
+    "big_label": "points off the bench",
+    "lines": [
+      "8 threes, a career high",
+      "Snapped a 12-game losing streak"
+    ]
+  },
+  "story": "Utah won the fourth 44–21 and shot 18 of 22 in it. Sensabaugh's back-to-back threes made it 103–93.",
+  "aria": "Animated Short: Brice Sensabaugh's 3-pointer off a pass from Darryn Peterson with 8:51 left in the fourth quarter, his second three in a row, that made it 103–93. Jazz win 132–107. An original illustration, not traced from footage, not to scale."
+}

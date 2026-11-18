@@ -1,0 +1,109 @@
+{
+ "headline": "Sensabaugh’s 40 ends Utah’s 12-game skid",
+ "dek": "Brice Sensabaugh scored 40 off the bench, 25 in the fourth, and the Jazz ended a 12-game losing streak.",
+ "three": [
+  [
+   "Sensabaugh: 40 points, a season high",
+   "25 in the fourth on 10 of 11 shooting, and a career-high 8 threes."
+  ],
+  [
+   "Jazz down 4 at the half, then won the fourth 44–21",
+   "Sensabaugh and George combined for 70 of 132."
+  ],
+  [
+   "Won it from three and off the bench",
+   "Bench points 60–37; threes made 20–14. Utah shot 18 of 22 in the fourth."
+  ]
+ ],
+ "battle": [
+  [
+   "Bench points",
+   60,
+   37
+  ],
+  [
+   "Threes made",
+   20,
+   14
+  ],
+  [
+   "Assists",
+   35,
+   21
+  ],
+  [
+   "Rebounds",
+   46,
+   31
+  ]
+ ],
+ "battle_labels": [
+  "UTA",
+  "LAC"
+ ],
+ "top": [
+  [
+   "Brice Sensabaugh",
+   "UTA",
+   "off the bench, 25 in the 4th",
+   40
+  ],
+  [
+   "Keyonte George",
+   "UTA",
+   "11 assists, 6 of 6 FT",
+   30
+  ],
+  [
+   "Mo Bamba",
+   "UTA",
+   "10 rebounds, 6 of 7",
+   15
+  ],
+  [
+   "Darryn Peterson",
+   "UTA",
+   "5 rebounds, 5 of 7 FT",
+   13
+  ]
+ ],
+ "linescore": {
+  "away": [
+   35,
+   23,
+   30,
+   44
+  ],
+  "home": [
+   29,
+   33,
+   24,
+   21
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-17-UTA-at-LAC.json",
+ "loser": {
+  "top": [
+   [
+    "Brook Lopez",
+    "LAC",
+    "4 of 9 from three",
+    23
+   ],
+   [
+    "Darius Garland",
+    "LAC",
+    "7 assists · 8 of 8 FT",
+    20
+   ],
+   [
+    "Rui Hachimura",
+    "LAC",
+    "4 of 4 from three",
+    20
+   ]
+  ],
+  "source": "box score"
+ }
+}

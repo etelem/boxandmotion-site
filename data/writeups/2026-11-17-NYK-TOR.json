@@ -1,0 +1,103 @@
+{
+ "headline": "Brunson’s four-point play wins it late",
+ "dek": "Tied 102–102 with 1:39 left, Jalen Brunson’s three and the free throw on a flagrant foul put the Knicks ahead for good.",
+ "three": [
+  [
+   "Brunson: 31 points and the go-ahead three",
+   "7 of 7 at the line, 8 of his 31 in the fourth quarter."
+  ],
+  [
+   "Knicks closed the half on a 19–2 run and the game on a 9–0 run",
+   "Brunson and Bridges combined for 48 of 111."
+  ],
+  [
+   "Won it on the glass and off the bench",
+   "Rebounds 44–23; bench points 26–13. Toronto made 10 of 18 free throws."
+  ]
+ ],
+ "battle": [
+  [
+   "Rebounds",
+   44,
+   23
+  ],
+  [
+   "Bench points",
+   26,
+   13
+  ],
+  [
+   "Free throws made",
+   17,
+   10
+  ],
+  [
+   "Field goals made",
+   41,
+   39
+  ]
+ ],
+ "battle_labels": [
+  "NYK",
+  "TOR"
+ ],
+ "top": [
+  [
+   "Jalen Brunson",
+   "NYK",
+   "10 of 22, 7 of 7 FT",
+   31
+  ],
+  [
+   "Mikal Bridges",
+   "NYK",
+   "7 of 11, the three at 0:36",
+   17
+  ],
+  [
+   "Karl-Anthony Towns",
+   "NYK",
+   "16 rebounds, 8 assists",
+   16
+  ],
+  [
+   "OG Anunoby",
+   "NYK",
+   "2 blocks, 5 of 6 FT",
+   16
+  ]
+ ],
+ "linescore": {
+  "away": [
+   23,
+   31,
+   26,
+   31
+  ],
+  "home": [
+   29,
+   21,
+   33,
+   19
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-17-NYK-at-TOR.json",
+ "loser": {
+  "top": [
+   [
+    "Ja'Kobe Walter",
+    "TOR",
+    "7 of 12 from three, a career high",
+    25
+   ],
+   [
+    "RJ Barrett",
+    "TOR",
+    "5 rebounds · 5 assists",
+    22
+   ]
+  ],
+  "source": "box score"
+ }
+}
