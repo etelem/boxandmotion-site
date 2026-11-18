@@ -1,0 +1,103 @@
+{
+ "headline": "Cunningham and Jenkins end the Spurs’ streak",
+ "dek": "Cade Cunningham scored 27 and Daniss Jenkins 25 as Detroit ended San Antonio’s 12-game win streak.",
+ "three": [
+  [
+   "Cade Cunningham: 27 points and 6 assists",
+   "12 of 25 from the floor, and a steal and dunk with 11.4 seconds left in the half."
+  ],
+  [
+   "Pistons came back from 14 down to lead 55–54 at the half",
+   "Cunningham, Jenkins and Thompson combined for 66 of 105."
+  ],
+  [
+   "Won it in the paint and on the break",
+   "Points in the paint 60–44; fast-break points 24–15. Detroit had 10 steals to San Antonio’s 4."
+  ]
+ ],
+ "battle": [
+  [
+   "Points in the paint",
+   60,
+   44
+  ],
+  [
+   "Fast-break points",
+   24,
+   15
+  ],
+  [
+   "Assists",
+   31,
+   25
+  ],
+  [
+   "Steals",
+   10,
+   4
+  ]
+ ],
+ "battle_labels": [
+  "DET",
+  "SAS"
+ ],
+ "top": [
+  [
+   "Cade Cunningham",
+   "DET",
+   "12 of 25, 6 assists",
+   27
+  ],
+  [
+   "Daniss Jenkins",
+   "DET",
+   "21 in the second half, 3 of 7 from three",
+   25
+  ],
+  [
+   "Ausar Thompson",
+   "DET",
+   "12 assists, 9 rebounds, 5 steals",
+   14
+  ],
+  [
+   "John Collins",
+   "DET",
+   "3 of 5, 4 of 4 FT",
+   11
+  ]
+ ],
+ "linescore": {
+  "away": [
+   26,
+   29,
+   23,
+   27
+  ],
+  "home": [
+   33,
+   21,
+   18,
+   21
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-17-DET-at-SAS.json",
+ "loser": {
+  "top": [
+   [
+    "Victor Wembanyama",
+    "SAS",
+    "18 rebounds · 10 in the first quarter",
+    25
+   ],
+   [
+    "Dylan Harper",
+    "SAS",
+    "8 of 14 · 4 of 5 FT",
+    20
+   ]
+  ],
+  "source": "box score"
+ }
+}

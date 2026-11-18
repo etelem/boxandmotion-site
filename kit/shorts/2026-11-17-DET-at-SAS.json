@@ -1,0 +1,50 @@
+{
+  "out": "short-2026-11-17-DET-SAS.html",
+  "team": "DET",
+  "home": false,
+  "number": "24",
+  "player": "Daniss Jenkins",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 0.9744,
+    "ape": 1.0,
+    "mass": 0.8875
+  },
+  "build_note": "Listed 6-4, 165 lb, No. 24 (RealGM); no wingspan from a named measurement",
+  "kicker": "PISTONS 105 · SPURS 93 · NOV 17",
+  "hook": [
+    "Jenkins off the steal,",
+    "1:45 left, up 7"
+  ],
+  "clock": "Q4 · 1:45",
+  "us": "DET",
+  "them": "SAS",
+  "stamp": "THREE",
+  "beat": [
+    "Thompson’s steal.",
+    "Pistons by 10, 100–90."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Pistons",
+    "them": "Spurs",
+    "us_pts": 105,
+    "them_pts": 93
+  },
+  "star": {
+    "name": "Daniss Jenkins",
+    "big": 25,
+    "big_label": "points, 21 in the second half",
+    "lines": [
+      "Cunningham: 27 points",
+      "Spurs’ 12-game streak over"
+    ]
+  },
+  "story": "Detroit came back from 14 down and San Antonio cut it to 95–90 with 2:36 left. Daniss Jenkins' three off an Ausar Thompson steal made it 100–90, and the Pistons won 105–93.",
+  "aria": "Animated Short: Daniss Jenkins' 3-pointer off an Ausar Thompson steal with 1:45 left that put Detroit up 100 to 90. Pistons win 105–93 and end the Spurs' 12-game win streak. An original illustration, not traced from footage, not to scale.",
+  "margins": [
+    "Pistons +7",
+    "Pistons +10"
+  ]
+}
