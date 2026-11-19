@@ -1,0 +1,232 @@
+{
+  "team": "HOU",
+  "D": "  const D = {\n    date: 'Wed, Nov 18, 2026',\n    us: 119, them: 104, record: '12–4', usName: 'Rockets', themName: 'Pacers',\n    quarters: [[39, 28], [23, 18], [31, 30], [26, 28]],\n    leadUs: 21, leadThem: 4,\n    star: {name: 'Kevin Durant', stats: [['Points', 21, 25], ['Rebounds', 2, 5], ['Assists', 3, 5]]},\n    scorers: [\n      {name: 'Kevin Durant', pts: 21, note: '7 of 9 · 4 of 5 from three'},\n      {name: 'Reed Sheppard', pts: 20, note: 'off the bench · 6 of 7 from three'},\n      {name: 'Jabari Smith Jr.', pts: 17, note: '7 of 10 · 3 of 6 from three'},\n      {name: 'Amen Thompson', pts: 15, note: '9 rebounds · 3 assists'},\n      {name: 'Fred VanVleet', pts: 15, note: '6 assists · 3 of 7 from three'},\n    ],\n    edges: [\n      {label: 'Threes made', us: 19, them: 10},\n      {label: 'Rebounds', us: 46, them: 35},\n      {label: 'Assists', us: 30, them: 25},\n      {label: 'Offensive rebounds', us: 13, them: 7},\n    ],\n    gaps: [\n      {label: 'Points in the paint', us: 40, them: 56},\n      {label: 'Fast-break points', us: 7, them: 20},\n    ],\n    next: {opp: 'at Nuggets', when: 'Fri, Nov 20, 10:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Reed Sheppard's sixth 3-pointer of the night with 7:51 left that made it 104–83. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Sheppard’s sixth three",
+    "subP": "Sheppard from three, 7:51 left",
+    "subL": "Reed Sheppard from three, 7:51 left, Rockets up 18",
+    "m0": "Rockets +18",
+    "m1": "Rockets +21",
+    "num": "15",
+    "cap1": "Sheppard’s sixth three. Rockets by 21.",
+    "cap2": "104–83 with 7:51 to play.",
+    "clock": [
+      478,
+      471
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Rockets at Pacers Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Rockets 119, Pacers 104 · Nov 18, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Rockets at', 'Pacers'] : ['Rockets at Pacers']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Durant 21, Sheppard 20.', 'Houston made 19 threes.'] : ['Kevin Durant scored 21 and Reed Sheppard 20 as Houston made 19 of 35 threes.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Rockets improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Fifth win in six games'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Rockets up 16 at the half,', 'led by as many as 21'] : ['Rockets up 16 at the half, and led by as many as 21']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Rockets ${D.leadUs}, Pacers ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin in each quarter, then the game score after it.",
+      "Rockets’ margin in each quarter, then the game score after it."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Durant: 21 points', 'on 7 of 9'] : ['Kevin Durant: 21 points on 7 of 9']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['4 of 5 from three,', '3 of 4 at the line.'] : ['4 of 5 from three and 3 of 4 at the line in 31 minutes.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Durant, Sheppard and Smith:', '58 of the 119'] : ['Durant, Sheppard and Smith combined for 58 of 119']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 25;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it from three', 'and on the glass'] : ['Won it from three and on the glass']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Rockets in silver, Pacers in gray. Houston', 'made 19 of 35 threes to 10 of 34.'] : ['Rockets in silver, Pacers in gray. Houston made 19 of 35 threes to Indiana’s 10 of 34.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'3rd in the West'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Nuggets’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '8–5';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Last stop of a', 'four-game road trip.'] : ['The last stop of Houston’s four-game road trip.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Rockets 119 · Pacers 104 · Nov 18'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Sheppard from three'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Durant'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 60;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - 375 * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+      "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+    ],
+    [
+      "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+      "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+    ],
+    [
+      "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+      "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+3', 'd w', 72, 'end');"
+    ],
+    [
+      "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+      "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 160, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 192, ly, D.themName"
+    ]
+  ],
+  "aria": "Animated recap of the Rockets' 119 to 104 road win over the Pacers: Reed Sheppard's sixth 3-pointer with 7:51 left that made it 104 to 83, quarter-by-quarter scoring, Kevin Durant's 21 points, the top scorers, how the Rockets won, and the next game.",
+  "figure": {
+    "player": "Reed Sheppard",
+    "home": false,
+    "tall": 0.9487,
+    "ape": 1.0,
+    "mass": 0.9524,
+    "label": "Reed Sheppard, listed 6-2, 185 lb, no wingspan from a named source"
+  },
+  "loser_top": [
+    [
+      "Pascal Siakam",
+      24,
+      "10 of 17 · 3 steals"
+    ],
+    [
+      "Kelly Oubre Jr.",
+      17,
+      "7 of 10 in 22 minutes"
+    ]
+  ],
+  "notes": [
+    "Box score from the Rockets' 119–104 road win over the Indiana Pacers on Nov 18, 2026, from the Covers box score, with game details from the Associated Press (via CBS Sports and theScore), the Houston Chronicle (via Yahoo Sports), the game story carried by 95.3 The Score, Pacers On SI and Ball Exclusives (via Yardbarker). All 119 Houston points and all 104 Indiana points are accounted for in the box score, and the quarter scores (39–23–31–26 to 28–18–30–28) add up to both totals: 39–28 after one, 62–46 Houston at the half (AP; 95.3 The Score) and 93–76 after three (AP). Team totals (threes 19 of 35 to 10 of 34, rebounds 46–35, offensive rebounds 13–7, assists 30–25, points in the paint 40–56, fast-break points 7–20) are from the box score; the threes match Pacers On SI. Houston's biggest lead, 21, is from the box score and the Houston Chronicle; Indiana's, 4, is from the box score (Houston trailed for about the first two minutes, Chronicle). Records and ranks are from the site's standings after Wednesday's games.",
+    "Houston won for the fifth time in six games (AP). The Rockets turned a 12–10 game into a 15–0 run for a 27–10 lead in the first quarter (AP; 95.3 The Score), and Indiana never got closer than nine after that (AP). Kevin Durant's dunk with 6:58 left in the half made it 49–30, and Amen Thompson's finger roll at the halftime buzzer made it 62–46 (95.3 The Score). Indiana's 12–0 third-quarter run cut it to 81–72 with 3:09 left in the quarter before Houston closed it on a 12–4 spurt (AP), finished by Marcus Smart's three with 31.5 seconds left for 93–76 (95.3 The Score). Reed Sheppard's 20 points were a season high (Houston Chronicle). Alperen Şengün was hit in the face with 7:21 left in the first half and did not return (AP); Pacers coach Rick Carlisle was ejected after two technical fouls (AP). Indiana played without Tyrese Haliburton and Andrew Nembhard (AP). Houston plays at Denver on Friday, Nov 20 at 10:00 PM ET, the last game of a four-game road trip (AP; Ball Exclusives).",
+    "The play of the game is an original illustration of Reed Sheppard's sixth 3-pointer of the night, with 7:51 left, that made it 104–83 (95.3 The Score), so the board shows Rockets +18 to +21. The written accounts don't describe how he got the shot, so it is drawn as the template's plain pull-up from beyond the arc; the spot and the defender are not drawn to exact positions. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Houston Rockets or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Reed Sheppard's listed 6-foot-2 and 185 pounds with No. 15 (RealGM; Wikipedia lists the same); no wingspan from a named measurement was found, so his arms use the default length. He is drawn in Houston's road colors with the default figure look (no approved look yet). It is an original figure with a featureless face, not a portrait or a trace of footage."
+  ],
+  "sources": [
+    [
+      "Covers: Rockets vs Pacers game overview and player stats, Nov 18, 2026",
+      "https://www.covers.com/sport/basketball/nba/matchup/388746",
+      "Box score, line score, team totals, biggest leads"
+    ],
+    [
+      "AP (via CBS Sports): Rockets roll past Pacers behind Kevin Durant, Reed Sheppard",
+      "https://cbssports.com/nba/news/kevin-durant-reed-sheppard-lead-rockets-past-pacers-119-104",
+      "15–0 run, halftime, third-quarter runs, Şengün and Carlisle, injuries, next games"
+    ],
+    [
+      "AP (via theScore): Kevin Durant scores 21 to help Rockets overpower Pacers 119-104 despite losing Sengun to injury",
+      "https://www.thescore.com/nba/news/3659499/kevin-durant-scores-21-to-help-rockets-overpower-pacers-119-104-despite-losing-sengun-to-injury",
+      "Same AP story, cross-check of runs and scores"
+    ],
+    [
+      "Houston Chronicle (via Yahoo Sports): Rockets 119, Pacers 104: Alperen Şengün exits, Reed Sheppard gets hot",
+      "https://sports.yahoo.com/articles/rockets-119-pacers-104-alperen-063903718.html",
+      "Sheppard's season high, biggest lead, early deficit, Şengün's injury"
+    ],
+    [
+      "95.3 The Score: Balanced Rockets' attack bounces Pacers",
+      "https://www.953thescore.com/2026/11/18/balanced-rockets-attack-bounces-pacers/",
+      "Sheppard's sixth three with 7:51 left (104–83), Durant's dunk, Thompson's buzzer finger roll, Smart's three"
+    ],
+    [
+      "Pacers On SI: Threes don't fall, Braden Smith hurt and more frustrations from Pacers loss to Rockets",
+      "https://www.si.com/nba/pacers/onsi/threes-don-t-fall-braden-smith-hurt-and-more-frustrations-from-pacers-loss-to-rockets-01m7rmbdr7tc",
+      "Three-point totals, Indiana's side"
+    ],
+    [
+      "Ball Exclusives (via Yardbarker): Rockets beat Pacers 119-104 as Durant scores 21",
+      "https://www.yardbarker.com/nba/articles/rockets_beat_pacers_119_104_as_durant_scores_21/s1_17668_44584192",
+      "Records, next games and tip times"
+    ],
+    [
+      "RealGM: Reed Sheppard bio",
+      "https://basketball.realgm.com/player/Reed-Sheppard/Bio/179670",
+      "Sheppard's listed height, weight and number for the figure"
+    ],
+    [
+      "Wikipedia: Reed Sheppard",
+      "https://en.wikipedia.org/wiki/Reed_Sheppard",
+      "Cross-check of listed height and weight"
+    ]
+  ]
+}

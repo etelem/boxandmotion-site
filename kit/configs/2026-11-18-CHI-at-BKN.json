@@ -1,0 +1,225 @@
+{
+  "team": "CHI",
+  "D": "  const D = {\n    date: 'Wed, Nov 18, 2026',\n    us: 137, them: 107, record: '4–10', usName: 'Bulls', themName: 'Nets',\n    quarters: [[37, 21], [39, 30], [35, 26], [26, 30]],\n    leadUs: 37, leadThem: 2,\n    star: {name: 'Matas Buzelis', stats: [['Points', 25, 30], ['Rebounds', 5, 10], ['Threes made', 5, 10]]},\n    scorers: [\n      {name: 'Matas Buzelis', pts: 25, note: '9 of 16 · 5 of 9 from three'},\n      {name: 'Josh Giddey', pts: 18, note: '14 rebounds · 9 assists · 8 of 12'},\n      {name: 'Norman Powell', pts: 17, note: '5 of 9 from three · 5 assists'},\n      {name: 'Jalen Smith', pts: 14, note: '6 of 11 · 6 rebounds'},\n      {name: 'Nic Claxton', pts: 14, note: '6 of 7 in 22 minutes'},\n    ],\n    edges: [\n      {label: 'Points in the paint', us: 62, them: 46},\n      {label: 'Rebounds', us: 46, them: 29},\n      {label: 'Assists', us: 36, them: 25},\n      {label: 'Threes made', us: 21, them: 15},\n    ],\n    gaps: [\n      {label: 'Free throws made', us: 10, them: 14},\n    ],\n    next: {opp: 'vs Wizards', when: 'Fri, Nov 20, 8:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Patrick Williams' driving layup with 5.1 seconds left in the first quarter that capped a 13-0 run and made it 37-21. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Williams caps the run",
+    "subP": "Williams on the drive, 5.1 left",
+    "subL": "Patrick Williams on the drive, 5.1 seconds left in the first",
+    "m0": "Bulls +14",
+    "m1": "Bulls +16",
+    "num": "44",
+    "cap1": "Williams’ layup. Bulls by 16.",
+    "cap2": "37–21, a 13–0 run to end the first.",
+    "clock": [
+      12,
+      5.1
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Bulls at Nets Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Bulls 137, Nets 107 · Nov 18, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Bulls at', 'Nets'] : ['Bulls at Nets']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Buzelis 25, 21 Bulls threes.', 'A 30-point road win.'] : ['Matas Buzelis scored 25 and Chicago made 21 threes in a 30-point win at Brooklyn.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Bulls improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Their highest-scoring game this season'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Bulls closed Q1 on 13–0,', 'up 76–51 at the half'] : ['Bulls closed the first quarter on a 13–0 run and led 76–51 at the half']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Bulls ${D.leadUs}, Nets ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin in each quarter, then the game score after it.",
+      "Bulls’ margin in each quarter, then the game score after it."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Buzelis: 25 points', 'and 5 threes'] : ['Matas Buzelis: 25 points and 5 threes']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['A season high, on 9 of 16', 'and 5 of 9 from three.'] : ['A season high, on 9 of 16 from the floor and 5 of 9 from three.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Eight Bulls in', 'double figures'] : ['Eight Bulls scored in double figures']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 30;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it in the paint', 'and from three'] : ['Won it in the paint and from three']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Bulls in white, Nets in gray. Chicago', 'outrebounded Brooklyn 46–29.'] : ['Bulls in white, Nets in gray. Chicago outrebounded Brooklyn 46–29.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'13th in the East'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Wizards’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '5–11';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Washington won the first meeting', '124–120 on Oct. 24.'] : ['Washington won the first meeting 124–120 in Chicago on Oct. 24.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Bulls 137 · Nets 107 · Nov 18'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Williams caps the run'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Buzelis'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 70;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 170 : 200) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+2', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 165 * k, shotX + 118 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "T(board, bx + 24, by + 38, 'Q1', 'b m', 24);"
+    ],
+    [
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = clk < 60 ? clk.toFixed(1) : `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 140, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 172, ly, D.themName"
+    ]
+  ],
+  "aria": "Animated recap of the Bulls' 137 to 107 road win over the Nets: Patrick Williams' driving layup with 5.1 seconds left in the first quarter that capped a 13 to 0 run and made it 37 to 21, quarter-by-quarter scoring, Matas Buzelis' 25 points, the top scorers, how the Bulls won, and the next game.",
+  "figure": {
+    "player": "Patrick Williams",
+    "home": false,
+    "tall": 1.0,
+    "ape": 1.0769,
+    "mass": 1.0455,
+    "label": "Patrick Williams, listed 6-6, 235 lb, reported 7-0 wingspan"
+  },
+  "loser_top": [
+    [
+      "Egor Demin",
+      22,
+      "9 of 22 · 3 of 12 from three"
+    ],
+    [
+      "Julius Randle",
+      17,
+      "5 of 10 · 4 of 4 FT"
+    ]
+  ],
+  "notes": [
+    "Box score from the Bulls' 137–107 road win over the Brooklyn Nets on Nov 18, 2026, from the Covers box score, checked line by line against the Sports Illustrated box score, with game details from the Associated Press (via The Daily Gazette), the Chicago Sun-Times, Roundtable Sports (via Yahoo Sports), On Tap Sports Net and WJOX. All 137 Chicago points and all 107 Brooklyn points are accounted for in the box score, and the quarter scores (37–39–35–26 to 21–30–26–30) add up to both totals: 76–51 Chicago at the half (AP; On Tap). Team totals (points in the paint 62–46, rebounds 46–29, assists 36–25, threes made 21–15, free throws made 10–14) and both biggest leads (Chicago 37, Brooklyn 2) are from the Covers box score; Chicago's 62 paint points and 46–29 rebounding edge match WJOX, and the 37-point lead matches the AP and the Sun-Times. Records and ranks are from the site's standings after Wednesday's games.",
+    "Chicago's 137 points were its most this season (AP). The Bulls made a franchise-record 15 threes in the first half (AP; On Tap) and 21 in the game. Eight Bulls scored in double figures, and Matas Buzelis' 25 was a season high (AP). Brooklyn's only lead was 2–0 (AP). Nic Claxton, who spent seven seasons with the Nets, received a tribute video in the first quarter (Sun-Times). Chicago won for the third time in four games and for the first time in Brooklyn since Nov. 1, 2022 (AP). The Bulls host Washington on Friday, Nov 20 at 7 p.m. CT (8:00 PM ET; On Tap), and Washington won the first meeting 124–120 in Chicago on Oct. 24 (On Tap; Covers' schedule).",
+    "The play of the game is an original illustration of Patrick Williams' driving layup with 5.1 seconds left in the first quarter that made it 37–21 (On Tap). Chicago led 24–21 when Julius Randle scored with 3:00 left and then scored the last 13 points of the quarter (AP; On Tap; Roundtable Sports: over the final 2:46); the SI play-by-play lists Claxton's hook, threes by Isaac Okoro, Zach Collins and Norman Powell, then Williams' layup, so the board shows Bulls +14 to +16. It is drawn as a basket on a drive from the right of the lane; the recaps don't describe the finish beyond a driving layup. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Chicago Bulls or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The player in the play of the game is drawn to Patrick Williams' listed 6-foot-6 and 235 pounds with No. 44 (RealGM), with his arms scaled to a reported 7-foot wingspan (Sportskeeda). He is drawn in Chicago's road colors with the default figure look (no approved look yet). It is an original figure with a featureless face, not a portrait or a trace of footage."
+  ],
+  "sources": [
+    [
+      "Covers: Bulls vs Nets game overview and player stats, Nov 18, 2026",
+      "https://www.covers.com/sport/basketball/nba/matchup/388749",
+      "Box score, line score, team totals, biggest leads"
+    ],
+    [
+      "Sports Illustrated: Bulls vs Nets final score and box score, Nov 18, 2026",
+      "https://www.si.com/nba/scoreboard/bulls-vs-nets-11-18-2026-1705",
+      "Box score check, play-by-play of the 13–0 run"
+    ],
+    [
+      "AP (via The Daily Gazette): Bulls roll to a 137-107 victory over the Nets in their easiest win of the season",
+      "https://www.dailygazette.com/the_recorder/ap/sports/bulls-roll-to-a-137-107-victory-over-the-nets-in-their-easiest-win-of/article_61b58edd-9e75-58d3-b68c-9c719aa4f9cd.html",
+      "Halftime score, 13–0 run, franchise-record first half, 37-point lead, season highs, streaks"
+    ],
+    [
+      "Chicago Sun-Times: Bulls dominate the Nets in a Brooklyn homecoming for coach and player",
+      "https://chicago.suntimes.com/bulls/2026/11/18/bulls-dominate-nets-brooklyn-homecoming",
+      "Claxton tribute, 37-point lead, record"
+    ],
+    [
+      "Roundtable Sports (via Yahoo Sports): Bulls Make Franchise History in Rout of Nets",
+      "https://sports.yahoo.com/articles/bulls-franchise-history-rout-nets-025304028.html",
+      "13–0 run over the final 2:46 of the first, third-quarter details"
+    ],
+    [
+      "On Tap Sports Net: Bulls Hit Franchise-Record 15 First-Half Threes in 137-107 Rout of Nets",
+      "https://ontapsportsnet.com/nba/chicago-bulls/bulls-nets-recap-november-18-2026/",
+      "Williams' driving layup with 5.1 left (37–21), the run's order, next game and last meeting"
+    ],
+    [
+      "WJOX: Matas Buzelis pours in 25 as Bulls roll past Nets",
+      "https://www.joxfm.com/2026/11/18/matas-buzelis-pours-in-25-as-bulls-roll-past-nets/",
+      "Paint points and rebounding check, halftime buzzer layup"
+    ],
+    [
+      "Covers: Chicago Bulls schedule and results",
+      "https://www.covers.com/sport/basketball/nba/teams/main/chicago-bulls",
+      "Oct. 24 loss to Washington, 124–120"
+    ],
+    [
+      "RealGM: Patrick Williams bio",
+      "https://basketball.realgm.com/player/Patrick-Williams/Bio/132443",
+      "Williams' listed height, weight and number for the figure"
+    ],
+    [
+      "Sportskeeda: What is Patrick Williams' wingspan?",
+      "https://www.sportskeeda.com/basketball/patrick-williams-wingspan",
+      "Williams' reported wingspan for the figure"
+    ]
+  ]
+}

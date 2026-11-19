@@ -1,0 +1,222 @@
+{
+  "team": "DET",
+  "D": "  const D = {\n    date: 'Wed, Nov 18, 2026',\n    us: 122, them: 109, record: '10–4', usName: 'Pistons', themName: 'Pelicans',\n    quarters: [[31, 31], [36, 29], [25, 26], [30, 23]],\n    leadUs: 19, leadThem: 5,\n    star: {name: 'John Collins', stats: [['Points', 20, 25], ['Rebounds', 7, 10], ['Assists', 2, 5]]},\n    scorers: [\n      {name: 'John Collins', pts: 20, note: '6 of 10 · 4 of 6 from three'},\n      {name: 'Javonte Green', pts: 18, note: '13 in the first half · 7 rebounds'},\n      {name: 'Paul Reed', pts: 17, note: '7 of 9 · 7 rebounds'},\n      {name: 'Daniss Jenkins', pts: 17, note: '9 assists · 3 of 5 from three'},\n      {name: 'Isaiah Joe', pts: 11, note: '3 of 5 from three · back after 10 games out'},\n    ],\n    edges: [\n      {label: 'Threes made', us: 17, them: 11},\n      {label: 'Fast-break points', us: 22, them: 9},\n      {label: 'Assists', us: 29, them: 23},\n      {label: 'Field goals made', us: 41, them: 37},\n    ],\n    gaps: [\n      {label: 'Points in the paint', us: 48, them: 52},\n    ],\n    next: {opp: 'vs Raptors', when: 'Fri, Nov 20, 7:30 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Javonte Green's 3-pointer off a Daniss Jenkins pass with 6:16 left in the first half that broke a 46–46 tie; Detroit led the rest of the way. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Green from three",
+    "subP": "Green from three, 6:16 left in the half",
+    "subL": "Javonte Green’s three off a Daniss Jenkins pass, 6:16 left in the half, tied 46–46",
+    "m0": "Tied 46–46",
+    "m1": "Pistons +3",
+    "num": "31",
+    "cap1": "Green from three. Pistons by 3.",
+    "cap2": "49–46, and Detroit led the rest of the way.",
+    "clock": [
+      383,
+      376
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Pistons at Pelicans Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Pistons 122, Pelicans 109 · Nov 18, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Pistons at', 'Pelicans'] : ['Pistons at Pelicans']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['No Cade. Collins 20,', 'seven in double figures.'] : ['Without Cade Cunningham, John Collins scored 20 and seven Pistons reached double figures.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Pistons improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Five wins in their last six'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Pistons ahead for good', 'from 6:16 before the half'] : ['Pistons led for good from 6:16 left in the first half']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Pistons ${D.leadUs}, Pelicans ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin in each quarter, then the game score after it.",
+      "Pistons’ margin in each quarter, then the game score after it."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Collins: 20 points', 'and 7 rebounds'] : ['John Collins: 20 points and 7 rebounds']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['6 of 10, 4 of 6 from', 'three, 4 of 4 at the line.'] : ['6 of 10 from the floor, 4 of 6 from three and 4 of 4 at the line.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Seven Pistons in', 'double figures'] : ['Seven Pistons scored in double figures']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 25;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it from three', 'and on the break'] : ['Won it from three and on the break']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Pistons in blue, Pelicans in gray. Detroit', 'shot 17 of 32 from three.'] : ['Pistons in blue, Pelicans in gray. Detroit shot 17 of 32 from three, 53 percent.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'3rd in the East'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Raptors’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '5–10';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Won on the second night of a', 'back-to-back, 3–1 on the trip.'] : ['Won on the second night of a back-to-back to finish 3–1 on the road trip.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Pistons 122 · Pelicans 109 · Nov 18'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Green from three'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Collins'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 60;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - 375 * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+      "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+    ],
+    [
+      "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+      "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+    ],
+    [
+      "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+      "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+3', 'd w', 72, 'end');"
+    ],
+    [
+      "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+      "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "T(board, bx + 24, by + 38, 'Q2', 'b m', 24);"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 160, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 192, ly, D.themName"
+    ]
+  ],
+  "aria": "Animated recap of the Pistons' 122 to 109 road win over the Pelicans: Javonte Green's 3-pointer with 6:16 left in the first half that broke a 46 to 46 tie for a lead Detroit never gave up, quarter-by-quarter scoring, John Collins' 20 points, the top scorers, how the Pistons won, and the next game.",
+  "figure": {
+    "player": "Javonte Green",
+    "home": false,
+    "tall": 0.9872,
+    "ape": 1.0,
+    "mass": 0.9828,
+    "label": "Javonte Green, listed 6-5, 205 lb, no wingspan from a named measurement"
+  },
+  "loser_top": [
+    [
+      "Zion Williamson",
+      24,
+      "9 of 14 · 7 rebounds"
+    ],
+    [
+      "Jordan Poole",
+      22,
+      "9 of 9 FT · 3 of 5 from three"
+    ]
+  ],
+  "notes": [
+    "Box score from the Pistons' 122–109 road win over the New Orleans Pelicans on Nov 18, 2026, from the Covers box score, checked line by line against the SI box score and play-by-play, with game details from the Associated Press (via TSN), the Detroit Free Press (via Yahoo Sports) and Ball Exclusives (via Yardbarker). All 122 Detroit points and all 109 New Orleans points are accounted for in the box score, and the quarter scores (31–36–25–30 to 31–29–26–23) add up to both totals: 67–60 Detroit at the half (Free Press). Team totals (threes 17 of 32 to 11 of 28, fast-break points 22–9, assists 29–23, field goals 41 of 77 to 37 of 81, points in the paint 48–52) are from the Covers box score; the shooting totals match the AP. Detroit's biggest lead, 19 (117–98 with 5:17 left), is from the box score, the SI play-by-play and Ball Exclusives; New Orleans' biggest lead, 5, is from the box score. Records and ranks are from the site's standings after Wednesday's games.",
+    "Cade Cunningham (knee soreness) did not play on the second night of a back-to-back, and Duncan Robinson (quadriceps strain) missed his second straight game (AP; Free Press). Seven Pistons scored in double figures (AP). Javonte Green started in Cunningham's place and scored 13 of his 18 in the first half (Free Press). Isaiah Joe returned from a 10-game absence with a bruised hip and scored 11 on 3-of-5 from three (AP; Free Press); his two late third-quarter threes pushed the lead to 90–80 (Free Press; SI play-by-play, 1:38 left in the third). Detroit has won five of six and went 3–1 on its road trip, after beating San Antonio 105–93 on Tuesday (AP). Detroit hosts Toronto on Friday, Nov 20 at 7:30 PM ET (Ball Exclusives).",
+    "The play of the game is an original illustration of Javonte Green's 3-pointer with 6:16 left in the first half that made it 49–46; Detroit led the rest of the way (AP). The SI play-by-play lists it as a three-point jump shot assisted by Daniss Jenkins, after two Zion Williamson free throws had tied it 46–46 at 6:26, and it started an 11–2 Detroit run to 57–48 (Free Press; SI play-by-play), so the board shows tied to Pistons +3. The written accounts don't describe the move, so it is drawn as the template's plain pull-up from beyond the arc; the spot and the defender are not drawn to exact positions. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Detroit Pistons or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Javonte Green's listed 6-foot-5 and 205 pounds (RealGM; Wikipedia) with No. 31 (Wikipedia); no wingspan from a named measurement was found, so his arms use the default length. He is drawn in Detroit's road colors with the default figure look (no approved look yet). It is an original figure with a featureless face, not a portrait or a trace of footage."
+  ],
+  "sources": [
+    [
+      "Covers: Pistons vs Pelicans game overview and player stats, Nov 18, 2026",
+      "https://www.covers.com/sport/basketball/nba/matchup/388750",
+      "Box score, line score, team totals, biggest leads"
+    ],
+    [
+      "SI: Detroit Pistons vs New Orleans Pelicans final score and box score, Nov 18, 2026",
+      "https://www.si.com/nba/scoreboard/pistons-vs-pelicans-11-18-2026-1707",
+      "Box score check, play-by-play: 46–46 before Green's three, the 11–2 run, Joe's threes, 117–98"
+    ],
+    [
+      "AP (via TSN): Hot-shooting Pistons sink 17 threes in win over Pelicans",
+      "https://www.tsn.ca/nba/article/hot-shooting-pistons-sink-17-threes-in-win-over-pelicans/",
+      "Green's three at 6:16 (49–46) and the lead the rest of the way, injuries, five of six, road trip"
+    ],
+    [
+      "Detroit Free Press (via Yahoo Sports): No Cade, no problem: Pistons cruise past Zion Williamson-led Pelicans",
+      "https://sports.yahoo.com/articles/no-cade-no-problem-pistons-034747256.html",
+      "67–60 at the half, the 11–2 run, Green's first half, Joe's return"
+    ],
+    [
+      "Ball Exclusives (via Yardbarker): Pistons Beat Pelicans 122-109 as Collins Scores 20",
+      "https://www.yardbarker.com/nba/articles/pistons_beat_pelicans_122_109_as_collins_scores_20/s1_17668_44584432",
+      "Biggest lead, records, next games and tip times"
+    ],
+    [
+      "RealGM: Javonte Green bio",
+      "https://basketball.realgm.com/player/Javonte-Green/Bio/31203",
+      "Green's listed height and weight for the figure"
+    ],
+    [
+      "Wikipedia: Javonte Green",
+      "https://en.wikipedia.org/wiki/Javonte_Green",
+      "Green's number and Pistons contract"
+    ]
+  ]
+}

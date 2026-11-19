@@ -1,0 +1,237 @@
+{
+ "team": "UTA",
+ "D": "  const D = {\n    date: 'Wed, Nov 18, 2026',\n    us: 109, them: 97, record: '3–13', usName: 'Jazz', themName: 'Lakers',\n    quarters: [[29, 34], [27, 20], [22, 22], [31, 21]],\n    leadUs: 18, leadThem: 8,\n    star: {name: 'Keyonte George', stats: [['Points', 30, 35], ['Threes made', 5, 10], ['Assists', 10, 15]]},\n    scorers: [\n      {name: 'Keyonte George', pts: 30, note: '10 assists · 5 of 10 from three'},\n      {name: 'Ace Bailey', pts: 19, note: '8 rebounds · 10 in the 4th'},\n      {name: 'Svi Mykhailiuk', pts: 15, note: 'off the bench · 4 threes'},\n      {name: 'Josh Green', pts: 11, note: '4 of 4 · 2 steals'},\n      {name: 'Darryn Peterson', pts: 11, note: 'in 18 minutes · 4 of 6 FT'},\n    ],\n    edges: [\n      {label: 'Fourth-quarter points', us: 31, them: 21},\n      {label: 'Threes made', us: 14, them: 9},\n      {label: 'Assists', us: 29, them: 24},\n      {label: 'Bench points', us: 32, them: 29},\n    ],\n    gaps: [\n      {label: 'Rebounds', us: 53, them: 58},\n    ],\n    next: {opp: 'vs Suns', when: 'Fri, Nov 20, 9:30 PM ET', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Keyonte George's 3-pointer off a pass from Darryn Peterson with 8:09 left in the fourth quarter that broke an 83–83 tie and started Utah's 15–0 run. An original illustration from written accounts; not traced from footage, not to scale.\n",
+  "head": "George breaks the tie",
+  "subP": "George from three, 8:09 left",
+  "subL": "Keyonte George from three with 8:09 left, tied 83–83",
+  "m0": "Tied",
+  "m1": "Jazz +3",
+  "num": "3",
+  "cap1": "George from three. Jazz by 3.",
+  "cap2": "86–83, the start of a 15–0 run.",
+  "clock": [
+   494,
+   489
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Jazz at Lakers Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Jazz 109, Lakers 97 · Nov 18, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Jazz at', 'Lakers'] : ['Jazz at Lakers']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['George: 30 and 10.', 'Lakers’ streak ends at 9.'] : ['Keyonte George had 30 points and 10 assists as Utah ended the Lakers’ nine-game win streak.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Jazz improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Ended the Lakers’ 9-game streak'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Jazz up 2 at the half,', 'then a 15–0 run in the 4th'] : ['Jazz up 2 at the half, then a 15–0 run in the fourth']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Jazz ${D.leadUs}, Lakers ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Jazz’s margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['George: 30 points', 'and 10 assists'] : ['Keyonte George: 30 points and 10 assists']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['9 in the fourth, 7 of', 'them in the 15–0 run.'] : ['9 in the fourth quarter, 7 of them in the 15–0 run, and 5 of 10 from three.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['George and Bailey:', '49 of the 109'] : ['George and Bailey combined for 49 of 109']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 35;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it from three', 'and in the fourth'] : ['Won it from three and in the fourth']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Jazz in gold, Lakers in gray. L.A.', 'shot a season-low 38.2%.'] : ['Jazz in gold, Lakers in gray. L.A. shot a season-low 38.2% from the floor.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'14th in the West'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Suns’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '7–7';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['First win streak of the season.', 'Swept both L.A. teams.'] : ['Utah’s first win streak of the season, a back-to-back sweep of both L.A. teams.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Jazz 109 · Lakers 97 · Nov 18'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'George breaks the tie'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'George'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 60;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - 375 * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+3', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 160, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 192, ly, D.themName"
+  ]
+ ],
+ "aria": "Animated recap of the Jazz's 109 to 97 road win over the Lakers: Keyonte George's 3-pointer with 8:09 left that broke an 83 to 83 tie and started a 15 to 0 run, quarter-by-quarter scoring, his 30 points and 10 assists, the top scorers, how the Jazz won, and Friday's game against the Suns.",
+ "figure": {
+  "player": "Keyonte George",
+  "home": false,
+  "tall": 0.9744,
+  "ape": 1.0,
+  "mass": 0.9397,
+  "label": "Keyonte George, listed 6-4, 185 lb (RealGM, Basketball-Reference); no sourced wingspan"
+ },
+ "loser_top": [
+  [
+   "Luka Dončić",
+   29,
+   "10 of 28 · 9 turnovers"
+  ],
+  [
+   "Quentin Grimes",
+   20,
+   "4 of 10 from three · 7 rebounds"
+  ],
+  [
+   "Walker Kessler",
+   10,
+   "11 rebounds · 4 of 10 FT"
+  ]
+ ],
+ "notes": [
+  "Box score from the Utah Jazz's 109–97 road win over the Los Angeles Lakers on Nov 18, 2026, from the CBS Sports box score and play-by-play, with game details from the Associated Press (via WRAL and the Deseret News), Field Level Media (via the Hawaii Tribune-Herald), KSL Sports, Yahoo Sports and SB Nation (via Yahoo Sports). All 109 Utah points and all 97 Los Angeles points are accounted for in the box score, and the quarter scores (29–27–22–31 to 34–20–22–21) add up to both totals: 56–54 Utah at the half (Field Level Media; CBS), 78–76 Utah after three (Field Level Media; CBS play-by-play). Team totals (threes 14 of 37 to 9 of 33, assists 29–24, rebounds 53–58, field goals 37 of 77 to 34 of 89) are from the box score; the Lakers' 38.2% was a season low (AP; Field Level Media). Bench points (32–29) are the non-starters' points in the CBS box score, which lists George, Bailey, Peterson, Green and Bamba as Utah's starters and Dončić, Grimes, Kessler, Williams and Thybulle as the Lakers'. Fourth-quarter points (31–21) are from the line score. Biggest leads (Utah 18 at 108–90 with 1:51 left, Los Angeles 8 in the first half) are from the CBS play-by-play; Field Level Media also says Utah came back from 8 down in the second quarter. Records and ranks are from the site's standings after Wednesday's games.",
+  "Quentin Grimes' layup tied it 83–83 with 8:19 left (Field Level Media; CBS play-by-play). Utah then scored 15 straight points, reaching 98–83 on a Mo Bamba tip-in with 5:12 left; Keyonte George scored 7 points in the run (Field Level Media) and Ace Bailey hit back-to-back threes at 7:02 and 6:25 (CBS play-by-play). The Lakers got within 98–90 and Utah closed with 10 straight points (AP; CBS play-by-play). George had 30 points and 10 assists, his second straight 30-point, 10-assist game, with 9 points in the fourth; Bailey had 10 of his 19 in the fourth (AP; Yahoo Sports). Svi Mykhailiuk made four threes in the first half against the team that drafted him in 2018 (AP). Josh Green guarded Luka Dončić (KSL Sports), who had 29 points, 9 turnovers and 2 of 12 from three; his streak of 11 straight 30-point games ended (AP). Walker Kessler had 10 points and 11 rebounds against Utah, the team that traded him to the Lakers (AP). Austin Reaves missed his third straight game with a bruised heel (AP). It was the second night of a back-to-back in Los Angeles after Utah's 132–107 win over the Clippers on Nov 17 (KSL Sports), the Jazz's first winning streak of the season (Yahoo Sports), and the first time this season Utah held an opponent under 100 (KSL Sports). The loss ended the Lakers' nine-game winning streak, their first loss in November (AP). Utah hosts Phoenix on Friday, Nov 20 at 9:30 PM ET (Deseret News; KSL Sports, 7:30 p.m. MT).",
+  "The play of the game is an original illustration of Keyonte George's 3-pointer off a pass from Darryn Peterson with 8:09 left in the fourth quarter that broke the 83–83 tie and made it 86–83, the first basket of Utah's 15–0 run (the CBS play-by-play gives the clock, the score and the assist; Field Level Media gives the 83–83 tie with 8:19 left and the run). The stories don't describe the shot further, so it is drawn as the template's plain catch-and-shoot three. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Utah Jazz or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The shooter in the play of the game is drawn to Keyonte George's listed 6-foot-4 and 185 pounds with No. 3 (RealGM; Basketball-Reference); no wingspan from a sourced measurement was found, so his arms use the standard proportion. He is drawn in Utah's road navy with the default figure (no look on the look sheet yet). It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "CBS Sports: Jazz vs. Lakers box score and play-by-play, Nov 18, 2026",
+   "https://www.cbssports.com/nba/gametracker/boxscore/NBA_20261118_UTA@LAL/",
+   "box score, line score, starters, play-by-play, biggest leads, the play's clock and assist"
+  ],
+  [
+   "AP (via WRAL): Jazz snap Lakers' 9-game winning streak with 109-97 victory behind Keyonte George's 30 points",
+   "https://www.wral.com/news/ap/efb66-jazz-snap-lakers-9-game-winning-streak-with-109-97-victory-behind-keyonte-georges-30-points/",
+   "15-0 run, closing 10-0, Dončić and Grimes, Kessler, Reaves, streaks"
+  ],
+  [
+   "Deseret News (AP): Jazz snap Lakers' 9-game winning streak",
+   "https://www.deseret.com/sports/2026/11/18/jazz-snap-lakers-9-game-winning-streak-with-109-97-victory-behind-keyonte-georges-30-points/",
+   "game story, George's and Bailey's fourth quarters, next games"
+  ],
+  [
+   "Field Level Media (via Hawaii Tribune-Herald): Keyonte George (30), Jazz deny NBA-leading Lakers 10th straight win",
+   "https://www.hawaiitribune-herald.com/2026/11/19/sports/keyonte-george-30-jazz-deny-nba-leading-lakers-10th-straight-win/",
+   "halftime and third-quarter scores, 83-83 tie at 8:19, the 15-0 run, 8-point deficit"
+  ],
+  [
+   "KSL Sports: Jazz silence Lakers, win back-to-back games in Los Angeles",
+   "https://sports.ksl.com/nba/utah-jazz/jazz-silence-lakers-win-back/579043",
+   "back-to-back, first opponent under 100, Green on Dončić, next game"
+  ],
+  [
+   "Yahoo Sports: George scores 30 as Jazz beat Lakers, 109-97",
+   "https://sports.yahoo.com/articles/george-scores-30-jazz-beat-055746446.html",
+   "first winning streak of the season, George's second straight 30 and 10"
+  ],
+  [
+   "SB Nation (via Yahoo Sports): Utah Jazz vs. Los Angeles Lakers: Recap and Final Score",
+   "https://sports.yahoo.com/articles/utah-jazz-vs-los-angeles-064313292.html",
+   "tied at 83 before the 15-0 run, halftime lead, Peterson's minutes"
+  ],
+  [
+   "RealGM: Keyonte George bio",
+   "https://basketball.realgm.com/player/Keyonte-George/Bio/151235",
+   "listed height, weight and number for the figure"
+  ],
+  [
+   "Basketball-Reference: Keyonte George",
+   "https://www.basketball-reference.com/players/g/georgke01.html",
+   "listed height and weight (check)"
+  ]
+ ]
+}
