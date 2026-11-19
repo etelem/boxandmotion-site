@@ -1,0 +1,216 @@
+{
+  "team": "DAL",
+  "D": "  const D = {\n    date: 'Wed, Nov 18, 2026',\n    us: 116, them: 94, record: '8–7', usName: 'Mavericks', themName: 'Warriors',\n    quarters: [[35, 25], [27, 24], [30, 23], [24, 22]],\n    leadUs: 29, leadThem: 1,\n    star: {name: 'Cooper Flagg', stats: [['Points', 33, 35], ['Rebounds', 5, 10], ['Assists', 9, 10]]},\n    scorers: [\n      {name: 'Cooper Flagg', pts: 33, note: '11 of 15 · 9 assists'},\n      {name: 'P.J. Washington', pts: 21, note: '5 of 7 from three'},\n      {name: 'Kyrie Irving', pts: 17, note: '6 rebounds · 5 assists'},\n      {name: 'Naji Marshall', pts: 12, note: 'off the bench · 4 of 8'},\n      {name: 'Walter Clayton Jr.', pts: 8, note: '7 assists off the bench'},\n    ],\n    edges: [\n      {label: 'Threes made', us: 17, them: 9},\n      {label: 'Assists', us: 34, them: 28},\n      {label: 'Field goal %', us: 51, them: 43},\n      {label: 'Free throws made', us: 15, them: 9},\n    ],\n    gaps: [\n      {label: 'Steals', us: 11, them: 14},\n    ],\n    next: {opp: 'vs Clippers', when: 'Sat, Nov 21, 8:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Cooper Flagg's running layup on the break from Walter Clayton Jr. with 4:01 left in the third quarter that made it 89–60, Dallas' biggest lead. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Flagg on the break",
+    "subP": "Flagg layup on the break, 4:01 left in the 3rd",
+    "subL": "Cooper Flagg on the break, 4:01 left in the 3rd, up 87–60",
+    "m0": "Mavericks +27",
+    "m1": "Mavericks +29",
+    "num": "32",
+    "cap1": "Flagg at the rim. Mavericks by 29.",
+    "cap2": "89–60, their biggest lead.",
+    "clock": [
+      247,
+      241
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Mavericks vs Warriors Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Mavericks 116, Warriors 94 · Nov 18, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Mavericks vs.', 'Warriors'] : ['Mavericks vs. Warriors']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Flagg scored 33 on 15 shots.', 'Dallas led by as many as 29.'] : ['Cooper Flagg scored 33 on 11-of-15 shooting and Dallas led by as many as 29.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Mavericks improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Snapped a 3-game losing streak'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Mavericks up 13 at the half,', 'won the 3rd 30–23'] : ['Mavericks up 13 at the half, then won the third quarter 30–23']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Mavericks ${D.leadUs}, led the last 45:49"
+    ],
+    [
+      "Lakers’ margin in each quarter, then the game score after it.",
+      "Mavericks’ margin in each quarter, then the game score after it."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Flagg: 33', 'on 15 shots'] : ['Flagg: 33 points on 15 shots']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['11 of 15, 8 of 8 at the line,', 'and 9 assists.'] : ['11 of 15 from the field, 8 of 8 at the line and 9 assists.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Flagg and Washington:', '54 of the 116'] : ['Flagg and Washington combined for 54 of 116']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 35;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it from three', 'and with the pass'] : ['Won it from three and with the pass']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Mavericks in silver, Warriors in gray.', 'Season highs: 17 threes, 34 assists.'] : ['Mavericks in silver, Warriors in gray. Dallas set season highs with 17 threes and 34 assists.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'9th in the West'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Clippers’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '4–9';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Golden State played without', 'Stephen Curry (oblique).'] : ['Golden State played without Stephen Curry, out with an oblique injury.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Mavericks 116 · Warriors 94 · Nov 18'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Flagg on the break'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Flagg'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 60;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 170 : 200) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+2', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 120 * k, shotX + 80 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "T(board, bx + 24, by + 38, 'Q3', 'b m', 24);"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 212, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 244, ly, D.themName"
+    ]
+  ],
+  "aria": "Animated recap of the Mavericks' 116 to 94 win over Golden State: Cooper Flagg's layup on the break that made it 89 to 60 late in the third quarter, quarter-by-quarter scoring, his 33 points on 11-of-15 shooting with 9 assists, the top scorers, how Dallas won, and Saturday's game against the Clippers.",
+  "notes": [
+    "Box score from the Dallas Mavericks' 116–94 win over the Golden State Warriors at the American Airlines Center on Nov 18, 2026, from the CBS Sports box score, with the line score checked against Bleacher Report and game details from the Associated Press (via CBS Sports), the Dallas Sports Journal, The Ticket and SB Nation's Mavs Moneyball (via Yahoo Sports). All 116 Dallas points and all 94 Golden State points are accounted for, and the quarter scores add up to both totals: Dallas 35–25 after one, 62–49 at the half, 92–72 after three. AP lists Will Richard with 18 points; the CBS box score has 20, which is what makes Golden State's lines add up to 94, so 20 is used. Field goals (42 of 83 to 38 of 89), threes (17 of 41 to 9 of 38), free throws (15 of 19 to 9 of 17), assists (34–28) and steals (11–14) are from the box score. The biggest lead (29) is from AP and the Dallas Sports Journal; Golden State's only lead was 4–3 early in the first quarter and Dallas led for the final 45:49 (Dallas Sports Journal). Flagg's steals differ by source (3 or 4), so they are left out. Records and ranks are from the site's standings after Wednesday's games.",
+    "Dallas pulled away from 6–6 with a 19–3 first-quarter run (Dallas Sports Journal) and opened the third quarter with a 16–2 run from 64–51 to 80–53 (Dallas Sports Journal; CBS play-by-play). Flagg had 22 points at the half (Dallas Sports Journal). His layup on the break from Walter Clayton Jr. with 4:01 left in the third made it 89–60 (Dallas Sports Journal; The Ticket; CBS play-by-play). The 17 threes and 34 assists were season highs (Dallas Sports Journal). Dallas snapped a three-game losing streak; Golden State lost its fourth straight, without Stephen Curry (oblique) (AP; Dallas Sports Journal; The Ticket). Dallas hosts the Clippers on Saturday (Yardbarker).",
+    "The play of the game is an original illustration of Cooper Flagg's running layup on the break from Walter Clayton Jr. with 4:01 left in the third quarter that made it 89–60, Dallas' biggest lead (Dallas Sports Journal; The Ticket; CBS play-by-play). It is drawn as a drive to the rim. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Dallas Mavericks or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Flagg's listed 6-foot-10 and 205 pounds (Wikipedia), with his arms scaled to the 7-foot wingspan measured at the 2025 NBA Draft Combine (CBS Sports), in Dallas' home white with No. 32 (Wikipedia). He has no approved look on file yet, so he is drawn in the kit with the default skin tone. It is an original figure with a featureless face, not a portrait or a trace of footage."
+  ],
+  "sources": [
+    [
+      "CBS Sports: Warriors vs. Mavericks box score and play-by-play, Nov 18, 2026",
+      "https://www.cbssports.com/nba/gametracker/boxscore/NBA_20261118_GS@DAL/",
+      "Box score, line score, team stats, third-quarter play-by-play"
+    ],
+    [
+      "Bleacher Report: Warriors vs. Mavericks, Nov 18, 2026",
+      "https://bleacherreport.com/game/golden-state-warriors-vs-dallas-mavericks-2026-11-18-20-30",
+      "Line score check, records"
+    ],
+    [
+      "AP (via CBS Sports): Cooper Flagg scores 33 to lead Mavericks past Warriors 116-94",
+      "https://www.cbssports.com/nba/news/cooper-flagg-scores-33-to-lead-mavericks-past-warriors-116-94/",
+      "Biggest lead, Curry's injury, Golden State's slide"
+    ],
+    [
+      "Dallas Sports Journal: Mavericks rout Warriors 116-94 as Cooper Flagg scores 33",
+      "https://dallassportsjournal.com/mavericks-warriors-recap-cooper-flagg-pj-washington-kyrie-irving/",
+      "Runs, the 4:01 layup, season highs, losing streak, lead time"
+    ],
+    [
+      "The Ticket: Cooper Flagg's 33 points help Mavericks end skid, take down Warriors",
+      "https://www.theticket.com/2026/11/18/cooper-flaggs-33-points-help-mavericks-end-skid-take-down-warriors/",
+      "The 89–60 layup, Curry"
+    ],
+    [
+      "Mavs Moneyball (via Yahoo Sports): 3 things that led to the Mavericks' cathartic 116-94 blowout win",
+      "https://sports.yahoo.com/articles/3-things-led-mavericks-cathartic-034132950.html",
+      "Halftime and third-quarter scores"
+    ],
+    [
+      "Yardbarker: Mavericks beat Warriors 116-94 as Flagg and Washington combine for 54",
+      "https://www.yardbarker.com/nba/articles/mavericks_beat_warriors_116_94_as_flagg_and_washington_combine_for_54/s1_17668_44584372",
+      "Next games"
+    ],
+    [
+      "Wikipedia: Cooper Flagg",
+      "https://en.wikipedia.org/wiki/Cooper_Flagg",
+      "Flagg's height, weight, number"
+    ],
+    [
+      "CBS Sports: 2025 NBA Draft Combine measurements",
+      "https://www.cbssports.com/nba/news/2025-nba-draft-combine-measurements-cooper-flagg-reaches-new-height-ace-bailey-comes-up-short",
+      "Flagg's wingspan"
+    ]
+  ],
+  "figure": {
+    "player": "Cooper Flagg",
+    "home": true,
+    "tall": 1.0513,
+    "ape": 1.0244,
+    "mass": 0.9524,
+    "label": "Cooper Flagg, listed 6-10, 205 lb, 7-0 wingspan (2025 combine)"
+  },
+  "loser_top": [
+    [
+      "Will Richard",
+      20,
+      "off the bench · 9 of 13"
+    ],
+    [
+      "Yaxel Lendeborg",
+      13,
+      "6 of 18 from the field"
+    ]
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "team": "PHI",
+  "D": "  const D = {\n    date: 'Wed, Nov 18, 2026',\n    us: 121, them: 116, record: '13–3', usName: '76ers', themName: 'Magic',\n    quarters: [[27, 40], [37, 29], [28, 28], [29, 19]],\n    leadUs: 8, leadThem: 17,\n    star: {name: 'Joel Embiid', stats: [['Points', 26, 30], ['Rebounds', 6, 10], ['Assists', 7, 10]]},\n    scorers: [\n      {name: 'Joel Embiid', pts: 26, note: '7 assists · 12 of 14 at the line'},\n      {name: 'VJ Edgecombe', pts: 24, note: 'season high · 13 in the 4th'},\n      {name: 'LeBron James', pts: 22, note: '8 of 16 · 6 assists'},\n      {name: 'Anfernee Simons', pts: 18, note: 'first start · 7 of 12'},\n      {name: 'Labaron Philon Jr.', pts: 10, note: 'off the bench · 4 of 5'},\n    ],\n    edges: [\n      {label: 'Free throws made', us: 23, them: 9},\n      {label: 'Fourth-quarter points', us: 29, them: 19},\n      {label: 'Second-quarter points', us: 37, them: 29},\n    ],\n    gaps: [\n      {label: 'Threes made', us: 14, them: 19},\n      {label: 'Points in the paint', us: 40, them: 46},\n    ],\n    next: {opp: 'vs Bucks', when: 'Sat, Nov 21, 1:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "VJ Edgecombe's 3-pointer on a pass from LeBron James with 1:36 left that turned a 112–111 deficit into a 114–112 lead, the game's last lead change. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Edgecombe from deep",
+    "subP": "Edgecombe from three, 1:36 left",
+    "subL": "VJ Edgecombe from three off a LeBron James pass, down 112–111",
+    "m0": "Magic +1",
+    "m1": "76ers +2",
+    "num": "77",
+    "cap1": "Edgecombe from three. 76ers by 2.",
+    "cap2": "114–112 with 1:36 left, from LeBron.",
+    "clock": [
+      100,
+      96
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>76ers vs Magic Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">76ers 121, Magic 116 · Nov 18, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['76ers vs.', 'Magic'] : ['76ers vs. Magic']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Down 17 early. Edgecombe’s', 'three put them ahead.'] : ['Down 17 in the first quarter, the 76ers went ahead for good on VJ Edgecombe’s three with 1:36 left.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`76ers improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'4 straight wins'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['76ers down 17 in the 1st,', 'won the 4th 29–19'] : ['76ers down 17 in the first quarter, won the fourth 29–19']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "76ers ${D.leadUs}, Magic ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin in each quarter, then the game score after it.",
+      "76ers’ margin in each quarter, then the game score after it."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Embiid: 26', 'and 7 assists'] : ['Embiid: 26 points and 7 assists']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['12 of 14 at the line,', '3 blocks.'] : ['12 of 14 at the line, 6 rebounds and 3 blocks.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Embiid and Edgecombe:', '50 of the 121'] : ['Embiid and Edgecombe combined for 50 of 121']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 30;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it at the line', 'and in the fourth'] : ['Won it at the line and in the fourth']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['76ers in blue, Magic in gray.', 'Orlando made 19 threes to 14.'] : ['76ers in blue, Magic in gray. Orlando made 19 threes to Philadelphia’s 14.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'1st in the East'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Bucks’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '1–14';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Without Maxey, a late scratch.', '13–3: best start in 26 years.'] : ['Without Tyrese Maxey, a late scratch. At 13–3, their best start in 26 years.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'76ers 121 · Magic 116 · Nov 18'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Edgecombe from deep'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Embiid'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 50;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "    T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "    T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+    ],
+    [
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = clk < 60 ? clk.toFixed(1) : `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 160, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 192, ly, D.themName"
+    ],
+    [
+      "['Points per quarter. Each quarter’s', 'margin, then the game score after it.']",
+      "['Points per quarter. Each quarter’s', 'margin, then the game score after it.']"
+    ]
+  ],
+  "aria": "Animated recap of the 76ers' 121 to 116 win at Orlando: VJ Edgecombe's go-ahead 3-pointer from LeBron James with 1:36 left, quarter-by-quarter scoring after a 17-point first-quarter deficit, Joel Embiid's 26 points and 7 assists, the top scorers, how Philadelphia won, and Saturday's game against Milwaukee.",
+  "notes": [
+    "Box score from the Philadelphia 76ers' 121–116 win over the Orlando Magic at the Kia Center on Nov 18, 2026, from the CBS Sports box score, checked against the Covers box score and NBA House, with game details from the Associated Press (via Yahoo Sports), GMA News and Yardbarker. All 121 Philadelphia points and all 116 Orlando points are accounted for, and the quarter scores add up to both totals: Orlando 40–27 after one, 69–64 at the half, 97–92 after three. Field goals (42 of 81 to 44 of 84), threes (14 of 35 to 19 of 37), free throws (23 of 26 to 9 of 17), rebounds (38–37) and assists (27–31) are from the box score; points in the paint (40–46) and the biggest leads (Orlando 17, Philadelphia 8) are from Covers. Joel Embiid's free throws are 12 of 14 in all three box scores (AP has 12 of 15). Records and ranks are from the site's standings after Wednesday's games.",
+    "Orlando went up 36–19 late in the first quarter on a 27–12 run capped by Franz Wagner's driving layup and led for 41 minutes (GMA; AP; CBS play-by-play). Walker's 3-pointer with 5:09 left gave Philadelphia its first lead since 5–3 (GMA). Jalen Suggs' three put Orlando up 112–111 with 2:01 left, then VJ Edgecombe's 3-pointer on a no-look pass from LeBron James made it 114–112 with 1:36 left (AP; CBS play-by-play; Yardbarker). Anfernee Simons' three with 15 seconds left made it 119–113 (GMA; CBS play-by-play). Edgecombe scored a season-high 24, 13 of them in the fourth (AP). Tyrese Maxey was a late scratch with a foot injury, Jaylen Brown (hamstring) also sat, and Simons made his first start of the season (AP; GMA). It was Philadelphia's fourth straight win and, at 13–3, its best start in 26 years (AP; GMA). The 76ers host Milwaukee on Saturday (Yardbarker).",
+    "The play of the game is an original illustration of VJ Edgecombe's 28-foot 3-pointer with 1:36 left that put Philadelphia ahead 114–112 for good (AP gives the clock, the score and James' no-look pass; Yardbarker the distance). The recaps don't describe the shot further, so it is drawn as the template's plain pull-up from beyond the arc. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Philadelphia 76ers or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Edgecombe's listed 6-foot-4 and 190 pounds (Wikipedia), with his arms scaled to the 6-foot-7½ wingspan reported by NBC Sports Philadelphia, in Philadelphia's road colors with No. 77 (Wikipedia). He has no approved look on file yet, so he is drawn in the kit with the default skin tone. It is an original figure with a featureless face, not a portrait or a trace of footage."
+  ],
+  "sources": [
+    [
+      "CBS Sports: 76ers vs. Magic box score and play-by-play, Nov 18, 2026",
+      "https://www.cbssports.com/nba/gametracker/boxscore/NBA_20261118_PHI@ORL/",
+      "Box score, line score, team stats, the late sequence"
+    ],
+    [
+      "Covers: 76ers vs Magic game overview and player stats, Nov 18, 2026",
+      "https://www.covers.com/sport/basketball/nba/matchup/388744",
+      "Second box score, paint points, biggest leads"
+    ],
+    [
+      "NBA House: 76ers at Magic box score",
+      "https://nbahouse.net/game/2026-11-18/phi-at-orl",
+      "Third box score check"
+    ],
+    [
+      "AP (via Yahoo Sports): Embiid, Edgecombe, James power the 76ers to a 121-116 win over Magic",
+      "https://sports.yahoo.com/articles/embiid-edgecombe-james-power-76ers-031508118.html",
+      "Go-ahead three (clock, pass), Edgecombe's fourth quarter, absences, record"
+    ],
+    [
+      "GMA News: 76ers rally from 17 down to beat Magic for 4th straight win",
+      "https://www.gmanetwork.com/news/sports/basketball/1010033/nba-76ers-rally-from-17-down-to-beat-magic-for-4th-straight-win/story/",
+      "First-quarter run, first lead since 5–3, Simons' three, streak"
+    ],
+    [
+      "Yardbarker: 76ers beat Magic 121-116 as Embiid and Edgecombe combine for 50",
+      "https://www.yardbarker.com/nba/articles/76ers_beat_magic_121_116_as_embiid_and_edgecombe_combine_for_50/s1_17668_44584234",
+      "Shot distance, next games"
+    ],
+    [
+      "Wikipedia: V. J. Edgecombe",
+      "https://en.wikipedia.org/wiki/V._J._Edgecombe",
+      "Edgecombe's height, weight, number"
+    ],
+    [
+      "NBC Sports Philadelphia: NBA draft profile, VJ Edgecombe",
+      "https://www.nbcsportsphiladelphia.com/nba/philadelphia-76ers/nba-draft-profile-vj-edgecombe-sixers-2025-nba-draft/669621/",
+      "Edgecombe's wingspan"
+    ]
+  ],
+  "figure": {
+    "player": "VJ Edgecombe",
+    "home": false,
+    "tall": 0.9744,
+    "ape": 1.0461,
+    "mass": 0.9524,
+    "label": "VJ Edgecombe, listed 6-4, 190 lb, 6-7½ wingspan"
+  },
+  "loser_top": [
+    [
+      "Franz Wagner",
+      27,
+      "11 assists · 8 rebounds"
+    ],
+    [
+      "Jalen Suggs",
+      18,
+      "5 of 6 from three"
+    ]
+  ]
+}

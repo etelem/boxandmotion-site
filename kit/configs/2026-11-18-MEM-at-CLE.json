@@ -1,0 +1,228 @@
+{
+  "team": "MEM",
+  "D": "  const D = {\n    date: 'Wed, Nov 18, 2026',\n    us: 124, them: 121, record: '11–4', usName: 'Grizzlies', themName: 'Cavaliers',\n    quarters: [[30, 37], [41, 35], [29, 27], [24, 22]],\n    leadUs: 5, leadThem: 10,\n    star: {name: 'Cam Spencer', stats: [['Points', 26, 30], ['Threes made', 5, 10], ['Assists', 7, 10]]},\n    scorers: [\n      {name: 'Cam Spencer', pts: 26, note: '9 of 11 · 5 of 6 from three'},\n      {name: 'Taylor Hendricks', pts: 20, note: 'off the bench · 6 of 7'},\n      {name: 'Cameron Boozer', pts: 18, note: '8 rebounds · 7 of 7 at the line'},\n      {name: 'Cedric Coward', pts: 18, note: '4 threes · 5 assists'},\n      {name: 'Zach Edey', pts: 11, note: '5 of 7 in 21 minutes'},\n    ],\n    edges: [\n      {label: 'Field goal %', us: 54, them: 46},\n      {label: 'Fast-break points', us: 19, them: 11},\n      {label: 'Free throws made', us: 24, them: 18},\n      {label: 'Assists', us: 30, them: 28},\n    ],\n    gaps: [\n      {label: 'Offensive rebounds', us: 5, them: 20},\n      {label: 'Points in the paint', us: 48, them: 56},\n    ],\n    next: {opp: 'vs Warriors', when: 'Thu, Nov 19, 8:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Cameron Boozer's two free throws with 1:26 left that turned a 119–118 deficit into a 120–119 lead Memphis never gave up. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Boozer puts them ahead",
+    "subP": "Boozer at the line, 1:26 left",
+    "subL": "Cameron Boozer at the line, down 119–118 with 1:26 left",
+    "m0": "Cavaliers +1",
+    "m1": "Grizzlies +1",
+    "num": "27",
+    "cap1": "Boozer makes both. Grizzlies by 1.",
+    "cap2": "120–119. They never trailed again.",
+    "clock": [
+      87,
+      86
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Grizzlies vs Cavaliers Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Grizzlies 124, Cavaliers 121 · Nov 18, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Grizzlies vs.', 'Cavaliers'] : ['Grizzlies vs. Cavaliers']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Spencer scored 26. Boozer', 'put them ahead late.'] : ['Cam Spencer scored 26 and Cameron Boozer’s free throws with 1:26 left put Memphis ahead for good.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Grizzlies improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'8 straight road wins, a team record'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Grizzlies down 1 at the half,', 'won the second half 53–49'] : ['Grizzlies down 1 at the half, then won the second half 53–49']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Cavaliers ${D.leadThem} · 22 lead changes"
+    ],
+    [
+      "Lakers’ margin in each quarter, then the game score after it.",
+      "Grizzlies’ margin in each quarter, then the game score after it."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Spencer: 26', 'on 11 shots'] : ['Spencer: 26 points on 11 shots']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['9 of 11 from the field,', '5 of 6 from three.'] : ['9 of 11 from the field, 5 of 6 from three, and 7 assists.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Five Grizzlies', 'in double figures'] : ['Five Grizzlies scored 10 or more']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 30;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it on the break', 'and at the line'] : ['Won it on the break and at the line']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Grizzlies in blue, Cavaliers in gray.', 'Mitchell scored 34 for Cleveland.'] : ['Grizzlies in blue, Cavaliers in gray. Donovan Mitchell scored 34 for Cleveland.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'5th in the West'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Warriors’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '8–7';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Sam Merrill, an 89% shooter,', 'missed two with 6.6 left.'] : ['Sam Merrill, a career 89% free-throw shooter, missed two with 6.6 seconds left.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Grizzlies 124 · Cavaliers 121 · Nov 18'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Boozer puts them ahead'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Spencer'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 60;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+      "S('line', {x1: hoopX - 190 * k, x2: hoopX - 190 * k, y1: floor - 6, y2: floor + 14}, court),"
+    ],
+    [
+      "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+      "const tag = T(g, hoopX - 190 * k, floor + 56 * k + 10, 'Free-throw line',"
+    ],
+    [
+      "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+      "defender.g.style.opacity = 0;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+2', 'd w', 72, 'end');"
+    ],
+    [
+      "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+      "lift = lt < 6.3 ? 12 * up : 12 * (1 - down * down);"
+    ],
+    [
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+      "qClock.textContent = '1:26';"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 212, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 244, ly, D.themName"
+    ]
+  ],
+  "aria": "Animated recap of the Grizzlies' 124 to 121 win at Cleveland: Cameron Boozer's two go-ahead free throws with 1:26 left, quarter-by-quarter scoring, Cam Spencer's 26 points on 9-of-11 shooting, the top scorers, how Memphis won, and Thursday's game against Golden State.",
+  "notes": [
+    "Box score from the Memphis Grizzlies' 124–121 win over the Cleveland Cavaliers at Rocket Arena on Nov 18, 2026, from the FantasyTeamAdvice box score, checked against the StatMuse game page, with team stats from theScore and Grizzlies On SI and game details from the Associated Press (via Cleveland 19), cleveland.com, Fear The Sword and Yardbarker. All 124 Memphis points and all 121 Cleveland points are accounted for, and the quarter scores add up to both totals: Cleveland 37–30 after one, 72–71 at the half, Memphis 100–99 after three. The two box scores split one pair of free throws differently: FantasyTeamAdvice has Taylor Hendricks with 20 points (7 of 8 free throws) and Cedric Coward with 18; StatMuse has Hendricks 18 and Coward 20. The AP story and Grizzlies On SI both give Hendricks 20 and Coward 18, so those are used. Field goals (42 of 78 to 44 of 95), threes (16 of 39 to 15 of 41), free throws (24 of 29 to 18 of 20) and assists (30–28) are from the box score; offensive rebounds (5–20) from theScore; fast-break points (19–11) and points in the paint (48–56) from Grizzlies On SI. Cleveland's biggest lead (10) is from Yardbarker; no source gave Memphis' biggest lead, so it is left off. Records and ranks are from the site's standings after Wednesday's games.",
+    "There were 22 lead changes, eight of them in the fourth quarter (AP). Cam Spencer made his first nine shots (AP). Donovan Mitchell's layup put Cleveland up 119–116 with 2:43 left (AP); Cleveland led by one at the two-minute mark (cleveland.com) and Boozer's two free throws with 1:26 left made it 120–119 (AP; Yardbarker). Memphis was called for a five-second inbounds violation with 15.9 seconds left, up 122–121 (AP; cleveland.com), and Sam Merrill, a career 89% free-throw shooter (cleveland.com), missed two with 6.6 seconds left (AP). Memphis' two free throws with 2.3 seconds left made it 124–121 (AP). It was a franchise-record eighth straight road win (AP). Ty Jerome (hip) was out for Memphis and Evan Mobley (toe) for Cleveland (AP; Yardbarker). Memphis hosts Golden State on Thursday (Yardbarker).",
+    "The play of the game is an original illustration of Cameron Boozer's two free throws with 1:26 left that put Memphis ahead 120–119 for good (AP; Yardbarker). It is drawn as one shot from the free-throw line. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Memphis Grizzlies or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Boozer's measurements at the 2026 NBA Draft Combine, 6-foot-8¼ and 253 pounds with a 7-foot-1½ wingspan (NBADraft.net), in Memphis' road colors with No. 27 (RealGM). He has no approved look on file yet, so he is drawn in the kit with the default skin tone. It is an original figure with a featureless face, not a portrait or a trace of footage."
+  ],
+  "sources": [
+    [
+      "FantasyTeamAdvice: Grizzlies vs. Cavaliers box score, Nov 18, 2026",
+      "https://fantasyteamadvice.com/nba/scores/grizzlies-vs-cavaliers-november-18-2026",
+      "Box score, minutes, team shooting"
+    ],
+    [
+      "StatMuse: Grizzlies at Cavaliers, Nov 18, 2026",
+      "https://www.statmuse.com/nba/game/11-18-2026-mem-at-cle-78820",
+      "Line score, second box score"
+    ],
+    [
+      "theScore: Grizzlies at Cavaliers",
+      "https://www.thescore.com/nba/event/2462899",
+      "Line score, rebounds, turnovers"
+    ],
+    [
+      "AP (via Cleveland 19): Grizzlies beat Cavaliers 124-121 for a franchise-record 8th straight road win",
+      "https://www.cleveland19.com/2026/11/19/grizzlies-beat-cavaliers-124-121-franchise-record-8th-straight-road-win/",
+      "Go-ahead free throws, final minute, lead changes, streak, absences"
+    ],
+    [
+      "Grizzlies On SI: How the Grizzlies set a road record and snapped their Cleveland curse",
+      "https://si.com/nba/grizzlies/onsi/how-the-grizzlies-set-a-road-record-and-snapped-their-cleveland-curse-01m7s11s2n4f",
+      "Fast-break and paint points, Hendricks' line"
+    ],
+    [
+      "cleveland.com (via Yahoo Sports): Cavs stumble late with two costly missed free throws",
+      "https://sports.yahoo.com/articles/cavs-stumble-two-costly-missed-034302731.html",
+      "Final two minutes, Merrill's free-throw percentage"
+    ],
+    [
+      "Yardbarker: Grizzlies edge Cavs for franchise-record eighth straight road win",
+      "https://www.yardbarker.com/nba/articles/grizzlies_edge_cavs_for_franchise_record_eighth_straight_road_win/s1_17045_44584298",
+      "Go-ahead free throws, Cleveland's biggest lead, absences"
+    ],
+    [
+      "Yardbarker: Grizzlies beat Cavaliers 124-121 as Spencer scores 26",
+      "https://www.yardbarker.com/nba/articles/grizzlies_beat_cavaliers_124_121_as_spencer_scores_26/s1_17668_44584236",
+      "Next games"
+    ],
+    [
+      "NBADraft.net: 2026 NBA Draft Combine measurements",
+      "https://www.nbadraft.net/2026-nba-draft-combine-measurements/",
+      "Boozer's figure (height, weight, wingspan)"
+    ]
+  ],
+  "figure": {
+    "player": "Cameron Boozer",
+    "home": false,
+    "tall": 1.0288,
+    "ape": 1.0654,
+    "mass": 1.069,
+    "label": "Cameron Boozer, 6-8¼, 253 lb, 7-1½ wingspan (2026 combine)"
+  },
+  "loser_top": [
+    [
+      "Donovan Mitchell",
+      34,
+      "14 of 27 from the field"
+    ],
+    [
+      "Jarrett Allen",
+      19,
+      "9 rebounds · 4 assists"
+    ]
+  ]
+}
