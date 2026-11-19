@@ -1,0 +1,103 @@
+{
+ "headline": "Brooks and Booker score 29 each as the Suns reach .500",
+ "dek": "Dillon Brooks and Devin Booker scored 29 apiece as Phoenix got back to .500.",
+ "three": [
+  [
+   "Brooks: 29 points, a season high",
+   "12 of 18 from the floor, 5 of 9 from three."
+  ],
+  [
+   "Suns up 5 at the half, won the third 34–24",
+   "Brooks and Booker combined for 58 of 128."
+  ],
+  [
+   "Won it in the paint and with the pass",
+   "Points in the paint 60–42; assists 34–29. Phoenix shot 57 percent."
+  ]
+ ],
+ "battle": [
+  [
+   "Points in the paint",
+   60,
+   42
+  ],
+  [
+   "Assists",
+   34,
+   29
+  ],
+  [
+   "Field goal %",
+   57,
+   47
+  ],
+  [
+   "Free throws made",
+   17,
+   11
+  ]
+ ],
+ "battle_labels": [
+  "PHX",
+  "SAC"
+ ],
+ "top": [
+  [
+   "Dillon Brooks",
+   "PHX",
+   "12 of 18, 5 threes",
+   29
+  ],
+  [
+   "Devin Booker",
+   "PHX",
+   "6 assists, 7 of 7 FT",
+   29
+  ],
+  [
+   "Jalen Green",
+   "PHX",
+   "7 reb, 7 ast",
+   18
+  ],
+  [
+   "Miles Bridges",
+   "PHX",
+   "6 of 8, 5 assists",
+   13
+  ]
+ ],
+ "linescore": {
+  "away": [
+   36,
+   29,
+   34,
+   29
+  ],
+  "home": [
+   31,
+   29,
+   24,
+   23
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-18-PHX-at-SAC.json",
+ "loser": {
+  "top": [
+   [
+    "Darius Acuff Jr.",
+    "SAC",
+    "6 of 11 from three · 8 of 10 FT",
+    36
+   ],
+   [
+    "Zach LaVine",
+    "SAC",
+    "8 of 12",
+    18
+   ]
+  ],
+  "source": "box score"
+ }
+}

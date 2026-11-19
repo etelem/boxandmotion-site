@@ -1,0 +1,225 @@
+{
+  "team": "ATL",
+  "D": "  const D = {\n    date: 'Wed, Nov 18, 2026',\n    us: 117, them: 112, record: '9–6', usName: 'Hawks', themName: 'Thunder',\n    quarters: [[31, 29], [33, 22], [19, 32], [34, 29]],\n    leadUs: 13, leadThem: null,\n    star: {name: 'Onyeka Okongwu', stats: [['Points', 28, 30], ['Rebounds', 9, 10], ['Threes made', 5, 10]]},\n    scorers: [\n      {name: 'Onyeka Okongwu', pts: 28, note: '5 threes · 18 in the first half'},\n      {name: 'Nickeil Alexander-Walker', pts: 19, note: '7 assists · 3 threes'},\n      {name: 'Jalen Johnson', pts: 16, note: 'triple-double: 12 reb, 11 ast'},\n      {name: 'Luguentz Dort', pts: 16, note: 'off the bench · 3 threes'},\n      {name: 'Aaron Wiggins', pts: 14, note: '4 of 8 from three'},\n    ],\n    edges: [\n      {label: 'Threes made', us: 20, them: 9},\n      {label: 'Offensive rebounds', us: 14, them: 5},\n      {label: 'Steals', us: 8, them: 5},\n      {label: 'Assists', us: 32, them: 30},\n    ],\n    gaps: [\n      {label: 'Blocks', us: 4, them: 9},\n    ],\n    next: {opp: 'vs Hornets', when: 'Fri, Nov 20, 7:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Aaron Wiggins' 3-pointer with 2.2 seconds left before halftime that gave Atlanta a 64–51 lead, in his first game back in Oklahoma City. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Wiggins beats the half",
+    "subP": "Wiggins from three, 2.2 left",
+    "subL": "Aaron Wiggins from three, Hawks up 10 with seconds left in the half",
+    "m0": "Hawks +10",
+    "m1": "Hawks +13",
+    "num": "",
+    "cap1": "Wiggins from three. Hawks by 13.",
+    "cap2": "64–51 at the half, in his return to OKC.",
+    "clock": [
+      6,
+      2.2
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Hawks at Thunder Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Hawks 117, Thunder 112 · Nov 18, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Hawks at', 'Thunder'] : ['Hawks at Thunder']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Okongwu 28, Johnson', 'a triple-double.'] : ['Onyeka Okongwu scored 28 and Jalen Johnson had a triple-double as Atlanta won in Oklahoma City.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Hawks improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'2 straight wins'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Hawks up 13 at the half,', 'won the 4th 34–29'] : ['Hawks up 13 at the half, tied after three, won the fourth 34–29']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Hawks ${D.leadUs}"
+    ],
+    [
+      "Lakers’ margin in each quarter, then the game score after it.",
+      "Hawks’ margin in each quarter, then the game score after it."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Okongwu: 28 points', 'and 5 threes'] : ['Okongwu: 28 points and 5 threes']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['18 in the first half,', 'plus 9 rebounds.'] : ['18 in the first half, plus 9 rebounds.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Okongwu and Alexander-Walker:', '47 of the 117'] : ['Okongwu and Alexander-Walker combined for 47 of 117']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 30;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it from three', 'and on the offensive glass'] : ['Won it from three and on the offensive glass']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Hawks in gold, Thunder in gray.', 'Atlanta made 20 threes to 9.'] : ['Hawks in gold, Thunder in gray. Atlanta made 20 threes to 9.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'5th in the East'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Hornets’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '4–10';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Oklahoma City’s first', 'home loss of the season.'] : ['It was Oklahoma City’s first home loss of the season.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Hawks 117 · Thunder 112 · Nov 18'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Wiggins beats the half'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Okongwu'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 60;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "    T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "    T(board, bx + 24, by + 38, 'Q2', 'b m', 24);"
+    ],
+    [
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = clk < 60 ? clk.toFixed(1) : `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 160, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 192, ly, D.themName"
+    ],
+    [
+      "['Points per quarter. Each quarter’s', 'margin, then the game score after it.']",
+      "['Points per quarter and the margin.', 'Oklahoma City won the 3rd 32–19.']"
+    ]
+  ],
+  "aria": "Animated recap of the Hawks' 117 to 112 win over the Thunder: Aaron Wiggins' 3-pointer with 2.2 seconds left before halftime, quarter-by-quarter scoring, Onyeka Okongwu's 28 points and five threes, the top scorers, how the Hawks won, and Friday's game against Charlotte.",
+  "notes": [
+    "Box score from the Hawks' 117–112 win over the Oklahoma City Thunder at Paycom Center on Nov 18, 2026, from the BasketUSA box score, checked against the Associated Press story (via Yahoo Sports and News 9), OKC Thunder Wire (via Yahoo Sports), Atlanta News First and theScore's line score and team stats. All 117 Atlanta points and all 112 Oklahoma City points are accounted for in the player lines, and the quarter scores add up to both totals: Atlanta 31–29 after one, 64–51 at the half, 83–83 after three, 34–29 in the fourth. Team stats (threes 20 of 50 to 9 of 27, offensive rebounds 14–5, steals 8–5, assists 32–30, blocks 4–9) are from the box score and match theScore except for Oklahoma City's three-point attempts (theScore and Thunder Wire say 26). Atlanta's biggest lead (13) is from Peachtree Hoops (via Yahoo Sports) and BasketUSA; no source gives Oklahoma City's biggest lead, so it is left off. Atlanta News First lists Okongwu with 27; the box score and AP give 28. Records and ranks are from the site's standings after Wednesday's games.",
+    "Atlanta led 64–51 at the half on Wiggins' 3 with 2.2 seconds left (AP). Oklahoma City won the third 32–19 and tied it 83–83 on Ajay Mitchell's driving layup with 1.4 seconds left in the quarter (AP). Threes by Dort and Wiggins gave Atlanta a 92–86 lead it never gave up, and Zuby Ejiofor's 3 made it 102–92 (AP). Okongwu had 18 in the first half (AP); Jalen Johnson had a triple-double, 16 points, 12 rebounds and 11 assists (AP; Atlanta News First). Dort and Wiggins, traded from the Thunder this summer, got video tributes in their first games back (AP). It was Oklahoma City's first home loss of the season (Field Level Media; Atlanta News First). The Thunder played without Jalen Williams, Cason Wallace, Chet Holmgren and Kingston Flemings (AP). Atlanta hosts Charlotte on Friday (AP).",
+    "The play of the game is an original illustration of Aaron Wiggins' 3-pointer with 2.2 seconds left before halftime that gave Atlanta a 64–51 lead (AP gives the clock and the score). The recaps don't describe the shot further, so it is drawn as the template's plain pull-up from beyond the arc. The later threes that put Atlanta ahead for good are described without a clock, so they are not drawn. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Atlanta Hawks or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Wiggins' listed 6-foot-5 and 190 pounds (Basketball-Reference), with his arms scaled to the 6-foot-9¾ wingspan measured at the 2021 NBA Draft Combine (NBADraft.net), in the Hawks' road colors. No source confirmed his Hawks number, so his jersey has no number. He has no approved look on file yet, so he is drawn in the kit with the default skin tone. It is an original figure with a featureless face, not a portrait or a trace of footage."
+  ],
+  "sources": [
+    [
+      "BasketUSA: Les Hawks font tomber la pluie à Oklahoma City",
+      "https://www.basketusa.com/news/958759/les-hawks-font-tomber-la-pluie-a-oklahoma-city/",
+      "Full player box score"
+    ],
+    [
+      "theScore: Atlanta Hawks vs Oklahoma City Thunder",
+      "https://www.thescore.com/nba/event/2462905",
+      "Line score, team stats check"
+    ],
+    [
+      "AP (via Yahoo Sports): Hawks outlast the Thunder 117-112 as Dort and Wiggins make winning returns",
+      "https://sports.yahoo.com/articles/hawks-outlast-thunder-117-112-034536345.html",
+      "Halftime three (clock, score), 92-86 and 102-92, absences, next game"
+    ],
+    [
+      "AP (via News 9): Former Thunder players Dort, Wiggins help Hawks beat Oklahoma City 117-112",
+      "https://news9.com/oklahoma-city-thunder/former-thunder-players-dort-wiggins-help-hawks-beat-oklahoma-city-117-112",
+      "Okongwu's 18 in the first half"
+    ],
+    [
+      "OKC Thunder Wire (via Yahoo Sports): Player grades",
+      "https://sports.yahoo.com/articles/player-grades-lu-dort-aaron-051720453.html",
+      "Shooting lines and runs check"
+    ],
+    [
+      "Peachtree Hoops (via Yahoo Sports): Okongwu's 28 points help Hawks hold off Thunder 117-112",
+      "https://sports.yahoo.com/articles/okongwu-28-points-help-hawks-033310557.html",
+      "Biggest lead"
+    ],
+    [
+      "Atlanta News First: Hawks hand Thunder first home loss behind Jalen Johnson's triple-double",
+      "https://www.atlantanewsfirst.com/2026/11/19/hawks-hand-thunder-first-home-loss-behind-jalen-johnsons-triple-double/",
+      "Triple-double, first home loss"
+    ],
+    [
+      "Field Level Media (via 95.3 The Score): Hawks top Thunder as Aaron Wiggins, Luguentz Dort return to OKC",
+      "https://www.953thescore.com/2026/11/18/hawks-top-thunder-as-aaron-wiggins-luguentz-dort-return-to-okc/",
+      "Fourth-quarter threes, streak"
+    ],
+    [
+      "Basketball-Reference: Aaron Wiggins",
+      "https://www.basketball-reference.com/players/w/wiggiaa01.html",
+      "Listed height and weight"
+    ],
+    [
+      "NBADraft.net: Aaron Wiggins",
+      "https://www.nbadraft.net/players/aaron-wiggins/",
+      "Wingspan"
+    ]
+  ],
+  "figure": {
+    "player": "Aaron Wiggins",
+    "home": false,
+    "tall": 0.9872,
+    "ape": 1.0617,
+    "mass": 0.9461,
+    "label": "Aaron Wiggins, listed 6-5, 190 lb, 6-9¾ wingspan (2021 combine)"
+  },
+  "loser_top": [
+    [
+      "Shai Gilgeous-Alexander",
+      34,
+      "14 of 29 · 15 in the third"
+    ],
+    [
+      "Jared McCain",
+      18,
+      "13 in the fourth"
+    ]
+  ]
+}

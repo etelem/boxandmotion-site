@@ -1,0 +1,229 @@
+{
+  "team": "PHX",
+  "D": "  const D = {\n    date: 'Wed, Nov 18, 2026',\n    us: 128, them: 107, record: '7–7', usName: 'Suns', themName: 'Kings',\n    quarters: [[36, 31], [29, 29], [34, 24], [29, 23]],\n    leadUs: 27, leadThem: 2,\n    star: {name: 'Dillon Brooks', stats: [['Points (season high)', 29, 30], ['Threes made', 5, 10], ['Assists', 5, 10]]},\n    scorers: [\n      {name: 'Dillon Brooks', pts: 29, note: '12 of 18 · 5 threes'},\n      {name: 'Devin Booker', pts: 29, note: '6 assists · 7 of 7 FT'},\n      {name: 'Jalen Green', pts: 18, note: '7 reb · 7 ast'},\n      {name: 'Miles Bridges', pts: 13, note: '6 of 8 · 5 assists'},\n      {name: 'Khaman Maluach', pts: 10, note: 'off the bench · 4 of 5'},\n    ],\n    edges: [\n      {label: 'Points in the paint', us: 60, them: 42},\n      {label: 'Assists', us: 34, them: 29},\n      {label: 'Field goal %', us: 57, them: 47},\n      {label: 'Free throws made', us: 17, them: 11},\n    ],\n    gaps: [\n      {label: 'Offensive rebounds', us: 7, them: 11},\n    ],\n    next: {opp: 'at Jazz', when: 'Fri, Nov 20, 9:30 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Devin Booker's backdoor layup off a pass from Miles Bridges with 5:22 left that made it 115–96. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Booker backdoor",
+    "subP": "Booker cuts backdoor, 5:22 left",
+    "subL": "Devin Booker cuts backdoor, Suns up 17 with 5:22 left",
+    "m0": "Suns +17",
+    "m1": "Suns +19",
+    "num": "15",
+    "cap1": "Booker’s layup. Suns by 19.",
+    "cap2": "From Miles Bridges, 5:22 left: 115–96.",
+    "clock": [
+      329,
+      322
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Suns at Kings Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Suns 128, Kings 107 · Nov 18, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Suns at', 'Kings'] : ['Suns at Kings']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Brooks and Booker', '29 apiece.'] : ['Dillon Brooks and Devin Booker scored 29 apiece as Phoenix got back to .500.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Suns improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Won 6 of their last 8'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Suns up 5 at the half,', 'won the 3rd 34–24'] : ['Suns up 5 at the half, won the third 34–24']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Suns ${D.leadUs}, Kings ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin in each quarter, then the game score after it.",
+      "Suns’ margin in each quarter, then the game score after it."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Brooks: 29 points,', 'a season high'] : ['Brooks: 29 points, a season high']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['12 of 18 from the floor,', '5 of 9 from three.'] : ['12 of 18 from the floor, 5 of 9 from three.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Brooks and Booker:', '58 of the 128'] : ['Brooks and Booker combined for 58 of 128']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 30;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it in the paint', 'and with the pass'] : ['Won it in the paint and with the pass']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Suns in orange, Kings in gray.', 'Phoenix shot 57 percent.'] : ['Suns in orange, Kings in gray. Phoenix shot 57 percent.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'11th in the West'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Jazz’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '3–13';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['The Kings are 1–13, tied for', 'their worst start ever.'] : ['Sacramento is 1–13, tied for the worst start in franchise history.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Suns 128 · Kings 107 · Nov 18'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Booker backdoor'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Brooks'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 70;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 170 : 200) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 120 * k, shotX + 80 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "    T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "    T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+    ],
+    [
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 160, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 192, ly, D.themName"
+    ],
+    [
+      "['Points per quarter. Each quarter’s', 'margin, then the game score after it.']",
+      "['Points per quarter and the margin.', 'Phoenix won the 3rd 34–24.']"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+2', 'd w', 72, 'end');"
+    ]
+  ],
+  "aria": "Animated recap of the Suns' 128 to 107 win over the Kings: Devin Booker's backdoor layup with 5:22 left, quarter-by-quarter scoring, Dillon Brooks' season-high 29 points, the top scorers, how the Suns won, and Friday's game in Utah.",
+  "notes": [
+    "Box score from the Suns' 128–107 win over the Sacramento Kings at Golden 1 Center on Nov 18, 2026, from the Covers box score and team stats, checked against theScore's line score, with game details from the Associated Press (via WRAL and Yahoo Sports), Bright Side of the Sun (via Yahoo Sports), NBC Sports Bay Area, Arizona Sports and z93jamz. All 128 Phoenix points and all 107 Sacramento points are accounted for in the Covers player lines, and the quarter scores add up to both totals: Phoenix 36–31 after one, 65–60 at the half, 99–84 after three. Team stats (points in the paint 60–42, also in AP; assists 34–29; field goals 48 of 84 to 41 of 88; free throws 17 of 22 to 11 of 15; offensive rebounds 7–11; biggest leads Phoenix 27, Sacramento 2) are from Covers. Records and ranks are from the site's standings after Wednesday's games.",
+    "The Kings cut it to 55–52 late in the second quarter before Phoenix answered with a 10–0 run; Sacramento closed the half on an 8–0 run to trail 65–60 (Bright Side of the Sun). Phoenix won the third 34–24 (AP), including 12 straight points from 80–74 to 92–74 (z93jamz). Sacramento opened the fourth with six straight points to get within nine before a smaller Phoenix lineup pushed the lead back up (Arizona Sports; NBC Sports Bay Area). Brooks' 29 were his best of the season (z93jamz; Arizona Sports). Rookie Darius Acuff Jr. scored 36 for Sacramento (box score). The Suns are at .500 for the first time this season and have won six of eight (AP; Bright Side of the Sun). The Kings have lost seven straight and are 1–13, tied with the 1990–91 team for the worst start in franchise history (AP). Phoenix plays at Utah on Friday (AP).",
+    "The play of the game is an original illustration of Devin Booker's backdoor layup off a pass from Miles Bridges that made it 115–96 with 5:22 left (Bright Side of the Sun gives the pass, the score and the clock). It is drawn as the template's short finish near the rim, not the exact cut. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Phoenix Suns or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The player in the play of the game is drawn to Booker's listed 6-foot-5 and 206 pounds (Wikipedia), with his arms scaled to the 6-foot-8¼ wingspan measured at the 2015 NBA Draft Combine (theScore), in the Suns' road colors with No. 15, the number he switched to this season (SLAM). His look is the proposed one on file. It is an original figure with a featureless face, not a portrait or a trace of footage."
+  ],
+  "sources": [
+    [
+      "Covers: Suns vs Kings game overview and player stats, Nov 18, 2026",
+      "https://www.covers.com/sport/basketball/nba/matchup/388754",
+      "Box score, team stats, biggest leads"
+    ],
+    [
+      "theScore: Suns @ Kings",
+      "https://beta.thescore.com/nba/event/2462908",
+      "Line score check"
+    ],
+    [
+      "AP (via WRAL): Brooks and Booker score 29 apiece as Suns send Kings to 7th straight loss 128-107",
+      "https://www.wral.com/news/ap/e6bc6-brooks-and-booker-score-29-apiece-as-suns-send-kings-to-7th-straight-loss-128-107/",
+      "Third quarter, streaks, worst start, next game"
+    ],
+    [
+      "Bright Side of the Sun (via Yahoo Sports): The Suns beat the Kings 128-107 to get to .500",
+      "https://sports.yahoo.com/articles/suns-beat-kings-128-107-060802341.html",
+      "Play of the game (clock, pass, score), second-quarter runs"
+    ],
+    [
+      "NBC Sports Bay Area: Kings observations: Darius Acuff Jr. scores 36 in loss to Suns",
+      "https://www.nbcsportsbayarea.com/nba/sacramento-kings/darius-acuff-jr-dillon-brooks-phoenix-suns/1981349/?partner=yahoo",
+      "Fourth-quarter run, Kings records"
+    ],
+    [
+      "z93jamz: Suns continue hot stretch, send Kings to historic 0-7 homestand",
+      "https://www.z93jamz.com/2026/11/19/suns-continue-hot-stretch-send-kings-to-historic-0-7-homestand/",
+      "12-0 third-quarter run, Brooks' season best"
+    ],
+    [
+      "Arizona Sports: Suns get much-needed charge from starters to beat Kings",
+      "https://arizonasports.com/nba/phoenix-suns/suns-kings-starters-win-brooks",
+      "Fourth-quarter lineup change, Brooks' season best"
+    ],
+    [
+      "Wikipedia: Devin Booker",
+      "https://en.wikipedia.org/wiki/Devin_Booker",
+      "Listed height and weight"
+    ],
+    [
+      "theScore: Full 2015 NBA Draft Combine measurements",
+      "https://thescore.com/nba/news/764043",
+      "Wingspan"
+    ],
+    [
+      "SLAM: Devin Booker changes jersey number to No. 15 in honor of his dad Melvin",
+      "https://slamonline.com/nba/suns-all-star-guard-devin-booker-changes-jersey-number-to-no-15-in-honor-of-his-dad-melvin/",
+      "Jersey number"
+    ]
+  ],
+  "figure": {
+    "player": "Devin Booker",
+    "home": false,
+    "tall": 0.9872,
+    "ape": 1.0422,
+    "mass": 0.9852,
+    "label": "Devin Booker, listed 6-5, 206 lb, 6-8¼ wingspan (2015 combine)"
+  },
+  "loser_top": [
+    [
+      "Darius Acuff Jr.",
+      36,
+      "6 of 11 from three · 8 of 10 FT"
+    ],
+    [
+      "Zach LaVine",
+      18,
+      "8 of 12"
+    ]
+  ]
+}

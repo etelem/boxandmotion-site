@@ -1,0 +1,109 @@
+{
+ "headline": "Giannis tops his old team as the Heat win six straight",
+ "dek": "Giannis Antetokounmpo had 27, 14 and 9 in his first game against Milwaukee.",
+ "three": [
+  [
+   "Giannis: 27 points, 14 rebounds, 9 assists",
+   "7 of 11 from the floor, 13 of 16 at the line, one assist from a triple-double."
+  ],
+  [
+   "Heat up 26 at the half, led by as many as 30",
+   "Giannis, Adebayo and Mitchell combined for 77 of 137."
+  ],
+  [
+   "Won it from three and at the line",
+   "Threes made 22–14; free throws made 35–30. Miami went 22 of 48 from three."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   22,
+   14
+  ],
+  [
+   "Free throws made",
+   35,
+   30
+  ],
+  [
+   "Second-chance points",
+   20,
+   15
+  ],
+  [
+   "Points in the paint",
+   32,
+   56
+  ]
+ ],
+ "battle_labels": [
+  "MIA",
+  "MIL"
+ ],
+ "top": [
+  [
+   "Giannis Antetokounmpo",
+   "MIA",
+   "14 reb, 9 ast, 13 of 16 FT",
+   27
+  ],
+  [
+   "Bam Adebayo",
+   "MIA",
+   "21 in the first half, 9 of 13 FT",
+   26
+  ],
+  [
+   "Davion Mitchell",
+   "MIA",
+   "6 of 7 from three, a career high",
+   24
+  ],
+  [
+   "Klay Thompson",
+   "MIA",
+   "4 of 10 from three",
+   13
+  ]
+ ],
+ "linescore": {
+  "away": [
+   23,
+   25,
+   38,
+   44
+  ],
+  "home": [
+   34,
+   40,
+   38,
+   25
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-18-MIL-at-MIA.json",
+ "loser": {
+  "top": [
+   [
+    "Kyle Kuzma",
+    "MIL",
+    "9 of 16 · 2 steals",
+    26
+   ],
+   [
+    "Brayden Burries",
+    "MIL",
+    "6 of 9 · 3 of 5 from three",
+    20
+   ],
+   [
+    "Kasparas Jakucionis",
+    "MIL",
+    "6 of 8 · 5 assists",
+    20
+   ]
+  ],
+  "source": "box score"
+ }
+}

@@ -1,0 +1,220 @@
+{
+  "team": "WAS",
+  "D": "  const D = {\n    date: 'Wed, Nov 18, 2026',\n    us: 103, them: 99, record: '5–11', usName: 'Wizards', themName: 'Raptors',\n    quarters: [[29, 23], [20, 24], [29, 32], [25, 20]],\n    leadUs: 10, leadThem: 3,\n    star: {name: 'Anthony Davis', stats: [['Points', 25, 30], ['Rebounds', 14, 15], ['Assists', 2, 5]]},\n    scorers: [\n      {name: 'Anthony Davis', pts: 25, note: '14 reb · 9 of 16'},\n      {name: 'AJ Dybantsa', pts: 23, note: '12 reb · career highs in both'},\n      {name: 'Kyshawn George', pts: 20, note: '4 of 9 from three'},\n      {name: 'Alex Sarr', pts: 13, note: '5 of 6 · 3 blocks'},\n      {name: 'Trae Young', pts: 11, note: '8 assists · 6 of 7 FT'},\n    ],\n    edges: [\n      {label: 'Free throws made', us: 20, them: 7},\n      {label: 'Rebounds', us: 51, them: 41},\n      {label: 'Blocks', us: 7, them: 3},\n      {label: 'Fast-break points', us: 12, them: 9},\n    ],\n    gaps: [\n      {label: 'Points in the paint', us: 38, them: 46},\n    ],\n    next: {opp: 'at Bulls', when: 'Fri, Nov 20, 8:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Kyshawn George's 27-foot 3-pointer with 8:55 left that capped an 11–0 Washington run and made it 91–82. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "George caps the run",
+    "subP": "George from 27 feet, 8:55 left",
+    "subL": "Kyshawn George from 27 feet, Wizards up 6 with 8:55 left",
+    "m0": "Wizards +6",
+    "m1": "Wizards +9",
+    "num": "18",
+    "cap1": "George from deep. Wizards by 9.",
+    "cap2": "The end of an 11–0 run, 8:55 left.",
+    "clock": [
+      542,
+      535
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Wizards at Raptors Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Wizards 103, Raptors 99 · Nov 18, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Wizards at', 'Raptors'] : ['Wizards at Raptors']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Davis 25 and 14. Dybantsa', 'set two career highs.'] : ['Anthony Davis had 25 and 14, and AJ Dybantsa set career highs with 23 points and 12 rebounds.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Wizards improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Snapped an 8-game skid'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Wizards down 1 after three,', 'won the 4th 25–20'] : ['Wizards down 1 after three, won the fourth 25–20']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Wizards ${D.leadUs}, Raptors ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin in each quarter, then the game score after it.",
+      "Wizards’ margin in each quarter, then the game score after it."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Davis: 25 points', 'and 14 rebounds'] : ['Davis: 25 points and 14 rebounds']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['9 of 16, with 14 and 9', 'in the first half.'] : ['9 of 16 from the floor, with 14 points and 9 rebounds in the first half.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Davis, Dybantsa and George:', '68 of the 103'] : ['Davis, Dybantsa and George combined for 68 of 103']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 30;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it at the line', 'and on the glass'] : ['Won it at the line and on the glass']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Wizards in blue, Raptors in gray.', 'Toronto went 7 of 14 at the line.'] : ['Wizards in blue, Raptors in gray. Toronto went 7 of 14 at the line.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'11th in the East'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Bulls’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '4–10';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Toronto played without Leonard,', 'Barnes and Barrett.'] : ['Toronto played without Kawhi Leonard, Scottie Barnes and RJ Barrett.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Wizards 103 · Raptors 99 · Nov 18'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'George caps the run'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Davis'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 60;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "    T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "    T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+    ],
+    [
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 200, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 232, ly, D.themName"
+    ],
+    [
+      "['Points per quarter. Each quarter’s', 'margin, then the game score after it.']",
+      "['Points per quarter and the margin.', 'Washington won the 4th 25–20.']"
+    ]
+  ],
+  "aria": "Animated recap of the Wizards' 103 to 99 win over the Raptors: Kyshawn George's 27-foot 3-pointer with 8:55 left that capped an 11-0 run, quarter-by-quarter scoring, Anthony Davis' 25 points and 14 rebounds, the top scorers, how the Wizards won, and Friday's game in Chicago.",
+  "notes": [
+    "Box score from the Wizards' 103–99 win over the Toronto Raptors at Scotiabank Arena on Nov 18, 2026, from the Covers box score and team stats, checked against the FOX Sports game page, with game details from The Canadian Press (via TSN and The Globe and Mail), Field Level Media and the AP/Canadian Press story on Yahoo Sports. All 103 Washington points and all 99 Toronto points are accounted for in the Covers player lines, and the quarter scores add up to both totals: Washington 29–23 after one, 49–47 at the half, Toronto 79–78 after three, Washington 25–20 in the fourth. Team stats (free throws 20 of 27 to 7 of 14, rebounds 51–41, blocks 7–3, fast-break points 12–9, points in the paint 38–46, biggest leads Washington 10, Toronto 3) are from Covers. Sources differ on Toronto's turnovers (7 or 8), so they are left out. Records and ranks are from the site's standings after Wednesday's games.",
+    "Washington trailed 82–80 early in the fourth before Alex Sarr's dunk started an 11–0 run that Kyshawn George capped with a 3-pointer at 8:55 (Field Level Media; The Canadian Press). Trae Young's free throw made it 98–88 with 3:48 left (Field Level Media). Toronto got within 102–99, Jamison Battle missed a 3 with three seconds left, and Anthony Davis made one of two free throws (Field Level Media). AJ Dybantsa's 23 points and 12 rebounds were career highs, his first NBA double-double (Field Level Media; SB Nation via Yahoo Sports). The win ended Washington's eight-game losing streak; Toronto has lost six straight (AP/Canadian Press). Toronto played without Kawhi Leonard, Scottie Barnes and RJ Barrett (AP/Canadian Press). Washington plays at Chicago on Friday (AP/Canadian Press).",
+    "The play of the game is an original illustration of Kyshawn George's 27-foot 3-pointer with 8:55 left that gave Washington a 91–82 lead, capping an 11–0 run (The Canadian Press gives the distance, clock and score; Field Level Media confirms the run, the clock and the score). The recaps don't describe the shot further, so it is drawn as the template's plain pull-up from beyond the arc. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Washington Wizards or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to George's listed 6-foot-8 and 200 pounds (Wikipedia), with his arms scaled to the 6-foot-10¼ wingspan measured at the 2024 NBA Draft Combine (247Sports), in the Wizards' road blue with No. 18 (Wikipedia). He has no approved look on file yet, so he is drawn in the kit with the default skin tone. It is an original figure with a featureless face, not a portrait or a trace of footage."
+  ],
+  "sources": [
+    [
+      "Covers: Wizards vs Raptors game overview and player stats, Nov 18, 2026",
+      "https://www.covers.com/sport/basketball/nba/matchup/388748",
+      "Box score, line score, team stats, biggest leads"
+    ],
+    [
+      "FOX Sports: Wizards vs. Raptors box score, Nov 18, 2026",
+      "https://www.foxsports.com/nba/washington-wizards-vs-toronto-raptors-nov-18-2026-game-boxscore-106746",
+      "Line score and team stats check"
+    ],
+    [
+      "Field Level Media: Wizards, behind AJ Dybantsa's double-double, top Raptors to end skid",
+      "https://fieldlevelmedia.com/nba/wizards-behind-aj-dybantsas-double-double-top-raptors-to-end-skid/",
+      "11-0 run, late sequence with scores and clocks, career highs"
+    ],
+    [
+      "The Canadian Press (via TSN): Shorthanded Toronto Raptors fall to Washington Wizards to stretch losing skid to six games",
+      "https://www.tsn.ca/nba/article/shorthanded-raptors-fall-to-wizards-to-stretch-losing-skid-to-six-games/",
+      "George's 27-foot three at 8:55, streaks"
+    ],
+    [
+      "The Canadian Press (Globe and Mail, via Head Topics): Wizards defeat undermanned Raptors 103-99",
+      "https://ca.headtopics.com/news/wizards-defeat-undermanned-raptors-103-99-as-anthony-davis-89983133",
+      "Play of the game quote, free throws"
+    ],
+    [
+      "AP/Canadian Press (via Yahoo Sports): Davis and Dybantsa lead the Wizards past the Raptors 103-99",
+      "https://sports.yahoo.com/articles/davis-dybantsa-lead-wizards-past-033306902.html",
+      "Absences, streaks, next game"
+    ],
+    [
+      "SB Nation (via Yahoo Sports): Recap: Wizards mercifully win 103-99 vs. Raptors",
+      "https://sports.yahoo.com/articles/recap-wizards-mercifully-win-103-035830692.html",
+      "Dybantsa's first double-double"
+    ],
+    [
+      "Wikipedia: Kyshawn George",
+      "https://en.wikipedia.org/wiki/Kyshawn_George",
+      "Listed height, weight, jersey number"
+    ],
+    [
+      "247Sports: Kyshawn George's measurements at the NBA Draft Combine",
+      "https://247sports.com/college/miami/article/miami-hurricanes-basketball-kyshawn-georges-measurements-and-testing-results-at-nba-draft-combine-231793731/",
+      "Wingspan"
+    ]
+  ],
+  "figure": {
+    "player": "Kyshawn George",
+    "home": false,
+    "tall": 1.0256,
+    "ape": 1.0281,
+    "mass": 0.9524,
+    "label": "Kyshawn George, listed 6-8, 200 lb, 6-10¼ wingspan (2024 combine)"
+  },
+  "loser_top": [
+    [
+      "Immanuel Quickley",
+      24,
+      "4 of 9 from three · 5 assists"
+    ],
+    [
+      "Jamison Battle",
+      19,
+      "5 of 10 from three in his first start"
+    ]
+  ]
+}

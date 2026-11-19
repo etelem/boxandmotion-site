@@ -1,0 +1,57 @@
+{
+ "out": "short-2026-11-18-MIL-MIA.html",
+ "team": "MIA",
+ "home": true,
+ "number": "7",
+ "player": "Giannis Antetokounmpo",
+ "play_type": "drive",
+ "build": {
+  "tall": 1.0641,
+  "ape": 1.0,
+  "mass": 1.0454
+ },
+ "build_note": "Listed 6-11, 250 lb (StatMuse); No. 7 with the Heat (Eurohoops); no wingspan from a named source",
+ "kicker": "HEAT 137 · BUCKS 130 · NOV 18",
+ "hook": [
+  "Giannis answers",
+  "his old team's run"
+ ],
+ "clock": "Q4 · 3:46",
+ "us": "MIA",
+ "them": "MIL",
+ "score_before": [
+  130,
+  112
+ ],
+ "score_make": [
+  132,
+  112
+ ],
+ "score_ft": [
+  133,
+  112
+ ],
+ "stamp": "AND-ONE",
+ "ft_line": [
+  "+1 at the line.",
+  "Heat back up 21."
+ ],
+ "final": {
+  "label": "FINAL",
+  "us": "Heat",
+  "them": "Bucks",
+  "us_pts": 137,
+  "them_pts": 130
+ },
+ "star": {
+  "name": "Giannis Antetokounmpo",
+  "big": 27,
+  "big_label": "points, 14 rebounds, 9 assists",
+  "lines": [
+   "13 of 16 at the line",
+   "First game against Milwaukee"
+  ]
+ },
+ "story": "Miami led by 30. Milwaukee closed on a 30–9 run, but the Heat won their sixth straight.",
+ "aria": "Animated Short: Giannis Antetokounmpo, in his first game against Milwaukee, drives for a finger roll through contact with 3:46 left and makes the free throw for a 133–112 Heat lead after a 12–0 Bucks run. Heat win 137–130. An original illustration, not traced from footage, not to scale."
+}

@@ -1,0 +1,103 @@
+{
+ "headline": "Davis and Dybantsa end the Wizards' skid",
+ "dek": "Anthony Davis had 25 and 14, and AJ Dybantsa set career highs with 23 points and 12 rebounds.",
+ "three": [
+  [
+   "Davis: 25 points and 14 rebounds",
+   "9 of 16 from the floor, with 14 points and 9 rebounds in the first half."
+  ],
+  [
+   "Wizards down 1 after three, won the fourth 25–20",
+   "Davis, Dybantsa and George combined for 68 of 103."
+  ],
+  [
+   "Won it at the line and on the glass",
+   "Free throws made 20–7; rebounds 51–41. Toronto went 7 of 14 at the line."
+  ]
+ ],
+ "battle": [
+  [
+   "Free throws made",
+   20,
+   7
+  ],
+  [
+   "Rebounds",
+   51,
+   41
+  ],
+  [
+   "Blocks",
+   7,
+   3
+  ],
+  [
+   "Fast-break points",
+   12,
+   9
+  ]
+ ],
+ "battle_labels": [
+  "WAS",
+  "TOR"
+ ],
+ "top": [
+  [
+   "Anthony Davis",
+   "WAS",
+   "14 reb, 9 of 16",
+   25
+  ],
+  [
+   "AJ Dybantsa",
+   "WAS",
+   "12 reb, career highs in both",
+   23
+  ],
+  [
+   "Kyshawn George",
+   "WAS",
+   "4 of 9 from three",
+   20
+  ],
+  [
+   "Alex Sarr",
+   "WAS",
+   "5 of 6, 3 blocks",
+   13
+  ]
+ ],
+ "linescore": {
+  "away": [
+   29,
+   20,
+   29,
+   25
+  ],
+  "home": [
+   23,
+   24,
+   32,
+   20
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-18-WAS-at-TOR.json",
+ "loser": {
+  "top": [
+   [
+    "Immanuel Quickley",
+    "TOR",
+    "4 of 9 from three · 5 assists",
+    24
+   ],
+   [
+    "Jamison Battle",
+    "TOR",
+    "5 of 10 from three in his first start",
+    19
+   ]
+  ],
+  "source": "box score"
+ }
+}

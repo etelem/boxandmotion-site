@@ -1,0 +1,103 @@
+{
+ "headline": "Okongwu and 20 threes win it in Oklahoma City",
+ "dek": "Onyeka Okongwu scored 28 and Jalen Johnson had a triple-double as Atlanta won in Oklahoma City.",
+ "three": [
+  [
+   "Okongwu: 28 points and 5 threes",
+   "18 in the first half, plus 9 rebounds."
+  ],
+  [
+   "Hawks up 13 at the half, tied after three, won the fourth 34–29",
+   "Okongwu and Alexander-Walker combined for 47 of 117."
+  ],
+  [
+   "Won it from three and on the offensive glass",
+   "Threes made 20–9; offensive rebounds 14–5. Atlanta made 20 threes to 9."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   20,
+   9
+  ],
+  [
+   "Offensive rebounds",
+   14,
+   5
+  ],
+  [
+   "Steals",
+   8,
+   5
+  ],
+  [
+   "Assists",
+   32,
+   30
+  ]
+ ],
+ "battle_labels": [
+  "ATL",
+  "OKC"
+ ],
+ "top": [
+  [
+   "Onyeka Okongwu",
+   "ATL",
+   "5 threes, 18 in the first half",
+   28
+  ],
+  [
+   "Nickeil Alexander-Walker",
+   "ATL",
+   "7 assists, 3 threes",
+   19
+  ],
+  [
+   "Jalen Johnson",
+   "ATL",
+   "triple-double: 12 reb, 11 ast",
+   16
+  ],
+  [
+   "Luguentz Dort",
+   "ATL",
+   "off the bench, 3 threes",
+   16
+  ]
+ ],
+ "linescore": {
+  "away": [
+   31,
+   33,
+   19,
+   34
+  ],
+  "home": [
+   29,
+   22,
+   32,
+   29
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-18-ATL-at-OKC.json",
+ "loser": {
+  "top": [
+   [
+    "Shai Gilgeous-Alexander",
+    "OKC",
+    "14 of 29 · 15 in the third",
+    34
+   ],
+   [
+    "Jared McCain",
+    "OKC",
+    "13 in the fourth",
+    18
+   ]
+  ],
+  "source": "box score"
+ }
+}
