@@ -1,0 +1,103 @@
+{
+ "headline": "Rockets hit 19 threes to beat the Pacers",
+ "dek": "Kevin Durant scored 21 and Reed Sheppard 20 as Houston made 19 of 35 threes.",
+ "three": [
+  [
+   "Kevin Durant: 21 points on 7 of 9",
+   "4 of 5 from three and 3 of 4 at the line in 31 minutes."
+  ],
+  [
+   "Rockets up 16 at the half, and led by as many as 21",
+   "Durant, Sheppard and Smith combined for 58 of 119."
+  ],
+  [
+   "Won it from three and on the glass",
+   "Threes made 19–10; rebounds 46–35. Houston made 19 of 35 threes to Indiana’s 10 of 34."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   19,
+   10
+  ],
+  [
+   "Rebounds",
+   46,
+   35
+  ],
+  [
+   "Assists",
+   30,
+   25
+  ],
+  [
+   "Offensive rebounds",
+   13,
+   7
+  ]
+ ],
+ "battle_labels": [
+  "HOU",
+  "IND"
+ ],
+ "top": [
+  [
+   "Kevin Durant",
+   "HOU",
+   "7 of 9, 4 of 5 from three",
+   21
+  ],
+  [
+   "Reed Sheppard",
+   "HOU",
+   "off the bench, 6 of 7 from three",
+   20
+  ],
+  [
+   "Jabari Smith Jr.",
+   "HOU",
+   "7 of 10, 3 of 6 from three",
+   17
+  ],
+  [
+   "Amen Thompson",
+   "HOU",
+   "9 rebounds, 3 assists",
+   15
+  ]
+ ],
+ "linescore": {
+  "away": [
+   39,
+   23,
+   31,
+   26
+  ],
+  "home": [
+   28,
+   18,
+   30,
+   28
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-18-HOU-at-IND.json",
+ "loser": {
+  "top": [
+   [
+    "Pascal Siakam",
+    "IND",
+    "10 of 17 · 3 steals",
+    24
+   ],
+   [
+    "Kelly Oubre Jr.",
+    "IND",
+    "7 of 10 in 22 minutes",
+    17
+   ]
+  ],
+  "source": "box score"
+ }
+}

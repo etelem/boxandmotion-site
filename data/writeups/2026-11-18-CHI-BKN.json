@@ -1,0 +1,103 @@
+{
+ "headline": "Buzelis' 25 leads the Bulls past Brooklyn",
+ "dek": "Matas Buzelis scored 25 and Chicago made 21 threes in a 30-point win at Brooklyn.",
+ "three": [
+  [
+   "Matas Buzelis: 25 points and 5 threes",
+   "A season high, on 9 of 16 from the floor and 5 of 9 from three."
+  ],
+  [
+   "Bulls closed the first quarter on a 13–0 run and led 76–51 at the half",
+   "Eight Bulls scored in double figures."
+  ],
+  [
+   "Won it in the paint and from three",
+   "Points in the paint 62–46; rebounds 46–29. Chicago outrebounded Brooklyn 46–29."
+  ]
+ ],
+ "battle": [
+  [
+   "Points in the paint",
+   62,
+   46
+  ],
+  [
+   "Rebounds",
+   46,
+   29
+  ],
+  [
+   "Assists",
+   36,
+   25
+  ],
+  [
+   "Threes made",
+   21,
+   15
+  ]
+ ],
+ "battle_labels": [
+  "CHI",
+  "BKN"
+ ],
+ "top": [
+  [
+   "Matas Buzelis",
+   "CHI",
+   "9 of 16, 5 of 9 from three",
+   25
+  ],
+  [
+   "Josh Giddey",
+   "CHI",
+   "14 rebounds, 9 assists, 8 of 12",
+   18
+  ],
+  [
+   "Norman Powell",
+   "CHI",
+   "5 of 9 from three, 5 assists",
+   17
+  ],
+  [
+   "Jalen Smith",
+   "CHI",
+   "6 of 11, 6 rebounds",
+   14
+  ]
+ ],
+ "linescore": {
+  "away": [
+   37,
+   39,
+   35,
+   26
+  ],
+  "home": [
+   21,
+   30,
+   26,
+   30
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-18-CHI-at-BKN.json",
+ "loser": {
+  "top": [
+   [
+    "Egor Demin",
+    "BKN",
+    "9 of 22 · 3 of 12 from three",
+    22
+   ],
+   [
+    "Julius Randle",
+    "BKN",
+    "5 of 10 · 4 of 4 FT",
+    17
+   ]
+  ],
+  "source": "box score"
+ }
+}

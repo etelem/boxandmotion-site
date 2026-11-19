@@ -1,0 +1,103 @@
+{
+ "headline": "Without Cunningham, Pistons hit 17 threes",
+ "dek": "Without Cade Cunningham, John Collins scored 20 and seven Pistons reached double figures.",
+ "three": [
+  [
+   "John Collins: 20 points and 7 rebounds",
+   "6 of 10 from the floor, 4 of 6 from three and 4 of 4 at the line."
+  ],
+  [
+   "Pistons led for good from 6:16 left in the first half",
+   "Seven Pistons scored in double figures."
+  ],
+  [
+   "Won it from three and on the break",
+   "Threes made 17–11; fast-break points 22–9. Detroit shot 17 of 32 from three, 53 percent."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   17,
+   11
+  ],
+  [
+   "Fast-break points",
+   22,
+   9
+  ],
+  [
+   "Assists",
+   29,
+   23
+  ],
+  [
+   "Field goals made",
+   41,
+   37
+  ]
+ ],
+ "battle_labels": [
+  "DET",
+  "NOP"
+ ],
+ "top": [
+  [
+   "John Collins",
+   "DET",
+   "6 of 10, 4 of 6 from three",
+   20
+  ],
+  [
+   "Javonte Green",
+   "DET",
+   "13 in the first half, 7 rebounds",
+   18
+  ],
+  [
+   "Paul Reed",
+   "DET",
+   "7 of 9, 7 rebounds",
+   17
+  ],
+  [
+   "Daniss Jenkins",
+   "DET",
+   "9 assists, 3 of 5 from three",
+   17
+  ]
+ ],
+ "linescore": {
+  "away": [
+   31,
+   36,
+   25,
+   30
+  ],
+  "home": [
+   31,
+   29,
+   26,
+   23
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-18-DET-at-NOP.json",
+ "loser": {
+  "top": [
+   [
+    "Zion Williamson",
+    "NOP",
+    "9 of 14 · 7 rebounds",
+    24
+   ],
+   [
+    "Jordan Poole",
+    "NOP",
+    "9 of 9 FT · 3 of 5 from three",
+    22
+   ]
+  ],
+  "source": "box score"
+ }
+}

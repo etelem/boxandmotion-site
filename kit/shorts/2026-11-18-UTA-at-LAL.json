@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-18-UTA-LAL.html",
+  "team": "UTA",
+  "home": false,
+  "number": "3",
+  "player": "Keyonte George",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 0.9744,
+    "ape": 1.0,
+    "mass": 0.9397
+  },
+  "build_note": "Listed 6-4, 185 lb, No. 3 (RealGM, Basketball-Reference); no wingspan from a named measurement",
+  "kicker": "JAZZ 109 · LAKERS 97 · NOV 18",
+  "hook": [
+    "George breaks the tie,",
+    "8:09 left at the Lakers"
+  ],
+  "clock": "Q4 · 8:09",
+  "us": "UTA",
+  "them": "LAL",
+  "score_before": [
+    83,
+    83
+  ],
+  "score_make": [
+    86,
+    83
+  ],
+  "stamp": "THREE",
+  "beat": [
+    "The start of a 15–0 run.",
+    "Jazz by 15, 98–83."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Jazz",
+    "them": "Lakers",
+    "us_pts": 109,
+    "them_pts": 97
+  },
+  "star": {
+    "name": "Keyonte George",
+    "big": 30,
+    "big_label": "points, 10 assists",
+    "lines": [
+      "5 of 10 from three",
+      "Lakers’ 9-game streak over"
+    ]
+  },
+  "story": "Utah was tied 83–83 with the 13–3 Lakers with 8:19 left. Keyonte George's three off a Darryn Peterson pass started a 15–0 run, and the 3–13 Jazz won 109–97.",
+  "aria": "Animated Short: Keyonte George's 3-pointer off a Darryn Peterson pass with 8:09 left that broke an 83 to 83 tie and started Utah's 15–0 run. Jazz win 109–97 and end the Lakers' nine-game win streak. An original illustration, not traced from footage, not to scale."
+}
