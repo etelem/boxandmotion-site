@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-18-PHI-ORL.html",
+  "team": "PHI",
+  "home": false,
+  "number": "77",
+  "player": "VJ Edgecombe",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 0.9744,
+    "ape": 1.0461,
+    "mass": 0.9524
+  },
+  "build_note": "Listed 6-4, 190 lb (Wikipedia); 6-7½ wingspan (NBC Sports Philadelphia)",
+  "kicker": "76ERS 121 · MAGIC 116 · NOV 18",
+  "hook": [
+    "Edgecombe's three",
+    "puts the 76ers ahead"
+  ],
+  "clock": "Q4 · 1:36",
+  "us": "PHI",
+  "them": "ORL",
+  "score_before": [
+    111,
+    112
+  ],
+  "score_make": [
+    114,
+    112
+  ],
+  "stamp": "GO-AHEAD THREE",
+  "beat": [
+    "Down 17 in the first quarter.",
+    "Ahead for good, from LeBron."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "76ers",
+    "them": "Magic",
+    "us_pts": 121,
+    "them_pts": 116
+  },
+  "star": {
+    "name": "VJ Edgecombe",
+    "big": 24,
+    "big_label": "points, a season high",
+    "lines": [
+      "13 in the 4th quarter",
+      "Embiid: 26 and 7 assists"
+    ]
+  },
+  "story": "Orlando led by 17 in the first quarter. VJ Edgecombe's three with 1:36 left put Philadelphia ahead for good, and the 76ers won 121–116, their fourth straight.",
+  "aria": "Animated Short: VJ Edgecombe's 3-pointer on a pass from LeBron James with 1:36 left that turned a 112–111 deficit into a 114–112 76ers lead. Philadelphia wins 121–116 at Orlando. An original illustration, not traced from footage, not to scale."
+}

@@ -1,0 +1,103 @@
+{
+ "headline": "Flagg's 33 leads Dallas past Golden State",
+ "dek": "Cooper Flagg scored 33 on 11-of-15 shooting and Dallas led by as many as 29.",
+ "three": [
+  [
+   "Flagg: 33 points on 15 shots",
+   "11 of 15 from the field, 8 of 8 at the line and 9 assists."
+  ],
+  [
+   "Mavericks up 13 at the half, then won the third quarter 30–23",
+   "Flagg and Washington combined for 54 of 116."
+  ],
+  [
+   "Won it from three and with the pass",
+   "Threes made 17–9; assists 34–28. Dallas set season highs with 17 threes and 34 assists."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   17,
+   9
+  ],
+  [
+   "Assists",
+   34,
+   28
+  ],
+  [
+   "Field goal %",
+   51,
+   43
+  ],
+  [
+   "Free throws made",
+   15,
+   9
+  ]
+ ],
+ "battle_labels": [
+  "DAL",
+  "GSW"
+ ],
+ "top": [
+  [
+   "Cooper Flagg",
+   "DAL",
+   "11 of 15, 9 assists",
+   33
+  ],
+  [
+   "P.J. Washington",
+   "DAL",
+   "5 of 7 from three",
+   21
+  ],
+  [
+   "Kyrie Irving",
+   "DAL",
+   "6 rebounds, 5 assists",
+   17
+  ],
+  [
+   "Naji Marshall",
+   "DAL",
+   "off the bench, 4 of 8",
+   12
+  ]
+ ],
+ "linescore": {
+  "away": [
+   25,
+   24,
+   23,
+   22
+  ],
+  "home": [
+   35,
+   27,
+   30,
+   24
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-18-GSW-at-DAL.json",
+ "loser": {
+  "top": [
+   [
+    "Will Richard",
+    "GSW",
+    "off the bench · 9 of 13",
+    20
+   ],
+   [
+    "Yaxel Lendeborg",
+    "GSW",
+    "6 of 18 from the field",
+    13
+   ]
+  ],
+  "source": "box score"
+ }
+}

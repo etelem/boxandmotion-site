@@ -1,0 +1,103 @@
+{
+ "headline": "Edgecombe's three finishes a comeback from 17 down",
+ "dek": "Down 17 in the first quarter, the 76ers went ahead for good on VJ Edgecombe’s three with 1:36 left.",
+ "three": [
+  [
+   "Embiid: 26 points and 7 assists",
+   "12 of 14 at the line, 6 rebounds and 3 blocks."
+  ],
+  [
+   "76ers down 17 in the first quarter, won the fourth 29–19",
+   "Embiid and Edgecombe combined for 50 of 121."
+  ],
+  [
+   "Won it at the line and in the fourth",
+   "Free throws made 23–9; fourth-quarter points 29–19. Orlando made 19 threes to Philadelphia’s 14."
+  ]
+ ],
+ "battle": [
+  [
+   "Free throws made",
+   23,
+   9
+  ],
+  [
+   "Fourth-quarter points",
+   29,
+   19
+  ],
+  [
+   "Second-quarter points",
+   37,
+   29
+  ],
+  [
+   "Threes made",
+   14,
+   19
+  ]
+ ],
+ "battle_labels": [
+  "PHI",
+  "ORL"
+ ],
+ "top": [
+  [
+   "Joel Embiid",
+   "PHI",
+   "7 assists, 12 of 14 at the line",
+   26
+  ],
+  [
+   "VJ Edgecombe",
+   "PHI",
+   "season high, 13 in the 4th",
+   24
+  ],
+  [
+   "LeBron James",
+   "PHI",
+   "8 of 16, 6 assists",
+   22
+  ],
+  [
+   "Anfernee Simons",
+   "PHI",
+   "first start, 7 of 12",
+   18
+  ]
+ ],
+ "linescore": {
+  "away": [
+   27,
+   37,
+   28,
+   29
+  ],
+  "home": [
+   40,
+   29,
+   28,
+   19
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-18-PHI-at-ORL.json",
+ "loser": {
+  "top": [
+   [
+    "Franz Wagner",
+    "ORL",
+    "11 assists · 8 rebounds",
+    27
+   ],
+   [
+    "Jalen Suggs",
+    "ORL",
+    "5 of 6 from three",
+    18
+   ]
+  ],
+  "source": "box score"
+ }
+}

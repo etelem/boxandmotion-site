@@ -1,0 +1,103 @@
+{
+ "headline": "Nuggets erase a 17-point deficit; Murray seals it",
+ "dek": "Down 17 in the second quarter, Denver came back, and Jamal Murray’s jumper with 6.4 seconds left sealed it.",
+ "three": [
+  [
+   "Jokić: 24 points, 9 assists, 8 rebounds",
+   "9 of 17 from the field, 3 of 7 from three."
+  ],
+  [
+   "Nuggets down 12 at the half, then won the third quarter 31–19",
+   "Five Nuggets scored 10 or more."
+  ],
+  [
+   "Won it at the line and in the third",
+   "Free throws made 24–10; third-quarter points 31–19. Boston was called for 30 fouls to Denver’s 13."
+  ]
+ ],
+ "battle": [
+  [
+   "Free throws made",
+   24,
+   10
+  ],
+  [
+   "Third-quarter points",
+   31,
+   19
+  ],
+  [
+   "Fast-break points",
+   18,
+   14
+  ],
+  [
+   "Threes made",
+   7,
+   11
+  ]
+ ],
+ "battle_labels": [
+  "DEN",
+  "BOS"
+ ],
+ "top": [
+  [
+   "Nikola Jokić",
+   "DEN",
+   "9 assists, 8 rebounds",
+   24
+  ],
+  [
+   "Jamal Murray",
+   "DEN",
+   "4 steals, 5 of 5 at the line",
+   21
+  ],
+  [
+   "DeMar DeRozan",
+   "DEN",
+   "off the bench, 13 in the 4th",
+   18
+  ],
+  [
+   "Christian Braun",
+   "DEN",
+   "6 of 16, 5 rebounds",
+   15
+  ]
+ ],
+ "linescore": {
+  "away": [
+   30,
+   31,
+   19,
+   21
+  ],
+  "home": [
+   24,
+   25,
+   31,
+   25
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-18-BOS-at-DEN.json",
+ "loser": {
+  "top": [
+   [
+    "Jayson Tatum",
+    "BOS",
+    "20 by halftime · 8 rebounds",
+    24
+   ],
+   [
+    "Neemias Queta",
+    "BOS",
+    "10 rebounds · 7 offensive",
+    17
+   ]
+  ],
+  "source": "box score"
+ }
+}

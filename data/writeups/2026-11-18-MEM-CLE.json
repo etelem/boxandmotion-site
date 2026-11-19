@@ -1,0 +1,103 @@
+{
+ "headline": "Spencer scores 26 as Memphis edges Cleveland",
+ "dek": "Cam Spencer scored 26 and Cameron Boozer’s free throws with 1:26 left put Memphis ahead for good.",
+ "three": [
+  [
+   "Spencer: 26 points on 11 shots",
+   "9 of 11 from the field, 5 of 6 from three, and 7 assists."
+  ],
+  [
+   "Grizzlies down 1 at the half, then won the second half 53–49",
+   "Five Grizzlies scored 10 or more."
+  ],
+  [
+   "Won it on the break and at the line",
+   "Field goal % 54–46; fast-break points 19–11. Donovan Mitchell scored 34 for Cleveland."
+  ]
+ ],
+ "battle": [
+  [
+   "Field goal %",
+   54,
+   46
+  ],
+  [
+   "Fast-break points",
+   19,
+   11
+  ],
+  [
+   "Free throws made",
+   24,
+   18
+  ],
+  [
+   "Assists",
+   30,
+   28
+  ]
+ ],
+ "battle_labels": [
+  "MEM",
+  "CLE"
+ ],
+ "top": [
+  [
+   "Cam Spencer",
+   "MEM",
+   "9 of 11, 5 of 6 from three",
+   26
+  ],
+  [
+   "Taylor Hendricks",
+   "MEM",
+   "off the bench, 6 of 7",
+   20
+  ],
+  [
+   "Cameron Boozer",
+   "MEM",
+   "8 rebounds, 7 of 7 at the line",
+   18
+  ],
+  [
+   "Cedric Coward",
+   "MEM",
+   "4 threes, 5 assists",
+   18
+  ]
+ ],
+ "linescore": {
+  "away": [
+   30,
+   41,
+   29,
+   24
+  ],
+  "home": [
+   37,
+   35,
+   27,
+   22
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-18-MEM-at-CLE.json",
+ "loser": {
+  "top": [
+   [
+    "Donovan Mitchell",
+    "CLE",
+    "14 of 27 from the field",
+    34
+   ],
+   [
+    "Jarrett Allen",
+    "CLE",
+    "9 rebounds · 4 assists",
+    19
+   ]
+  ],
+  "source": "box score"
+ }
+}
