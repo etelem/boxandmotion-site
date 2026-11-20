@@ -1,0 +1,103 @@
+{
+ "headline": "Wembanyama’s 32 gets the Spurs back on track",
+ "dek": "Victor Wembanyama scored 32 and Stephon Castle added 21 and 12 assists as San Antonio bounced back from Tuesday’s loss.",
+ "three": [
+  [
+   "Victor Wembanyama: 32 points and 11 rebounds",
+   "13 of 26 from the field, his seventh 30-point game of the season."
+  ],
+  [
+   "Spurs up 3 at the half, then won the fourth 32–24",
+   "Wembanyama, Castle and Champagnie combined for 73 of 124."
+  ],
+  [
+   "Won it in the paint and with the extra pass",
+   "Points in the paint 54–36; assists 37–24. San Antonio had 15 steals to the Clippers’ 11."
+  ]
+ ],
+ "battle": [
+  [
+   "Points in the paint",
+   54,
+   36
+  ],
+  [
+   "Assists",
+   37,
+   24
+  ],
+  [
+   "Steals",
+   15,
+   11
+  ],
+  [
+   "Free throws made",
+   21,
+   15
+  ]
+ ],
+ "battle_labels": [
+  "SAS",
+  "LAC"
+ ],
+ "top": [
+  [
+   "Victor Wembanyama",
+   "SAS",
+   "13 of 26, 11 rebounds",
+   32
+  ],
+  [
+   "Stephon Castle",
+   "SAS",
+   "12 assists, 4 steals",
+   21
+  ],
+  [
+   "Julian Champagnie",
+   "SAS",
+   "8 of 14, 4 of 9 from three",
+   20
+  ],
+  [
+   "Devin Vassell",
+   "SAS",
+   "6 of 12, 3 steals",
+   15
+  ]
+ ],
+ "linescore": {
+  "away": [
+   21,
+   33,
+   34,
+   24
+  ],
+  "home": [
+   24,
+   33,
+   35,
+   32
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-19-LAC-at-SAS.json",
+ "loser": {
+  "top": [
+   [
+    "Darius Garland",
+    "LAC",
+    "8 of 17 · 5 assists",
+    23
+   ],
+   [
+    "Brook Lopez",
+    "LAC",
+    "8 of 10 · 5 of 7 from three",
+    23
+   ]
+  ],
+  "source": "box score"
+ }
+}

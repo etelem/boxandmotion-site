@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-19-LAC-SAS.html",
+  "team": "SAS",
+  "home": true,
+  "number": "30",
+  "player": "Julian Champagnie",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 1.0128,
+    "ape": 1.0,
+    "mass": 0.9983
+  },
+  "build_note": "Listed 6-7, 217 lb (Wikipedia); no wingspan from a named source",
+  "kicker": "SPURS 124 · CLIPPERS 112 · NOV 19",
+  "hook": [
+    "Champagnie's three",
+    "off a Castle steal"
+  ],
+  "clock": "Q4 · 7:55",
+  "us": "SAS",
+  "them": "LAC",
+  "score_before": [
+    102,
+    97
+  ],
+  "score_make": [
+    105,
+    97
+  ],
+  "stamp": "THREE",
+  "beat": [
+    "Off a Stephon Castle steal.",
+    "Spurs by 8, 7:55 left."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Spurs",
+    "them": "Clippers",
+    "us_pts": 124,
+    "them_pts": 112
+  },
+  "star": {
+    "name": "Victor Wembanyama",
+    "big": 32,
+    "big_label": "points on 13-of-26 shooting",
+    "lines": [
+      "11 rebounds",
+      "Castle: 21 and 12 assists"
+    ]
+  },
+  "story": "Stephon Castle's steal and Julian Champagnie's three with 7:55 left made it 105–97. The Spurs won 124–112, two nights after their 12-game streak ended.",
+  "aria": "Animated Short: Julian Champagnie's 3-pointer off a Stephon Castle steal with 7:55 left that made it 105–97 Spurs. San Antonio beats the Clippers 124–112 at home. An original illustration, not traced from footage, not to scale."
+}

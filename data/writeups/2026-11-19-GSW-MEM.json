@@ -1,0 +1,109 @@
+{
+ "headline": "Wells and Coward lead a fifth straight win",
+ "dek": "Jaylen Wells scored 22 and Cedric Coward 19 as Memphis won its fifth straight.",
+ "three": [
+  [
+   "Jaylen Wells: 22 points on 10 shots",
+   "8 of 10 from the field, 4 of 5 from three, and 7 rebounds."
+  ],
+  [
+   "Grizzlies led wire to wire and won the third 37–26",
+   "Wells, Coward and Boozer combined for 57 of 126."
+  ],
+  [
+   "Won it from three and with the extra pass",
+   "Threes made 15–5; assists 34–20. Memphis made 15 threes to Golden State’s 5."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   15,
+   5
+  ],
+  [
+   "Assists",
+   34,
+   20
+  ],
+  [
+   "Points in the paint",
+   62,
+   54
+  ],
+  [
+   "Fast-break points",
+   14,
+   7
+  ]
+ ],
+ "battle_labels": [
+  "MEM",
+  "GSW"
+ ],
+ "top": [
+  [
+   "Jaylen Wells",
+   "MEM",
+   "8 of 10, 4 of 5 from three",
+   22
+  ],
+  [
+   "Cedric Coward",
+   "MEM",
+   "5 of 9 from three",
+   19
+  ],
+  [
+   "Cameron Boozer",
+   "MEM",
+   "6 of 6, 4 of 4 FT",
+   16
+  ],
+  [
+   "Olivier-Maxence Prosper",
+   "MEM",
+   "off the bench, 6 of 12",
+   16
+  ]
+ ],
+ "linescore": {
+  "away": [
+   24,
+   23,
+   26,
+   25
+  ],
+  "home": [
+   31,
+   24,
+   37,
+   34
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-19-GSW-at-MEM.json",
+ "loser": {
+  "top": [
+   [
+    "Charles Bassey",
+    "GSW",
+    "13 rebounds · 6 of 7",
+    16
+   ],
+   [
+    "Brandin Podziemski",
+    "GSW",
+    "5 of 12 · 5 of 6 FT",
+    15
+   ],
+   [
+    "Will Richard",
+    "GSW",
+    "5 of 8 off the bench",
+    15
+   ]
+  ],
+  "source": "box score"
+ }
+}
