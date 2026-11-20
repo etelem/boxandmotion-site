@@ -1,0 +1,109 @@
+{
+ "headline": "Knicks hang on in Minnesota after leading by 19",
+ "dek": "The Knicks led by 19 in the third quarter, went scoreless over the final 3:26 and held on by 3.",
+ "three": [
+  [
+   "Karl-Anthony Towns: 22 points and 12 rebounds against his old team",
+   "17 of his 22 in the first half, then 3 blocks in the fourth quarter."
+  ],
+  [
+   "Knicks up 15 at the half, then held off Minnesota’s 21–12 fourth quarter",
+   "Towns and Brunson combined for 43 of 102."
+  ],
+  [
+   "Built it in the first half and moved the ball",
+   "First-half points 65–50; assists 26–21. New York went 11 of 11 at the line."
+  ]
+ ],
+ "battle": [
+  [
+   "First-half points",
+   65,
+   50
+  ],
+  [
+   "Assists",
+   26,
+   21
+  ],
+  [
+   "Field goals made",
+   38,
+   35
+  ],
+  [
+   "Threes made",
+   15,
+   14
+  ]
+ ],
+ "battle_labels": [
+  "NYK",
+  "MIN"
+ ],
+ "top": [
+  [
+   "Karl-Anthony Towns",
+   "NYK",
+   "12 rebounds, 3 blocks",
+   22
+  ],
+  [
+   "Jalen Brunson",
+   "NYK",
+   "7 assists, 4 of 5 from three",
+   21
+  ],
+  [
+   "OG Anunoby",
+   "NYK",
+   "6 of 12, 7 rebounds",
+   15
+  ],
+  [
+   "Josh Hart",
+   "NYK",
+   "3 of 5 from three, 6 rebounds",
+   11
+  ]
+ ],
+ "linescore": {
+  "away": [
+   33,
+   32,
+   25,
+   12
+  ],
+  "home": [
+   26,
+   24,
+   28,
+   21
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-19-NYK-at-MIN.json",
+ "loser": {
+  "top": [
+   [
+    "Jonathan Kuminga",
+    "MIN",
+    "7 of 7 FT · back from a shoulder bruise",
+    23
+   ],
+   [
+    "Jaden McDaniels",
+    "MIN",
+    "4 of 4 from three",
+    17
+   ],
+   [
+    "LaMelo Ball",
+    "MIN",
+    "8 rebounds · 8 assists · 6 of 21",
+    15
+   ]
+  ],
+  "source": "box score"
+ }
+}

@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-19-NYK-MIN.html",
+  "team": "NYK",
+  "home": false,
+  "number": "25",
+  "player": "Mikal Bridges",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 1.0,
+    "ape": 1.0,
+    "mass": 0.9859
+  },
+  "build_note": "Listed 6-6, 209 lb (RealGM, Wikipedia); no sourced wingspan",
+  "kicker": "KNICKS 102 · TIMBERWOLVES 99 · NOV 19",
+  "hook": [
+    "Bridges in the corner,",
+    "3:26 left, up 6"
+  ],
+  "clock": "Q4 · 3:26",
+  "us": "NYK",
+  "them": "MIN",
+  "score_before": [
+    99,
+    93
+  ],
+  "score_make": [
+    102,
+    93
+  ],
+  "stamp": "THREE",
+  "beat": [
+    "New York's last points.",
+    "They needed every one."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Knicks",
+    "them": "Timberwolves",
+    "us_pts": 102,
+    "them_pts": 99
+  },
+  "star": {
+    "name": "Karl-Anthony Towns",
+    "big": 22,
+    "big_label": "points, 12 rebounds",
+    "lines": [
+      "vs. his old team in Minnesota",
+      "Third straight Knicks win"
+    ]
+  },
+  "story": "New York led by 19 in the third, then didn't score again after Bridges' corner three. Minnesota got within 102–99, and LaMelo Ball missed a tying three with 9.9 seconds left.",
+  "aria": "Animated Short: Mikal Bridges' 3-pointer from the right corner off a pass from OG Anunoby with 3:26 left that made it 102–93, the Knicks' last points. Knicks win 102–99 at Minnesota. An original illustration, not traced from footage, not to scale."
+}
