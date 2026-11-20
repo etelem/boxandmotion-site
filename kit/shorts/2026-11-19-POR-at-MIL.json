@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-19-POR-MIL.html",
+  "team": "POR",
+  "home": false,
+  "number": "0",
+  "player": "Damian Lillard",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 0.9487,
+    "ape": 1.0777,
+    "mass": 0.9902
+  },
+  "build_note": "Listed 6-2, 200 lb, No. 0 (Basketball-Reference 2026-27 roster); 6-7.75 wingspan at the 2012 draft combine (NBADraft.net)",
+  "kicker": "BLAZERS 124 · BUCKS 114 · NOV 19",
+  "hook": [
+    "Dame's three",
+    "back in Milwaukee"
+  ],
+  "clock": "Q4 · 4:12",
+  "us": "POR",
+  "them": "MIL",
+  "score_before": [
+    112,
+    110
+  ],
+  "score_make": [
+    115,
+    110
+  ],
+  "stamp": "THREE",
+  "beat": [
+    "Capped a 9–2 Blazers run.",
+    "Then they closed on 9–0."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Blazers",
+    "them": "Bucks",
+    "us_pts": 124,
+    "them_pts": 114
+  },
+  "star": {
+    "name": "Damian Lillard",
+    "big": 33,
+    "big_label": "points, a season high",
+    "lines": [
+      "5 threes, 8 of 9 FT",
+      "Scoot Henderson: 27"
+    ]
+  },
+  "story": "Milwaukee led 108–106 with 5:48 left. Damian Lillard's three with 4:12 left made it 115–110, Portland scored the last nine points, and the Blazers won 124–114 in his first game back in Milwaukee.",
+  "aria": "Animated Short: Damian Lillard's 3-pointer with 4:12 left that put Portland up 115–110 at Milwaukee, the end of a 9–2 run. Blazers win 124–114; Lillard scored a season-high 33 in his return. An original illustration, not traced from footage, not to scale."
+}

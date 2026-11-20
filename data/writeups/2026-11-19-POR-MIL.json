@@ -1,0 +1,109 @@
+{
+ "headline": "Lillard's 33 sinks Milwaukee in his return",
+ "dek": "Damian Lillard scored a season-high 33 in his return to Milwaukee.",
+ "three": [
+  [
+   "Lillard: 33 points in his return",
+   "10 of 18 from the floor, 5 threes, 8 of 9 at the line."
+  ],
+  [
+   "Blazers up 2 at the half, closed on a 9–0 run",
+   "Lillard, Henderson and Holiday combined for 82 of 124."
+  ],
+  [
+   "Won it at the line and on the defensive glass",
+   "Free throws made 25–18; defensive rebounds 36–23. Portland shot 53.2% from the field."
+  ]
+ ],
+ "battle": [
+  [
+   "Free throws made",
+   25,
+   18
+  ],
+  [
+   "Defensive rebounds",
+   36,
+   23
+  ],
+  [
+   "Blocks",
+   5,
+   1
+  ],
+  [
+   "Offensive rebounds",
+   9,
+   12
+  ]
+ ],
+ "battle_labels": [
+  "POR",
+  "MIL"
+ ],
+ "top": [
+  [
+   "Damian Lillard",
+   "POR",
+   "10 of 18, 5 threes, 8 of 9 FT",
+   33
+  ],
+  [
+   "Scoot Henderson",
+   "POR",
+   "5 of 6 from three",
+   27
+  ],
+  [
+   "Jrue Holiday",
+   "POR",
+   "13 in the fourth, 7 assists",
+   22
+  ],
+  [
+   "Toumani Camara",
+   "POR",
+   "all 18 after halftime, 4 threes",
+   18
+  ]
+ ],
+ "linescore": {
+  "away": [
+   24,
+   36,
+   36,
+   28
+  ],
+  "home": [
+   21,
+   37,
+   34,
+   22
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-19-POR-at-MIL.json",
+ "loser": {
+  "top": [
+   [
+    "Tyler Herro",
+    "MIL",
+    "7 of 13 · 4 of 7 from three",
+    19
+   ],
+   [
+    "Nate Ament",
+    "MIL",
+    "career-high 18 and 9 rebounds",
+    18
+   ],
+   [
+    "Kasparas Jakucionis",
+    "MIL",
+    "6 of 11 · 3 of 6 from three",
+    18
+   ]
+  ],
+  "source": "box score"
+ }
+}
