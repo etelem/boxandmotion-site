@@ -1,0 +1,237 @@
+{
+ "team": "NYK",
+ "D": "  const D = {\n    date: 'Thu, Nov 19, 2026',\n    us: 102, them: 99, record: '9–6', usName: 'Knicks', themName: 'Timberwolves',\n    quarters: [[33, 26], [32, 24], [25, 28], [12, 21]],\n    leadUs: 19, leadThem: 5,\n    star: {name: 'Karl-Anthony Towns', stats: [['Points', 22, 25], ['Rebounds', 12, 15], ['Assists', 4, 5]]},\n    scorers: [\n      {name: 'Karl-Anthony Towns', pts: 22, note: '12 rebounds · 3 blocks'},\n      {name: 'Jalen Brunson', pts: 21, note: '7 assists · 4 of 5 from three'},\n      {name: 'OG Anunoby', pts: 15, note: '6 of 12 · 7 rebounds'},\n      {name: 'Josh Hart', pts: 11, note: '3 of 5 from three · 6 rebounds'},\n      {name: 'Landry Shamet', pts: 10, note: 'off the bench · 3 of 4'},\n    ],\n    edges: [\n      {label: 'First-half points', us: 65, them: 50},\n      {label: 'Assists', us: 26, them: 21},\n      {label: 'Field goals made', us: 38, them: 35},\n      {label: 'Threes made', us: 15, them: 14},\n    ],\n    gaps: [\n      {label: 'Fourth-quarter points', us: 12, them: 21},\n      {label: 'Points in the paint', us: 36, them: 42},\n    ],\n    next: {opp: 'vs Trail Blazers', when: 'Sat, Nov 21, 7:30 PM ET', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Mikal Bridges' 3-pointer from the right corner off a pass from OG Anunoby with 3:26 left that made it 102–93, the Knicks' last points of the game. An original illustration from written accounts; not traced from footage, not to scale.\n",
+  "head": "Bridges from the corner",
+  "subP": "Bridges from the corner, 3:26 left",
+  "subL": "Mikal Bridges from the right corner with 3:26 left, up 99–93",
+  "m0": "Knicks +6",
+  "m1": "Knicks +9",
+  "num": "25",
+  "cap1": "Bridges from the corner. Knicks by 9.",
+  "cap2": "102–93: New York’s last points of the night.",
+  "clock": [
+   211,
+   206
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Knicks at Timberwolves Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Knicks 102, Timberwolves 99 · Nov 19, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Knicks at', 'Timberwolves'] : ['Knicks at Timberwolves']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Up 19 in the third,', 'held on by 3.'] : ['The Knicks led by 19 in the third quarter, went scoreless over the final 3:26 and held on by 3.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Knicks improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Third straight win'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Knicks up 15 at the half,', 'then held off a 21–12 fourth'] : ['Knicks up 15 at the half, then held off Minnesota’s 21–12 fourth quarter']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Knicks ${D.leadUs}, Timberwolves ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Knicks’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Towns: 22 and 12', 'against his old team'] : ['Karl-Anthony Towns: 22 points and 12 rebounds against his old team']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['17 in the first half,', '3 blocks in the fourth.'] : ['17 of his 22 in the first half, then 3 blocks in the fourth quarter.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Towns and Brunson:', '43 of the 102'] : ['Towns and Brunson combined for 43 of 102']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 30;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Built it in the first half', 'and moved the ball'] : ['Built it in the first half and moved the ball']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Knicks in blue, Timberwolves in gray. NYK', 'went 11 of 11 at the line.'] : ['Knicks in blue, Timberwolves in gray. New York went 11 of 11 at the line.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'6th in the East'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Trail Blazers’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '10–5';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['Scoreless over the final 3:26.', 'A 3–1 four-game road trip.'] : ['Scoreless over the final 3:26, and a 3–1 finish to a four-game road trip.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Knicks 102 · Timberwolves 99 · Nov 19'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Bridges from the corner'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Towns'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 60;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - 375 * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+3', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 160, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 192, ly, D.themName"
+  ]
+ ],
+ "aria": "Animated recap of the Knicks' 102 to 99 road win over the Timberwolves: Mikal Bridges' 3-pointer from the right corner with 3:26 left that made it 102 to 93, quarter-by-quarter scoring, Karl-Anthony Towns' 22 points and 12 rebounds, the top scorers, how the Knicks won, and Saturday's game against the Trail Blazers.",
+ "figure": {
+  "player": "Mikal Bridges",
+  "home": false,
+  "tall": 1.0,
+  "ape": 1.0,
+  "mass": 0.9859,
+  "label": "Mikal Bridges, listed 6-6, 209 lb (RealGM, Wikipedia); no sourced wingspan"
+ },
+ "loser_top": [
+  [
+   "Jonathan Kuminga",
+   23,
+   "7 of 7 FT · back from a shoulder bruise"
+  ],
+  [
+   "Jaden McDaniels",
+   17,
+   "4 of 4 from three"
+  ],
+  [
+   "LaMelo Ball",
+   15,
+   "8 rebounds · 8 assists · 6 of 21"
+  ]
+ ],
+ "notes": [
+  "Box score from the New York Knicks' 102–99 road win over the Minnesota Timberwolves on Nov 19, 2026, from the CBS Sports box score, checked against the Covers.com box score, with game details from the Associated Press (via ABC News), the New York Daily News and the New York Post (both via Yahoo Sports), Field Level Media and IBTimes. All 102 New York points and all 99 Minnesota points are accounted for in the box score, and the quarter scores (33–32–25–12 to 26–24–28–21) add up to both totals: 65–50 New York at the half and 90–78 after three (New York Daily News; IBTimes). Team totals (assists 26–21, field goals 38 of 85 to 35 of 79, threes 15 of 34 to 14 of 31, free throws 11 of 11 to 15 of 17) are from the box score; points in the paint (36–42) and the biggest leads (New York 19, Minnesota 5) are from the Covers.com box score, and the AP gives the 19-point third-quarter lead and IBTimes Minnesota's 5-point lead early in the game. Fourth-quarter points (12–21) are from the line score (Field Level Media also says Minnesota won the fourth 21–12). Records and ranks are from the site's standings after Thursday's games.",
+  "Tyler Kolek's four-point play opened the fourth quarter and made it 94–78; the Knicks then missed 13 straight shots and the lead fell to four (New York Post; the Daily News counts 12 misses and says New York went 7:27 of the fourth without a field goal). Karl-Anthony Towns' driving layup off a Jalen Brunson pass at 4:10 ended the drought, and Mikal Bridges' 3-pointer from the right corner off an OG Anunoby pass with 3:26 left made it 102–93 (New York Daily News; New York Post). New York did not score again (AP). A Towns technical free throw, a Rudy Gobert alley-oop and Ayo Dosunmu's 3-pointer with 2:34 left cut it to 102–99 (New York Post; AP). Dosunmu's next 3 didn't count because of a premature shot-clock whistle (replay showed LaMelo Ball's jumper had grazed the rim), and Ball missed a tying 3 with 9.9 seconds left (AP). Towns had 22 points and 12 rebounds against his former team, 17 of them in the first half (AP), and blocked three shots in the fourth (New York Daily News). Brunson had 21 points and 7 assists (AP), 14 of them in the third quarter and none in the fourth (New York Post). Jonathan Kuminga had 23 for Minnesota in his return from a two-game absence with a bruised right shoulder, and Ball shot 6 of 21 (AP). It was New York's third straight win (AP) and a 3–1 finish to a four-game road trip (New York Post). The Knicks host Portland and the Timberwolves host Memphis on Saturday (AP; IBTimes).",
+  "The play of the game is an original illustration of Mikal Bridges' 3-pointer from the right corner off a pass from OG Anunoby with 3:26 left in the fourth quarter that made it 102–93 (New York Daily News gives the clock, the corner, the assist and the score, and that the lead was 6 before the shot; the New York Post says the Towns layup and the Bridges 3 put New York up nine; the AP says New York didn't score over the final 3:26). The stories don't describe the shot further, so it is drawn as the template's plain catch-and-shoot three. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the New York Knicks or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The shooter in the play of the game is drawn to Mikal Bridges' listed 6-foot-6 and 209 pounds with No. 25 (RealGM; Wikipedia); no wingspan from a sourced measurement was found, so his arms use the standard proportion. He is drawn in New York's road blue with the default figure (no look on the look sheet yet). It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "CBS Sports: Knicks vs. Timberwolves box score, Nov 19, 2026",
+   "https://www.cbssports.com/nba/gametracker/boxscore/NBA_20261119_NY@MIN/",
+   "box score, line score, starters, team totals"
+  ],
+  [
+   "Covers.com: Knicks vs Timberwolves game overview and player stats, Nov 19, 2026",
+   "https://www.covers.com/sport/basketball/nba/matchup/388756",
+   "box score check, points in the paint, biggest leads"
+  ],
+  [
+   "AP (via ABC News): Knicks fend off the Timberwolves 102-99 behind 22 points from Karl-Anthony Towns vs. his former team",
+   "https://abcnews.com/Sports/wireStory/knicks-fend-off-timberwolves-102-99-22-points-138310782",
+   "19-point lead, scoreless final 3:26, Dosunmu's 3 at 2:34, Ball's miss, Kuminga's return, streak, next games"
+  ],
+  [
+   "New York Daily News (via Yahoo Sports): Takeaways after Knicks hang on for 102-99 win over Timberwolves",
+   "https://sports.yahoo.com/articles/takeaways-knicks-hang-102-99-034700738.html",
+   "quarter scores, the play's clock, corner, assist and score, Towns' fourth-quarter blocks"
+  ],
+  [
+   "New York Post (via Yahoo Sports): Knicks eke out lucky win in Minnesota after fourth-quarter collapse",
+   "https://sports.yahoo.com/articles/knicks-eke-lucky-win-minnesota-035218003.html",
+   "Kolek's four-point play, 13 straight misses, Minnesota's run to 102-99, road trip"
+  ],
+  [
+   "Field Level Media: Knicks hold off Timberwolves' late rally for 3rd straight win",
+   "https://fieldlevelmedia.com/nba/nba-roundup-knicks-hold-off-timberwolves-late-rally-for-3rd-straight-win/",
+   "stat lines, 21-12 fourth quarter"
+  ],
+  [
+   "IBTimes: Knicks hold off late Timberwolves rally for 102-99 win",
+   "https://www.ibtimes.com.au/knicks-beat-timberwolves-towns-former-team-1878988",
+   "quarter scores, Minnesota's 5-point lead, next games"
+  ],
+  [
+   "RealGM: Mikal Bridges bio",
+   "https://basketball.realgm.com/player/Mikal-Bridges/Bio/52342",
+   "listed height, weight and number for the figure"
+  ],
+  [
+   "Wikipedia: Mikal Bridges",
+   "https://en.wikipedia.org/wiki/Mikal_Bridges",
+   "listed height and weight (check)"
+  ]
+ ]
+}
