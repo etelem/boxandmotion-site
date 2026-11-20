@@ -1,0 +1,208 @@
+{
+  "team": "POR",
+  "D": "  const D = {\n    date: 'Thu, Nov 19, 2026',\n    us: 124, them: 114, record: '10–5', usName: 'Blazers', themName: 'Bucks',\n    quarters: [[24, 21], [36, 37], [36, 34], [28, 22]],\n    leadUs: 12, leadThem: 8,\n    star: {name: 'Damian Lillard', stats: [['Points', 33, 35], ['Rebounds', 6, 10], ['Threes made', 5, 10]]},\n    scorers: [\n      {name: 'Damian Lillard', pts: 33, note: '10 of 18 · 5 threes · 8 of 9 FT'},\n      {name: 'Scoot Henderson', pts: 27, note: '5 of 6 from three'},\n      {name: 'Jrue Holiday', pts: 22, note: '13 in the fourth · 7 assists'},\n      {name: 'Toumani Camara', pts: 18, note: 'all 18 after halftime · 4 threes'},\n      {name: 'Sidy Cissoko', pts: 13, note: '5 of 8 · 3 steals'},\n    ],\n    edges: [\n      {label: 'Free throws made', us: 25, them: 18},\n      {label: 'Defensive rebounds', us: 36, them: 23},\n      {label: 'Blocks', us: 5, them: 1},\n    ],\n    gaps: [\n      {label: 'Offensive rebounds', us: 9, them: 12},\n      {label: 'Steals', us: 12, them: 14},\n    ],\n    next: {opp: 'at Knicks', when: 'Sat, Nov 21, 7:30 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Damian Lillard's 3-pointer with 4:12 left that put Portland up 115–110, finishing a 9–2 run after Milwaukee had led 108–106. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Dame from deep",
+    "subP": "Lillard from three, 4:12 left",
+    "subL": "Damian Lillard from three, Blazers up 2 with 4:12 left",
+    "m0": "Blazers +2",
+    "m1": "Blazers +5",
+    "num": "0",
+    "cap1": "Lillard’s three. Blazers by 5.",
+    "cap2": "115–110 with 4:12 left.",
+    "clock": [
+      260,
+      252
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Blazers at Bucks Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Blazers 124, Bucks 114 · Nov 19, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Blazers at', 'Bucks'] : ['Blazers at Bucks']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Lillard 33 in his', 'return to Milwaukee.'] : ['Damian Lillard scored a season-high 33 in his return to Milwaukee.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Blazers improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'6th straight win over Milwaukee'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Blazers up 2 at the half,', 'closed on a 9–0 run'] : ['Blazers up 2 at the half, closed on a 9–0 run']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Blazers ${D.leadUs}, Bucks ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin in each quarter, then the game score after it.",
+      "Blazers’ margin in each quarter, then the game score after it."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Lillard: 33 in', 'his return'] : ['Lillard: 33 points in his return']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['10 of 18, 5 threes,', '8 of 9 at the line.'] : ['10 of 18 from the floor, 5 threes, 8 of 9 at the line.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Lillard, Henderson, Holiday:', '82 of the 124'] : ['Lillard, Henderson and Holiday combined for 82 of 124']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 40;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it at the line', 'and on the defensive glass'] : ['Won it at the line and on the defensive glass']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Blazers in red, Bucks in gray. Portland', 'shot 53.2% from the field.'] : ['Blazers in red, Bucks in gray. Portland shot 53.2% from the field.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'Sixth in the West'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Knicks’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '9–6';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Portland’s only trip to Madison', 'Square Garden this season.'] : ['Saturday is Portland’s only trip to Madison Square Garden this season.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Blazers 124 · Bucks 114 · Nov 19'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Dame from deep'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Lillard'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 60;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+3', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+    ]
+  ],
+  "aria": "Animated recap of the Trail Blazers' 124 to 114 win at Milwaukee: Damian Lillard's 3-pointer with 4:12 left that made it 115 to 110, quarter-by-quarter scoring, his season-high 33 points in his return to Milwaukee, the top scorers, how Portland won, and Saturday's game at New York.",
+  "notes": [
+    "Box score from the Trail Blazers' 124–114 win over the Milwaukee Bucks in Milwaukee on Nov 19, 2026, from the Covers.com box score, line score and team stats, checked against the CBS Sports box score (final score, line score, records, team totals). All 124 Portland points and all 114 Milwaukee points are accounted for in the player lines, and the quarter scores add up to both totals: Portland 24–21 after one, 60–58 at the half, 96–92 after three, 28–22 in the fourth. Team stats (field goals 41 of 77, 53.2%, to 40 of 91, 44.0%; threes 17 of 43 to 16 of 41; free throws 25 of 32 to 18 of 26; defensive rebounds 36–23; offensive rebounds 9–12; blocks 5–1; steals 12–14; biggest lead Portland 12, Milwaukee 8) are from Covers and CBS. One outlet (SI) lists Lillard with four threes; the box score and the AP-style recaps give five. Records and ranks are from the site's standings after Thursday's games.",
+    "Lillard's 33 was a season high in his first game in Milwaukee since the Bucks waived him (AP; KNBR). Scoot Henderson scored a season-high 27 with 5 of 6 from three (KATU; AP); Jrue Holiday scored 13 of his 22 in the fourth quarter (KNBR); Toumani Camara scored all 18 after halftime, with four threes in a 19–2 third-quarter run (KNBR; AP). Portland led 60–58 at the half (KNBR). Brayden Burries' three gave Milwaukee a 108–106 lead with 5:48 left (KNBR; Heavy); Holiday's two baskets put Portland up 112–108 with 4:44 left (KNBR); Tyler Herro's driving basket cut it to 115–114 with 3:18 left, and Portland scored the game's last nine points (AP; Heavy), the last two on Lillard free throws (Yahoo Sports). The game had 20 lead changes and eight ties (AP). Milwaukee has lost 12 straight, its longest skid since a 15-game run in March 1996, and is 1–15, its worst start through 16 games (AP). It was Portland's sixth straight win over Milwaukee (KNBR; Heavy). Saturday's game is Portland's only visit to Madison Square Garden this season (KATU). Deni Avdija missed a second straight game with a sore left foot; Milwaukee was without Kyle Kuzma and Myles Turner (AP).",
+    "The play of the game is an original illustration of Damian Lillard's 3-pointer with 4:12 left that made it 115–110, the end of a 9–2 Portland run after Milwaukee led by two (clock, shot and score from KATU; the 108–106 and 112–108 scores before it from KNBR and Heavy, and the 115–114 score after it from AP). The written accounts don't describe how the shot was created, so it is drawn as the template's plain pull-up, not the exact move. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Portland Trail Blazers or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The shooter in the play of the game is drawn to Lillard's listed 6-foot-2 and 200 pounds (Basketball-Reference 2026-27 roster; Yahoo Sports), with arms scaled to his 6-foot-7.75 wingspan at the 2012 draft combine (NBADraft.net, as in earlier Portland recaps), in the Blazers' road red with No. 0 (Basketball-Reference) and his proposed look. It is an original figure with a featureless face, not a portrait or a trace of footage."
+  ],
+  "sources": [
+    [
+      "Covers: Trail Blazers vs Bucks box score (Nov 19, 2026)",
+      "https://www.covers.com/sport/basketball/nba/matchup/388759",
+      "Box score, line score, team stats, biggest leads"
+    ],
+    [
+      "CBS Sports: Trail Blazers vs. Bucks box score (Nov 19, 2026)",
+      "https://www.cbssports.com/nba/gametracker/boxscore/NBA_20261119_POR@MIL/",
+      "Final score, line score, records, team totals check"
+    ],
+    [
+      "AP (via ABC News): Lillard scores 33 in return to Milwaukee as Blazers win 124-114. Bucks have lost 12 straight",
+      "https://abcnews.com/Sports/wireStory/lillard-scores-33-return-milwaukee-blazers-win-124-138310246",
+      "115–114 at 3:18, last nine points, lead changes, losing streak, injuries, next games"
+    ],
+    [
+      "KNBR (The Sports Leader): Damian Lillard, Trail Blazers prolong Bucks' misery",
+      "https://www.thesportsleader.com/2026/11/19/damian-lillard-trail-blazers-prolong-bucks-misery/",
+      "Halftime, third-quarter run, fourth-quarter scores, Holiday's 13 in the fourth, team shooting"
+    ],
+    [
+      "KATU: Blazers get back on the winning track in Milwaukee, 124-114",
+      "https://katu.com/sports/trail-blazers/blazers-get-back-on-the-winning-track-in-milwaukee-124-114",
+      "Play of the game (Lillard's three, 115–110 with 4:12 left), Madison Square Garden note"
+    ],
+    [
+      "Heavy: Damian Lillard Milwaukee Return Ends With 33 Points and a Blazers Win",
+      "https://heavy.com/sports/nba/portland-trail-blazers/damian-lillard-milwaukee-return-ends-with-33-points-and-a-blazers-win/",
+      "108–106 at 5:48, 115–114 at 3:18, final nine points, sixth straight win over Milwaukee"
+    ],
+    [
+      "Yahoo Sports: Damian Lillard scores season-high 33 points in first game vs. Bucks post-injury",
+      "https://sports.yahoo.com/nba/breaking-news/article/damian-lillard-scores-season-high-33-points-in-first-game-vs-bucks-post-injury-leads-trail-blazers-to-win-051011483.html",
+      "Story check, Lillard's closing free throws"
+    ],
+    [
+      "Basketball-Reference: 2026-27 Portland Trail Blazers roster",
+      "https://www.basketball-reference.com/teams/POR/2027.html",
+      "Lillard's number, listed height and weight"
+    ]
+  ],
+  "figure": {
+    "player": "Damian Lillard",
+    "home": false,
+    "tall": 0.9487,
+    "ape": 1.0777,
+    "mass": 0.9902,
+    "label": "Damian Lillard, listed 6-2, 200 lb, 6-7.75 wingspan (2012 combine)"
+  },
+  "loser_top": [
+    [
+      "Tyler Herro",
+      19,
+      "7 of 13 · 4 of 7 from three"
+    ],
+    [
+      "Nate Ament",
+      18,
+      "career-high 18 and 9 rebounds"
+    ],
+    [
+      "Kasparas Jakucionis",
+      18,
+      "6 of 11 · 3 of 6 from three"
+    ]
+  ]
+}
