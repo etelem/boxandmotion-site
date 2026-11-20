@@ -1,13 +1,89 @@
 {
- "updated": "after Wed, Nov 18 games",
- "updated_short": "Wed, Nov 18",
+ "updated": "after Thu, Nov 19 games",
+ "updated_short": "Thu, Nov 19",
  "standings": {
-  "MIN": [
+  "PHI": [
+   13,
+   3
+  ],
+  "BOS": [
    11,
    4
   ],
-  "POR": [
+  "DET": [
+   10,
+   4
+  ],
+  "MIA": [
    9,
+   6
+  ],
+  "ATL": [
+   9,
+   6
+  ],
+  "NYK": [
+   9,
+   6
+  ],
+  "CLE": [
+   8,
+   8
+  ],
+  "ORL": [
+   6,
+   8
+  ],
+  "TOR": [
+   5,
+   10
+  ],
+  "IND": [
+   5,
+   10
+  ],
+  "WAS": [
+   5,
+   11
+  ],
+  "CHA": [
+   4,
+   10
+  ],
+  "CHI": [
+   4,
+   10
+  ],
+  "BKN": [
+   3,
+   11
+  ],
+  "MIL": [
+   1,
+   15
+  ],
+  "SAS": [
+   13,
+   3
+  ],
+  "LAL": [
+   13,
+   3
+  ],
+  "HOU": [
+   12,
+   4
+  ],
+  "MEM": [
+   12,
+   4
+  ],
+  "MIN": [
+   11,
+   5
+  ],
+  "POR": [
+   10,
    5
   ],
   "DEN": [
@@ -18,142 +94,66 @@
    9,
    6
   ],
-  "UTA": [
-   3,
-   13
-  ],
-  "LAL": [
-   13,
-   3
+  "DAL": [
+   8,
+   7
   ],
   "GSW": [
    8,
-   7
+   8
   ],
   "PHX": [
    7,
-   7
-  ],
-  "LAC": [
-   4,
-   9
-  ],
-  "SAC": [
-   1,
-   13
-  ],
-  "SAS": [
-   12,
-   3
-  ],
-  "HOU": [
-   12,
-   4
-  ],
-  "MEM": [
-   11,
-   4
-  ],
-  "DAL": [
-   8,
    7
   ],
   "NOP": [
    5,
    11
   ],
-  "DET": [
-   10,
-   4
-  ],
-  "CLE": [
-   8,
-   8
-  ],
-  "IND": [
-   5,
-   10
-  ],
-  "CHI": [
+  "LAC": [
    4,
    10
   ],
-  "MIL": [
-   1,
-   14
-  ],
-  "MIA": [
-   9,
-   6
-  ],
-  "ATL": [
-   9,
-   6
-  ],
-  "ORL": [
-   6,
-   8
-  ],
-  "WAS": [
-   5,
-   11
-  ],
-  "CHA": [
-   4,
-   10
-  ],
-  "PHI": [
-   13,
-   3
-  ],
-  "BOS": [
-   11,
-   4
-  ],
-  "NYK": [
-   8,
-   6
-  ],
-  "TOR": [
-   5,
-   10
-  ],
-  "BKN": [
+  "UTA": [
    3,
-   11
+   13
+  ],
+  "SAC": [
+   1,
+   13
   ]
  },
  "seeds": {
-  "MIN": 4,
+  "PHI": 1,
+  "BOS": 2,
+  "DET": 3,
+  "MIA": 4,
+  "ATL": 5,
+  "NYK": 6,
+  "CLE": 7,
+  "ORL": 8,
+  "TOR": 9,
+  "IND": 10,
+  "WAS": 11,
+  "CHA": 12,
+  "CHI": 13,
+  "BKN": 14,
+  "MIL": 15,
+  "SAS": 1,
+  "LAL": 2,
+  "HOU": 3,
+  "MEM": 4,
+  "MIN": 5,
   "POR": 6,
   "DEN": 7,
   "OKC": 8,
-  "UTA": 14,
-  "LAL": 1,
+  "DAL": 9,
   "GSW": 10,
   "PHX": 11,
-  "LAC": 13,
-  "SAC": 15,
-  "SAS": 2,
-  "HOU": 3,
-  "MEM": 5,
-  "DAL": 9,
   "NOP": 12,
-  "DET": 3,
-  "CLE": 7,
-  "IND": 10,
-  "CHI": 13,
-  "MIL": 15,
-  "MIA": 4,
-  "ATL": 5,
-  "ORL": 8,
-  "WAS": 11,
-  "CHA": 12,
-  "PHI": 1,
-  "BOS": 2,
-  "NYK": 6,
-  "TOR": 9,
-  "BKN": 14
+  "LAC": 13,
+  "UTA": 14,
+  "SAC": 15
  },
  "prior_wins_oct30": {
   "PHI": 55,
@@ -1187,33 +1187,41 @@
    "TOR",
    99,
    ""
+  ],
+  [
+   "2026-11-19",
+   "GSW",
+   98,
+   "MEM",
+   126,
+   ""
+  ],
+  [
+   "2026-11-19",
+   "LAC",
+   112,
+   "SAS",
+   124,
+   ""
+  ],
+  [
+   "2026-11-19",
+   "NYK",
+   102,
+   "MIN",
+   99,
+   ""
+  ],
+  [
+   "2026-11-19",
+   "POR",
+   124,
+   "MIL",
+   114,
+   ""
   ]
  ],
  "upcoming": [
-  [
-   "Thu, Nov 19",
-   "8:00 PM",
-   "GSW",
-   "MEM"
-  ],
-  [
-   "Thu, Nov 19",
-   "8:00 PM",
-   "POR",
-   "MIL"
-  ],
-  [
-   "Thu, Nov 19",
-   "8:00 PM",
-   "NYK",
-   "MIN"
-  ],
-  [
-   "Thu, Nov 19",
-   "8:00 PM",
-   "LAC",
-   "SAS"
-  ],
   [
    "Fri, Nov 20",
    "7:00 PM",
@@ -1269,6 +1277,42 @@
    "HOU",
    "DEN",
    "Prime Video"
+  ],
+  [
+   "Sat, Nov 21",
+   "1:00 PM",
+   "MIL",
+   "PHI"
+  ],
+  [
+   "Sat, Nov 21",
+   "7:30 PM",
+   "POR",
+   "NYK"
+  ],
+  [
+   "Sat, Nov 21",
+   "8:00 PM",
+   "LAC",
+   "DAL"
+  ],
+  [
+   "Sat, Nov 21",
+   "8:00 PM",
+   "MEM",
+   "MIN"
+  ],
+  [
+   "Sat, Nov 21",
+   "8:00 PM",
+   "NOP",
+   "SAS"
+  ],
+  [
+   "Sat, Nov 21",
+   "10:00 PM",
+   "BOS",
+   "SAC"
   ]
  ],
  "linescores": {
@@ -1330,7 +1374,7 @@
     ],
     [
      "They survived the comeback",
-     "Dallas won the second half 60\u201344 and had it down to one at the buzzer."
+     "Dallas won the second half 60–44 and had it down to one at the buzzer."
     ]
    ],
    "battle": [
@@ -1389,7 +1433,7 @@
   },
   "2026-11-06-POR-LAL": {
    "headline": "Luka 53, Lakers stay perfect this week",
-   "dek": "Portland hit 19 threes and led at the half. Luka Don\u010di\u0107 answered with 53, and 24 Blazers turnovers did the rest.",
+   "dek": "Portland hit 19 threes and led at the half. Luka Dončić answered with 53, and 24 Blazers turnovers did the rest.",
    "three": [
     [
      "Luka got to the line all night",
@@ -1397,7 +1441,7 @@
     ],
     [
      "The third quarter flipped it",
-     "The Lakers won the third 34\u201315 to turn a 60\u201353 halftime deficit into a 12-point lead."
+     "The Lakers won the third 34–15 to turn a 60–53 halftime deficit into a 12-point lead."
     ],
     [
      "Turnovers beat threes",
@@ -1432,7 +1476,7 @@
    ],
    "top": [
     [
-     "Luka Don\u010di\u0107",
+     "Luka Dončić",
      "LAL",
      "14 of 18 at the line",
      53
