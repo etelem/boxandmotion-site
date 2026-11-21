@@ -939,3 +939,7 @@ tr.fav .bar span{background:#fff}
 .wc-col{padding:16px}.wc-row{font-size:14px}}
 /* Sources toggle everywhere (Nov 17): same component as What changed; paragraphs for older recaps */
 .wc-src{max-width:900px}.wc-src .srcp{margin:6px 0 12px;font-size:15px;line-height:1.55;color:var(--ink)}
+
+/* His week (player reports): full log on wider screens; phones show date, game (linked), points, result */
+.otable.wk{min-width:640px}.otable.wk a{color:inherit;font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--accent)}
+@media(max-width:640px){.otable.wk{min-width:0}}

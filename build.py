@@ -1342,7 +1342,18 @@ page("players/luka-doncic/index.html", "Luka Dončić scouting report · Box & M
 for P in PLAYERS:
     c = P["team"]; t = T[c]
     stats = "".join(f'<div class="card pad"><span class="n" style="font-size:44px{";color:" + t["c1"] if i == 0 else ""}">{E(v)}</span><br><span class="dim">{E(l)}</span></div>' for i, (v, l) in enumerate(P["stats"]))
-    logrows = "".join("<tr>" + "".join(f'<td{" class=num" if 3 <= j else ""}>{"<b>" + E(str(v)) + "</b>" if j == 3 else E("—" if v is None else str(v))}</td>' for j, v in enumerate(r)) + "</tr>" for r in P["log"])
+    # His week (the owner, Nov 21): his points sit right after the game so phones see them without scrolling,
+    # and each game links to our recap when we have one (matched by date and team, never guessed)
+    def wk_game(r):
+        try: d = datetime.datetime.strptime(f'{r[0]} {P["published"][:4]}', "%b %d %Y").date().isoformat()
+        except ValueError: return None
+        return next((x for x in GAMES if x["date"] == d and c in (x["home"], x["away"])), None)
+    def wk_row(r):
+        g = wk_game(r); gm = E(r[1])
+        if g: gm = f'<a href="{R}games/{g["slug"]}/index.html">{gm} →</a>'
+        rest = "".join(f'<td class="num hide-sm">{E("—" if v is None else str(v))}</td>' for v in r[4:])
+        return f'<tr><td>{E(r[0])}</td><td>{gm}</td><td class="num"><b>{E(str(r[3]))}</b></td><td>{E(r[2])}</td>{rest}</tr>'
+    logrows = "".join(wk_row(r) for r in P["log"])
     steps = "".join(f'<li><b>{E(a)}.</b> {E(b2)}</li>' for a, b2 in P["move"]["steps"])
     body = f'''{learn_crumbs(R, f'<a href="{R}teams/{t["slug"]}/index.html">{E(t["name"])}</a>', f'<span>{E(P["name"])}</span>')}
 <section style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-end"><div class="sec" style="flex:999 1 480px;gap:12px"><p class="k">Scouting report · {E(P['week'])}</p>
@@ -1352,7 +1363,7 @@ for P in PLAYERS:
 <ol class="beats">{steps}</ol><div class="row">{short_btn(P["move"].get("youtube"))}</div></div>
 <div class="mvanim">{anim_frame(R, P['move']['anim'], P['name'] + ': ' + P['move']['title'], "reels/soundtrack.mp3")}</div></section>
 <section class="sec"><h2 class="h2">His week.</h2>
-<div class="tbox"><div class="scroll"><table class="otable" style="min-width:640px"><tr><th>Date</th><th>Game</th><th>Result</th><th class="num">Pts</th><th class="num">Reb</th><th class="num">Ast</th><th class="num">FG</th><th class="num">3PT</th></tr>{logrows}</table></div></div></section>
+<div class="tbox"><div class="scroll"><table class="otable wk"><tr><th>Date</th><th>Game</th><th class="num">Pts</th><th>Result</th><th class="num hide-sm">Reb</th><th class="num hide-sm">Ast</th><th class="num hide-sm">FG</th><th class="num hide-sm">3PT</th></tr>{logrows}</table></div></div></section>
 {sources_toggle(P["sources"])}'''
     page(f"players/{P['slug']}/index.html", f"{P['name']} scouting report · Box & Motion Hoops", body, active="Learn", desc=P["lede"])
 

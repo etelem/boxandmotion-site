@@ -64,7 +64,10 @@ __FIGURE_REAL__
     const xD0 = x0 + 250 * k, xD1 = xBrake + 210 * k, xD2 = xStop + 270 * k, xD3 = xStop + 150 * k;
     // header
     const hy = short ? 100 : M + 6;
-    T(svg, M, hy, __KICKERJS__, 'k', short ? 28 : portrait ? 22 : 18);
+    // the kicker shrinks to fit the width when a long name would run off the edge (re-fit once the fonts load)
+    const kSize = short ? 28 : portrait ? 22 : 18, kNode = T(svg, M, hy, __KICKERJS__, 'k', kSize);
+    const fitK = () => { kNode.style.fontSize = kSize + 'px'; const w = kNode.getComputedTextLength(), max = W - 2 * M; if (w > max) kNode.style.fontSize = (kSize * max / w).toFixed(2) + 'px'; };
+    fitK(); if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitK);
     T(svg, M, hy + (short ? 76 : portrait ? 56 : 48), __TITLEJS__, 'd', short ? 68 : portrait ? 52 : 44);
     if (short && __SUBJS__) T(svg, M, hy + 128, __SUBJS__, 'b', 34).style.fontWeight = 600;
     if (short) { T(svg, M, H - 70, 'BOX & MOTION HOOPS', 'd', 36); T(svg, W - M, H - 70, 'boxandmotion.com', 'b m', 28, 'end'); }
