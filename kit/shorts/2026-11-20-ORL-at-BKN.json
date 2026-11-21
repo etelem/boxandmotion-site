@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-20-ORL-BKN.html",
+  "team": "ORL",
+  "home": false,
+  "number": "22",
+  "player": "Franz Wagner",
+  "play_type": "jumper",
+  "three": false,
+  "build": {
+    "tall": 1.0513,
+    "ape": 1.0244,
+    "mass": 0.9866
+  },
+  "build_note": "Listed 6-10, 220 lb, No. 22 (RealGM); reported 7-0 wingspan (CraftedNBA)",
+  "kicker": "MAGIC 113 · NETS 111 · NOV 20",
+  "hook": [
+    "Franz Wagner's",
+    "step-back winner"
+  ],
+  "clock": "Q4 · 0:02.8",
+  "us": "ORL",
+  "them": "BKN",
+  "score_before": [
+    111,
+    111
+  ],
+  "score_make": [
+    113,
+    111
+  ],
+  "stamp": "GAME-WINNER",
+  "beat": [
+    "Tied at 111, 2.8 seconds left.",
+    "Randle's 3 at the buzzer missed."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Magic",
+    "them": "Nets",
+    "us_pts": 113,
+    "them_pts": 111
+  },
+  "star": {
+    "name": "Franz Wagner",
+    "big": 35,
+    "big_label": "points on 13-of-25 shooting",
+    "lines": [
+      "7 assists, 5 rebounds",
+      "Desmond Bane: 7 threes"
+    ]
+  },
+  "story": "Tied at 111 out of a timeout. Franz Wagner's step-back with 2.8 seconds left won it, 113–111, in his first NBA game against his brother Moritz.",
+  "aria": "Animated Short: Franz Wagner's step-back jumper with 2.8 seconds left that broke a 111–111 tie at Brooklyn. Magic win 113–111; Wagner scored 35. An original illustration, not traced from footage, not to scale."
+}
