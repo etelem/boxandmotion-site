@@ -1,0 +1,53 @@
+{
+ "out": "short-2026-11-20-TOR-DET.html",
+ "team": "TOR",
+ "home": false,
+ "number": "4",
+ "player": "Scottie Barnes",
+ "play_type": "drive",
+ "build": {
+  "tall": 1.0256,
+  "ape": 1.0844,
+  "mass": 1.0367
+ },
+ "build_note": "Listed 6-8, 237 lb, No. 4 (Basketball-Reference; RealGM); 7-2¾ wingspan at the 2021 draft combine (Bleacher Report)",
+ "kicker": "RAPTORS 105 · PISTONS 102 · NOV 20",
+ "hook": [
+  "Barnes drives it",
+  "for the lead, 14.3 left"
+ ],
+ "clock": "Q4 · 0:14.3",
+ "us": "TOR",
+ "them": "DET",
+ "score_before": [
+  101,
+  102
+ ],
+ "score_make": [
+  103,
+  102
+ ],
+ "stamp": "GO-AHEAD",
+ "beat": [
+  "Raptors by 1, 14.3 left.",
+  "Toronto never trailed again."
+ ],
+ "final": {
+  "label": "FINAL",
+  "us": "Raptors",
+  "them": "Pistons",
+  "us_pts": 105,
+  "them_pts": 102
+ },
+ "star": {
+  "name": "Scottie Barnes",
+  "big": 29,
+  "big_label": "points on 14-of-21 shooting",
+  "lines": [
+   "5 rebounds, 5 assists",
+   "Six-game losing streak over"
+  ]
+ },
+ "story": "Toronto led by 14 in the third. Cunningham's step-back three put Detroit up 102–101 with 19.8 left.",
+ "aria": "Animated Short: Scottie Barnes drives for the go-ahead layup with 14.3 seconds left, assisted by Immanuel Quickley, to put the Raptors up 103–102 at Detroit. Raptors win 105–102. An original illustration, not traced from footage, not to scale."
+}

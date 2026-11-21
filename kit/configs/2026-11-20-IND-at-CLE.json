@@ -1,0 +1,232 @@
+{
+ "team": "CLE",
+ "D": "  const D = {\n    date: 'Fri, Nov 20, 2026',\n    us: 128, them: 119, record: '9–8', usName: 'Cavaliers', themName: 'Pacers',\n    quarters: [[29, 29], [33, 32], [43, 22], [23, 36]],\n    leadUs: 24, leadThem: 14,\n    star: {name: 'James Harden', stats: [['Points', 51, 55], ['Threes made', 7, 10], ['Assists', 6, 10]]},\n    scorers: [\n      {name: 'James Harden', pts: 51, note: '7 of 11 from three · 14 of 14 FT'},\n      {name: 'Donovan Mitchell', pts: 20, note: '8 of 17 from the floor'},\n      {name: 'Peyton Watson', pts: 15, note: '3 of 6 from three · back from a back bruise'},\n      {name: 'Mario Hezonja', pts: 10, note: 'off the bench · 10 rebounds'},\n      {name: 'Thomas Bryant', pts: 9, note: 'off the bench · 2 of 2 from three'},\n    ],\n    edges: [\n      {label: 'Third-quarter points', us: 43, them: 22},\n      {label: 'Threes made', us: 19, them: 14},\n      {label: 'Steals', us: 9, them: 6},\n    ],\n    gaps: [\n      {label: 'Fourth-quarter points', us: 23, them: 36},\n      {label: 'Points in the paint', us: 48, them: 52},\n      {label: 'Rebounds', us: 41, them: 50},\n    ],\n    next: {opp: 'at Bulls', when: 'Mon, Nov 23, 8:00 PM ET', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "James Harden's 3-pointer off a pass from Sam Merrill with 57 seconds left that made it 124–113, his seventh three of the night. An original illustration from written accounts; not traced from footage, not to scale.\n",
+  "head": "Harden’s seventh three",
+  "subP": "Harden from three, 57 seconds left",
+  "subL": "James Harden from three with 57 seconds left, up 121–113",
+  "m0": "Cavaliers +8",
+  "m1": "Cavaliers +11",
+  "num": "1",
+  "cap1": "Harden’s seventh three. Cavaliers by 11.",
+  "cap2": "He finished with 51, his 26th 50-point game.",
+  "clock": [
+   62,
+   57
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Pacers at Cavaliers Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Cavaliers 128, Pacers 119 · Nov 20, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Pacers at', 'Cavaliers'] : ['Pacers at Cavaliers']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Harden scored 51,', 'Cleveland won the third.'] : ['James Harden scored 51 and Cleveland won the third quarter 43–22.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Cavaliers improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Won 3 of their last 4'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Cavaliers up 1 at the half,', 'then won the third 43–22'] : ['Cavaliers up 1 at the half, then won the third quarter 43–22']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Cavaliers ${D.leadUs}, Pacers ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Cavaliers’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Harden’s 51,', 'past Kobe'] : ['James Harden’s 51 moved him past Kobe Bryant in 50-point games']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['26th 50-point game: only Wilt', 'and Michael have more.'] : ['His 26th 50-point game: only Wilt Chamberlain and Michael Jordan have more.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Harden and Mitchell:', '71 of the 128'] : ['Harden and Mitchell combined for 71 of 128']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 60;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won the third quarter', 'and from three'] : ['Won the third quarter and won from three']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Cavaliers in gold, Pacers in gray. Harden', 'scored 18 in the 43–22 third.'] : ['Cavaliers in gold, Pacers in gray. Harden scored 18 in the 43–22 third quarter.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'7th in the East'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Bulls’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '4–10';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['Won 3 of their last 4,', 'and 3–1 on the homestand.'] : ['Won 3 of their last 4 and went 3–1 on a four-game homestand.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Cavaliers 128 · Pacers 119 · Nov 20'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Harden’s seventh three'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Harden'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 60;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - 375 * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+3', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 160, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 192, ly, D.themName"
+  ]
+ ],
+ "aria": "Animated recap of the Cavaliers' 128 to 119 home win over the Pacers: James Harden's 3-pointer with 57 seconds left that made it 124 to 113, quarter-by-quarter scoring, Harden's 51 points, the top scorers, how the Cavaliers won, and Monday's game at the Bulls.",
+ "figure": {
+  "player": "James Harden",
+  "home": true,
+  "tall": 0.9872,
+  "ape": 1.0,
+  "mass": 1.0181,
+  "label": "James Harden, listed 6-5, 220 lb (RealGM, Land of Basketball); no sourced wingspan"
+ },
+ "loser_top": [
+  [
+   "Ivica Zubac",
+   21,
+   "10 rebounds · 8 of 11"
+  ],
+  [
+   "Pascal Siakam",
+   21,
+   "7 rebounds · 8 of 17"
+  ]
+ ],
+ "notes": [
+  "Box score from the Cleveland Cavaliers' 128–119 home win over the Indiana Pacers on Nov 20, 2026, from the Covers.com box score, with the final and line score checked against the SI scoreboard and game details from the Associated Press (via ABC News and AOL), Field Level Media, Cavaliers OnSI and Cleveland.com (via Yahoo Sports). All 128 Cleveland points and all 119 Indiana points are accounted for in the box score, and the quarter scores (29–33–43–23 to 29–32–22–36) add up to both totals: 62–61 Cleveland at the half and 105–83 after three. Team totals (threes 19 of 44 to 14 of 34, rebounds 41–50, steals 9–6), points in the paint (48–52) and the biggest leads (Cleveland 24, Indiana 14) are from the Covers.com box score; the 24-point lead came at 107–83 early in the fourth quarter (SI play-by-play; Field Level Media). Third- and fourth-quarter points are from the line score. Records and ranks are from the site's standings after Friday's games.",
+  "Indiana led by 14 in the first half, 50–36 (SI play-by-play; Field Level Media), before a 19–5 Cleveland run (Field Level Media). Tied 74–73 Cleveland about four minutes into the third, the Cavaliers then went on a 21–4 run in which Harden scored 13 (AP), and Harden scored 18 in the third quarter (Yahoo/Cleveland.com quarter splits: 15, 9, 18, 9). Indiana cut a 113–90 deficit to two possessions with 2:03 left (AP); Donovan Mitchell's driving floater off a Peyton Watson pass at 1:41 ended the run (SI play-by-play; AP), and Harden scored seven of Cleveland's final nine points (Cleveland.com). Harden had 51 points on 15-of-26 shooting, 7 of 11 from three and 14 of 14 at the line, with 6 rebounds and 6 assists in 40 minutes (box score). It was his 26th career 50-point game, moving him past Kobe Bryant into third behind Wilt Chamberlain and Michael Jordan (AP; Field Level Media), his season high and his high as a Cavalier (AP). Watson returned after missing Wednesday's game with a lower-back contusion (AP). Cleveland has won three of its last four (AP) and went 3–1 on its four-game homestand (Field Level Media); Indiana has lost three straight (AP). Cleveland plays at Chicago on Monday and Indiana at New York on Sunday (AP).",
+  "The play of the game is an original illustration of James Harden's 3-pointer off a pass from Sam Merrill with 57 seconds left in the fourth quarter that made it 124–113, his seventh three of the game (SI play-by-play gives the clock, the assist and the score; Cavaliers OnSI says he 'hit his seventh 3-pointer with 58 seconds left, pushing the lead to 124-113'). He reached 50 points at the free-throw line at 0:42 (Field Level Media). The stories don't describe where the shot came from, so it is drawn as the template's plain pull-up three. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Cleveland Cavaliers or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The shooter in the play of the game is drawn to James Harden's listed 6-foot-5 and 220 pounds with No. 1 (RealGM; Land of Basketball); no wingspan from a sourced measurement was found, so his arms use the standard proportion. He is drawn in Cleveland's home white with the default figure (no look on the look sheet yet). It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "Covers.com: Pacers vs Cavaliers game overview and player stats, Nov 20, 2026",
+   "https://www.covers.com/sport/basketball/nba/matchup/388226",
+   "box score, line score, team totals, points in the paint, biggest leads"
+  ],
+  [
+   "SI: Indiana Pacers vs Cleveland Cavaliers live score and box score, Nov 20, 2026",
+   "https://www.si.com/nba/scoreboard/pacers-vs-cavaliers-11-20-2026-1719",
+   "line score check, play-by-play: the play's clock, assist and score, the 14- and 24-point leads, Mitchell's floater"
+  ],
+  [
+   "AP (via ABC News): James Harden scores 51 points to propel Cleveland past Indiana 128-119",
+   "https://abcnews.com/Sports/wireStory/james-harden-scores-51-points-propel-cleveland-past-138337596",
+   "21-4 third-quarter run, 26th 50-point game, Indiana's late run, Watson's return, streaks, next games"
+  ],
+  [
+   "AP (via AOL): James Harden posts 26th 50-point game, moves past Kobe",
+   "https://www.aol.com/articles/james-harden-scores-51-points-030949000.html",
+   "season high and high as a Cavalier"
+  ],
+  [
+   "Field Level Media: James Harden (51) moves into 3rd in 50-point games as Cavs down Pacers",
+   "https://fieldlevelmedia.com/nba/james-harden-51-moves-into-3rd-in-50-point-games-as-cavs-down-pacers/",
+   "19-5 second-quarter run, 107-83 lead, reaching 50 at 0:42, homestand"
+  ],
+  [
+   "Cavaliers OnSI: James Harden powers Cavaliers past Pacers with 51-point performance",
+   "https://www.si.com/nba/cavaliers/onsi/james-harden-powers-cavaliers-past-pacers-with-51-point-performance-01m7y3qcyf6d",
+   "seventh three with 58 seconds left, 124-113, late sequence"
+  ],
+  [
+   "Cleveland.com (via Yahoo Sports): James Harden boosts Cavaliers with memorable 51-point game vs. Pacers",
+   "https://sports.yahoo.com/articles/james-harden-boosts-cavaliers-memorable-110556334.html",
+   "Harden's points by quarter, seven of the final nine points, records"
+  ],
+  [
+   "RealGM: James Harden FAQ",
+   "https://basketball.realgm.com/player/James-Harden/FAQ/1598",
+   "listed height, weight and number for the figure"
+  ],
+  [
+   "Land of Basketball: James Harden",
+   "https://www.landofbasketball.com/nba_players/h/james_harden.htm",
+   "listed height, weight and number (check)"
+  ]
+ ]
+}

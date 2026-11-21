@@ -1,0 +1,230 @@
+{
+ "team": "ORL",
+ "D": "  const D = {\n    date: 'Fri, Nov 20, 2026',\n    us: 113, them: 111, record: '7–8', usName: 'Magic', themName: 'Nets',\n    quarters: [[38, 25], [24, 36], [29, 27], [22, 23]],\n    leadUs: 15, leadThem: 7,\n    star: {name: 'Franz Wagner', stats: [['Points', 35, 40], ['Rebounds', 5, 10], ['Assists', 7, 10]]},\n    scorers: [\n      {name: 'Franz Wagner', pts: 35, note: '13 of 25 · 7 assists · the winner'},\n      {name: 'Desmond Bane', pts: 21, note: '7 of 13 from three · 5 steals'},\n      {name: 'Nikola Vučević', pts: 15, note: 'off the bench · 5 of 5 · 3 threes'},\n      {name: 'Anthony Black', pts: 13, note: '6 assists · 7 rebounds · 3 steals'},\n      {name: 'Wendell Carter Jr.', pts: 8, note: '8 rebounds · the tying putback'},\n    ],\n    edges: [\n      {label: 'First-quarter points', us: 38, them: 25},\n      {label: 'Threes made', us: 19, them: 12},\n      {label: 'Blocks', us: 6, them: 3},\n    ],\n    gaps: [\n      {label: 'Points in the paint', us: 36, them: 48},\n      {label: 'Free throws made', us: 16, them: 23},\n    ],\n    next: {opp: 'at Wizards', when: 'Sun, Nov 22, 7:00 PM ET', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Franz Wagner's 15-foot step-back jumper with 2.8 seconds left that broke a 111–111 tie and won it. An original illustration from written accounts; not traced from footage, not to scale.\n",
+  "head": "Wagner wins it",
+  "subP": "Wagner steps back, 2.8 left",
+  "subL": "Franz Wagner’s step-back at 111–111 with 2.8 seconds left",
+  "m0": "Tied",
+  "m1": "Magic +2",
+  "num": "22",
+  "cap1": "Wagner’s step-back. Magic by 2.",
+  "cap2": "113–111 with 2.8 seconds left.",
+  "clock": [
+   8.9,
+   2.8
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Magic at Nets Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Magic 113, Nets 111 · Nov 20, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Magic at', 'Nets'] : ['Magic at Nets']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Wagner 35, then the winner', 'with 2.8 seconds left.'] : ['Franz Wagner scored 35, then hit the winning jumper with 2.8 seconds left.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Magic improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Won 5 of their last 6'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Magic up 13 after one,', '9 lead changes in the 4th'] : ['Magic up 13 after the first quarter, then nine lead changes in the fourth']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Magic ${D.leadUs}, Nets ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Magic’s margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Wagner: 35', 'and the winner'] : ['Franz Wagner: 35 points and the winner']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['13 of 25 from the field,', '7 assists, 5 rebounds.'] : ['13 of 25 from the field, 7 assists, 5 rebounds.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Wagner and Bane:', '56 of the 113'] : ['Wagner and Bane combined for 56 of 113']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 40;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it from three', 'and in the first quarter'] : ['Won it from three and in the first quarter']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Magic in blue, Nets in gray. ORL', 'made 10 of 13 threes in the 1st.'] : ['Magic in blue, Nets in gray. Orlando made 10 of 13 threes in the first quarter, a franchise record.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'? in the East'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Wizards’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '6–11';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['Ten straight wins over Brooklyn.', '3–0 in the NBA Cup.'] : ['Ten straight wins over Brooklyn, and 3–0 in the NBA Cup.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Magic 113 · Nets 111 · Nov 20'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Wagner wins it'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Wagner'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 60;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - (P ? 175 : 210) * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+2', 'd w', 72, 'end');"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 130 * k, shotX + 90 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 160, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 192, ly, D.themName"
+  ],
+  [
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = clk < 60 ? clk.toFixed(1) : `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+  ]
+ ],
+ "aria": "Animated recap of the Magic's 113 to 111 road win over the Nets: Franz Wagner's step-back jumper with 2.8 seconds left that broke a 111 to 111 tie, quarter-by-quarter scoring, Wagner's 35 points, the top scorers, how the Magic won, and Sunday's game at Washington.",
+ "figure": {
+  "player": "Franz Wagner",
+  "home": false,
+  "tall": 1.0513,
+  "ape": 1.0244,
+  "mass": 0.9866,
+  "label": "Franz Wagner, listed 6-10, 220 lb (RealGM), reported 7-0 wingspan (CraftedNBA)"
+ },
+ "loser_top": [
+  [
+   "Julius Randle",
+   27,
+   "9 rebounds · 6 assists · 8 of 11 FT"
+  ],
+  [
+   "Danny Wolf",
+   20,
+   "6 of 10 · 4 of 6 from three"
+  ],
+  [
+   "Mikel Brown Jr.",
+   18,
+   "off the bench · 3 of 8 from three"
+  ]
+ ],
+ "notes": [
+  "Box score from the Orlando Magic's 113–111 road win over the Brooklyn Nets on Nov 20, 2026, from the Covers.com box score, checked against the Plain Text Sports game page and play-by-play, with game details from the Associated Press (via LA NACION), Field Level Media (via GMA News), the Orlando Sentinel and SB Nation (both via Yahoo Sports), WFTV and Heavy. All 113 Orlando points and all 111 Brooklyn points are accounted for in the box score, and the quarter scores (38–24–29–22 to 25–36–27–23) add up to both totals: 62–61 Orlando at the half and 91–88 after three. Team totals (threes 19 of 43 to 12 of 38, free throws 16 of 23 to 23 of 27, assists 24–24, blocks 6–3) are from the box score; points in the paint (36–48) and the biggest leads (Orlando 15, Brooklyn 7) are from the Covers.com box score, and Plain Text Sports gives the same leads. Records are from the game stories (the site's standings were not yet updated when this was built).",
+  "Orlando made 10 of 13 threes in the first quarter, a franchise record for a quarter (Orlando Sentinel; WFTV; Field Level Media), and led 40–25 early in the second (Plain Text Sports). Brooklyn opened the second on a 16–4 run and led 57–56 late in the half (Plain Text Sports). The fourth quarter had nine lead changes (WFTV). Jalen Suggs' 3-pointer at 3:22 made it 106–104, Mikel Brown Jr.'s and-one at 3:09 put Brooklyn up 107–106, Julius Randle's turnaround at 2:20 made it 109–106, Desmond Bane's step-back 3 at 2:00 tied it, and Randle's two free throws at 1:24 made it 111–109 (Plain Text Sports play-by-play; AP). Wendell Carter Jr.'s putback with 30.5 seconds left tied it at 111 (Plain Text Sports; AP; Field Level Media). Franz Wagner then hit the winner, and Randle's 28-foot step-back 3 at the buzzer missed (Plain Text Sports; Field Level Media; AP). Wagner scored 35 (AP). It was the first NBA game between Franz and his brother Moritz Wagner, who signed with Brooklyn in July (AP; Heavy). Orlando has won 10 straight over Brooklyn (Field Level Media), is 3–0 in the NBA Cup (WFTV; Orlando Sentinel) and has won 5 of its last 6 (AP); Brooklyn has lost four straight (AP). Orlando plays at Washington on Sunday and Brooklyn at Minnesota on Monday (Plain Text Sports schedule; AP).",
+  "The play of the game is an original illustration of Franz Wagner's step-back jumper with 2.8 seconds left that broke a 111–111 tie (Plain Text Sports play-by-play gives the clock, the score and a 15-foot step-back, unassisted; Field Level Media gives the clock, the inbound from Jalen Suggs out of an Orlando timeout and a 15-foot step-back over Noah Clowney and Randle; the AP, the Orlando Sentinel and SB Nation say 2.4 seconds left, the clock at Brooklyn's timeout after the make). The template draws a plain pull-up jumper, not the step-back itself. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Orlando Magic or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The shooter in the play of the game is drawn to Franz Wagner's listed 6-foot-10 and 220 pounds with No. 22 (RealGM), with arms scaled to a reported 7-foot wingspan (CraftedNBA), in Orlando's road blue. He has no approved look on file yet, so he is drawn in the kit with the default figure. It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "Covers.com: Magic vs Nets game overview and player stats, Nov 20, 2026",
+   "https://www.covers.com/sport/basketball/nba/matchup/388225",
+   "box score, line score, team totals, points in the paint, biggest leads"
+  ],
+  [
+   "Plain Text Sports: Magic at Nets, Nov 20, 2026",
+   "https://plaintextsports.com/nba/2026-11-20/orl-bkn",
+   "final, line score, play-by-play clocks and scores, the winner"
+  ],
+  [
+   "AP (via LA NACION): Franz Wagner scores 35, hits late jumper to lift Magic over Nets 113-111",
+   "https://www.lanacion.com.ar/usa/franz-wagner-scores-35-hits-late-jumper-to-lift-magic-over-nets-113-111-nid21112026/",
+   "late sequence, brothers, streaks, next games"
+  ],
+  [
+   "Field Level Media (via GMA News): Franz Wagner delivers game-winner, Magic beat Nets to reach 3-0 in Cup",
+   "https://www.gmanetwork.com/news/sports/basketball/1010295/nba-franz-wagner-delivers-game-winner-magic-beat-nets-to-reach-3-0-in-cup/story/",
+   "the winner, first-quarter run, 10 straight over Brooklyn"
+  ],
+  [
+   "Orlando Sentinel (via Yahoo Sports): Beede's Breakdown: Franz Wagner lifts Magic past Nets to improve to 3-0 in NBA Cup",
+   "https://sports.yahoo.com/articles/beede-breakdown-franz-wagner-lifts-032100997.html",
+   "franchise-record quarter from three, records"
+  ],
+  [
+   "SB Nation (via Yahoo Sports): Brooklyn Nets respond with a fight, but not a win, in 113-111 heartbreaker vs Magic",
+   "https://sports.yahoo.com/articles/brooklyn-nets-respond-fight-not-042421685.html",
+   "Nets side, final possessions"
+  ],
+  [
+   "WFTV: Orlando Magic beat Brooklyn Nets 113-111 in NBA Cup clash",
+   "https://www.wftv.com/news/local/magic-move-3-0-nba-cup-after-clutch-jumper-franz-wagner-over-nets/AZCIBK3U65B6ZKUD6OSQFDDFFM/",
+   "nine fourth-quarter lead changes, Cup record"
+  ],
+  [
+   "Heavy: Franz Wagner Game-Winner Beats Brother Moritz in First NBA Matchup",
+   "https://heavy.com/sports/nba/orlando-magic/franz-wagner-game-winner-beats-brother-moritz-in-first-nba-matchup/",
+   "brothers note, defense on the winner"
+  ],
+  [
+   "Plain Text Sports: 2026-27 NBA schedule",
+   "https://plaintextsports.com/nba/2026-2027/schedule",
+   "next games"
+  ],
+  [
+   "RealGM: Franz Wagner",
+   "https://basketball.realgm.com/player/Franz-Wagner/NBA/108861",
+   "listed height, weight and number for the figure"
+  ]
+ ]
+}
