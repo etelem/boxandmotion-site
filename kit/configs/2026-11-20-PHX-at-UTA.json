@@ -79,7 +79,7 @@
     ],
     [
       "'First loss of the season'",
-      "'— in the West'"
+      "'9th in the West'"
     ],
     [
       "'Clippers’ record so far'",
@@ -87,7 +87,7 @@
     ],
     [
       "oddsNum.textContent = '1–2';",
-      "oddsNum.textContent = '5–11';"
+      "oddsNum.textContent = '5–12';"
     ],
     [
       "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",

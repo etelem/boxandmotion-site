@@ -1,0 +1,109 @@
+{
+ "headline": "Denver closes on a 23–9 run",
+ "dek": "Down 115–110 with 5:10 left, Denver closed on a 23–9 run.",
+ "three": [
+  [
+   "Jokić: 26 points, 11 assists, 7 rebounds",
+   "2 points at halftime, then 18 in the third quarter on 8 of 9 shooting."
+  ],
+  [
+   "Nuggets down 3 after three quarters, then won the fourth 34–22",
+   "Five Nuggets scored 15 or more."
+  ],
+  [
+   "Won it in the fourth and off the bench",
+   "Fourth-quarter points 34–22; bench points 37–12. Denver made all 15 of its fourth-quarter free throws."
+  ]
+ ],
+ "battle": [
+  [
+   "Fourth-quarter points",
+   34,
+   22
+  ],
+  [
+   "Bench points",
+   37,
+   12
+  ],
+  [
+   "Free throws made",
+   26,
+   23
+  ],
+  [
+   "Fast-break points",
+   15,
+   6
+  ]
+ ],
+ "battle_labels": [
+  "DEN",
+  "HOU"
+ ],
+ "top": [
+  [
+   "Nikola Jokić",
+   "DEN",
+   "11 assists, 18 in the third",
+   26
+  ],
+  [
+   "Cameron Johnson",
+   "DEN",
+   "7 of 13, 6 assists",
+   19
+  ],
+  [
+   "Christian Braun",
+   "DEN",
+   "7 of 10, 4 steals",
+   19
+  ],
+  [
+   "Aaron Gordon",
+   "DEN",
+   "6 of 9, 5 of 5 at the line",
+   18
+  ]
+ ],
+ "linescore": {
+  "away": [
+   33,
+   27,
+   42,
+   22
+  ],
+  "home": [
+   31,
+   31,
+   37,
+   34
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-20-HOU-at-DEN.json",
+ "loser": {
+  "top": [
+   [
+    "Alperen Şengün",
+    "HOU",
+    "triple-double · 11 rebounds · 10 assists",
+    28
+   ],
+   [
+    "Fred VanVleet",
+    "HOU",
+    "season high · 9 assists · 10 of 21",
+    25
+   ],
+   [
+    "Amen Thompson",
+    "HOU",
+    "10 of 12 · 6 rebounds",
+    22
+   ]
+  ],
+  "source": "box score"
+ }
+}

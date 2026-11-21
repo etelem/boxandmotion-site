@@ -1,0 +1,103 @@
+{
+ "headline": "Barnes' late layup ends Toronto's skid",
+ "dek": "Scottie Barnes scored 29, including the go-ahead layup with 14.3 seconds left, and Toronto ended a six-game skid.",
+ "three": [
+  [
+   "Scottie Barnes: 29 points on 14 of 21",
+   "14 of 21 from the floor, then the go-ahead layup with 14.3 left."
+  ],
+  [
+   "Raptors up 6 at the half, held on after Detroit took the lead late",
+   "Five Raptors scored in double figures."
+  ],
+  [
+   "Won it with ball movement and on the glass",
+   "Assists 29–20; rebounds 40–33. Toronto shot 42 of 77 from the floor."
+  ]
+ ],
+ "battle": [
+  [
+   "Assists",
+   29,
+   20
+  ],
+  [
+   "Rebounds",
+   40,
+   33
+  ],
+  [
+   "Blocks",
+   4,
+   1
+  ],
+  [
+   "Threes made",
+   9,
+   12
+  ]
+ ],
+ "battle_labels": [
+  "TOR",
+  "DET"
+ ],
+ "top": [
+  [
+   "Scottie Barnes",
+   "TOR",
+   "14 of 21, 5 rebounds, 5 assists",
+   29
+  ],
+  [
+   "Allen Graves",
+   "TOR",
+   "10 rebounds, 6 of 6 FT",
+   20
+  ],
+  [
+   "Immanuel Quickley",
+   "TOR",
+   "10 assists, 6 of 10",
+   18
+  ],
+  [
+   "Jakob Poeltl",
+   "TOR",
+   "5 of 7, 9 rebounds",
+   10
+  ]
+ ],
+ "linescore": {
+  "away": [
+   26,
+   28,
+   23,
+   28
+  ],
+  "home": [
+   23,
+   25,
+   24,
+   30
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-20-TOR-at-DET.json",
+ "loser": {
+  "top": [
+   [
+    "Cade Cunningham",
+    "DET",
+    "9 assists · 10 of 22",
+    23
+   ],
+   [
+    "Kevin Huerter",
+    "DET",
+    "4 of 8 from three",
+    20
+   ]
+  ],
+  "source": "box score"
+ }
+}

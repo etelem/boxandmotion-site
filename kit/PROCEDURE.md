@@ -121,8 +121,14 @@ Build everything first (research, configs, reels, frame checks, the Short config
   the winner's record and conference rank on the record card (`standings` and `seeds`), the next opponent's record
   (`oddsNum`), and any record or rank in the notes. Configs written before the standings landed are guesses: on Nov 10,
   3 of 7 had the wrong rank. Then rebuild the reel (and the Short if a line on it changed) and publish.
-- Still missing at 8:00: commit the configs as held (`Recap configs (held, not published): <date> (<keys>)`), don't
-  publish to the site or YouTube, and alert (see below).
+- **Still missing at 8:00: the site update is done by a recap run** (the owner, Nov 21, 2026, after the morning checks
+  ended with nothing saved on Nov 14 and Nov 21). Only **run 1** does it, so the three runs never edit
+  `data/season.json` at once: `git pull --rebase`, then follow UPDATE.md exactly (sports feed first, then its fallback
+  sources; update.py's record check still decides), commit `Nightly update: games through <date> (recap run fallback)`
+  and push. Runs 2 and 3 don't touch season.json: they keep pulling every 5 minutes until 8:30.
+- Still missing at 8:30 (or run 1's update was refused): commit the configs as held
+  (`Recap configs (held, not published): <date> (<keys>)`), don't publish to the site or YouTube, and alert (see below).
+  Run 1 says in the alert why its own update failed.
 - If you skip a game, say why in your commit message, not just in the report.
 
 ## After all games in this run
@@ -165,7 +171,7 @@ Build everything first (research, configs, reels, frame checks, the Short config
 ## If something blocks the morning, alert the owner
 Send a **PushNotification** (summary in `<routine_summary>` tags, the first sentence says what broke) when any of these
 happen, not just a note in the report:
-- last night's games still aren't in `data/season.json` at 8:00 AM ET, so reels were held back;
+- last night's games still aren't in `data/season.json` at 8:30 AM ET (after run 1's own update), so reels were held back;
 - `kit/push_site.sh` printed `PUSH FAILED`;
 - every YouTube post in this run failed (a daily-limit error on some posts is normal; say so in the report only).
 
