@@ -1,0 +1,265 @@
+{
+  "team": "TOR",
+  "D": "  const D = {\n    date: 'Fri, Nov 20, 2026',\n    us: 105, them: 102, record: '6–10', usName: 'Raptors', themName: 'Pistons',\n    quarters: [[26, 23], [28, 25], [23, 24], [28, 30]],\n    leadUs: 14, leadThem: null,\n    star: {name: 'Scottie Barnes', stats: [['Points', 29, 30], ['Rebounds', 5, 10], ['Assists', 5, 10]]},\n    scorers: [\n      {name: 'Scottie Barnes', pts: 29, note: '14 of 21 · 5 rebounds · 5 assists'},\n      {name: 'Allen Graves', pts: 20, note: '10 rebounds · 6 of 6 FT'},\n      {name: 'Immanuel Quickley', pts: 18, note: '10 assists · 6 of 10'},\n      {name: 'Jakob Poeltl', pts: 10, note: '5 of 7 · 9 rebounds'},\n      {name: 'Jamison Battle', pts: 10, note: '4 of 6 · 2 of 4 from three'},\n    ],\n    edges: [\n      {label: 'Assists', us: 29, them: 20},\n      {label: 'Rebounds', us: 40, them: 33},\n      {label: 'Blocks', us: 4, them: 1},\n    ],\n    gaps: [\n      {label: 'Threes made', us: 9, them: 12},\n      {label: 'Free throws made', us: 12, them: 16},\n    ],\n    next: {opp: 'vs Bucks', when: 'Mon, Nov 23, 7:30 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Scottie Barnes' go-ahead driving layup, assisted by Immanuel Quickley, with 14.3 seconds left that made it 103–102. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Barnes for the lead",
+    "subP": "Barnes on the drive, 14.3 left",
+    "subL": "Scottie Barnes on the drive, 14.3 seconds left",
+    "m0": "Pistons +1",
+    "m1": "Raptors +1",
+    "num": "4",
+    "cap1": "Barnes’ layup. Raptors by 1.",
+    "cap2": "103–102 with 14.3 left. Toronto never trailed again.",
+    "clock": [
+      19.8,
+      14.3
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Raptors at Pistons Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Raptors 105, Pistons 102 · Nov 20, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Raptors at', 'Pistons'] : ['Raptors at Pistons']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Barnes 29 and the go-ahead', 'layup. Six-game skid over.'] : ['Scottie Barnes scored 29, including the go-ahead layup with 14.3 seconds left, and Toronto ended a six-game skid.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Raptors improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Snapped a six-game losing streak'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Raptors up 6 at the half,', 'held on in the fourth'] : ['Raptors up 6 at the half, held on after Detroit took the lead late']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Raptors ${D.leadUs}"
+    ],
+    [
+      "Lakers’ margin in each quarter, then the game score after it.",
+      "Raptors’ margin in each quarter, then the game score after it."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Barnes: 29 points', 'on 14 of 21'] : ['Scottie Barnes: 29 points on 14 of 21']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['14 of 21 from the floor,', 'then the go-ahead layup.'] : ['14 of 21 from the floor, then the go-ahead layup with 14.3 left.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Five Raptors in', 'double figures'] : ['Five Raptors scored in double figures']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 30;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it on the ball', 'movement and the glass'] : ['Won it with ball movement and on the glass']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Raptors in silver, Pistons in gray.', 'Toronto shot 42 of 77 from the floor.'] : ['Raptors in silver, Pistons in gray. Toronto shot 42 of 77 from the floor.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'— in the East'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Bucks’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '1–15';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Toronto won at Milwaukee', '121–107 on Nov. 6.'] : ['Toronto won the first meeting 121–107 at Milwaukee on Nov. 6.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Raptors 105 · Pistons 102 · Nov 20'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Barnes for the lead'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Barnes'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 50;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 170 : 200) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+2', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 165 * k, shotX + 118 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+    ],
+    [
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = clk < 60 ? clk.toFixed(1) : `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 160, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 192, ly, D.themName"
+    ]
+  ],
+  "aria": "Animated recap of the Raptors' 105 to 102 road win over the Pistons: Scottie Barnes' go-ahead driving layup with 14.3 seconds left that made it 103 to 102, quarter-by-quarter scoring, Barnes' 29 points, the top scorers, how the Raptors won, and the next game.",
+  "figure": {
+    "player": "Scottie Barnes",
+    "home": false,
+    "tall": 1.0256,
+    "ape": 1.0844,
+    "mass": 1.0367,
+    "label": "Scottie Barnes, listed 6-8, 237 lb, reported 7-2¾ wingspan"
+  },
+  "loser_top": [
+    [
+      "Cade Cunningham",
+      23,
+      "9 assists · 10 of 22"
+    ],
+    [
+      "Kevin Huerter",
+      20,
+      "4 of 8 from three"
+    ]
+  ],
+  "notes": [
+    "Box score from the Raptors' 105–102 road win over the Detroit Pistons on Nov 20, 2026, from the StatMuse box score, checked against the Associated Press, the Detroit Free Press, MLive, Ball Exclusives and Toronto Raptors On SI. All 105 Toronto points and all 102 Detroit points are accounted for in the box score, and the quarter scores (26–28–23–28 to 23–25–24–30) add up to both totals: 54–48 Toronto at the half and 77–72 after three (AP; VAVEL). Team totals (assists 29–20, rebounds 40–33, blocks 4–1, threes made 9–12, free throws made 12–16, 42 of 77 shooting) are from the box score. Toronto's biggest lead of 14 is from the AP, Ball Exclusives and ClutchPoints; Detroit's biggest lead isn't given in any source we could read, so the reel shows only Toronto's. One SI story gives Barnes 27 points; the box score and the other stories have 29. The AP and Ball Exclusives credit Immanuel Quickley with 11 assists; the box score has 10, which adds up to the team's 29. Records and ranks are from the site's standings after Friday's games.",
+    "Toronto ended a six-game losing streak and is 2–1 in NBA Cup group play (AP; Toronto Raptors On SI). Rookie Allen Graves, in his first career start, had 20 points and 10 rebounds for his first career double-double; Quickley's 18 points and 10 assists were his first double-double of the season (Toronto Raptors On SI). Detroit took its first lead of the second half at 93–91 late in the fourth (Free Press). Poeltl's tip-in made it 101–99 with 27.1 seconds left and Cade Cunningham's step-back three put Detroit up 102–101 with 19.8 left (AP). After Barnes' layup, Toronto forced a turnover, Quickley made two free throws for 105–102, Cunningham missed two free throws with 2.2 seconds left and Kevin Huerter's three at the buzzer missed (AP; Free Press; MLive). The Raptors host Milwaukee on Monday, Nov 23 at 7:30 PM ET; they won the first meeting 121–107 at Milwaukee on Nov. 6 (Covers' schedule; AP).",
+    "The play of the game is an original illustration of Scottie Barnes' driving layup with 14.3 seconds left, assisted by Immanuel Quickley, that put Toronto ahead 103–102 for good (play-by-play via Ball Exclusives: \"Scottie Barnes makes driving layup (Immanuel Quickley assists)\"; Detroit Free Press: \"a bullyball drive to the rim with 14.3 seconds on the clock\"; MLive: he drove past Cunningham). The board's clock starts at 19.8, the time of Cunningham's three. It is drawn as a finish at the rim after a drive; no source says which side of the floor he attacked. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Toronto Raptors or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The player in the play of the game is drawn to Scottie Barnes' listed 6-foot-8 and 237 pounds with No. 4 (Basketball-Reference; RealGM), with his arms scaled to a 7-foot-2¾ wingspan measured at the 2021 draft combine (Bleacher Report). He is drawn in Toronto's road colors with the default figure look (no approved look yet). It is an original figure with a featureless face, not a portrait or a trace of footage."
+  ],
+  "sources": [
+    [
+      "StatMuse, 'Raptors Vs Pistons Final Scores' (game box)",
+      "https://www.statmuse.com/nba/ask/raptors-vs-pistons-final-scores",
+      "full player box both teams, team totals, quarter scores"
+    ],
+    [
+      "StatMuse, 'Pistons Vs Raptors Game Log'",
+      "https://www.statmuse.com/nba/ask/pistons-vs-raptors-game-log",
+      "DET team line (37-81, 12-33, 16-21, 33 reb, 11 tov)"
+    ],
+    [
+      "AP (Dave Hogg) via The Journal Gazette, 'Raptors end skid with win over Pistons'",
+      "https://www.journalgazette.net/sports/professional/nba/raptors-end-skid-with-win-over-pistons/article_6da82fb5-4d45-5abf-a5a7-931719b314bd.html",
+      "late sequence with clocks (27.1, 19.8, 2.2), halftime, 87-80 at 7:03, biggest lead, next games, steal credit"
+    ],
+    [
+      "AP via theScore, 'Barnes, Raptors snap 6-game skid with tight win over Pistons'",
+      "https://www.thescore.com/nba/news/3661491/barnes-raptors-snap-6-game-skid-with-tight-win-over-pistons",
+      "corroborated the AP late sequence"
+    ],
+    [
+      "Detroit Free Press (Omari Sankofa II) via Yahoo, 'Poor defensive start costs Pistons in NBA Cup loss to Toronto Raptors'",
+      "https://sports.yahoo.com/articles/poor-defensive-start-costs-pistons-032438952.html",
+      "14.3 clock, 'bullyball drive', step-back 3, 93-91, 13-1 run, DET next games"
+    ],
+    [
+      "MLive (Jacob Richman) via Yahoo, 'Pistons come up short in NBA Cup thriller vs. Raptors'",
+      "https://sports.yahoo.com/articles/pistons-come-short-nba-cup-032026043.html",
+      "runs, Battle corner 3s, Barnes drove past Cunningham, Graves steal, 55% shooting record, 12 forced TOs"
+    ],
+    [
+      "Yardbarker / Ball Exclusives, 'Raptors Beat Pistons 105-102 as Barnes Scores 29'",
+      "https://www.yardbarker.com/nba/articles/raptors_beat_pistons_105_102_as_barnes_scores_29/s1_17668_44594631",
+      "PBP quote for the play of the game (14.3, Quickley assist), 8 lead changes, 11-0 run, records, TOR next game"
+    ],
+    [
+      "Toronto Raptors On SI (Rocco Moschella), 'Two Things Raptors Can Celebrate After Huge Win Over Pistons'",
+      "https://www.si.com/nba/raptors/onsi/two-things-raptors-can-celebrate-after-huge-win-over-pistons",
+      "result, snapped streak, Cup 2-1, 3-point split (gives Barnes 27, which conflicts with the box)"
+    ],
+    [
+      "Toronto Raptors On SI (Jeremy Brener), '3 Winners, 1 Loser in Raptors Big Win vs. Pistons'",
+      "https://www.si.com/nba/raptors/onsi/3-winners-1-loser-in-raptors-big-win-vs-pistons",
+      "Graves first start, first double-double, career highs, Graves steal; Quickley first double-double of the season"
+    ],
+    [
+      "ClutchPoints (Miguel La Torre) via Yahoo, 'Raptors star Scottie Barnes gives Allen Graves my MVP praise after win over Pistons'",
+      "https://sports.yahoo.com/articles/raptors-star-scottie-barnes-gives-052555776.html",
+      "stat lines, Graves bio (age 20, No. 19 pick), lead of 14"
+    ],
+    [
+      "Sportsnet (Steven Loung) via BVM Sports, 'Raptors Takeaways: Barnes, Graves dominate to end skid with win over Pistons'",
+      "https://bvmsports.com/2026/11/20/raptors-takeaways-barnes-graves-dominate-to-end-skid-with-win-over-pistons/",
+      "layup with 14 seconds left, records, Cup records"
+    ],
+    [
+      "Sportando (Alessandro di Bari), 'Barnes delivers in the clutch as Toronto snaps losing streak against Detroit'",
+      "https://sportando.basketball/en/barnes-delivers-in-the-clutch-as-toronto-snaps-losing-streak-against-detroit/",
+      "corroborated the late sequence and Quickley's 10 ast"
+    ],
+    [
+      "VAVEL USA, 'Toronto Raptors 105-102 Detroit Pistons, Highlights and points in NBA'",
+      "https://www.vavel.com/en-us/nba/2026/11/20/1279965-raptors-vs-pistons-live-score-nba.html",
+      "cumulative quarter scores, 4Q timeline scores"
+    ],
+    [
+      "Bleacher Report game page, 'Detroit Pistons vs. Toronto Raptors - November 20, 2026'",
+      "https://bleacherreport.com/game/toronto-raptors-vs-detroit-pistons-2026-11-20-19-30",
+      "confirmed final and quarter line"
+    ],
+    [
+      "Covers, 'Toronto Raptors Schedule, Results, Records'",
+      "https://www.covers.com/sport/basketball/nba/teams/main/toronto-raptors",
+      "TOR next game (Nov 23, 7:30 ET vs MIL) and last meeting with MIL (Nov 6, W 121-107)"
+    ],
+    [
+      "Basketball-Reference, 'Scottie Barnes Stats, Height, Weight...'",
+      "https://www.basketball-reference.com/players/b/barnesc01.html",
+      "Barnes 6-8, 237 lb, #4"
+    ],
+    [
+      "RealGM, 'Scottie Barnes, Toronto Raptors' bio",
+      "https://basketball.realgm.com/player/Scottie-Barnes/Bio/119506",
+      "Barnes 6-8, 237 lb, #4"
+    ],
+    [
+      "Bleacher Report, 'Scottie Barnes NBA Combine 2021: Measurements, Analysis and Impressions'",
+      "https://bleacherreport.com/articles/10006463-scottie-barnes-nba-combine-2021-measurements-analysis-and-impressions",
+      "wingspan 7'2 3/4\""
+    ]
+  ]
+}
