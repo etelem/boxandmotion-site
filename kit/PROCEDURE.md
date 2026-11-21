@@ -148,6 +148,14 @@ Build everything first (research, configs, reels, frame checks, the Short config
    hashtags (#NBA plus the two teams and the player). Instagram: `metadata.instagram = {"type": "reel", "shouldShareToFeed": true,
    "isAiGenerated": true}`. TikTok: `metadata.tiktok = {"isAiGenerated": true}`. If one of them errors (limits, a lapsed login),
    report it and carry on; YouTube is the one whose link goes on the site.
+   **X too (owner, Nov 20: every Short that goes to YouTube also goes to X):** channel "boxandmotion" (`list_channels`, service
+   twitter). Post the same MP4 even if the YouTube post failed (X has no daily-limit problem; its post must not wait on YouTube).
+   `create_post` with `schedulingType: "automatic"`, `mode: "shareNow"`, `text` = the main post, and
+   `metadata.twitter = {"isAiGenerated": true, "thread": [{"text": <main post>, "assets": [<same video asset>]},
+   {"text": "The whole game, in motion: boxandmotion.com/games/<page>/"}]}`, where <page> is this game's folder under `dist/games/`
+   (e.g. `2026-11-19-trail-blazers-at-bucks`). Main post: the one-or-two sentence description, then the result as in the title
+   ("Blazers 124, Bucks 114."), under 280 characters, no link, no hashtags, no owner name. The link goes only in the reply
+   (X shows posts with outside links to fewer people). If X errors, report it and carry on.
    - Success: write the video id (the `v=` value of externalLink) to `reels/<key>/youtube.txt`. The game page then shows our Short as the play of
      the game, with the "Our Short on YouTube" button.
    - Error: leave the reel as is and report the error.
