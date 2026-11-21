@@ -535,6 +535,7 @@ html.embed .transport{flex:none}
     } else {
       T(caption, M, capY + fs.s * 1.6, 'Wembanyama from deep. Spurs by 13. 107–94, 8:19 left. 32 for him.', 'b w', fs.b);
     }
+    if (/[?&]bare=1/.test(location.search)) { const _fitCap = () => [...caption.childNodes].forEach((n) => { n.style.fontSize = n._size + 'px'; fitAll([n], W - M - (+n.getAttribute('x') || M)); }); _fitCap(); if (document.fonts) document.fonts.ready.then(_fitCap); }
     const slowmo = T(g, P ? W - M : W / 2, P ? L.top + 6 : floor + 56 * k + 10, 'Slow motion', 'k', fs.k, P ? 'end' : 'middle');
 
     // shooter position over time: probe, jab in, then hop back

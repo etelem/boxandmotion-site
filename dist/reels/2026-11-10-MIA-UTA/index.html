@@ -534,6 +534,7 @@ html.embed .transport{flex:none}
     } else {
       T(caption, M, capY + fs.s * 1.6, 'Giannis from deep. Heat by 19. 85–66, in a 22–6 run.', 'b w', fs.b);
     }
+    if (/[?&]bare=1/.test(location.search)) { const _fitCap = () => [...caption.childNodes].forEach((n) => { n.style.fontSize = n._size + 'px'; fitAll([n], W - M - (+n.getAttribute('x') || M)); }); _fitCap(); if (document.fonts) document.fonts.ready.then(_fitCap); }
     const slowmo = T(g, P ? W - M : W / 2, P ? L.top + 6 : floor + 56 * k + 10, 'Slow motion', 'k', fs.k, P ? 'end' : 'middle');
 
     // shooter position over time: probe, jab in, then hop back
