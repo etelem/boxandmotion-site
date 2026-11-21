@@ -409,6 +409,16 @@ for key in REELS:
                "Object.assign({}, L.fs, {s: L.fs.s * 1.45, b: L.fs.b * 1.4, h: L.fs.h * 1.25}) : L.fs;")
         for fn in ("function sceneFinal(L, g) {\n    ", "function scenePlay(L, g, defs) {\n    "):
             src = src.replace(fn + "const {W, H, M, fs, P} = L;", fn + big, 1)
+        # The moment's caption under the play: with the bigger story text a long line ran off phones (owner, Nov 21:
+        # "Grimes' step-back three. Lakers by 3." cut off). In story mode each caption line shrinks to fit the width,
+        # again once the web font has loaded.
+        pi0 = src.find("function scenePlay(")
+        if pi0 >= 0 and "const caption = S('g', {}, g);" in src[pi0:pi0 + 9000]:
+            sl = src.find("    const slowmo = T(g,", pi0)
+            if sl > 0:
+                src = src[:sl] + ("    if (/[?&]bare=1/.test(location.search)) { const _fitCap = () => [...caption.childNodes].forEach((n) => { "
+                                  "n.style.fontSize = n._size + 'px'; fitAll([n], W - M - (+n.getAttribute('x') || M)); }); _fitCap(); "
+                                  "if (document.fonts) document.fonts.ready.then(_fitCap); }\n") + src[sl:]
         src = src.replace("    const qClock = T(board, bx + 306, by + 76, '', 'd', 46, 'end');",
                           "    const qClock = T(board, bx + 306, by + 76, '', 'd', 46, 'end');\n    if (/[?&]bare=1/.test(location.search)) { const _bw = S('g', {transform: `translate(${bx} ${by}) scale(1.35) translate(${-bx} ${-by})`}, board); [...board.childNodes].filter((n) => n !== _bw).forEach((n) => _bw.appendChild(n)); }", 1)
         # The moment's headline as page text, like the other parts (owner, Nov 15): the play scene skips its own
