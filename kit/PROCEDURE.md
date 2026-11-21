@@ -136,7 +136,9 @@ Build everything first (research, configs, reels, frame checks, the Short config
    retrying if another run pushed first. Cloudflare redeploys in a minute or two. Then wait 3 minutes so the MP4s are live at
    `https://boxandmotion.com/reels/<key>/short.mp4`.
 2. **YouTube Shorts through Buffer** (Buffer connector). Organization "My organization" (`get_account`), YouTube channel "Box & Motion"
-   (`list_channels`, service youtube). Post this run's one Short (step 7). If Buffer or YouTube returns a daily-limit error, send the MP4 to the owner and say so:
+   (`list_channels`, service youtube). **Sun Nov 22, 2026 only (the owner, Nov 21): both of that day's YouTube slots go to the Knicks coach's
+   board and the SGA scouting report (already scheduled in Buffer for 1:55 and 2:05 PM ET). Runs that day do NOT create or schedule
+   any YouTube post; post the night's Shorts to X (and the site) as usual.** Post this run's one Short (step 7). If Buffer or YouTube returns a daily-limit error, send the MP4 to the owner and say so:
    `create_post` with `channelId`, `schedulingType: "automatic"`, `mode: "shareNow"`,
    `assets: [{"video": {"url": "https://boxandmotion.com/reels/<key>/short.mp4", "metadata": {"thumbnailOffset": <ms>}}}]`, where <ms>
    is the "thumbnail offset" make_playshort.py printed (the frame with the hook, the stamp and the star; never a chart or the end card),
