@@ -20,6 +20,15 @@ current standings if the first found them stale. The first check also handles qu
    `<games date>,<check time ET>,<source>,<current|stale>` (e.g. `2026-11-09,06:30,FOX,stale`). It shows when standings
    usually appear, so checks that never matter can be dropped later.
 4. **On success:** also delete `data/pending/<date>.json` in the same commit.
+5. **Status line, every check that doesn't stop at step 0** (the owner, Nov 21, 2026: on Nov 14 and Nov 21 both checks ended
+   with no commit and no trace of why). As the LAST thing the check does, whatever happened before (success, waiting,
+   a tool error, a source that wouldn't open, update.py refusing), append one line to `data/update-status.csv`:
+   `<games date>,<check time ET>,<done|waiting|failed>,<reason in a few words>` (e.g.
+   `2026-11-20,07:17,failed,Covers pages for 2 games would not open`), commit `Update status <time> ET: <result> (<date>)`
+   (or fold it into the update commit on success) and push. If the push fails, alert. A check that ends with no
+   status line is itself a failure to investigate.
+6. **If both checks fail,** recap run 1 does the update at 8:00 (kit/PROCEDURE.md, "Waiting for the site data") and adds
+   its own status line with check time `recap-run-1`.
 
 ## Steps
 
