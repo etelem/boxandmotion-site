@@ -1,0 +1,109 @@
+{
+ "headline": "Davis scores 36 as Chicago goes cold in the third",
+ "dek": "Anthony Davis scored 36, and Chicago scored 9 in the third quarter.",
+ "three": [
+  [
+   "Anthony Davis: 36 points and 11 rebounds",
+   "16 of 26 from the field, 12 of 13 at the rim."
+  ],
+  [
+   "Wizards down 8 at the half, then won the third quarter 23–9",
+   "Davis and Dybantsa combined for 56 of 98."
+  ],
+  [
+   "Won it in transition and in the third",
+   "Fast-break points 24–4; third-quarter points 23–9. Chicago shot 3 of 25 in the third quarter."
+  ]
+ ],
+ "battle": [
+  [
+   "Fast-break points",
+   24,
+   4
+  ],
+  [
+   "Third-quarter points",
+   23,
+   9
+  ],
+  [
+   "Points in the paint",
+   54,
+   48
+  ],
+  [
+   "Rebounds",
+   46,
+   42
+  ]
+ ],
+ "battle_labels": [
+  "WAS",
+  "CHI"
+ ],
+ "top": [
+  [
+   "Anthony Davis",
+   "WAS",
+   "16 of 26, 11 rebounds",
+   36
+  ],
+  [
+   "AJ Dybantsa",
+   "WAS",
+   "10 rebounds, 6 assists",
+   20
+  ],
+  [
+   "Trae Young",
+   "WAS",
+   "4 threes, 5 assists, 3 steals",
+   16
+  ],
+  [
+   "Kyshawn George",
+   "WAS",
+   "7 rebounds, 5 assists",
+   11
+  ]
+ ],
+ "linescore": {
+  "away": [
+   22,
+   30,
+   23,
+   23
+  ],
+  "home": [
+   29,
+   31,
+   9,
+   25
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-20-WAS-at-CHI.json",
+ "loser": {
+  "top": [
+   [
+    "Norman Powell",
+    "CHI",
+    "7 of 18 · 1 of 5 from three",
+    16
+   ],
+   [
+    "Buddy Hield",
+    "CHI",
+    "off the bench · 4 of 9 from three",
+    15
+   ],
+   [
+    "Tre Jones",
+    "CHI",
+    "off the bench · 7 assists",
+    12
+   ]
+  ],
+  "source": "box score"
+ }
+}

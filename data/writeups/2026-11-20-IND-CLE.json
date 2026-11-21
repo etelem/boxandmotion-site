@@ -1,0 +1,103 @@
+{
+ "headline": "Harden's 51 carries Cleveland",
+ "dek": "James Harden scored 51 and Cleveland won the third quarter 43–22.",
+ "three": [
+  [
+   "James Harden’s 51 moved him past Kobe Bryant in 50-point games",
+   "His 26th 50-point game: only Wilt Chamberlain and Michael Jordan have more."
+  ],
+  [
+   "Cavaliers up 1 at the half, then won the third quarter 43–22",
+   "Harden and Mitchell combined for 71 of 128."
+  ],
+  [
+   "Won the third quarter and won from three",
+   "Third-quarter points 43–22; threes made 19–14. Harden scored 18 in the 43–22 third quarter."
+  ]
+ ],
+ "battle": [
+  [
+   "Third-quarter points",
+   43,
+   22
+  ],
+  [
+   "Threes made",
+   19,
+   14
+  ],
+  [
+   "Steals",
+   9,
+   6
+  ],
+  [
+   "Fourth-quarter points",
+   23,
+   36
+  ]
+ ],
+ "battle_labels": [
+  "CLE",
+  "IND"
+ ],
+ "top": [
+  [
+   "James Harden",
+   "CLE",
+   "7 of 11 from three, 14 of 14 FT",
+   51
+  ],
+  [
+   "Donovan Mitchell",
+   "CLE",
+   "8 of 17 from the floor",
+   20
+  ],
+  [
+   "Peyton Watson",
+   "CLE",
+   "3 of 6 from three, back from a back bruise",
+   15
+  ],
+  [
+   "Mario Hezonja",
+   "CLE",
+   "off the bench, 10 rebounds",
+   10
+  ]
+ ],
+ "linescore": {
+  "away": [
+   29,
+   32,
+   22,
+   36
+  ],
+  "home": [
+   29,
+   33,
+   43,
+   23
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-20-IND-at-CLE.json",
+ "loser": {
+  "top": [
+   [
+    "Ivica Zubac",
+    "IND",
+    "10 rebounds · 8 of 11",
+    21
+   ],
+   [
+    "Pascal Siakam",
+    "IND",
+    "7 rebounds · 8 of 17",
+    21
+   ]
+  ],
+  "source": "box score"
+ }
+}

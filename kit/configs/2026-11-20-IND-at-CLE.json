@@ -87,7 +87,7 @@
   ],
   [
    "oddsNum.textContent = '1–2';",
-   "oddsNum.textContent = '4–10';"
+   "oddsNum.textContent = '4–11';"
   ],
   [
    "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",

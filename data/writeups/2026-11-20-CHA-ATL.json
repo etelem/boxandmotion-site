@@ -1,0 +1,103 @@
+{
+ "headline": "Johnson and 12 steals carry Atlanta",
+ "dek": "Jalen Johnson scored 26 with four steals, and Atlanta turned a 57–56 halftime deficit into a 14-point win.",
+ "three": [
+  [
+   "Jalen Johnson: 26 points and 4 steals",
+   "10 of 15 from the floor and 3 of 4 from three, with 6 assists."
+  ],
+  [
+   "Hawks trailed 57–56 at the half, then won the third quarter 31–19",
+   "Five Hawks scored in double figures."
+  ],
+  [
+   "Won it off turnovers and on the break",
+   "Points off turnovers 36–16; fast-break points 21–10. Atlanta had 12 steals to Charlotte’s 4."
+  ]
+ ],
+ "battle": [
+  [
+   "Points off turnovers",
+   36,
+   16
+  ],
+  [
+   "Fast-break points",
+   21,
+   10
+  ],
+  [
+   "Points in the paint",
+   56,
+   50
+  ],
+  [
+   "Steals",
+   12,
+   4
+  ]
+ ],
+ "battle_labels": [
+  "ATL",
+  "CHA"
+ ],
+ "top": [
+  [
+   "Jalen Johnson",
+   "ATL",
+   "10 of 15, 6 rebounds, 4 steals",
+   26
+  ],
+  [
+   "Aaron Wiggins",
+   "ATL",
+   "4 of 6 from three",
+   19
+  ],
+  [
+   "Nickeil Alexander-Walker",
+   "ATL",
+   "7 of 20, 2 of 8 from three",
+   17
+  ],
+  [
+   "Onyeka Okongwu",
+   "ATL",
+   "6 of 10, 7 rebounds",
+   16
+  ]
+ ],
+ "linescore": {
+  "away": [
+   31,
+   26,
+   19,
+   21
+  ],
+  "home": [
+   23,
+   33,
+   31,
+   24
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-20-CHA-at-ATL.json",
+ "loser": {
+  "top": [
+   [
+    "Moussa Diabate",
+    "CHA",
+    "15 rebounds · 9 of 12",
+    21
+   ],
+   [
+    "Brandon Miller",
+    "CHA",
+    "5 of 13 from three · 8 rebounds",
+    19
+   ]
+  ],
+  "source": "box score"
+ }
+}

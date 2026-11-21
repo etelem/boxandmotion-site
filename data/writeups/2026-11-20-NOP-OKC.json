@@ -1,0 +1,109 @@
+{
+ "headline": "SGA's 40 erases a 16-point hole",
+ "dek": "The Thunder trailed by 16 in the third quarter, won the fourth 34–22 and won by 6.",
+ "three": [
+  [
+   "Shai Gilgeous-Alexander scored 40, 21 of them after halftime",
+   "14 of 24 from the floor with 8 assists: his fourth 40-point game this season."
+  ],
+  [
+   "Thunder down 8 at the half, then won the fourth quarter 34–22",
+   "SGA and Mara combined for 62 of 126."
+  ],
+  [
+   "Won the fourth quarter and the paint",
+   "Fourth-quarter points 34–22; points in the paint 60–42. Oklahoma City scored 60 in the paint to 42."
+  ]
+ ],
+ "battle": [
+  [
+   "Fourth-quarter points",
+   34,
+   22
+  ],
+  [
+   "Points in the paint",
+   60,
+   42
+  ],
+  [
+   "Field goals made",
+   49,
+   42
+  ],
+  [
+   "Assists",
+   26,
+   23
+  ]
+ ],
+ "battle_labels": [
+  "OKC",
+  "NOP"
+ ],
+ "top": [
+  [
+   "Shai Gilgeous-Alexander",
+   "OKC",
+   "8 ast, 14 of 24 from the floor",
+   40
+  ],
+  [
+   "Aday Mara",
+   "OKC",
+   "16 reb, career highs in both",
+   22
+  ],
+  [
+   "Jared McCain",
+   "OKC",
+   "3 of 9 from three",
+   18
+  ],
+  [
+   "Bennett Stirtz",
+   "OKC",
+   "off the bench, career high",
+   18
+  ]
+ ],
+ "linescore": {
+  "away": [
+   36,
+   28,
+   34,
+   22
+  ],
+  "home": [
+   33,
+   23,
+   36,
+   34
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-20-NOP-at-OKC.json",
+ "loser": {
+  "top": [
+   [
+    "Zion Williamson",
+    "NOP",
+    "7 assists · 9 of 19",
+    22
+   ],
+   [
+    "Jeremiah Fears",
+    "NOP",
+    "6 rebounds · 5 assists",
+    22
+   ],
+   [
+    "Saddiq Bey",
+    "NOP",
+    "4 of 9 from three",
+    21
+   ]
+  ],
+  "source": "box score"
+ }
+}

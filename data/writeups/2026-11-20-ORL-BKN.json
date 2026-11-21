@@ -1,0 +1,109 @@
+{
+ "headline": "Wagner's 35 and the winner with 2.8 left",
+ "dek": "Franz Wagner scored 35, then hit the winning jumper with 2.8 seconds left.",
+ "three": [
+  [
+   "Franz Wagner: 35 points and the winner",
+   "13 of 25 from the field, 7 assists, 5 rebounds."
+  ],
+  [
+   "Magic up 13 after the first quarter, then nine lead changes in the fourth",
+   "Wagner and Bane combined for 56 of 113."
+  ],
+  [
+   "Won it from three and in the first quarter",
+   "First-quarter points 38–25; threes made 19–12. Orlando made 10 of 13 threes in the first quarter, a franchise record."
+  ]
+ ],
+ "battle": [
+  [
+   "First-quarter points",
+   38,
+   25
+  ],
+  [
+   "Threes made",
+   19,
+   12
+  ],
+  [
+   "Blocks",
+   6,
+   3
+  ],
+  [
+   "Points in the paint",
+   36,
+   48
+  ]
+ ],
+ "battle_labels": [
+  "ORL",
+  "BKN"
+ ],
+ "top": [
+  [
+   "Franz Wagner",
+   "ORL",
+   "13 of 25, 7 assists, the winner",
+   35
+  ],
+  [
+   "Desmond Bane",
+   "ORL",
+   "7 of 13 from three, 5 steals",
+   21
+  ],
+  [
+   "Nikola Vučević",
+   "ORL",
+   "off the bench, 5 of 5, 3 threes",
+   15
+  ],
+  [
+   "Anthony Black",
+   "ORL",
+   "6 assists, 7 rebounds, 3 steals",
+   13
+  ]
+ ],
+ "linescore": {
+  "away": [
+   38,
+   24,
+   29,
+   22
+  ],
+  "home": [
+   25,
+   36,
+   27,
+   23
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-20-ORL-at-BKN.json",
+ "loser": {
+  "top": [
+   [
+    "Julius Randle",
+    "BKN",
+    "9 rebounds · 6 assists · 8 of 11 FT",
+    27
+   ],
+   [
+    "Danny Wolf",
+    "BKN",
+    "6 of 10 · 4 of 6 from three",
+    20
+   ],
+   [
+    "Mikel Brown Jr.",
+    "BKN",
+    "off the bench · 3 of 8 from three",
+    18
+   ]
+  ],
+  "source": "box score"
+ }
+}

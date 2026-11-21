@@ -1,0 +1,109 @@
+{
+ "headline": "Grimes' late three holds off Sacramento",
+ "dek": "The Lakers trailed by 11 in the third quarter, went ahead on Quentin Grimes’ three with 56 seconds left and held on by 2.",
+ "three": [
+  [
+   "Luka Dončić: 25 points and 8 assists in a 2-point win",
+   "9 of 18 from the floor, 5 of 6 at the line, 2 steals."
+  ],
+  [
+   "Lakers down 8 at the half, then won the second half 52–42",
+   "The Lakers’ bench outscored the Kings’ 34 to 5."
+  ],
+  [
+   "Won at the line and off the bench",
+   "Free throws made 17–9; bench points 34–5. L.A. made 17 free throws to Sacramento’s 9."
+  ]
+ ],
+ "battle": [
+  [
+   "Free throws made",
+   17,
+   9
+  ],
+  [
+   "Bench points",
+   34,
+   5
+  ],
+  [
+   "Points in the paint",
+   54,
+   50
+  ],
+  [
+   "Steals",
+   8,
+   6
+  ]
+ ],
+ "battle_labels": [
+  "LAL",
+  "SAC"
+ ],
+ "top": [
+  [
+   "Luka Dončić",
+   "LAL",
+   "8 ast, 2 steals",
+   25
+  ],
+  [
+   "Walker Kessler",
+   "LAL",
+   "7 reb, 3 blocks, 7 of 11",
+   15
+  ],
+  [
+   "Matisse Thybulle",
+   "LAL",
+   "4 of 5 from three",
+   14
+  ],
+  [
+   "Quentin Grimes",
+   "LAL",
+   "7 ast, the go-ahead three",
+   13
+  ]
+ ],
+ "linescore": {
+  "away": [
+   28,
+   34,
+   22,
+   20
+  ],
+  "home": [
+   28,
+   26,
+   28,
+   24
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-20-SAC-at-LAL.json",
+ "loser": {
+  "top": [
+   [
+    "De’Andre Hunter",
+    "SAC",
+    "season high · 5 of 6 from three",
+    30
+   ],
+   [
+    "Domantas Sabonis",
+    "SAC",
+    "16 rebounds",
+    19
+   ],
+   [
+    "Zach LaVine",
+    "SAC",
+    "7 rebounds · missed at the buzzer",
+    19
+   ]
+  ],
+  "source": "box score"
+ }
+}

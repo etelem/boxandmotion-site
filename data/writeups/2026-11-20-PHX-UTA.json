@@ -1,0 +1,109 @@
+{
+ "headline": "Suns go over .500 in Utah",
+ "dek": "Devin Booker scored 23, five Suns reached double figures, and Phoenix is over .500 for the first time this season.",
+ "three": [
+  [
+   "Devin Booker: 23 points in 38 minutes",
+   "9 of 22 from the floor and 4 of 6 at the line."
+  ],
+  [
+   "Suns up 12 at the half, held off a late 9–0 Utah run",
+   "Five Suns scored in double figures."
+  ],
+  [
+   "Won it off turnovers and on the break",
+   "Points off turnovers 19–9; fast-break points 17–5. Utah made 10 of 39 from three."
+  ]
+ ],
+ "battle": [
+  [
+   "Points off turnovers",
+   19,
+   9
+  ],
+  [
+   "Fast-break points",
+   17,
+   5
+  ],
+  [
+   "Assists",
+   26,
+   20
+  ],
+  [
+   "Second-chance points",
+   18,
+   24
+  ]
+ ],
+ "battle_labels": [
+  "PHX",
+  "UTA"
+ ],
+ "top": [
+  [
+   "Devin Booker",
+   "PHX",
+   "9 of 22, 4 of 6 FT",
+   23
+  ],
+  [
+   "Miles Bridges",
+   "PHX",
+   "7 of 12, 9 rebounds",
+   18
+  ],
+  [
+   "Dillon Brooks",
+   "PHX",
+   "7 of 14, 2 of 7 from three",
+   18
+  ],
+  [
+   "Collin Gillespie",
+   "PHX",
+   "3 of 7 from three, 5 assists",
+   16
+  ]
+ ],
+ "linescore": {
+  "away": [
+   26,
+   35,
+   28,
+   22
+  ],
+  "home": [
+   23,
+   26,
+   27,
+   25
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-20-PHX-at-UTA.json",
+ "loser": {
+  "top": [
+   [
+    "Darryn Peterson",
+    "UTA",
+    "10 rebounds · 8 assists",
+    20
+   ],
+   [
+    "Jaxson Hayes",
+    "UTA",
+    "14 rebounds · 7 of 8",
+    18
+   ],
+   [
+    "Brice Sensabaugh",
+    "UTA",
+    "5 of 7 from three",
+    18
+   ]
+  ],
+  "source": "box score"
+ }
+}
