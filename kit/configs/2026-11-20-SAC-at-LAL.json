@@ -1,0 +1,257 @@
+{
+ "team": "LAL",
+ "D": "  const D = {\n    date: 'Fri, Nov 20, 2026',\n    us: 106, them: 104, record: '14–3', usName: 'Lakers', themName: 'Kings',\n    quarters: [[28, 28], [26, 34], [28, 22], [24, 20]],\n    leadUs: 8, leadThem: 11,\n    star: {name: 'Luka Dončić', stats: [['Points', 25, 30], ['Rebounds', 4, 5], ['Assists', 8, 10]]},\n    scorers: [\n      {name: 'Luka Dončić', pts: 25, note: '8 ast · 2 steals'},\n      {name: 'Walker Kessler', pts: 15, note: '7 reb · 3 blocks · 7 of 11'},\n      {name: 'Matisse Thybulle', pts: 14, note: '4 of 5 from three'},\n      {name: 'Quentin Grimes', pts: 13, note: '7 ast · the go-ahead three'},\n      {name: 'Collin Sexton', pts: 10, note: 'off the bench · 4 of 7'},\n    ],\n    edges: [\n      {label: 'Free throws made', us: 17, them: 9},\n      {label: 'Bench points', us: 34, them: 5},\n      {label: 'Points in the paint', us: 54, them: 50},\n      {label: 'Steals', us: 8, them: 6},\n    ],\n    gaps: [\n      {label: 'Offensive rebounds', us: 9, them: 16},\n      {label: 'Points off turnovers', us: 20, them: 25},\n    ],\n    next: {opp: 'vs Jazz', when: 'Mon, Nov 23, 10:00 PM ET', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Quentin Grimes' 26-foot step-back 3-pointer off a pass from Matisse Thybulle with 56.3 seconds left that broke a 103–103 tie. An original illustration from written accounts; not traced from footage, not to scale.\n",
+  "head": "Grimes breaks the tie",
+  "subP": "Grimes from deep, 56 seconds left",
+  "subL": "Quentin Grimes from deep with 56 seconds left, tied 103–103",
+  "m0": "Tied",
+  "m1": "Lakers +3",
+  "num": "5",
+  "cap1": "Grimes’ step-back three. Lakers by 3.",
+  "cap2": "106–103: the Lakers’ last points of the night.",
+  "clock": [
+   61,
+   56
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Kings at Lakers Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Lakers 106, Kings 104 · Nov 20, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Kings at', 'Lakers'] : ['Kings at Lakers']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Down 11 in the third,', 'held on by 2.'] : ['The Lakers trailed by 11 in the third quarter, went ahead on Quentin Grimes’ three with 56 seconds left and held on by 2.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Lakers improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'10–1 in their last 11'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Lakers down 8 at the half,', 'won the second half 52–42'] : ['Lakers down 8 at the half, then won the second half 52–42']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Lakers ${D.leadUs}, Kings ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Lakers’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Luka: 25 and 8', 'in a 2-point win'] : ['Luka Dončić: 25 points and 8 assists in a 2-point win']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['9 of 18 from the floor,', '5 of 6 at the line.'] : ['9 of 18 from the floor, 5 of 6 at the line, 2 steals.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Lakers’ bench:', '34 points to 5'] : ['The Lakers’ bench outscored the Kings’ 34 to 5']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 30;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won at the line', 'and off the bench'] : ['Won at the line and off the bench']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Lakers in gold, Kings in gray. L.A.', 'made 17 free throws to 9.'] : ['Lakers in gold, Kings in gray. L.A. made 17 free throws to Sacramento’s 9.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'2nd in the West'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Jazz’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '3–13';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['Fifth straight home win over Sacramento.', 'Austin Reaves missed a fourth straight game.'] : ['Fifth straight home win over Sacramento. Austin Reaves missed a fourth straight game.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Lakers 106 · Kings 104 · Nov 20'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Grimes breaks the tie'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Luka'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 60;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - 375 * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+3', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 160, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 192, ly, D.themName"
+  ]
+ ],
+ "aria": "Animated recap of the Lakers' 106 to 104 home win over the Kings: Quentin Grimes' step-back 3-pointer with 56 seconds left that broke a 103 to 103 tie, quarter-by-quarter scoring, Luka Doncic's 25 points and 8 assists, the top scorers, how the Lakers won, and Monday's game against the Jazz.",
+ "figure": {
+  "player": "Quentin Grimes",
+  "home": true,
+  "tall": 0.9872,
+  "ape": 1.0357,
+  "mass": 0.9876,
+  "label": "Quentin Grimes, listed 6-5, 207 lb (Wikipedia, Basketball-Reference); 6-7.75 wingspan at the 2019 draft combine (Hoopsmatic)"
+ },
+ "loser_top": [
+  [
+   "De’Andre Hunter",
+   30,
+   "season high · 5 of 6 from three"
+  ],
+  [
+   "Domantas Sabonis",
+   19,
+   "16 rebounds"
+  ],
+  [
+   "Zach LaVine",
+   19,
+   "7 rebounds · missed at the buzzer"
+  ]
+ ],
+ "notes": [
+  "Box score from the Los Angeles Lakers' 106–104 home win over the Sacramento Kings on Nov 20, 2026, from the Covers.com box score, with the player lines checked against the Associated Press and Sportando, and game details from the AP (via ABC News and CBS Los Angeles), the Los Angeles Times (via Yahoo Sports), The Sporting Tribune (via Yahoo Sports), Sactown Sports, KMJ 580, basketball.com.au and Ball Exclusives (via Yardbarker). All 106 Los Angeles points and all 104 Sacramento points are accounted for in the box score, and the quarter scores (28–26–28–24 to 28–34–22–20) add up to both totals: 62–54 Sacramento at the half and 84–82 Sacramento after three (Los Angeles Times; KMJ). Team totals (free throws 17 of 22 to 9 of 12, offensive rebounds 9–16, steals 8–6), points in the paint (54–50) and the biggest leads (Los Angeles 8, Sacramento 11) are from the Covers.com box score; bench points (34–5) and points off turnovers (20–25) are from Sactown Sports, and the bench points match the box score. Records and ranks are from the site's standings after Friday's games.",
+  "Sacramento's biggest lead was 67–56 with 11:09 left in the third quarter (KMJ). Walker Kessler's first 3-pointer of the season early in the fourth put the Lakers ahead 85–84 (The Sporting Tribune; KMJ), and they led 101–93 with 4:50 left (KMJ) before the Kings scored eight straight to tie it on Domantas Sabonis' free throws with 2:32 left (AP). De’Andre Hunter's driving bank shot tied it again at 103 (The Sporting Tribune). Quentin Grimes' step-back three made it 106–103 with 56.3 seconds left (Los Angeles Times). Luka Dončić turned it over with 23 seconds left (AP; Los Angeles Times), Zach LaVine made 1 of 2 free throws to make it 106–104 (Ball Exclusives), Kessler missed two free throws with 5.3 seconds left (Los Angeles Times; AP), and LaVine's pull-up 3 missed off the front rim as time expired (Sactown Sports). Dončić had 25 points and 8 assists; Hunter scored a season-high 30 for Sacramento (AP). The Lakers are 10–1 in their last 11, it was their fifth straight home win over Sacramento, and Austin Reaves (left heel bruise) missed his fourth straight game (AP). The Kings have lost eight straight (AP). The Lakers host Utah on Monday (The Sporting Tribune) and the Kings host Boston on Saturday (AP).",
+  "The play of the game is an original illustration of Quentin Grimes' step-back 3-pointer off a pass from Matisse Thybulle with 56.3 seconds left in the fourth quarter that broke a 103–103 tie (the Los Angeles Times gives the step-back, the clock and the 106–103 score; basketball.com.au and Ball Exclusives give the pass from Thybulle and the 26-foot distance; the AP gives 57 seconds). It was his only 3-pointer of the game (box score; The Sporting Tribune). Where on the floor it came from isn't confirmed, and the step-back move itself is not drawn: it uses the template's plain pull-up three. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Los Angeles Lakers or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The shooter in the play of the game is drawn to Quentin Grimes' listed 6-foot-5 and 207 pounds with No. 5 (Wikipedia; Basketball-Reference) and a 6-foot-7.75 wingspan measured at the 2019 draft combine (Hoopsmatic). He is drawn in the Lakers' home white with the default figure (no look on the look sheet yet). It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "Covers.com: Kings vs Lakers game overview and player stats, Nov 20, 2026",
+   "https://www.covers.com/sport/basketball/nba/matchup/388230",
+   "box score, line score, team totals, points in the paint, biggest leads"
+  ],
+  [
+   "AP (via ABC News): Luka Doncic scores 25, Lakers barely hold off Kings 106-104 on LaVine's miss at the buzzer",
+   "https://abcnews.com/Sports/wireStory/luka-doncic-scores-25-lakers-barely-hold-off-138339335",
+   "8-0 Kings run, late sequence, Hunter's season high, streaks, Reaves, next games"
+  ],
+  [
+   "CBS Los Angeles (AP): Lakers barely hold off Kings behind Luka Doncic's 25 points",
+   "https://www.cbsnews.com/losangeles/news/luka-doncic-lakers-kings-nba-cup/",
+   "AP details check"
+  ],
+  [
+   "Los Angeles Times (via Yahoo Sports): Lakers hold off the Kings for a narrow win",
+   "https://sports.yahoo.com/articles/lakers-hold-off-kings-narrow-054045567.html",
+   "halftime and after-three scores, the play's clock and score, Kessler's free throws"
+  ],
+  [
+   "The Sporting Tribune (via Yahoo Sports): Lakers' win over Kings fueled by JJ Redick's halftime speech",
+   "https://sports.yahoo.com/articles/lakers-win-over-kings-fueled-065252754.html",
+   "Kessler's 3, Hunter's tying bank shot, Grimes' only three, Utah game"
+  ],
+  [
+   "Sactown Sports: Kings come one shot short in 106-104 loss to Lakers",
+   "https://sactownsports.com/nba/sacramento-kings/kings-lakers-106-104-nov-20",
+   "bench points, points off turnovers, LaVine's last shot"
+  ],
+  [
+   "KMJ 580: Lakers rally past Kings to avoid back-to-back losses",
+   "https://www.kmjnow.com/2026/11/20/lakers-rally-past-kings-to-avoid-back-to-back-losses/",
+   "biggest leads with clock times, halftime and after-three scores"
+  ],
+  [
+   "basketball.com.au: Matisse Thybulle sets up the shot that sinks the Kings",
+   "https://www.basketball.com.au/news/aussies-in-nba-results-november-21-2026-matisse-thybulle",
+   "Thybulle's pass, 26-foot step-back"
+  ],
+  [
+   "Ball Exclusives (via Yardbarker): Quentin Grimes hits go-ahead step-back three as Lakers edge Kings",
+   "https://www.yardbarker.com/nba/articles/watch_quentin_grimes_hits_go_ahead_step_back_three_as_lakers_edge_kings/s1_17668_44595231",
+   "Thybulle's pass, 26-foot three, LaVine's free throw"
+  ],
+  [
+   "Sportando: The Lakers edge the Kings 106-104 behind Dončić's 25 points",
+   "https://sportando.basketball/en/the-lakers-edge-the-kings-106-104-behind-doncics-25-points",
+   "box score check"
+  ],
+  [
+   "Wikipedia: Quentin Grimes",
+   "https://en.wikipedia.org/wiki/Quentin_Grimes",
+   "listed height, weight and number for the figure"
+  ],
+  [
+   "Basketball-Reference: Quentin Grimes",
+   "https://www.basketball-reference.com/players/g/grimequ01.html",
+   "listed height and weight (check)"
+  ],
+  [
+   "Hoopsmatic: Quentin Grimes, 2019 draft combine",
+   "https://hoopsmatic.com/prospect-database?player=quentin-grimes&season=2019",
+   "wingspan for the figure"
+  ]
+ ]
+}
