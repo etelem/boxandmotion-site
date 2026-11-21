@@ -1,6 +1,14 @@
 {
  "boards": [
   {
+   "config": "kit/boards/2026-11-15-NYK-at-TOR.json",
+   "anim": "knicks-brunson-corner-ato.html",
+   "published": "2026-11-21",
+   "coach_slug": "mike-brown",
+   "since": "2025",
+   "dek": "The overtime play out of a timeout that beat the Raptors, drawn on the board."
+  },
+  {
    "config": "kit/boards/2026-11-04-MIA-at-LAC.json",
    "anim": "heat-klay-corner-ato.html",
    "published": "2026-11-08",

@@ -1,0 +1,296 @@
+{
+  "slug": "knicks-brunson-corner-ato",
+  "team": "NYK",
+  "coach": "Mike Brown",
+  "game": "2026-11-15-knicks-at-raptors",
+  "kicker": "Coach's board · Mike Brown · Knicks",
+  "title": "Brunson's corner fadeaway",
+  "situation": "Knicks at Raptors · Nov 15 · overtime",
+  "aria": "Animated whiteboard of the Knicks' play out of a timeout in overtime at Toronto on Nov 15: tied 106-106 with 35 seconds left, Karl-Anthony Towns screens for Jalen Brunson, Brunson runs to the left corner, Mikal Bridges inbounds to him from under the basket and Brunson hits a fadeaway three with 33 seconds left. Positions are illustrative.",
+  "note": "Original illustration. Actions are from published game stories; spots on the floor and the unnamed players are illustrative.",
+  "total": 8.6,
+  "players": {
+    "1": {
+      "side": "o",
+      "num": 1,
+      "name": "Brunson",
+      "x": 3,
+      "y": 9
+    },
+    "2": {
+      "side": "o",
+      "num": 2,
+      "x": 18,
+      "y": 21
+    },
+    "3": {
+      "side": "o",
+      "num": 3,
+      "name": "Bridges",
+      "x": 5,
+      "y": -1.4
+    },
+    "4": {
+      "side": "o",
+      "num": 4,
+      "x": -15,
+      "y": 23
+    },
+    "5": {
+      "side": "o",
+      "num": 5,
+      "name": "Towns",
+      "x": -6,
+      "y": 10
+    },
+    "x1": {
+      "side": "d",
+      "x": 3.2,
+      "y": 7.2
+    },
+    "x2": {
+      "side": "d",
+      "x": 15.5,
+      "y": 19.5
+    },
+    "x3": {
+      "side": "d",
+      "x": 4.4,
+      "y": 2.6
+    },
+    "x4": {
+      "side": "d",
+      "x": -13,
+      "y": 21
+    },
+    "x5": {
+      "side": "d",
+      "x": -5.6,
+      "y": 7.8
+    }
+  },
+  "ball": "3",
+  "actions": [
+    {
+      "type": "move",
+      "who": "5",
+      "t": [
+        0.9,
+        1.8
+      ],
+      "path": [
+        [
+          -6,
+          10
+        ],
+        [
+          -3.5,
+          9.2
+        ],
+        [
+          -1.2,
+          8.6
+        ]
+      ]
+    },
+    {
+      "type": "move",
+      "who": "x5",
+      "trail": false,
+      "t": [
+        0.9,
+        1.8
+      ],
+      "path": [
+        [
+          -5.6,
+          7.8
+        ],
+        [
+          -3.6,
+          6.6
+        ]
+      ]
+    },
+    {
+      "type": "screen",
+      "who": "5",
+      "t": [
+        1.8,
+        3.0
+      ],
+      "angle": 70
+    },
+    {
+      "type": "move",
+      "who": "1",
+      "key": true,
+      "t": [
+        1.9,
+        3.5
+      ],
+      "path": [
+        [
+          3,
+          9
+        ],
+        [
+          1.2,
+          11.2
+        ],
+        [
+          -3.2,
+          11.4
+        ],
+        [
+          -8.5,
+          8.6
+        ],
+        [
+          -15,
+          5.2
+        ],
+        [
+          -21.6,
+          3.0
+        ]
+      ]
+    },
+    {
+      "type": "move",
+      "who": "x1",
+      "trail": false,
+      "t": [
+        1.95,
+        2.9
+      ],
+      "path": [
+        [
+          3.2,
+          7.2
+        ],
+        [
+          0.8,
+          8.6
+        ],
+        [
+          -0.4,
+          8.3
+        ]
+      ]
+    },
+    {
+      "type": "move",
+      "who": "x1",
+      "trail": false,
+      "t": [
+        2.95,
+        4.2
+      ],
+      "path": [
+        [
+          -0.4,
+          8.3
+        ],
+        [
+          -6.5,
+          6.8
+        ],
+        [
+          -12.5,
+          5.2
+        ],
+        [
+          -17.6,
+          4.2
+        ]
+      ]
+    },
+    {
+      "type": "pass",
+      "from": "3",
+      "to": "1",
+      "t": [
+        3.5,
+        4.0
+      ]
+    },
+    {
+      "type": "shot",
+      "who": "1",
+      "t": [
+        4.3,
+        5.6
+      ]
+    }
+  ],
+  "beats": [
+    {
+      "t": 0,
+      "title": "The timeout",
+      "text": "Tied 106–106 in overtime, 35 seconds left. The Knicks take a timeout."
+    },
+    {
+      "t": 0.9,
+      "title": "The screen",
+      "text": "Towns steps up and screens for Brunson."
+    },
+    {
+      "t": 1.9,
+      "title": "The run",
+      "text": "Brunson comes off it and runs to the left corner."
+    },
+    {
+      "t": 3.5,
+      "title": "The inbound",
+      "text": "Bridges finds him from under the basket."
+    },
+    {
+      "t": 4.3,
+      "title": "The fadeaway",
+      "text": "Brunson fades away and hits the three. Knicks by 3, and they win 112–108."
+    }
+  ],
+  "clock": {
+    "start": 35.0,
+    "run": 4.0,
+    "stop": 5.6,
+    "end": 33.4
+  },
+  "score": {
+    "before": "NYK 106 · TOR 106",
+    "after": "NYK 109 · TOR 106",
+    "at": 5.6
+  },
+  "final": "Knicks 112, Raptors 108 (OT)",
+  "sources": [
+    [
+      "Knicks.City: the play out of a timeout, Towns' screens, Bridges' pass, the corner shot, 106–106 to 109–106",
+      "https://www.knicks.city/2026-27/brunson-3-in-ot-completes-knick-comeback-win-ny-112-toronto-108/"
+    ],
+    [
+      "Field Level Media (via Reuters, Fastbreak): the timeout, Bridges' inbounds pass from under the basket, left corner",
+      "https://fastbreak.com.ph/jalen-brunsons-late-ot-trey-caps-knicks-rally-past-raptors/sports-galore/"
+    ],
+    [
+      "EssentiallySports (via Yardbarker): inbounds play, Towns' screen for Brunson, fadeaway from the left corner, 33.4 seconds, 109–106",
+      "https://www.yardbarker.com/nba/articles/jalen_brunson_sends_3_word_message_to_referee_tony_brothers_over_controversial_call_moments_before_game_winning_dagger/s1_17730_44567989"
+    ],
+    [
+      "AP (via CBS New York): tiebreaking three with 33 seconds left in overtime, 112–108",
+      "https://www.cbsnews.com/newyork/news/new-york-knicks-toronto-raptors-jalen-brunson-karl-anthony-towns/"
+    ],
+    [
+      "Raptors Nation: 33 seconds left in overtime, final score",
+      "https://raptorsnation.com/2026/11/16/jalen-brunson-hits-overtime-three-as-knicks-rally-past-raptors-112-108/"
+    ],
+    [
+      "CBS Sports play-by-play: timeout, clock and score (read by the Nov 15 recap run)",
+      "https://www.cbssports.com/nba/gametracker/boxscore/NBA_20261115_NY@TOR/"
+    ],
+    [
+      "Mike Brown hired as Knicks head coach, July 2025: ABC7 New York",
+      "https://abc7ny.com/post/new-york-knicks-officially-hire-mike-brown-head-coach/17018607/"
+    ]
+  ]
+}
