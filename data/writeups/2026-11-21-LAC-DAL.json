@@ -1,0 +1,103 @@
+{
+ "headline": "Irving's 12 in the fourth carry Dallas",
+ "dek": "Kyrie Irving scored 25, 12 of them in the fourth, and Dallas pulled away with an 11–0 run in 69 seconds.",
+ "three": [
+  [
+   "Kyrie Irving: 25 points, 12 in the fourth",
+   "He opened 1 of 7 from the floor, then scored 12 in the fourth quarter."
+  ],
+  [
+   "Mavericks up 8 at the half, pulled away late with an 11–0 run",
+   "Irving and Flagg combined for 47 of 110."
+  ],
+  [
+   "Won it on the break and off turnovers",
+   "Fast-break points 22–12; points off turnovers 22–13. Dallas had 10 steals to L.A.’s 6."
+  ]
+ ],
+ "battle": [
+  [
+   "Fast-break points",
+   22,
+   12
+  ],
+  [
+   "Points off turnovers",
+   22,
+   13
+  ],
+  [
+   "Points in the paint",
+   40,
+   32
+  ],
+  [
+   "Steals",
+   10,
+   6
+  ]
+ ],
+ "battle_labels": [
+  "DAL",
+  "LAC"
+ ],
+ "top": [
+  [
+   "Kyrie Irving",
+   "DAL",
+   "12 in the fourth quarter",
+   25
+  ],
+  [
+   "Cooper Flagg",
+   "DAL",
+   "8 assists, 6 rebounds",
+   22
+  ],
+  [
+   "Walter Clayton Jr.",
+   "DAL",
+   "off the bench, 5 of 8",
+   16
+  ],
+  [
+   "Max Christie",
+   "DAL",
+   "off the bench, 3 of 4 from three",
+   13
+  ]
+ ],
+ "linescore": {
+  "away": [
+   26,
+   18,
+   30,
+   26
+  ],
+  "home": [
+   23,
+   29,
+   26,
+   32
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-21-LAC-at-DAL.json",
+ "loser": {
+  "top": [
+   [
+    "Brook Lopez",
+    "LAC",
+    "17 in the second half · 8 of 15",
+    21
+   ],
+   [
+    "Rui Hachimura",
+    "LAC",
+    "4 of 5 from three · 8 rebounds",
+    19
+   ]
+  ],
+  "source": "box score"
+ }
+}

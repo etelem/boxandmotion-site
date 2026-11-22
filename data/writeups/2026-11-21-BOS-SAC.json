@@ -1,0 +1,103 @@
+{
+ "headline": "Murray's tip-in with 5 seconds left wins it",
+ "dek": "Keegan Murray’s tip-in with 5 seconds left won it after Sacramento trailed by 13 at the half.",
+ "three": [
+  [
+   "Darius Acuff Jr.: 21 points and 8 assists",
+   "9 points in the fourth quarter and 5 of 7 at the line."
+  ],
+  [
+   "Kings trailed 54–41 at the half, then won the third quarter 35–13",
+   "All five Kings starters scored in double figures."
+  ],
+  [
+   "Won it at the line and in the third quarter",
+   "Free throws made 26–15; field goal % 41–34. Boston missed 45 of its 58 threes."
+  ]
+ ],
+ "battle": [
+  [
+   "Free throws made",
+   26,
+   15
+  ],
+  [
+   "Field goal %",
+   41,
+   34
+  ],
+  [
+   "Blocks",
+   5,
+   4
+  ],
+  [
+   "Threes made",
+   7,
+   13
+  ]
+ ],
+ "battle_labels": [
+  "SAC",
+  "BOS"
+ ],
+ "top": [
+  [
+   "Darius Acuff Jr.",
+   "SAC",
+   "8 assists, 9 in the fourth",
+   21
+  ],
+  [
+   "Domantas Sabonis",
+   "SAC",
+   "17 rebounds, 4 assists",
+   15
+  ],
+  [
+   "Keegan Murray",
+   "SAC",
+   "the winning tip-in, 12 rebounds",
+   15
+  ],
+  [
+   "Zach LaVine",
+   "SAC",
+   "4 of 10, 2 of 3 from three",
+   13
+  ]
+ ],
+ "linescore": {
+  "away": [
+   27,
+   27,
+   13,
+   29
+  ],
+  "home": [
+   25,
+   16,
+   35,
+   21
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-21-BOS-at-SAC.json",
+ "loser": {
+  "top": [
+   [
+    "Paul George",
+    "BOS",
+    "8 rebounds · 4 steals",
+    19
+   ],
+   [
+    "Mike Conley",
+    "BOS",
+    "6 of 7 · 4 of 4 from three",
+    19
+   ]
+  ],
+  "source": "box score"
+ }
+}

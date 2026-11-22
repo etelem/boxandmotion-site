@@ -1,0 +1,48 @@
+{
+  "out": "short-2026-11-21-LAC-DAL.html",
+  "team": "DAL",
+  "home": true,
+  "number": "11",
+  "player": "Kyrie Irving",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 0.9487,
+    "ape": 1.027,
+    "mass": 0.978
+  },
+  "build_note": "Listed 6-2, 195 lb (Basketball-Reference, Wikipedia); 6-4 wingspan (2011 combine, Tankathon)",
+  "kicker": "MAVERICKS 110 · CLIPPERS 100 · NOV 21",
+  "hook": [
+    "Kyrie Irving's",
+    "26-foot pull-up"
+  ],
+  "clock": "Q4 · 3:30",
+  "margins": [
+    "Mavericks +9",
+    "Mavericks +12"
+  ],
+  "stamp": "THREE",
+  "beat": [
+    "Mavericks by 12, 3:30 left.",
+    "An 11–0 run in 69 seconds."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Mavericks",
+    "them": "Clippers",
+    "us_pts": 110,
+    "them_pts": 100
+  },
+  "star": {
+    "name": "Kyrie Irving",
+    "big": 25,
+    "big_label": "points, 12 in the fourth",
+    "lines": [
+      "Started 1 of 7 from the floor",
+      "Cooper Flagg: 22 points, 8 assists"
+    ]
+  },
+  "story": "Up 4 after three, Dallas scored 11 straight in 69 seconds and won 110–100.",
+  "aria": "Animated Short: Kyrie Irving's 26-foot pull-up three in transition with 3:30 left, after a Daniel Gafford steal, that made it 100–88 during an 11–0 Dallas run. Mavericks win 110–100. An original illustration, not traced from footage, not to scale."
+}
