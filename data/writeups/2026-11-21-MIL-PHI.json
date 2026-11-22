@@ -1,0 +1,103 @@
+{
+ "headline": "Embiid and LeBron hold off Herro’s 50",
+ "dek": "Joel Embiid had 26 points, 17 rebounds and 9 assists. Tyler Herro’s 50 fell short.",
+ "three": [
+  [
+   "Embiid: 26 points, 17 rebounds, 9 assists",
+   "A season-high 17 rebounds, one assist shy of a triple-double."
+  ],
+  [
+   "76ers up 1 at the half, then won the third quarter 38–33",
+   "Embiid and LeBron combined for 47 of 132."
+  ],
+  [
+   "Won it at the line and in the third quarter",
+   "Free throws made 33–17; assists 33–25. Philadelphia made 33 of 37 free throws."
+  ]
+ ],
+ "battle": [
+  [
+   "Free throws made",
+   33,
+   17
+  ],
+  [
+   "Assists",
+   33,
+   25
+  ],
+  [
+   "Field goal %",
+   51,
+   48
+  ],
+  [
+   "Steals",
+   5,
+   3
+  ]
+ ],
+ "battle_labels": [
+  "PHI",
+  "MIL"
+ ],
+ "top": [
+  [
+   "Joel Embiid",
+   "PHI",
+   "17 reb, 9 ast, 12 of 14 FT",
+   26
+  ],
+  [
+   "LeBron James",
+   "PHI",
+   "13 in the fourth, 9 of 14",
+   21
+  ],
+  [
+   "Anfernee Simons",
+   "PHI",
+   "off the bench, 4 threes",
+   18
+  ],
+  [
+   "Tyrese Maxey",
+   "PHI",
+   "9 of 10 at the line",
+   17
+  ]
+ ],
+ "linescore": {
+  "away": [
+   30,
+   29,
+   33,
+   37
+  ],
+  "home": [
+   29,
+   31,
+   38,
+   34
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-21-MIL-at-PHI.json",
+ "loser": {
+  "top": [
+   [
+    "Tyler Herro",
+    "MIL",
+    "career high · 11 reb · 7 of 12 from three",
+    50
+   ],
+   [
+    "Brayden Burries",
+    "MIL",
+    "12 of 20 · 8 rebounds",
+    26
+   ]
+  ],
+  "source": "box score"
+ }
+}

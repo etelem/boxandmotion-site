@@ -1,0 +1,103 @@
+{
+ "headline": "McDaniels’ 25 sinks short-handed Memphis",
+ "dek": "Jaden McDaniels scored 25 and Minnesota won the second quarter 28–12.",
+ "three": [
+  [
+   "McDaniels: 25 points on 11 of 17",
+   "He led the way with Anthony Edwards out injured."
+  ],
+  [
+   "Timberwolves up 10 at the half after a 26–6 run",
+   "McDaniels and Dosunmu combined for 44 of 104."
+  ],
+  [
+   "Won the second quarter and won in the paint",
+   "Second-quarter points 28–12; field goal % 58–43. Minnesota shot a season-high 58% from the field."
+  ]
+ ],
+ "battle": [
+  [
+   "Second-quarter points",
+   28,
+   12
+  ],
+  [
+   "Field goal %",
+   58,
+   43
+  ],
+  [
+   "Points in the paint",
+   60,
+   52
+  ],
+  [
+   "Blocks",
+   8,
+   4
+  ]
+ ],
+ "battle_labels": [
+  "MIN",
+  "MEM"
+ ],
+ "top": [
+  [
+   "Jaden McDaniels",
+   "MIN",
+   "11 of 17 from the floor",
+   25
+  ],
+  [
+   "Ayo Dosunmu",
+   "MIN",
+   "9 of 14, 3 steals",
+   19
+  ],
+  [
+   "Jonathan Kuminga",
+   "MIN",
+   "6 of 9 from the floor",
+   16
+  ],
+  [
+   "Terrence Shannon Jr.",
+   "MIN",
+   "off the bench, 3 threes",
+   15
+  ]
+ ],
+ "linescore": {
+  "away": [
+   34,
+   12,
+   16,
+   33
+  ],
+  "home": [
+   28,
+   28,
+   27,
+   21
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-21-MEM-at-MIN.json",
+ "loser": {
+  "top": [
+   [
+    "Cedric Coward",
+    "MEM",
+    "ties season high · 4 steals",
+    23
+   ],
+   [
+    "Ty Jerome",
+    "MEM",
+    "back from four missed games",
+    18
+   ]
+  ],
+  "source": "box score"
+ }
+}

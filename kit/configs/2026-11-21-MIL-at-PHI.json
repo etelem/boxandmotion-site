@@ -1,0 +1,224 @@
+{
+ "team": "PHI",
+ "D": "  const D = {\n    date: 'Sat, Nov 21, 2026',\n    us: 132, them: 129, record: '14–3', usName: '76ers', themName: 'Bucks',\n    quarters: [[29, 30], [31, 29], [38, 33], [34, 37]],\n    leadUs: 13, leadThem: 7,\n    star: {name: 'Joel Embiid', stats: [['Points', 26, 30], ['Rebounds (season high)', 17, 20], ['Assists', 9, 10]]},\n    scorers: [\n      {name: 'Joel Embiid', pts: 26, note: '17 reb · 9 ast · 12 of 14 FT'},\n      {name: 'LeBron James', pts: 21, note: '13 in the fourth · 9 of 14'},\n      {name: 'Anfernee Simons', pts: 18, note: 'off the bench · 4 threes'},\n      {name: 'Tyrese Maxey', pts: 17, note: '9 of 10 at the line'},\n      {name: 'VJ Edgecombe', pts: 16, note: '6 assists · 5 of 5 FT'},\n    ],\n    edges: [\n      {label: 'Free throws made', us: 33, them: 17},\n      {label: 'Assists', us: 33, them: 25},\n      {label: 'Field goal %', us: 51, them: 48},\n      {label: 'Steals', us: 5, them: 3},\n    ],\n    gaps: [\n      {label: 'Threes made', us: 9, them: 16},\n      {label: 'Offensive rebounds', us: 7, them: 15},\n      {label: 'Blocks', us: 4, them: 8},\n    ],\n    next: {opp: 'vs Trail Blazers', when: 'Mon, Nov 23, 7:00 PM ET', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Joel Embiid's two free throws with 1.5 seconds left that made it 132–129, after Brayden Burries' step-back three had cut Philadelphia's lead to 130–129. An original illustration from written accounts; not traced from footage, not to scale.\n",
+  "head": "Embiid seals it",
+  "subP": "Embiid at the line, 1.5 left",
+  "subL": "Joel Embiid at the line, up 130–129 with 1.5 seconds left",
+  "m0": "76ers +1",
+  "m1": "76ers +3",
+  "num": "21",
+  "cap1": "Embiid makes both. 76ers by 3.",
+  "cap2": "Herro’s tying three came after the buzzer.",
+  "clock": [
+   5,
+   1
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Bucks at 76ers Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">76ers 132, Bucks 129 · Nov 21, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Bucks at', '76ers'] : ['Bucks at 76ers']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Embiid: 26, 17 and 9.', 'Herro’s 50 fell short.'] : ['Joel Embiid had 26 points, 17 rebounds and 9 assists. Tyler Herro’s 50 fell short.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`76ers improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Fifth straight win'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['76ers up 1 at the half,', 'won the third 38–33'] : ['76ers up 1 at the half, then won the third quarter 38–33']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "76ers ${D.leadUs}, Bucks ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "76ers’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Embiid: 26,', '17 and 9 assists'] : ['Embiid: 26 points, 17 rebounds, 9 assists']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['A season-high 17 boards,', 'one assist from a triple-double.'] : ['A season-high 17 rebounds, one assist shy of a triple-double.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Embiid and LeBron:', '47 of the 132'] : ['Embiid and LeBron combined for 47 of 132']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 30;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it at the line', 'and in the third'] : ['Won it at the line and in the third quarter']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['76ers in blue, Bucks in gray. Philly', 'made 33 of 37 free throws.'] : ['76ers in blue, Bucks in gray. Philadelphia made 33 of 37 free throws.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'1st in the East'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Trail Blazers’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '10–6';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['Jaylen Brown sat a second', 'straight game (hamstring).'] : ['Jaylen Brown missed a second straight game with a hamstring strain.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'76ers 132 · Bucks 129 · Nov 21'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Embiid seals it'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Embiid'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 60;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - 190 * k, startX = shotX;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 190 * k, x2: hoopX - 190 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 190 * k, floor + 56 * k + 10, 'Free-throw line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0;"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+2', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 12 * up : 12 * (1 - down * down);"
+  ],
+  [
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+   "qClock.textContent = '1.5';"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 160, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 192, ly, D.themName"
+  ]
+ ],
+ "aria": "Animated recap of the 76ers' 132 to 129 home win over the Bucks: Joel Embiid's two free throws with 1.5 seconds left that made it 132 to 129, quarter-by-quarter scoring, Embiid's 26 points, 17 rebounds and 9 assists, the top scorers, how the 76ers won, and Monday's game against the Trail Blazers.",
+ "figure": {
+  "player": "Joel Embiid",
+  "home": true,
+  "tall": 1.0769,
+  "ape": 1.0685,
+  "mass": 1.0799,
+  "label": "Joel Embiid, listed 7-0, 270 lb, 7-5.75 wingspan (pre-draft)"
+ },
+ "loser_top": [
+  [
+   "Tyler Herro",
+   50,
+   "career high · 11 reb · 7 of 12 from three"
+  ],
+  [
+   "Brayden Burries",
+   26,
+   "12 of 20 · 8 rebounds"
+  ]
+ ],
+ "notes": [
+  "Box score from the Philadelphia 76ers' 132–129 home win over the Milwaukee Bucks on Saturday, Nov 21, 2026, from the SI box score and play-by-play, checked line by line against the Covers.com box score, with the final and line score also checked against the CBS Sports gametracker, and game details from the Associated Press and the Bucks and 76ers On SI sites. All 132 Philadelphia points and all 129 Milwaukee points are accounted for in the box score, and the quarter scores (29–31–38–34 to 30–29–33–37) add up to both totals: 60–59 Philadelphia at the half and 98–92 after three. Team totals (free throws 33 of 37 to 17 of 18, threes 9 of 28 to 16 of 44, assists 33–25, steals 5–3, blocks 4–8, offensive rebounds 7–15) and the biggest leads (Philadelphia 13, Milwaukee 7) are from the Covers.com box score; the SI play-by-play shows the 13-point lead at 86–73, 88–75 and 91–78 in the third quarter and Milwaukee's 7-point leads at 15–8 and 59–52 in the first half. Records and ranks are from the site's standings after Saturday's games (14–3, 1st in the East; the Trail Blazers 10–6).",
+  "Philadelphia trailed by as many as seven in the first half and took the lead for good at 71–70 on a Tyrese Maxey driving layup with just over seven minutes left in the third; Anfernee Simons then scored eight straight points to push the lead to double digits (AP). LeBron James scored 13 of his 21 in the fourth quarter (AP), including a driving bank shot at 3:13 that made it 125–115 (SI play-by-play). Milwaukee came back from 10 down in the last two minutes: Brayden Burries' running dunk made it 128–124 with 46 seconds left and Tyler Herro's layup 128–126 with 19.2 seconds left; after two Embiid free throws (130–126), Burries' step-back three made it 130–129 with 4.8 seconds left (AP; SI play-by-play). Embiid had 26 points, a season-high 17 rebounds and 9 assists, one assist shy of a triple-double (box score; 76ers On SI). Dominick Barlow scored 12 in his first game after missing the first 16 with a lower-back injury, and Jaylen Brown missed a second straight game with a hamstring strain (AP). Philadelphia has won five straight; Milwaukee has lost 13 straight (AP; Bucks On SI). The 76ers host Portland on Monday and the Bucks play at Toronto on Monday (AP).",
+  "On Milwaukee's side, Tyler Herro scored a career-high 50 (his previous best was 41) on 15-of-23 shooting, 7 of 12 from three and 13 of 13 at the line, with 11 rebounds and 7 assists (box score; AP; Bucks On SI). His three to tie it went in but was released after the buzzer, the officials ruled on review (AP; Bucks On SI). Burries added 26 on 12-of-20 shooting with 8 rebounds (box score).",
+  "The play of the game is an original illustration of Joel Embiid's two free throws with 1.5 seconds left that made it 132–129 (AP gives 1.5 seconds; the SI play-by-play shows both makes at 0:01 and the score 129–132 after them). The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Philadelphia 76ers or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The player in the play of the game is drawn to Joel Embiid's listed 7-foot and 270 pounds with No. 21 (RealGM), arms scaled to the 7-foot-5.75 wingspan measured before the 2014 draft (theScore; RealGM), in Philadelphia's home white with his look from kit/looks.json. It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "SI: Milwaukee Bucks vs Philadelphia 76ers box score and play-by-play, Nov 21, 2026",
+   "https://www.si.com/nba/scoreboard/bucks-vs-76ers-11-21-2026-1726",
+   "box score, line score, play-by-play: the late sequence, the play's clock and score, biggest-lead moments"
+  ],
+  [
+   "Covers.com: Bucks vs 76ers game overview and player stats, Nov 21, 2026",
+   "https://www.covers.com/sport/basketball/nba/matchup/388760",
+   "box score check, team totals, rebounds, biggest leads"
+  ],
+  [
+   "CBS Sports: Bucks vs. 76ers gametracker, Nov 21, 2026",
+   "https://www.cbssports.com/nba/gametracker/boxscore/NBA_20261121_MIL@PHI/",
+   "final and line score check, team rebounds"
+  ],
+  [
+   "AP (via myMotherLode): Joel Embiid, LeBron James lead Eastern Conference-leading 76ers past the Bucks 132-129",
+   "https://mymotherlode.com/sports/basketball-game-stories/11329716/joel-embiid-lebron-james-lead-eastern-conference-leading-76ers-past-the-bucks-132-129.html",
+   "1.5 seconds left, the late sequence, LeBron's 13 in the fourth, Simons' eight straight, Herro's career high, Barlow, Brown, streaks, next games"
+  ],
+  [
+   "Bucks On SI: 50?! Tyler Herro Drops Historic Performance, But Bucks Fall Short Against 76ers",
+   "https://www.si.com/nba/bucks/onsi/50-tyler-herro-drops-historic-performance-but-bucks-fall-short-against-76ers-01m7zy8bkt54",
+   "Herro's line, the tying three ruled after the buzzer, 13 straight losses"
+  ],
+  [
+   "76ers On SI: 3 Studs and 1 Dud for 76ers in Way-Too-Close Win vs. Bucks",
+   "https://www.si.com/nba/76ers/onsi/3-studs-and-1-dud-76ers-way-too-close-win-vs-bucks-01m7zqy3tmpq",
+   "14-3, fifth straight win, Embiid's season-high 17 rebounds and one assist shy of a triple-double"
+  ],
+  [
+   "theScore: Joel Embiid, Andrew Wiggins and Jabari Parker's measurements released",
+   "https://www.thescore.com/nba/news/508577",
+   "wingspan for the figure"
+  ],
+  [
+   "RealGM: Embiid measures 7'1 in shoes",
+   "https://basketball.realgm.com/wiretap-amp/233575/Embiid-Measures-71",
+   "wingspan check for the figure"
+  ]
+ ]
+}

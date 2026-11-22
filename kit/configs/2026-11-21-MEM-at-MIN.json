@@ -1,0 +1,216 @@
+{
+ "team": "MIN",
+ "D": "  const D = {\n    date: 'Sat, Nov 21, 2026',\n    us: 104, them: 95, record: '12–5', usName: 'Timberwolves', themName: 'Grizzlies',\n    quarters: [[28, 34], [28, 12], [27, 16], [21, 33]],\n    leadUs: 23, leadThem: 11,\n    star: {name: 'Jaden McDaniels', stats: [['Points', 25, 30], ['Rebounds', 5, 10], ['Assists', 4, 5]]},\n    scorers: [\n      {name: 'Jaden McDaniels', pts: 25, note: '11 of 17 from the floor'},\n      {name: 'Ayo Dosunmu', pts: 19, note: '9 of 14 · 3 steals'},\n      {name: 'Jonathan Kuminga', pts: 16, note: '6 of 9 from the floor'},\n      {name: 'Terrence Shannon Jr.', pts: 15, note: 'off the bench · 3 threes'},\n      {name: 'LaMelo Ball', pts: 12, note: '7 assists'},\n    ],\n    edges: [\n      {label: 'Second-quarter points', us: 28, them: 12},\n      {label: 'Field goal %', us: 58, them: 43},\n      {label: 'Points in the paint', us: 60, them: 52},\n      {label: 'Blocks', us: 8, them: 4},\n    ],\n    gaps: [\n      {label: 'Fourth-quarter points', us: 21, them: 33},\n      {label: 'Steals', us: 8, them: 14},\n    ],\n    next: {opp: 'vs Nets', when: 'Mon, Nov 23, 7:30 PM ET', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Ayo Dosunmu's driving layup with 21 seconds left in the third quarter that made it 83–62, capping a stretch in which Minnesota scored 14 of the quarter's final 16 points. An original illustration from written accounts; not traced from footage, not to scale.\n",
+  "head": "Dosunmu caps the run",
+  "subP": "Dosunmu drives, 21 seconds left in the third",
+  "subL": "Ayo Dosunmu on the drive, 21 seconds left in the third",
+  "m0": "Wolves +19",
+  "m1": "Wolves +21",
+  "num": "",
+  "cap1": "Dosunmu’s layup. Timberwolves by 21.",
+  "cap2": "14 of the last 16 points of the third.",
+  "clock": [
+   25,
+   21
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Grizzlies at Timberwolves Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Timberwolves 104, Grizzlies 95 · Nov 21, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Grizzlies at', 'Timberwolves'] : ['Grizzlies at Timberwolves']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['McDaniels scored 25.', 'Minnesota won the second 28–12.'] : ['Jaden McDaniels scored 25 and Minnesota won the second quarter 28–12.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Timberwolves improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Won 3 of their last 4'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Timberwolves up 10 at the half', 'after a 26–6 run'] : ['Timberwolves up 10 at the half after a 26–6 run']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Timberwolves ${D.leadUs}, Grizzlies ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Timberwolves’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['McDaniels: 25', 'on 11 of 17'] : ['McDaniels: 25 points on 11 of 17']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['He led the way with', 'Anthony Edwards out.'] : ['He led the way with Anthony Edwards out injured.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['McDaniels and Dosunmu:', '44 of the 104'] : ['McDaniels and Dosunmu combined for 44 of 104']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 30;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won the second quarter', 'and in the paint'] : ['Won the second quarter and won in the paint']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Timberwolves in blue, Grizzlies in gray.', 'Minnesota shot a season-high 58%.'] : ['Timberwolves in blue, Grizzlies in gray. Minnesota shot a season-high 58% from the field.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'3rd in the West'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Nets’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '3–12';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['Memphis’ first road loss', 'in nine games this season.'] : ['Handed Memphis its first road loss in nine games this season.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Timberwolves 104 · Grizzlies 95 · Nov 21'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Dosunmu caps the run'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'McDaniels'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 70;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - (P ? 170 : 200) * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+2', 'd w', 72, 'end');"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 165 * k, shotX + 118 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q3', 'b m', 24);"
+  ],
+  [
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 262, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 294, ly, D.themName"
+  ]
+ ],
+ "aria": "Animated recap of the Timberwolves' 104 to 95 home win over the Grizzlies: Ayo Dosunmu's driving layup with 21 seconds left in the third quarter that made it 83 to 62, quarter-by-quarter scoring, Jaden McDaniels' 25 points, the top scorers, how the Timberwolves won, and Monday's game against the Nets.",
+ "figure": {
+  "player": "Ayo Dosunmu",
+  "home": true,
+  "tall": 0.9872,
+  "ape": 1.0682,
+  "mass": 0.957,
+  "label": "Ayo Dosunmu, 6-5 in shoes, 194 lb, 6-10¼ wingspan (2021 draft combine)"
+ },
+ "loser_top": [
+  [
+   "Cedric Coward",
+   23,
+   "ties season high · 4 steals"
+  ],
+  [
+   "Ty Jerome",
+   18,
+   "back from four missed games"
+  ]
+ ],
+ "notes": [
+  "Box score from the Minnesota Timberwolves' 104–95 home win over the Memphis Grizzlies on Saturday, Nov 21, 2026, from the Covers.com box score, checked player by player against the CBS Sports gametracker box score, with game details from the Associated Press (via myMotherLode and CBS Sports), Field Level Media and the Grizzlies and Timberwolves On SI sites. All 104 Minnesota points and all 95 Memphis points are accounted for in the box score, and the quarter scores (28–28–27–21 to 34–12–16–33) add up to both totals: 56–46 Minnesota at the half and 83–62 after three. Team totals (field goals 43 of 74 to 38 of 89, blocks 8–4, steals 8–14), points in the paint (60–52) and the biggest leads (Minnesota 23, Memphis 11) are from the Covers.com box score; AP says Memphis was down 23 early in the fourth and Field Level Media that Memphis led by as many as 11 in the first quarter. Second- and fourth-quarter points are from the line score. Records and ranks are from the site's standings after Saturday's games (12–5, 3rd in the West; the Nets 3–12).",
+  "Down 11 early in the second quarter, Minnesota went on a 26–6 run capped by a Rudy Gobert dunk off a missed LaMelo Ball free throw and led 56–46 at the half after winning the quarter 28–12 (AP; Field Level Media). Ayo Dosunmu had three driving layups as Minnesota scored 14 of the final 16 points of the third quarter (AP), the last of them with 21 seconds left for 83–62 (Field Level Media). Memphis cut a 23-point deficit to 97–90 on Cedric Coward's three with 2:37 left before Jaden McDaniels answered with back-to-back layups (AP; Field Level Media). McDaniels had 25 on 11-of-17 shooting (box score; Field Level Media), and Minnesota shot a season-high 58% (AP). Anthony Edwards was out injured (AP). Minnesota has won three of four (AP) and eight of its past 10 (Field Level Media); Memphis lost for the first time in six games and for the first time on the road in nine games, with season lows for points in a quarter (12), a half (46) and a game (AP). The Timberwolves host Brooklyn on Monday and the Grizzlies play at Charlotte on Monday (AP).",
+  "On Memphis' side, Cedric Coward tied his season high with 23 points (8 of 16, 4 of 7 from three) with 7 rebounds and 4 steals, and Ty Jerome scored 18 in his first game back after missing four with a right hip impingement (box score; AP; Grizzlies On SI). Memphis was without Cam Boozer (right ankle sprain) and Jerami Grant (left calf strain) (AP).",
+  "The play of the game is an original illustration of Ayo Dosunmu's layup with 21 seconds left in the third quarter that made it 83–62 (Field Level Media); AP describes his three layups in that closing stretch as driving layups, so it is drawn as a drive, and the score before it is shown as a 19-point margin (a two-point layup). The stories don't give the angle of the drive or the defender. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Minnesota Timberwolves or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The player in the play of the game is drawn to Ayo Dosunmu's 2021 draft combine measurements: 6-foot-5 in shoes, 194 pounds and a 6-foot-10.25 wingspan (nbadraft.net). No source we read gave his Minnesota number, so no number is drawn. He is drawn in Minnesota's home white with the default figure (no look on the look sheet yet). It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "Covers.com: Grizzlies vs Timberwolves game overview and player stats, Nov 21, 2026",
+   "https://www.covers.com/sport/basketball/nba/matchup/388762",
+   "box score, line score, team totals, points in the paint, biggest leads"
+  ],
+  [
+   "CBS Sports: Grizzlies vs. Timberwolves gametracker box score, Nov 21, 2026",
+   "https://www.cbssports.com/nba/gametracker/boxscore/NBA_20261121_MEM@MIN/",
+   "box score and line score check"
+  ],
+  [
+   "AP (via myMotherLode): Jaden McDaniels scores 25 and Timberwolves top short-handed Grizzlies 104-95",
+   "https://mymotherlode.com/sports/basketball-general-news/11330941/jaden-mcdaniels-scores-25-and-timberwolves-top-short-handed-grizzlies-104-95.html",
+   "26-6 run, 56-46 half, Dosunmu's driving layups, 97-90 with 2:37 left, season-high 58%, Memphis' season lows, injuries, streaks, next games"
+  ],
+  [
+   "AP (via CBS Sports): Timberwolves stifle Grizzlies behind Jaden McDaniels' 25 points",
+   "https://www.cbssports.com/nba/news/timberwolves-stifle-grizzlies-behind-jaden-mcdaniels-25-points/",
+   "story check: 23-point deficit, back-to-back layups"
+  ],
+  [
+   "Field Level Media: Timberwolves deal Grizzlies first road loss this season",
+   "https://fieldlevelmedia.com/nba/timberwolves-deal-grizzlies-first-road-loss-this-season/",
+   "the play's clock and score (83-62 with 21 seconds left in the third), 11-point Memphis lead, eight of 10, first road loss in nine"
+  ],
+  [
+   "Grizzlies On SI: Winners and losers as Grizzlies are no match for McDaniels, Gobert and Timberwolves defense",
+   "https://www.si.com/nba/grizzlies/onsi/winners-and-losers-as-grizzlies-are-no-match-for-mcdaniels-gobert-timberwolves-01m80d6padtc",
+   "Coward's line, Boozer out"
+  ],
+  [
+   "Timberwolves On SI: 3 LaMelo Ball Questions Coming Out of Timberwolves Win vs. Grizzlies",
+   "https://www.si.com/nba/timberwolves/onsi/three-lamelo-ball-questions-timberwolves-win-grizzlies-01m80pwxp43s",
+   "Ball's line, Edwards out"
+  ],
+  [
+   "nbadraft.net: Ayo Dosunmu",
+   "https://www.nbadraft.net/players/ayo-dosunmu",
+   "2021 combine height, weight and wingspan for the figure"
+  ]
+ ]
+}

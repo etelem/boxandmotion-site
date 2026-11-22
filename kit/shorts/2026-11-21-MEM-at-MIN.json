@@ -1,0 +1,49 @@
+{
+ "out": "short-2026-11-21-MEM-MIN.html",
+ "team": "MIN",
+ "home": true,
+ "number": "",
+ "player": "Ayo Dosunmu",
+ "play_type": "drive",
+ "build": {
+  "tall": 0.9872,
+  "ape": 1.0682,
+  "mass": 0.957
+ },
+ "build_note": "6-5 in shoes, 194 lb, 6-10¼ wingspan at the 2021 draft combine (nbadraft.net); no sourced Minnesota number, so none drawn",
+ "kicker": "TIMBERWOLVES 104 · GRIZZLIES 95 · NOV 21",
+ "hook": [
+  "Dosunmu drives it",
+  "for a 21-point lead"
+ ],
+ "clock": "Q3 · 0:21",
+ "us": "MIN",
+ "them": "MEM",
+ "margins": [
+  "Wolves +19",
+  "Wolves +21"
+ ],
+ "stamp": "LAYUP",
+ "beat": [
+  "83–62 with 21 seconds left.",
+  "14 of the third’s last 16 points."
+ ],
+ "final": {
+  "label": "FINAL",
+  "us": "Wolves",
+  "them": "Grizzlies",
+  "us_pts": 104,
+  "them_pts": 95
+ },
+ "star": {
+  "name": "Ayo Dosunmu",
+  "big": 19,
+  "big_label": "points on 9-of-14 shooting",
+  "lines": [
+   "3 driving layups late in the third",
+   "Jaden McDaniels led with 25"
+  ]
+ },
+ "story": "Down 11 early in the second, Minnesota went on a 26–6 run, led by 23 and held off Memphis, 104–95.",
+ "aria": "Animated Short: Ayo Dosunmu's driving layup with 21 seconds left in the third quarter that made it 83–62, capping a stretch of 14 of the quarter's last 16 points for the Timberwolves. Timberwolves win 104–95. An original illustration, not traced from footage, not to scale."
+}
