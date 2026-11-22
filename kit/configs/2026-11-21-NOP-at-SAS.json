@@ -1,0 +1,232 @@
+{
+ "team": "SAS",
+ "D": "  const D = {\n    date: 'Sat, Nov 21, 2026',\n    us: 114, them: 91, record: '14–3', usName: 'Spurs', themName: 'Pelicans',\n    quarters: [[32, 29], [29, 16], [28, 21], [25, 25]],\n    leadUs: 29, leadThem: 3,\n    star: {name: 'Victor Wembanyama', stats: [['Points', 50, 55], ['Blocks', 5, 10], ['Steals', 4, 5]]},\n    scorers: [\n      {name: 'Victor Wembanyama', pts: 50, note: '20 of 29 · 5 blocks · 4 steals'},\n      {name: 'Stephon Castle', pts: 19, note: '5 of 7 from three · 6 assists'},\n      {name: 'Devin Vassell', pts: 10, note: '2 blocks · 4 of 5 FT'},\n      {name: 'Keldon Johnson', pts: 10, note: 'off the bench · 4 assists'},\n      {name: 'Julian Champagnie', pts: 9, note: '3 of 10 from three'},\n    ],\n    edges: [\n      {label: 'Threes made', us: 19, them: 8},\n      {label: 'Assists', us: 30, them: 11},\n      {label: 'Blocks', us: 9, them: 2},\n      {label: 'Fast-break points', us: 18, them: 10},\n    ],\n    gaps: [\n      {label: 'Points in the paint', us: 36, them: 48},\n      {label: 'Steals', us: 5, them: 8},\n    ],\n    next: {opp: 'at Kings', when: 'Mon, Nov 23, 10:00 PM ET', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Victor Wembanyama's step-back 3-pointer with 6:29 left, his 50th point, that put San Antonio up 108–82. An original illustration from written accounts; not traced from footage, not to scale.\n",
+  "head": "Wembanyama’s 50th",
+  "subP": "Wembanyama steps back, 6:29 left",
+  "subL": "Victor Wembanyama’s step-back three, 6:29 left, Spurs up 23",
+  "m0": "Spurs +23",
+  "m1": "Spurs +26",
+  "num": "1",
+  "cap1": "Wembanyama from three. Point 50.",
+  "cap2": "108–82 with 6:29 left in the game.",
+  "clock": [
+   396,
+   389
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Pelicans at Spurs Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Spurs 114, Pelicans 91 · Nov 21, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Pelicans at', 'Spurs'] : ['Pelicans at Spurs']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Wembanyama 50, 32 by half.', 'Spurs roll by 23.'] : ['Victor Wembanyama scored 50, 32 of them in the first half, and San Antonio beat New Orleans by 23.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Spurs improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Won 14 of their last 15'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Spurs up 16 at the half,', 'led by as many as 29'] : ['Spurs up 16 at the half, then led by as many as 29']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Spurs ${D.leadUs}, Pelicans ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Spurs’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Wembanyama: 50 points', 'and 5 blocks'] : ['Victor Wembanyama: 50 points and 5 blocks']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['20 of 29 from the field,', '17 in the first quarter.'] : ['20 of 29 from the field, 17 in the first quarter and 32 by halftime.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Wembanyama and Castle:', '69 of the 114'] : ['Wembanyama and Castle combined for 69 of 114']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 55;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it from three', 'and with the extra pass'] : ['Won it from three and with the extra pass']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Spurs in silver, Pelicans in gray. S.A.', 'made 19 threes to 8.'] : ['Spurs in silver, Pelicans in gray. San Antonio made 19 threes to the Pelicans’ 8.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'1st in the West'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Kings’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '2–14';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['His second 50-point game this season.', 'Career high: 52 vs Dallas, Nov 4.'] : ['His second 50-point game this season. His career high is 52, against Dallas on Nov 4.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Spurs 114 · Pelicans 91 · Nov 21'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Wembanyama’s 50th'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Wembanyama'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 60;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - 375 * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+3', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 160, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 192, ly, D.themName"
+  ]
+ ],
+ "aria": "Animated recap of the Spurs' 114 to 91 home win over the Pelicans: Victor Wembanyama's step-back 3-pointer with 6:29 left, his 50th point, that made it 108 to 82, quarter-by-quarter scoring, Wembanyama's 50 points with five blocks and four steals, the top scorers, how the Spurs won, and the next game.",
+ "figure": {
+  "player": "Victor Wembanyama",
+  "home": true,
+  "tall": 1.1282,
+  "ape": 1.0909,
+  "mass": 0.9843,
+  "label": "Victor Wembanyama, listed 7-4, 235 lb, reported 8-0 wingspan"
+ },
+ "loser_top": [
+  [
+   "Jeremiah Fears",
+   29,
+   "9 of 17 · 9 of 10 FT"
+  ],
+  [
+   "Jordan Poole",
+   25,
+   "off the bench · 9 of 16"
+  ],
+  [
+   "Derik Queen",
+   15,
+   "15 rebounds"
+  ]
+ ],
+ "notes": [
+  "Box score from the Spurs' 114–91 home win over the New Orleans Pelicans on Nov 21, 2026, from the StatMuse box score; all 114 San Antonio points and all 91 New Orleans points add up from the player lines, and the shooting totals (40 of 89, 19 of 56 from three, 15 of 20 FT for San Antonio; 33 of 90, 8 of 35, 17 of 25 for New Orleans), points in the paint (36–48) and fast-break points (18–10) match the FOX Sports team stats. The quarter scores (32–29–28–25 to 29–16–21–25) add up to both totals; the 32–29 first quarter and the 61–45 halftime score are also in Field Level Media and the AP. Assists (30–11), blocks (9–2), steals (5–8) and both biggest leads (San Antonio 29, New Orleans 3) are from StatMuse; Field Level Media also says San Antonio led by as many as 29. Wembanyama's rebounds are left off the rings: the written recaps (AP, Field Level Media, Yahoo/Express-News, Crescent City Sports) say 19, the StatMuse box says 18. Records and ranks are from the site's standings after Saturday's games.",
+  "Wembanyama scored 17 in the first quarter, a career high for one quarter (Express-News via Yahoo), and 32 in the first half (AP; Field Level Media), on 20 of 29 shooting overall with 5 of 11 from three, 5 blocks and 4 steals (StatMuse; Yahoo). It was his second 50-point game of the season, two shy of his career-high 52 against Dallas on Nov 4 (Field Level Media; AP). San Antonio has won 14 of its last 15 (AP). New Orleans played without Zion Williamson (left thigh), Trey Murphy III and Bennedict Mathurin (AP; Field Level Media). The Spurs play at Sacramento on Monday, Nov 23 at 10:00 PM ET (Ball Exclusives via Yardbarker; Covers).",
+  "The play of the game is an original illustration of Wembanyama's 50th point: AP: \"a 3-pointer that put San Antonio up 108-82 with 6:29 remaining in the game\" (Crescent City Sports also says 6:29; the Express-News via Yahoo says 6:30 and calls it a step-back 3-pointer). The board's Spurs +23 to +26 is 105–82 to 108–82, which follows from the three. It is drawn as the template's plain pull-up from beyond the arc; the step-back, the passer and the exact spot are not drawn. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the San Antonio Spurs or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The shooter in the play of the game is drawn to Wembanyama’s listed 7-foot-4 and 235 pounds (Basketball-Reference, Wikipedia), with arms scaled to his reported 8-foot wingspan (Wikipedia), in the Spurs' home kit with No. 1 (Wikipedia) and his approved look. It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "StatMuse - Pelicans 91-114 Spurs (Nov 21, 2026)",
+   "https://www.statmuse.com/nba/game/11-21-2026-nop-at-sas-78838",
+   "Line score, player box, assists, blocks, steals, biggest leads"
+  ],
+  [
+   "FOX Sports - Pelicans vs. Spurs box score and stats",
+   "https://www.foxsports.com/nba/new-orleans-pelicans-vs-san-antonio-spurs-nov-21-2026-game-boxscore-106770?tab=boxscore",
+   "Team stats cross-check (shooting, paint, fast break)"
+  ],
+  [
+   "AP via FOX Sports - 'Victor Wembanyama has 50 points, 19 rebounds on dominant night as Spurs roll past Pelicans, 114-91'",
+   "https://www.foxsports.com/articles/nba/victor-wembanyama-has-50-points-19-rebounds-on-dominant-night-as-spurs-roll-past-pelicans-11491",
+   "Play of the game (108-82 at 6:29), halftime, career high, streak, absences"
+  ],
+  [
+   "Field Level Media - 'Victor Wembanyama posts 50 points, 19 rebounds as Spurs roll Pelicans'",
+   "https://fieldlevelmedia.com/nba/victor-wembanyama-posts-50-points-19-rebounds-as-spurs-roll-pelicans/",
+   "First quarter, halftime, biggest lead, 52 vs Dallas Nov 4"
+  ],
+  [
+   "San Antonio Express-News via Yahoo Sports - '3 Takeaways as Wembanyama's 50-point night leads Spurs past Pelicans'",
+   "https://sports.yahoo.com/articles/3-takeaways-wembanyamas-50-point-063130094.html",
+   "17 in the first quarter, step-back three, shooting line"
+  ],
+  [
+   "Crescent City Sports - 'Wembanyama explodes for 50 points, 19 boards as Spurs rout short-handed Pelicans'",
+   "https://crescentcitysports.com/wembanyama-explodes-for-50-points-19-boards-as-spurs-rout-short-handed-pelicans/",
+   "6:29 clock cross-check, Pelicans side"
+  ],
+  [
+   "Ball Exclusives via Yardbarker - 'Spurs Beat Pelicans 114-91 as Wembanyama Scores 50'",
+   "https://www.yardbarker.com/nba/articles/spurs_beat_pelicans_114_91_as_wembanyama_scores_50/s1_17668_44599520",
+   "Next games with ET times"
+  ],
+  [
+   "Covers.com - San Antonio Spurs schedule",
+   "https://www.covers.com/sport/basketball/nba/teams/main/san-antonio-spurs",
+   "Next game time cross-check"
+  ]
+ ]
+}

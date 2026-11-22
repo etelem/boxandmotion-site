@@ -1,0 +1,231 @@
+{
+ "team": "NYK",
+ "D": "  const D = {\n    date: 'Sat, Nov 21, 2026',\n    us: 97, them: 96, record: '10–6', usName: 'Knicks', themName: 'Blazers',\n    quarters: [[40, 23], [26, 20], [15, 29], [16, 24]],\n    leadUs: 26, leadThem: 2,\n    star: {name: 'Jalen Brunson', stats: [['Points', 30, 35], ['Rebounds', 7, 10], ['Assists', 5, 10]]},\n    scorers: [\n      {name: 'Jalen Brunson', pts: 30, note: '11 of 23 · 6 of 10 from three'},\n      {name: 'Landry Shamet', pts: 20, note: '6 of 10 from three'},\n      {name: 'Mikal Bridges', pts: 12, note: '5 of 8 · the winner at the buzzer'},\n      {name: 'Jose Alvarado', pts: 8, note: 'off the bench · 2 of 5 from three'},\n      {name: 'Andre Drummond', pts: 7, note: '13 rebounds · 3 blocks'},\n    ],\n    edges: [\n      {label: 'First-quarter points', us: 40, them: 23},\n      {label: 'Threes made', us: 19, them: 11},\n      {label: 'Assists', us: 25, them: 21},\n      {label: 'Blocks', us: 8, them: 7},\n    ],\n    gaps: [\n      {label: 'Points in the paint', us: 26, them: 48},\n      {label: 'Rebounds', us: 47, them: 59},\n      {label: 'Free throws made', us: 4, them: 13},\n    ],\n    next: {opp: 'vs Pacers', when: 'Sun, Nov 22, 8:00 PM ET', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Mikal Bridges' 3-pointer at the buzzer off Josh Hart's inbounds pass that turned a 96–94 deficit into a 97–96 win. An original illustration from written accounts; not traced from footage, not to scale.\n",
+  "head": "Bridges at the buzzer",
+  "subP": "Bridges from three, 3.2 left",
+  "subL": "Mikal Bridges from three, 3.2 seconds left, Knicks down 96–94",
+  "m0": "Blazers +2",
+  "m1": "Knicks +1",
+  "num": "25",
+  "cap1": "Bridges at the buzzer. Knicks by 1.",
+  "cap2": "97–96 off Josh Hart’s inbounds pass.",
+  "clock": [
+   3.2,
+   0.0
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Blazers at Knicks Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Knicks 97, Blazers 96 · Nov 21, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Blazers at', 'Knicks'] : ['Blazers at Knicks']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Brunson 30, then Bridges', 'at the buzzer.'] : ['Jalen Brunson scored 30, and Mikal Bridges won it with a three at the buzzer after Portland wiped out a 26-point lead.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Knicks improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Fourth straight win'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Knicks up 23 at the half,', 'won it at the buzzer'] : ['Knicks up 23 at the half, then won it at the buzzer']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Knicks ${D.leadUs}, Blazers ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Knicks’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Brunson: 30 points', 'and 6 threes'] : ['Jalen Brunson: 30 points and 6 threes']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['19 in the first quarter,', '6 of 10 from three.'] : ['19 in the first quarter, 6 of 10 from three, 7 rebounds and 5 assists.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Brunson and Shamet:', '50 of the 97'] : ['Brunson and Shamet combined for 50 of 97']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 35;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it from three', 'and in the first quarter'] : ['Won it from three and in the first quarter']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Knicks in blue, Blazers in gray. N.Y.', 'made 19 threes to Portland’s 11.'] : ['Knicks in blue, Blazers in gray. New York made 19 threes to Portland’s 11.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'5th in the East'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Pacers’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '5–11';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['Without Towns and Anunoby,', 'both out for the first time.'] : ['Without Karl-Anthony Towns and OG Anunoby, both out for the first time this season.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Knicks 97 · Blazers 96 · Nov 21'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Bridges at the buzzer'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Brunson'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 60;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - 375 * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+3', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 160, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 192, ly, D.themName"
+  ],
+  [
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = clk < 60 ? clk.toFixed(1) : `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+  ]
+ ],
+ "aria": "Animated recap of the Knicks' 97 to 96 home win over the Trail Blazers: Mikal Bridges' 3-pointer at the buzzer off Josh Hart's inbounds pass that turned a 96 to 94 deficit into the win, quarter-by-quarter scoring, Jalen Brunson's 30 points, the top scorers, how the Knicks won, and the next game.",
+ "figure": {
+  "player": "Mikal Bridges",
+  "home": true,
+  "tall": 1.0,
+  "ape": 1.0,
+  "mass": 0.9859,
+  "label": "Mikal Bridges, listed 6-6, 209 lb (RealGM, Wikipedia); no sourced wingspan"
+ },
+ "loser_top": [
+  [
+   "Donovan Clingan",
+   22,
+   "9 of 11 · 13 rebounds"
+  ],
+  [
+   "Deni Avdija",
+   20,
+   "9 rebounds · 5 assists"
+  ]
+ ],
+ "notes": [
+  "Box score from the Knicks' 97–96 home win over the Portland Trail Blazers on Nov 21, 2026, from the Covers box score, checked line for line against the CBS Sports gametracker box score. All 97 New York points and all 96 Portland points add up from the player lines. The quarter scores (40–26–15–16 to 23–20–29–24) add up to both totals: New York led 66–43 at the half (Covers; AP) and 81–72 after three. Points in the paint (26–48), fast-break points, and both biggest leads (New York 26, Portland 2) are from Covers; threes (19–11), assists (25–21), blocks (8–7), rebounds (47–59 including team rebounds) and free throws (4 of 6 to 13 of 17) are from the CBS box score. Records and ranks are from the site's standings after Saturday's games.",
+  "The Knicks' lead reached 26 on a Landry Shamet 3-pointer with 11 seconds left in the first half (New York Daily News via Yahoo). Jalen Brunson scored 19 of his 30 in the first quarter (AP; Daily News), and Portland outscored New York 29–15 in the third (AP) and 53–31 after halftime (Daily News; ClutchPoints). The Knicks went without a field goal for the final 5:25 of regulation until Bridges' shot (Daily News). Portland took its first lead of the game on Deni Avdija's free throws with 3.2 seconds left, 96–94 (Field Level Media; Reuters via GMA; Daily News; the AP says 3.4 seconds). New York won its fourth straight (AP; Daily News). Karl-Anthony Towns (illness) and OG Anunoby (left calf) sat for the first time this season (Daily News). The Knicks host Indiana on Sunday, Nov 22 at 8:00 PM ET (Covers; AP).",
+  "The play of the game is an original illustration of Mikal Bridges' 3-pointer at the buzzer (AP: \"Josh Hart found Bridges on the wing as Toumani Camara leapt past him\"; Field Level Media and Reuters: Bridges took one dribble, pivoted past Camara and hit a fallaway 3 as time expired; the Daily News calls it a step-back 3). After Avdija's free throws, New York used its last timeout to advance the ball (AP; Field Level Media). The board's Blazers +2 to Knicks +1 is 94–96 to 97–96. It is drawn as the template's plain pull-up from beyond the arc; the one dribble, the fallaway and the exact spot on the wing are not drawn. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the New York Knicks or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The shooter in the play of the game is drawn to Mikal Bridges' listed 6-foot-6 and 209 pounds with No. 25 (RealGM; Wikipedia); no wingspan from a sourced measurement was found, so his arms use the standard proportion. He is drawn in New York's home white with the default figure (no look on the look sheet yet). It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "Covers.com - Trail Blazers vs Knicks game overview and box score",
+   "https://www.covers.com/sport/basketball/nba/matchup/388761",
+   "Line score, player box, paint and fast-break points, biggest leads"
+  ],
+  [
+   "CBS Sports - Portland Trail Blazers vs. New York Knicks gametracker box score",
+   "https://www.cbssports.com/nba/gametracker/boxscore/NBA_20261121_POR@NY/",
+   "Box score cross-check, team totals, records, final-play entry"
+  ],
+  [
+   "AP via CBS New York - 'Brunson scores 30, Bridges hits 3 at buzzer, lifting Knicks to 97-96 win over Trail Blazers'",
+   "https://www.cbsnews.com/newyork/news/mikal-bridges-knicks-beat-trail-blazers/",
+   "Play of the game, halftime, third quarter, streak, next game"
+  ],
+  [
+   "New York Daily News via Yahoo Sports - 'Mikal Bridges' buzzer-beater lifts short-handed Knicks past Trail Blazers'",
+   "https://sports.yahoo.com/articles/mikal-bridges-buzzer-beater-lifts-031100126.html",
+   "26-point lead, first lead at 3.2, scoring drought, absences"
+  ],
+  [
+   "Field Level Media - 'NBA roundup: Knick blow huge lead, win on Mikal Bridges buzzer-beater'",
+   "https://fieldlevelmedia.com/nba/nba-roundup-knick-blow-huge-lead-win-on-mikal-bridges-buzzer-beater/",
+   "Final sequence, timeout, fallaway 3 as time expired"
+  ],
+  [
+   "Reuters via GMA News - 'Mikal Bridges' game-winner helps Knicks survive blown lead vs. Blazers'",
+   "https://www.gmanetwork.com/news/sports/basketball/1010410/nba-mikal-bridges-game-winner-helps-knicks-survive-blown-lead-vs-blazers/story/",
+   "Final sequence cross-check"
+  ],
+  [
+   "ClutchPoints - 'Mikal Bridges calls game with buzzer-beater 3 vs. Blazers'",
+   "https://clutchpoints.com/nba/new-york-knicks/knicks-news-mikal-bridges-calls-game-buzzer-beater-3-blazers",
+   "Second-half scoring cross-check"
+  ],
+  [
+   "Covers.com - New York Knicks schedule",
+   "https://www.covers.com/sport/basketball/nba/teams/main/new-york-knicks",
+   "Next game time"
+  ]
+ ]
+}
