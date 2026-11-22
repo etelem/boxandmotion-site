@@ -1,0 +1,103 @@
+{
+ "headline": "Bridges beats the buzzer after Portland erases a 26-point lead",
+ "dek": "Jalen Brunson scored 30, and Mikal Bridges won it with a three at the buzzer after Portland wiped out a 26-point lead.",
+ "three": [
+  [
+   "Jalen Brunson: 30 points and 6 threes",
+   "19 in the first quarter, 6 of 10 from three, 7 rebounds and 5 assists."
+  ],
+  [
+   "Knicks up 23 at the half, then won it at the buzzer",
+   "Brunson and Shamet combined for 50 of 97."
+  ],
+  [
+   "Won it from three and in the first quarter",
+   "First-quarter points 40–23; threes made 19–11. New York made 19 threes to Portland’s 11."
+  ]
+ ],
+ "battle": [
+  [
+   "First-quarter points",
+   40,
+   23
+  ],
+  [
+   "Threes made",
+   19,
+   11
+  ],
+  [
+   "Assists",
+   25,
+   21
+  ],
+  [
+   "Blocks",
+   8,
+   7
+  ]
+ ],
+ "battle_labels": [
+  "NYK",
+  "POR"
+ ],
+ "top": [
+  [
+   "Jalen Brunson",
+   "NYK",
+   "11 of 23, 6 of 10 from three",
+   30
+  ],
+  [
+   "Landry Shamet",
+   "NYK",
+   "6 of 10 from three",
+   20
+  ],
+  [
+   "Mikal Bridges",
+   "NYK",
+   "5 of 8, the winner at the buzzer",
+   12
+  ],
+  [
+   "Jose Alvarado",
+   "NYK",
+   "off the bench, 2 of 5 from three",
+   8
+  ]
+ ],
+ "linescore": {
+  "away": [
+   23,
+   20,
+   29,
+   24
+  ],
+  "home": [
+   40,
+   26,
+   15,
+   16
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-21-POR-at-NYK.json",
+ "loser": {
+  "top": [
+   [
+    "Donovan Clingan",
+    "POR",
+    "9 of 11 · 13 rebounds",
+    22
+   ],
+   [
+    "Deni Avdija",
+    "POR",
+    "9 rebounds · 5 assists",
+    20
+   ]
+  ],
+  "source": "box score"
+ }
+}

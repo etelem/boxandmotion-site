@@ -1,0 +1,109 @@
+{
+ "headline": "Wembanyama scores 50 as the Spurs roll",
+ "dek": "Victor Wembanyama scored 50, 32 of them in the first half, and San Antonio beat New Orleans by 23.",
+ "three": [
+  [
+   "Victor Wembanyama: 50 points and 5 blocks",
+   "20 of 29 from the field, 17 in the first quarter and 32 by halftime."
+  ],
+  [
+   "Spurs up 16 at the half, then led by as many as 29",
+   "Wembanyama and Castle combined for 69 of 114."
+  ],
+  [
+   "Won it from three and with the extra pass",
+   "Threes made 19–8; assists 30–11. San Antonio made 19 threes to the Pelicans’ 8."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   19,
+   8
+  ],
+  [
+   "Assists",
+   30,
+   11
+  ],
+  [
+   "Blocks",
+   9,
+   2
+  ],
+  [
+   "Fast-break points",
+   18,
+   10
+  ]
+ ],
+ "battle_labels": [
+  "SAS",
+  "NOP"
+ ],
+ "top": [
+  [
+   "Victor Wembanyama",
+   "SAS",
+   "20 of 29, 5 blocks, 4 steals",
+   50
+  ],
+  [
+   "Stephon Castle",
+   "SAS",
+   "5 of 7 from three, 6 assists",
+   19
+  ],
+  [
+   "Devin Vassell",
+   "SAS",
+   "2 blocks, 4 of 5 FT",
+   10
+  ],
+  [
+   "Keldon Johnson",
+   "SAS",
+   "off the bench, 4 assists",
+   10
+  ]
+ ],
+ "linescore": {
+  "away": [
+   29,
+   16,
+   21,
+   25
+  ],
+  "home": [
+   32,
+   29,
+   28,
+   25
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-21-NOP-at-SAS.json",
+ "loser": {
+  "top": [
+   [
+    "Jeremiah Fears",
+    "NOP",
+    "9 of 17 · 9 of 10 FT",
+    29
+   ],
+   [
+    "Jordan Poole",
+    "NOP",
+    "off the bench · 9 of 16",
+    25
+   ],
+   [
+    "Derik Queen",
+    "NOP",
+    "15 rebounds",
+    15
+   ]
+  ],
+  "source": "box score"
+ }
+}

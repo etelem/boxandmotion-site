@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-21-POR-NYK.html",
+  "team": "NYK",
+  "home": true,
+  "number": "25",
+  "player": "Mikal Bridges",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 1.0,
+    "ape": 1.0,
+    "mass": 0.9859
+  },
+  "build_note": "Listed 6-6, 209 lb, No. 25 (RealGM; Wikipedia); no sourced wingspan",
+  "kicker": "KNICKS 97 · BLAZERS 96 · NOV 21",
+  "hook": [
+    "Mikal Bridges'",
+    "buzzer-beater"
+  ],
+  "clock": "Q4 · 0:03.2",
+  "us": "NYK",
+  "them": "POR",
+  "score_before": [
+    94,
+    96
+  ],
+  "score_make": [
+    97,
+    96
+  ],
+  "stamp": "GAME-WINNER",
+  "beat": [
+    "Down 96–94, 3.2 seconds left.",
+    "The Knicks had led by 26."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Knicks",
+    "them": "Blazers",
+    "us_pts": 97,
+    "them_pts": 96
+  },
+  "star": {
+    "name": "Jalen Brunson",
+    "big": 30,
+    "big_label": "points on 11-of-23 shooting",
+    "lines": [
+      "19 in the first quarter",
+      "6 of 10 from three"
+    ]
+  },
+  "story": "Up 26 in the first half, the Knicks trailed 96–94 with 3.2 seconds left. Mikal Bridges won it at the buzzer, 97–96.",
+  "aria": "Animated Short: Mikal Bridges' 3-pointer at the buzzer off Josh Hart's inbounds pass that turned a 96–94 deficit into a 97–96 Knicks win over Portland. An original illustration, not traced from footage, not to scale."
+}
