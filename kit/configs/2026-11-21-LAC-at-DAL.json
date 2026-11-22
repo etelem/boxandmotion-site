@@ -1,0 +1,221 @@
+{
+  "team": "DAL",
+  "D": "  const D = {\n    date: 'Sat, Nov 21, 2026',\n    us: 110, them: 100, record: '9–7', usName: 'Mavericks', themName: 'Clippers',\n    quarters: [[23, 26], [29, 18], [26, 30], [32, 26]],\n    leadUs: 15, leadThem: 9,\n    star: {name: 'Kyrie Irving', stats: [['Points', 25, 30], ['Rebounds', 6, 10], ['Assists', 4, 5]]},\n    scorers: [\n      {name: 'Kyrie Irving', pts: 25, note: '12 in the fourth quarter'},\n      {name: 'Cooper Flagg', pts: 22, note: '8 assists · 6 rebounds'},\n      {name: 'Walter Clayton Jr.', pts: 16, note: 'off the bench · 5 of 8'},\n      {name: 'Max Christie', pts: 13, note: 'off the bench · 3 of 4 from three'},\n      {name: 'Zaccharie Risacher', pts: 11, note: '7 rebounds · 2 late dunks'},\n    ],\n    edges: [\n      {label: 'Fast-break points', us: 22, them: 12},\n      {label: 'Points off turnovers', us: 22, them: 13},\n      {label: 'Points in the paint', us: 40, them: 32},\n      {label: 'Steals', us: 10, them: 6},\n    ],\n    gaps: [\n      {label: 'Threes made', us: 13, them: 15},\n      {label: 'Blocks', us: 3, them: 7},\n    ],\n    next: {opp: 'at Jazz', when: 'Sun, Nov 22, 7:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Kyrie Irving's 26-foot pull-up three in transition with 3:30 left, after Daniel Gafford took the ball from Brook Lopez, that made it 100–88 in the middle of Dallas's 11–0 run. An original illustration from written accounts; not traced from footage, not to scale.\n",
+    "head": "Irving from deep",
+    "subP": "Irving pulls up, 3:30 left in the 4th",
+    "subL": "Kyrie Irving pulls up in transition, 3:30 left, up 97–88",
+    "m0": "Mavericks +9",
+    "m1": "Mavericks +12",
+    "num": "11",
+    "cap1": "Irving from 26 feet. Mavericks by 12.",
+    "cap2": "100–88 off a Gafford steal, 3:30 left.",
+    "clock": [
+      216,
+      210
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Clippers at Mavericks Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Mavericks 110, Clippers 100 · Nov 21, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Clippers at', 'Mavericks'] : ['Clippers at Mavericks']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Irving 25, 12 in the 4th, and', 'an 11–0 run in 69 seconds.'] : ['Kyrie Irving scored 25, 12 of them in the fourth, and Dallas pulled away with an 11–0 run in 69 seconds.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Mavericks improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Fifth straight home win'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Mavericks up 8 at the half,', 'pulled away with an 11–0 run'] : ['Mavericks up 8 at the half, pulled away late with an 11–0 run']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Mavericks ${D.leadUs}, Clippers ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin in each quarter, then the game score after it.",
+      "Mavericks’ margin in each quarter, then the game score after it."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Irving: 25,', '12 in the fourth'] : ['Kyrie Irving: 25 points, 12 in the fourth']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['1 of 7 to start,', '12 in the fourth quarter.'] : ['He opened 1 of 7 from the floor, then scored 12 in the fourth quarter.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Irving and Flagg:', '47 of the 110'] : ['Irving and Flagg combined for 47 of 110']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 30;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it on the break', 'and off turnovers'] : ['Won it on the break and off turnovers']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Mavericks in silver, Clippers in gray.', 'Dallas had 10 steals to L.A.’s 6.'] : ['Mavericks in blue, Clippers in gray. Dallas had 10 steals to L.A.’s 6.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'9th in the West'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Jazz’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '3–14';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Three steals in 32 seconds', 'during the 11–0 run.'] : ['Christie, Risacher and Gafford had steals 32 seconds apart during the 11–0 run.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Mavericks 110 · Clippers 100 · Nov 21'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Irving from deep'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Irving'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 60;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+3', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 212, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 244, ly, D.themName"
+    ]
+  ],
+  "aria": "Animated recap of the Mavericks' 110 to 100 home win over the Clippers: Kyrie Irving's 26-foot pull-up three in transition with 3:30 left that made it 100 to 88 during an 11 to 0 run, quarter-by-quarter scoring, Irving's 25 points with 12 in the fourth quarter, the top scorers, how Dallas won, and Sunday's game at Utah.",
+  "figure": {
+    "player": "Kyrie Irving",
+    "home": true,
+    "tall": 0.9487,
+    "ape": 1.027,
+    "mass": 0.978,
+    "label": "Kyrie Irving, listed 6-2, 195 lb, 6-4 wingspan (2011 combine)"
+  },
+  "loser_top": [
+    [
+      "Brook Lopez",
+      21,
+      "17 in the second half · 8 of 15"
+    ],
+    [
+      "Rui Hachimura",
+      19,
+      "4 of 5 from three · 8 rebounds"
+    ]
+  ],
+  "notes": [
+    "Box score from the Mavericks' 110–100 home win over the LA Clippers on Nov 21, 2026, from the Covers box score, checked against the Associated Press, the Dallas Sports Journal and 95.3 The Score. The player lines add up to both team totals (110 and 100). The quarter scores (23–29–26–32 to 26–18–30–26) add up to both totals: Dallas led 52–44 at the half and 78–74 after three (Dallas Sports Journal; 95.3 The Score). Fast-break points (22–12), points in the paint (40–32), steals (10–6), blocks (3–7), threes made (13–15) and both biggest leads (Dallas 15, Los Angeles 9) are from the Covers box score; points off turnovers (22–13) are from 95.3 The Score, and the 22 also from the Dallas Sports Journal. The AP's lede gives Cooper Flagg 8 rebounds and 6 assists; the box score and 95.3 The Score give 6 rebounds and 8 assists, which is used here. The AP has the Clippers winning the boards 54–52 (team rebounds included); the player lines total 53 each, so rebounds are left out. Records and ranks are from the site's standings after Saturday's games.",
+    "Dallas won its fifth straight home game (Dallas Sports Journal); the Clippers lost their third straight and are 0–7 on the road (AP). Kris Dunn's corner three with 5:12 left cut it to 91–88, then Dallas scored the next 11 points in 69 seconds: Daniel Gafford's hook at 4:18 (93–88), Max Christie's breakaway layup after a steal at 4:01 (95–88), Zaccharie Risacher's breakaway dunk after a steal at 3:42, Kyrie Irving's 26-foot pull-up three at 3:30 (100–88) and Risacher's dunk at 3:09 (102–88) (Dallas Sports Journal; AP: \"the Mavericks scored 11 in a row aided by two Los Angeles turnovers\"). Christie, Risacher and Gafford had steals in a 32-second span of the run (Dallas Sports Journal). Irving opened 1 of 7 and scored 12 in the fourth quarter (AP). P.J. Washington missed the game with an illness (AP; Dallas Sports Journal). Dallas plays at Utah on Sunday, Nov 22 at 7:00 PM ET (6:00 PM CT, Yahoo/Roundtable Sports; site schedule).",
+    "The play of the game is an original illustration of Kyrie Irving's 26-foot pull-up three in transition at 3:30 of the fourth quarter (Dallas Sports Journal: \"Gafford took the ball from Lopez at 3:33 to start a break that Irving finished with a 26-foot pull-up 3 at 3:30 for a 100-88 lead\"). The board's 97–88 before the shot follows from the three. No source says which side of the floor the shot came from; the template draws a pull-up three in front of the defender, and the steal is not animated. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Dallas Mavericks or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The player in the play of the game is drawn to Kyrie Irving's listed 6-foot-2 and 195 pounds with No. 11 (Basketball-Reference; Wikipedia), with his arms scaled to a 6-foot-4 wingspan measured at the 2011 draft combine (Tankathon). He is drawn in Dallas's home white with the default figure look (no approved look yet). It is an original figure with a featureless face, not a portrait or a trace of footage."
+  ],
+  "sources": [
+    [
+      "Covers.com - Clippers vs Mavericks matchup/box score",
+      "https://www.covers.com/sport/basketball/nba/matchup/388764",
+      "Line score, full player box, team totals, paint/fast-break/biggest leads, next games"
+    ],
+    [
+      "AP - 'Kyrie Irving scores 25, Cooper Flagg 22 as the Mavericks top the Clippers 110-100' (ABC News)",
+      "https://abcnews.com/Sports/wireStory/kyrie-irving-scores-25-cooper-flagg-22-mavericks-138353933",
+      "Irving 1-of-7 start and 12 in the 4th, 11-0 run, streaks, Washington out, next games"
+    ],
+    [
+      "AP via TSN - 'Irving, Flagg lead as Mavericks top Clippers'",
+      "https://www.tsn.ca/nba/article/irving-flagg-lead-as-mavericks-top-clippers/",
+      "AP cross-check"
+    ],
+    [
+      "Dallas Sports Journal (Grant Afseth) - 'Dallas Mavericks Beat LA Clippers 110-100 Behind Kyrie Irving's 12 Fourth-Quarter Points'",
+      "https://dallassportsjournal.com/mavericks-beat-clippers-110-100-recap/",
+      "Play-by-play of the 11-0 run with clocks and scores, play of the game, halftime and after-three scores, home streak"
+    ],
+    [
+      "Yardbarker (Dallas Sports Journal) - 'Dusty May Credits Defense As Mavericks Beat Clippers With 11-0 Run'",
+      "https://www.yardbarker.com/nba/articles/dusty_may_credits_defense_as_mavericks_beat_clippers_with_11_0_run/s1_17810_44600132",
+      "Cross-check of the run and the three steals"
+    ],
+    [
+      "95.3 The Score - 'Mavericks finish strong to hold off Clippers'",
+      "https://www.953thescore.com/2026/11/21/mavericks-finish-strong-to-hold-off-clippers/",
+      "Halftime score, runs, points off turnovers, star lines"
+    ],
+    [
+      "Yahoo Sports (Roundtable Sports) - 'Mavericks Use Fourth-Quarter Explosion To Win Over Clippers'",
+      "https://sports.yahoo.com/articles/mavericks-fourth-quarter-explosion-win-043820917.html",
+      "Lopez early 4th, next game time"
+    ],
+    [
+      "Basketball-Reference - Kyrie Irving",
+      "https://www.basketball-reference.com/players/i/irvinky01.html",
+      "Height 6-2, 195 lb"
+    ],
+    [
+      "Wikipedia - Kyrie Irving",
+      "https://en.wikipedia.org/wiki/Kyrie_Irving",
+      "Height/weight, No. 11 with Dallas"
+    ],
+    [
+      "Tankathon - Kyrie Irving 2011 draft profile",
+      "https://www.tankathon.com/players/kyrie-irving",
+      "Wingspan 6-4 (2011 combine)"
+    ]
+  ]
+}
