@@ -2,3 +2,4 @@ games_date,check,result,reason
 2026-11-20,06:41,failed,ended with no commit (found afterwards; cause unknown)
 2026-11-20,07:17,failed,ended with no commit (found afterwards; cause unknown)
 2026-11-20,manual 08:20,done,sports feed and standings current
+2026-11-21,06:40,failed,no sports feed; WebFetch permission not granted for PTS/FOX/CBS
