@@ -7,3 +7,4 @@ games_date,check,result,reason
 2026-11-21,recap-run-1,done,fallback sources: Covers+AP/CBS/PTS scores; FOX standings current; NOP-SAS Covers page not open (PTS+AP)
 2026-11-22,06:40,waiting,scores verified (Covers+CBS) and saved; FOX/CBS standings and PTS fetch permission not answered
 2026-11-22,07:15,failed,no sports feed; FOX/CBS standings fetch permission not answered (unattended); scores still saved in pending
+2026-11-22,recap-run-1,done,saved Covers+CBS scores from 06:40 check; FOX standings current (fetched 07:25)
