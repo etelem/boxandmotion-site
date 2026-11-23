@@ -1,0 +1,109 @@
+{
+ "headline": "Towns' 30 and 13 make it five straight",
+ "dek": "Karl-Anthony Towns had 30 points and 13 rebounds, and the Knicks won their fifth straight.",
+ "three": [
+  [
+   "Karl-Anthony Towns: 30 points and 13 rebounds",
+   "9 of 14 from the field and 4 of 4 from three; late in the third he outscored Indiana 10–2 by himself."
+  ],
+  [
+   "Knicks up 4 at the half, then won the third quarter 34–27",
+   "Towns and Brunson combined for 52 of 113."
+  ],
+  [
+   "Won it from three and on the glass",
+   "Threes made 15–6; assists 30–20. New York made 15 threes to Indiana’s 6."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   15,
+   6
+  ],
+  [
+   "Assists",
+   30,
+   20
+  ],
+  [
+   "Rebounds",
+   50,
+   42
+  ],
+  [
+   "Offensive rebounds",
+   12,
+   7
+  ]
+ ],
+ "battle_labels": [
+  "NYK",
+  "IND"
+ ],
+ "top": [
+  [
+   "Karl-Anthony Towns",
+   "NYK",
+   "13 rebounds, 4 of 4 from three",
+   30
+  ],
+  [
+   "Jalen Brunson",
+   "NYK",
+   "8 of 18, 7 assists",
+   22
+  ],
+  [
+   "Landry Shamet",
+   "NYK",
+   "7 of 15, 3 threes",
+   17
+  ],
+  [
+   "Jose Alvarado",
+   "NYK",
+   "off the bench, 3 of 6 from three",
+   11
+  ]
+ ],
+ "linescore": {
+  "away": [
+   26,
+   25,
+   27,
+   28
+  ],
+  "home": [
+   26,
+   29,
+   34,
+   24
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-22-IND-at-NYK.json",
+ "loser": {
+  "top": [
+   [
+    "Pascal Siakam",
+    "IND",
+    "9 of 22 · 6 rebounds",
+    25
+   ],
+   [
+    "Andrew Nembhard",
+    "IND",
+    "8 assists",
+    16
+   ],
+   [
+    "Kelly Oubre Jr.",
+    "IND",
+    "7 of 9 FT",
+    15
+   ]
+  ],
+  "source": "box score"
+ }
+}

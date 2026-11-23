@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-22-DEN-CHI.html",
+  "team": "DEN",
+  "home": false,
+  "number": "27",
+  "player": "Jamal Murray",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 0.9744,
+    "ape": 1.0395,
+    "mass": 1.0131
+  },
+  "build_note": "Listed 6-4, 215 lb, No. 27 (RealGM); reported 6-7 wingspan (CraftedNBA)",
+  "kicker": "NUGGETS 151 · BULLS 145 · OT · NOV 22",
+  "hook": [
+    "Jamal Murray's",
+    "45-point night"
+  ],
+  "clock": "OT · 4:41",
+  "us": "DEN",
+  "them": "CHI",
+  "score_before": [
+    131,
+    131
+  ],
+  "score_make": [
+    134,
+    131
+  ],
+  "stamp": "GO-AHEAD THREE",
+  "beat": [
+    "Tied 131–131 to start overtime.",
+    "Denver never trailed again."
+  ],
+  "final": {
+    "label": "FINAL · OT",
+    "us": "Nuggets",
+    "them": "Bulls",
+    "us_pts": 151,
+    "them_pts": 145
+  },
+  "star": {
+    "name": "Jamal Murray",
+    "big": 45,
+    "big_label": "points on 13-of-22 shooting",
+    "lines": [
+      "6 of 11 from three",
+      "Nikola Jokić: 37, 18 and 11"
+    ]
+  },
+  "story": "Chicago tied it 131–131 with two seconds left in regulation. Jamal Murray's 27-foot three opened the overtime scoring and Denver never trailed again, 151–145.",
+  "aria": "Animated Short: Jamal Murray's 27-foot 3-pointer with 4:41 left in overtime, off a Nikola Jokić pass, that broke a 131–131 tie in the Nuggets' 151–145 win at Chicago. Murray scored 45. An original illustration, not traced from footage, not to scale."
+}

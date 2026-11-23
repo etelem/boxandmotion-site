@@ -1,0 +1,111 @@
+{
+ "headline": "Murray's 45 and Jokić's triple-double win it in overtime",
+ "dek": "Jamal Murray scored 45 and Nikola Jokić had a 37-point triple-double as Denver won overtime 20–14.",
+ "three": [
+  [
+   "Jamal Murray: 45 points and 6 threes",
+   "13 of 22 from the field, 13 of 14 at the line, 7 assists and 6 points in overtime."
+  ],
+  [
+   "Nuggets up 10 after three, tied 131–131 at the end of regulation, then won overtime 20–14",
+   "Murray and Jokić combined for 82 of 151."
+  ],
+  [
+   "Won it in the paint and on the offensive glass",
+   "Points in the paint 66–48; second-chance points 25–11. Chicago made 25 threes, tying its franchise record, and still lost."
+  ]
+ ],
+ "battle": [
+  [
+   "Points in the paint",
+   66,
+   48
+  ],
+  [
+   "Second-chance points",
+   25,
+   11
+  ],
+  [
+   "Free throws made",
+   26,
+   16
+  ],
+  [
+   "Offensive rebounds",
+   15,
+   9
+  ]
+ ],
+ "battle_labels": [
+  "DEN",
+  "CHI"
+ ],
+ "top": [
+  [
+   "Jamal Murray",
+   "DEN",
+   "13 of 22, 6 threes, 13 of 14 FT",
+   45
+  ],
+  [
+   "Nikola Jokić",
+   "DEN",
+   "18 rebounds, 11 assists",
+   37
+  ],
+  [
+   "Christian Braun",
+   "DEN",
+   "8 of 14, 3 threes",
+   21
+  ],
+  [
+   "Aaron Gordon",
+   "DEN",
+   "8 rebounds, the go-ahead tip dunk",
+   18
+  ]
+ ],
+ "linescore": {
+  "away": [
+   33,
+   39,
+   33,
+   26,
+   20
+  ],
+  "home": [
+   31,
+   39,
+   25,
+   36,
+   14
+  ],
+  "ot": true
+ },
+ "source": "kit/configs/2026-11-22-DEN-at-CHI.json",
+ "loser": {
+  "top": [
+   [
+    "Buddy Hield",
+    "CHI",
+    "13 of 19 · 7 of 13 from three",
+    33
+   ],
+   [
+    "Jalen Smith",
+    "CHI",
+    "10 of 14 · 6 of 7 from three",
+    26
+   ],
+   [
+    "Josh Giddey",
+    "CHI",
+    "triple-double: 14 rebounds, 22 assists",
+    23
+   ]
+  ],
+  "source": "box score"
+ }
+}
