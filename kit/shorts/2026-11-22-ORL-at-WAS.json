@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-22-ORL-WAS.html",
+  "team": "WAS",
+  "home": true,
+  "number": "0",
+  "player": "Bilal Coulibaly",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 1.0128,
+    "ape": 1.0,
+    "mass": 0.9463
+  },
+  "build_note": "Listed 6-7, 195 lb, No. 0 (Basketball-Reference; Wikipedia); no sourced wingspan",
+  "kicker": "WIZARDS 116 · MAGIC 96 · NOV 22",
+  "hook": [
+    "Bilal Coulibaly's",
+    "three No. 18"
+  ],
+  "clock": "Q3 · LATE",
+  "us": "WAS",
+  "them": "ORL",
+  "score_before": [
+    94,
+    75
+  ],
+  "score_make": [
+    97,
+    75
+  ],
+  "stamp": "THREE",
+  "beat": [
+    "Wizards by 22, late in the third.",
+    "18 threes in three quarters."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Wizards",
+    "them": "Magic",
+    "us_pts": 116,
+    "them_pts": 96
+  },
+  "star": {
+    "name": "Kyshawn George",
+    "big": 24,
+    "big_label": "points on 9-of-17 shooting",
+    "lines": [
+      "6 of 11 from three",
+      "22 threes as a team"
+    ]
+  },
+  "story": "Washington made 22 threes, one short of the franchise record, led wire to wire and won its third straight, 116–96.",
+  "aria": "Animated Short: Bilal Coulibaly's 3-pointer late in the third quarter, Washington's 18th three of the night, that made it 97–75 on the way to a 116–96 Wizards win over Orlando. An original illustration, not traced from footage, not to scale."
+}

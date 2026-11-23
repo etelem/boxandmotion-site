@@ -1,0 +1,109 @@
+{
+ "headline": "Wizards hit 22 threes to rout the Magic",
+ "dek": "Washington made 22 threes, six by Kyshawn George, and beat Orlando by 20.",
+ "three": [
+  [
+   "Kyshawn George: 24 points and 6 threes",
+   "6 of 11 from three for a team-high 24 points."
+  ],
+  [
+   "Wizards up 12 at the half, then led by as many as 25",
+   "George and Davis combined for 46 of 116."
+  ],
+  [
+   "Won it from three and on the break",
+   "Threes made 22–12; assists 31–27. Washington made 22 threes to the Magic’s 12."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   22,
+   12
+  ],
+  [
+   "Assists",
+   31,
+   27
+  ],
+  [
+   "Rebounds",
+   45,
+   39
+  ],
+  [
+   "Fast-break points",
+   18,
+   12
+  ]
+ ],
+ "battle_labels": [
+  "WAS",
+  "ORL"
+ ],
+ "top": [
+  [
+   "Kyshawn George",
+   "WAS",
+   "6 of 11 from three",
+   24
+  ],
+  [
+   "Anthony Davis",
+   "WAS",
+   "8 of 13, 7 rebounds",
+   22
+  ],
+  [
+   "AJ Dybantsa",
+   "WAS",
+   "8 rebounds, 6 assists",
+   16
+  ],
+  [
+   "Bilal Coulibaly",
+   "WAS",
+   "off the bench, 4 of 6 from three",
+   12
+  ]
+ ],
+ "linescore": {
+  "away": [
+   21,
+   30,
+   26,
+   19
+  ],
+  "home": [
+   38,
+   25,
+   34,
+   19
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-22-ORL-at-WAS.json",
+ "loser": {
+  "top": [
+   [
+    "Tristan da Silva",
+    "ORL",
+    "off the bench · 4 of 7 from three",
+    18
+   ],
+   [
+    "Desmond Bane",
+    "ORL",
+    "7 of 14",
+    17
+   ],
+   [
+    "Franz Wagner",
+    "ORL",
+    "8 rebounds · 6 assists",
+    16
+   ]
+  ],
+  "source": "box score"
+ }
+}

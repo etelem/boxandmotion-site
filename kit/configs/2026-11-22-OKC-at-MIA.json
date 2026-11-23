@@ -1,0 +1,235 @@
+{
+ "team": "MIA",
+ "D": "  const D = {\n    date: 'Sun, Nov 22, 2026',\n    us: 123, them: 113, record: '10–6', usName: 'Heat', themName: 'Thunder',\n    quarters: [[36, 24], [31, 30], [28, 26], [28, 33]],\n    leadUs: 20, leadThem: 0,\n    star: {name: 'Bam Adebayo', stats: [['Points', 24, 25], ['Rebounds', 15, 20], ['Assists', 12, 15]]},\n    scorers: [\n      {name: 'Bam Adebayo', pts: 24, note: '8 of 11 · 15 rebounds · 12 assists'},\n      {name: 'Pelle Larsson', pts: 21, note: '9 of 14 · 3 steals'},\n      {name: 'Nikola Jović', pts: 15, note: 'off the bench · 3 of 6 from three'},\n      {name: 'Davion Mitchell', pts: 14, note: '5 of 10 · 3 of 4 FT'},\n      {name: 'Simone Fontecchio', pts: 11, note: 'off the bench · 4 of 7'},\n    ],\n    edges: [\n      {label: 'Rebounds', us: 48, them: 38},\n      {label: 'Assists', us: 30, them: 24},\n      {label: 'Blocks', us: 7, them: 0},\n      {label: 'Points in the paint', us: 54, them: 46},\n    ],\n    gaps: [\n      {label: 'Threes made', us: 15, them: 16},\n    ],\n    next: {opp: 'at 76ers', when: 'Wed, Nov 25', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Bam Adebayo's drive and dunk with 7:47 left in the third quarter that made it 74–63. An original illustration from written accounts; not traced from footage, not to scale.\n",
+  "head": "Bam to the rim",
+  "subP": "Adebayo drives, 7:47 left in the third",
+  "subL": "Bam Adebayo drives to the rim, 7:47 left in the third",
+  "m0": "Heat +9",
+  "m1": "Heat +11",
+  "num": "13",
+  "cap1": "Adebayo’s dunk. Heat by 11.",
+  "cap2": "74–63 on the way to a triple-double.",
+  "clock": [
+   471,
+   467
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Thunder at Heat Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Heat 123, Thunder 113 · Nov 22, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Thunder at', 'Heat'] : ['Thunder at Heat']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Adebayo triple-double.', 'Seven straight for Miami.'] : ['Bam Adebayo had a triple-double and Miami won its seventh straight.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Heat improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Seven straight wins'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Heat up 13 at the half,', 'led by as many as 20'] : ['Heat up 13 at the half, then led by as many as 20']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Heat ${D.leadUs}, Thunder ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Heat’s margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Adebayo: 24, 15', 'and 12 assists'] : ['Bam Adebayo: 24 points, 15 rebounds, 12 assists']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['8 of 11 from the field,', '14 points by halftime.'] : ['8 of 11 from the field, 14 points by halftime, and no turnovers.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Adebayo and Larsson:', '45 of the 123'] : ['Adebayo and Larsson combined for 45 of 123']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 30;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it inside', 'and on the glass'] : ['Won it inside and on the glass']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Heat in orange, Thunder in gray.', 'Miami outrebounded OKC 48–38.'] : ['Heat in orange, Thunder in gray. Miami outrebounded Oklahoma City 48–38.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'6th in the East'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'76ers’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '14–3';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['Longest win streak since', 'a 13-game run in 2017.'] : ['Their longest win streak since a 13-game run in 2017.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Heat 123 · Thunder 113 · Nov 22'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Bam to the rim'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Adebayo'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 60;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - (P ? 170 : 200) * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+2', 'd w', 72, 'end');"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 165 * k, shotX + 118 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q3', 'b m', 24);"
+  ],
+  [
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 160, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 192, ly, D.themName"
+  ]
+ ],
+ "aria": "Animated recap of the Heat's 123 to 113 home win over the Thunder: Bam Adebayo's drive and dunk with 7:47 left in the third quarter that made it 74 to 63, quarter-by-quarter scoring, Adebayo's triple-double of 24 points, 15 rebounds and 12 assists, the top scorers, how the Heat won, and the next game.",
+ "figure": {
+  "player": "Bam Adebayo",
+  "home": true,
+  "tall": 1.0385,
+  "ape": 1.0,
+  "mass": 1.0791,
+  "label": "Bam Adebayo, listed 6-9, 260 lb, no wingspan found in the sources read"
+ },
+ "loser_top": [
+  [
+   "Bennett Stirtz",
+   21,
+   "off the bench · 5 of 12 from three"
+  ],
+  [
+   "Jared McCain",
+   20,
+   "7 of 17"
+  ],
+  [
+   "Ajay Mitchell",
+   17,
+   "6 of 17"
+  ]
+ ],
+ "notes": [
+  "Box score from the Heat's 123–113 home win over the Oklahoma City Thunder on Nov 22, 2026, from the Covers box score; all 123 Miami points and all 113 Oklahoma City points add up from the player lines, and the shooting totals (45 of 85, 15 of 38 from three, 18 of 21 FT for Miami; 42 of 92, 16 of 35, 13 of 19 for Oklahoma City), rebounds (48–38), assists (30–24), blocks (7–0), points in the paint (54–46) and Miami's biggest lead (20) are from Covers. The quarter scores (36–31–28–28 to 24–30–26–33) add up to both totals and match Daily Thunder and Bleacher Report; the 36–24 first quarter, the 67–54 halftime score and the 95–80 score after three are also in the Sun-Sentinel and Thunder Wire. The 20-point lead is also in the Sun-Sentinel and the AP, and the AP says Miami led wire to wire. Adebayo's line (24 points on 8 of 11, 8 of 9 FT, 15 rebounds, 12 assists, 2 steals, 2 blocks, 37 minutes) is from Covers, the Miami Herald, the Sun-Sentinel and RotoWire via CBS Sports (Yardbarker says 3 blocks, so blocks are left off his rings); RotoWire and Ball Exclusives via Yardbarker both say he had no turnovers. Records and ranks are from the site's standings after Sunday's games.",
+  "It was Adebayo's ninth regular-season triple-double, tying LeBron James for second in Heat history behind Jimmy Butler's 13 (Sun-Sentinel; the AP also says ninth), with a career-high 12 assists and a season-high 15 rebounds; he completed it with a hit-ahead pass to Davion Mitchell for a transition layup with 8:09 left (Miami Herald; Sun-Sentinel). Pelle Larsson's 21 was his season high (Heat via Bleacher Report; Hot Hot Hoops). Seven Heat players scored in double figures (AP). The win streak is seven, Miami's longest since a 13-game run from Jan. 17 to Feb. 10, 2017 (AP). Miami played without Giannis Antetokounmpo (groin), and Bobby Portis Jr. made his first Heat start (Sun-Sentinel). Oklahoma City played without Shai Gilgeous-Alexander (neck strain, lower back contusion) and had nine players available (AP; The Oklahoman). Bennett Stirtz's 21 was a career high (The Oklahoman). Next: the Heat play at Philadelphia on Wednesday; the Thunder play at Indiana on Monday (AP).",
+  "The play of the game is an original illustration of Bam Adebayo's dunk with 7:47 left in the third quarter that made it 74–63 (Ball Exclusives via Yardbarker: he drove to the rim and dunked; the Heat posted it as \"BAM SLAM\"). The board's Heat +9 to +11 is 72–63 to 74–63, which follows from the two-point dunk. The story doesn't name a passer or the angle of the drive, so it is drawn as the template's plain drive to a finish at the rim. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Miami Heat or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The player in the play of the game is drawn to Adebayo's listed 6-foot-9 and 260 pounds (Basketball-Reference, Wikipedia), with arms at the default length because neither source gives a wingspan, in the Heat's home kit with No. 13 (Basketball-Reference, Wikipedia) and the default darker skin tone, since he has no approved look yet. It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "Covers: Thunder vs Heat Game Overview, Match Player Stats (Nov 22, 2026)",
+   "https://www.covers.com/sport/basketball/nba/matchup/388767",
+   "Line score, player box, team stats, biggest lead"
+  ],
+  [
+   "Daily Thunder: Scoreboard: Thunder fall to Heat",
+   "https://www.dailythunder.com/scoreboard-0022600281-thunder-heat/",
+   "Line score check"
+  ],
+  [
+   "Ball Exclusives via Yardbarker: Watch: Bam Adebayo throws down slam on way to triple-double vs. Thunder",
+   "https://www.yardbarker.com/nba/articles/watch_bam_adebayo_throws_down_slam_on_way_to_triple_double_vs_thunder/s1_17668_44603928",
+   "Play of the game (dunk, 7:47 in the third, 74-63)"
+  ],
+  [
+   "AP via FOX Sports: Adebayo gets triple-double, Heat (without Giannis) top Thunder (without SGA) for 7th straight win",
+   "https://www.foxsports.com/articles/nba/adebayo-gets-tripledouble-heat-without-giannis-top-thunder-without-sga-for-7th-straight-win",
+   "Streak, wire to wire, 20-point lead, absences, next games"
+  ],
+  [
+   "Sun-Sentinel via Yahoo: Adebayo's triple-double in Giannis absence helps lift Heat over injury-ravaged Thunder",
+   "https://sports.yahoo.com/articles/adebayo-triple-double-giannis-absence-012400107.html",
+   "Quarter scores, leads, triple-double history, 8:09 assist, blocks"
+  ],
+  [
+   "Miami Herald via Yahoo: No Giannis, but Heat defeats short-handed Thunder behind Bam triple-double to win seventh straight",
+   "https://sports.yahoo.com/articles/no-giannis-heat-defeats-short-012917192.html",
+   "Adebayo's line, 8:09 transition layup"
+  ],
+  [
+   "The Oklahoman via Yahoo: OKC Thunder falls to Miami Heat, as injury report grows even longer with SGA out",
+   "https://sports.yahoo.com/articles/okc-thunder-falls-miami-heat-012807124.html",
+   "Thunder absences, Stirtz career high, next game"
+  ],
+  [
+   "Thunder Wire via Yahoo: Player grades: SGA-less Thunder punt in 123-113 loss to Heat",
+   "https://sports.yahoo.com/articles/player-grades-sga-less-thunder-022532804.html",
+   "Quarter and halftime scores"
+  ],
+  [
+   "RotoWire via CBS Sports: Heat's Bam Adebayo: Delivers massive triple-double",
+   "https://www.cbssports.com/fantasy/basketball/news/heats-bam-adebayo-delivers-massive-triple-double/",
+   "Adebayo's line, minutes"
+  ],
+  [
+   "Basketball-Reference: Bam Adebayo",
+   "https://www.basketball-reference.com/players/a/adebaba01.html",
+   "Height, weight, number for the figure"
+  ],
+  [
+   "Wikipedia: Bam Adebayo",
+   "https://en.wikipedia.org/wiki/Bam_Adebayo",
+   "Height, weight, number for the figure"
+  ]
+ ]
+}

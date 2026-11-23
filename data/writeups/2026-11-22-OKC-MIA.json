@@ -1,0 +1,109 @@
+{
+ "headline": "Adebayo's triple-double makes it seven straight",
+ "dek": "Bam Adebayo had a triple-double and Miami won its seventh straight.",
+ "three": [
+  [
+   "Bam Adebayo: 24 points, 15 rebounds, 12 assists",
+   "8 of 11 from the field, 14 points by halftime, and no turnovers."
+  ],
+  [
+   "Heat up 13 at the half, then led by as many as 20",
+   "Adebayo and Larsson combined for 45 of 123."
+  ],
+  [
+   "Won it inside and on the glass",
+   "Rebounds 48–38; assists 30–24. Miami outrebounded Oklahoma City 48–38."
+  ]
+ ],
+ "battle": [
+  [
+   "Rebounds",
+   48,
+   38
+  ],
+  [
+   "Assists",
+   30,
+   24
+  ],
+  [
+   "Blocks",
+   7,
+   0
+  ],
+  [
+   "Points in the paint",
+   54,
+   46
+  ]
+ ],
+ "battle_labels": [
+  "MIA",
+  "OKC"
+ ],
+ "top": [
+  [
+   "Bam Adebayo",
+   "MIA",
+   "8 of 11, 15 rebounds, 12 assists",
+   24
+  ],
+  [
+   "Pelle Larsson",
+   "MIA",
+   "9 of 14, 3 steals",
+   21
+  ],
+  [
+   "Nikola Jović",
+   "MIA",
+   "off the bench, 3 of 6 from three",
+   15
+  ],
+  [
+   "Davion Mitchell",
+   "MIA",
+   "5 of 10, 3 of 4 FT",
+   14
+  ]
+ ],
+ "linescore": {
+  "away": [
+   24,
+   30,
+   26,
+   33
+  ],
+  "home": [
+   36,
+   31,
+   28,
+   28
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-22-OKC-at-MIA.json",
+ "loser": {
+  "top": [
+   [
+    "Bennett Stirtz",
+    "OKC",
+    "off the bench · 5 of 12 from three",
+    21
+   ],
+   [
+    "Jared McCain",
+    "OKC",
+    "7 of 17",
+    20
+   ],
+   [
+    "Ajay Mitchell",
+    "OKC",
+    "6 of 17",
+    17
+   ]
+  ],
+  "source": "box score"
+ }
+}
