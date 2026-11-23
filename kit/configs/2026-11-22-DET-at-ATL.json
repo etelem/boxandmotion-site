@@ -1,0 +1,247 @@
+{
+ "team": "ATL",
+ "D": "  const D = {\n    date: 'Sun, Nov 22, 2026',\n    us: 107, them: 97, record: '11–6', usName: 'Hawks', themName: 'Pistons',\n    quarters: [[29, 26], [22, 26], [23, 33], [33, 12]],\n    leadUs: 13, leadThem: 13,\n    star: {name: 'Nickeil Alexander-Walker', stats: [['Points', 27, 30], ['Rebounds', 2, 5], ['Threes made', 6, 10]]},\n    scorers: [\n      {name: 'Nickeil Alexander-Walker', pts: 27, note: '8 of 18 · 6 of 10 from three'},\n      {name: 'Corey Kispert', pts: 18, note: 'off the bench · season high'},\n      {name: 'Lu Dort', pts: 16, note: 'off the bench · 10 in the fourth'},\n      {name: 'Jalen Johnson', pts: 12, note: '11 rebounds'},\n      {name: 'Kingston Flemings', pts: 10, note: '6 assists · back from a sore back'},\n    ],\n    edges: [\n      {label: 'Fourth-quarter points', us: 33, them: 12},\n      {label: 'Offensive rebounds', us: 24, them: 8},\n      {label: 'Fast-break points', us: 23, them: 12},\n      {label: 'Free throws made', us: 20, them: 14},\n    ],\n    gaps: [\n      {label: 'Assists', us: 23, them: 30},\n      {label: 'Points in the paint', us: 38, them: 42},\n      {label: 'Blocks', us: 3, them: 6},\n    ],\n    next: {opp: 'at Celtics', when: 'Fri, Nov 27, 8:00 PM ET', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Lu Dort's 3-pointer with 8:56 left that turned an 85–84 deficit into an 87–85 Atlanta lead, in the middle of the Hawks' 18–0 fourth-quarter run. An original illustration from written accounts; not traced from footage, not to scale.\n",
+  "head": "Dort for the lead",
+  "subP": "Dort from three, 8:56 left",
+  "subL": "Lu Dort from three, 8:56 left, Hawks down 85–84",
+  "m0": "Pistons +1",
+  "m1": "Hawks +2",
+  "num": "0",
+  "cap1": "Dort from deep. Hawks by 2.",
+  "cap2": "87–85, in the middle of an 18–0 run.",
+  "clock": [
+   541,
+   536
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Pistons at Hawks Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Hawks 107, Pistons 97 · Nov 22, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Pistons at', 'Hawks'] : ['Pistons at Hawks']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Down 11 after three,', 'won the fourth 33–12.'] : ['The Hawks trailed by 11 after three quarters, opened the fourth on an 18–0 run and won it 33–12.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Hawks improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Fourth straight win'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Hawks down 11 after three,', 'then won the fourth 33–12'] : ['Hawks down 11 after three, then won the fourth 33–12']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Hawks ${D.leadUs}, Pistons ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Hawks’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Alexander-Walker:', '27 and 6 threes'] : ['Nickeil Alexander-Walker: 27 points and 6 threes']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['8 of 18 from the floor,', '5 of 5 at the line.'] : ['8 of 18 from the floor, 6 of 10 from three, 5 of 5 at the line.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Alexander-Walker, Kispert:', '45 of the 107'] : ['Alexander-Walker and Kispert combined for 45 of 107']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 30;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it in the fourth', 'and on the glass'] : ['Won it in the fourth quarter and on the offensive glass']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Hawks in gold, Pistons in gray. Atlanta', 'had 24 offensive rebounds to 8.'] : ['Hawks in gold, Pistons in gray. Atlanta grabbed 24 offensive rebounds to Detroit’s 8.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'2nd in the East'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Celtics’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '11–6';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['Detroit went scoreless for the', 'first 7:08 of the fourth.'] : ['Detroit went scoreless for the first 7:08 of the fourth quarter.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Hawks 107 · Pistons 97 · Nov 22'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Dort for the lead'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Alexander-Walker'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 60;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - 375 * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+3', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 160, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 192, ly, D.themName"
+  ]
+ ],
+ "aria": "Animated recap of the Hawks' 107 to 97 home win over the Pistons: Lu Dort's 3-pointer with 8:56 left that turned an 85 to 84 deficit into an 87 to 85 lead during an 18 to 0 fourth-quarter run, quarter-by-quarter scoring, Nickeil Alexander-Walker's 27 points and 6 threes, the top scorers, how the Hawks won, and the next game at Boston.",
+ "figure": {
+  "player": "Lu Dort",
+  "home": true,
+  "tall": 0.9744,
+  "ape": 1.0592,
+  "mass": 1.0248,
+  "label": "Lu Dort, listed 6-4, 220 lb (Basketball-Reference); 6-8.5 wingspan (DraftExpress, 2017)"
+ },
+ "loser_top": [
+  [
+   "Isaiah Joe",
+   19,
+   "off the bench · season high"
+  ],
+  [
+   "John Collins",
+   18,
+   "6 of 9 · 4 of 5 from three"
+  ],
+  [
+   "Ausar Thompson",
+   18,
+   "7 of 10 · 5 assists"
+  ]
+ ],
+ "notes": [
+  "Box score from the Atlanta Hawks' 107–97 home win over the Detroit Pistons on Sunday, Nov 22, 2026, from the Covers.com box score, checked line by line against the CBS Sports gametracker box score. All 107 Atlanta points and all 97 Detroit points add up from the player lines, and the quarter scores (29–22–23–33 to 26–26–33–12) add up to both totals: Detroit led 52–51 at the half and 85–74 after three (Covers; CBS; Field Level Media; AP). Threes (15 of 50 to 11 of 32), free throws (20 of 23 to 14 of 14), assists (23–30), blocks (3–6), points in the paint (38–42), fast-break points (23–12) and both biggest leads (13 each) are from Covers; offensive rebounds (24–8) are from the CBS box score and match the Roundtable Sports story. Atlanta's bench points (47) are added up from the box score's reserves (Dort, Wiggins, Ejiofor, Kispert). The two box scores differ by one rebound between Ausar Thompson and Daniss Jenkins, so no individual rebound total for either is shown. Records and ranks are from the site's standings after Sunday's games.",
+  "Atlanta opened the fourth quarter on an 18–0 run that turned 85–74 into 92–85 (AP), part of a 26–6 run that wiped out a 13-point deficit (Field Level Media). Detroit missed its first seven shots of the quarter (The Detroit News) and did not score until Isaiah Joe's 3-pointer with 4:52 left, more than seven minutes in (AP; Detroit Bad Boys). The Hawks won the quarter 33–12 (line score). Lu Dort scored 10 of his 16 in the fourth (Field Level Media). Corey Kispert's 18 was a season high (AP; Field Level Media). Cade Cunningham had 5 points, his first game of the season without double figures, and a season-high 15 assists (AP; box score). Atlanta has won four straight (AP; Field Level Media; AJC); Detroit has lost two straight (Field Level Media). Atlanta was without CJ McCollum (left calf) and Jock Landale; Detroit without Jalen Duren (right hamstring) and Duncan Robinson (left quad) (Field Level Media). The Hawks play at Boston on Friday, Nov 27 at 8:00 PM ET; the Pistons play at Orlando on Tuesday (Ball Exclusives; Basketball-Reference; Roundtable Sports).",
+  "The play of the game is an original illustration of Lu Dort's 3-pointer with 8:56 left (Field Level Media: \"Dort's 3-pointer put Atlanta ahead 87-85 with 8:56 left\"; AJC: Kispert's 3 cut the deficit to one, \"then Dort made a 3 to give them a two-point lead with just over eight minutes to play\"). The board's Pistons +1 to Hawks +2 is 84–85 to 87–85. The sources don't say who passed or whether it was off the catch or the dribble, so it is drawn as the template's plain pull-up from beyond the arc. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Atlanta Hawks or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The shooter in the play of the game is drawn to Lu Dort's listed 6-foot-4 and 220 pounds with No. 0 (Basketball-Reference), arms scaled to the 6-foot-8.5 wingspan measured at the 2017 Basketball Without Borders Global Camp (DraftExpress). He is drawn in Atlanta's home white with the default figure (no look on the look sheet yet). It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "Covers.com - Pistons vs Hawks game overview and box score",
+   "https://www.covers.com/sport/basketball/nba/matchup/388766",
+   "Line score, player box, team totals, paint and fast-break points, biggest leads"
+  ],
+  [
+   "CBS Sports - Detroit Pistons vs. Atlanta Hawks gametracker box score",
+   "https://www.cbssports.com/nba/gametracker/boxscore/NBA_20261122_DET@ATL/",
+   "Box score cross-check, offensive rebounds"
+  ],
+  [
+   "AP via TSN - 'Alexander-Walker has 27 points as Hawks roll to win over Pistons'",
+   "https://www.tsn.ca/nba/article/alexander-walker-has-27-points-as-hawks-roll-to-win-over-pistons/",
+   "18–0 run, Kispert season high, Cunningham, streak"
+  ],
+  [
+   "AP via Atlanta News First - 'Hawks rally in fourth quarter to beat Pistons, win fourth straight'",
+   "https://www.atlantanewsfirst.com/2026/11/22/hawks-rally-fourth-quarter-beat-pistons-win-fourth-straight/",
+   "92–85, Detroit's first points at 4:52"
+  ],
+  [
+   "Field Level Media via Yardbarker - 'Hawks storm past Pistons in fourth quarter for 107-97 win'",
+   "https://www.yardbarker.com/nba/articles/hawks_storm_past_pistons_in_fourth_quarter_for_107_97_win/s1_17045_44603460",
+   "Play of the game (Dort's 3 at 8:56), 26–6 run, halftime, absences"
+  ],
+  [
+   "Atlanta Journal-Constitution - 'Hawks' bench powers comeback win over Pistons'",
+   "https://www.ajc.com/sports/2026/11/hawks-come-back-to-beat-pistons/",
+   "Kispert and Dort threes, streak"
+  ],
+  [
+   "The Detroit News via Yahoo Sports - 'Pistons' massive fourth-quarter collapse fuels loss to Hawks'",
+   "https://sports.yahoo.com/articles/pistons-massive-fourth-quarter-collapse-225701210.html",
+   "Detroit's 0-for-7 start to the fourth"
+  ],
+  [
+   "Roundtable Sports via Yahoo Sports - 'Detroit Pistons 4th Quarter Collapse Seals 10-Point Loss To Hawks'",
+   "https://sports.yahoo.com/articles/detroit-pistons-4th-quarter-collapse-235517893.html",
+   "Offensive rebounds, Detroit's next game"
+  ],
+  [
+   "Ball Exclusives via Yardbarker - 'Hawks Beat Pistons 107-97 as Alexander-Walker Scores 27'",
+   "https://www.yardbarker.com/nba/articles/hawks_beat_pistons_107_97_as_alexander_walker_scores_27/s1_17668_44603344",
+   "Next games"
+  ],
+  [
+   "Basketball-Reference - 2026-27 Atlanta Hawks roster",
+   "https://www.basketball-reference.com/teams/ATL/2027.html",
+   "Dort's listed height, weight and number"
+  ],
+  [
+   "DraftExpress - Luguentz Dort profile",
+   "https://www.draftexpress.com/profile/Luguentz-Dort-92216/",
+   "Dort's wingspan"
+  ]
+ ]
+}

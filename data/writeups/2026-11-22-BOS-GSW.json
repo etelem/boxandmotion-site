@@ -1,0 +1,103 @@
+{
+ "headline": "Podziemski's late three edges Boston",
+ "dek": "The Warriors trailed by 11 in the third, went ahead on Brandin Podziemski’s three with 2:38 left, and held on when Jayson Tatum’s last shot missed.",
+ "three": [
+  [
+   "Brandin Podziemski: 18 points and the go-ahead three",
+   "4 of 10 from three, 7 rebounds, and the Warriors’ last 5 points."
+  ],
+  [
+   "Warriors down 6 after three, then won the fourth 19–12",
+   "Podziemski, Bassey and Santos combined for 44 of 88."
+  ],
+  [
+   "Won it on the offensive glass and down the stretch",
+   "Offensive rebounds 19–15; rebounds 45–41. Golden State grabbed 19 offensive rebounds to Boston’s 15."
+  ]
+ ],
+ "battle": [
+  [
+   "Offensive rebounds",
+   19,
+   15
+  ],
+  [
+   "Rebounds",
+   45,
+   41
+  ],
+  [
+   "Fourth-quarter points",
+   19,
+   12
+  ],
+  [
+   "Assists",
+   27,
+   26
+  ]
+ ],
+ "battle_labels": [
+  "GSW",
+  "BOS"
+ ],
+ "top": [
+  [
+   "Brandin Podziemski",
+   "GSW",
+   "4 of 10 from three, the go-ahead three",
+   18
+  ],
+  [
+   "Charles Bassey",
+   "GSW",
+   "6 of 7, 9 rebounds, 3 steals",
+   13
+  ],
+  [
+   "Gui Santos",
+   "GSW",
+   "3 of 5 from three, 5 rebounds",
+   13
+  ],
+  [
+   "Yaxel Lendeborg",
+   "GSW",
+   "8 rebounds",
+   12
+  ]
+ ],
+ "linescore": {
+  "away": [
+   20,
+   22,
+   33,
+   12
+  ],
+  "home": [
+   27,
+   17,
+   25,
+   19
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-22-BOS-at-GSW.json",
+ "loser": {
+  "top": [
+   [
+    "Jayson Tatum",
+    "BOS",
+    "10 rebounds · 23 in the first half",
+    27
+   ],
+   [
+    "Derrick White",
+    "BOS",
+    "5 assists · 2 of 12 from three",
+    14
+   ]
+  ],
+  "source": "box score"
+ }
+}

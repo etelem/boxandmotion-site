@@ -1,0 +1,109 @@
+{
+ "headline": "Flagg's free throws hold off Utah's 16–0 run",
+ "dek": "The Mavericks led by 17 after three quarters, gave up a 16–0 run, and won it on Cooper Flagg’s free throws with 3.6 seconds left.",
+ "three": [
+  [
+   "Cooper Flagg: 28 points and the winning free throws",
+   "8 of 17 from the floor, 3 of 7 from three, 9 of 10 at the line."
+  ],
+  [
+   "Mavericks up 17 after three, then held off a 16–0 run",
+   "All five Mavericks starters scored in double figures."
+  ],
+  [
+   "Won it with 16 steals and in the paint",
+   "Steals 16–6; points in the paint 50–42. Dallas had 16 steals to Utah’s 6."
+  ]
+ ],
+ "battle": [
+  [
+   "Steals",
+   16,
+   6
+  ],
+  [
+   "Points in the paint",
+   50,
+   42
+  ],
+  [
+   "Fast-break points",
+   19,
+   18
+  ],
+  [
+   "Assists",
+   32,
+   31
+  ]
+ ],
+ "battle_labels": [
+  "DAL",
+  "UTA"
+ ],
+ "top": [
+  [
+   "Cooper Flagg",
+   "DAL",
+   "9 of 10 FT, the winning free throws",
+   28
+  ],
+  [
+   "Kyrie Irving",
+   "DAL",
+   "8 assists, all 16 in the first half",
+   16
+  ],
+  [
+   "Zaccharie Risacher",
+   "DAL",
+   "8 rebounds, 6 of 11",
+   15
+  ],
+  [
+   "Caleb Martin",
+   "DAL",
+   "4 steals, 6 rebounds",
+   13
+  ]
+ ],
+ "linescore": {
+  "away": [
+   33,
+   31,
+   27,
+   25
+  ],
+  "home": [
+   35,
+   22,
+   17,
+   40
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-22-DAL-at-UTA.json",
+ "loser": {
+  "top": [
+   [
+    "Svi Mykhailiuk",
+    "UTA",
+    "career high · 10 of 15 from three",
+    39
+   ],
+   [
+    "Ace Bailey",
+    "UTA",
+    "6 of 10 · 3 steals",
+    16
+   ],
+   [
+    "Keyonte George",
+    "UTA",
+    "7 assists · 5 of 5 FT",
+    15
+   ]
+  ],
+  "source": "box score"
+ }
+}

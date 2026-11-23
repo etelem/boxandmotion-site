@@ -1,0 +1,109 @@
+{
+ "headline": "Hawks win the fourth 33–12 to beat Detroit",
+ "dek": "The Hawks trailed by 11 after three quarters, opened the fourth on an 18–0 run and won it 33–12.",
+ "three": [
+  [
+   "Nickeil Alexander-Walker: 27 points and 6 threes",
+   "8 of 18 from the floor, 6 of 10 from three, 5 of 5 at the line."
+  ],
+  [
+   "Hawks down 11 after three, then won the fourth 33–12",
+   "Alexander-Walker and Kispert combined for 45 of 107."
+  ],
+  [
+   "Won it in the fourth quarter and on the offensive glass",
+   "Fourth-quarter points 33–12; offensive rebounds 24–8. Atlanta grabbed 24 offensive rebounds to Detroit’s 8."
+  ]
+ ],
+ "battle": [
+  [
+   "Fourth-quarter points",
+   33,
+   12
+  ],
+  [
+   "Offensive rebounds",
+   24,
+   8
+  ],
+  [
+   "Fast-break points",
+   23,
+   12
+  ],
+  [
+   "Free throws made",
+   20,
+   14
+  ]
+ ],
+ "battle_labels": [
+  "ATL",
+  "DET"
+ ],
+ "top": [
+  [
+   "Nickeil Alexander-Walker",
+   "ATL",
+   "8 of 18, 6 of 10 from three",
+   27
+  ],
+  [
+   "Corey Kispert",
+   "ATL",
+   "off the bench, season high",
+   18
+  ],
+  [
+   "Lu Dort",
+   "ATL",
+   "off the bench, 10 in the fourth",
+   16
+  ],
+  [
+   "Jalen Johnson",
+   "ATL",
+   "11 rebounds",
+   12
+  ]
+ ],
+ "linescore": {
+  "away": [
+   26,
+   26,
+   33,
+   12
+  ],
+  "home": [
+   29,
+   22,
+   23,
+   33
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-22-DET-at-ATL.json",
+ "loser": {
+  "top": [
+   [
+    "Isaiah Joe",
+    "DET",
+    "off the bench · season high",
+    19
+   ],
+   [
+    "John Collins",
+    "DET",
+    "6 of 9 · 4 of 5 from three",
+    18
+   ],
+   [
+    "Ausar Thompson",
+    "DET",
+    "7 of 10 · 5 assists",
+    18
+   ]
+  ],
+  "source": "box score"
+ }
+}

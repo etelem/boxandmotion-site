@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-22-BOS-GSW.html",
+  "team": "GSW",
+  "home": true,
+  "number": "2",
+  "player": "Brandin Podziemski",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 0.9744,
+    "ape": 1.0197,
+    "mass": 0.9892
+  },
+  "build_note": "Listed 6-4, 205 lb, No. 2 (Basketball-Reference; Wikipedia); 6-5.5 wingspan at the 2023 draft combine (HoopsMatic)",
+  "kicker": "WARRIORS 88 · CELTICS 87 · NOV 22",
+  "hook": [
+    "Brandin Podziemski's",
+    "go-ahead three"
+  ],
+  "clock": "Q4 · 2:38",
+  "us": "GSW",
+  "them": "BOS",
+  "score_before": [
+    85,
+    86
+  ],
+  "score_make": [
+    88,
+    86
+  ],
+  "stamp": "THREE",
+  "beat": [
+    "Down 86–85, 2:38 left.",
+    "Boston never led again."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Warriors",
+    "them": "Celtics",
+    "us_pts": 88,
+    "them_pts": 87
+  },
+  "star": {
+    "name": "Brandin Podziemski",
+    "big": 18,
+    "big_label": "points and 7 rebounds",
+    "lines": [
+      "4 of 10 from three",
+      "The Warriors' last 5 points"
+    ]
+  },
+  "story": "Down 11 in the third and 86–85 late, the Warriors went ahead on Brandin Podziemski's three with 2:38 left and held on, 88–87.",
+  "aria": "Animated Short: Brandin Podziemski's 3-pointer off Gui Santos' pass with 2:38 left that turned an 86–85 deficit into an 88–86 Warriors lead in their 88–87 win over Boston. An original illustration, not traced from footage, not to scale."
+}

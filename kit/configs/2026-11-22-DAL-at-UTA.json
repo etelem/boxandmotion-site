@@ -1,0 +1,243 @@
+{
+ "team": "DAL",
+ "D": "  const D = {\n    date: 'Sun, Nov 22, 2026',\n    us: 116, them: 114, record: '10–7', usName: 'Mavericks', themName: 'Jazz',\n    quarters: [[33, 35], [31, 22], [27, 17], [25, 40]],\n    leadUs: 18, leadThem: 6,\n    star: {name: 'Cooper Flagg', stats: [['Points', 28, 30], ['Rebounds', 3, 5], ['Assists', 4, 5]]},\n    scorers: [\n      {name: 'Cooper Flagg', pts: 28, note: '9 of 10 FT · the winning free throws'},\n      {name: 'Kyrie Irving', pts: 16, note: '8 assists · all 16 in the first half'},\n      {name: 'Zaccharie Risacher', pts: 15, note: '8 rebounds · 6 of 11'},\n      {name: 'Caleb Martin', pts: 13, note: '4 steals · 6 rebounds'},\n      {name: 'Daniel Gafford', pts: 10, note: '5 of 8 · 4 assists'},\n    ],\n    edges: [\n      {label: 'Steals', us: 16, them: 6},\n      {label: 'Points in the paint', us: 50, them: 42},\n      {label: 'Fast-break points', us: 19, them: 18},\n      {label: 'Assists', us: 32, them: 31},\n    ],\n    gaps: [\n      {label: 'Rebounds', us: 34, them: 50},\n      {label: 'Threes made', us: 16, them: 18},\n      {label: 'Free throws made', us: 14, them: 16},\n    ],\n    next: {opp: 'at Nuggets', when: 'Tue, Nov 24, 10:00 PM ET', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Cooper Flagg's two free throws with 3.6 seconds left that broke a 114–114 tie, after Utah's 16–0 run had erased an 18-point Dallas lead. An original illustration from written accounts; not traced from footage, not to scale.\n",
+  "head": "Flagg at the line",
+  "subP": "Flagg at the line, 3.6 left",
+  "subL": "Cooper Flagg at the line, tied 114–114 with 3.6 seconds left",
+  "m0": "Tied",
+  "m1": "Mavericks +2",
+  "num": "32",
+  "cap1": "Flagg makes both. Mavericks by 2.",
+  "cap2": "Filipowski’s 29-footer missed at the horn.",
+  "clock": [
+   5,
+   1
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Mavericks at Jazz Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Mavericks 116, Jazz 114 · Nov 22, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Mavericks at', 'Jazz'] : ['Mavericks at Jazz']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Up 17 after three,', 'then Flagg at the line.'] : ['The Mavericks led by 17 after three quarters, gave up a 16–0 run, and won it on Cooper Flagg’s free throws with 3.6 seconds left.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Mavericks improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Third straight win'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Mavericks up 17 after three,', 'held off a 16–0 run'] : ['Mavericks up 17 after three, then held off a 16–0 run']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Mavericks ${D.leadUs}, Jazz ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Mavericks’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Flagg: 28 and', 'the winning free throws'] : ['Cooper Flagg: 28 points and the winning free throws']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['8 of 17 from the floor,', '9 of 10 at the line.'] : ['8 of 17 from the floor, 3 of 7 from three, 9 of 10 at the line.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['All five starters', 'in double figures'] : ['All five Mavericks starters scored in double figures']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 30;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it with steals', 'and in the paint'] : ['Won it with 16 steals and in the paint']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Mavericks in silver, Jazz in gray. Dallas', 'had 16 steals to Utah’s 6.'] : ['Mavericks in silver, Jazz in gray. Dallas had 16 steals to Utah’s 6.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'8th in the West'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Nuggets’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '10–5';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['Second night of a back-to-back.', 'Ended a four-game road skid.'] : ['Second night of a back-to-back. Ended a four-game road losing streak.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Mavericks 116 · Jazz 114 · Nov 22'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Flagg at the line'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Flagg'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 60;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - 190 * k, startX = shotX;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 190 * k, x2: hoopX - 190 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 190 * k, floor + 56 * k + 10, 'Free-throw line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0;"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+2', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 12 * up : 12 * (1 - down * down);"
+  ],
+  [
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+   "qClock.textContent = '3.6';"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 160, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 192, ly, D.themName"
+  ]
+ ],
+ "aria": "Animated recap of the Mavericks' 116 to 114 road win over the Jazz: Cooper Flagg's two free throws with 3.6 seconds left that broke a 114 to 114 tie after Utah's 16 to 0 run, quarter-by-quarter scoring, Flagg's 28 points, the top scorers, how the Mavericks won, and the next game at Denver.",
+ "figure": {
+  "player": "Cooper Flagg",
+  "home": false,
+  "tall": 1.0385,
+  "ape": 1.037,
+  "mass": 0.9582,
+  "label": "Cooper Flagg, listed 6-9, 205 lb (Wikipedia); 7-0 wingspan at the 2025 draft combine (BasketNews)"
+ },
+ "loser_top": [
+  [
+   "Svi Mykhailiuk",
+   39,
+   "career high · 10 of 15 from three"
+  ],
+  [
+   "Ace Bailey",
+   16,
+   "6 of 10 · 3 steals"
+  ],
+  [
+   "Keyonte George",
+   15,
+   "7 assists · 5 of 5 FT"
+  ]
+ ],
+ "notes": [
+  "Box score from the Dallas Mavericks' 116–114 road win over the Utah Jazz on Sunday, Nov 22, 2026, from the Covers.com box score. All 116 Dallas points and all 114 Utah points add up from the player lines, and the quarter scores (33–31–27–25 to 35–22–17–40) add up to both totals: Dallas led 64–57 at the half and 91–74 after three (Covers; Dallas Sports Journal; Ball Exclusives). The CBS Sports box score had not loaded its stats, so the main lines were checked against the written stories instead: Flagg's 28 on 8 of 17, 3 of 7 and 9 of 10 (Dallas Sports Journal; Deseret News), Irving's 16 and 8 assists (AP; Dallas Sports Journal), Risacher, Martin, Gafford and Marshall (Dallas Sports Journal; SB Nation), Mykhailiuk's 39 on 12 of 23 and 10 of 15 from three (Dallas Sports Journal; Deseret News; AP), and the team field goals, rebounds and free throws (VAVEL). Steals (16–6, a Dallas season high per Dallas Sports Journal), turnovers (11–23), points in the paint (50–42), fast-break points (19–18), assists (32–31), threes (16 of 42 to 18 of 45), free throws (14 of 17 to 16 of 25), rebounds (34–50) and both biggest leads (Dallas 18, Utah 6) are from Covers. Records and ranks are from the site's standings after Sunday's games.",
+  "Dallas went on a 20–5 run in the third quarter to lead 80–62 (AP), and led 104–86 with 6:25 left (Dallas Sports Journal). Utah then scored the last 16 points of regulation: Isaiah Collier's driving layup with 4.7 seconds left tied it 114–114 (AP; Dallas Sports Journal), after Svi Mykhailiuk's threes with about 37 and 15.2 seconds left (Dallas Sports Journal) and Flagg's inbound pass out of bounds at 10.2 seconds (Dallas Sports Journal; KMJ). Mykhailiuk scored a career-high 39 off the bench, 23 in the fourth quarter; his 10 threes are one off the Utah franchise record and tied for the most in an NBA game this season (AP; Dallas Sports Journal). Dallas forced 23 turnovers and scored 32 points off them (AP). All five Dallas starters scored in double figures (SB Nation). It was Dallas' third straight win, the second night of a back-to-back after beating the Clippers on Saturday, and its first road win after four straight road losses (AP; SB Nation; Dallas Sports Journal; Basketball-Reference). P.J. Washington sat out (AP and Dallas Sports Journal say illness); Utah's Jaxson Hayes left in the second quarter with a knee injury (AP). Dallas plays at Denver on Tuesday, Nov 24 at 10:00 PM ET; Utah plays at the Lakers on Monday (Covers; AP).",
+  "The play of the game is an original illustration of Cooper Flagg's two free throws after Ace Bailey fouled him (Dallas Sports Journal; Deseret News; SB Nation). Dallas Sports Journal, the Deseret News and Field Level Media's story (KMJ) give 3.6 seconds left; AP and ABC4 give 3.7. The board's Tied to Mavericks +2 is 114–114 to 116–114. Kyle Filipowski's 29-foot three for Utah missed at the horn (Dallas Sports Journal; AP). The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Dallas Mavericks or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The player in the play of the game is drawn to Cooper Flagg's listed 6-foot-9 and 205 pounds with No. 32 (Wikipedia), arms scaled to the 7-foot wingspan measured at the 2025 NBA Draft Combine (BasketNews). He is drawn in Dallas' road blue with the default figure (no look on the look sheet yet). It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "Covers.com - Mavericks vs Jazz game overview and box score",
+   "https://www.covers.com/sport/basketball/nba/matchup/388769",
+   "Line score, player box, team totals, biggest leads"
+  ],
+  [
+   "AP via TSN - 'Flagg saves Mavericks with late free throws to hold off Jazz comeback'",
+   "https://www.tsn.ca/nba/article/flagg-saves-mavericks-with-late-free-throws-to-hold-off-jazz-comeback/",
+   "Final sequence, 20–5 run, points off turnovers, Mykhailiuk record note"
+  ],
+  [
+   "Dallas Sports Journal - 'Cooper Flagg Bails Out Mavericks'",
+   "https://dallassportsjournal.com/mavericks-jazz-recap-116-114-cooper-flagg-2026-11-22/",
+   "Play of the game, box cross-check"
+  ],
+  [
+   "Dallas Sports Journal - '16 Steals, Then A 16-0 Run'",
+   "https://dallassportsjournal.com/what-we-learned-mavericks-jazz-116-114-2026-11-22/",
+   "Clock times of the 16–0 run, steals"
+  ],
+  [
+   "Deseret News - 'Mykhailiuk's 39 points can't lift Jazz past Mavs in furious comeback bid'",
+   "https://www.deseret.com/sports/2026/11/22/svi-mykhailiuks-39-points-cant-lift-jazz-past-mavs-in-furious-comeback-bid/",
+   "Bailey's foul, 3.6 seconds, Flagg and Mykhailiuk lines"
+  ],
+  [
+   "Field Level Media via KMJ - 'Cooper Flagg, Mavericks weather Svi Mykhailiuk, late Jazz run'",
+   "https://www.kmjnow.com/2026/11/22/cooper-flagg-mavericks-weather-svi-mykhailiuk-late-jazz-run/",
+   "Final sequence cross-check"
+  ],
+  [
+   "SB Nation Mavs Moneyball via Yahoo Sports - 'Mavericks vs Jazz Recap: 3 things to know'",
+   "https://sports.yahoo.com/articles/mavericks-vs-jazz-recap-3-030541466.html",
+   "Starters in double figures, back-to-back"
+  ],
+  [
+   "VAVEL - 'Dallas Mavericks 116-114 Utah Jazz'",
+   "https://www.vavel.com/en-us/nba/2026/11/22/1280380-mavericks-vs-jazz-live-score-updates-stats-and-nba-play-by-play.html",
+   "Line score and team totals cross-check"
+  ],
+  [
+   "Basketball-Reference - 2026-27 Dallas Mavericks schedule",
+   "https://www.basketball-reference.com/teams/DAL/2027_games.html",
+   "Road losing streak, next game"
+  ],
+  [
+   "Wikipedia - Cooper Flagg",
+   "https://en.wikipedia.org/wiki/Cooper_Flagg",
+   "Listed height, weight, number"
+  ],
+  [
+   "BasketNews - 'Cooper Flagg's height, weight, wingspan and vertical in 2025 NBA Draft Combine'",
+   "https://basketnews.com/news-224509-cooper-flagg-height-weight-wingspan-and-vertical-in-2025-nba-draft-combine.html",
+   "Wingspan"
+  ]
+ ]
+}
