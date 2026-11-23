@@ -5,3 +5,4 @@ games_date,check,result,reason
 2026-11-21,06:40,failed,no sports feed; WebFetch permission not granted for PTS/FOX/CBS
 2026-11-21,07:15,failed,no sports feed; WebFetch permission not answered for PTS/FOX (unattended)
 2026-11-21,recap-run-1,done,fallback sources: Covers+AP/CBS/PTS scores; FOX standings current; NOP-SAS Covers page not open (PTS+AP)
+2026-11-22,06:40,waiting,scores verified (Covers+CBS) and saved; FOX/CBS standings and PTS fetch permission not answered
