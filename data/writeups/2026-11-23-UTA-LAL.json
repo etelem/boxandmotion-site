@@ -1,0 +1,109 @@
+{
+ "headline": "Lakers pull away from Utah in the fourth",
+ "dek": "Luka Dončić scored 28 and the Lakers won the fourth quarter 31–17.",
+ "three": [
+  [
+   "Luka Dončić: 28 points and 8 assists",
+   "14 in the first quarter and 9 of 10 at the line."
+  ],
+  [
+   "Lakers up 11 at the half, behind late in the third, then won the fourth 31–17",
+   "Five Lakers scored 10 or more."
+  ],
+  [
+   "Won it on the break and at the line",
+   "Fast-break points 26–9; points off turnovers 20–7. L.A. had 26 fast-break points to Utah’s 9."
+  ]
+ ],
+ "battle": [
+  [
+   "Fast-break points",
+   26,
+   9
+  ],
+  [
+   "Points off turnovers",
+   20,
+   7
+  ],
+  [
+   "Free throws made",
+   27,
+   14
+  ],
+  [
+   "Threes made",
+   12,
+   6
+  ]
+ ],
+ "battle_labels": [
+  "LAL",
+  "UTA"
+ ],
+ "top": [
+  [
+   "Luka Dončić",
+   "LAL",
+   "9 of 10 FT, 8 assists",
+   28
+  ],
+  [
+   "Jake LaRavia",
+   "LAL",
+   "10 rebounds, the late three",
+   15
+  ],
+  [
+   "Matisse Thybulle",
+   "LAL",
+   "6 of 9, 2 blocks",
+   14
+  ],
+  [
+   "Collin Sexton",
+   "LAL",
+   "off the bench",
+   12
+  ]
+ ],
+ "linescore": {
+  "away": [
+   20,
+   22,
+   35,
+   17
+  ],
+  "home": [
+   30,
+   23,
+   25,
+   31
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-23-UTA-at-LAL.json",
+ "loser": {
+  "top": [
+   [
+    "Kyle Filipowski",
+    "UTA",
+    "12 rebounds",
+    21
+   ],
+   [
+    "Ace Bailey",
+    "UTA",
+    "8 of 16",
+    18
+   ],
+   [
+    "Keyonte George",
+    "UTA",
+    "4 of 10",
+    14
+   ]
+  ],
+  "source": "box score"
+ }
+}

@@ -1,0 +1,109 @@
+{
+ "headline": "Bulls’ bench scores 63 in win over Cleveland",
+ "dek": "Chicago’s bench scored 63 and the Bulls beat Cleveland by 14.",
+ "three": [
+  [
+   "Tre Jones: 16 points and 9 assists",
+   "4 rebounds, 2 steals and the 3 that made it 120–104."
+  ],
+  [
+   "Bulls up 22 at the half, lost the third 39–21, then won the fourth 29–19",
+   "The bench scored 63, and Jordan Hawkins led Chicago with 19."
+  ],
+  [
+   "Won it off the bench and from three",
+   "Bench points 63–23; assists 35–21. Chicago made 20 threes to Cleveland’s 8."
+  ]
+ ],
+ "battle": [
+  [
+   "Bench points",
+   63,
+   23
+  ],
+  [
+   "Assists",
+   35,
+   21
+  ],
+  [
+   "Threes made",
+   20,
+   8
+  ],
+  [
+   "Steals",
+   12,
+   4
+  ]
+ ],
+ "battle_labels": [
+  "CHI",
+  "CLE"
+ ],
+ "top": [
+  [
+   "Jordan Hawkins",
+   "CHI",
+   "season high, 7 of 13, 4 threes",
+   19
+  ],
+  [
+   "Buddy Hield",
+   "CHI",
+   "12 in the fourth",
+   17
+  ],
+  [
+   "Tre Jones",
+   "CHI",
+   "9 assists, 2 steals",
+   16
+  ],
+  [
+   "Matas Buzelis",
+   "CHI",
+   "all in the first half",
+   15
+  ]
+ ],
+ "linescore": {
+  "away": [
+   30,
+   20,
+   39,
+   19
+  ],
+  "home": [
+   27,
+   45,
+   21,
+   29
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-23-CLE-at-CHI.json",
+ "loser": {
+  "top": [
+   [
+    "Donovan Mitchell",
+    "CLE",
+    "8 of 17 · 11 of 12 FT",
+    28
+   ],
+   [
+    "James Harden",
+    "CLE",
+    "3 of 8 from three · 5 assists",
+    21
+   ],
+   [
+    "Jarrett Allen",
+    "CLE",
+    "6 of 7",
+    16
+   ]
+  ],
+  "source": "box score"
+ }
+}

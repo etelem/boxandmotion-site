@@ -1,0 +1,109 @@
+{
+ "headline": "Siakam’s late three ends the Pacers’ skid",
+ "dek": "Pascal Siakam hit the late three and Indiana snapped a four-game losing streak.",
+ "three": [
+  [
+   "Pascal Siakam: 20 points and the late three",
+   "9 of 18 from the field with 8 rebounds and 5 assists."
+  ],
+  [
+   "Pacers up 5 at the half, then held on as OKC got within one or two five times late",
+   "Six Pacers scored 14 or more."
+  ],
+  [
+   "Won it from three and with 30 assists",
+   "Threes made 15–13; assists 30–21. Indiana had 30 assists on its 49 baskets."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   15,
+   13
+  ],
+  [
+   "Assists",
+   30,
+   21
+  ],
+  [
+   "Three-point %",
+   41,
+   35
+  ],
+  [
+   "Free throws made",
+   12,
+   19
+  ]
+ ],
+ "battle_labels": [
+  "IND",
+  "OKC"
+ ],
+ "top": [
+  [
+   "Pascal Siakam",
+   "IND",
+   "9 of 18, 8 rebounds, the late three",
+   20
+  ],
+  [
+   "Kelly Oubre Jr.",
+   "IND",
+   "season high, 4 of 7 from three",
+   20
+  ],
+  [
+   "Obi Toppin",
+   "IND",
+   "6 rebounds",
+   17
+  ],
+  [
+   "Jalen Slawson",
+   "IND",
+   "10 rebounds, 4 blocks",
+   16
+  ]
+ ],
+ "linescore": {
+  "away": [
+   27,
+   24,
+   40,
+   29
+  ],
+  "home": [
+   27,
+   29,
+   40,
+   29
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-23-OKC-at-IND.json",
+ "loser": {
+  "top": [
+   [
+    "Shai Gilgeous-Alexander",
+    "OKC",
+    "13 of 30 · 7 assists",
+    38
+   ],
+   [
+    "Kenrich Williams",
+    "OKC",
+    "off the bench · 4 of 6 from three",
+    20
+   ],
+   [
+    "Isaiah Hartenstein",
+    "OKC",
+    "7 of 12 · 9 rebounds",
+    18
+   ]
+  ],
+  "source": "box score"
+ }
+}

@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-23-OKC-IND.html",
+  "team": "IND",
+  "home": true,
+  "number": "43",
+  "player": "Pascal Siakam",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 1.0256,
+    "ape": 1.0,
+    "mass": 1.0541
+  },
+  "build_note": "Listed 6-8, 245 lb, No. 43 (RealGM); no sourced wingspan",
+  "kicker": "PACERS 125 · THUNDER 120 · NOV 23",
+  "hook": [
+    "Pascal Siakam's",
+    "late three"
+  ],
+  "clock": "Q4 · 44.4",
+  "us": "IND",
+  "them": "OKC",
+  "score_before": [
+    120,
+    119
+  ],
+  "score_make": [
+    123,
+    119
+  ],
+  "stamp": "THREE",
+  "beat": [
+    "Pacers by 4, 44.4 seconds left.",
+    "OKC had cut it to one twice."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Pacers",
+    "them": "Thunder",
+    "us_pts": 125,
+    "them_pts": 120
+  },
+  "star": {
+    "name": "Pascal Siakam",
+    "big": 20,
+    "big_label": "points on 9-of-18 shooting",
+    "lines": [
+      "8 rebounds, 5 assists",
+      "Pacers snap a 4-game skid"
+    ]
+  },
+  "story": "Indiana held off 38 from Shai Gilgeous-Alexander and snapped a four-game losing streak, 125–120.",
+  "aria": "Animated Short: Pascal Siakam's 3-pointer from the left wing with 44.4 seconds left that made it 123–119 on the way to a 125–120 Pacers win over Oklahoma City. An original illustration, not traced from footage, not to scale."
+}
