@@ -1,0 +1,109 @@
+{
+ "headline": "Jerome's seven threes carry Memphis past Charlotte",
+ "dek": "Ty Jerome hit seven threes for 29, Cam Spencer added 24 off the bench, and Memphis made all 24 free throws.",
+ "three": [
+  [
+   "Ty Jerome: 29 points and 7 threes",
+   "7 of 12 from three, 18 of his 29 by halftime."
+  ],
+  [
+   "Grizzlies up 2 at the half, up 12 with 8 minutes left, then held off Charlotte",
+   "Jerome and Spencer combined for 53 of 117."
+  ],
+  [
+   "Won it in the paint and at the line",
+   "Points in the paint 44–26; free throws made 24–17. Memphis made all 24 of its free throws."
+  ]
+ ],
+ "battle": [
+  [
+   "Points in the paint",
+   44,
+   26
+  ],
+  [
+   "Free throws made",
+   24,
+   17
+  ],
+  [
+   "Rebounds",
+   44,
+   39
+  ],
+  [
+   "Field goals made",
+   39,
+   37
+  ]
+ ],
+ "battle_labels": [
+  "MEM",
+  "CHA"
+ ],
+ "top": [
+  [
+   "Ty Jerome",
+   "MEM",
+   "10 of 21, 7 of 12 from three",
+   29
+  ],
+  [
+   "Cam Spencer",
+   "MEM",
+   "off the bench, 11 of 11 FT",
+   24
+  ],
+  [
+   "Cedric Coward",
+   "MEM",
+   "9 rebounds",
+   16
+  ],
+  [
+   "Isaiah Stewart",
+   "MEM",
+   "off the bench, 5 of 9",
+   11
+  ]
+ ],
+ "linescore": {
+  "away": [
+   28,
+   34,
+   27,
+   28
+  ],
+  "home": [
+   32,
+   28,
+   22,
+   29
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-23-MEM-at-CHA.json",
+ "loser": {
+  "top": [
+   [
+    "Christian Anderson",
+    "CHA",
+    "off the bench · 6 of 8 from three",
+    25
+   ],
+   [
+    "Naz Reid",
+    "CHA",
+    "8 of 25 · 6 rebounds",
+    24
+   ],
+   [
+    "Coby White",
+    "CHA",
+    "5 of 10 from three",
+    21
+   ]
+  ],
+  "source": "box score"
+ }
+}

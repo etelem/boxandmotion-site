@@ -1,0 +1,231 @@
+{
+ "team": "PHX",
+ "D": "  const D = {\n    date: 'Mon, Nov 23, 2026',\n    us: 123, them: 119, record: '9–7', usName: 'Suns', themName: 'Pelicans',\n    quarters: [[31, 35], [25, 19], [23, 29], [30, 26]],\n    leadUs: 7, leadThem: 10,\n    star: {name: 'Jalen Green', stats: [['Points', 25, 30], ['Rebounds', 3, 5], ['Assists', 0, 5]]},\n    scorers: [\n      {name: 'Jalen Green', pts: 25, note: '9 of 17 · 3 threes'},\n      {name: 'Devin Booker', pts: 22, note: '8 assists · 5 rebounds'},\n      {name: 'Collin Gillespie', pts: 18, note: 'off the bench · 5 in overtime'},\n      {name: 'Dillon Brooks', pts: 16, note: '7 assists'},\n    ],\n    edges: [\n      {label: 'Threes made', us: 15, them: 11},\n      {label: 'Free throws made', us: 20, them: 18},\n      {label: 'Assists', us: 28, them: 27},\n      {label: 'Blocks', us: 5, them: 3},\n    ],\n    gaps: [\n      {label: 'Points in the paint', us: 44, them: 62},\n      {label: 'Offensive rebounds', us: 9, them: 17},\n    ],\n    next: {opp: 'at Rockets', when: 'Wed, Nov 25', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Devin Booker's step-back jumper with 31 seconds left in regulation that put Phoenix up 109–107; New Orleans tied it and the Suns won overtime 14–10. An original illustration from written accounts; not traced from footage, not to scale.\n",
+  "head": "Booker’s step-back",
+  "subP": "Booker steps back, 31 seconds left",
+  "subL": "Devin Booker’s step-back jumper, 31 seconds left, tied 107–107",
+  "m0": "Tied",
+  "m1": "Suns +2",
+  "num": "15",
+  "cap1": "Booker’s step-back. Suns by 2.",
+  "cap2": "109–107 with 31 seconds left.",
+  "clock": [
+   34,
+   31
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Suns at Pelicans Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Suns 123, Pelicans 119 (OT) · Nov 23, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Suns at', 'Pelicans'] : ['Suns at Pelicans']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Green 25, Booker 22.', 'Won it in overtime.'] : ['Jalen Green scored 25, Devin Booker added 22, and Phoenix won overtime 14–10 in New Orleans.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Suns improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Fourth straight win'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Suns down 4 after three,', 'won overtime 14–10'] : ['Suns down 4 after three, tied 109–109 at the end of regulation, then won overtime 14–10']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Suns ${D.leadUs}, Pelicans ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Suns’ margin underneath. OT: 14–10."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Jalen Green: 25 points', 'on 9 of 17'] : ['Jalen Green: 25 points on 9 of 17']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['3 threes, 4 of 4 FT,', 'a team-high 25.'] : ['3 threes and 4 of 4 at the line for a team-high 25 points.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Green and Booker:', '47 of the 123'] : ['Green and Booker combined for 47 of 123']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 30;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it from three', 'and at the line'] : ['Won it from three and at the line']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Suns in orange, Pelicans in gray. New Orleans', 'scored 62 in the paint and still lost.'] : ['Suns in orange, Pelicans in gray. New Orleans scored 62 in the paint and still lost.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'9th in the West'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Rockets’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '13–5';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['Jordan Poole made his first nine', 'shots: 28 points in three quarters.'] : ['Jordan Poole made his first nine shots and scored all 28 of his points in three quarters.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Suns 123 · Pelicans 119 · OT · Nov 23'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Booker’s step-back'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Green'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 50;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - 250 * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+2', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 160, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 192, ly, D.themName"
+  ],
+  [
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = clk < 60 ? clk.toFixed(1) : `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+  ]
+ ],
+ "aria": "Animated recap of the Suns' 123 to 119 overtime road win over the Pelicans: Devin Booker's step-back jumper with 31 seconds left in regulation that made it 109 to 107, quarter-by-quarter scoring, Jalen Green's 25 points, the top scorers, how the Suns won, and the next game.",
+ "figure": {
+  "player": "Devin Booker",
+  "home": false,
+  "tall": 0.9872,
+  "ape": 1.0422,
+  "mass": 0.9852,
+  "label": "Devin Booker, listed 6-5, 206 lb, reported 6-8¼ wingspan"
+ },
+ "loser_top": [
+  [
+   "Jordan Poole",
+   28,
+   "off the bench · 6 of 8 from three"
+  ],
+  [
+   "Zion Williamson",
+   25,
+   "10 of 18 · 5 of 5 FT"
+  ],
+  [
+   "Saddiq Bey",
+   21,
+   "off the bench · 8 of 18"
+  ]
+ ],
+ "notes": [
+  "Box score from the Suns' 123–119 overtime road win over the New Orleans Pelicans on Nov 23, 2026, from the Covers box score; all 123 Phoenix points and all 119 New Orleans points add up from the player lines. The quarter scores (31–25–23–30, OT 14, to 35–19–29–26, OT 10) add up to both totals: Phoenix led 56–54 at the half (AP; Crescent City Sports), New Orleans led 83–79 after three (Crescent City Sports), and it was 109–109 after regulation (AP). Shooting (Phoenix 44 of 91, 15 of 39 from three, 20 of 27 FT; New Orleans 45 of 101, 11 of 32, 18 of 26), assists (28–27), blocks (5–3), points in the paint (44–62), offensive rebounds (9–17) and the biggest leads (Phoenix 7, New Orleans 10) are from Covers; Arizona Sports also gives the 62 paint points, the 17 offensive rebounds, Phoenix's 13 steals and the 67–39 bench edge for New Orleans, and Crescent City Sports also says New Orleans led by as many as 10. Player lines used here also match the AP (Green 25, Booker 22, Gillespie 18; Poole 28 with 6 of 8 from three, Williamson 25, Bey 21). Miles Bridges' 14 points are from the Covers box score, which adds up to 123; the AP says 13. Records and ranks are from the site's standings after Monday's games.",
+  "Phoenix won its fourth straight and handed New Orleans its fourth straight loss; the Pelicans have lost 10 of 11 since a 4-4 start (AP). Jordan Poole made his first nine shots and scored all 28 of his points in the first three quarters, a season high (AP; Crescent City Sports). Collin Gillespie scored five of his 18 in overtime (AP) and 12 in the fourth quarter and overtime (Arizona Sports). Next: Phoenix plays at Houston on Wednesday in the NBA Cup; New Orleans plays at the Clippers on Friday (AP).",
+  "The play of the game is an original illustration of Devin Booker's step-back jumper: AP: \"Phoenix also led 109-107 with 31 seconds left in regulation after Booker's step-back jumper.\" A two-point jumper, so the board's Tied to Suns +2 is 107–107 to 109–107. Jordan Fears' driving scoop tied it at 109 with 22.8 seconds left and Herb Jones stole Booker's pass at the end of regulation (AP); Phoenix pulled away in overtime with a 10–4 run (AP). The clock runs from 0:34 to 0:31 for the animation; only the 31 seconds is reported. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Phoenix Suns or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The player in the play of the game is drawn to Devin Booker's listed 6-foot-5 and 206 pounds (Basketball-Reference; Wikipedia) with No. 15, the number he switched to for 2026-27 (Cronkite News), and his arms are scaled to a 6-foot-8¼ wingspan measured at the 2015 draft combine (Tankathon). He is drawn in Phoenix's road colors with his proposed look from the site's look sheet (not yet approved). It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "Covers: Suns vs Pelicans Game Overview, Stats (Nov 23, 2026)",
+   "https://www.covers.com/sport/basketball/nba/matchup/388778",
+   "Line score, player box, team stats, biggest leads"
+  ],
+  [
+   "AP via ABC News: Jalen Green scores 25 and Devin Booker adds 22 to help the Suns top the Pelicans 123-119 in OT",
+   "https://abcnews.com/Sports/wireStory/jalen-green-scores-25-devin-booker-adds-22-138400251",
+   "Play of the game (Booker step-back, 109-107, 31 seconds), tie at 109, OT run, halftime, streaks, Poole, next games"
+  ],
+  [
+   "Crescent City Sports: Pelicans fall short to Suns in overtime",
+   "https://crescentcitysports.com/pelicans-fall-short-to-suns-in-overtime/",
+   "Quarter scores, 83-79 after three, biggest Pelicans lead, Poole season high"
+  ],
+  [
+   "Arizona Sports: Suns claw through OT to make it 8 wins in last 10",
+   "https://arizonasports.com/nba/phoenix-suns/suns-pelicans-ot-win-defense",
+   "Record 9-7, paint points, offensive rebounds, steals, bench points, Gillespie"
+  ],
+  [
+   "Wikipedia - Devin Booker",
+   "https://en.wikipedia.org/wiki/Devin_Booker",
+   "height/weight, No. 15"
+  ],
+  [
+   "Cronkite News - Phoenix Suns' Devin Booker acknowledges father with switch to No. 15",
+   "https://cronkitenews.azpbs.org/2026/06/22/phoenix-suns-devin-booker-jersey-number/",
+   "jersey No. 15 for 2026-27"
+  ],
+  [
+   "Tankathon - Devin Booker 2015 NBA Draft profile",
+   "https://www.tankathon.com/players/devin-booker",
+   "wingspan 6'8.25\" (2015 combine)"
+  ]
+ ]
+}

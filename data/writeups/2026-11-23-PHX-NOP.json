@@ -1,0 +1,111 @@
+{
+ "headline": "Green and Booker take the Suns through overtime",
+ "dek": "Jalen Green scored 25, Devin Booker added 22, and Phoenix won overtime 14–10 in New Orleans.",
+ "three": [
+  [
+   "Jalen Green: 25 points on 9 of 17",
+   "3 threes and 4 of 4 at the line for a team-high 25 points."
+  ],
+  [
+   "Suns down 4 after three, tied 109–109 at the end of regulation, then won overtime 14–10",
+   "Green and Booker combined for 47 of 123."
+  ],
+  [
+   "Won it from three and at the line",
+   "Threes made 15–11; free throws made 20–18. New Orleans scored 62 in the paint and still lost."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   15,
+   11
+  ],
+  [
+   "Free throws made",
+   20,
+   18
+  ],
+  [
+   "Assists",
+   28,
+   27
+  ],
+  [
+   "Blocks",
+   5,
+   3
+  ]
+ ],
+ "battle_labels": [
+  "PHX",
+  "NOP"
+ ],
+ "top": [
+  [
+   "Jalen Green",
+   "PHX",
+   "9 of 17, 3 threes",
+   25
+  ],
+  [
+   "Devin Booker",
+   "PHX",
+   "8 assists, 5 rebounds",
+   22
+  ],
+  [
+   "Collin Gillespie",
+   "PHX",
+   "off the bench, 5 in overtime",
+   18
+  ],
+  [
+   "Dillon Brooks",
+   "PHX",
+   "7 assists",
+   16
+  ]
+ ],
+ "linescore": {
+  "away": [
+   31,
+   25,
+   23,
+   30,
+   14
+  ],
+  "home": [
+   35,
+   19,
+   29,
+   26,
+   10
+  ],
+  "ot": true
+ },
+ "source": "kit/configs/2026-11-23-PHX-at-NOP.json",
+ "loser": {
+  "top": [
+   [
+    "Jordan Poole",
+    "NOP",
+    "off the bench · 6 of 8 from three",
+    28
+   ],
+   [
+    "Zion Williamson",
+    "NOP",
+    "10 of 18 · 5 of 5 FT",
+    25
+   ],
+   [
+    "Saddiq Bey",
+    "NOP",
+    "off the bench · 8 of 18",
+    21
+   ]
+  ],
+  "source": "box score"
+ }
+}
