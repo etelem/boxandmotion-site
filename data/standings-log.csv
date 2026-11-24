@@ -28,3 +28,5 @@ games_date,check_time_et,source,status
 2026-11-22,07:25 (recap-run-1),FOX,current
 2026-11-23,06:51,FOX,stale
 2026-11-23,06:51,CBS,stale
+2026-11-23,07:23,FOX,blocked (fetch permission not answered)
+2026-11-23,07:23,CBS,blocked (fetch permission not answered)
