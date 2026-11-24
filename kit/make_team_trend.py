@@ -68,8 +68,12 @@ html,body{margin:0;background:#f4f4f2}.wrap{width:540px;height:960px;margin:0 au
 
   // header: the hook stays on screen the whole Short (it's also the first frame)
   T(sv, M, 54, D.kicker, 'k', 14);
-  T(sv, M, 108, D.hook[0], 'd', 46);
+  const h1 = T(sv, M, 108, D.hook[0], 'd', 46);
   const h2 = T(sv, M, 160, D.hook[1], 'd', 46); h2.style.fill = '#FF5A1F';
+  // a long hook line shrinks to fit the width (measured once the fonts are in)
+  const fitH = () => [h1, h2].forEach((h) => { h.style.fontSize = '46px'; const L = h.getComputedTextLength(), W = 540 - 2 * M;
+    if (L > W) h.style.fontSize = Math.floor(46 * W / L * 10) / 10 + 'px'; });
+  fitH(); if (document.fonts) document.fonts.ready.then(fitH);
   const cap = S('g', {}, sv), capK = T(cap, M, 220, '', 'k', 13), capT = T(cap, M, 254, '', 'd', 26), capB = T(cap, M, 286, '', 'b', 17);
 
   // chart (zoomable)
@@ -134,12 +138,14 @@ html,body{margin:0;background:#f4f4f2}.wrap{width:540px;height:960px;margin:0 au
       o.g.setAttribute('transform', `translate(${o.p.x},${y0 + (o.p.y - y0) * u})`);
       o.g.style.opacity = ease((t - o.delay) / 0.25) * (1 - (on || !b.t ? 0 : 0.8 * inB));
       o.ring.style.opacity = on ? inB : 0; o.tag.style.opacity = on ? inB : 0;
-      if (on) { const w = o.tt.getComputedTextLength() + 16, below = o.p.t !== ME, x = below ? 18 - w : -26 - w, y = below ? 26 : -12;
+      // a comparison dot just left of the team would sit under the team's tag: lift the team's tag above its dot
+      const crowd = o.p.t === ME && VS.some((v) => { const q = dots[v].p; return q.x < me.x && me.x - q.x < 190 && Math.abs(q.y - me.y) < 40; });
+      if (on) { const w = o.tt.getComputedTextLength() + 16, below = o.p.t !== ME, x = below ? 18 - w : crowd ? -w / 2 : -26 - w, y = below ? 26 : crowd ? -44 : -12;
         o.tb.setAttribute('x', x); o.tb.setAttribute('y', y); o.tt.setAttribute('y', y + 17); o.tb.setAttribute('width', w); o.tt.setAttribute('x', x + 8); o.g.parentNode.appendChild(o.g); }
       o.gap.style.opacity = on && b.gap ? inB : 0; });
     const lu = ease((t - D.line_in) / 0.9);
     ln.setAttribute('x2', D.line[0][0] + (D.line[1][0] - D.line[0][0]) * lu); ln.setAttribute('y2', D.line[0][1] + (D.line[1][1] - D.line[0][1]) * lu);
-    lg.style.opacity = t < D.line_in ? 0 : 1; leg.style.opacity = ease((t - D.line_in - 0.7) / 0.3);
+    lg.style.opacity = t < D.line_in ? 0 : 1; leg.style.opacity = ease((t - D.line_in - 0.7) / 0.3) * (1 - zw);   // the zoom pushes the legend past the edge: hide it while zoomed
     // games panel beat
     const pb = B.find((bb) => bb.panel), pu = pb ? ease((t - pb.t[0]) / 0.4) * (1 - ease((t - pb.t[1] + 0.35) / 0.35)) : 0;
     gp.style.opacity = pu; clip.style.opacity = 1 - 0.85 * pu;

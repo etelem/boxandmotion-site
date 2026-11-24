@@ -1,0 +1,96 @@
+{
+ "team": "POR",
+ "compare": [
+  "ATL"
+ ],
+ "kicker": "GOOD OR LUCKY? \u00b7 THROUGH NOV 23",
+ "hook": [
+  "Blazers just beat the 76ers by 17.",
+  "Are they for real?"
+ ],
+ "line_in": 5.9,
+ "loop_start": 0.45,
+ "total": 22.0,
+ "beats": [
+  {
+   "t": [
+    0.9,
+    5.6
+   ],
+   "zoom": true,
+   "teams": [
+    "POR"
+   ],
+   "kicker": "THE RECORD",
+   "title": "11-6, 7th in a stacked West",
+   "text": "Five West teams are 13-5 or better."
+  },
+  {
+   "t": [
+    5.8,
+    11.0
+   ],
+   "zoom": true,
+   "gap": true,
+   "teams": [
+    "POR",
+    "ATL"
+   ],
+   "kicker": "THE MARGIN",
+   "title": "Winning by 6.5 a game",
+   "text": "116.8 scored, 110.3 allowed, 7th in the NBA. Atlanta, also 11-6, is +3.1."
+  },
+  {
+   "t": [
+    11.2,
+    16.6
+   ],
+   "panel": true,
+   "kicker": "THE REASON",
+   "title": "No lucky wins",
+   "text": ""
+  },
+  {
+   "t": [
+    16.8,
+    21.6
+   ],
+   "teams": [
+    "POR"
+   ],
+   "gap": true,
+   "kicker": "THE VERDICT",
+   "title": "For real",
+   "text": "If anything, a win short. And 8-5 since Ja Morant got hurt."
+  }
+ ],
+ "panel": {
+  "kicker": "ALL 17 GAMES, GROUPED",
+  "groups": [
+   {
+    "n": 8,
+    "fill": "#FF5A1F",
+    "ink": "#ffffff",
+    "mark": "W",
+    "label": "Won by 10 or more: 8"
+   },
+   {
+    "n": 3,
+    "fill": "#16181d",
+    "ink": "#ffffff",
+    "mark": "W",
+    "label": "Won by 7 to 9: 3"
+   },
+   {
+    "n": 6,
+    "fill": "#ffffff",
+    "stroke": "#c9ccd2",
+    "ink": "#8a8f99",
+    "mark": "L",
+    "label": "Losses: by 1, 1, 6, 8, 21, 22"
+   }
+  ],
+  "note": "Every win by 7 or more. Two losses by a single point."
+ },
+ "sources": "Records and point differential: Fox Sports standings through Nov 23, checked against CBS Sports and our own game data. Game scores: CBS Sports Trail Blazers schedule. Line: best fit through all 30 teams."
+}

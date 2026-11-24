@@ -96,6 +96,17 @@
  ],
  "trends": [
   {
+   "config": "kit/trends/2026-11-24-por.json",
+   "data": "kit/trends/2026-11-24-standings.csv",
+   "anim": "trend-blazers-for-real.html",
+   "slug": "blazers-are-they-for-real",
+   "team": "POR",
+   "title": "Blazers just beat the 76ers by 17. Are they for real?",
+   "short": "Are the Blazers for real?",
+   "published": "2026-11-24T12:00",
+   "dek": "11-6 and +6.5 a game, every win by 7 or more and two losses by a single point. And 8-5 since Ja Morant got hurt."
+  },
+  {
    "config": "kit/trends/2026-11-16-lal.json",
    "data": "kit/trends/2026-11-16-standings.csv",
    "anim": "trend-lakers-for-real.html",
