@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-23-MIL-TOR.html",
+  "team": "MIL",
+  "home": false,
+  "number": "11",
+  "player": "Tyler Herro",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 0.9872,
+    "ape": 0.9773,
+    "mass": 0.9585
+  },
+  "build_note": "Listed 6-5, 195 lb (Basketball-Reference; Wikipedia), No. 11 (Wikipedia); 6-3.25 wingspan at the 2019 draft combine (247Sports; NBADraft.net)",
+  "kicker": "BUCKS 116 · RAPTORS 111 · NOV 23",
+  "hook": [
+    "Tyler Herro's three",
+    "to end the skid"
+  ],
+  "clock": "Q4 · 1:03",
+  "us": "MIL",
+  "them": "TOR",
+  "score_before": [
+    113,
+    106
+  ],
+  "score_make": [
+    116,
+    106
+  ],
+  "stamp": "THREE",
+  "beat": [
+    "Bucks by 10 with 1:03 left.",
+    "Their last points of the night."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Bucks",
+    "them": "Raptors",
+    "us_pts": 116,
+    "them_pts": 111
+  },
+  "star": {
+    "name": "Tyler Herro",
+    "big": 32,
+    "big_label": "points on 10-of-16 shooting",
+    "lines": [
+      "29 after halftime",
+      "8 of 8 at the line"
+    ]
+  },
+  "story": "Milwaukee won 116–111 at Toronto to snap a 13-game losing streak, the second-longest in franchise history.",
+  "aria": "Animated Short: Tyler Herro's 3-pointer with 1:03 left that made it 116–106, Milwaukee's last points in a 116–111 win at Toronto that snapped a 13-game losing streak. An original illustration, not traced from footage, not to scale."
+}

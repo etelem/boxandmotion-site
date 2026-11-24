@@ -1,0 +1,109 @@
+{
+ "headline": "Durant's late threes put away the Clippers",
+ "dek": "Kevin Durant scored 32, with three straight late threes, and Houston won by 12.",
+ "three": [
+  [
+   "Kevin Durant: 32 points and 9 rebounds",
+   "12 in the fourth, with three straight threes to close it."
+  ],
+  [
+   "Rockets up 4 at the half, then won the third 38–32",
+   "Durant, Şengün and Thompson combined for 72 of 116."
+  ],
+  [
+   "Won it inside and on the glass",
+   "Rebounds 46–32; points in the paint 54–44. Houston out-rebounded L.A. 46 to 32."
+  ]
+ ],
+ "battle": [
+  [
+   "Rebounds",
+   46,
+   32
+  ],
+  [
+   "Points in the paint",
+   54,
+   44
+  ],
+  [
+   "Assists",
+   36,
+   30
+  ],
+  [
+   "Blocks",
+   6,
+   3
+  ]
+ ],
+ "battle_labels": [
+  "HOU",
+  "LAC"
+ ],
+ "top": [
+  [
+   "Kevin Durant",
+   "HOU",
+   "11 of 19, 4 of 6 from three",
+   32
+  ],
+  [
+   "Alperen Şengün",
+   "HOU",
+   "8 rebounds, 7 assists",
+   20
+  ],
+  [
+   "Amen Thompson",
+   "HOU",
+   "9 of 12",
+   20
+  ],
+  [
+   "Tari Eason",
+   "HOU",
+   "4 rebounds, 4 assists",
+   10
+  ]
+ ],
+ "linescore": {
+  "away": [
+   15,
+   28,
+   32,
+   29
+  ],
+  "home": [
+   25,
+   22,
+   38,
+   31
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-23-LAC-at-HOU.json",
+ "loser": {
+  "top": [
+   [
+    "Darius Garland",
+    "LAC",
+    "4 of 10 from three · 8 assists",
+    26
+   ],
+   [
+    "Rui Hachimura",
+    "LAC",
+    "7 of 10",
+    19
+   ],
+   [
+    "Brandon Ingram",
+    "LAC",
+    "7 rebounds · first game since May",
+    16
+   ]
+  ],
+  "source": "box score"
+ }
+}

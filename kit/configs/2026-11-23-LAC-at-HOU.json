@@ -1,0 +1,231 @@
+{
+ "team": "HOU",
+ "D": "  const D = {\n    date: 'Mon, Nov 23, 2026',\n    us: 116, them: 104, record: '13–5', usName: 'Rockets', themName: 'Clippers',\n    quarters: [[25, 15], [22, 28], [38, 32], [31, 29]],\n    leadUs: 13, leadThem: 5,\n    star: {name: 'Kevin Durant', stats: [['Points', 32, 35], ['Rebounds', 9, 10], ['Assists', 4, 5]]},\n    scorers: [\n      {name: 'Kevin Durant', pts: 32, note: '11 of 19 · 4 of 6 from three'},\n      {name: 'Alperen Şengün', pts: 20, note: '8 rebounds · 7 assists'},\n      {name: 'Amen Thompson', pts: 20, note: '9 of 12'},\n      {name: 'Tari Eason', pts: 10, note: '4 rebounds · 4 assists'},\n      {name: 'Reed Sheppard', pts: 5, note: '5 assists'},\n    ],\n    edges: [\n      {label: 'Rebounds', us: 46, them: 32},\n      {label: 'Points in the paint', us: 54, them: 44},\n      {label: 'Assists', us: 36, them: 30},\n      {label: 'Blocks', us: 6, them: 3},\n    ],\n    gaps: [\n      {label: 'Steals', us: 4, them: 6},\n      {label: 'Fast-break points', us: 12, them: 13},\n    ],\n    next: {opp: 'vs Suns', when: 'Wed, Nov 25, 8:30 PM ET', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Kevin Durant's off-balance 3-pointer with 1:30 left, his third straight three, that made it 112–99. An original illustration from written accounts; not traced from footage, not to scale.\n",
+  "head": "Durant’s third straight",
+  "subP": "Durant from three, 1:30 left",
+  "subL": "Kevin Durant from three, 1:30 left, Rockets up 10",
+  "m0": "Rockets +10",
+  "m1": "Rockets +13",
+  "num": "7",
+  "cap1": "Durant, off balance. Rockets by 13.",
+  "cap2": "112–99: his third straight three to close it.",
+  "clock": [
+   95,
+   90
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Clippers at Rockets Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Rockets 116, Clippers 104 · Nov 23, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Clippers at', 'Rockets'] : ['Clippers at Rockets']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Durant 32, three late threes.', 'Rockets win by 12.'] : ['Kevin Durant scored 32, with three straight late threes, and Houston won by 12.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Rockets improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Now 8–1 at home'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Rockets up 4 at the half,', 'won the third 38–32'] : ['Rockets up 4 at the half, then won the third 38–32']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Rockets ${D.leadUs}, Clippers ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Rockets’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Durant: 32 points', 'and 9 rebounds'] : ['Kevin Durant: 32 points and 9 rebounds']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['12 in the fourth, with', 'three straight threes.'] : ['12 in the fourth, with three straight threes to close it.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Durant, Şengün, Thompson:', '72 of the 116'] : ['Durant, Şengün and Thompson combined for 72 of 116']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 35;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it inside', 'and on the glass'] : ['Won it inside and on the glass']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Clippers in gray. Houston', 'out-rebounded L.A. 46 to 32.'] : ['Clippers in gray. Houston out-rebounded L.A. 46 to 32.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'4th in the West'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Suns’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '9–7';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['The Clippers’ fourth straight loss.', 'Brandon Ingram’s first game since May.'] : ['The Clippers’ fourth straight loss, in Brandon Ingram’s first game since May.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Rockets 116 · Clippers 104 · Nov 23'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Durant’s third straight'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Durant'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 60;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - 360 * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+3', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 160, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 192, ly, D.themName"
+  ],
+  [
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+  ]
+ ],
+ "aria": "Animated recap of the Rockets' 116 to 104 home win over the Clippers: Kevin Durant's off-balance 3-pointer with 1:30 left that made it 112 to 99, quarter-by-quarter scoring, Durant's 32 points, the top scorers, how the Rockets won, and the next game.",
+ "figure": {
+  "player": "Kevin Durant",
+  "home": true,
+  "tall": 1.0641,
+  "ape": 1.0602,
+  "mass": 1.0242,
+  "label": "Kevin Durant, listed 6-11, 240 lb (Basketball-Reference, Wikipedia); 7-4 wingspan (Wikipedia)"
+ },
+ "loser_top": [
+  [
+   "Darius Garland",
+   26,
+   "4 of 10 from three · 8 assists"
+  ],
+  [
+   "Rui Hachimura",
+   19,
+   "7 of 10"
+  ],
+  [
+   "Brandon Ingram",
+   16,
+   "7 rebounds · first game since May"
+  ]
+ ],
+ "notes": [
+  "Box score from the Rockets' 116–104 home win over the LA Clippers on Nov 23, 2026, from the Covers box score; all 116 Houston points and all 104 Clippers points add up from the player lines, and the shooting totals (46 of 90, 12 of 31 from three, 12 of 15 FT for Houston; 41 of 89, 11 of 38, 11 of 13 for the Clippers), rebounds (46–32), assists (36–30), blocks (6–3), steals (4–6), points in the paint (54–44), fast-break points (12–13) and the biggest leads (Houston 13, Clippers 5) are from Covers. The quarter scores (25–22–38–31 to 15–28–32–29) add up to both totals; the 25–15 first quarter, 47–43 halftime and 85–75 score after three are also in Field Level Media. Player lines used here match the AP and Field Level Media (Durant 32 and 9 rebounds on 11 of 19, 4 of 6 from three; Şengün 20, 8 rebounds, 7 assists; Thompson 20; Garland 26 and 8 assists; Hachimura 19; Ingram 16 and 7 rebounds). Thompson's assists are from the box score (5; Field Level Media says 4) and are not shown. Durant's 12 fourth-quarter points are from Yahoo Sports. The 8–1 home record is from Yardbarker. Records and ranks are from the site's standings after Monday's games.",
+  "The Clippers lost their fourth straight (AP) and are winless on the road (Field Level Media). Brandon Ingram made his Clippers debut, his first game since May after surgery for a heel injury and a partially torn Achilles; he came over in September in the trade for Kawhi Leonard (AP). Next: the Rockets host Phoenix on Wednesday, the Clippers visit Memphis on Wednesday (AP).",
+  "The play of the game is an original illustration of Kevin Durant's 3-pointer with 1:30 left: AP: \"Brandon Ingram made a basket for Los Angeles but an off-balance 3 by Durant seconds later put the Rockets up 112-99 with 1:30 remaining.\" Field Level Media also has 112–99 with 1:30 left. Durant's back-to-back threes had made it 109–97 (AP), so Ingram's basket made it 109–99 before this one, his third straight three (Yahoo Sports). The board's Rockets +10 to +13 is 109–99 to 112–99. The shot's spot on the floor isn't described, so it is drawn as the template's pull-up from beyond the arc. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Houston Rockets or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The shooter in the play of the game is drawn to Durant's listed 6-foot-11 and 240 pounds (Basketball-Reference, Wikipedia), with arms scaled to the 7-foot-4 wingspan Wikipedia reports, in the Rockets' home kit with No. 7 (Wikipedia) and his proposed look from kit/looks.json. It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "Covers: Clippers vs Rockets Game Overview, Stats (Nov 23, 2026)",
+   "https://www.covers.com/sport/basketball/nba/matchup/388780",
+   "Line score, player box, team stats, biggest leads"
+  ],
+  [
+   "AP via ABC News: Kevin Durant scores 32 to power Rockets past Clippers 116-104",
+   "https://abcnews.com/Sports/wireStory/kevin-durant-scores-32-power-rockets-past-clippers-138399889",
+   "Play of the game (1:30, 112-99), late sequence, Ingram, streak, next games"
+  ],
+  [
+   "Field Level Media: Kevin Durant's late 3-point barrage powers Rockets past Clippers",
+   "https://fieldlevelmedia.com/nba/kevin-durants-late-3-point-barrage-powers-rockets-past-clippers/",
+   "Quarter and halftime scores, runs, 112-99 at 1:30, road record"
+  ],
+  [
+   "Yahoo Sports: Kevin Durant Closes the Door as the Rockets Handle the Clippers",
+   "https://sports.yahoo.com/articles/kevin-durant-closes-door-rockets-044959717.html",
+   "Three straight threes, 12 fourth-quarter points"
+  ],
+  [
+   "Yardbarker: Rockets Beat Clippers 116-104 as Durant and Sengun Combine for 52",
+   "https://www.yardbarker.com/nba/articles/rockets_beat_clippers_116_104_as_durant_and_sengun_combine_for_52/s1_17668_44609675",
+   "Home record"
+  ],
+  [
+   "Basketball-Reference: Kevin Durant",
+   "https://www.basketball-reference.com/players/d/duranke01.html",
+   "Height, weight for the figure"
+  ],
+  [
+   "Wikipedia: Kevin Durant",
+   "https://en.wikipedia.org/wiki/Kevin_Durant",
+   "Height, weight, wingspan, number for the figure"
+  ]
+ ]
+}

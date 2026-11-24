@@ -1,0 +1,109 @@
+{
+ "headline": "Avdija's 31 and 19 threes end the 76ers' streak",
+ "dek": "Deni Avdija scored 31 and Portland made 19 threes to win by 17.",
+ "three": [
+  [
+   "Deni Avdija: 31 points and 5 threes",
+   "25 in the first half, 31 on 12 of 19 shooting."
+  ],
+  [
+   "Blazers tied 69–69 at the half, then won the second half 59–42",
+   "Avdija, Lillard and Holiday combined for 67 of 128."
+  ],
+  [
+   "Won it from three and on the glass",
+   "Threes made 19–9; rebounds 49–33. Portland made 19 threes to the 76ers’ 9."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   19,
+   9
+  ],
+  [
+   "Rebounds",
+   49,
+   33
+  ],
+  [
+   "Assists",
+   32,
+   25
+  ],
+  [
+   "Blocks",
+   6,
+   4
+  ]
+ ],
+ "battle_labels": [
+  "POR",
+  "PHI"
+ ],
+ "top": [
+  [
+   "Deni Avdija",
+   "POR",
+   "12 of 19, 5 of 9 from three",
+   31
+  ],
+  [
+   "Damian Lillard",
+   "POR",
+   "9 of 9 at the line",
+   18
+  ],
+  [
+   "Jrue Holiday",
+   "POR",
+   "4 of 5 from three",
+   18
+  ],
+  [
+   "Scoot Henderson",
+   "POR",
+   "all 17 after halftime",
+   17
+  ]
+ ],
+ "linescore": {
+  "away": [
+   30,
+   39,
+   32,
+   27
+  ],
+  "home": [
+   32,
+   37,
+   23,
+   19
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-23-POR-at-PHI.json",
+ "loser": {
+  "top": [
+   [
+    "LeBron James",
+    "PHI",
+    "4 of 5 from three · his most as a 76er",
+    23
+   ],
+   [
+    "Tyrese Maxey",
+    "PHI",
+    "6 of 6 at the line",
+    22
+   ],
+   [
+    "Jaylen Brown",
+    "PHI",
+    "19 in the first half",
+    20
+   ]
+  ],
+  "source": "box score"
+ }
+}

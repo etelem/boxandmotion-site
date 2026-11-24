@@ -1,0 +1,109 @@
+{
+ "headline": "Herro's 32 ends the Bucks' 13-game skid",
+ "dek": "Tyler Herro scored 32 and Myles Turner 27 as Milwaukee ended a 13-game losing streak.",
+ "three": [
+  [
+   "Tyler Herro: 32 points and 8 assists",
+   "3 at the half, then 15 in the third and 14 in the fourth."
+  ],
+  [
+   "Bucks down 4 at the half, then won the third 36–27",
+   "Herro and Turner combined for 59 of 116."
+  ],
+  [
+   "Won it inside and at the line",
+   "Points in the paint 52–44; free throws made 20–15. Milwaukee scored 52 in the paint to the Raptors’ 44."
+  ]
+ ],
+ "battle": [
+  [
+   "Points in the paint",
+   52,
+   44
+  ],
+  [
+   "Free throws made",
+   20,
+   15
+  ],
+  [
+   "Third-quarter points",
+   36,
+   27
+  ],
+  [
+   "Blocks",
+   9,
+   7
+  ]
+ ],
+ "battle_labels": [
+  "MIL",
+  "TOR"
+ ],
+ "top": [
+  [
+   "Tyler Herro",
+   "MIL",
+   "10 of 16, 8 of 8 at the line",
+   32
+  ],
+  [
+   "Myles Turner",
+   "MIL",
+   "11 rebounds, 5 of 6 from three",
+   27
+  ],
+  [
+   "Kyle Kuzma",
+   "MIL",
+   "8 of 15",
+   18
+  ],
+  [
+   "Brayden Burries",
+   "MIL",
+   "10 rebounds, 3 steals",
+   14
+  ]
+ ],
+ "linescore": {
+  "away": [
+   28,
+   21,
+   36,
+   31
+  ],
+  "home": [
+   28,
+   25,
+   27,
+   31
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-23-MIL-at-TOR.json",
+ "loser": {
+  "top": [
+   [
+    "Scottie Barnes",
+    "TOR",
+    "12 of 25 · 8 assists · 4 blocks",
+    31
+   ],
+   [
+    "Jakob Poeltl",
+    "TOR",
+    "10 rebounds · fouled out",
+    15
+   ],
+   [
+    "Ja'Kobe Walter",
+    "TOR",
+    "6 rebounds",
+    15
+   ]
+  ],
+  "source": "box score"
+ }
+}

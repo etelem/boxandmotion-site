@@ -1,0 +1,236 @@
+{
+ "team": "POR",
+ "D": "  const D = {\n    date: 'Mon, Nov 23, 2026',\n    us: 128, them: 111, record: '11–6', usName: 'Blazers', themName: '76ers',\n    quarters: [[30, 32], [39, 37], [32, 23], [27, 19]],\n    leadUs: 22, leadThem: 8,\n    star: {name: 'Deni Avdija', stats: [['Points', 31, 35], ['Threes', 5, 10], ['Assists', 7, 10]]},\n    scorers: [\n      {name: 'Deni Avdija', pts: 31, note: '12 of 19 · 5 of 9 from three'},\n      {name: 'Damian Lillard', pts: 18, note: '9 of 9 at the line'},\n      {name: 'Jrue Holiday', pts: 18, note: '4 of 5 from three'},\n      {name: 'Scoot Henderson', pts: 17, note: 'all 17 after halftime'},\n      {name: 'Donovan Clingan', pts: 15, note: '18 rebounds · 5 assists'},\n    ],\n    edges: [\n      {label: 'Threes made', us: 19, them: 9},\n      {label: 'Rebounds', us: 49, them: 33},\n      {label: 'Assists', us: 32, them: 25},\n      {label: 'Blocks', us: 6, them: 4},\n    ],\n    gaps: [\n      {label: 'Fast-break points', us: 7, them: 14},\n      {label: 'Free throws made', us: 17, them: 20},\n      {label: 'Steals', us: 5, them: 7},\n    ],\n    next: {opp: 'vs Spurs', when: 'Wed, Nov 25, 10:00 PM ET', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Scoot Henderson's 3-pointer with 6:36 left in the fourth quarter that made it an 18-point game. An original illustration from written accounts; not traced from footage, not to scale.\n",
+  "head": "Scoot from deep",
+  "subP": "Henderson from three, 6:36 left",
+  "subL": "Scoot Henderson from three, 6:36 left, Blazers up 15",
+  "m0": "Blazers +15",
+  "m1": "Blazers +18",
+  "num": "00",
+  "cap1": "Henderson from three. Blazers by 18.",
+  "cap2": "All 17 of his points came after halftime.",
+  "clock": [
+   401,
+   396
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Trail Blazers at 76ers Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Trail Blazers 128, 76ers 111 · Nov 23, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Trail Blazers at', '76ers'] : ['Trail Blazers at 76ers']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Avdija 31, 19 threes.', 'Blazers win by 17.'] : ['Deni Avdija scored 31 and Portland made 19 threes to win by 17.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Blazers improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Split a six-game road trip'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Blazers tied 69–69 at the half,', 'won the second half 59–42'] : ['Blazers tied 69–69 at the half, then won the second half 59–42']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Blazers ${D.leadUs}, 76ers ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Blazers’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Avdija: 31 points', 'and 5 threes'] : ['Deni Avdija: 31 points and 5 threes']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['25 in the first half,', '12 of 19 shooting.'] : ['25 in the first half, 31 on 12 of 19 shooting.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Avdija, Lillard, Holiday:', '67 of the 128'] : ['Avdija, Lillard and Holiday combined for 67 of 128']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 35;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it from three', 'and on the glass'] : ['Won it from three and on the glass']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Blazers in red, 76ers in gray. Portland', 'made 19 threes to 9.'] : ['Blazers in red, 76ers in gray. Portland made 19 threes to the 76ers’ 9.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'7th in the West'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Spurs’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '15–3';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['Ended the 76ers’ five-game win streak.', 'Joel Embiid sat out (illness).'] : ['Ended the 76ers’ five-game win streak. Joel Embiid sat out (illness).'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Blazers 128 · 76ers 111 · Nov 23'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Scoot from deep'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Avdija'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 60;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - 360 * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+3', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 160, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 192, ly, D.themName"
+  ],
+  [
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+  ]
+ ],
+ "aria": "Animated recap of the Trail Blazers' 128 to 111 road win over the 76ers: Scoot Henderson's 3-pointer with 6:36 left that made it an 18-point game, quarter-by-quarter scoring, Deni Avdija's 31 points with five threes, the top scorers, how the Blazers won, and the next game.",
+ "figure": {
+  "player": "Scoot Henderson",
+  "home": false,
+  "tall": 0.9615,
+  "ape": 1.0,
+  "mass": 1.0007,
+  "label": "Scoot Henderson, listed 6-3, 207 lb, no wingspan reported"
+ },
+ "loser_top": [
+  [
+   "LeBron James",
+   23,
+   "4 of 5 from three · his most as a 76er"
+  ],
+  [
+   "Tyrese Maxey",
+   22,
+   "6 of 6 at the line"
+  ],
+  [
+   "Jaylen Brown",
+   20,
+   "19 in the first half"
+  ]
+ ],
+ "notes": [
+  "Box score from the Trail Blazers' 128–111 win at Philadelphia on Nov 23, 2026, from the Covers box score; all 128 Portland points and all 111 Philadelphia points add up from the player lines, and the shooting totals (46 of 90, 19 of 42 from three, 17 of 26 FT for Portland; 41 of 87, 9 of 33, 20 of 24 for Philadelphia), rebounds (49–33), assists (32–25), blocks (6–4), steals (5–7), fast-break points (7–14) and the biggest leads (Portland 22, Philadelphia 8) are from Covers. The 19-of-42 three-point shooting is also in Field Level Media and the Philadelphia Inquirer, and the 76ers' 9 of 33 is in the AP. The quarter scores (30–39–32–27 to 32–37–23–19) add up to both totals; the 69–69 halftime tie is also in Field Level Media and Fastbreak Journal, and the 101–92 score after three in the AP and Field Level Media. Player lines used here match the stories (Avdija 31 with 25 in the first half, Clingan 15 points and 18 rebounds, Henderson 17, all after halftime; James 23, Maxey 22, Brown 20 with 19 in the first half). Records and ranks are from the site's standings after Monday's games.",
+  "Portland ended Philadelphia's five-game winning streak (AP; Field Level Media; Philadelphia Inquirer) and finished its six-game road trip 3–3 (AP). LeBron James's 23 points were his most in a game in his first season with the 76ers (AP). Joel Embiid did not play (illness), and Jaylen Brown returned from a two-game absence with a hamstring injury (AP; Field Level Media). Next: Portland hosts San Antonio on Wednesday (Fastbreak Journal; Covers schedule), the 76ers host Miami on Wednesday (AP; Philadelphia Inquirer).",
+  "The play of the game is an original illustration of Scoot Henderson's 3-pointer with 6:36 left: Field Level Media: \"Henderson's 3-pointer with 6:36 left made it an 18-point game, and then Robert Williams' putback created a 20-point spread.\" The board's Blazers +15 to +18 follows from the three. The shot isn't described further, so it is drawn as the template's plain pull-up from beyond the arc. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Portland Trail Blazers or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The shooter in the play of the game is drawn to Henderson's listed 6-foot-3 and 207 pounds (Basketball-Reference, Wikipedia), with arms at the default length because neither source reports a wingspan, in the Trail Blazers' road kit with No. 00 (Basketball-Reference, Wikipedia) and the default darker skin tone, since he has no approved look yet. It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "Covers: Trail Blazers vs 76ers Game Overview, Match Player Stats (Nov 23, 2026)",
+   "https://www.covers.com/sport/basketball/nba/matchup/388774",
+   "Line score, player box, team stats, biggest leads"
+  ],
+  [
+   "AP via CBS Sports: Deni Avdija scores 31 as Trail Blazers rout 76ers 128-111",
+   "https://www.cbssports.com/nba/news/deni-avdija-scores-31-as-trail-blazers-rout-76ers-128-111/",
+   "Score after three, Philadelphia's 9 of 33, James's high, Brown's return, road trip"
+  ],
+  [
+   "Field Level Media: Deni Avdija (31 points), Trail Blazers end 76ers' win streak at 5",
+   "https://fieldlevelmedia.com/nba/deni-avdija-31-points-trail-blazers-end-76ers-win-streak-at-5/",
+   "Play of the game (6:36, 18-point game), halftime tie, 22-point lead, streak"
+  ],
+  [
+   "Philadelphia Inquirer: Sixers' defense struggles again in 128-111 loss to Portland Trail Blazers",
+   "https://www.inquirer.com/sixers/sixers-blazers-score-lebron-james-jaylen-brown-deni-avdija-20261123.html",
+   "First-half splits, 19 of 42 from three, streak, absences"
+  ],
+  [
+   "Fastbreak Journal: Deni Avdija Scores 31 As Portland Trail Blazers Pull Away From Philadelphia 76ers 128-111",
+   "https://fastbreakjournal.com/trail-blazers-76ers-recap-deni-avdija-scoot-henderson/",
+   "Halftime tie, Henderson's second half, next games"
+  ],
+  [
+   "Covers: Portland Trail Blazers schedule",
+   "https://www.covers.com/sport/basketball/nba/teams/main/portland-trail-blazers",
+   "Next game"
+  ],
+  [
+   "Basketball-Reference: Scoot Henderson",
+   "https://www.basketball-reference.com/players/h/hendesc01.html",
+   "Height, weight, number for the figure"
+  ],
+  [
+   "Wikipedia: Scoot Henderson",
+   "https://en.wikipedia.org/wiki/Scoot_Henderson",
+   "Height, weight, number for the figure"
+  ]
+ ]
+}
