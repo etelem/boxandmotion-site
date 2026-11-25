@@ -1,0 +1,215 @@
+{
+  "team": "DET",
+  "D": "  const D = {\n    date: 'Tue, Nov 24, 2026',\n    us: 104, them: 86, record: '11–6', usName: 'Pistons', themName: 'Magic',\n    quarters: [[16, 22], [32, 14], [25, 25], [31, 25]],\n    leadUs: 18, leadThem: 7,\n    star: {name: 'Isaiah Joe', stats: [['Points', 21, 25], ['Threes', 5, 10], ['Rebounds', 4, 5]]},\n    scorers: [\n      {name: 'Isaiah Joe', pts: 21, note: '8 of 15 · 5 of 11 from three'},\n      {name: 'Daniss Jenkins', pts: 15, note: '10 assists · 2 steals'},\n      {name: 'Kevin Huerter', pts: 13, note: '6 of 10 · 5 assists'},\n      {name: 'Ronald Holland II', pts: 13, note: '5 of 9 off the bench'},\n      {name: 'John Collins', pts: 12, note: '3 of 5 · 2 blocks'},\n    ],\n    edges: [\n      {label: 'Fast-break points', us: 19, them: 9},\n      {label: 'Threes made', us: 15, them: 12},\n      {label: 'Steals', us: 12, them: 8},\n      {label: 'Assists', us: 27, them: 22},\n    ],\n    gaps: [\n      {label: 'Offensive rebounds', us: 8, them: 10},\n    ],\n    next: {opp: 'vs Bucks', when: 'Fri, Nov 27, 7:30 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Kevin Huerter's layup with 7:41 left in the third quarter that made it 57–42, a 15-point Detroit lead. An original illustration from written accounts (Detroit Free Press); the move before the layup is not described, so the template's plain drive is drawn. Not traced from footage, not to scale.\n",
+    "head": "Huerter at the rim",
+    "subP": "Huerter to the rim, 7:41 left in the 3rd",
+    "subL": "Kevin Huerter’s layup, 7:41 left in the third quarter",
+    "m0": "Pistons +13",
+    "m1": "Pistons +15",
+    "num": "27",
+    "cap1": "Huerter’s layup. Pistons by 15.",
+    "cap2": "57–42, and Detroit led by double digits most of the way.",
+    "clock": [
+      464,
+      461
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Pistons at Magic Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Pistons 104, Magic 86 · Nov 24, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Pistons at', 'Magic'] : ['Pistons at Magic']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['No Cade. Joe 21,', 'Pistons by 18.'] : ['Without Cade Cunningham, Isaiah Joe scored 21 and the Pistons won by 18.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Pistons improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Snapped a two-game skid'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Pistons up 12 at the half', 'after a 32–14 second'] : ['Pistons up 12 at the half after winning the second quarter 32–14']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Pistons ${D.leadUs}, Magic ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin in each quarter, then the game score after it.",
+      "Pistons’ margin in each quarter, then the game score after it."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Joe: 21 points', 'and 5 threes'] : ['Isaiah Joe: 21 points and 5 threes']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['5 of 11 from three in', 'his first Pistons start.'] : ['5 of 11 from three in his first start for Detroit.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Five Pistons in', 'double figures'] : ['Five Pistons scored in double figures']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 25;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it on the break', 'and from three'] : ['Won it on the break and from three']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Pistons in blue, Magic in gray. Detroit', 'had 19 fast-break points to 9.'] : ['Pistons in blue, Magic in gray. Detroit had 19 fast-break points to Orlando’s 9.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'4th in the East'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Bucks’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '2–16';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['Handed Orlando its first', 'NBA Cup loss.'] : ['Handed Orlando its first NBA Cup loss; Detroit is 2–1 in group play.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Pistons 104 · Magic 86 · Nov 24'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Huerter at the rim'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Joe'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 60;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 170 : 200) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+2', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 165 * k, shotX + 118 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+      "T(board, bx + 24, by + 38, 'Q3', 'b m', 24);"
+    ],
+    [
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+    ],
+    [
+      "S('rect', {x: lx + 160, y: ly - 18,",
+      "S('rect', {x: lx + 160, y: ly - 18,"
+    ],
+    [
+      "T(legend, lx + 192, ly, D.themName",
+      "T(legend, lx + 192, ly, D.themName"
+    ]
+  ],
+  "aria": "Animated recap of the Pistons' 104 to 86 road win over the Magic: Kevin Huerter's layup with 7:41 left in the third quarter that made it 57 to 42, quarter-by-quarter scoring, Isaiah Joe's 21 points and five threes, the top scorers, how the Pistons won, and the next game.",
+  "figure": {
+    "player": "Kevin Huerter",
+    "home": false,
+    "tall": 1.0,
+    "ape": 1.0,
+    "mass": 0.9401,
+    "label": "Kevin Huerter, listed 6-6, 190 lb, no wingspan reported"
+  },
+  "loser_top": [
+    [
+      "Desmond Bane",
+      21,
+      "8 of 13 · 4 of 7 from three"
+    ],
+    [
+      "Franz Wagner",
+      20,
+      "9 rebounds · 6 assists"
+    ]
+  ],
+  "notes": [
+    "Box score from the Pistons' 104–86 road win over the Orlando Magic in an NBA Cup group game on Nov 24, 2026, from the Covers box score, checked against the NerdSports recap (player lines for Joe, Jenkins, Huerter, Holland, Collins, Thompson, Bane, Wagner, da Silva and Carter; team field goals 39 of 79 to 34 of 83, threes 15 of 36 to 12 of 36, rebounds 42–41, turnovers 16–20, Detroit's 12 steals and 27 assists) with game details from the Associated Press (via CBS News Detroit), the Detroit Free Press (via Yahoo Sports), SB Nation's Detroit Bad Boys (via Yahoo Sports) and the Daily Tribune. All 104 Detroit points and all 86 Orlando points are accounted for in the box score, and the quarter scores (16–32–25–31 to 22–14–25–25) add up to both totals: Orlando led 22–16 after one, Detroit 48–36 at the half (Daily Tribune; NerdSports; Free Press). Team totals (fast-break points 19–9, threes 15–12, steals 12–8, assists 27–22, offensive rebounds 8–10) are from the Covers box score; the fast-break edge is also in the AP and NerdSports. Detroit's biggest lead, 18, is from the box score and the AP (\"an 18-point lead in the third quarter\"); Orlando's, 7, is from the box score and the Free Press (Magic up 27–20 early in the second). Records and ranks are from the site's standings after Tuesday's games.",
+    "Detroit scored the first eight points of the second quarter and went on an 18–0 run to win the period 32–14 (AP); the Free Press has the Pistons closing the half on a 28–9 run from 27–20 down. Cade Cunningham (right knee soreness) was ruled out shortly before tip (AP; Free Press). Isaiah Joe, in his first start for Detroit (AP), scored 21 with 14 in the second half and three straight threes in the fourth (AP). Ausar Thompson had 6 points, 10 rebounds, 7 assists and 4 blocks (box score; AP). Detroit snapped a two-game losing streak (site results: losses to Toronto and Atlanta), is 2–1 in NBA Cup group play and handed Orlando its first Cup loss (AP). Next: the Pistons host Milwaukee on Friday, Nov 27 at 7:30 PM ET (AP; Ball Exclusives via Yardbarker); the Magic visit Washington on Saturday (AP).",
+    "The play of the game is an original illustration of Kevin Huerter's layup with 7:41 left in the third quarter: the Free Press says Detroit was \"extending their lead to 15, 57-42, with a layup from Huerter at the 7:41 mark of the third quarter,\" so the board's Pistons +13 to +15 is 55–42 to 57–42. The move before the layup is not described in the sources read, so the template's plain drive to the rim is drawn. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Detroit Pistons or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The player in the play of the game is drawn to Huerter's listed 6-foot-6 and 190 pounds (RealGM), with arms at the default length because no wingspan is reported there, in the Pistons' road kit with No. 27 (RealGM) and the default darker skin tone, since he has no approved look yet. It is an original figure with a featureless face, not a portrait or a trace of footage."
+  ],
+  "sources": [
+    [
+      "Covers: Pistons vs Magic game overview and player stats (Nov 24, 2026)",
+      "https://www.covers.com/sport/basketball/nba/matchup/388232",
+      "Box score, line score, team totals, biggest leads"
+    ],
+    [
+      "AP via CBS News Detroit: Pistons get 21 from Isaiah Joe to hand Magic their first NBA Cup loss",
+      "https://www.cbsnews.com/detroit/news/pistons-beat-magic-104-86-nba-cup/",
+      "18–0 run, 18-point lead, Joe's start and fourth-quarter threes, Cunningham out, Cup standing, next games"
+    ],
+    [
+      "Detroit Free Press via Yahoo Sports: Detroit Pistons dazzle Magic despite Cade Cunningham sitting out",
+      "https://sports.yahoo.com/nba/articles/detroit-pistons-dazzle-magic-despite-024107557.html",
+      "Play of the game (Huerter layup, 57–42, 7:41 in the third), 28–9 run, Cunningham's knee"
+    ],
+    [
+      "NerdSports: Pistons Beat Magic 104-86 as Isaiah Joe Scores 21",
+      "https://nerdsports.com/2026/11/24/pistons-magic-recap-isaiah-joe-nba-cup/",
+      "Quarter scores, player lines and team totals cross-check, records"
+    ],
+    [
+      "Detroit Bad Boys via Yahoo Sports: Pistons vs Magic final score",
+      "https://sports.yahoo.com/nba/articles/pistons-vs-magic-final-score-025625807.html",
+      "Joe 5 of 11 from three, team threes"
+    ],
+    [
+      "Daily Tribune: Cunningham-less Pistons rout Magic",
+      "https://tribune.net.ph/2026/11/25/cunningham-less-pistons-rout-magic",
+      "First-quarter and halftime scores, Cup group standing"
+    ],
+    [
+      "Ball Exclusives via Yardbarker: Pistons Beat Magic 104-86 as Joe Scores 21",
+      "https://www.yardbarker.com/nba/articles/pistons_beat_magic_104_86_as_joe_scores_21/s1_17668_44615008",
+      "Records, next games and tip times"
+    ],
+    [
+      "RealGM: Kevin Huerter",
+      "https://basketball.realgm.com/player/Kevin-Huerter/FAQ/89387",
+      "Height, weight, number for the figure"
+    ]
+  ]
+}

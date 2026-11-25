@@ -1,0 +1,49 @@
+{
+ "out": "short-2026-11-24-DET-ORL.html",
+ "team": "DET",
+ "home": false,
+ "number": "27",
+ "player": "Kevin Huerter",
+ "play_type": "drive",
+ "build": {
+  "tall": 1.0,
+  "ape": 1.0,
+  "mass": 0.9401
+ },
+ "build_note": "6-6, 190 lb, No. 27 (RealGM); no wingspan reported, so default arm length",
+ "kicker": "PISTONS 104 · MAGIC 86 · NOV 24",
+ "hook": [
+  "Kevin Huerter’s layup",
+  "for a 15-point lead"
+ ],
+ "clock": "Q3 · 7:41",
+ "us": "DET",
+ "them": "ORL",
+ "margins": [
+  "Pistons +13",
+  "Pistons +15"
+ ],
+ "stamp": "LAYUP",
+ "beat": [
+  "57–42 with 7:41 left in the third.",
+  "Detroit played without Cade Cunningham."
+ ],
+ "final": {
+  "label": "FINAL",
+  "us": "Pistons",
+  "them": "Magic",
+  "us_pts": 104,
+  "them_pts": 86
+ },
+ "star": {
+  "name": "Kevin Huerter",
+  "big": 13,
+  "big_label": "points on 6-of-10 shooting",
+  "lines": [
+   "5 assists in an NBA Cup win",
+   "Isaiah Joe led with 21"
+  ]
+ },
+ "story": "Down 27–20 early in the second, Detroit closed the half on a 28–9 run and handed Orlando its first NBA Cup loss, 104–86.",
+ "aria": "Animated Short: Kevin Huerter's layup with 7:41 left in the third quarter that made it 57–42 for the Pistons. Pistons win 104–86 in Orlando without Cade Cunningham. An original illustration, not traced from footage, not to scale."
+}

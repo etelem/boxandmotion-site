@@ -1,0 +1,103 @@
+{
+ "headline": "Isaiah Joe’s 21 lead Pistons past Magic without Cunningham",
+ "dek": "Without Cade Cunningham, Isaiah Joe scored 21 and the Pistons won by 18.",
+ "three": [
+  [
+   "Isaiah Joe: 21 points and 5 threes",
+   "5 of 11 from three in his first start for Detroit."
+  ],
+  [
+   "Pistons up 12 at the half after winning the second quarter 32–14",
+   "Five Pistons scored in double figures."
+  ],
+  [
+   "Won it on the break and from three",
+   "Fast-break points 19–9; threes made 15–12. Detroit had 19 fast-break points to Orlando’s 9."
+  ]
+ ],
+ "battle": [
+  [
+   "Fast-break points",
+   19,
+   9
+  ],
+  [
+   "Threes made",
+   15,
+   12
+  ],
+  [
+   "Steals",
+   12,
+   8
+  ],
+  [
+   "Assists",
+   27,
+   22
+  ]
+ ],
+ "battle_labels": [
+  "DET",
+  "ORL"
+ ],
+ "top": [
+  [
+   "Isaiah Joe",
+   "DET",
+   "8 of 15, 5 of 11 from three",
+   21
+  ],
+  [
+   "Daniss Jenkins",
+   "DET",
+   "10 assists, 2 steals",
+   15
+  ],
+  [
+   "Kevin Huerter",
+   "DET",
+   "6 of 10, 5 assists",
+   13
+  ],
+  [
+   "Ronald Holland II",
+   "DET",
+   "5 of 9 off the bench",
+   13
+  ]
+ ],
+ "linescore": {
+  "away": [
+   16,
+   32,
+   25,
+   31
+  ],
+  "home": [
+   22,
+   14,
+   25,
+   25
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-24-DET-at-ORL.json",
+ "loser": {
+  "top": [
+   [
+    "Desmond Bane",
+    "ORL",
+    "8 of 13 · 4 of 7 from three",
+    21
+   ],
+   [
+    "Franz Wagner",
+    "ORL",
+    "9 rebounds · 6 assists",
+    20
+   ]
+  ],
+  "source": "box score"
+ }
+}
