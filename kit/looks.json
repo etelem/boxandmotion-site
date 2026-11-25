@@ -251,5 +251,12 @@
   "hair": "crop",
   "hairColor": "#121010",
   "beard": false
+ },
+ "Cooper Flagg": {
+  "status": "proposed",
+  "skin": "#f0d2b6",
+  "hair": "crop",
+  "hairColor": "#6b4a2e",
+  "beard": false
  }
 }
