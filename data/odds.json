@@ -20,10 +20,10 @@
   ]
  },
  "BOS": {
-  "top6": 94,
+  "top6": 96,
   "top10": 100,
   "wins": 54,
-  "chg": 1,
+  "chg": 3,
   "rec_before": [
    11,
    6
@@ -31,7 +31,7 @@
  },
  "CHA": {
   "top6": 1,
-  "top10": 30,
+  "top10": 32,
   "wins": 30,
   "chg": -1,
   "rec_before": [
@@ -41,7 +41,7 @@
  },
  "CHI": {
   "top6": 0,
-  "top10": 7,
+  "top10": 8,
   "wins": 25,
   "chg": 0,
   "rec_before": [
@@ -50,20 +50,20 @@
   ]
  },
  "CLE": {
-  "top6": 52,
+  "top6": 53,
   "top10": 97,
   "wins": 44,
-  "chg": -7,
+  "chg": -6,
   "rec_before": [
    9,
    8
   ]
  },
  "DET": {
-  "top6": 92,
+  "top6": 94,
   "top10": 100,
-  "wins": 53,
-  "chg": 1,
+  "wins": 54,
+  "chg": 3,
   "rec_before": [
    10,
    6
@@ -71,7 +71,7 @@
  },
  "IND": {
   "top6": 4,
-  "top10": 49,
+  "top10": 52,
   "wins": 33,
   "chg": 2,
   "rec_before": [
@@ -110,70 +110,70 @@
   ]
  },
  "ORL": {
-  "top6": 20,
-  "top10": 84,
-  "wins": 39,
-  "chg": 1,
+  "top6": 15,
+  "top10": 81,
+  "wins": 38,
+  "chg": -4,
   "rec_before": [
    7,
    9
   ]
  },
  "PHI": {
-  "top6": 99,
+  "top6": 100,
   "top10": 100,
   "wins": 60,
-  "chg": -1,
+  "chg": 0,
   "rec_before": [
    14,
    3
   ]
  },
  "TOR": {
-  "top6": 15,
-  "top10": 80,
+  "top6": 16,
+  "top10": 82,
   "wins": 38,
-  "chg": -5,
+  "chg": -4,
   "rec_before": [
    6,
    10
   ]
  },
  "WAS": {
-  "top6": 4,
-  "top10": 55,
-  "wins": 34,
-  "chg": 0,
+  "top6": 3,
+  "top10": 51,
+  "wins": 33,
+  "chg": -1,
   "rec_before": [
    7,
    11
   ]
  },
  "DAL": {
-  "top6": 13,
-  "top10": 80,
-  "wins": 44,
-  "chg": -2,
+  "top6": 17,
+  "top10": 84,
+  "wins": 45,
+  "chg": 2,
   "rec_before": [
    10,
    7
   ]
  },
  "DEN": {
-  "top6": 58,
-  "top10": 98,
-  "wins": 52,
-  "chg": -3,
+  "top6": 50,
+  "top10": 96,
+  "wins": 50,
+  "chg": -11,
   "rec_before": [
    10,
    5
   ]
  },
  "GSW": {
-  "top6": 7,
-  "top10": 69,
+  "top6": 8,
+  "top10": 68,
   "wins": 42,
-  "chg": -2,
+  "chg": -1,
   "rec_before": [
    9,
    8
@@ -200,20 +200,20 @@
   ]
  },
  "LAL": {
-  "top6": 91,
+  "top6": 92,
   "top10": 100,
   "wins": 58,
-  "chg": 1,
+  "chg": 2,
   "rec_before": [
    14,
    3
   ]
  },
  "MEM": {
-  "top6": 50,
+  "top6": 51,
   "top10": 97,
   "wins": 50,
-  "chg": 4,
+  "chg": 5,
   "rec_before": [
    12,
    5
@@ -250,20 +250,20 @@
   ]
  },
  "PHX": {
-  "top6": 6,
-  "top10": 62,
+  "top6": 7,
+  "top10": 61,
   "wins": 41,
-  "chg": 1,
+  "chg": 2,
   "rec_before": [
    8,
    7
   ]
  },
  "POR": {
-  "top6": 41,
+  "top6": 42,
   "top10": 95,
   "wins": 49,
-  "chg": 4,
+  "chg": 5,
   "rec_before": [
    10,
    6

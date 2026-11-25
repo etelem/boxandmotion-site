@@ -1,25 +1,25 @@
 {
- "updated": "after Mon, Nov 23 games",
- "updated_short": "Mon, Nov 23",
+ "updated": "after Tue, Nov 24 games",
+ "updated_short": "Tue, Nov 24",
  "standings": {
   "PHI": [
    14,
    4
   ],
+  "BOS": [
+   12,
+   6
+  ],
   "ATL": [
    11,
    6
   ],
-  "BOS": [
+  "DET": [
    11,
    6
   ],
   "NYK": [
    11,
-   6
-  ],
-  "DET": [
-   10,
    6
   ],
   "MIA": [
@@ -32,11 +32,11 @@
   ],
   "ORL": [
    7,
-   9
+   10
   ],
   "WAS": [
    7,
-   11
+   12
   ],
   "TOR": [
    6,
@@ -82,16 +82,16 @@
    13,
    5
   ],
-  "DEN": [
-   10,
-   5
-  ],
   "POR": [
    11,
    6
   ],
-  "DAL": [
+  "DEN": [
    10,
+   6
+  ],
+  "DAL": [
+   11,
    7
   ],
   "PHX": [
@@ -125,10 +125,10 @@
  },
  "seeds": {
   "PHI": 1,
-  "ATL": 2,
-  "BOS": 3,
-  "NYK": 4,
-  "DET": 5,
+  "BOS": 2,
+  "ATL": 3,
+  "DET": 4,
+  "NYK": 5,
   "MIA": 6,
   "CLE": 7,
   "ORL": 8,
@@ -144,8 +144,8 @@
   "MIN": 3,
   "HOU": 4,
   "MEM": 5,
-  "DEN": 6,
-  "POR": 7,
+  "POR": 6,
+  "DEN": 7,
   "DAL": 8,
   "PHX": 9,
   "OKC": 10,
@@ -1475,32 +1475,39 @@
    "LAL",
    109,
    ""
+  ],
+  [
+   "2026-11-24",
+   "BOS",
+   131,
+   "WAS",
+   116,
+   ""
+  ],
+  [
+   "2026-11-24",
+   "DAL",
+   120,
+   "DEN",
+   101,
+   ""
+  ],
+  [
+   "2026-11-24",
+   "DET",
+   104,
+   "ORL",
+   86,
+   ""
   ]
  ],
  "upcoming": [
   [
-   "Tue, Nov 24",
-   "7:00 PM",
-   "DET",
-   "ORL"
-  ],
-  [
-   "Tue, Nov 24",
-   "8:00 PM",
-   "BOS",
-   "WAS"
-  ],
-  [
-   "Tue, Nov 24",
-   "10:00 PM",
-   "DAL",
-   "DEN"
-  ],
-  [
    "Wed, Nov 25",
    "5:00 PM",
    "MIA",
-   "PHI"
+   "PHI",
+   "ESPN"
   ],
   [
    "Wed, Nov 25",
@@ -1518,7 +1525,8 @@
    "Wed, Nov 25",
    "7:30 PM",
    "MIN",
-   "OKC"
+   "OKC",
+   "ESPN"
   ],
   [
    "Wed, Nov 25",
@@ -1548,7 +1556,8 @@
    "Wed, Nov 25",
    "10:00 PM",
    "SAS",
-   "POR"
+   "POR",
+   "ESPN"
   ]
  ],
  "linescores": {
