@@ -11,3 +11,4 @@ games_date,check,result,reason
 2026-11-23,06:40,waiting,10 scores verified (Covers+PTS) and saved; FOX and CBS standings stale (pre-game)
 2026-11-23,07:15,failed,no sports feed; FOX/CBS standings fetch permission not answered (unattended); 10 scores still saved in pending
 2026-11-23,recap-run-1,done,saved Covers+PTS scores from 06:40 check; FOX standings current (fetched 08:00)
+2026-11-24,06:40,waiting,3 scores verified (Covers+PTS) and saved; FOX and CBS standings stale (pre-game)
