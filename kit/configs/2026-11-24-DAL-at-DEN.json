@@ -1,0 +1,231 @@
+{
+ "team": "DAL",
+ "D": "  const D = {\n    date: 'Tue, Nov 24, 2026',\n    us: 120, them: 101, record: '11–7', usName: 'Mavericks', themName: 'Nuggets',\n    quarters: [[24, 17], [34, 22], [26, 38], [36, 24]],\n    leadUs: 22, leadThem: 5,\n    star: {name: 'Cooper Flagg', stats: [['Points', 24, 25], ['Assists', 12, 15], ['Rebounds', 6, 10]]},\n    scorers: [\n      {name: 'Cooper Flagg', pts: 24, note: '12 assists · 7 of 9 FT'},\n      {name: 'P.J. Washington', pts: 14, note: '6 of 11 · 6 rebounds'},\n      {name: 'Naji Marshall', pts: 14, note: 'off the bench · 6 of 13'},\n      {name: 'Daniel Gafford', pts: 13, note: '6 of 8 · 2 blocks'},\n      {name: 'Caleb Martin', pts: 13, note: '5 steals · 3 of 6 from three'},\n    ],\n    edges: [\n      {label: 'Points in the paint', us: 68, them: 38},\n      {label: 'Fast-break points', us: 35, them: 7},\n      {label: 'Assists', us: 31, them: 22},\n      {label: 'Steals', us: 13, them: 6},\n    ],\n    gaps: [\n      {label: 'Free throws made', us: 13, them: 21},\n      {label: 'Threes made', us: 11, them: 12},\n    ],\n    next: {opp: 'at Suns', when: 'Fri, Nov 27', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Cooper Flagg's 9-foot driving floater with 4:49 left that made it 106–88, Dallas' 18-point lead in the fourth quarter. An original illustration from the play-by-play and written accounts; not traced from footage, not to scale.\n",
+  "head": "Flagg floats it in",
+  "subP": "Flagg on the drive, 4:49 left",
+  "subL": "Cooper Flagg on the drive, 4:49 left, up 104–88",
+  "m0": "Mavericks +16",
+  "m1": "Mavericks +18",
+  "num": "32",
+  "cap1": "Flagg’s floater. Mavericks by 18.",
+  "cap2": "106–88, after Denver got within 3 late in the third.",
+  "clock": [
+   296,
+   289
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Mavericks at Nuggets Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Mavericks 120, Nuggets 101 · Nov 24, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Mavericks at', 'Nuggets'] : ['Mavericks at Nuggets']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Flagg 24 and 12 assists.', 'Dallas 68 in the paint.'] : ['Cooper Flagg had 24 points and 12 assists, and Dallas scored 68 in the paint.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Mavericks improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Four straight wins'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Mavericks up 19 at the half,', 'won the 4th 36–24'] : ['Mavericks up 19 at the half, then won the fourth quarter 36–24']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Mavericks ${D.leadUs}, Nuggets ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Mavericks’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Flagg: 24 points', 'and 12 assists'] : ['Cooper Flagg: 24 points and 12 assists']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['12 assists tied his', 'career high.'] : ['His 12 assists tied his career high, and he made 7 of 9 free throws.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Seven Mavericks scored', '10 or more'] : ['Seven Mavericks scored 10 or more']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 30;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it in the paint', 'and on the break'] : ['Won it in the paint and on the break']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Mavericks in silver, Nuggets in gray.', '26 points off 18 Denver turnovers.'] : ['Mavericks in silver, Nuggets in gray. Dallas scored 26 points off 18 Denver turnovers.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'8th in the West'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Suns’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '9–7';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['3–0 in NBA Cup group play.', 'A win Friday clinches the group.'] : ['Dallas is 3–0 in NBA Cup group play; a win at Phoenix on Friday clinches the group.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Mavericks 120 · Nuggets 101 · Nov 24'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Flagg floats it in'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Flagg'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 70;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - (P ? 170 : 200) * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+2', 'd w', 72, 'end');"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 120 * k, shotX + 80 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 215, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 247, ly, D.themName"
+  ]
+ ],
+ "aria": "Animated recap of the Mavericks' 120 to 101 win at Denver: Cooper Flagg's driving floater with 4:49 left that made it 106 to 88, quarter-by-quarter scoring, Flagg's 24 points and 12 assists, the top scorers, how the Mavericks won, and the next game.",
+ "figure": {
+  "player": "Cooper Flagg",
+  "home": false,
+  "tall": 1.0385,
+  "ape": 1.0,
+  "mass": 0.9582,
+  "label": "Cooper Flagg, listed 6-9, 205 lb (RealGM, Wikipedia); no sourced wingspan"
+ },
+ "loser_top": [
+  [
+   "Jamal Murray",
+   20,
+   "6 of 17 · 6 of 6 FT"
+  ],
+  [
+   "Nikola Jokić",
+   18,
+   "11 rebounds · 5 assists"
+  ],
+  [
+   "Cameron Johnson",
+   17,
+   "4 of 11 from three"
+  ]
+ ],
+ "notes": [
+  "Box score from StatMuse's game page for the Mavericks' 120–101 win at Denver on Nov 24, 2026: all 120 Dallas points and all 101 Denver points add up from the player lines, as do the shooting totals (48 of 98, 11 of 37 from three, 13 of 20 FT for Dallas; 34 of 85, 12 of 39, 21 of 24 for Denver), rebounds (48–41), assists (31–22), steals (13–6) and turnovers (12–18). The quarter scores (24–34–26–36 to 17–22–38–24) are also on the FOX Sports box score page; 58–39 at the half is in the AP, Field Level Media and Dallas Sports Journal, and 84–77 after three in Dallas Sports Journal and Denver Stiffs. Points in the paint (68–38) and fast-break points (35–7) are in the AP, Dallas Sports Journal and Fadeaway World. Dallas' biggest lead, 22, is in Field Level Media, Dallas Sports Journal and Fadeaway World; Denver's 5-point lead early in the first quarter is in the Denver Gazette and VAVEL. Flagg's 24 points, 12 assists (tying his career high, AP), 6 rebounds, 8 of 17 and 7 of 9 FT also match Dallas Sports Journal and Fadeaway World. Records and ranks are from the site's standings after Tuesday's games.",
+  "Dallas has won four straight (AP; Field Level Media; Dallas Sports Journal) and is 3–0 in NBA Cup group play (Dallas Sports Journal); it clinches the group with a win at Phoenix on Friday or a Phoenix loss at Houston on Wednesday (Field Level Media; Denver Gazette). Denver scored 38 in the third quarter and got within 80–77 on DeMar DeRozan's three-point play with 1:11 left in it (AP; Dallas Sports Journal); Dallas then scored 13 of the next 15 points (Dallas Sports Journal). P.J. Washington returned after missing two games with an illness (AP; Dallas Sports Journal). Flagg's 11th 20-point double-double tied Dwight Howard for the second-most by a teenager (AP). Next: Dallas visits Phoenix on Friday (AP; Dallas Sports Journal); Denver visits Utah on Friday (AP; Denver Gazette).",
+  "The play of the game is an original illustration of Cooper Flagg's 9-foot driving floater with 4:49 left that made it 106–88: StatMuse's play-by-play has \"C. Flagg makes 9' driving floater\" at 4:49 for 106–88, after his two free throws at 5:14 made it 104–88; Field Level Media: Flagg's floater and free throws pushed the lead to 18. So the board's Mavericks +16 to +18 is 104–88 to 106–88. No assist is listed and the defender isn't described, so it is drawn as the template's plain drive to a short finish. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Dallas Mavericks or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The player in the play of the game is drawn to Flagg's listed 6-foot-9 and 205 pounds (RealGM; Wikipedia), with arms at the default length because neither reports a wingspan, in the Mavericks' road kit with No. 32 (RealGM; Wikipedia) and the default darker skin tone, since he has no approved look yet. It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "StatMuse: Mavericks 120-101 Nuggets (Nov 24, 2026), box score and play-by-play",
+   "https://www.statmuse.com/nba/game/11-24-2026-dal-at-den-78617",
+   "Player box, team totals, play of the game (4:49, 104–88 to 106–88)"
+  ],
+  [
+   "FOX Sports: Mavericks vs. Nuggets box score (Nov 24, 2026)",
+   "https://www.foxsports.com/nba/in-season-tournament-western-conference-group-play-dallas-mavericks-vs-denver-nuggets-nov-24-2026-game-boxscore-106792",
+   "Final and quarter scores"
+  ],
+  [
+   "AP via ABC News: Cooper Flagg has 24 points and 12 assists as Mavericks beat Nuggets 120-101 in NBA Cup contest",
+   "https://abcnews.com/Sports/wireStory/cooper-flagg-24-points-12-assists-mavericks-beat-138432724",
+   "Halftime, 80–77, paint and fast-break points, streak, milestone, next games"
+  ],
+  [
+   "Field Level Media via 95.3 The Score: Cooper Flagg, Mavericks strong from the start in downing Nuggets",
+   "https://www.953thescore.com/2026/11/24/cooper-flagg-mavericks-strong-from-the-start-in-downing-nuggets/",
+   "Flagg's floater at 4:49, biggest lead, NBA Cup clinch scenarios"
+  ],
+  [
+   "Dallas Sports Journal: Mavericks Answer Nuggets' Rally To Win 120-101 In Denver",
+   "https://dallassportsjournal.com/mavericks-nuggets-recap-120-101-cooper-flagg/",
+   "Quarter scores, 13-of-15 answer, records, Washington's return"
+  ],
+  [
+   "Fadeaway World: 5 Things We Learned After Mavericks Stun Nuggets In NBA Cup Victory",
+   "https://fadeawayworld.net/nba/dallas-mavericks/5-things-we-learned-after-mavericks-stun-nuggets-in-nba-cup-victory",
+   "Player lines, paint and fast-break points, biggest lead"
+  ],
+  [
+   "Denver Gazette: Nuggets' NBA Cup dreams likely dashed with sloppy loss to Dallas",
+   "https://www.denvergazette.com/2026/11/24/nuggets-nba-cup-dreams-likely-dashed-with-sloppy-loss-to-dallas/",
+   "Denver's early 5-point lead, Cup scenarios, Denver's next game"
+  ],
+  [
+   "Denver Stiffs: Recap: Denver Nuggets fall behind, come back, then fall short and lose 120-101 against Dallas Mavericks",
+   "https://www.denverstiffs.com/recap-denver-nuggets-fall-behind-come-back-then-fall-short-and-lose-120-101-against-dallas-mavericks/",
+   "Score after three, Denver's third quarter"
+  ],
+  [
+   "VAVEL: Summary, Denver Nuggets 101-120 Dallas Mavericks in NBA Cup",
+   "https://www.vavel.com/en-us/nba/2026/11/24/1280453-nuggets-vs-mavericks-live-score-nba-cup.html",
+   "First-quarter score, Denver's early lead"
+  ],
+  [
+   "RealGM: Cooper Flagg player profile",
+   "https://basketball.realgm.com/player/Cooper-Flagg/Summary/196882",
+   "Height, weight, number for the figure"
+  ],
+  [
+   "Wikipedia: Cooper Flagg",
+   "https://en.wikipedia.org/wiki/Cooper_Flagg",
+   "Height, weight, number for the figure"
+  ]
+ ]
+}

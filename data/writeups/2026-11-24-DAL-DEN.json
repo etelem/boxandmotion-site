@@ -1,0 +1,109 @@
+{
+ "headline": "Flagg's 24 and 12 assists carry Dallas past Denver",
+ "dek": "Cooper Flagg had 24 points and 12 assists, and Dallas scored 68 in the paint.",
+ "three": [
+  [
+   "Cooper Flagg: 24 points and 12 assists",
+   "His 12 assists tied his career high, and he made 7 of 9 free throws."
+  ],
+  [
+   "Mavericks up 19 at the half, then won the fourth quarter 36–24",
+   "Seven Mavericks scored 10 or more."
+  ],
+  [
+   "Won it in the paint and on the break",
+   "Points in the paint 68–38; fast-break points 35–7. Dallas scored 26 points off 18 Denver turnovers."
+  ]
+ ],
+ "battle": [
+  [
+   "Points in the paint",
+   68,
+   38
+  ],
+  [
+   "Fast-break points",
+   35,
+   7
+  ],
+  [
+   "Assists",
+   31,
+   22
+  ],
+  [
+   "Steals",
+   13,
+   6
+  ]
+ ],
+ "battle_labels": [
+  "DAL",
+  "DEN"
+ ],
+ "top": [
+  [
+   "Cooper Flagg",
+   "DAL",
+   "12 assists, 7 of 9 FT",
+   24
+  ],
+  [
+   "P.J. Washington",
+   "DAL",
+   "6 of 11, 6 rebounds",
+   14
+  ],
+  [
+   "Naji Marshall",
+   "DAL",
+   "off the bench, 6 of 13",
+   14
+  ],
+  [
+   "Daniel Gafford",
+   "DAL",
+   "6 of 8, 2 blocks",
+   13
+  ]
+ ],
+ "linescore": {
+  "away": [
+   24,
+   34,
+   26,
+   36
+  ],
+  "home": [
+   17,
+   22,
+   38,
+   24
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-24-DAL-at-DEN.json",
+ "loser": {
+  "top": [
+   [
+    "Jamal Murray",
+    "DEN",
+    "6 of 17 · 6 of 6 FT",
+    20
+   ],
+   [
+    "Nikola Jokić",
+    "DEN",
+    "11 rebounds · 5 assists",
+    18
+   ],
+   [
+    "Cameron Johnson",
+    "DEN",
+    "4 of 11 from three",
+    17
+   ]
+  ],
+  "source": "box score"
+ }
+}
