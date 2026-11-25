@@ -1,0 +1,233 @@
+{
+  "team": "BOS",
+  "D": "  const D = {\n    date: 'Tue, Nov 24, 2026',\n    us: 131, them: 116, record: '12–6', usName: 'Celtics', themName: 'Wizards',\n    quarters: [[34, 28], [46, 21], [24, 40], [27, 27]],\n    leadUs: 34, leadThem: 2,\n    star: {name: 'Jayson Tatum', stats: [['Points', 41, 45], ['Threes', 6, 10], ['Assists', 8, 10]]},\n    scorers: [\n      {name: 'Jayson Tatum', pts: 41, note: '13 of 25 · 8 assists'},\n      {name: 'Paul George', pts: 28, note: '6 of 9 from three · 9 assists'},\n      {name: 'Neemias Queta', pts: 21, note: '9 of 11 · 13 in the first quarter'},\n      {name: 'Payton Pritchard', pts: 14, note: 'off the bench · 4 threes'},\n      {name: 'Baylor Scheierman', pts: 8, note: 'all 8 in the last 2:31'},\n    ],\n    edges: [\n      {label: 'Threes made', us: 22, them: 12},\n      {label: 'Assists', us: 30, them: 25},\n      {label: 'Points off turnovers', us: 23, them: 15},\n    ],\n    gaps: [\n      {label: 'Free throws made', us: 17, them: 22},\n      {label: 'Points in the paint', us: 44, them: 48},\n    ],\n    next: {opp: 'vs Hawks', when: 'Fri, Nov 27, 8:00 PM ET', pUs: 0},\n  };\n",
+  "play": {
+    "comment": "Jayson Tatum's driving finger roll, assisted by Paul George, with 3:06 left that made it 119–112 after Washington had cut a 34-point lead to five. An original illustration from written accounts and the play-by-play; not traced from footage, not to scale.\n",
+    "head": "Tatum answers",
+    "subP": "Tatum on the drive, 3:06 left",
+    "subL": "Jayson Tatum on the drive, 3:06 left",
+    "m0": "Celtics +5",
+    "m1": "Celtics +7",
+    "num": "0",
+    "cap1": "Tatum’s finger roll. Celtics by 7.",
+    "cap2": "119–112 with 3:06 left. Boston closed on a 14–4 run.",
+    "clock": [
+      192,
+      186
+    ]
+  },
+  "subs": [
+    [
+      "<title>Lakers vs Blazers Recap</title>",
+      "<title>Celtics at Wizards Recap</title>"
+    ],
+    [
+      "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+      "<h1 class=\"page-title\">Celtics 131, Wizards 116 · Nov 24, 2026</h1>"
+    ],
+    [
+      "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+      "['Celtics at', 'Wizards'] : ['Celtics at Wizards']"
+    ],
+    [
+      "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+      "['Tatum scored 41. Boston', 'led by 34, then held on.'] : ['Jayson Tatum scored 41. Boston led by 34, then held on when Washington got within 5.']"
+    ],
+    [
+      "`Lakers fall to ${D.record}`",
+      "`Celtics improve to ${D.record}`"
+    ],
+    [
+      "'Portland stays unbeaten at 3–0'",
+      "'Snapped a four-game losing streak'"
+    ],
+    [
+      "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+      "['Celtics up 31 at the half,', 'held off a 40–24 third'] : ['Celtics up 31 at the half, then held off a 40–24 Washington third']"
+    ],
+    [
+      "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+      "Celtics ${D.leadUs}, Wizards ${D.leadThem}"
+    ],
+    [
+      "Lakers’ margin in each quarter, then the game score after it.",
+      "Celtics’ margin in each quarter, then the game score after it."
+    ],
+    [
+      "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+      "['Tatum: 41 points,', '6 of 15 from three'] : ['Jayson Tatum: 41 points, 6 of 15 from three']"
+    ],
+    [
+      "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+      "['28 in the first half, then', 'the layup that ended the run.'] : ['28 in the first half, then the layup that stopped Washington’s run.']"
+    ],
+    [
+      "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+      "['Tatum and George:', '69 of the 131'] : ['Tatum and George combined for 69 of 131']"
+    ],
+    [
+      "th = 18, max = 45;",
+      "th = 18, max = 45;"
+    ],
+    [
+      "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+      "['Won it from three', 'and off turnovers'] : ['Won it from three and off turnovers']"
+    ],
+    [
+      "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+      "['Celtics in green, Wizards in gray. Boston', 'made 22 threes to Washington’s 12.'] : ['Celtics in green, Wizards in gray. Boston made 22 threes to Washington’s 12.']"
+    ],
+    [
+      "'First loss of the season'",
+      "'2nd in the East'"
+    ],
+    [
+      "'Clippers’ record so far'",
+      "'Hawks’ record so far'"
+    ],
+    [
+      "oddsNum.textContent = '1–2';",
+      "oddsNum.textContent = '11–6';"
+    ],
+    [
+      "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+      "(P ? ['3–0 in NBA Cup group play. Friday’s', 'winner takes the group.'] : ['3–0 in NBA Cup group play. Friday’s winner takes the group.'])"
+    ],
+    [
+      "'Blazers 136 · Lakers 129 · Oct 27'",
+      "'Celtics 131 · Wizards 116 · Nov 24'"
+    ],
+    [
+      "{id: 'play', name: 'Dame Time'",
+      "{id: 'play', name: 'Tatum answers'"
+    ],
+    [
+      "{id: 'edge', name: 'How it slipped'",
+      "{id: 'edge', name: 'How they won'"
+    ],
+    [
+      "{id: 'triple', name: 'Luka'",
+      "{id: 'triple', name: 'Tatum'"
+    ],
+    [
+      "const max = 60;",
+      "const max = 55;"
+    ],
+    [
+      "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+      "const shotX = hoopX - (P ? 170 : 200) * k, startX = shotX - 90 * k;"
+    ],
+    [
+      "'+3', 'd w', 72, 'end');",
+      "'+2', 'd w', 72, 'end');"
+    ],
+    [
+      "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+      "const defX = (lt) => lerp(shotX + 165 * k, shotX + 118 * k, prog(lt, T_JAB, 1.4));"
+    ],
+    [
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+      "const cs = Math.ceil(clk - 1e-6); qClock.textContent = clk < 60 ? clk.toFixed(1) : `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+    ]
+  ],
+  "aria": "Animated recap of the Celtics' 131 to 116 road win over the Wizards: Jayson Tatum's driving finger roll with 3:06 left that made it 119 to 112 after Washington had cut a 34-point lead to five, quarter-by-quarter scoring, Tatum's 41 points, the top scorers, how the Celtics won, and the next game at home against Atlanta.",
+  "figure": {
+    "player": "Jayson Tatum",
+    "home": false,
+    "tall": 1.0256,
+    "ape": 1.0375,
+    "mass": 1.0191,
+    "label": "Jayson Tatum, listed 6-8, 229 lb, 6-11 wingspan (2016 Hoop Summit)"
+  },
+  "loser_top": [
+    [
+      "Anthony Davis",
+      33,
+      "13 rebounds · 12 of 21"
+    ],
+    [
+      "Kyshawn George",
+      24,
+      "9 rebounds · 4 threes"
+    ],
+    [
+      "AJ Dybantsa",
+      20,
+      "11 rebounds · 7 assists"
+    ]
+  ],
+  "notes": [
+    "Box score from the Celtics' 131–116 road win over the Washington Wizards on Nov 24, 2026 (NBA Cup group play), from the StatMuse game page (full box score, team stats and scoring play-by-play), with game details from the Associated Press (via TSN and CBS Boston), the Boston Globe, The Sports Leader (KNBR), Boston Celtics On SI, CelticsBlog and Roundtable Sports (via Yahoo Sports) and Ball Exclusives (via Yardbarker). All 131 Boston points and all 116 Washington points are accounted for in the box score, and the quarter scores (34–46–24–27 to 28–21–40–27) add up to both totals: 80–49 Boston at the half, 104–89 after three. Threes (22 of 51 to 12 of 36), assists (30–25), free throws made (17–22), points in the paint (44–48), points off turnovers (23–15) and both biggest leads (Boston 34, Washington 2) are from the StatMuse team stats. Records and ranks are from the site's standings after Tuesday's games: Boston 12–6 (second in the East), Atlanta 11–6.",
+    "Boston snapped a four-game losing streak and is 3–0 in NBA Cup group play; it hosts Atlanta on Friday, Nov 27, and the winner finishes atop the group (AP; The Sports Leader; Roundtable Sports). Washington's three-game winning streak ended and it is out of the Cup (AP). Boston scored 46 in the second quarter with 10 threes (AP) and led 80–46 after Paul George's layup with 21 seconds left in the half (StatMuse play-by-play). Tatum had 28 by halftime (AP). Washington won the third quarter 40–24 and got within 117–112 on AJ Dybantsa's driving bank floater with 3:19 left (StatMuse play-by-play; AP; Boston Celtics On SI). Baylor Scheierman then scored all 8 of his points in the last 2:31, two threes and two free throws (StatMuse play-by-play; Roundtable Sports). Queta's 13 first-quarter points are from AP.",
+    "The play of the game is an original illustration of Jayson Tatum's driving finger roll, assisted by Paul George, with 3:06 left that made it 119–112 (StatMuse play-by-play; AP: after Dybantsa's bank shot made it 117–112, \"Tatum got free for a layup\"). Boston outscored Washington 14–4 from there (StatMuse play-by-play). The figures are stylized and not traced from footage, and the spacing is not to scale.",
+    "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Boston Celtics or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+    "The player in the play of the game is drawn to Jayson Tatum's listed 6-foot-8 and 229 pounds with No. 0 (Wikipedia), with his arms scaled to the 6-foot-11 wingspan measured at the 2016 Nike Hoop Summit (DraftExpress), in Boston's road green with his proposed look from the site's look sheet (not yet approved). It is an original figure with a featureless face, not a portrait or a trace of footage."
+  ],
+  "sources": [
+    [
+      "StatMuse - Celtics 131, Wizards 116 game page (Nov 24, 2026)",
+      "https://www.statmuse.com/nba/game/11-24-2026-bos-at-was-78616",
+      "Line score, full box score for both teams, team stats (paint, fast break, points off turnovers, biggest leads), scoring play-by-play (play of the game, late sequence)"
+    ],
+    [
+      "StatMuse - Boston Celtics vs Wizards last game box score",
+      "https://www.statmuse.com/nba/ask/boston-celtics-vs-wizards-last-game-box-score",
+      "Box score cross-check, records"
+    ],
+    [
+      "AP via TSN - 'Jayson Tatum scores 41 to help Boston Celtics snap four-game skid with win over Washington Wizards'",
+      "https://www.tsn.ca/nba/article/tatum-scores-41-to-help-celtics-snap-four-game-skid-with-win-over-wizards/",
+      "Second quarter, halftime, 117–112 and Tatum's layup, streaks, Cup group, next games"
+    ],
+    [
+      "AP via CBS Boston - 'Tatum scores 41 to help Celtics snap 4-game skid with a 131-116 win over Wizards'",
+      "https://www.cbsnews.com/boston/news/tatum-scores-41-to-help-celtics-snap-4-game-skid-with-a-131-116-win-over-wizards/",
+      "AP cross-check, player lines"
+    ],
+    [
+      "Boston Globe - 'Celtics snap out of four-game funk with big first half on way to win over Wizards'",
+      "https://www.bostonglobe.com/2026/11/24/sports/celtics-wizards-game-score/",
+      "Quarter scores, late scare, first-half shooting"
+    ],
+    [
+      "The Sports Leader (KNBR) - 'Celtics build 34-point lead then hold off Wizards'",
+      "https://www.thesportsleader.com/2026/11/24/celtics-build-34-point-lead-then-hold-off-wizards/",
+      "34-point lead, 117–112 with 3:19 left, 14–4 close, Cup group 3–0"
+    ],
+    [
+      "Boston Celtics On SI - 'Tatum Drops 41 as Celtics Survive Wizards Scare'",
+      "https://www.si.com/nba/celtics/onsi/tatum-drops-41-as-celtics-survive-wizards-scare-what-the-box-score-doesn-t-tell-you-01m88jw8k3yq",
+      "Dybantsa's cut to five at 3:19, quarter splits"
+    ],
+    [
+      "Ball Exclusives via Yardbarker - 'Watch: Jayson Tatum scores 41 as Celtics snap skid against Wizards'",
+      "https://www.yardbarker.com/nba/articles/watch_jayson_tatum_scores_41_as_celtics_snap_skid_against_wizards/s1_17668_44615443",
+      "Tatum's line and second-quarter threes, records"
+    ],
+    [
+      "Roundtable Sports via Yahoo Sports - 'Boston Celtics: Seven Takeaways from Win Over Wizards'",
+      "https://sports.yahoo.com/nba/articles/boston-celtics-seven-takeaways-win-042956740.html",
+      "Scheierman's last 2:31, George's line, next game time"
+    ],
+    [
+      "CelticsBlog via Yahoo Sports - 'Celtics survive late scare in NBA Cup, beat Wizards 131-116'",
+      "https://sports.yahoo.com/nba/articles/celtics-survive-scare-nba-cup-034252604.html",
+      "Game flow, 104–89 after three"
+    ],
+    [
+      "Roundtable Sports via Yahoo Sports - 'Comeback Falls Short in Wizards' NBA Cup Loss vs. Boston Celtics'",
+      "https://sports.yahoo.com/nba/articles/comeback-falls-short-wizards-nba-040235198.html",
+      "Wizards' next game, home record"
+    ],
+    [
+      "Wikipedia - Jayson Tatum",
+      "https://en.wikipedia.org/wiki/Jayson_Tatum",
+      "Listed height, weight, No. 0 for the figure"
+    ],
+    [
+      "DraftExpress - Jayson Tatum profile",
+      "http://www.draftexpress.com/profile/Jayson-Tatum-7249/",
+      "Wingspan (2016 Hoop Summit) for the figure"
+    ]
+  ]
+}
