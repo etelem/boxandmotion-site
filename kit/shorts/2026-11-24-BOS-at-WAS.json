@@ -1,0 +1,53 @@
+{
+ "out": "short-2026-11-24-BOS-WAS.html",
+ "team": "BOS",
+ "home": false,
+ "number": "0",
+ "player": "Jayson Tatum",
+ "play_type": "drive",
+ "build": {
+  "tall": 1.0256,
+  "ape": 1.0375,
+  "mass": 1.0191
+ },
+ "build_note": "Listed 6-8, 229 lb, No. 0 (Wikipedia); 6-11 wingspan at the 2016 Nike Hoop Summit (DraftExpress)",
+ "kicker": "CELTICS 131 · WIZARDS 116 · NOV 24",
+ "hook": [
+  "Jayson Tatum's 41",
+  "stops the comeback"
+ ],
+ "clock": "Q4 · 3:06",
+ "us": "BOS",
+ "them": "WAS",
+ "score_before": [
+  117,
+  112
+ ],
+ "score_make": [
+  119,
+  112
+ ],
+ "stamp": "FINGER ROLL",
+ "beat": [
+  "Celtics by 7, 3:06 left.",
+  "Boston closed on a 14–4 run."
+ ],
+ "final": {
+  "label": "FINAL",
+  "us": "Celtics",
+  "them": "Wizards",
+  "us_pts": 131,
+  "them_pts": 116
+ },
+ "star": {
+  "name": "Jayson Tatum",
+  "big": 41,
+  "big_label": "points on 13-of-25 shooting",
+  "lines": [
+   "6 threes, 8 assists",
+   "Four-game losing streak over"
+  ]
+ },
+ "story": "Boston led by 34 in the second quarter. Washington cut it to 117–112 with 3:19 left.",
+ "aria": "Animated Short: Jayson Tatum drives for a finger roll, assisted by Paul George, with 3:06 left to put the Celtics up 119–112 at Washington after the Wizards had cut a 34-point lead to five. Celtics win 131–116. An original illustration, not traced from footage, not to scale."
+}

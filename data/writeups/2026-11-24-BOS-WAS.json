@@ -1,0 +1,109 @@
+{
+ "headline": "Tatum's 41 holds off Washington",
+ "dek": "Jayson Tatum scored 41. Boston led by 34, then held on when Washington got within 5.",
+ "three": [
+  [
+   "Jayson Tatum: 41 points, 6 of 15 from three",
+   "28 in the first half, then the layup that stopped Washington’s run."
+  ],
+  [
+   "Celtics up 31 at the half, then held off a 40–24 Washington third",
+   "Tatum and George combined for 69 of 131."
+  ],
+  [
+   "Won it from three and off turnovers",
+   "Threes made 22–12; assists 30–25. Boston made 22 threes to Washington’s 12."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   22,
+   12
+  ],
+  [
+   "Assists",
+   30,
+   25
+  ],
+  [
+   "Points off turnovers",
+   23,
+   15
+  ],
+  [
+   "Free throws made",
+   17,
+   22
+  ]
+ ],
+ "battle_labels": [
+  "BOS",
+  "WAS"
+ ],
+ "top": [
+  [
+   "Jayson Tatum",
+   "BOS",
+   "13 of 25, 8 assists",
+   41
+  ],
+  [
+   "Paul George",
+   "BOS",
+   "6 of 9 from three, 9 assists",
+   28
+  ],
+  [
+   "Neemias Queta",
+   "BOS",
+   "9 of 11, 13 in the first quarter",
+   21
+  ],
+  [
+   "Payton Pritchard",
+   "BOS",
+   "off the bench, 4 threes",
+   14
+  ]
+ ],
+ "linescore": {
+  "away": [
+   34,
+   46,
+   24,
+   27
+  ],
+  "home": [
+   28,
+   21,
+   40,
+   27
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-24-BOS-at-WAS.json",
+ "loser": {
+  "top": [
+   [
+    "Anthony Davis",
+    "WAS",
+    "13 rebounds · 12 of 21",
+    33
+   ],
+   [
+    "Kyshawn George",
+    "WAS",
+    "9 rebounds · 4 threes",
+    24
+   ],
+   [
+    "AJ Dybantsa",
+    "WAS",
+    "11 rebounds · 7 assists",
+    20
+   ]
+  ],
+  "source": "box score"
+ }
+}
