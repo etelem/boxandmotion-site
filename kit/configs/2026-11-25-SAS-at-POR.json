@@ -1,0 +1,253 @@
+{
+ "team": "POR",
+ "D": "  const D = {\n    date: 'Wed, Nov 25, 2026',\n    us: 116, them: 111, record: '12–6', usName: 'Blazers', themName: 'Spurs',\n    quarters: [[38, 35],  [22, 22],  [24, 30],  [32, 24]],\n    leadUs: 7, leadThem: 3,\n    star: {name: 'Deni Avdija', stats: [['Points', 33, 35], ['Rebounds', 12, 15], ['Assists', 7, 10]]},\n    scorers: [\n      {name: 'Deni Avdija', pts: 33, note: '12 rebounds · 7 assists'},\n      {name: 'Damian Lillard', pts: 29, note: '10 of 10 FT · 5 threes'},\n      {name: 'Sidy Cissoko', pts: 16, note: '4 of 10 from three'},\n      {name: 'Jrue Holiday', pts: 11, note: 'off the bench · 7 assists'},\n      {name: 'Scoot Henderson', pts: 10, note: 'off the bench'},\n    ],\n    edges: [\n      {label: 'Threes made', us: 19, them: 10},\n      {label: 'Assists', us: 29, them: 21},\n      {label: 'Points off turnovers', us: 14, them: 9},\n      {label: 'Fast-break points', us: 13, them: 5},\n    ],\n    gaps: [\n      {label: 'Rebounds', us: 50, them: 55},\n      {label: 'Second-chance points', us: 11, them: 18},\n    ],\n    next: {opp: 'vs Warriors', when: 'Fri, Nov 27', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Deni Avdija's 26-foot bank-shot 3-pointer off Damian Lillard's pass with 38 seconds left that made it 114–109. An original illustration from the play-by-play and written accounts; not traced from footage, not to scale.\n",
+  "head": "Avdija banks it in",
+  "subP": "Avdija from three, 38 seconds left",
+  "subL": "Deni Avdija from 26 feet, 38 seconds left, up 111–109",
+  "m0": "Blazers +2",
+  "m1": "Blazers +5",
+  "num": "8",
+  "cap1": "Avdija banks it in. Blazers by 5.",
+  "cap2": "114–109, off Damian Lillard’s pass.",
+  "clock": [
+   45,
+   38
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Spurs at Trail Blazers Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Blazers 116, Spurs 111 · Nov 25, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Spurs at', 'Trail Blazers'] : ['Spurs at Trail Blazers']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Avdija’s late bank three.', 'Wembanyama’s 44 not enough.'] : ['Deni Avdija banked in a late three, and Victor Wembanyama’s 44 wasn’t enough.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Blazers improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Spurs’ first road loss this season'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Blazers up 3 at the half,', 'won the fourth 32–24'] : ['Blazers up 3 at the half, down 3 after three, then won the fourth 32–24']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Blazers ${D.leadUs}, Spurs ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Blazers’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Avdija: 33, 12', 'and 7'] : ['Deni Avdija: 33 points, 12 rebounds, 7 assists']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['5 of 8 from three,', 'the bank three late.'] : ['He made 5 of 8 threes, the last one banked in with 38 seconds left.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Avdija and Lillard:', '62 of the 116'] : ['Avdija and Lillard combined for 62 of 116']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 35;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it from three', 'and by sharing it'] : ['Won it from three and with 29 assists']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Blazers in red, Spurs in gray. Portland', 'made 19 threes to 10.'] : ['Blazers in red, Spurs in gray. Portland made 19 threes to the Spurs’ 10.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'6th in the West'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Warriors’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '10–8';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['Group play ends Friday:', 'four teams are 2–1.'] : ['NBA Cup group play ends Friday with Portland, San Antonio, Golden State and the Lakers all 2–1.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Blazers 116 · Spurs 111 · Nov 25'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Avdija banks it'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Avdija'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 60;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - 390 * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+3', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 160, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 192, ly, D.themName"
+  ]
+ ],
+ "aria": "Animated recap of the Trail Blazers' 116 to 111 home win over San Antonio: Deni Avdija's bank-shot 3-pointer with 38 seconds left that made it 114 to 109, quarter-by-quarter scoring, Avdija's 33 points, 12 rebounds and 7 assists, the top scorers, how the Blazers won, and the next game.",
+ "figure": {
+  "player": "Deni Avdija",
+  "home": true,
+  "tall": 1.0256,
+  "ape": 1.0,
+  "mass": 1.0169,
+  "label": "Deni Avdija, listed 6-8, 228 lb (Basketball-Reference, Wikipedia); no sourced wingspan",
+  "skin": "#f0d2b6"
+ },
+ "loser_top": [
+  [
+   "Victor Wembanyama",
+   44,
+   "17 of 30 · 16 rebounds"
+  ],
+  [
+   "Stephon Castle",
+   20,
+   "9 assists · 6 of 6 FT"
+  ],
+  [
+   "Devin Vassell",
+   18,
+   "3 of 6 from three"
+  ]
+ ],
+ "notes": [
+  "Box score from StatMuse's game page for the Trail Blazers' 116–111 home win over San Antonio on Nov 25, 2026: all 116 Portland points and all 111 San Antonio points add up from the player lines, as do the shooting totals (37 of 94, 19 of 50 from three, 23 of 31 FT for Portland; 39 of 90, 10 of 36, 23 of 29 for San Antonio), rebounds (50–55), assists (29–21) and steals (8–5). StatMuse also has points off turnovers (14–9), fast-break points (13–5) and second-chance points (11–18). The quarter scores (38–22–24–32 to 35–22–30–24) match StatMuse, the FOX Sports play-by-play and VAVEL; 60–57 Portland at the half is also in Fast Break Journal and Roundtable Sports, and 87–84 San Antonio after three follows from Devin Vassell's fadeaway three at the third-quarter buzzer (StatMuse; FOX Sports). Biggest leads (Portland 7, San Antonio 3) are on StatMuse. Records are from the game stories (Blazers 12–6, Spurs 15–4; StatMuse; Fast Break Journal; Blazers On SI); ranks are from the site's standings after Wednesday's games.",
+  "It was the Spurs' first road loss of the season after an 8–0 start away from home (Yahoo Sports; Fast Break Journal; The Ticket). Victor Wembanyama had 44 points and 16 rebounds (StatMuse); his alley-oop dunk from Stephon Castle tied it 109–109 with 2:00 left (StatMuse; FOX Sports; The Ticket). Portland played without Ja Morant, Vit Krejci, Shaedon Sharpe and Chris Youngblood; San Antonio without De'Aaron Fox, Dylan Harper, Tobias Harris and Jayden Quaintance (Fast Break Journal). Portland, San Antonio, Golden State and the Lakers are all 2–1 in NBA Cup group play with one game left on Friday (Fast Break Journal; The Ticket; SB Nation). Next: Portland hosts Golden State on Friday (Fast Break Journal; FOX Sports schedule).",
+  "The play of the game is an original illustration of Deni Avdija's bank-shot 3-pointer with 38 seconds left that made it 114–109: StatMuse has \"D. Avdija makes 26' bank three Assisted by D. Lillard\" at 0:38 of the fourth for 111–109 to 114–109, and the FOX Sports play-by-play has \"Deni Avdija makes three point bank jump shot (Damian Lillard assists)\". The Ticket: Lillard drove, saw Wembanyama waiting as the shot clock wound down, and fired the pass back to Avdija, who banked in a 3-pointer for a five-point lead. So the board's Blazers +2 to +5 is 111–109 to 114–109. Written stories time it at 37.9 or 38.6 seconds; the play-by-play has 0:38, which is what the clock shows. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Portland Trail Blazers or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The shooter in the play of the game is drawn to Avdija's listed 6-foot-8 and 228 pounds (Basketball-Reference; Wikipedia), with arms at the default length because neither reports a wingspan, in the Trail Blazers' home kit with No. 8 (Wikipedia; FOX Sports) and a lighter skin tone; he has no approved look yet (proposed in kit/looks.json). It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "StatMuse: Trail Blazers 116-111 Spurs (Nov 25, 2026), box score and scoring plays",
+   "https://www.statmuse.com/nba/game/11-25-2026-sas-at-por-78626",
+   "Player box, team totals, line score, biggest leads, play of the game (0:38, 111–109 to 114–109)"
+  ],
+  [
+   "FOX Sports: Spurs vs. Trail Blazers play-by-play (Nov 25, 2026)",
+   "https://www.foxsports.com/nba/in-season-tournament-western-conference-group-play-san-antonio-spurs-vs-portland-trail-blazers-nov-25-2026-game-boxscore-106801?tab=playbyplay",
+   "Play-by-play, line score, Vassell's buzzer three, Wembanyama's tying dunk"
+  ],
+  [
+   "The Ticket: Blazers overcome Victor Wembanyama's 44 points, topple Spurs",
+   "https://www.theticket.com/2026/11/26/blazers-overcome-victor-wembanyamas-44-points-topple-spurs/",
+   "How the bank three happened, first road loss, NBA Cup group"
+  ],
+  [
+   "Fast Break Journal: Trail Blazers top Spurs on Deni Avdija's late bank three",
+   "https://fastbreakjournal.com/trail-blazers-spurs-deni-avdija-late-bank-3-recap/",
+   "Halftime, records, injuries, NBA Cup group, next games"
+  ],
+  [
+   "Yahoo Sports: Blazers hand Spurs first road loss",
+   "https://sports.yahoo.com/nba/articles/blazers-hand-spurs-first-road-070113952.html",
+   "First road loss, late possessions"
+  ],
+  [
+   "SB Nation via Yahoo Sports: Spurs drop NBA Cup game",
+   "https://sports.yahoo.com/nba/articles/spurs-drop-nba-cup-game-070000795.html",
+   "NBA Cup group, Vassell's buzzer three"
+  ],
+  [
+   "Roundtable Sports via Yahoo Sports: Trail Blazers make a statement in NBA Cup",
+   "https://sports.yahoo.com/nba/articles/trail-blazers-statement-nba-cup-063522619.html",
+   "Halftime, Holiday off the bench"
+  ],
+  [
+   "Blazers On SI: 3 winners, 1 loser from Blazers win vs. Wembanyama, Spurs",
+   "https://www.si.com/nba/trailblazers/onsi/3-winners-1-loser-from-blazers-win-vs-wembanyama-spurs",
+   "Records, Holiday off the bench"
+  ],
+  [
+   "VAVEL: Spurs vs Trail Blazers live score and play-by-play",
+   "https://www.vavel.com/en-us/nba/2026/11/25/1280795-spurs-vs-trail-blazers-live-score-updates-stats-and-nba-cup-play-by-play.html",
+   "Quarter scores"
+  ],
+  [
+   "FOX Sports: Portland Trail Blazers schedule",
+   "https://www.foxsports.com/nba/portland-trail-blazers-team-schedule",
+   "Next game"
+  ],
+  [
+   "Basketball-Reference: Deni Avdija",
+   "https://www.basketball-reference.com/players/a/avdijde01.html",
+   "Height and weight for the figure"
+  ],
+  [
+   "Wikipedia: Deni Avdija",
+   "https://en.wikipedia.org/wiki/Deni_Avdija",
+   "Height, weight, number for the figure"
+  ]
+ ]
+}

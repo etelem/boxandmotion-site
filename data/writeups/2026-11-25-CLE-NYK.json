@@ -1,0 +1,103 @@
+{
+ "headline": "Alvarado’s fourth quarter carries the Knicks",
+ "dek": "Jose Alvarado hit five threes and the Knicks won the fourth quarter 39–17.",
+ "three": [
+  [
+   "Jose Alvarado: 21 points off the bench",
+   "16 of his 21 came in the fourth quarter, and he made 5 of 7 threes."
+  ],
+  [
+   "Knicks down 5 at the half, then won the fourth quarter 39–17",
+   "Six Knicks scored 11 or more."
+  ],
+  [
+   "Won it from three and off the bench",
+   "Threes made 17–10; bench points 45–21. New York made 17 threes to Cleveland’s 10."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   17,
+   10
+  ],
+  [
+   "Bench points",
+   45,
+   21
+  ],
+  [
+   "Field goals made",
+   46,
+   35
+  ],
+  [
+   "Free throws made",
+   12,
+   22
+  ]
+ ],
+ "battle_labels": [
+  "NYK",
+  "CLE"
+ ],
+ "top": [
+  [
+   "Jose Alvarado",
+   "NYK",
+   "off the bench, 5 of 7 from three",
+   21
+  ],
+  [
+   "Mikal Bridges",
+   "NYK",
+   "9 of 15, 8 rebounds",
+   19
+  ],
+  [
+   "Jalen Brunson",
+   "NYK",
+   "5 assists, 5 of 6 FT",
+   19
+  ],
+  [
+   "Josh Hart",
+   "NYK",
+   "7 rebounds, 3 steals",
+   15
+  ]
+ ],
+ "linescore": {
+  "away": [
+   34,
+   27,
+   24,
+   17
+  ],
+  "home": [
+   23,
+   33,
+   26,
+   39
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-25-CLE-at-NYK.json",
+ "loser": {
+  "top": [
+   [
+    "Donovan Mitchell",
+    "CLE",
+    "12 of 24 · 4 steals",
+    30
+   ],
+   [
+    "James Harden",
+    "CLE",
+    "13 of 14 FT",
+    28
+   ]
+  ],
+  "source": "box score"
+ }
+}

@@ -1,0 +1,246 @@
+{
+ "team": "NYK",
+ "D": "  const D = {\n    date: 'Wed, Nov 25, 2026',\n    us: 121, them: 102, record: '12–6', usName: 'Knicks', themName: 'Cavaliers',\n    quarters: [[23, 34],  [33, 27],  [26, 24],  [39, 17]],\n    leadUs: 19, leadThem: 11,\n    star: {name: 'Jose Alvarado', stats: [['Points', 21, 25], ['Threes made', 5, 10], ['Assists', 3, 5]]},\n    scorers: [\n      {name: 'Jose Alvarado', pts: 21, note: 'off the bench · 5 of 7 from three'},\n      {name: 'Mikal Bridges', pts: 19, note: '9 of 15 · 8 rebounds'},\n      {name: 'Jalen Brunson', pts: 19, note: '5 assists · 5 of 6 FT'},\n      {name: 'Josh Hart', pts: 15, note: '7 rebounds · 3 steals'},\n      {name: 'Karl-Anthony Towns', pts: 12, note: '10 rebounds · 7 assists'},\n    ],\n    edges: [\n      {label: 'Threes made', us: 17, them: 10},\n      {label: 'Bench points', us: 45, them: 21},\n      {label: 'Field goals made', us: 46, them: 35},\n    ],\n    gaps: [\n      {label: 'Free throws made', us: 12, them: 22},\n    ],\n    next: {opp: 'vs Heat', when: 'Fri, Nov 27', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Jose Alvarado's 3-pointer off Josh Hart's pass with 10:31 left that put the Knicks ahead 87–85, the first of his back-to-back threes. An original illustration from the play-by-play and written accounts; not traced from footage, not to scale.\n",
+  "head": "Alvarado puts them ahead",
+  "subP": "Alvarado from three, 10:31 left",
+  "subL": "Jose Alvarado from three, 10:31 left, down 85–84",
+  "m0": "Cavaliers +1",
+  "m1": "Knicks +2",
+  "num": "5",
+  "cap1": "Alvarado from three. Knicks ahead for good.",
+  "cap2": "87–85, and his next three made it 90–85.",
+  "clock": [
+   637,
+   631
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Cavaliers at Knicks Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Knicks 121, Cavaliers 102 · Nov 25, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Cavaliers at', 'Knicks'] : ['Cavaliers at Knicks']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Alvarado: 5 threes.', 'Knicks win the 4th 39–17.'] : ['Jose Alvarado hit five threes and the Knicks won the fourth quarter 39–17.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Knicks improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Sixth straight win'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Knicks down 5 at the half,', 'won the fourth 39–17'] : ['Knicks down 5 at the half, then won the fourth quarter 39–17']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Knicks ${D.leadUs}, Cavaliers ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Knicks’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Alvarado: 21', 'off the bench'] : ['Jose Alvarado: 21 points off the bench']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['16 in the fourth quarter,', '5 of 7 from three.'] : ['16 of his 21 came in the fourth quarter, and he made 5 of 7 threes.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Six Knicks scored', '11 or more'] : ['Six Knicks scored 11 or more']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 25;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it from three', 'and off the bench'] : ['Won it from three and off the bench']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Knicks in blue, Cavaliers in gray. N.Y.', 'made 17 threes to Cleveland’s 10.'] : ['Knicks in blue, Cavaliers in gray. New York made 17 threes to Cleveland’s 10.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'3rd in the East'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Heat’s record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '10–7';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['Their last NBA Cup', 'group game.'] : ['Friday is the Knicks’ last NBA Cup group game.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Knicks 121 · Cavaliers 102 · Nov 25'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Alvarado from three'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Alvarado'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 50;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - 360 * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+3', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 160, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 192, ly, D.themName"
+  ],
+  [
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = clk < 60 ? clk.toFixed(1) : `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+  ]
+ ],
+ "aria": "Animated recap of the Knicks' 121 to 102 home win over Cleveland: Jose Alvarado's go-ahead 3-pointer with 10:31 left that made it 87 to 85, quarter-by-quarter scoring, Alvarado's 21 points off the bench, the top scorers, how the Knicks won, and the next game.",
+ "figure": {
+  "player": "Jose Alvarado",
+  "home": true,
+  "tall": 0.9231,
+  "ape": 1.0,
+  "mass": 0.9497,
+  "label": "Jose Alvarado, listed 6-0, 179 lb (Wikipedia, Basketball-Reference); no sourced wingspan"
+ },
+ "loser_top": [
+  [
+   "Donovan Mitchell",
+   30,
+   "12 of 24 · 4 steals"
+  ],
+  [
+   "James Harden",
+   28,
+   "13 of 14 FT"
+  ]
+ ],
+ "notes": [
+  "Box score from the CBS Sports gametracker and DigestSports for the Knicks' 121–102 home win over Cleveland on Nov 25, 2026: all 121 New York points and all 102 Cleveland points add up from the player lines, as do the shooting totals (46 of 90, 17 of 37 from three, 12 of 15 FT for New York; 35 of 85, 10 of 38, 22 of 28 for Cleveland). The quarter scores (23–33–26–39 to 34–27–24–17) are the same on CBS, DigestSports and HoopsNightly; 61–56 Cleveland at the half follows from them, and 85–82 Cleveland after three is in the AP and on CBS. New York's biggest lead (19) and Cleveland's (11) are on HoopsNightly; the AP also has Cleveland up 11 in the first half and again in the third. Bench points (45–21) are on HoopsNightly and add up from the box with the starters VAVEL lists (Towns, Hart, Bridges, Shamet, Brunson; Allen, Harden, Mitchell, Merrill, Watson). Josh Hart's assists differ between sources (12 in the AP and DigestSports, 11 on CBS), so they are left out. Records are from the game stories (Knicks 12–6, Cavaliers 9–10, AP); ranks are from the site's standings after Wednesday's games.",
+  "The Knicks have won six straight (AP; NY Post; Field Level Media). They outscored Cleveland 25–9 to start the fourth quarter for a 107–94 lead (AP), opening with a 12–0 run during which Cleveland went 0 for 8 with three turnovers (Field Level Media; Posting and Toasting). Alvarado scored 16 of his 21 in the fourth (Cleveland.com; NY Post; Posting and Toasting). OG Anunoby, Miles McBride and Jordan Clarkson did not play for New York (AP); Evan Mobley missed his seventh straight game for Cleveland (Cleveland.com). Next: the Knicks host Miami on Friday in their last NBA Cup group game (AP; Posting and Toasting); Cleveland hosts Miami on Sunday (AP; Cleveland.com).",
+  "The play of the game is an original illustration of Jose Alvarado's 3-pointer with 10:31 left that put the Knicks ahead 87–85: the CBS Sports play-by-play has \"Jose Alvarado makes three point jump shot (Josh Hart assists)\" at 10:31 of the fourth, right after Hart's driving layup at 11:08 made it 85–84, and \"Jose Alvarado makes three point running jump shot (Josh Hart assists)\" at 10:12 for 90–85. Field Level Media: Alvarado drained 3-pointers on consecutive possessions in the run that gave New York the lead for good; AP: Alvarado made consecutive 3-pointers for a 90–85 lead. So the board's Cavaliers +1 to Knicks +2 is 85–84 to 87–85. The shot's spot isn't described, so it is drawn as the template's plain pull-up from the arc. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the New York Knicks or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The shooter in the play of the game is drawn to Alvarado's listed 6-foot-0 and 179 pounds (Wikipedia; Basketball-Reference), with arms at the default length because neither reports a wingspan, in the Knicks' home kit with No. 5 (Wikipedia) and the default darker skin tone, since he has no approved look yet. It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "CBS Sports: Cavaliers at Knicks gametracker, box score and play-by-play (Nov 25, 2026)",
+   "https://www.cbssports.com/nba/gametracker/boxscore/NBA_20261125_CLE@NY/",
+   "Player box, line score, play of the game (10:31, 85–84 to 87–85)"
+  ],
+  [
+   "DigestSports: Cavaliers vs. Knicks box score (Nov 25, 2026)",
+   "https://digestsports.com/nba/games/cavaliers-vs-knicks-2026-11-25/",
+   "Player box and team totals, line score"
+  ],
+  [
+   "HoopsNightly: Cavaliers at Knicks (Nov 25, 2026)",
+   "https://hoopsnightly.com/games/2026-11-25-cle-at-nyk",
+   "Biggest leads, bench points, line score"
+  ],
+  [
+   "AP via Yahoo Sports: Knicks blow by the Cavaliers in the fourth, win 121-102 for sixth straight victory",
+   "https://sports.yahoo.com/nba/articles/knicks-blow-cavaliers-fourth-win-031145067.html",
+   "Score after three, 25–9 start to the fourth, Alvarado's threes, records, streak, absences, next games"
+  ],
+  [
+   "Field Level Media via Yahoo Sports: Jose Alvarado takes over as Knicks",
+   "https://sports.yahoo.com/nba/articles/jose-alvarado-takes-over-knicks-055118673.html",
+   "12–0 run, Cleveland 0 for 8, lead for good"
+  ],
+  [
+   "Posting and Toasting via Yahoo Sports: Knicks 121, Cavs 102",
+   "https://sports.yahoo.com/nba/articles/knicks-121-cavs-102-scenes-035229327.html",
+   "Alvarado's fourth quarter, Shamet's start, Friday's Cup game"
+  ],
+  [
+   "Cleveland.com via Yahoo Sports: Cavs collapse in the fourth quarter",
+   "https://sports.yahoo.com/nba/articles/cavs-collapse-fourth-quarter-lose-043353129.html",
+   "Alvarado's 16 in the fourth, Mobley out, Cleveland's next game"
+  ],
+  [
+   "NY Post via Yahoo Sports: Knicks rally to beat Cavaliers",
+   "https://sports.yahoo.com/nba/articles/knicks-rally-beat-cavaliers-behind-032834824.html",
+   "Alvarado's fourth quarter, streak"
+  ],
+  [
+   "VAVEL: Cavaliers vs Knicks live score and play-by-play",
+   "https://www.vavel.com/en-us/nba/2026/11/25/1280771-cavaliers-vs-knicks-live-score-updates-stats-and-nba-cup-play-by-play.html",
+   "Starting lineups"
+  ],
+  [
+   "Wikipedia: Jose Alvarado (basketball)",
+   "https://en.wikipedia.org/wiki/Jose_Alvarado_(basketball)",
+   "Height, weight, number for the figure"
+  ],
+  [
+   "Basketball-Reference: Jose Alvarado",
+   "https://www.basketball-reference.com/players/a/alvarjo01.html",
+   "Height and weight for the figure"
+  ]
+ ]
+}

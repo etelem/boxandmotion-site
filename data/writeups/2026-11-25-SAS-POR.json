@@ -1,0 +1,109 @@
+{
+ "headline": "Avdija’s bank three holds off Wembanyama’s 44",
+ "dek": "Deni Avdija banked in a late three, and Victor Wembanyama’s 44 wasn’t enough.",
+ "three": [
+  [
+   "Deni Avdija: 33 points, 12 rebounds, 7 assists",
+   "He made 5 of 8 threes, the last one banked in with 38 seconds left."
+  ],
+  [
+   "Blazers up 3 at the half, down 3 after three, then won the fourth 32–24",
+   "Avdija and Lillard combined for 62 of 116."
+  ],
+  [
+   "Won it from three and with 29 assists",
+   "Threes made 19–10; assists 29–21. Portland made 19 threes to the Spurs’ 10."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   19,
+   10
+  ],
+  [
+   "Assists",
+   29,
+   21
+  ],
+  [
+   "Points off turnovers",
+   14,
+   9
+  ],
+  [
+   "Fast-break points",
+   13,
+   5
+  ]
+ ],
+ "battle_labels": [
+  "POR",
+  "SAS"
+ ],
+ "top": [
+  [
+   "Deni Avdija",
+   "POR",
+   "12 rebounds, 7 assists",
+   33
+  ],
+  [
+   "Damian Lillard",
+   "POR",
+   "10 of 10 FT, 5 threes",
+   29
+  ],
+  [
+   "Sidy Cissoko",
+   "POR",
+   "4 of 10 from three",
+   16
+  ],
+  [
+   "Jrue Holiday",
+   "POR",
+   "off the bench, 7 assists",
+   11
+  ]
+ ],
+ "linescore": {
+  "away": [
+   35,
+   22,
+   30,
+   24
+  ],
+  "home": [
+   38,
+   22,
+   24,
+   32
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-25-SAS-at-POR.json",
+ "loser": {
+  "top": [
+   [
+    "Victor Wembanyama",
+    "SAS",
+    "17 of 30 · 16 rebounds",
+    44
+   ],
+   [
+    "Stephon Castle",
+    "SAS",
+    "9 assists · 6 of 6 FT",
+    20
+   ],
+   [
+    "Devin Vassell",
+    "SAS",
+    "3 of 6 from three",
+    18
+   ]
+  ],
+  "source": "box score"
+ }
+}

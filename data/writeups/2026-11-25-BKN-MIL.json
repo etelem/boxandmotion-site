@@ -1,0 +1,103 @@
+{
+ "headline": "Randle’s 28 ends the Nets’ skid",
+ "dek": "Julius Randle scored 28, Noah Clowney 17, and the Nets snapped a five-game losing streak.",
+ "three": [
+  [
+   "Julius Randle: 28 points and 9 rebounds",
+   "He made 10 of 16 shots and had 16 points by halftime."
+  ],
+  [
+   "Nets up 4 at the half, and ahead for good from 3:43 left in the third",
+   "Five Nets scored 11 or more."
+  ],
+  [
+   "Won it on the glass and at the line",
+   "Bench points 42–30; rebounds 52–44. Brooklyn scored 24 points off Milwaukee turnovers."
+  ]
+ ],
+ "battle": [
+  [
+   "Bench points",
+   42,
+   30
+  ],
+  [
+   "Rebounds",
+   52,
+   44
+  ],
+  [
+   "Free throws made",
+   20,
+   10
+  ],
+  [
+   "Steals",
+   10,
+   7
+  ]
+ ],
+ "battle_labels": [
+  "BKN",
+  "MIL"
+ ],
+ "top": [
+  [
+   "Julius Randle",
+   "BKN",
+   "10 of 16, 9 rebounds",
+   28
+  ],
+  [
+   "Noah Clowney",
+   "BKN",
+   "off the bench, 9 in the 4th",
+   17
+  ],
+  [
+   "Egor Dëmin",
+   "BKN",
+   "off the bench, 4 assists",
+   15
+  ],
+  [
+   "Michael Porter Jr.",
+   "BKN",
+   "11 rebounds, 4 assists",
+   12
+  ]
+ ],
+ "linescore": {
+  "away": [
+   28,
+   23,
+   26,
+   27
+  ],
+  "home": [
+   24,
+   23,
+   24,
+   26
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-25-BKN-at-MIL.json",
+ "loser": {
+  "top": [
+   [
+    "Tyler Herro",
+    "MIL",
+    "10 of 20 · 5 of 5 FT",
+    28
+   ],
+   [
+    "Jaime Jaquez Jr.",
+    "MIL",
+    "9 of 15 · 4 assists",
+    21
+   ]
+  ],
+  "source": "box score"
+ }
+}

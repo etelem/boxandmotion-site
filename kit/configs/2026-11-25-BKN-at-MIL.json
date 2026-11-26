@@ -1,0 +1,256 @@
+{
+ "team": "BKN",
+ "D": "  const D = {\n    date: 'Wed, Nov 25, 2026',\n    us: 104, them: 97, record: '4–13', usName: 'Nets', themName: 'Bucks',\n    quarters: [[28, 24],  [23, 23],  [26, 24],  [27, 26]],\n    leadUs: 14, leadThem: 7,\n    star: {name: 'Julius Randle', stats: [['Points', 28, 30], ['Rebounds', 9, 10], ['Assists', 3, 5]]},\n    scorers: [\n      {name: 'Julius Randle', pts: 28, note: '10 of 16 · 9 rebounds'},\n      {name: 'Noah Clowney', pts: 17, note: 'off the bench · 9 in the 4th'},\n      {name: 'Egor Dëmin', pts: 15, note: 'off the bench · 4 assists'},\n      {name: 'Michael Porter Jr.', pts: 12, note: '11 rebounds · 4 assists'},\n      {name: 'Day’Ron Sharpe', pts: 11, note: '14 rebounds · 5 assists'},\n    ],\n    edges: [\n      {label: 'Bench points', us: 42, them: 30},\n      {label: 'Rebounds', us: 52, them: 44},\n      {label: 'Free throws made', us: 20, them: 10},\n      {label: 'Steals', us: 10, them: 7},\n    ],\n    gaps: [\n      {label: 'Assists', us: 23, them: 26},\n      {label: 'Threes made', us: 10, them: 11},\n    ],\n    next: {opp: 'at Raptors', when: 'Fri, Nov 27', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Noah Clowney's 26-foot 3-pointer off Julius Randle's pass with 6:38 left that made it 88–78. An original illustration from the play-by-play and written accounts; not traced from footage, not to scale.\n",
+  "head": "Clowney from deep",
+  "subP": "Clowney from three, 6:38 left",
+  "subL": "Noah Clowney from 26 feet, 6:38 left, up 85–78",
+  "m0": "Nets +7",
+  "m1": "Nets +10",
+  "num": "21",
+  "cap1": "Clowney from three. Nets by 10.",
+  "cap2": "88–78, off Julius Randle’s pass.",
+  "clock": [
+   404,
+   398
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Nets at Bucks Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Nets 104, Bucks 97 · Nov 25, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Nets at', 'Bucks'] : ['Nets at Bucks']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Randle 28, Clowney 17.', 'Nets snap a 5-game skid.'] : ['Julius Randle scored 28, Noah Clowney 17, and the Nets snapped a five-game losing streak.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Nets improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Snapped a 5-game losing streak'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Nets up 4 at the half,', 'ahead for good late in the 3rd'] : ['Nets up 4 at the half, and ahead for good from 3:43 left in the third']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Nets ${D.leadUs}, Bucks ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Nets’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Randle: 28 points', 'and 9 rebounds'] : ['Julius Randle: 28 points and 9 rebounds']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['10 of 16 from the field,', '16 by halftime.'] : ['He made 10 of 16 shots and had 16 points by halftime.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Five Nets scored', '11 or more'] : ['Five Nets scored 11 or more']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 30;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it on the glass', 'and at the line'] : ['Won it on the glass and at the line']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Nets in white, Bucks in gray. Brooklyn', 'scored 24 points off turnovers.'] : ['Nets in white, Bucks in gray. Brooklyn scored 24 points off Milwaukee turnovers.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'14th in the East'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Raptors’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '6–11';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['Brooklyn’s first NBA Cup win;', 'the Nets are 1–2 in group play.'] : ['It was Brooklyn’s first NBA Cup win; the Nets are 1–2 in group play.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Nets 104 · Bucks 97 · Nov 25'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Clowney from three'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Randle'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 60;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - 390 * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+3', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 160, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 192, ly, D.themName"
+  ],
+  [
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = clk < 60 ? clk.toFixed(1) : `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+  ]
+ ],
+ "aria": "Animated recap of the Nets' 104 to 97 win at Milwaukee: Noah Clowney's 26-foot 3-pointer with 6:38 left that made it 88 to 78, quarter-by-quarter scoring, Julius Randle's 28 points, the top scorers, how the Nets won, and the next game.",
+ "figure": {
+  "player": "Noah Clowney",
+  "home": false,
+  "tall": 1.0513,
+  "ape": 1.0,
+  "mass": 0.9639,
+  "label": "Noah Clowney, listed 6-10, 210 lb (RealGM); no sourced wingspan"
+ },
+ "loser_top": [
+  [
+   "Tyler Herro",
+   28,
+   "10 of 20 · 5 of 5 FT"
+  ],
+  [
+   "Jaime Jaquez Jr.",
+   21,
+   "9 of 15 · 4 assists"
+  ]
+ ],
+ "notes": [
+  "Box score from StatMuse's game page for the Nets' 104–97 win at Milwaukee on Nov 25, 2026: all 104 Brooklyn points and all 97 Milwaukee points add up from the player lines, as do the shooting totals (37 of 89, 10 of 38 from three, 20 of 26 FT for Brooklyn; 38 of 89, 11 of 44, 10 of 16 for Milwaukee), rebounds (52–44), assists (23–26) and steals (10–7). The quarter scores (28–23–26–27 to 24–23–24–26) are on StatMuse; 51–47 at the half is also in Field Level Media, the NY Post and SB Nation, and 77–71 after three in the NY Post, Roundtable Sports and SB Nation. Biggest leads (Brooklyn 14, Milwaukee 7) are on StatMuse and HoopsNightly. Bench points: Brooklyn 42 (NY Daily News; StatMuse box), Milwaukee 30 (StatMuse box). Brooklyn's 24 points off turnovers are in the NY Daily News and Nets Wire. Records are from the game stories (Nets 4–13, Bucks 2–17; NY Daily News, NY Post); ranks are from the site's standings after Wednesday's games.",
+  "The win snapped Brooklyn's five-game losing streak (AP; Field Level Media; NY Post) and was the Nets' first NBA Cup win; they are 1–2 in group play and Milwaukee 0–3 (AP; Field Level Media). Day'Ron Sharpe's cutting dunk off Egor Dëmin's pass with 3:43 left in the third made it 68–67, the last lead change (StatMuse; NY Daily News; Fastbreak Journal). Randle had 16 first-half points (AP; NY Post); Clowney scored a season-high 17 (Roundtable Sports), 9 of them in the fourth (NY Daily News; Nets Wire); Sharpe had a season-high 14 rebounds (NY Daily News). Moritz Wagner left with left knee soreness and did not return after halftime (AP; NY Post). Next: Brooklyn visits Toronto on Friday in the NBA Cup (AP; Roundtable Sports; CBS Sports schedule); Milwaukee visits Detroit on Friday (AP; CBS Sports schedule).",
+  "The play of the game is an original illustration of Noah Clowney's 3-pointer with 6:38 left that made it 88–78: StatMuse's scoring plays have \"N. Clowney makes 26' three Assisted by J. Randle\" at 6:38 of the fourth for 85–78 to 88–78; Fastbreak Journal also has the 26-foot 3-pointer for 88–78 at 6:38, and Roundtable Sports has Clowney's dunk and a three making it 88–78. So the board's Nets +7 to +10 is 85–78 to 88–78. The defender and the spot on the floor aren't described, so it is drawn as the template's plain pull-up from beyond the arc. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Brooklyn Nets or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The shooter in the play of the game is drawn to Clowney's listed 6-foot-10 and 210 pounds (RealGM), with arms at the default length because no wingspan is reported there, in the Nets' road kit with No. 21 (RealGM) and the default darker skin tone, since he has no approved look yet. It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "StatMuse: Nets 104-97 Bucks (Nov 25, 2026), box score and scoring plays",
+   "https://www.statmuse.com/nba/game/11-25-2026-bkn-at-mil-78623",
+   "Player box, team totals, line score, biggest leads, play of the game (6:38, 85–78 to 88–78)"
+  ],
+  [
+   "AP via Yahoo Sports: Randle scores 28 points to lead Nets past Bucks 104-97 in NBA Cup action",
+   "https://sports.yahoo.com/nba/articles/randle-scores-28-points-lead-034453010.html",
+   "Streak, NBA Cup records, Randle's first half, Wagner, next games"
+  ],
+  [
+   "Field Level Media via Yardbarker: Julius Randle scores 28 as Nets halt skid, take down Bucks",
+   "https://www.yardbarker.com/nba/articles/julius_randle_scores_28_as_nets_halt_skid_take_down_bucks/s1_17045_44620542",
+   "Halftime, streak, NBA Cup records"
+  ],
+  [
+   "NY Post via Yahoo Sports: Nets topple Bucks in NBA Cup",
+   "https://sports.yahoo.com/nba/articles/nets-topple-bucks-nba-cup-035804319.html",
+   "Halftime, score after three, records, Wagner"
+  ],
+  [
+   "NY Daily News via Yahoo Sports: Nets snap 5-game skid",
+   "https://sports.yahoo.com/nba/articles/nets-snap-5-game-skid-035200702.html",
+   "Sharpe's go-ahead dunk, bench and turnover points, Clowney's fourth quarter, Sharpe's rebounds"
+  ],
+  [
+   "Roundtable Sports via Yahoo Sports: Nets snap five-game losing streak",
+   "https://sports.yahoo.com/nba/articles/nets-snap-five-game-losing-040040650.html",
+   "Score after three, Clowney's 88–78 three, season high"
+  ],
+  [
+   "Nets Wire via Yahoo Sports: Nets end 5-game losing streak",
+   "https://sports.yahoo.com/nba/articles/nets-end-5-game-losing-034719167.html",
+   "Points off turnovers, Clowney's fourth quarter"
+  ],
+  [
+   "SB Nation via Yahoo Sports: Rapid recap, Nets 104, Bucks 97",
+   "https://sports.yahoo.com/nba/articles/rapid-recap-nets-104-bucks-040341136.html",
+   "Halftime and score after three"
+  ],
+  [
+   "Fastbreak Journal via Yardbarker: Day'Ron Sharpe dunks Nets back in front against Bucks",
+   "https://www.yardbarker.com/nba/articles/dayron_sharpe_dunks_nets_back_in_front_against_bucks/s1_17908_44621270",
+   "Clowney's three at 6:38, Sharpe's dunk at 3:43 of the third"
+  ],
+  [
+   "HoopsNightly: Nets at Bucks (Nov 25, 2026)",
+   "https://hoopsnightly.com/games/2026-11-25-bkn-at-mil",
+   "Biggest leads"
+  ],
+  [
+   "CBS Sports: Brooklyn Nets schedule",
+   "https://www.cbssports.com/nba/teams/bkn/brooklyn-nets/schedule/",
+   "Next game"
+  ],
+  [
+   "CBS Sports: Milwaukee Bucks schedule",
+   "https://www.cbssports.com/nba/teams/MIL/milwaukee-bucks/schedule/",
+   "Milwaukee's next game"
+  ],
+  [
+   "RealGM: Noah Clowney",
+   "https://basketball.realgm.com/player/Noah-Clowney/FAQ/162215",
+   "Height, weight, number for the figure"
+  ]
+ ]
+}

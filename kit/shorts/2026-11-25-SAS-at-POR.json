@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-25-SAS-POR.html",
+  "team": "POR",
+  "home": true,
+  "number": "8",
+  "player": "Deni Avdija",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 1.0256,
+    "ape": 1.0,
+    "mass": 1.0169
+  },
+  "build_note": "Listed 6-8, 228 lb (Basketball-Reference, Wikipedia), No. 8 (Wikipedia); no sourced wingspan; lighter skin tone (proposed look)",
+  "kicker": "BLAZERS 116 · SPURS 111 · NOV 25",
+  "hook": [
+    "Deni Avdija's",
+    "late bank three"
+  ],
+  "clock": "Q4 · 0:38",
+  "us": "POR",
+  "them": "SAS",
+  "score_before": [
+    111,
+    109
+  ],
+  "score_make": [
+    114,
+    109
+  ],
+  "stamp": "THREE",
+  "beat": [
+    "Blazers by 5, 38 seconds left.",
+    "Lillard drove and kicked it back."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "Blazers",
+    "them": "Spurs",
+    "us_pts": 116,
+    "them_pts": 111
+  },
+  "star": {
+    "name": "Deni Avdija",
+    "big": 33,
+    "big_label": "points, 5 of 8 from three",
+    "lines": [
+      "12 rebounds, 7 assists",
+      "Spurs' first road loss"
+    ]
+  },
+  "story": "Portland outlasted Victor Wembanyama's 44 points and handed San Antonio its first road loss of the season, 116–111.",
+  "aria": "Animated Short: Deni Avdija's 26-foot bank-shot 3-pointer off Damian Lillard's pass with 38 seconds left that made it 114–109 on the way to a 116–111 Trail Blazers win over San Antonio. An original illustration, not traced from footage, not to scale."
+}
