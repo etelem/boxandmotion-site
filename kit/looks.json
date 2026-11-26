@@ -266,5 +266,19 @@
   "hairColor": "#4a3526",
   "beard": true,
   "stubble": 0.3
+ },
+ "Josh Giddey": {
+  "status": "proposed",
+  "skin": "#f0d2b6",
+  "hair": "crop",
+  "hairColor": "#6b4a2e",
+  "beard": false
+ },
+ "Cam Spencer": {
+  "status": "proposed",
+  "skin": "#f0d2b6",
+  "hair": "crop",
+  "hairColor": "#6b4a2e",
+  "beard": false
  }
 }

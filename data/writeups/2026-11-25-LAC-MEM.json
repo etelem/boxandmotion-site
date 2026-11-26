@@ -1,0 +1,103 @@
+{
+ "headline": "Wells and Jerome lead Memphis past the Clippers",
+ "dek": "Jaylen Wells scored 19 and Ty Jerome 17, and Memphis never trailed.",
+ "three": [
+  [
+   "Jaylen Wells: 19 points on 12 shots",
+   "8 of 12 from the field and 3 of 4 from three, a game-high 19."
+  ],
+  [
+   "Grizzlies up 17 after the first, then an 18–2 run in the third",
+   "Memphis’ bench scored 50."
+  ],
+  [
+   "Won it in the paint and on defense",
+   "Points in the paint 60–50; steals 8–1. Memphis had 8 steals to L.A.’s 1."
+  ]
+ ],
+ "battle": [
+  [
+   "Points in the paint",
+   60,
+   50
+  ],
+  [
+   "Steals",
+   8,
+   1
+  ],
+  [
+   "Threes made",
+   11,
+   6
+  ],
+  [
+   "Blocks",
+   7,
+   3
+  ]
+ ],
+ "battle_labels": [
+  "MEM",
+  "LAC"
+ ],
+ "top": [
+  [
+   "Jaylen Wells",
+   "MEM",
+   "8 of 12, 3 of 4 from three",
+   19
+  ],
+  [
+   "Ty Jerome",
+   "MEM",
+   "7 assists, 4 steals",
+   17
+  ],
+  [
+   "Cam Spencer",
+   "MEM",
+   "off the bench, 7 of 10",
+   16
+  ],
+  [
+   "Cedric Coward",
+   "MEM",
+   "10 rebounds",
+   14
+  ]
+ ],
+ "linescore": {
+  "away": [
+   15,
+   28,
+   26,
+   28
+  ],
+  "home": [
+   32,
+   18,
+   32,
+   33
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-25-LAC-at-MEM.json",
+ "loser": {
+  "top": [
+   [
+    "Brandon Ingram",
+    "LAC",
+    "6 of 19 · 4 of 4 FT",
+    18
+   ],
+   [
+    "Rui Hachimura",
+    "LAC",
+    "12 rebounds · 5 assists",
+    14
+   ]
+  ],
+  "source": "box score"
+ }
+}

@@ -1,0 +1,207 @@
+{
+ "team": "MEM",
+ "D": "  const D = {\n    date: 'Wed, Nov 25, 2026',\n    us: 115, them: 97, record: '14–5', usName: 'Grizzlies', themName: 'Clippers',\n    quarters: [[32, 15], [18, 28], [32, 26], [33, 28]],\n    leadUs: 22, leadThem: 0,\n    star: {name: 'Jaylen Wells', stats: [['Points', 19, 20], ['Rebounds', 6, 10], ['Assists', 1, 5]]},\n    scorers: [\n      {name: 'Jaylen Wells', pts: 19, note: '8 of 12 · 3 of 4 from three'},\n      {name: 'Ty Jerome', pts: 17, note: '7 assists · 4 steals'},\n      {name: 'Cam Spencer', pts: 16, note: 'off the bench · 7 of 10'},\n      {name: 'Cedric Coward', pts: 14, note: '10 rebounds'},\n      {name: 'Isaiah Stewart', pts: 10, note: 'off the bench · 2 blocks'},\n    ],\n    edges: [\n      {label: 'Points in the paint', us: 60, them: 50},\n      {label: 'Steals', us: 8, them: 1},\n      {label: 'Threes made', us: 11, them: 6},\n      {label: 'Blocks', us: 7, them: 3},\n    ],\n    gaps: [\n      {label: 'Free throws made', us: 12, them: 25},\n      {label: 'Rebounds', us: 44, them: 48},\n    ],\n    next: {opp: 'at Timberwolves', when: 'Fri, Nov 27', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Cam Spencer's driving floater with 4:40 left that made it 104–82, Memphis' biggest lead. An original illustration from the play-by-play and written accounts; not traced from footage, not to scale.\n",
+  "head": "Spencer floats it in",
+  "subP": "Spencer on the drive, 4:40 left",
+  "subL": "Cam Spencer on the drive, 4:40 left, up 102–82",
+  "m0": "Grizzlies +20",
+  "m1": "Grizzlies +22",
+  "num": "24",
+  "cap1": "Spencer’s floater. Grizzlies by 22.",
+  "cap2": "104–82, their biggest lead of the night.",
+  "clock": [
+   287,
+   280
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Clippers at Grizzlies Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Grizzlies 115, Clippers 97 · Nov 25, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Clippers at', 'Grizzlies'] : ['Clippers at Grizzlies']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Wells scored 19, Jerome 17.', 'Memphis never trailed.'] : ['Jaylen Wells scored 19 and Ty Jerome 17, and Memphis never trailed.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Grizzlies improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Seven wins in eight games'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Grizzlies up 17 after one,', 'then an 18–2 run in the 3rd'] : ['Grizzlies up 17 after the first, then an 18–2 run in the third']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Grizzlies ${D.leadUs}, Clippers ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Grizzlies’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Wells: 19 points', 'on 12 shots'] : ['Jaylen Wells: 19 points on 12 shots']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['8 of 12 from the field,', '3 of 4 from three.'] : ['8 of 12 from the field and 3 of 4 from three, a game-high 19.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Memphis’ bench', 'scored 50'] : ['Memphis’ bench scored 50']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 25;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it in the paint', 'and on defense'] : ['Won it in the paint and on defense']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Grizzlies in blue, Clippers in gray.', 'Memphis had 8 steals to L.A.’s 1.'] : ['Grizzlies in blue, Clippers in gray. Memphis had 8 steals to L.A.’s 1.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'5th in the West'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Timberwolves’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '14–5';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['Group B is on the line Friday.', 'Minnesota won at home 104–95 Nov 21.'] : ['NBA Cup Group B is on the line Friday; Minnesota beat Memphis 104–95 on Nov 21.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Grizzlies 115 · Clippers 97 · Nov 25'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Spencer floats it in'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Wells'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 70;"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - (P ? 170 : 200) * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+2', 'd w', 72, 'end');"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 120 * k, shotX + 80 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 215, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 247, ly, D.themName"
+  ]
+ ],
+ "aria": "Animated recap of the Grizzlies' 115 to 97 win over the Clippers: Cam Spencer's driving floater with 4:40 left that made it 104 to 82, quarter-by-quarter scoring, Jaylen Wells' 19 points, the top scorers, how the Grizzlies won, and the next game.",
+ "figure": {
+  "player": "Cam Spencer",
+  "home": true,
+  "tall": 0.9615,
+  "ape": 1.0,
+  "mass": 0.9958,
+  "label": "Cam Spencer, listed 6-3, 205 lb (RealGM); no sourced wingspan",
+  "skin": "#f0d2b6"
+ },
+ "loser_top": [
+  [
+   "Brandon Ingram",
+   18,
+   "6 of 19 · 4 of 4 FT"
+  ],
+  [
+   "Rui Hachimura",
+   14,
+   "12 rebounds · 5 assists"
+  ]
+ ],
+ "notes": [
+  "Box score from the Covers matchup page for the Grizzlies' 115–97 win over the Clippers on Nov 25, 2026: all 115 Memphis points and all 97 L.A. points add up from the player lines, as do the shooting totals (46 of 94, 11 of 42 from three, 12 of 14 FT for Memphis; 33 of 85, 6 of 30, 25 of 28 for L.A.), rebounds (44–48), assists (23–20), steals (8–1), blocks (7–3) and turnovers (7–12). The final and the quarter scores (32–18–32–33 to 15–28–26–28) also match the FOX Sports box score; 50–43 at the half and 82–69 after three follow from them. Points in the paint (60–50) are on Covers, FOX Sports and Roundtable Sports. Memphis' biggest lead, 22, is on Covers and in Roundtable Sports; L.A. never led (FOX Sports play-by-play). Memphis' bench points (50) are added up from the Covers box score. Records are from Covers and the site's standings after Wednesday's games.",
+  "The 18–2 third-quarter run, from 50–48 at 10:06 to 68–50 at 6:36, is in the FOX Sports play-by-play and the AP, Roundtable Sports and The Sports Leader stories. Memphis has won seven of eight (The Sports Leader) and is 2–1 in NBA Cup Group B (AP; Roundtable Sports); the Clippers have lost five straight (The Sports Leader) and are 0–9 on the road (AP). Zach Edey left with left ankle soreness and didn't play the second half (Daily Memphian; Roundtable Sports). Brandon Ingram scored 18 for L.A. (AP). Next: Memphis visits Minnesota on Friday, with the group on the line (AP); Minnesota beat Memphis 104–95 on Nov 21 (the site's results). L.A. hosts New Orleans on Friday (AP).",
+  "The play of the game is an original illustration of Cam Spencer's driving floater with 4:40 left that made it 104–82: the FOX Sports play-by-play has \"Cam Spencer makes two point driving floating jump shot\" at 4:40 for 104–82, his third straight Memphis basket, and The Sports Leader says the lead reached 22 on Spencer's floater with 4:40 left. So the board's Grizzlies +20 to +22 is 102–82 to 104–82. No assist is listed and the defender isn't described, so it is drawn as the template's plain drive to a short finish. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Memphis Grizzlies or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The player in the play of the game is drawn to Spencer's listed 6-foot-3 and 205 pounds (RealGM; Wikipedia lists 6-foot-4), with arms at the default length because no wingspan is reported, in the Grizzlies' home kit with No. 24 (RealGM) and a lighter skin tone; he has no approved look yet. It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "Covers: Clippers vs. Grizzlies matchup (Nov 25, 2026)",
+   "https://www.covers.com/sport/basketball/nba/matchup/388239",
+   "Player box, team totals, quarter scores, biggest lead, records"
+  ],
+  [
+   "FOX Sports: Clippers vs. Grizzlies box score and play-by-play (Nov 25, 2026)",
+   "https://www.foxsports.com/nba/in-season-tournament-western-conference-group-play-la-clippers-vs-memphis-grizzlies-nov-25-2026-game-boxscore-106797",
+   "Quarter scores, paint points, the 18–2 run, play of the game (4:40, 102–82 to 104–82)"
+  ],
+  [
+   "AP via Yahoo Sports: Wells and Jerome lead the Grizzlies to a 115-97 win over the Clippers, who fall to 0-9 on the road",
+   "https://sports.yahoo.com/nba/articles/wells-jerome-lead-grizzlies-115-034134479.html",
+   "Story, streaks, NBA Cup, next games"
+  ],
+  [
+   "Roundtable Sports via Yahoo: Jaylen Wells Scores 19 As Grizzlies Beat Clippers 115-97",
+   "https://sports.yahoo.com/nba/articles/jaylen-wells-scores-19-grizzlies-080053630.html",
+   "Team stats, biggest lead, Edey, standings"
+  ],
+  [
+   "The Sports Leader: Grizzlies cruise past Clippers for seventh win in eight games",
+   "https://www.thesportsleader.com/2026/11/25/grizzlies-cruise-past-clippers-for-seventh-win-in-eight-games/",
+   "18–2 run, Spencer's floater at 4:40, streaks"
+  ],
+  [
+   "Daily Memphian: Grizzlies vs. Clippers",
+   "https://dailymemphian.com/article/68929",
+   "Edey's ankle"
+  ],
+  [
+   "RealGM: Cam Spencer bio",
+   "https://basketball.realgm.com/player/Cam-Spencer/Bio/134471",
+   "Height, weight, number for the figure"
+  ]
+ ]
+}

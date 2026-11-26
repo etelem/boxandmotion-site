@@ -1,0 +1,109 @@
+{
+ "headline": "Melton's eight threes carry the Warriors past the Kings",
+ "dek": "De’Anthony Melton made 8 threes, and the Warriors’ bench scored 61.",
+ "three": [
+  [
+   "De’Anthony Melton: 24 points, all on threes",
+   "His 8 threes, on 12 tries, tied his career high. He had 7 assists too."
+  ],
+  [
+   "Warriors up 25 after the first, then held off the Kings’ 25–10 run in the third",
+   "Melton 24, Santos 22, and the bench 61."
+  ],
+  [
+   "Won it off the bench and from three",
+   "Bench points 61–19; threes made 20–14. The bench’s 61 points were a season best."
+  ]
+ ],
+ "battle": [
+  [
+   "Bench points",
+   61,
+   19
+  ],
+  [
+   "Threes made",
+   20,
+   14
+  ],
+  [
+   "Points off turnovers",
+   26,
+   11
+  ],
+  [
+   "Assists",
+   37,
+   31
+  ]
+ ],
+ "battle_labels": [
+  "GSW",
+  "SAC"
+ ],
+ "top": [
+  [
+   "De’Anthony Melton",
+   "GSW",
+   "8 of 12 from three",
+   24
+  ],
+  [
+   "Gui Santos",
+   "GSW",
+   "off the bench, season high",
+   22
+  ],
+  [
+   "Yaxel Lendeborg",
+   "GSW",
+   "8 rebounds, 3 steals",
+   15
+  ],
+  [
+   "Brandon Williams",
+   "GSW",
+   "off the bench, back from injury",
+   14
+  ]
+ ],
+ "linescore": {
+  "away": [
+   19,
+   34,
+   36,
+   21
+  ],
+  "home": [
+   44,
+   28,
+   29,
+   28
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-25-SAC-at-GSW.json",
+ "loser": {
+  "top": [
+   [
+    "Domantas Sabonis",
+    "SAC",
+    "8 of 9 · 10 rebounds · 6 assists",
+    27
+   ],
+   [
+    "Darius Acuff Jr.",
+    "SAC",
+    "9 assists",
+    22
+   ],
+   [
+    "Keegan Murray",
+    "SAC",
+    "8 of 19",
+    18
+   ]
+  ],
+  "source": "box score"
+ }
+}

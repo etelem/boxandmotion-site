@@ -1,0 +1,219 @@
+{
+ "team": "CHI",
+ "D": "  const D = {\n    date: 'Wed, Nov 25, 2026',\n    us: 107, them: 105, record: '6–12', usName: 'Bulls', themName: 'Hornets',\n    quarters: [[21, 23], [25, 25], [27, 23], [34, 34]],\n    leadUs: 8, leadThem: 8,\n    star: {name: 'Matas Buzelis', stats: [['Points', 24, 25], ['Rebounds', 5, 10], ['Assists', 0, 5]]},\n    scorers: [\n      {name: 'Matas Buzelis', pts: 24, note: '8 of 15 · 8 of 9 FT'},\n      {name: 'Josh Giddey', pts: 12, note: '11 rebounds · 7 assists'},\n      {name: 'Patrick Williams', pts: 11, note: 'off the bench · 3 of 4 from three'},\n      {name: 'Nic Claxton', pts: 10, note: '5 of 7 · 4 blocks'},\n      {name: 'Tre Jones', pts: 10, note: 'off the bench · 8 assists'},\n    ],\n    edges: [\n      {label: 'Bench points', us: 42, them: 22},\n      {label: 'Assists', us: 25, them: 20},\n      {label: 'Threes made', us: 13, them: 11},\n      {label: 'Blocks', us: 7, them: 3},\n    ],\n    gaps: [\n      {label: 'Second-chance points', us: 7, them: 22},\n      {label: 'Free throws made', us: 16, them: 22},\n    ],\n    next: {opp: 'vs Pacers', when: 'Sat, Nov 28', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Josh Giddey's 8-foot driving floater off the glass with 1:32 left that made it 100–97, after Chicago had gone ahead for good at 2:30. An original illustration from the play-by-play and written accounts; not traced from footage, not to scale.\n",
+  "head": "Giddey’s floater",
+  "subP": "Giddey on the drive, 1:32 left",
+  "subL": "Josh Giddey on the drive, 1:32 left, up 98–97",
+  "m0": "Bulls +1",
+  "m1": "Bulls +3",
+  "num": "3",
+  "cap1": "Giddey’s floater. Bulls by 3.",
+  "cap2": "100–97. Charlotte never caught up.",
+  "clock": [
+   99,
+   92
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Bulls at Hornets Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Bulls 107, Hornets 105 · Nov 25, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Bulls at', 'Hornets'] : ['Bulls at Hornets']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Buzelis scored 24. Giddey', 'had 12, 11 and 7.'] : ['Matas Buzelis scored 24, and Josh Giddey had 12 points, 11 rebounds and 7 assists.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Bulls improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Two straight wins'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Bulls down 2 at the half,', 'up 2 after three'] : ['Bulls down 2 at the half, up 2 after three, then held on in a 34–34 fourth']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Bulls ${D.leadUs}, Hornets ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Bulls’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Buzelis: 24 points,', '8 of 9 at the line'] : ['Matas Buzelis: 24 points, 8 of 9 at the line']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['His fourth 20-point game', 'in his last six.'] : ['His fourth 20-point game in his last six, on 8 of 15 shooting.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Seven Bulls scored', '10 or more'] : ['Seven Bulls scored 10 or more']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 30;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it off the bench', 'and with the extra pass'] : ['Won it off the bench and with the extra pass']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Bulls in white, Hornets in gray.', '25 assists on 39 baskets.'] : ['Bulls in white, Hornets in gray. Chicago assisted on 25 of its 39 baskets.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'11th in the East'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Pacers’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '6–12';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['2–2 in NBA Cup group play.', 'A six-game home stand starts Saturday.'] : ['Chicago is 2–2 in NBA Cup group play; a six-game home stand starts Saturday.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Bulls 107 · Hornets 105 · Nov 25'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Giddey’s floater'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Buzelis'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 50;"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - (P ? 170 : 200) * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+2', 'd w', 72, 'end');"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 120 * k, shotX + 80 * k, prog(lt, T_JAB, 1.4));"
+  ]
+ ],
+ "aria": "Animated recap of the Bulls' 107 to 105 win at Charlotte: Josh Giddey's driving floater with 1:32 left that made it 100 to 97, quarter-by-quarter scoring, Matas Buzelis' 24 points, the top scorers, how the Bulls won, and the next game.",
+ "figure": {
+  "player": "Josh Giddey",
+  "home": false,
+  "tall": 1.0128,
+  "ape": 1.0,
+  "mass": 0.9913,
+  "label": "Josh Giddey, listed 6-7, 214 lb (Basketball-Reference); no sourced wingspan",
+  "skin": "#f0d2b6"
+ },
+ "loser_top": [
+  [
+   "Brandon Miller",
+   35,
+   "13 of 25 · 4 threes · 3 steals"
+  ],
+  [
+   "Naz Reid",
+   18,
+   "8 rebounds"
+  ],
+  [
+   "Christian Anderson",
+   15,
+   "off the bench · 3 threes"
+  ]
+ ],
+ "notes": [
+  "Box score from Land of Basketball's game page for the Bulls' 107–105 win at Charlotte on Nov 25, 2026: all 107 Chicago points and all 105 Charlotte points add up from the player lines, as do the shooting totals (39 of 78, 13 of 31 from three, 16 of 20 FT for Chicago; 36 of 87, 11 of 34, 22 of 26 for Charlotte), assists (25–20), steals (5–7) and blocks (7–3). The final and the quarter scores (21–25–27–34 to 23–25–23–34) also match the Covers matchup page, the AP story and Hoops Nightly; 48–46 Charlotte at the half is in the AP, and 73–71 Chicago after three in Yardbarker. Bench points (42–22), second-chance points (7–22) and the biggest lead for each side (8) are from Hoops Nightly; Bleacher Nation also says neither team led by more than eight. The 22 lead changes are in the AP, Yardbarker and Rookie Wire. Records are from Covers and the site's standings after Wednesday's games.",
+  "Matas Buzelis had 24 points on 8 of 15 shooting and 8 of 9 free throws, his fourth 20-point game in his last six (Bleacher Nation). Seven Bulls scored 10 or more (Rookie Wire; the box score). Chicago has won two straight and is 2–2 in NBA Cup group play (AP). Brandon Miller scored 35 for Charlotte, his fourth 30-point game of the season (AP). Late: Nic Claxton's cutting dunk from Giddey at 2:30 put Chicago ahead 98–97 for good; Buzelis tipped in a weakside rebound with 23.2 seconds left for 104–101 (AP); Coby White's last shot rimmed out at the buzzer (AP). Next: Chicago hosts Indiana on Saturday, the first of a six-game home stand (Bleacher Nation); Charlotte hosts Brooklyn on Saturday (Covers).",
+  "The play of the game is an original illustration of Josh Giddey's 8-foot driving floating bank shot with 1:32 left that made it 100–97: the Hoops Nightly and Digest Sports play-by-play both have it at 1:32 for 100–97, after Claxton's dunk made it 98–97 at 2:30. So the board's Bulls +1 to +3 is 98–97 to 100–97. No assist is listed and the defender isn't described, so it is drawn as the template's plain drive to a short finish. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Chicago Bulls or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The player in the play of the game is drawn to Giddey's listed 6-foot-7 and 214 pounds (Basketball-Reference), with arms at the default length because no wingspan is reported there, in the Bulls' road kit with No. 3 (Basketball-Reference) and a lighter skin tone; he has no approved look yet. It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "Land of Basketball: Bulls vs. Hornets box score (Nov 25, 2026)",
+   "https://www.landofbasketball.com/box_scores/2026/1125CHICHA.htm",
+   "Player box, team totals, quarter scores"
+  ],
+  [
+   "Covers: Bulls vs. Hornets matchup (Nov 25, 2026)",
+   "https://www.covers.com/sport/basketball/nba/matchup/388236",
+   "Final, quarter scores, records, next games"
+  ],
+  [
+   "AP via CBS News Chicago: Bulls hold on to beat Hornets 107-105 for 2nd straight win",
+   "https://www.cbsnews.com/chicago/news/bulls-beat-hornets-107-105/",
+   "Halftime, late sequence, streak, NBA Cup record, Miller's 30-point games"
+  ],
+  [
+   "AP via WRAL: Matas Buzelis scores 24 as Bulls hold on to beat Hornets 107-105 for 2nd straight win",
+   "https://www.wral.com/news/ap/010d7-matas-buzelis-scores-24-as-bulls-hold-on-to-beat-hornets-107-105-for-2nd-straight-win/",
+   "Same AP story, confirmation"
+  ],
+  [
+   "Bleacher Nation: Buzelis, Giddey Drive Bulls to Rare 107-105 Clutch Victory Over Hornets",
+   "https://www.bleachernation.com/bulls/2026/11/25/buzelis-bulls-hornets/",
+   "Buzelis' 20-point games, biggest lead, next game, home stand"
+  ],
+  [
+   "Hoops Nightly: Bulls at Hornets game page",
+   "https://hoopsnightly.com/games/2026-11-25-chi-at-cha",
+   "Bench, second-chance, paint points, biggest leads, play-by-play (1:32, 98–97 to 100–97)"
+  ],
+  [
+   "Digest Sports: Bulls vs Hornets NBA Box Score, Nov 25, 2026",
+   "https://digestsports.com/nba/games/bulls-vs-hornets-2026-11-25/",
+   "Play-by-play of the final minutes"
+  ],
+  [
+   "Yardbarker: Bulls Beat Hornets 107-105 as Buzelis Scores 24",
+   "https://www.yardbarker.com/nba/articles/bulls_beat_hornets_107_105_as_buzelis_scores_24/s1_17668_44620366",
+   "Score after three, lead changes, records"
+  ],
+  [
+   "Rookie Wire via Yahoo: Hornets lose sixth straight, fall narrowly to Bulls 107-105",
+   "https://sports.yahoo.com/nba/articles/hornets-lose-sixth-straight-fall-034728403.html",
+   "Seven Bulls in double figures, lead changes"
+  ],
+  [
+   "Basketball-Reference: Josh Giddey",
+   "https://www.basketball-reference.com/players/g/giddejo01.html",
+   "Height, weight, number for the figure"
+  ]
+ ]
+}

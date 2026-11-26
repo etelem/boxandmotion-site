@@ -1,0 +1,214 @@
+{
+ "team": "GSW",
+ "D": "  const D = {\n    date: 'Wed, Nov 25, 2026',\n    us: 129, them: 110, record: '10–8', usName: 'Warriors', themName: 'Kings',\n    quarters: [[44, 19], [28, 34], [29, 36], [28, 21]],\n    leadUs: 29, leadThem: 3,\n    star: {name: 'De’Anthony Melton', stats: [['Points', 24, 25], ['Threes', 8, 10], ['Assists', 7, 10]]},\n    scorers: [\n      {name: 'De’Anthony Melton', pts: 24, note: '8 of 12 from three'},\n      {name: 'Gui Santos', pts: 22, note: 'off the bench · season high'},\n      {name: 'Yaxel Lendeborg', pts: 15, note: '8 rebounds · 3 steals'},\n      {name: 'Brandon Williams', pts: 14, note: 'off the bench · back from injury'},\n      {name: 'Brandin Podziemski', pts: 13, note: '6 assists · 3 threes'},\n    ],\n    edges: [\n      {label: 'Bench points', us: 61, them: 19},\n      {label: 'Threes made', us: 20, them: 14},\n      {label: 'Points off turnovers', us: 26, them: 11},\n      {label: 'Assists', us: 37, them: 31},\n    ],\n    gaps: [\n      {label: 'Fast-break points', us: 9, them: 12},\n      {label: 'Free throws made', us: 11, them: 14},\n    ],\n    next: {opp: 'at Trail Blazers', when: 'Fri, Nov 27', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "De'Anthony Melton's eighth three with 2:05 left that made it 123–102 and tied his career high. An original illustration from the play-by-play and written accounts; not traced from footage, not to scale.\n",
+  "head": "Melton’s eighth three",
+  "subP": "Melton from three, 2:05 left",
+  "subL": "De’Anthony Melton from three, 2:05 left, up 120–102",
+  "m0": "Warriors +18",
+  "m1": "Warriors +21",
+  "num": "8",
+  "cap1": "Melton’s eighth three. Warriors by 21.",
+  "cap2": "123–102. It tied his career high.",
+  "clock": [
+   132,
+   125
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Kings at Warriors Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Warriors 129, Kings 110 · Nov 25, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Kings at', 'Warriors'] : ['Kings at Warriors']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Melton made 8 threes.', 'The bench scored 61.'] : ['De’Anthony Melton made 8 threes, and the Warriors’ bench scored 61.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Warriors improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Eight straight home wins'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Warriors up 25 after one,', 'held off a 3rd-quarter run'] : ['Warriors up 25 after the first, then held off the Kings’ 25–10 run in the third']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Warriors ${D.leadUs}, Kings ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Warriors’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Melton: 24 points,', 'all on threes'] : ['De’Anthony Melton: 24 points, all on threes']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['His 8 threes tied his', 'career high. 7 assists too.'] : ['His 8 threes, on 12 tries, tied his career high. He had 7 assists too.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Melton 24, Santos 22,', 'the bench 61'] : ['Melton 24, Santos 22, and the bench 61']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 30;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it off the bench', 'and from three'] : ['Won it off the bench and from three']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Warriors in gold, Kings in gray.', 'The bench’s 61 was a season best.'] : ['Warriors in gold, Kings in gray. The bench’s 61 points were a season best.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'9th in the West'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Blazers’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '12–6';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['2–1 in NBA Cup group play.', 'A win at Portland keeps it alive.'] : ['Golden State is 2–1 in NBA Cup group play; it needs a win at Portland to have a chance to advance.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Warriors 129 · Kings 110 · Nov 25'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Melton’s eighth three'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Melton'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 70;"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 205, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 237, ly, D.themName"
+  ]
+ ],
+ "aria": "Animated recap of the Warriors' 129 to 110 win over the Kings: De'Anthony Melton's eighth three with 2:05 left that made it 123 to 102, quarter-by-quarter scoring, Melton's 24 points, the top scorers, how the Warriors won, and the next game.",
+ "figure": {
+  "player": "De'Anthony Melton",
+  "home": true,
+  "tall": 0.9487,
+  "ape": 1.0,
+  "mass": 0.9927,
+  "label": "De'Anthony Melton, listed 6-2, 201 lb (Basketball-Reference); no sourced wingspan"
+ },
+ "loser_top": [
+  [
+   "Domantas Sabonis",
+   27,
+   "8 of 9 · 10 rebounds · 6 assists"
+  ],
+  [
+   "Darius Acuff Jr.",
+   22,
+   "9 assists"
+  ],
+  [
+   "Keegan Murray",
+   18,
+   "8 of 19"
+  ]
+ ],
+ "notes": [
+  "Box score from Hoops Nightly's game page for the Warriors' 129–110 win over the Kings on Nov 25, 2026: all 129 Golden State points and all 110 Sacramento points add up from the player lines, as do the shooting totals (49 of 92, 20 of 44 from three, 11 of 14 FT for Golden State; 41 of 87, 14 of 40, 14 of 19 for Sacramento), rebounds (40–39), assists (37–31), steals (9–6) and blocks (7–2); every player's points also match the San Francisco Chronicle box score. The final and the quarter scores (44–28–29–28 to 19–34–36–21) match FOX Sports and the San Francisco Chronicle; 72–53 at the half and 101–89 after three are in the FOX Sports play-by-play. Points off turnovers (26–11) and fast-break points (9–12) are on FOX Sports and Hoops Nightly; bench points (61–19) on Hoops Nightly, and the AP and NBC Sports Bay Area call the 61 a season best. Golden State's biggest lead, 29, is in Hoops Nightly, Field Level Media and the San Francisco Chronicle; Sacramento's 3 is in Hoops Nightly (10–7 in the first quarter, FOX Sports play-by-play). Records are from the AP and the site's standings after Wednesday's games.",
+  "Golden State scored 44 in the first quarter, its most in any period this season (AP), on a 21–2 run (Field Level Media). Sacramento cut it to 82–78 with a 25–10 run in the third (Field Level Media) and to 85–81 on Emanuel Sharp's three with 4:34 left in it; Will Richard answered with a baseline three (AP), and the Kings never got within 8 in the fourth (Field Level Media). Gui Santos scored a season-high 22 (San Francisco Chronicle). Stephen Curry (oblique) and Jimmy Butler did not play (San Francisco Chronicle). The Warriors have won eight straight at home (Fastbreak Journal) and are 2–1 in the NBA Cup; they need a win at Portland on Friday to have a chance to advance (AP; Field Level Media). Sacramento hosts Minnesota on Sunday (AP).",
+  "The play of the game is an original illustration of De'Anthony Melton's three with 2:05 left that made it 123–102, assisted by Brandin Podziemski: the FOX Sports play-by-play has it at 2:05 for 123–102, and it was his eighth three of the night (four in the first quarter, two in the second, two in the fourth), which tied his career high (AP; StatMuse: his other eight-three game was Dec 9, 2022). So the board's Warriors +18 to +21 is 120–102 to 123–102. The defender isn't described, so it is drawn as the template's plain pull-up from three. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Golden State Warriors or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The player in the play of the game is drawn to Melton's listed 6-foot-2 and 201 pounds (Basketball-Reference; Wikipedia lists 199), with arms at the default length because no wingspan is reported, in the Warriors' home kit with No. 8 (Wikipedia); he has no approved look yet, so he is drawn with the default skin tone. It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "Hoops Nightly: Warriors Win Cup Game by Scoring 44 in the First Quarter and Getting 61 From the Bench",
+   "https://hoopsnightly.com/games/2026-11-25-sac-at-gsw",
+   "Player box, team totals, bench and second-chance points, biggest leads"
+  ],
+  [
+   "FOX Sports: Kings vs. Warriors box score and play-by-play (Nov 25, 2026)",
+   "https://www.foxsports.com/nba/in-season-tournament-western-conference-group-play-sacramento-kings-vs-golden-state-warriors-nov-25-2026-game-boxscore-106800",
+   "Quarter scores, team stats, play of the game (2:05, 120–102 to 123–102)"
+  ],
+  [
+   "AP via ABC7 News: De'Anthony Melton scores 24 points, matches career high with eight 3s as Warriors beat Kings 129-110",
+   "https://abc7news.com/post/deanthony-melton-scores-24-points-matches-career-high-eight-3s-warriors-beat-kings-129-110/20083453/",
+   "Story, career high, 44-point quarter, Richard's answer, next games"
+  ],
+  [
+   "Field Level Media via KTIK: Warriors keep NBA Cup hopes alive with rout of Kings",
+   "https://www.ktik.com/2026/11/25/warriors-keep-nba-cup-hopes-alive-with-rout-of-kings/",
+   "Runs, biggest lead, NBA Cup"
+  ],
+  [
+   "San Francisco Chronicle via Yahoo: Warriors' offense, sparked by De'Anthony Melton, kicks into gear",
+   "https://sports.yahoo.com/nba/articles/warriors-offense-sparked-deanthony-melton-064333132.html",
+   "Box score check, Santos' season high, injuries"
+  ],
+  [
+   "NBC Sports Bay Area via Yahoo: What we learned as De'Anthony Melton's sharp shot leads Warriors",
+   "https://sports.yahoo.com/nba/articles/learned-deanthony-meltons-sharp-shot-213652453.html",
+   "Melton's threes by half, bench season best"
+  ],
+  [
+   "Fastbreak Journal via Yardbarker: De'Anthony Melton Ties Career High From 3 Against Kings",
+   "https://www.yardbarker.com/nba/articles/deanthony_melton_ties_career_high_from_3_against_kings/s1_17908_44621269",
+   "Records, home streak"
+  ],
+  [
+   "StatMuse: De'Anthony Melton game log",
+   "https://www.statmuse.com/nba/ask/melton-game-log-career-high",
+   "His other eight-three game"
+  ],
+  [
+   "Basketball-Reference: De'Anthony Melton",
+   "https://www.basketball-reference.com/players/m/meltode01/gamelog-playoffs/",
+   "Height, weight for the figure"
+  ],
+  [
+   "Wikipedia: De'Anthony Melton",
+   "https://en.wikipedia.org/wiki/De%27Anthony_Melton",
+   "Number for the figure"
+  ]
+ ]
+}

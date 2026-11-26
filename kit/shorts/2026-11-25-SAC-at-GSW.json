@@ -1,0 +1,54 @@
+{
+ "out": "short-2026-11-25-SAC-GSW.html",
+ "team": "GSW",
+ "home": true,
+ "number": "8",
+ "player": "De'Anthony Melton",
+ "play_type": "jumper",
+ "three": true,
+ "build": {
+  "tall": 0.9487,
+  "ape": 1.0,
+  "mass": 0.9927
+ },
+ "build_note": "Listed 6-2, 201 lb (Basketball-Reference); no sourced wingspan; No. 8 (Wikipedia)",
+ "kicker": "WARRIORS 129 · KINGS 110 · NOV 25",
+ "hook": [
+  "De'Anthony Melton's",
+  "eighth three"
+ ],
+ "clock": "Q4 · 2:05",
+ "us": "GSW",
+ "them": "SAC",
+ "score_before": [
+  120,
+  102
+ ],
+ "score_make": [
+  123,
+  102
+ ],
+ "stamp": "THREE",
+ "beat": [
+  "123–102 with 2:05 left.",
+  "It tied his career high."
+ ],
+ "final": {
+  "label": "FINAL",
+  "us": "Warriors",
+  "them": "Kings",
+  "us_pts": 129,
+  "them_pts": 110
+ },
+ "star": {
+  "name": "De'Anthony Melton",
+  "big": 24,
+  "big_label": "points, all on threes",
+  "lines": [
+   "8 of 12 from three",
+   "7 assists in 27 minutes"
+  ]
+ },
+ "story": "Golden State scored 44 in the first quarter, and its bench scored 61, a season best.",
+ "aria": "Animated Short: De'Anthony Melton's three with 2:05 left that made it 123 to 102 for the Warriors over Sacramento, his eighth three of the night, tying his career high. Warriors win 129 to 110. An original illustration, not traced from footage, not to scale."
+}

@@ -1,0 +1,109 @@
+{
+ "headline": "Buzelis scores 24 as the Bulls hold on in Charlotte",
+ "dek": "Matas Buzelis scored 24, and Josh Giddey had 12 points, 11 rebounds and 7 assists.",
+ "three": [
+  [
+   "Matas Buzelis: 24 points, 8 of 9 at the line",
+   "His fourth 20-point game in his last six, on 8 of 15 shooting."
+  ],
+  [
+   "Bulls down 2 at the half, up 2 after three, then held on in a 34–34 fourth",
+   "Seven Bulls scored 10 or more."
+  ],
+  [
+   "Won it off the bench and with the extra pass",
+   "Bench points 42–22; assists 25–20. Chicago assisted on 25 of its 39 baskets."
+  ]
+ ],
+ "battle": [
+  [
+   "Bench points",
+   42,
+   22
+  ],
+  [
+   "Assists",
+   25,
+   20
+  ],
+  [
+   "Threes made",
+   13,
+   11
+  ],
+  [
+   "Blocks",
+   7,
+   3
+  ]
+ ],
+ "battle_labels": [
+  "CHI",
+  "CHA"
+ ],
+ "top": [
+  [
+   "Matas Buzelis",
+   "CHI",
+   "8 of 15, 8 of 9 FT",
+   24
+  ],
+  [
+   "Josh Giddey",
+   "CHI",
+   "11 rebounds, 7 assists",
+   12
+  ],
+  [
+   "Patrick Williams",
+   "CHI",
+   "off the bench, 3 of 4 from three",
+   11
+  ],
+  [
+   "Nic Claxton",
+   "CHI",
+   "5 of 7, 4 blocks",
+   10
+  ]
+ ],
+ "linescore": {
+  "away": [
+   21,
+   25,
+   27,
+   34
+  ],
+  "home": [
+   23,
+   25,
+   23,
+   34
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-25-CHI-at-CHA.json",
+ "loser": {
+  "top": [
+   [
+    "Brandon Miller",
+    "CHA",
+    "13 of 25 · 4 threes · 3 steals",
+    35
+   ],
+   [
+    "Naz Reid",
+    "CHA",
+    "8 rebounds",
+    18
+   ],
+   [
+    "Christian Anderson",
+    "CHA",
+    "off the bench · 3 threes",
+    15
+   ]
+  ],
+  "source": "box score"
+ }
+}
