@@ -15,3 +15,4 @@ games_date,check,result,reason
 2026-11-24,07:15,failed,no sports feed; FOX/CBS standings fetch permission not answered (unattended); 3 scores still saved in pending
 2026-11-24,recap-run-1,failed,FOX and CBS standings fetch permission not answered (unattended); 3 scores still saved in pending
 2026-11-24,recap-run-1,done,saved Covers+PTS scores from 06:40 check; FOX standings current (fetched 08:17 on retry)
+2026-11-25,06:40,failed,no sports feed; WebFetch permission not answered (unattended) for PTS and FOX; scores not confirmed, nothing saved
