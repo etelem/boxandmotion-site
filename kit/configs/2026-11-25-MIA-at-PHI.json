@@ -1,0 +1,242 @@
+{
+ "team": "PHI",
+ "D": "  const D = {\n    date: 'Wed, Nov 25, 2026',\n    us: 111, them: 104, record: '15–4', usName: '76ers', themName: 'Heat',\n    quarters: [[29, 32], [33, 21], [28, 28], [21, 23]],\n    leadUs: 16, leadThem: 8,\n    star: {name: 'LeBron James', stats: [['Points', 25, 30], ['Assists', 12, 15], ['Rebounds', 10, 15]]},\n    scorers: [\n      {name: 'Tyrese Maxey', pts: 30, note: '12 of 21 · 6 assists'},\n      {name: 'LeBron James', pts: 25, note: '12 assists · 10 rebounds'},\n      {name: 'VJ Edgecombe', pts: 18, note: '6 rebounds · 5 assists'},\n      {name: 'Dominick Barlow', pts: 9, note: 'off the bench · 8 rebounds'},\n      {name: 'Jabari Walker', pts: 7, note: '3 of 3'},\n    ],\n    edges: [\n      {label: 'Threes made', us: 14, them: 8},\n      {label: 'Assists', us: 29, them: 24},\n      {label: 'Steals', us: 9, them: 4},\n      {label: 'Bench points', us: 25, them: 20},\n    ],\n    gaps: [\n      {label: 'Points in the paint', us: 44, them: 60},\n      {label: 'Free throws made', us: 13, them: 18},\n    ],\n    next: {opp: 'at Pacers', when: 'Fri, Nov 27', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Tyrese Maxey's 26-foot step-back 3-pointer with 2:31 left that made it 111–95, the 76ers' biggest lead. An original illustration from the play-by-play and written accounts; not traced from footage, not to scale.\n",
+  "head": "Maxey’s step-back three",
+  "subP": "Maxey steps back, 2:31 left",
+  "subL": "Tyrese Maxey steps back, 2:31 left, up 108–95",
+  "m0": "76ers +13",
+  "m1": "76ers +16",
+  "num": "0",
+  "cap1": "Maxey’s step-back. 76ers by 16.",
+  "cap2": "111–95: Philadelphia’s biggest lead of the night.",
+  "clock": [
+   156,
+   151
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Heat at 76ers Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">76ers 111, Heat 104 · Nov 25, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Heat at', '76ers'] : ['Heat at 76ers']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['LeBron’s first Sixers', 'triple-double. Maxey 30.'] : ['LeBron James had his first triple-double as a 76er, and Tyrese Maxey scored 30.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`76ers improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Ended Miami’s 7-game streak'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['76ers up 9 at the half,', 'after a 33–21 second'] : ['76ers up 9 at the half, after winning the second quarter 33–21']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "76ers ${D.leadUs}, Heat ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "76ers’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['LeBron: 25 points,', '12 assists, 10 rebounds'] : ['LeBron James: 25 points, 12 assists, 10 rebounds']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['14 straight in the second,', 'triple-double No. 126.'] : ['14 straight 76ers points in the second quarter, and the 126th triple-double of his career.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Maxey and LeBron:', '55 of the 111'] : ['Maxey and LeBron combined for 55 of 111']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 35;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it from three', 'and with steals'] : ['Won it from three and with 9 steals to 4']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['76ers in blue, Heat in gray. Philly', 'made 14 threes to Miami’s 8.'] : ['76ers in blue, Heat in gray. Philadelphia made 14 threes to Miami’s 8.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'1st in the East'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Pacers’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '6–12';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['Embiid sat with an illness; Brown', 'left at the half (hamstring).'] : ['Joel Embiid sat with an illness, and Jaylen Brown left at halftime with hamstring tightness.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'76ers 111 · Heat 104 · Nov 25'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Maxey’s step-back three'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'LeBron'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 70;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - 375 * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+3', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 160, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 192, ly, D.themName"
+  ]
+ ],
+ "aria": "Animated recap of the 76ers' 111 to 104 home win over the Heat: Tyrese Maxey's step-back 3-pointer with 2:31 left that made it 111 to 95, quarter-by-quarter scoring, LeBron James' 25 points, 12 assists and 10 rebounds, the top scorers, how the 76ers won, and the next game.",
+ "figure": {
+  "player": "Tyrese Maxey",
+  "home": true,
+  "tall": 0.9487,
+  "ape": 1.0541,
+  "mass": 0.9902,
+  "label": "Tyrese Maxey, listed 6-2, 200 lb (Wikipedia); 6-6 wingspan at the 2020 draft combine (Sportskeeda)"
+ },
+ "loser_top": [
+  [
+   "Giannis Antetokounmpo",
+   32,
+   "14 rebounds · 10 of 13 FT"
+  ],
+  [
+   "Davion Mitchell",
+   20,
+   "10 assists · 3 of 5 from three"
+  ],
+  [
+   "Bam Adebayo",
+   17,
+   "11 rebounds"
+  ]
+ ],
+ "notes": [
+  "Box score from StatMuse's game page for the 76ers' 111–104 home win over Miami on Nov 25, 2026, an NBA Cup group game: all 111 Philadelphia points and all 104 Miami points add up from the player lines, as do the shooting totals (42 of 89, 14 of 35 from three, 13 of 17 FT for Philadelphia; 39 of 86, 8 of 31, 18 of 26 for Miami), rebounds (43–44), assists (29–24) and steals (9–4). The quarter scores (29–33–28–21 to 32–21–28–23) are also on the Covers matchup page; 62–53 at the half is in the AP, the Philadelphia Inquirer and Field Level Media, and 90–81 after three in Field Level Media. Points in the paint (44–60) are on StatMuse and Covers, bench points (25–20) on StatMuse and in the Miami Herald. The biggest leads (Philadelphia 16, Miami 8) are on StatMuse and Covers; Field Level Media also has 16. Player turnovers are not shown (StatMuse's player rows and team total differ by one). Records and ranks are from the site's standings after Wednesday's games.",
+  "LeBron James had 25 points (a season high, Inquirer), 12 assists (a season high) and 10 rebounds: his first triple-double as a 76er and the 126th of his career, fifth all time (Inquirer; NBC Sports Philadelphia). In the second quarter he scored 14 straight Philadelphia points, turning a 36–33 deficit into a 47–39 lead (AP; Inquirer). Tyrese Maxey's 30 were his most since 38 against Charlotte on Oct. 31 (Inquirer). The loss ended Miami's seven-game winning streak (Miami Herald). Joel Embiid missed his second straight game with an illness, and Jaylen Brown was ruled out at halftime with left hamstring tightness (AP; Inquirer). Giannis Antetokounmpo returned from a one-game absence (groin) with 32 points and 14 rebounds (Miami Herald; Hot Hot Hoops). Miami closed on a 9–0 run after the 111–95 lead (Field Level Media). Next: Philadelphia visits Indiana and Miami visits New York, both Friday, both their last NBA Cup group game (AP; Covers).",
+  "The play of the game is an original illustration of Tyrese Maxey's 26-foot step-back 3-pointer with 2:31 left that made it 111–95: StatMuse's play-by-play has \"T. Maxey makes 26' stepback three\" (no assist) at 2:31 for 108–95 to 111–95; Field Level Media: \"Maxey's three with 2:31 left made it 111-95,\" the largest lead; NBC Sports Philadelphia also describes the step-back three to 111–95 (it gives 2:29). So the board's 76ers +13 to +16 is 108–95 to 111–95. The defender and the spot on the floor are not described, so the step-back is drawn with the template's plain pull-up from about 26 feet. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Philadelphia 76ers or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The shooter in the play of the game is drawn to Maxey's listed 6-foot-2 and 200 pounds (Wikipedia), with arms scaled to the 6-foot-6 wingspan measured at the 2020 draft combine (Sportskeeda), in the 76ers' home white with No. 0 (Wikipedia) and his proposed look from kit/looks.json. It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "StatMuse: Heat 104-111 76ers (Nov 25, 2026), box score and play-by-play",
+   "https://www.statmuse.com/nba/game/11-25-2026-mia-at-phi-78618",
+   "Player box, team totals, line score, biggest leads, play of the game (2:31, 108–95 to 111–95)"
+  ],
+  [
+   "Covers: Heat vs 76ers matchup (Nov 25, 2026)",
+   "https://www.covers.com/sport/basketball/nba/matchup/388235",
+   "Quarter scores, paint points, biggest leads, next games"
+  ],
+  [
+   "AP via WSVN: LeBron James has his 1st triple-double for the 76ers in a win over the Heat",
+   "https://wsvn.com/sports/miami-heat/nba-cup-sixers-beat-heat/",
+   "Halftime, 14 straight points, injuries, next games"
+  ],
+  [
+   "Philadelphia Inquirer: LeBron James records his first triple-double as a Sixer in 111-104 win vs. the Miami Heat",
+   "https://www.inquirer.com/sixers/sixers-heat-score-highlights-lebron-james-tyrese-maxey-jaylen-brown-injury-20261125.html",
+   "Season highs, 126th triple-double, the run, Maxey's most since Oct. 31, injuries"
+  ],
+  [
+   "NBC Sports Philadelphia: Observations after James posts triple-double, Sixers beat Heat in NBA Cup",
+   "https://www.nbcsportsphiladelphia.com/nba/philadelphia-76ers/sixers-vs-heat-analysis-lebron-james-tyrese-maxey-nba-cup/769459/",
+   "Maxey's step-back three to 111–95, fifth all time in triple-doubles"
+  ],
+  [
+   "Field Level Media: LeBron James' first Sixers triple-double helps cool off Heat",
+   "https://fieldlevelmedia.com/nba/lebron-james-first-sixers-triple-double-helps-cool-off-heat/",
+   "Halftime and after-three scores, 2:31 three, biggest lead, 9–0 close"
+  ],
+  [
+   "Miami Herald via Yahoo: Heat gets Giannis back, but winning streak ends with loss to short-handed 76ers",
+   "https://sports.yahoo.com/nba/articles/heat-gets-giannis-back-winning-004306141.html",
+   "Miami's streak, bench points, Giannis' return"
+  ],
+  [
+   "Hot Hot Hoops: LeBron James, Sixers snap Heat's win streak 111-104 in NBA Cup matchup",
+   "https://hothothoops.com/2026/11/25/lebron-james-sixers-snap-heats-win-streak-111-104-in-nba-cup-matchup/",
+   "Giannis' return"
+  ],
+  [
+   "Wikipedia: Tyrese Maxey",
+   "https://en.wikipedia.org/wiki/Tyrese_Maxey",
+   "Height, weight, number for the figure"
+  ],
+  [
+   "Sportskeeda: What are Tyrese Maxey's Combine Measurements?",
+   "https://www.sportskeeda.com/basketball/tyrese-maxey-combine-measurements",
+   "Wingspan for the figure"
+  ]
+ ]
+}

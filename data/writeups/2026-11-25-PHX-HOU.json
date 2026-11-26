@@ -1,0 +1,109 @@
+{
+ "headline": "Şengün’s triple-double as Durant passes 33,000",
+ "dek": "Alperen Şengün had a triple-double, and Kevin Durant became the fifth player to reach 33,000 points.",
+ "three": [
+  [
+   "Alperen Şengün: 23 points, 11 rebounds, 11 assists",
+   "His 15th career triple-double moved him past Hakeem Olajuwon for second on the Rockets’ list."
+  ],
+  [
+   "Rockets up 10 at the half, then closed on a 15–6 run",
+   "Şengün, Durant and Thompson combined for 61 of 116."
+  ],
+  [
+   "Won it from three and on the glass",
+   "Threes made 12–5; rebounds 51–38. Houston made 12 threes to Phoenix’s 5."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   12,
+   5
+  ],
+  [
+   "Rebounds",
+   51,
+   38
+  ],
+  [
+   "Offensive rebounds",
+   20,
+   13
+  ],
+  [
+   "Assists",
+   30,
+   25
+  ]
+ ],
+ "battle_labels": [
+  "HOU",
+  "PHX"
+ ],
+ "top": [
+  [
+   "Alperen Şengün",
+   "HOU",
+   "11 rebounds, 11 assists",
+   23
+  ],
+  [
+   "Kevin Durant",
+   "HOU",
+   "10 rebounds, passed 33,000",
+   20
+  ],
+  [
+   "Amen Thompson",
+   "HOU",
+   "10 rebounds, 2 blocks",
+   18
+  ],
+  [
+   "Jabari Smith Jr.",
+   "HOU",
+   "2 of 4 from three",
+   13
+  ]
+ ],
+ "linescore": {
+  "away": [
+   33,
+   23,
+   25,
+   23
+  ],
+  "home": [
+   29,
+   37,
+   26,
+   24
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-25-PHX-at-HOU.json",
+ "loser": {
+  "top": [
+   [
+    "Devin Booker",
+    "PHX",
+    "11 of 12 FT",
+    25
+   ],
+   [
+    "Jalen Green",
+    "PHX",
+    "5 assists",
+    16
+   ],
+   [
+    "Oso Ighodaro",
+    "PHX",
+    "6 of 8",
+    13
+   ]
+  ],
+  "source": "box score"
+ }
+}

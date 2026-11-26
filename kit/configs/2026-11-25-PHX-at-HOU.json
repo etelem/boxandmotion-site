@@ -1,0 +1,226 @@
+{
+ "team": "HOU",
+ "D": "  const D = {\n    date: 'Wed, Nov 25, 2026',\n    us: 116, them: 104, record: '14–5', usName: 'Rockets', themName: 'Suns',\n    quarters: [[29, 33], [37, 23], [26, 25], [24, 23]],\n    leadUs: 14, leadThem: 7,\n    star: {name: 'Alperen Şengün', stats: [['Points', 23, 25], ['Rebounds', 11, 15], ['Assists', 11, 15]]},\n    scorers: [\n      {name: 'Alperen Şengün', pts: 23, note: '11 rebounds · 11 assists'},\n      {name: 'Kevin Durant', pts: 20, note: '10 rebounds · passed 33,000'},\n      {name: 'Amen Thompson', pts: 18, note: '10 rebounds · 2 blocks'},\n      {name: 'Jabari Smith Jr.', pts: 13, note: '2 of 4 from three'},\n      {name: 'Fred VanVleet', pts: 13, note: '6 assists · 3 threes'},\n    ],\n    edges: [\n      {label: 'Threes made', us: 12, them: 5},\n      {label: 'Rebounds', us: 51, them: 38},\n      {label: 'Offensive rebounds', us: 20, them: 13},\n      {label: 'Assists', us: 30, them: 25},\n    ],\n    gaps: [\n      {label: 'Free throws made', us: 16, them: 23},\n      {label: 'Steals', us: 6, them: 8},\n    ],\n    next: {opp: 'vs 76ers', when: 'Sat, Nov 28', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Fred VanVleet's 26-foot 3-pointer with 4:32 left, off Alperen Şengün's kick-out, that made it 104–98. An original illustration from the play-by-play and written accounts; not traced from footage, not to scale.\n",
+  "head": "VanVleet from three",
+  "subP": "VanVleet from three, 4:32 left",
+  "subL": "Fred VanVleet from three, 4:32 left, up 101–98",
+  "m0": "Rockets +3",
+  "m1": "Rockets +6",
+  "num": "5",
+  "cap1": "VanVleet from three. Rockets by 6.",
+  "cap2": "104–98: the start of a 15–6 finish.",
+  "clock": [
+   277,
+   272
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Suns at Rockets Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Rockets 116, Suns 104 · Nov 25, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Suns at', 'Rockets'] : ['Suns at Rockets']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Şengün’s triple-double.', 'Durant reaches 33,000.'] : ['Alperen Şengün had a triple-double, and Kevin Durant became the fifth player to reach 33,000 points.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Rockets improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Now 9–1 at home'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Rockets up 10 at the half,', 'closed on a 15–6 run'] : ['Rockets up 10 at the half, then closed on a 15–6 run']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Rockets ${D.leadUs}, Suns ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Rockets’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Şengün: 23 points,', '11 rebounds, 11 assists'] : ['Alperen Şengün: 23 points, 11 rebounds, 11 assists']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['His 15th triple-double,', 'past Hakeem for 2nd.'] : ['His 15th career triple-double moved him past Hakeem Olajuwon for second on the Rockets’ list.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Şengün, Durant, Thompson:', '61 of the 116'] : ['Şengün, Durant and Thompson combined for 61 of 116']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 25;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it from three', 'and on the glass'] : ['Won it from three and on the glass']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Suns in gray. Houston made 12', 'threes to Phoenix’s 5.'] : ['Suns in gray. Houston made 12 threes to Phoenix’s 5.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'4th in the West'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'76ers’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '15–4';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['Durant: the fifth player ever', 'to reach 33,000 points.'] : ['Kevin Durant became the fifth player in NBA history to reach 33,000 points.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Rockets 116 · Suns 104 · Nov 25'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'VanVleet from three'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Şengün'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 60;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - 375 * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+3', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 160, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 192, ly, D.themName"
+  ],
+  [
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+  ]
+ ],
+ "aria": "Animated recap of the Rockets' 116 to 104 home win over the Suns: Fred VanVleet's 3-pointer with 4:32 left that made it 104 to 98, quarter-by-quarter scoring, Alperen Şengün's 23 points, 11 rebounds and 11 assists, the top scorers, how the Rockets won, and the next game.",
+ "figure": {
+  "player": "Fred VanVleet",
+  "home": true,
+  "tall": 0.9231,
+  "ape": 1.0,
+  "mass": 0.9963,
+  "label": "Fred VanVleet, listed 6-0, 197 lb (Wikipedia); no sourced wingspan"
+ },
+ "loser_top": [
+  [
+   "Devin Booker",
+   25,
+   "11 of 12 FT"
+  ],
+  [
+   "Jalen Green",
+   16,
+   "5 assists"
+  ],
+  [
+   "Oso Ighodaro",
+   13,
+   "6 of 8"
+  ]
+ ],
+ "notes": [
+  "Box score from StatMuse's game page for the Rockets' 116–104 home win over Phoenix on Nov 25, 2026, an NBA Cup group game: all 116 Houston points and all 104 Phoenix points add up from the player lines, as do the shooting totals (44 of 90, 12 of 36 from three, 16 of 30 FT for Houston; 38 of 91, 5 of 32, 23 of 28 for Phoenix), rebounds (51–38; offensive 20–13), assists (30–25) and steals (6–8). The Houston Chronicle matches the field goals, threes and turnovers; Arizona Sports matches the offensive rebounds and free-throw attempts. The quarter scores (29–37–26–24 to 33–23–25–23) are on StatMuse and in the Houston Chronicle; 66–56 at the half is also in the AP. The biggest leads (Houston 14, Phoenix 7) are from StatMuse; Arizona Sports also has 14. Şengün's 11 assists are on StatMuse and in the Houston Chronicle and ClutchPoints (the AP has 10). The 15–6 finish is from StatMuse's scoring log (101–98 at 4:45 to 116–104). The 9–1 home record is from ClutchPoints. Records and ranks are from the site's standings after Wednesday's games.",
+  "Alperen Şengün had 23 points, 11 rebounds and 11 assists, his 15th career triple-double, passing Hakeem Olajuwon for second in Rockets history (Houston Chronicle; ClutchPoints). Kevin Durant had 20 points and 10 rebounds and became the fifth player to reach 33,000 points, with a 25-foot three late in the first half (AP; Houston Chronicle). Phoenix opened the fourth quarter with a run to get within 99–97 (AP; StatMuse) and made 1 of its last 24 threes (AP). Dillon Brooks drew two technical fouls in the fourth (Houston Chronicle). Phoenix's four-game winning streak ended, and the loss knocked it out of NBA Cup contention; Houston had already been eliminated (AP). Mark Williams sat out for Phoenix (Arizona Sports). Next: Houston hosts Philadelphia on Saturday; Phoenix hosts Dallas on Friday (AP).",
+  "The play of the game is an original illustration of Fred VanVleet's 3-pointer with 4:32 left that made it 104–98: StatMuse's scoring log has \"F. VanVleet makes 26' three / Assisted by A. Şengün\" at 4:32 for 101–98 to 104–98. The Houston Chronicle describes the set: VanVleet passed to Şengün in the post, screened for Kevin Durant on the perimeter, and Şengün waited a beat and hit VanVleet for the three that started the game-sealing run; Arizona Sports says a Phoenix miscommunication on the switch left VanVleet open. The AP places it in the right corner, which doesn't fit 26 feet, so the spot is not drawn exactly: it uses the template's plain catch-and-shoot pull-up from about 26 feet. So the board's Rockets +3 to +6 is 101–98 to 104–98. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Houston Rockets or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The shooter in the play of the game is drawn to Fred VanVleet's listed 6-foot-0 and 197 pounds (Wikipedia), with standard arms since no wingspan was found in a source we could read, in Houston's home white with No. 5 (Wikipedia) and the default figure (no look on the look sheet yet). It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "StatMuse: Suns 104-116 Rockets (Nov 25, 2026), box score and scoring log",
+   "https://www.statmuse.com/nba/game/11-25-2026-phx-at-hou-78624",
+   "Player box, team totals, line score, biggest leads, play of the game (4:32, 101–98 to 104–98)"
+  ],
+  [
+   "AP via WRAL: Kevin Durant reaches 33,000 points as Rockets beat Suns",
+   "https://www.wral.com/news/ap/747bc-kevin-durant-reaches-33-000-points-as-rockets-beat-suns/",
+   "Halftime, milestone, fourth-quarter run, Phoenix's threes, streak, Cup, next games"
+  ],
+  [
+   "Houston Chronicle via Yahoo: Kevin Durant's night vs. Suns",
+   "https://sports.yahoo.com/nba/articles/kevin-durants-night-vs-suns-074938250.html",
+   "Quarter scores, the post-split before VanVleet's three, technicals, triple-double count"
+  ],
+  [
+   "ClutchPoints: Sengun passes Hakeem Olajuwon on all-time list",
+   "https://clutchpoints.com/nba/houston-rockets/rockets-news-alperen-sengun-hakeen-olajuwon-all-time-list-suns",
+   "Triple-double list, home record"
+  ],
+  [
+   "Arizona Sports: Suns compete well with Rockets' physicality in loss",
+   "https://arizonasports.com/nba/phoenix-suns/suns-rockets-chippy-loss",
+   "Biggest deficit, the switch, Mark Williams out, offensive rebounds"
+  ],
+  [
+   "Wikipedia: Fred VanVleet",
+   "https://en.wikipedia.org/wiki/Fred_VanVleet",
+   "Height, weight, number for the figure"
+  ]
+ ]
+}

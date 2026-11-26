@@ -1,0 +1,109 @@
+{
+ "headline": "McDaniels’ 32 carries Minnesota past OKC",
+ "dek": "Jaden McDaniels scored 32 on 11-of-15 shooting, and Minnesota stayed perfect in NBA Cup play.",
+ "three": [
+  [
+   "Jaden McDaniels: 32 points and 10 rebounds",
+   "17 in the third quarter, 11 of 15 from the floor and no turnovers."
+  ],
+  [
+   "Timberwolves down 6 at the half, then won the third quarter 40–30",
+   "McDaniels, Ball and Dosunmu combined for 67 of 113."
+  ],
+  [
+   "Won it from three and on the break",
+   "Threes made 17–11; third-quarter points 40–30. Minnesota made 17 threes to Oklahoma City’s 11."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   17,
+   11
+  ],
+  [
+   "Third-quarter points",
+   40,
+   30
+  ],
+  [
+   "Fast-break points",
+   19,
+   7
+  ],
+  [
+   "Free throws made",
+   16,
+   11
+  ]
+ ],
+ "battle_labels": [
+  "MIN",
+  "OKC"
+ ],
+ "top": [
+  [
+   "Jaden McDaniels",
+   "MIN",
+   "11 of 15, 4 of 5 from three",
+   32
+  ],
+  [
+   "LaMelo Ball",
+   "MIN",
+   "8 assists, 5 of 9 from three",
+   19
+  ],
+  [
+   "Ayo Dosunmu",
+   "MIN",
+   "4 of 7 from three",
+   16
+  ],
+  [
+   "Trey Lyles",
+   "MIN",
+   "off the bench, 10 rebounds",
+   9
+  ]
+ ],
+ "linescore": {
+  "away": [
+   26,
+   21,
+   40,
+   26
+  ],
+  "home": [
+   16,
+   37,
+   30,
+   23
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-25-MIN-at-OKC.json",
+ "loser": {
+  "top": [
+   [
+    "Shai Gilgeous-Alexander",
+    "OKC",
+    "13 of 26 · 5 assists",
+    32
+   ],
+   [
+    "Ajay Mitchell",
+    "OKC",
+    "11 of 19",
+    25
+   ],
+   [
+    "Kenrich Williams",
+    "OKC",
+    "off the bench · 3 steals",
+    13
+   ]
+  ],
+  "source": "box score"
+ }
+}

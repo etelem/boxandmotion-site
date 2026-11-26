@@ -1,0 +1,109 @@
+{
+ "headline": "LeBron’s triple-double and Maxey’s 30 sink Miami",
+ "dek": "LeBron James had his first triple-double as a 76er, and Tyrese Maxey scored 30.",
+ "three": [
+  [
+   "LeBron James: 25 points, 12 assists, 10 rebounds",
+   "14 straight 76ers points in the second quarter, and the 126th triple-double of his career."
+  ],
+  [
+   "76ers up 9 at the half, after winning the second quarter 33–21",
+   "Maxey and LeBron combined for 55 of 111."
+  ],
+  [
+   "Won it from three and with 9 steals to 4",
+   "Threes made 14–8; assists 29–24. Philadelphia made 14 threes to Miami’s 8."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   14,
+   8
+  ],
+  [
+   "Assists",
+   29,
+   24
+  ],
+  [
+   "Steals",
+   9,
+   4
+  ],
+  [
+   "Bench points",
+   25,
+   20
+  ]
+ ],
+ "battle_labels": [
+  "PHI",
+  "MIA"
+ ],
+ "top": [
+  [
+   "Tyrese Maxey",
+   "PHI",
+   "12 of 21, 6 assists",
+   30
+  ],
+  [
+   "LeBron James",
+   "PHI",
+   "12 assists, 10 rebounds",
+   25
+  ],
+  [
+   "VJ Edgecombe",
+   "PHI",
+   "6 rebounds, 5 assists",
+   18
+  ],
+  [
+   "Dominick Barlow",
+   "PHI",
+   "off the bench, 8 rebounds",
+   9
+  ]
+ ],
+ "linescore": {
+  "away": [
+   32,
+   21,
+   28,
+   23
+  ],
+  "home": [
+   29,
+   33,
+   28,
+   21
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-25-MIA-at-PHI.json",
+ "loser": {
+  "top": [
+   [
+    "Giannis Antetokounmpo",
+    "MIA",
+    "14 rebounds · 10 of 13 FT",
+    32
+   ],
+   [
+    "Davion Mitchell",
+    "MIA",
+    "10 assists · 3 of 5 from three",
+    20
+   ],
+   [
+    "Bam Adebayo",
+    "MIA",
+    "11 rebounds",
+    17
+   ]
+  ],
+  "source": "box score"
+ }
+}

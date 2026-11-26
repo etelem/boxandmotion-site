@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-25-MIA-PHI.html",
+  "team": "PHI",
+  "home": true,
+  "number": "0",
+  "player": "Tyrese Maxey",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 0.9487,
+    "ape": 1.0541,
+    "mass": 0.9902
+  },
+  "build_note": "Listed 6-2, 200 lb, No. 0 (Wikipedia); 6-6 wingspan at the 2020 draft combine (Sportskeeda)",
+  "kicker": "76ERS 111 · HEAT 104 · NOV 25",
+  "hook": [
+    "Tyrese Maxey's",
+    "step-back three"
+  ],
+  "clock": "Q4 · 2:31",
+  "us": "PHI",
+  "them": "MIA",
+  "score_before": [
+    108,
+    95
+  ],
+  "score_make": [
+    111,
+    95
+  ],
+  "stamp": "THREE",
+  "beat": [
+    "76ers by 16, 2:31 left.",
+    "Their biggest lead of the night."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "76ers",
+    "them": "Heat",
+    "us_pts": 111,
+    "them_pts": 104
+  },
+  "star": {
+    "name": "Tyrese Maxey",
+    "big": 30,
+    "big_label": "points on 12-of-21 shooting",
+    "lines": [
+      "3 of 5 from three, 6 assists",
+      "LeBron James: a triple-double"
+    ]
+  },
+  "story": "LeBron James had his first triple-double as a 76er, and Philadelphia ended Miami's seven-game winning streak, 111–104.",
+  "aria": "Animated Short: Tyrese Maxey's 26-foot step-back 3-pointer with 2:31 left that made it 111–95 on the way to a 111–104 76ers win over Miami. An original illustration, not traced from footage, not to scale."
+}

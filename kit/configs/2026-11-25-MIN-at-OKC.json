@@ -1,0 +1,256 @@
+{
+ "team": "MIN",
+ "D": "  const D = {\n    date: 'Wed, Nov 25, 2026',\n    us: 113, them: 106, record: '14–5', usName: 'Timberwolves', themName: 'Thunder',\n    quarters: [[26, 16], [21, 37], [40, 30], [26, 23]],\n    leadUs: 12, leadThem: 11,\n    star: {name: 'Jaden McDaniels', stats: [['Points', 32, 35], ['Rebounds', 10, 15], ['Assists', 5, 10]]},\n    scorers: [\n      {name: 'Jaden McDaniels', pts: 32, note: '11 of 15 · 4 of 5 from three'},\n      {name: 'LaMelo Ball', pts: 19, note: '8 assists · 5 of 9 from three'},\n      {name: 'Ayo Dosunmu', pts: 16, note: '4 of 7 from three'},\n      {name: 'Trey Lyles', pts: 9, note: 'off the bench · 10 rebounds'},\n      {name: 'Rudy Gobert', pts: 9, note: '7 rebounds'},\n    ],\n    edges: [\n      {label: 'Threes made', us: 17, them: 11},\n      {label: 'Third-quarter points', us: 40, them: 30},\n      {label: 'Fast-break points', us: 19, them: 7},\n      {label: 'Free throws made', us: 16, them: 11},\n    ],\n    gaps: [\n      {label: 'Points in the paint', us: 44, them: 46},\n      {label: 'Field goals made', us: 40, them: 42},\n    ],\n    next: {opp: 'vs Grizzlies', when: 'Fri, Nov 27, 8:30 PM ET', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Ayo Dosunmu's 3-pointer with 1:30 left, off Terrence Shannon Jr.'s pass, that made it 110–104. An original illustration from the play-by-play and written accounts; not traced from footage, not to scale.\n",
+  "head": "Dosunmu from three",
+  "subP": "Dosunmu from three, 1:30 left",
+  "subL": "Ayo Dosunmu from three, 1:30 left, up 107–104",
+  "m0": "Wolves +3",
+  "m1": "Wolves +6",
+  "num": "13",
+  "cap1": "Dosunmu from three. Wolves by 6.",
+  "cap2": "110–104 with 1:30 left, off Shannon’s pass.",
+  "clock": [
+   95,
+   90
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Timberwolves at Thunder Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Timberwolves 113, Thunder 106 · Nov 25, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Timberwolves at', 'Thunder'] : ['Timberwolves at Thunder']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['McDaniels 32 on 11 of 15.', 'Wolves 3–0 in the Cup.'] : ['Jaden McDaniels scored 32 on 11-of-15 shooting, and Minnesota stayed perfect in NBA Cup play.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Timberwolves improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Won 10 of their last 12'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Timberwolves down 6 at the half,', 'won the third 40–30'] : ['Timberwolves down 6 at the half, then won the third quarter 40–30']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Timberwolves ${D.leadUs}, Thunder ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Timberwolves’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['McDaniels: 32 points', 'and 10 rebounds'] : ['Jaden McDaniels: 32 points and 10 rebounds']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['17 in the third, 11 of 15,', 'no turnovers.'] : ['17 in the third quarter, 11 of 15 from the floor and no turnovers.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['McDaniels, Ball, Dosunmu:', '67 of the 113'] : ['McDaniels, Ball and Dosunmu combined for 67 of 113']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 35;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it from three', 'and on the break'] : ['Won it from three and on the break']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Thunder in gray. Minnesota made', '17 threes to OKC’s 11.'] : ['Thunder in gray. Minnesota made 17 threes to Oklahoma City’s 11.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'3rd in the West'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Grizzlies’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '14–5';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['LaMelo Ball left with 2:29 to go', 'with a left ankle injury.'] : ['LaMelo Ball left with 2:29 to go with a left ankle injury and did not return.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Timberwolves 113 · Thunder 106 · Nov 25'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Dosunmu from three'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'McDaniels'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 60;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - 345 * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+3', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 262, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 294, ly, D.themName"
+  ],
+  [
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+  ]
+ ],
+ "aria": "Animated recap of the Timberwolves' 113 to 106 road win over the Thunder: Ayo Dosunmu's 3-pointer with 1:30 left that made it 110 to 104, quarter-by-quarter scoring, Jaden McDaniels' 32 points, the top scorers, how the Timberwolves won, and the next game.",
+ "figure": {
+  "player": "Ayo Dosunmu",
+  "home": false,
+  "tall": 0.9872,
+  "ape": 1.0682,
+  "mass": 0.957,
+  "label": "Ayo Dosunmu, 6-5 in shoes, 194 lb, 6-10¼ wingspan (2021 draft combine, nbadraft.net)"
+ },
+ "loser_top": [
+  [
+   "Shai Gilgeous-Alexander",
+   32,
+   "13 of 26 · 5 assists"
+  ],
+  [
+   "Ajay Mitchell",
+   25,
+   "11 of 19"
+  ],
+  [
+   "Kenrich Williams",
+   13,
+   "off the bench · 3 steals"
+  ]
+ ],
+ "notes": [
+  "Box score from StatMuse's game page for the Timberwolves' 113–106 win at Oklahoma City on Nov 25, 2026, an NBA Cup group game: all 113 Minnesota points and all 106 Oklahoma City points add up from the player lines, as do the threes (17 of 39 to 11 of 33), free throws (16 of 24 to 11 of 18) and assists (25–20); field goals made (40–42) are on StatMuse, DigestSports and VAVEL. The quarter scores (26–21–40–26 to 16–37–30–23), 53–47 Oklahoma City at the half and 87–83 Minnesota after three are on StatMuse, VAVEL and OKC Thunder Wire; Heavy and 95.3 The Score also have 87–83. Fast-break points (19–7) and points in the paint (44–46) are on StatMuse and Fadeaway World. The biggest leads (Minnesota 12, Oklahoma City 11) are from StatMuse; Heavy and 95.3 The Score have Oklahoma City up 74–63 in the third. Team rebounds, blocks and turnovers differ between sources by one or two and are not shown. Records and ranks are from the site's standings after Wednesday's games.",
+  "Jaden McDaniels had 32 points on 11 of 15, 10 rebounds, 5 assists and no turnovers, his second straight 30-point game after a career-high 34 against Brooklyn on Monday, and scored 17 in the third quarter as Minnesota closed it on a 24–9 run (Heavy; 95.3 The Score). Minnesota is 3–0 in NBA Cup group play and has won three straight and 10 of 12; Oklahoma City has lost three straight and seven of nine and finished group play 2–2 (95.3 The Score; The Oklahoman). LaMelo Ball left with 2:29 left with a left ankle injury and did not return (The Oklahoman; 95.3 The Score; DAZN). Minnesota played without Anthony Edwards (knee) (DAZN); Oklahoma City without Chet Holmgren, Jalen Williams and Cason Wallace, among others (The Oklahoman). Ayo Dosunmu scored 13 in the fourth (VAVEL). Next: Minnesota hosts Memphis on Friday at 8:30 PM ET in the NBA Cup (DAZN; Ball Exclusives); Oklahoma City visits Milwaukee on Saturday (The Oklahoman).",
+  "The play of the game is an original illustration of Ayo Dosunmu's 3-pointer with 1:30 left that made it 110–104: StatMuse's play-by-play has \"A. Dosunmu makes 23' three / Assisted by T. Shannon Jr.\" at 1:30 for 107–104 to 110–104 (DigestSports' play-by-play has the same play as a 22-footer), and OKC Thunder Wire calls it the \"corner 3\" that effectively ended Oklahoma City's chances. So the board's Wolves +3 to +6 is 107–104 to 110–104. The defender isn't named, so it is drawn as the template's plain catch-and-shoot pull-up from about 23 feet. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Minnesota Timberwolves or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The shooter in the play of the game is drawn to Ayo Dosunmu's 2021 draft combine measurements: 6-foot-5 in shoes, 194 pounds and a 6-foot-10.25 wingspan (nbadraft.net), in Minnesota's road kit with No. 13 (Land of Basketball) and the default figure (no look on the look sheet yet). It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "StatMuse: Timberwolves 113-106 Thunder (Nov 25, 2026), box score and play-by-play",
+   "https://www.statmuse.com/nba/game/11-25-2026-min-at-okc-78621",
+   "Player box, team stats, line score, biggest leads, play of the game (1:30, 107–104 to 110–104)"
+  ],
+  [
+   "DigestSports: Timberwolves vs Thunder box score (Nov 25, 2026)",
+   "https://digestsports.com/nba/games/timberwolves-vs-thunder-2026-11-25/",
+   "Second box score, late play-by-play (check only)"
+  ],
+  [
+   "VAVEL: Dosunmu sparks late road win",
+   "https://www.vavel.com/en-us/nba/2026/11/25/1280765-timberwolves-vs-thunder-live-score-updates-stats-and-nba-cup-play-by-play.html",
+   "Quarter scores, field goals, Dosunmu's 13 in the fourth"
+  ],
+  [
+   "Heavy: Jaden McDaniels Consecutive 30-Point Games Lift Wolves Past Thunder",
+   "https://heavy.com/sports/nba/minnesota-timberwolves/jaden-mcdaniels-consecutive-30-point-games-lift-wolves-past-thunder/",
+   "McDaniels' milestones, 17 in the third, 24–9 run, score after three"
+  ],
+  [
+   "95.3 The Score: Jaden McDaniels, Wolves charge past Thunder, stay perfect in Cup play",
+   "https://www.953thescore.com/2026/11/25/jaden-mcdaniels-wolves-charge-past-thunder-stay-perfect-in-cup-play/",
+   "Runs, streaks, Cup record, Ball's injury"
+  ],
+  [
+   "The Oklahoman via Yahoo: OKC Thunder drops NBA Cup group play finale",
+   "https://sports.yahoo.com/nba/articles/okc-thunder-drops-nba-cup-033256553.html",
+   "Oklahoma City's streak and injuries, Ball's exit, next game"
+  ],
+  [
+   "OKC Thunder Wire via Yahoo: Player grades: Thunder fall short",
+   "https://sports.yahoo.com/nba/articles/player-grades-thunder-fall-short-050816453.html",
+   "Corner three, score after three"
+  ],
+  [
+   "Fadeaway World via Yahoo: 5 reasons why Timberwolves ran past the Thunder",
+   "https://sports.yahoo.com/nba/articles/5-reasons-why-timberwolves-ran-042533271.html",
+   "Paint and fast-break points"
+  ],
+  [
+   "DAZN: LaMelo Ball injury puts damper on Timberwolves' NBA Cup win",
+   "https://www.dazn.com/en-GB/news/basketball/lamelo-ball-injury-puts-damper-timberwolves-nba-cup-win-thunder-anthony-edwards/10nm5x7jxidcd1bxv4tdgg1bee",
+   "Ball's injury, Edwards out, next game"
+  ],
+  [
+   "Ball Exclusives via Yardbarker: Timberwolves beat Thunder 113-106 as McDaniels scores 32",
+   "https://www.yardbarker.com/nba/articles/timberwolves_beat_thunder_113_106_as_mcdaniels_scores_32/s1_17668_44620470",
+   "Records, next games"
+  ],
+  [
+   "nbadraft.net: Ayo Dosunmu",
+   "https://www.nbadraft.net/players/ayo-dosunmu",
+   "2021 combine height, weight and wingspan for the figure"
+  ],
+  [
+   "Land of Basketball: Ayo Dosunmu",
+   "https://www.landofbasketball.com/nba_players/ayo_dosunmu.htm",
+   "Number for the figure"
+  ]
+ ]
+}
