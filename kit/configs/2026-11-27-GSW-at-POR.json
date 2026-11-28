@@ -1,0 +1,217 @@
+{
+ "team": "POR",
+ "D": "  const D = {\n    date: 'Fri, Nov 27, 2026',\n    us: 116, them: 94, record: '13–6', usName: 'Blazers', themName: 'Warriors',\n    quarters: [[37, 11], [30, 33], [24, 34], [25, 16]],\n    leadUs: 36, leadThem: 0,\n    star: {name: 'Deni Avdija', stats: [['Points', 26, 30], ['Rebounds', 7, 10], ['Assists', 7, 10]]},\n    scorers: [\n      {name: 'Deni Avdija', pts: 26, note: '7 rebounds · 7 assists · 8 of 9 FT'},\n      {name: 'Toumani Camara', pts: 20, note: '4 of 8 from three · 8 rebounds'},\n      {name: 'Scoot Henderson', pts: 18, note: 'off the bench · 7 assists'},\n      {name: 'Jrue Holiday', pts: 12, note: '6 assists'},\n      {name: 'Robert Williams III', pts: 12, note: 'off the bench · 5 of 7 · 8 rebounds'},\n    ],\n    edges: [\n      {label: 'Points in the paint', us: 58, them: 30},\n      {label: 'Bench points', us: 44, them: 28},\n      {label: 'Second-chance points', us: 23, them: 14},\n      {label: 'Free throws made', us: 22, them: 16},\n      {label: 'Points off turnovers', us: 19, them: 14},\n    ],\n    gaps: [\n      {label: 'Threes made', us: 12, them: 14},\n    ],\n    next: {opp: 'vs Pelicans', when: 'Sun, Nov 29', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Deni Avdija's running layup off Scoot Henderson's pass with 1:05 left, and the free throw after it, that made it 114–90 and finished Portland's 14–0 run. An original illustration from the play-by-play and written accounts; not traced from footage, not to scale.\n",
+  "head": "Avdija’s and-one",
+  "subP": "Avdija on the drive, 1:05 left",
+  "subL": "Deni Avdija on the drive, 1:05 left, up 111–90",
+  "m0": "Blazers +21",
+  "m1": "Blazers +23",
+  "num": "8",
+  "cap1": "Avdija’s and-one. Blazers by 24.",
+  "cap2": "114–90 with the free throw.",
+  "clock": [
+   72,
+   65
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Warriors at Trail Blazers Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Blazers 116, Warriors 94 · Nov 27, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Warriors at', 'Trail Blazers'] : ['Warriors at Trail Blazers']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['37–11 after one quarter.', 'Avdija 26.'] : ['Portland led 37–11 after one quarter, and Deni Avdija scored 26.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Blazers improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Three straight wins'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Blazers up 26 after one,', 'then held off the Warriors'] : ['Blazers up 26 after the first quarter and 23 at the half, then held off the Warriors']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Blazers ${D.leadUs}, Warriors ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Blazers’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Avdija: 26 points,', '7 rebounds, 7 assists'] : ['Deni Avdija: 26 points, 7 rebounds, 7 assists']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['8 of 9 at the line,', 'the and-one late.'] : ['He made 8 of 9 free throws and finished the 14–0 run with a three-point play.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Avdija and Camara:', '46 of the 116'] : ['Avdija and Camara combined for 46 of 116']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 30;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it in the paint', 'and off the bench'] : ['Won it in the paint, 58–30, and off the bench']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Blazers in red, Warriors in gray.', 'Portland made 22 of 23 FTs.'] : ['Blazers in red, Warriors in gray. Portland made 22 of its 23 free throws.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'6th in the West'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Pelicans’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '6–14';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['West Group C winners at 3–1;', 'Memphis in the quarterfinals.'] : ['Portland won NBA Cup West Group C at 3–1 and hosts Memphis in the quarterfinals on Dec 5.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Blazers 116 · Warriors 94 · Nov 27'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Avdija’s and-one'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Avdija'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 70;"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - (P ? 170 : 200) * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+2', 'd w', 72, 'end');"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 120 * k, shotX + 80 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 160, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 192, ly, D.themName"
+  ]
+ ],
+ "aria": "Animated recap of the Trail Blazers' 116 to 94 win over the Warriors: Deni Avdija's and-one with 1:05 left that made it 114 to 90, quarter-by-quarter scoring, Avdija's 26 points, the top scorers, how the Blazers won, and the next game.",
+ "figure": {
+  "player": "Deni Avdija",
+  "home": true,
+  "tall": 1.0256,
+  "ape": 1.0,
+  "mass": 1.0169,
+  "label": "Deni Avdija, listed 6-8, 228 lb (Basketball-Reference); no sourced wingspan",
+  "skin": "#f0d2b6"
+ },
+ "loser_top": [
+  [
+   "Yaxel Lendeborg",
+   18,
+   "7 of 9 FT · 7 rebounds"
+  ],
+  [
+   "De’Anthony Melton",
+   17,
+   "5 of 10 from three"
+  ],
+  [
+   "Brandin Podziemski",
+   16,
+   "5 of 11 · 4 assists"
+  ]
+ ],
+ "notes": [
+  "Box score from Digest Sports' page for the Trail Blazers' 116–94 home win over Golden State on Nov 27, 2026, matched stat for stat by Hoops Nightly: all 116 Portland points and all 94 Golden State points add up from the player lines, as do the shooting totals (41 of 96, 12 of 49 from three, 22 of 23 FT for Portland; 32 of 88, 14 of 42, 16 of 24 for Golden State). The quarter scores (37–30–24–25 to 11–33–34–16) are in both; 67–44 at the half and 91–78 after three are also in Field Level Media and Fastbreak Journal. Points in the paint (58–30), second-chance points (23–14) and points off turnovers (19–14) are from Hoops Nightly; bench points (44–28) are on Hoops Nightly and add up from the box. Portland's biggest lead, 36 (47–11 early in the second quarter), is in Digest Sports, the AP and Field Level Media; Golden State never led. Deni Avdija's 7 rebounds are from both box scores and Basketball-Reference (the AP story says 8). Records are from the site's standings after Friday's games.",
+  "Portland scored 20 of the first 23 points (Field Level Media) and led 37–11 after one quarter, when Golden State shot 4 for 24 (AP). The Warriors won the second and third quarters and cut it to 100–90 on Yaxel Lendeborg's driving layup with 5:10 left (AP; Field Level Media), before Portland's 14–0 run to 114–90 (Field Level Media; Fastbreak Journal). Seven Blazers scored in double figures (SI). Stephen Curry (oblique) missed a seventh straight game for Golden State, and Damian Lillard (calf) sat out for Portland (Field Level Media; AP). Portland has won three straight (Hoops Nightly; Field Level Media), won NBA Cup West Group C at 3–1 on a tiebreaker (Field Level Media; SI), and hosts Memphis in the quarterfinals on Dec 5 (AP). The Blazers host New Orleans on Sunday (AP; Hoops Nightly).",
+  "The play of the game is an original illustration of Deni Avdija's running layup with 1:05 left, assisted by Scoot Henderson, and the free throw after it: the Digest Sports play-by-play has the layup at 1:05 for 111–90 to 113–90 and the free throw for 114–90, and Fastbreak Journal and Field Level Media describe the same three-point play finishing the 14–0 run. So the board's Blazers +21 to +23 is 111–90 to 113–90 before the free throw. The defender isn't described, so it is drawn as the template's drive to the rim. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Portland Trail Blazers or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The player in the play of the game is drawn to Deni Avdija's listed 6-foot-8 and 228 pounds (Basketball-Reference), with arms at the default length, in the Blazers' home kit with No. 8 (SI; Yahoo Sports), with his proposed look from the site's look sheet. It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "Digest Sports: Warriors vs Trail Blazers NBA Box Score, Nov 27, 2026",
+   "https://digestsports.com/nba/games/warriors-vs-trail-blazers-2026-11-27/",
+   "Player box, line score, play-by-play (play of the game at 1:05), biggest lead"
+  ],
+  [
+   "Hoops Nightly: Warriors at Trail Blazers game page (Nov 27, 2026)",
+   "https://hoopsnightly.com/games/2026-11-27-gsw-at-por",
+   "Box score check, paint, bench, second-chance points, records"
+  ],
+  [
+   "AP via ABC7: Trail Blazers beat the Warriors 116-94 to advance to the NBA Cup quarterfinals",
+   "https://abc7news.com/post/trail-blazers-beat-warriors-116-94-advance-nba-cup-quarterfinals/20093514/",
+   "Story, first quarter, quarterfinal, next games"
+  ],
+  [
+   "Field Level Media via GMA: Deni Avdija, Blazers best Warriors, finish atop NBA Cup group",
+   "https://www.gmanetwork.com/news/sports/basketball/1011048/nba-deni-avdija-blazers-best-warriors-finish-atop-nba-cup-group/story/",
+   "Runs, 14–0 run, injuries, Cup group"
+  ],
+  [
+   "Fastbreak Journal via Yardbarker: Blazers Top Warriors As Deni Avdija Scores 26 At Moda Center",
+   "https://www.yardbarker.com/nba/articles/blazers_top_warriors_as_deni_avdija_scores_26_at_moda_center/s1_17908_44630047",
+   "Three-point play detail, halftime, records"
+  ],
+  [
+   "SI: Blazers Blitz Warriors in Wire-to-Wire Victory, Move Onto NBA Cup Knockout Round",
+   "https://www.si.com/nba/trailblazers/onsi/blazers-blitz-warriors-in-wire-to-wire-victory-move-onto-nba-cup-knockout-round",
+   "Seven in double figures, Cup group"
+  ],
+  [
+   "Basketball-Reference: Deni Avdija",
+   "https://Basketball-Reference.com/players/a/avdijde01.html",
+   "Height, weight for the figure, game log check"
+  ],
+  [
+   "SI: Portland Officially Announces Trade, Jersey Number of Deni Avdija",
+   "https://www.si.com/nba/trailblazers/onsi/news/portland-officially-announces-trade-jersey-number-of-deni-advija-ak1987",
+   "Number for the figure"
+  ]
+ ]
+}

@@ -1,0 +1,54 @@
+{
+  "out": "short-2026-11-27-PHI-IND.html",
+  "team": "PHI",
+  "home": false,
+  "number": "23",
+  "player": "LeBron James",
+  "play_type": "jumper",
+  "three": true,
+  "build": {
+    "tall": 1.0385,
+    "ape": 1.0,
+    "mass": 1.0582
+  },
+  "build_note": "Listed 6-9, 250 lb (Basketball-Reference, Wikipedia), No. 23 (Wikipedia); no sourced wingspan",
+  "kicker": "76ERS 111 · PACERS 87 · NOV 27",
+  "hook": [
+    "LeBron James's",
+    "third early three"
+  ],
+  "clock": "Q1 · 8:54",
+  "us": "PHI",
+  "them": "IND",
+  "score_before": [
+    12,
+    5
+  ],
+  "score_make": [
+    15,
+    5
+  ],
+  "stamp": "THREE",
+  "beat": [
+    "His third three of the night.",
+    "76ers by 10, and they never trailed."
+  ],
+  "final": {
+    "label": "FINAL",
+    "us": "76ers",
+    "them": "Pacers",
+    "us_pts": 111,
+    "them_pts": 87
+  },
+  "star": {
+    "name": "LeBron James",
+    "big": 21,
+    "big_label": "points on 8-of-13 shooting",
+    "lines": [
+      "7 rebounds, 6 assists in 27 minutes",
+      "Into the NBA Cup knockout round"
+    ]
+  },
+  "story": "LeBron James scored 21 and the 76ers routed Indiana to reach the NBA Cup knockout round for the first time.",
+  "aria": "Animated Short: LeBron James's third 3-pointer of the opening minutes, with 8:54 left in the first quarter, that made it 15–5 on the way to a 111–87 76ers win at Indiana. An original illustration, not traced from footage, not to scale."
+}

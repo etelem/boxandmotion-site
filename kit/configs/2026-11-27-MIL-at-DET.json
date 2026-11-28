@@ -1,0 +1,251 @@
+{
+ "team": "DET",
+ "D": "  const D = {\n    date: 'Fri, Nov 27, 2026',\n    us: 113, them: 98, record: '12–6', usName: 'Pistons', themName: 'Bucks',\n    quarters: [[24, 29], [24, 21], [42, 26], [23, 22]],\n    leadUs: 20, leadThem: 16,\n    star: {name: 'Isaiah Joe', stats: [['Points', 22, 25], ['Threes made of 12', 5, 12], ['Assists', 3, 5]]},\n    scorers: [\n      {name: 'Isaiah Joe', pts: 22, note: 'off the bench · 5 of 12 from three'},\n      {name: 'Elijah Harkless', pts: 14, note: 'off the bench · career high'},\n      {name: 'Paul Reed', pts: 14, note: 'off the bench · 5 of 8'},\n      {name: 'Daniss Jenkins', pts: 13, note: '3 of 9 from three'},\n      {name: 'John Collins', pts: 12, note: '8 rebounds · 3 steals'},\n    ],\n    edges: [\n      {label: 'Bench points', us: 60, them: 32},\n      {label: 'Fast-break points', us: 24, them: 11},\n      {label: 'Threes made', us: 16, them: 12},\n      {label: 'Steals', us: 12, them: 8},\n    ],\n    gaps: [\n      {label: 'Points in the paint', us: 38, them: 50},\n    ],\n    next: {opp: 'vs Magic', when: 'Sun, Nov 29', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Daniss Jenkins' 39-foot pull-up 3-pointer from Elijah Harkless at the third-quarter buzzer that made it 90–76. An original illustration from the play-by-play and written accounts; not traced from footage, not to scale.\n",
+  "head": "Jenkins at the buzzer",
+  "subP": "Jenkins from 39 feet, end of the 3rd",
+  "subL": "Daniss Jenkins from 39 feet at the third-quarter buzzer",
+  "m0": "Pistons +11",
+  "m1": "Pistons +14",
+  "num": "24",
+  "cap1": "Jenkins from 39 feet. Pistons by 14.",
+  "cap2": "90–76 going into the fourth.",
+  "clock": [
+   1,
+   0
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Bucks at Pistons Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Pistons 113, Bucks 98 · Nov 27, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Bucks at', 'Pistons'] : ['Bucks at Pistons']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Detroit’s bench scored 60.', 'Isaiah Joe had 22.'] : ['Without Cade Cunningham, Detroit’s bench outscored its starters 60–53, led by Isaiah Joe’s 22.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Pistons improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Won NBA Cup East Group A'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Pistons down 2 at the half,', 'won the third 42–26'] : ['Pistons down 2 at the half, then won the third quarter 42–26']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Pistons ${D.leadUs}, Bucks ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Pistons’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Joe: 22 points', 'off the bench'] : ['Isaiah Joe: 22 points off the bench']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['5 threes, his second straight', '20-point game.'] : ['5 of 12 from three, and his second straight 20-point game.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Detroit’s bench:', '60 of the 113'] : ['Detroit’s bench scored 60 of the 113']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 25;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it off the bench', 'and on the break'] : ['Won it off the bench and on the break']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Pistons in blue, Bucks in gray.', 'Bench points: 60 to 32.'] : ['Pistons in blue, Bucks in gray. Detroit’s bench outscored Milwaukee’s 60–32.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'3rd in the East'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Magic’s record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '7–10';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['Into the NBA Cup quarterfinals:', 'Boston visits Dec 5.'] : ['Detroit won East Group A and hosts Boston in the NBA Cup quarterfinals on Dec 5.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Pistons 113 · Bucks 98 · Nov 27'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Jenkins at the buzzer'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Joe'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 70;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - 500 * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+3', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q3', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 160, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 192, ly, D.themName"
+  ],
+  [
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = clk < 60 ? clk.toFixed(1) : `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+  ]
+ ],
+ "aria": "Animated recap of the Pistons' 113 to 98 home win over the Bucks: Daniss Jenkins' 39-foot 3-pointer at the third-quarter buzzer that made it 90 to 76, quarter-by-quarter scoring, Isaiah Joe's 22 points off the bench, the top scorers, how the Pistons won, and the next game.",
+ "figure": {
+  "player": "Daniss Jenkins",
+  "home": true,
+  "label": "Daniss Jenkins, listed 6-4, 165 lb (Basketball-Reference; Wikipedia); no wingspan reported",
+  "tall": 0.9744,
+  "ape": 1.0,
+  "mass": 0.8875
+ },
+ "loser_top": [
+  [
+   "Brayden Burries",
+   23,
+   "off the bench · 9 of 17"
+  ],
+  [
+   "Tyler Herro",
+   20,
+   "7 of 15 · 4 of 4 FT"
+  ],
+  [
+   "Jaime Jaquez Jr.",
+   16,
+   "11 rebounds"
+  ]
+ ],
+ "notes": [
+  "Box score from StatMuse's game page for the Pistons' 113–98 home win over Milwaukee on Nov 27, 2026, an NBA Cup group game: all 113 Detroit points and all 98 Milwaukee points add up from the player lines, as do the shooting totals (40 of 93, 16 of 47 from three, 17 of 25 FT for Detroit; 38 of 87, 12 of 40, 10 of 13 for Milwaukee) and steals (12–8). Hoops Nightly matches every player's points and shooting, and the quarter scores (24–24–42–23 to 29–21–26–22) are on StatMuse, Hoops Nightly and Digest Sports. Milwaukee led 50–48 at the half; Detroit led 90–76 after three (StatMuse play-by-play, SB Nation's Rapid Recap; one AP version says 90–78, which doesn't match the line score). Bench points (60–32) add up from the box and are on Hoops Nightly; fast-break points (24–11), points in the paint (38–50) and the biggest leads (Detroit 20, Milwaukee 16, at 19–3) are from Hoops Nightly, and Field Level Media also has Detroit's 20. Rebound totals differ between sources, so they aren't used, nor are Harkless' assists (7 or 8). Records and ranks are from the site's standings after Friday's games.",
+  "Detroit played without Cade Cunningham (right knee, second straight game; Field Level Media). Its bench outscored its starters 60–53 (AP; The Detroit News). Isaiah Joe scored 22 with five 3-pointers, his second straight 20-point game and second straight with five threes, and Elijah Harkless' 14 points were a career high (Detroit Free Press). Detroit finished 3–1 and won East Group A on point differential over Toronto and Orlando, reaching the NBA Cup knockout round for the first time; it hosts Boston in the quarterfinals on Dec 5 (Yahoo Sports). Milwaukee finished 0–4. Rookie Brayden Burries scored 23 off the bench for Milwaukee (StatMuse). Next: Detroit hosts Orlando on Sunday (Hoops Nightly; Free Press); Milwaukee hosts Oklahoma City on Saturday (AP; Hoops Nightly).",
+  "The play of the game is an original illustration of Daniss Jenkins' 3-pointer from Elijah Harkless at the third-quarter buzzer that made it 90–76: StatMuse's play-by-play has a \"39' pullup three\" with the assist from Harkless and Digest Sports a 39-foot three, right after Myles Turner's three with a second left made it 87–76. The Detroit News calls it \"a long three from near half-court\" and the AP \"a buzzer-beating three.\" So the board's Pistons +11 to +14 is 87–76 to 90–76. The defender isn't described, so it is drawn as the template's plain pull-up from deep. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Detroit Pistons or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The shooter in the play of the game is drawn to Jenkins' listed 6-foot-4 and 165 pounds (Basketball-Reference; Wikipedia), in the Pistons' home white with No. 24 (Wikipedia). No wingspan is reported, so his arms are at the default length. He has no approved look on file yet, so he is drawn in the kit with the default skin tone. It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "StatMuse: Bucks vs. Pistons (Nov 27, 2026), box score and scoring plays",
+   "https://www.statmuse.com/nba/game/11-27-2026-mil-at-det-78627",
+   "Player box, team totals, line score, records, play of the game (0:00 Q3, 87–76 to 90–76)"
+  ],
+  [
+   "Hoops Nightly: Bucks at Pistons (Nov 27, 2026)",
+   "https://hoopsnightly.com/games/2026-11-27-mil-at-det",
+   "Second box, bench, fast-break and paint points, biggest leads"
+  ],
+  [
+   "Digest Sports: Bucks vs Pistons NBA Box Score, Nov 27, 2026",
+   "https://digestsports.com/nba/games/bucks-vs-pistons-2026-11-27/",
+   "Play-by-play at the end of the third, cross-check"
+  ],
+  [
+   "Detroit Free Press via Yahoo Sports: Bench powers shorthanded Detroit Pistons to NBA Cup win over Bucks",
+   "https://sports.yahoo.com/nba/articles/bench-powers-shorthanded-detroit-pistons-031720050.html",
+   "Joe's second straight 20-point game, Harkless' career high, next game"
+  ],
+  [
+   "The Detroit News via Yahoo Sports: Pistons bench helps key victory over lowly Bucks in NBA Cup",
+   "https://sports.yahoo.com/nba/articles/pistons-bench-helps-key-victory-030810757.html",
+   "Bench vs. starters, Jenkins' long three"
+  ],
+  [
+   "AP via Yahoo Sports: Isaiah Joe scores 22 points, Pistons' reserves power NBA Cup win over Bucks",
+   "https://ca.sports.yahoo.com/news/isaiah-joe-scores-22-points-031037381.html",
+   "Bench 60–53, buzzer-beating three, next games"
+  ],
+  [
+   "Field Level Media via Yardbarker: Isaiah Joe powers Pistons past Bucks into NBA Cup knockout stage",
+   "https://www.yardbarker.com/nba/articles/isaiah_joe_powers_pistons_past_bucks_into_nba_cup_knockout_stage/s1_17045_44629174",
+   "Cunningham's absence, biggest lead"
+  ],
+  [
+   "SB Nation via Yahoo Sports: Rapid Recap: Pistons 113, Bucks 98",
+   "https://sports.yahoo.com/nba/articles/rapid-recap-pistons-113-bucks-031950916.html",
+   "Score after three"
+  ],
+  [
+   "Yahoo Sports: NBA Cup quarterfinals set",
+   "https://sports.yahoo.com/nba/articles/nba-cup-quarterfinals-set-celtics-053300086.html",
+   "Group A tiebreaker, quarterfinal date"
+  ],
+  [
+   "Basketball-Reference: Daniss Jenkins",
+   "https://www.basketball-reference.com/players/j/jenkida01.html",
+   "Height and weight for the figure"
+  ],
+  [
+   "Wikipedia: Daniss Jenkins",
+   "https://en.wikipedia.org/wiki/Daniss_Jenkins",
+   "Number, height and weight for the figure"
+  ]
+ ]
+}

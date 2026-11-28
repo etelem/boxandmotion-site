@@ -1,0 +1,109 @@
+{
+ "headline": "Murray’s 36 pulls Denver away late",
+ "dek": "Jamal Murray scored 36, 12 of them in the last six minutes, and Nikola Jokić had 15 assists.",
+ "three": [
+  [
+   "Jamal Murray: 36 points on 12 of 20",
+   "12 in the last six minutes, and 9 of 10 at the line."
+  ],
+  [
+   "Nuggets down 1 at the half, tied 85–85 after three, then won the fourth 35–22",
+   "Jamal Murray and Christian Braun combined for 56 of 120."
+  ],
+  [
+   "Won it on turnovers and at the line",
+   "Points off turnovers 29–10; free throws made 24–13. Denver scored 29 points off turnovers to Utah’s 10."
+  ]
+ ],
+ "battle": [
+  [
+   "Points off turnovers",
+   29,
+   10
+  ],
+  [
+   "Free throws made",
+   24,
+   13
+  ],
+  [
+   "Points in the paint",
+   58,
+   48
+  ],
+  [
+   "Assists",
+   32,
+   29
+  ]
+ ],
+ "battle_labels": [
+  "DEN",
+  "UTA"
+ ],
+ "top": [
+  [
+   "Jamal Murray",
+   "DEN",
+   "12 of 20, 9 of 10 FT",
+   36
+  ],
+  [
+   "Christian Braun",
+   "DEN",
+   "8 of 13, 8 rebounds",
+   20
+  ],
+  [
+   "Nikola Jokić",
+   "DEN",
+   "15 assists, 9 rebounds",
+   17
+  ],
+  [
+   "Cameron Johnson",
+   "DEN",
+   "6 of 12",
+   14
+  ]
+ ],
+ "linescore": {
+  "away": [
+   27,
+   25,
+   33,
+   35
+  ],
+  "home": [
+   22,
+   31,
+   32,
+   22
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-27-DEN-at-UTA.json",
+ "loser": {
+  "top": [
+   [
+    "Keyonte George",
+    "UTA",
+    "5 of 9 from three",
+    25
+   ],
+   [
+    "Darryn Peterson",
+    "UTA",
+    "7 of 15",
+    20
+   ],
+   [
+    "Svi Mykhailiuk",
+    "UTA",
+    "off the bench · 4 threes",
+    18
+   ]
+  ],
+  "source": "box score"
+ }
+}

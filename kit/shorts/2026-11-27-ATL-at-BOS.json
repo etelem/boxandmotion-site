@@ -1,0 +1,53 @@
+{
+ "out": "short-2026-11-27-ATL-BOS.html",
+ "team": "ATL",
+ "home": false,
+ "number": "7",
+ "player": "Nickeil Alexander-Walker",
+ "play_type": "drive",
+ "build": {
+  "tall": 0.9872,
+  "ape": 1.0584,
+  "mass": 0.9828
+ },
+ "build_note": "Listed 6-5, 205 lb (Basketball-Reference; Wikipedia); 6-9½ wingspan at the 2019 draft combine (NBADraft.net); No. 7 (Basketball-Reference)",
+ "kicker": "HAWKS 87 · CELTICS 86 · NOV 27",
+ "hook": [
+  "Alexander-Walker",
+  "breaks an 83–83 tie"
+ ],
+ "clock": "Q4 · 0:54.3",
+ "us": "ATL",
+ "them": "BOS",
+ "score_before": [
+  83,
+  83
+ ],
+ "score_make": [
+  85,
+  83
+ ],
+ "stamp": "GO-AHEAD",
+ "beat": [
+  "Hawks by 2, 54.3 left.",
+  "Atlanta never trailed again."
+ ],
+ "final": {
+  "label": "FINAL",
+  "us": "Hawks",
+  "them": "Celtics",
+  "us_pts": 87,
+  "them_pts": 86
+ },
+ "star": {
+  "name": "Nickeil Alexander-Walker",
+  "big": 20,
+  "big_label": "points, 6 of 6 at the line",
+  "lines": [
+   "Scored Atlanta’s last 4 points",
+   "Jalen Johnson: 24 and 12"
+  ]
+ },
+ "story": "Atlanta trailed by 17 and won NBA Cup East Group C. Its fifth straight win.",
+ "aria": "Animated Short: Nickeil Alexander-Walker's driving layup with 54.3 seconds left that broke an 83 to 83 tie for the Hawks at Boston. Hawks win 87 to 86. An original illustration, not traced from footage, not to scale."
+}

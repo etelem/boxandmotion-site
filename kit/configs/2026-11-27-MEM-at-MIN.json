@@ -1,0 +1,232 @@
+{
+ "team": "MEM",
+ "D": "  const D = {\n    date: 'Fri, Nov 27, 2026',\n    us: 114, them: 109, record: '15–5', usName: 'Grizzlies', themName: 'Timberwolves',\n    quarters: [[32, 25], [29, 25], [21, 31], [32, 28]],\n    leadUs: 14, leadThem: 4,\n    star: {name: 'Cedric Coward', stats: [['Points', 22, 25], ['Rebounds', 3, 5], ['Shots made of 16', 9, 16]]},\n    scorers: [\n      {name: 'Cedric Coward', pts: 22, note: '9 of 16 · 2 steals · 2 blocks'},\n      {name: 'Javon Small', pts: 19, note: 'off the bench · 7 of 10 · ties season high'},\n      {name: 'Ty Jerome', pts: 18, note: '7 of 18 · 2 of 2 FT late'},\n      {name: 'Cam Spencer', pts: 16, note: 'off the bench · 6 rebounds · 3 steals'},\n      {name: 'Jaylen Wells', pts: 10, note: '5 of 6 FT'},\n    ],\n    edges: [\n      {label: 'Bench points', us: 53, them: 23},\n      {label: 'Second-chance points', us: 25, them: 11},\n      {label: 'Points off turnovers', us: 27, them: 19},\n      {label: 'Steals', us: 12, them: 8},\n    ],\n    gaps: [\n      {label: 'Points in the paint', us: 54, them: 60},\n      {label: 'Assists', us: 19, them: 27},\n    ],\n    next: {opp: 'vs Lakers', when: 'Sun, Nov 29', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Cedric Coward's three off Jaylen Wells's pass with 6:34 left that made it 99–87 and capped Memphis's 17–6 start to the fourth quarter. An original illustration from the play-by-play and written accounts; not traced from footage, not to scale.\n",
+  "head": "Coward’s three",
+  "subP": "Coward from three, 6:34 left",
+  "subL": "Cedric Coward from three, 6:34 left, up 96–87",
+  "m0": "Grizzlies +9",
+  "m1": "Grizzlies +12",
+  "num": "23",
+  "cap1": "Coward’s three. Grizzlies by 12.",
+  "cap2": "99–87, capping a 17–6 start to the fourth.",
+  "clock": [
+   401,
+   394
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Grizzlies at Timberwolves Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Grizzlies 114, Timberwolves 109 · Nov 27, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Grizzlies at', 'Timberwolves'] : ['Grizzlies at Timberwolves']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Coward 22, Small 19.', 'Cup Group B is theirs.'] : ['Cedric Coward scored 22, and Memphis won NBA Cup West Group B.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Grizzlies improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Won 8 of their last 9'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Grizzlies up 11 at the half,', 'won the fourth 32–28'] : ['Grizzlies up 11 at the half, lost the lead in the third, then won the fourth 32–28']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Grizzlies ${D.leadUs}, Timberwolves ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Grizzlies’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Coward: 22 points', 'on 9 of 16'] : ['Cedric Coward: 22 points on 9 of 16']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['His steal and layup put', 'Memphis ahead for good.'] : ['His steal and layup with 14 seconds left in the third put Memphis ahead for good.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Coward and Small:', '41 of the 114'] : ['Coward and Small combined for 41 of 114']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 30;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it off the bench', 'and on second chances'] : ['Won it off the bench and on second chances']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Grizzlies in blue, Wolves in gray.', '12 steals to Minnesota’s 8.'] : ['Grizzlies in blue, Timberwolves in gray. Memphis had 12 steals to Minnesota’s 8.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'3rd in the West'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Lakers’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '15–4';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['NBA Cup West Group B winners:', 'on to the knockout round.'] : ['Memphis won NBA Cup West Group B and moves on to the knockout round.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Grizzlies 114 · Timberwolves 109 · Nov 27'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Coward’s three'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Coward'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 70;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - 375 * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+3', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 215, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 247, ly, D.themName"
+  ]
+ ],
+ "aria": "Animated recap of the Grizzlies' 114 to 109 win at Minnesota: Cedric Coward's three with 6:34 left that made it 99 to 87, quarter-by-quarter scoring, Coward's 22 points, the top scorers, how the Grizzlies won, and the next game.",
+ "figure": {
+  "player": "Cedric Coward",
+  "home": false,
+  "tall": 0.9872,
+  "ape": 1.1201,
+  "mass": 0.9852,
+  "label": "Cedric Coward, listed 6-5, 206 lb (Basketball-Reference); 7-2¼ wingspan at the 2025 draft combine (SI)"
+ },
+ "loser_top": [
+  [
+   "Ayo Dosunmu",
+   27,
+   "10 of 17 · 8 assists · 3 steals"
+  ],
+  [
+   "Jonathan Kuminga",
+   19,
+   "8 of 14 · 6 rebounds"
+  ],
+  [
+   "Bones Hyland",
+   16,
+   "off the bench · 4 of 7 from three"
+  ]
+ ],
+ "notes": [
+  "Box score from Hoops Nightly's game page for the Grizzlies' 114–109 win at Minnesota on Nov 27, 2026: all 114 Memphis points and all 109 Minnesota points add up from the player lines, as do the shooting totals (44 of 93, 13 of 35 from three, 13 of 17 FT for Memphis; 42 of 75, 11 of 24, 14 of 23 for Minnesota), assists (19–27), steals (12–8) and bench points (53–23). The quarter scores (32–29–21–32 to 25–25–31–28) match the FOX Sports box score; 61–50 at the half and 82–81 after three are also in WJOX. Points off turnovers (27–19) are on Hoops Nightly and WJOX; second-chance points (25–11), points in the paint (54–60) and the biggest leads (14 and 4) are from Hoops Nightly. Team rebound totals are left out because Hoops Nightly's totals don't match its own player lines. Cedric Coward's assist count differs between Hoops Nightly and Basketball-Reference, so it isn't shown. Records are from the site's standings after Friday's games.",
+  "Memphis led by 14 late in the second quarter (59–45, FOX play-by-play). Minnesota opened the third on a 26–11 run to lead 76–72 (AP) and led 81–78 late in the quarter; Coward's driving floater with 16 seconds left and his steal and layup with 14 seconds left put Memphis up 82–81, and Minnesota never tied or led again (FOX play-by-play). The Grizzlies started the fourth on a 17–6 run to lead 99–87 (WJOX; FOX play-by-play). Minnesota got within 109–105 on a 10–0 run in the last 2:36 (Hoops Nightly; FOX), but Ty Jerome and Jaylen Wells made 5 of 6 free throws down the stretch (WJOX). Javon Small's 19 tied his season high (AP). Memphis has won 8 of its last 9 (AP) and won NBA Cup West Group B (AP). Minnesota played without Anthony Edwards and LaMelo Ball (AP; WJOX). Memphis hosts the Lakers on Sunday (AP; Hoops Nightly).",
+  "The play of the game is an original illustration of Cedric Coward's three with 6:34 left, assisted by Jaylen Wells, that made it 99–87: the FOX Sports play-by-play has it at 6:34 for 96–87 to 99–87, Hoops Nightly lists it as the end of an 8–0 burst, and WJOX and the AP describe Coward's three finishing the run to 99–87. So the board's Grizzlies +9 to +12 is 96–87 to 99–87. The play-by-play calls it a running jump shot; the distance and defender aren't recorded, so it is drawn as the template's plain pull-up from three. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Memphis Grizzlies or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The player in the play of the game is drawn to Cedric Coward's listed 6-foot-5 and 206 pounds (Basketball-Reference, Wikipedia, RealGM), with arms scaled to the 7-foot-2¼ wingspan measured at the 2025 draft combine (as reported by SI), in the Grizzlies' road kit with No. 23 (Wikipedia, RealGM). He has no approved look yet, so he is drawn with the default skin tone. It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "Hoops Nightly: Grizzlies at Timberwolves game page (Nov 27, 2026)",
+   "https://hoopsnightly.com/games/2026-11-27-mem-at-min",
+   "Player box, team stats, runs, biggest leads, next games"
+  ],
+  [
+   "FOX Sports: Grizzlies vs. Timberwolves box score and play-by-play (Nov 27, 2026)",
+   "https://www.foxsports.com/nba/in-season-tournament-western-conference-group-play-memphis-grizzlies-vs-minnesota-timberwolves-nov-27-2026-game-boxscore-106807?tab=playbyplay",
+   "Quarter scores, play of the game (6:34, 96–87 to 99–87), go-ahead steal and layup"
+  ],
+  [
+   "AP via FOX Sports: Grizzlies top Timberwolves 114-109 to win NBA Cup West Group B",
+   "https://www.foxsports.com/articles/nba/grizzlies-top-timberwolves-114109-to-win-nba-cup-west-group-b",
+   "Story, third-quarter run, Small's season high, 8 of 9, next games"
+  ],
+  [
+   "WJOX: Grizzlies edge Timberwolves to advance to NBA Cup knockout round",
+   "https://www.joxfm.com/2026/11/27/grizzlies-edge-timberwolves-to-advance-to-nba-cup-knockout-round/",
+   "Halftime, 17–6 run, late free throws"
+  ],
+  [
+   "Ball Exclusives via Yardbarker: Grizzlies Beat Timberwolves 114-109 as Coward Scores 22",
+   "https://www.yardbarker.com/nba/articles/grizzlies_beat_timberwolves_114_109_as_coward_scores_22/s1_17668_44629259",
+   "Records, streaks"
+  ],
+  [
+   "Basketball-Reference: Cedric Coward",
+   "https://basketball-reference.com/players/c/cowarce01.html",
+   "Height, weight for the figure"
+  ],
+  [
+   "Wikipedia: Cedric Coward",
+   "https://en.wikipedia.org/wiki/Cedric_Coward",
+   "Number for the figure"
+  ],
+  [
+   "SI: Potential Duke Basketball Prize Posts Absurd Draft Measurement",
+   "https://www.si.com/college/duke/basketball/potential-duke-basketball-prize-absurd-draft-measurement-5-12-25",
+   "Wingspan for the figure"
+  ]
+ ]
+}

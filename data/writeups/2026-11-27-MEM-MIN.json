@@ -1,0 +1,109 @@
+{
+ "headline": "Coward's 22 wins Memphis its Cup group",
+ "dek": "Cedric Coward scored 22, and Memphis won NBA Cup West Group B.",
+ "three": [
+  [
+   "Cedric Coward: 22 points on 9 of 16",
+   "His steal and layup with 14 seconds left in the third put Memphis ahead for good."
+  ],
+  [
+   "Grizzlies up 11 at the half, lost the lead in the third, then won the fourth 32–28",
+   "Coward and Small combined for 41 of 114."
+  ],
+  [
+   "Won it off the bench and on second chances",
+   "Bench points 53–23; second-chance points 25–11. Memphis had 12 steals to Minnesota’s 8."
+  ]
+ ],
+ "battle": [
+  [
+   "Bench points",
+   53,
+   23
+  ],
+  [
+   "Second-chance points",
+   25,
+   11
+  ],
+  [
+   "Points off turnovers",
+   27,
+   19
+  ],
+  [
+   "Steals",
+   12,
+   8
+  ]
+ ],
+ "battle_labels": [
+  "MEM",
+  "MIN"
+ ],
+ "top": [
+  [
+   "Cedric Coward",
+   "MEM",
+   "9 of 16, 2 steals, 2 blocks",
+   22
+  ],
+  [
+   "Javon Small",
+   "MEM",
+   "off the bench, 7 of 10, ties season high",
+   19
+  ],
+  [
+   "Ty Jerome",
+   "MEM",
+   "7 of 18, 2 of 2 FT late",
+   18
+  ],
+  [
+   "Cam Spencer",
+   "MEM",
+   "off the bench, 6 rebounds, 3 steals",
+   16
+  ]
+ ],
+ "linescore": {
+  "away": [
+   32,
+   29,
+   21,
+   32
+  ],
+  "home": [
+   25,
+   25,
+   31,
+   28
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-27-MEM-at-MIN.json",
+ "loser": {
+  "top": [
+   [
+    "Ayo Dosunmu",
+    "MIN",
+    "10 of 17 · 8 assists · 3 steals",
+    27
+   ],
+   [
+    "Jonathan Kuminga",
+    "MIN",
+    "8 of 14 · 6 rebounds",
+    19
+   ],
+   [
+    "Bones Hyland",
+    "MIN",
+    "off the bench · 4 of 7 from three",
+    16
+   ]
+  ],
+  "source": "box score"
+ }
+}

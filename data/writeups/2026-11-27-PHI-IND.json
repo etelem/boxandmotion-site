@@ -1,0 +1,109 @@
+{
+ "headline": "LeBron and the 76ers reach the Cup knockouts",
+ "dek": "LeBron James scored 21, and the 76ers reached the NBA Cup knockout round for the first time.",
+ "three": [
+  [
+   "LeBron James: 21 points, 7 rebounds, 6 assists",
+   "Three threes in the first four minutes, and 8 of 13 from the floor in 27 minutes."
+  ],
+  [
+   "76ers up 11 at the half, then won the third quarter 30–14",
+   "LeBron and Simons combined for 40 of 111."
+  ],
+  [
+   "Won it from three and with 30 assists",
+   "Threes made 15–5; assists 30–19. Indiana made 5 of 37 threes, its fewest this season."
+  ]
+ ],
+ "battle": [
+  [
+   "Threes made",
+   15,
+   5
+  ],
+  [
+   "Assists",
+   30,
+   19
+  ],
+  [
+   "Points off turnovers",
+   17,
+   14
+  ],
+  [
+   "Blocks",
+   5,
+   1
+  ]
+ ],
+ "battle_labels": [
+  "PHI",
+  "IND"
+ ],
+ "top": [
+  [
+   "LeBron James",
+   "PHI",
+   "8 of 13, 7 rebounds, 6 assists",
+   21
+  ],
+  [
+   "Anfernee Simons",
+   "PHI",
+   "off the bench, 5 of 12 from three",
+   19
+  ],
+  [
+   "Joel Embiid",
+   "PHI",
+   "11 rebounds, 3 steals",
+   14
+  ],
+  [
+   "Tyrese Maxey",
+   "PHI",
+   "6 assists, 8 of 8 FT",
+   14
+  ]
+ ],
+ "linescore": {
+  "away": [
+   30,
+   25,
+   30,
+   26
+  ],
+  "home": [
+   22,
+   22,
+   14,
+   29
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-27-PHI-at-IND.json",
+ "loser": {
+  "top": [
+   [
+    "Jay Huff",
+    "IND",
+    "off the bench · 8 of 12",
+    18
+   ],
+   [
+    "Andrew Nembhard",
+    "IND",
+    "5 of 10 · 3 assists",
+    14
+   ],
+   [
+    "Pascal Siakam",
+    "IND",
+    "3 of 14 · 5 of 6 FT",
+    11
+   ]
+  ],
+  "source": "box score"
+ }
+}

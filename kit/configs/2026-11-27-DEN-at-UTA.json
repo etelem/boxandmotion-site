@@ -1,0 +1,232 @@
+{
+ "team": "DEN",
+ "D": "  const D = {\n    date: 'Fri, Nov 27, 2026',\n    us: 120, them: 107, record: '11–6', usName: 'Nuggets', themName: 'Jazz',\n    quarters: [[27, 22], [25, 31], [33, 32], [35, 22]],\n    leadUs: 14, leadThem: 6,\n    star: {name: 'Jamal Murray', stats: [['Points', 36, 40], ['Rebounds', 5, 10], ['Assists', 1, 5]]},\n    scorers: [\n      {name: 'Jamal Murray', pts: 36, note: '12 of 20 · 9 of 10 FT'},\n      {name: 'Christian Braun', pts: 20, note: '8 of 13 · 8 rebounds'},\n      {name: 'Nikola Jokić', pts: 17, note: '15 assists · 9 rebounds'},\n      {name: 'Cameron Johnson', pts: 14, note: '6 of 12'},\n      {name: 'DeMar DeRozan', pts: 10, note: 'off the bench · 6 of 6 FT'},\n    ],\n    edges: [\n      {label: 'Points off turnovers', us: 29, them: 10},\n      {label: 'Free throws made', us: 24, them: 13},\n      {label: 'Points in the paint', us: 58, them: 48},\n      {label: 'Assists', us: 32, them: 29},\n    ],\n    gaps: [\n      {label: 'Threes made', us: 10, them: 14},\n      {label: 'Bench points', us: 25, them: 49},\n    ],\n    next: {opp: 'at Raptors', when: 'Sun, Nov 29', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Jamal Murray's 25-foot step-back 3-pointer from Nikola Jokić with 3:25 left that made it 108–104. An original illustration from the play-by-play and written accounts; not traced from footage, not to scale.\n",
+  "head": "Murray’s step-back three",
+  "subP": "Murray steps back, 3:25 left",
+  "subL": "Jamal Murray steps back, 3:25 left, up 105–104",
+  "m0": "Nuggets +1",
+  "m1": "Nuggets +4",
+  "num": "27",
+  "cap1": "Murray’s step-back. Nuggets by 4.",
+  "cap2": "108–104. After Utah’s answer, Denver closed 12–0.",
+  "clock": [
+   208,
+   205
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Nuggets at Jazz Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Nuggets 120, Jazz 107 · Nov 27, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Nuggets at', 'Jazz'] : ['Nuggets at Jazz']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Murray scored 36, 12 in', 'the last six minutes.'] : ['Jamal Murray scored 36, 12 of them in the last six minutes, and Nikola Jokić had 15 assists.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Nuggets improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Closed on a 23–5 run'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Nuggets tied after three,', 'won the fourth 35–22'] : ['Nuggets down 1 at the half, tied 85–85 after three, then won the fourth 35–22']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Nuggets ${D.leadUs}, Jazz ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Nuggets’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Murray: 36 points', 'on 12 of 20'] : ['Jamal Murray: 36 points on 12 of 20']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['12 in the last six minutes,', '9 of 10 at the line.'] : ['12 in the last six minutes, and 9 of 10 at the line.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Murray and Braun:', '56 of the 120'] : ['Jamal Murray and Christian Braun combined for 56 of 120']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 40;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it on turnovers', 'and at the line'] : ['Won it on turnovers and at the line']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Nuggets in gold, Jazz in gray.', '29 points off turnovers to 10.'] : ['Nuggets in gold, Jazz in gray. Denver scored 29 points off turnovers to Utah’s 10.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'7th in the West'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Raptors’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '7–11';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['3–1 in NBA Cup group play;', 'Dallas won the group.'] : ['Denver finished 3–1 in NBA Cup group play, but Dallas won West Group A.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Nuggets 120 · Jazz 107 · Nov 27'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Murray’s step-back three'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Murray'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 70;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - 360 * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+3', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 178, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 210, ly, D.themName"
+  ]
+ ],
+ "aria": "Animated recap of the Nuggets' 120 to 107 win at Utah: Jamal Murray's step-back 3-pointer with 3:25 left that made it 108 to 104, quarter-by-quarter scoring, Murray's 36 points, the top scorers, how the Nuggets won, and the next game.",
+ "figure": {
+  "player": "Jamal Murray",
+  "home": false,
+  "label": "Jamal Murray, listed 6-4, 215 lb (Basketball-Reference; RealGM); no wingspan on those pages",
+  "tall": 0.9744,
+  "ape": 1.0,
+  "mass": 1.0131
+ },
+ "loser_top": [
+  [
+   "Keyonte George",
+   25,
+   "5 of 9 from three"
+  ],
+  [
+   "Darryn Peterson",
+   20,
+   "7 of 15"
+  ],
+  [
+   "Svi Mykhailiuk",
+   18,
+   "off the bench · 4 threes"
+  ]
+ ],
+ "notes": [
+  "Box score from Hoops Nightly's game page for the Nuggets' 120–107 win at Utah on Nov 27, 2026, the last NBA Cup group game for both teams; Digest Sports matches the key lines. All 120 Denver points and all 107 Utah points add up from the player lines, as do the shooting totals (43 of 91, 10 of 24 from three, 24 of 26 FT for Denver; 40 of 83, 14 of 44, 13 of 17 for Utah) and assists (32–29). The quarter scores (27–25–33–35 to 22–31–32–22) are on Hoops Nightly, Digest Sports and FOX Sports; Utah led 53–52 at the half, and it was tied 85–85 after three (Fastbreak Journal; the line score). Points off turnovers (29–10) and points in the paint (58–48) are from Hoops Nightly only; bench points (25–49) add up from the box. The biggest leads (Denver 14, Utah 6) are on Hoops Nightly; Field Level Media has Denver's 14 at 24–10 and a 6-point Utah lead in the third. Utah's turnover total differs between sources (18 or 19), so it isn't used. Records and ranks are from the site's standings after Friday's games.",
+  "Jamal Murray scored 36, 12 of them in the last six minutes (Field Level Media), and Nikola Jokić had 17 points, 9 rebounds and 15 assists. Denver trailed 102–97 with 5:53 left and closed on a 23–5 run (FOX Sports; the play-by-play). Denver finished NBA Cup group play 3–1 but missed the knockout round behind group winner Dallas; Utah finished 0–4 (Field Level Media). Jusuf Nurkić made his season debut for Utah with 11 assists (Field Level Media; KTVX). Next: Denver visits Toronto and Utah hosts Phoenix, both on Sunday (Fastbreak Journal; Hoops Nightly).",
+  "The play of the game is an original illustration of Jamal Murray's step-back 3-pointer with 3:25 left that made it 108–104: Hoops Nightly's and Digest Sports' play-by-play both have a 25-foot step-back three from Nikola Jokić at 3:25, after Aaron Gordon's layup made it 105–104; KTVX says Denver went up 108–104 \"with 3:25 left, on a step-back 3-pointer by Jamal Murray.\" So the board's Nuggets +1 to +4 is 105–104 to 108–104. Svi Mykhailiuk's three made it 108–107, and Denver scored the last 12 points. The defender isn't described, so the step-back is drawn with the template's plain pull-up from about 25 feet. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Denver Nuggets or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The shooter in the play of the game is drawn to Murray's listed 6-foot-4 and 215 pounds with No. 27 (Basketball-Reference; RealGM), in Denver's road kit. Neither page lists a wingspan, so his arms are at the default length. He has no approved look on file yet, so he is drawn in the kit with the default skin tone. It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "Hoops Nightly: Nuggets at Jazz (Nov 27, 2026)",
+   "https://hoopsnightly.com/games/2026-11-27-den-at-uta",
+   "Player box, team stats, biggest leads, play-by-play (3:25, 105–104 to 108–104), next games"
+  ],
+  [
+   "Digest Sports: Nuggets vs Jazz NBA Box Score, Nov 27, 2026",
+   "https://digestsports.com/nba/games/nuggets-vs-jazz-2026-11-27/",
+   "Second box, fourth-quarter play-by-play"
+  ],
+  [
+   "FOX Sports: Nuggets vs. Jazz box score (Nov 27, 2026)",
+   "https://www.foxsports.com/nba/in-season-tournament-western-conference-group-play-denver-nuggets-vs-utah-jazz-nov-27-2026-game-boxscore-106809",
+   "Quarter scores, 23–5 closing run"
+  ],
+  [
+   "Field Level Media via Yardbarker: Jamal Murray heats up in fourth quarter as Nuggets pull away from Jazz",
+   "https://www.yardbarker.com/nba/articles/jamal_murray_heats_up_in_fourth_quarter_as_nuggets_pull_away_from_jazz/s1_17045_44629440",
+   "Murray's last six minutes, biggest leads, NBA Cup, Nurkić"
+  ],
+  [
+   "KTVX via Yahoo Sports: Nurkic returns, but Jazz lose to Denver, 120-107",
+   "https://sports.yahoo.com/nba/articles/nurkic-returns-jazz-lose-denver-055127039.html",
+   "The step-back three at 3:25, Nurkić"
+  ],
+  [
+   "Fastbreak Journal via Yardbarker: Nuggets Beat Jazz As Murray Scores 36 And Denver Closes 12-0",
+   "https://www.yardbarker.com/nba/articles/nuggets_beat_jazz_as_murray_scores_36_and_denver_closes_12_0/s1_17908_44630216",
+   "Halftime, after three, next games"
+  ],
+  [
+   "Basketball-Reference: Jamal Murray",
+   "https://www.basketball-reference.com/players/m/murraja01.html",
+   "Height, weight, number for the figure"
+  ],
+  [
+   "RealGM: Jamal Murray",
+   "https://basketball.realgm.com/player/Jamal-Murray/Bio/49976",
+   "Height, weight, number for the figure"
+  ]
+ ]
+}
