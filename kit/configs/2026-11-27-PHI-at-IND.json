@@ -1,0 +1,247 @@
+{
+ "team": "PHI",
+ "D": "  const D = {\n    date: 'Fri, Nov 27, 2026',\n    us: 111, them: 87, record: '16–4', usName: '76ers', themName: 'Pacers',\n    quarters: [[30, 22], [25, 22], [30, 14], [26, 29]],\n    leadUs: 32, leadThem: 0,\n    star: {name: 'LeBron James', stats: [['Points', 21, 25], ['Rebounds', 7, 10], ['Assists', 6, 10]]},\n    scorers: [\n      {name: 'LeBron James', pts: 21, note: '8 of 13 · 7 rebounds · 6 assists'},\n      {name: 'Anfernee Simons', pts: 19, note: 'off the bench · 5 of 12 from three'},\n      {name: 'Joel Embiid', pts: 14, note: '11 rebounds · 3 steals'},\n      {name: 'Tyrese Maxey', pts: 14, note: '6 assists · 8 of 8 FT'},\n      {name: 'Dominick Barlow', pts: 12, note: '6 of 7 · first start of the season'},\n    ],\n    edges: [\n      {label: 'Threes made', us: 15, them: 5},\n      {label: 'Assists', us: 30, them: 19},\n      {label: 'Points off turnovers', us: 17, them: 14},\n      {label: 'Blocks', us: 5, them: 1},\n    ],\n    gaps: [\n      {label: 'Rebounds', us: 43, them: 51},\n      {label: 'Points in the paint', us: 44, them: 48},\n    ],\n    next: {opp: 'at Rockets', when: 'Sat, Nov 28', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "LeBron James's third three of the opening minutes, off VJ Edgecombe's pass with 8:54 left in the first quarter, that made it 15–5. An original illustration from the play-by-play and written accounts; not traced from footage, not to scale.\n",
+  "head": "LeBron’s third three",
+  "subP": "LeBron from three, 8:54 in the 1st",
+  "subL": "LeBron James from three, 8:54 left in the first, up 12–5",
+  "m0": "76ers +7",
+  "m1": "76ers +10",
+  "num": "23",
+  "cap1": "LeBron’s third three. 76ers by 10.",
+  "cap2": "15–5, off VJ Edgecombe’s pass.",
+  "clock": [
+   541,
+   534
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>76ers at Pacers Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">76ers 111, Pacers 87 · Nov 27, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['76ers at', 'Pacers'] : ['76ers at Pacers']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['LeBron 21, Simons 19.', 'On to the Cup knockouts.'] : ['LeBron James scored 21, and the 76ers reached the NBA Cup knockout round for the first time.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`76ers improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Won 7 of their last 8'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['76ers up 11 at the half,', 'won the third 30–14'] : ['76ers up 11 at the half, then won the third quarter 30–14']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "76ers ${D.leadUs}, Pacers ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "76ers’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['LeBron: 21 points,', '7 rebounds, 6 assists'] : ['LeBron James: 21 points, 7 rebounds, 6 assists']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['Three threes in the first', 'four minutes. 8 of 13.'] : ['Three threes in the first four minutes, and 8 of 13 from the floor in 27 minutes.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['LeBron and Simons:', '40 of the 111'] : ['LeBron and Simons combined for 40 of 111']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 30;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it from three', 'and by sharing it'] : ['Won it from three and with 30 assists']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['76ers in blue, Pacers in gray.', 'Indiana made 5 of 37 threes.'] : ['76ers in blue, Pacers in gray. Indiana made 5 of 37 threes, its fewest this season.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'1st in the East'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Rockets’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '14–5';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['East Group B winners at 3–1:', 'their first Cup knockout trip.'] : ['The 76ers won NBA Cup East Group B at 3–1, their first trip to the knockout round.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'76ers 111 · Pacers 87 · Nov 27'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'LeBron’s third three'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'LeBron'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 60;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - 375 * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+3', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q1', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 160, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 192, ly, D.themName"
+  ]
+ ],
+ "aria": "Animated recap of the 76ers' 111 to 87 win at Indiana: LeBron James's third three of the opening minutes with 8:54 left in the first that made it 15 to 5, quarter-by-quarter scoring, LeBron's 21 points, the top scorers, how the 76ers won, and the next game.",
+ "figure": {
+  "player": "LeBron James",
+  "home": false,
+  "tall": 1.0385,
+  "ape": 1.0,
+  "mass": 1.0582,
+  "label": "LeBron James, listed 6-9, 250 lb (Basketball-Reference, Wikipedia); no sourced wingspan"
+ },
+ "loser_top": [
+  [
+   "Jay Huff",
+   18,
+   "off the bench · 8 of 12"
+  ],
+  [
+   "Andrew Nembhard",
+   14,
+   "5 of 10 · 3 assists"
+  ],
+  [
+   "Pascal Siakam",
+   11,
+   "3 of 14 · 5 of 6 FT"
+  ]
+ ],
+ "notes": [
+  "Box score from Digest Sports' page for the 76ers' 111–87 win at Indiana on Nov 27, 2026: all 111 Philadelphia points and all 87 Indiana points add up from the player lines, as do the shooting totals (41 of 83, 15 of 37 from three, 14 of 17 FT for Philadelphia; 30 of 86, 5 of 37, 22 of 32 for Indiana). The final and the quarter scores (30–25–30–26 to 22–22–14–29) match the FOX Sports play-by-play's end-of-quarter scores; 55–44 at the half is also in the Philadelphia Inquirer and Field Level Media, and 85–58 after three in Bleacher Report. Rebounds (43–51), turnovers, points in the paint (44–48), fast-break points and points off turnovers (17–14) are from FOX Sports; assists (30–19) and blocks (5–1) from the Digest Sports box. Bleacher Report matches the LeBron, Embiid, Maxey, Simons, Barlow and Edgecombe lines. Philadelphia's biggest lead, 32 (104–72 with 6:57 left), is in Field Level Media and the FOX play-by-play; Indiana never led (AP, FOX). Records are from the AP and the site's standings after Friday's games.",
+  "LeBron James made three 3-pointers in the opening four minutes (AP) and had 11 points in the first quarter (AP) and 15 at the half (Inquirer). Indiana cut it to 39–38 in the second quarter before the 76ers closed the half on a 16–6 run (Metro Philadelphia; FOX play-by-play). Anfernee Simons made four threes in the last 3:06 of the third quarter for 12 straight Philadelphia points (Field Level Media; FOX play-by-play). Indiana's 5 of 37 from three was its fewest made threes this season (AP). Philadelphia won NBA Cup East Group B at 3–1 and reached the knockout round for the first time (Inquirer; NBC Sports Philadelphia; AP), and has won 7 of its last 8 (AP; Field Level Media). Joel Embiid returned after missing two games with an illness, Dominick Barlow made his first start of the season, and Jaylen Brown (hamstring) did not play (Inquirer; NBC Sports Philadelphia). Indiana was without Tyrese Haliburton (hamstring) for a 15th straight game (AP). The 76ers play at Houston on Saturday (AP).",
+  "The play of the game is an original illustration of LeBron James's three with 8:54 left in the first quarter, assisted by VJ Edgecombe, that made it 15–5: the FOX Sports and SI play-by-plays both have it at 8:54 for 12–5 to 15–5, after his threes at 11:11 and 10:41. So the board's 76ers +7 to +10 is 12–5 to 15–5. The shot's distance and the defender aren't recorded, so it is drawn as the template's plain pull-up from the three-point line. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Philadelphia 76ers or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The player in the play of the game is drawn to LeBron James's listed 6-foot-9 and 250 pounds (Basketball-Reference, Wikipedia), with arms at the default length because no wingspan from an allowed source was found, in the 76ers' road kit with No. 23 (Wikipedia), with his proposed look from the site's look sheet. It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "Digest Sports: 76ers vs Pacers NBA Box Score, Nov 27, 2026",
+   "https://digestsports.com/nba/games/76ers-vs-pacers-2026-11-27/",
+   "Player box, team totals, line score"
+  ],
+  [
+   "FOX Sports: 76ers vs. Pacers box score and play-by-play (Nov 27, 2026)",
+   "https://www.foxsports.com/nba/in-season-tournament-eastern-conference-group-play-philadelphia-76ers-vs-indiana-pacers-nov-27-2026-game-boxscore-106805?tab=playbyplay",
+   "Quarter scores, team stats, play of the game (8:54, 12–5 to 15–5), biggest lead"
+  ],
+  [
+   "SI: Philadelphia 76ers vs Indiana Pacers Live Score & Box Score, November 27, 2026",
+   "https://www.si.com/nba/scoreboard/76ers-vs-pacers-11-27-2026-1763",
+   "Play-by-play check of the play of the game"
+  ],
+  [
+   "AP via ABC News: LeBron James and 76ers breeze past Pacers 111-87, advance to NBA Cup knockout round",
+   "https://abcnews.com/Sports/wireStory/lebron-james-76ers-breeze-past-pacers-111-87-138491879",
+   "Story, early threes, Pacers' fewest threes, Haliburton, next games"
+  ],
+  [
+   "Field Level Media: LeBron James, 76ers handle Pacers to clinch NBA Cup East Group B",
+   "https://fieldlevelmedia.com/nba/lebron-james-76ers-handle-pacers-to-clinch-nba-cup-east-group-b/",
+   "Runs, biggest lead, 7 of 8"
+  ],
+  [
+   "Philadelphia Inquirer: Sixers advance to knockout round of NBA Cup for the first time with win over Indiana Pacers",
+   "https://www.inquirer.com/sixers/sixers-pacers-nba-cup-pacers-hinkle-fieldhouse-20261127.html",
+   "First knockout trip, halftime, injuries"
+  ],
+  [
+   "NBC Sports Philadelphia via Yahoo: Observations after Sixers smoke Pacers, advance to NBA Cup quarterfinals",
+   "https://sports.yahoo.com/nba/articles/observations-sixers-smoke-pacers-advance-180731481.html",
+   "Barlow's first start, injuries"
+  ],
+  [
+   "Metro Philadelphia: LeBron, Sixers advance to NBA Cup knockout round with win over Pacers",
+   "https://metrophiladelphia.com/stories/sixers-lebron-pacers-nba-cup-knockout-round,164402",
+   "16–6 run to the half"
+  ],
+  [
+   "Bleacher Report: LeBron, 76ers Rout Pacers in NBA Cup With Hali Out",
+   "https://bleacherreport.com/articles/25538313-lebron-76ers-rout-pacers-nba-cup-hali-out-box-score-stats-highlights-embiid-more",
+   "Box score check, records"
+  ],
+  [
+   "Basketball-Reference: LeBron James",
+   "https://www.basketball-reference.com/players/j/jamesle01.html",
+   "Height, weight for the figure"
+  ],
+  [
+   "Wikipedia: LeBron James",
+   "https://en.wikipedia.org/wiki/LeBron_James",
+   "Number for the figure"
+  ]
+ ]
+}
