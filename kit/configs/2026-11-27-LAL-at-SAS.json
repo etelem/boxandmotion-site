@@ -1,0 +1,227 @@
+{
+ "team": "SAS",
+ "D": "  const D = {\n    date: 'Fri, Nov 27, 2026',\n    us: 99, them: 96, record: '16–4', usName: 'Spurs', themName: 'Lakers',\n    quarters: [[14, 27], [24, 27], [30, 14], [31, 28]],\n    leadUs: 8, leadThem: 20,\n    star: {name: 'Stephon Castle', stats: [['Points', 26, 30], ['Rebounds', 4, 5], ['Assists', 9, 10]]},\n    scorers: [\n      {name: 'Stephon Castle', pts: 26, note: '10 of 15 · 9 assists'},\n      {name: 'Victor Wembanyama', pts: 25, note: '16 rebounds · 4 steals'},\n      {name: 'Dylan Harper', pts: 14, note: 'off the bench · 6 of 11'},\n      {name: 'De\\'Aaron Fox', pts: 12, note: '5 of 10 · 5 rebounds'},\n      {name: 'Julian Champagnie', pts: 7, note: '3 of 4 · 2 steals'},\n    ],\n    edges: [\n      {label: 'Rebounds', us: 56, them: 52},\n      {label: 'Assists', us: 23, them: 19},\n      {label: 'Offensive rebounds', us: 13, them: 11},\n      {label: 'Steals', us: 11, them: 10},\n    ],\n    gaps: [\n      {label: 'Threes made', us: 10, them: 12},\n      {label: 'Free throws made', us: 9, them: 10},\n    ],\n    next: {opp: 'vs Celtics', when: 'Sun, Nov 29', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Stephon Castle's step-back three with 43 seconds left that made it 96–90, after De'Aaron Fox rebounded a missed Wembanyama free throw. An original illustration from the play-by-play and written accounts; not traced from footage, not to scale.\n",
+  "head": "Castle’s step-back three",
+  "subP": "Castle steps back, 43 seconds left",
+  "subL": "Stephon Castle steps back, 43 seconds left, up 93–90",
+  "m0": "Spurs +3",
+  "m1": "Spurs +6",
+  "num": "5",
+  "cap1": "Castle’s step-back. Spurs by 6.",
+  "cap2": "96–90 with 43 seconds left, after trailing by 20.",
+  "clock": [
+   48,
+   43
+  ]
+ },
+ "aria": "Animated recap of the Spurs' 99 to 96 home win over the Lakers: Stephon Castle's step-back 3-pointer with 43 seconds left that made it 96 to 90, quarter-by-quarter scoring, Castle's 26 points and 9 assists, the top scorers, how the Spurs won, and the next game.",
+ "figure": {
+  "player": "Stephon Castle",
+  "home": true,
+  "tall": 1.0,
+  "ape": 1.0,
+  "mass": 1.0,
+  "label": "Stephon Castle, listed 6-6, 215 lb, No. 5 (RealGM); no sourced wingspan"
+ },
+ "loser_top": [
+  [
+   "Luka Dončić",
+   31,
+   "8 assists · 1 of 13 from three"
+  ],
+  [
+   "Austin Reaves",
+   21,
+   "5 of 9 from three · 8 rebounds"
+  ]
+ ],
+ "notes": [
+  "Box score from CBS Sports' gametracker for the Spurs' 99–96 home win over the Lakers on Nov 27, 2026, the last NBA Cup group game for both teams: all 99 San Antonio points and all 96 Los Angeles points add up from the player lines, as do the shooting totals (40 of 86, 10 of 29 from three, 9 of 16 FT for San Antonio; 37 of 86, 12 of 42, 10 of 14 for Los Angeles). Rebounds (56–52, with team rebounds), offensive rebounds (13–11), assists (23–19) and steals (11–10) are CBS Sports' team totals; Bleacher Report's player lines match CBS for every player it lists. The quarter scores (14–24–30–31 to 27–27–14–28) are on CBS Sports; 54–38 Lakers at the half is also in the AP, Bleacher Report and the NY Post. The Lakers' biggest lead, 20 at 45–25 with 4:43 left in the second quarter, is on CBS Sports' play-by-play and in Bleacher Report, the NY Post and the Express-News; the Spurs' 8 (81–73 and 86–78) is on CBS Sports' play-by-play and in the NY Post. Points in the paint and fast-break points are not shown: no page read had them. Records and ranks are from the site's standings after Friday's games.",
+  "Stephon Castle had 26 points on 10 of 15 shooting and 9 assists; Victor Wembanyama had 25 points, 16 rebounds and 4 steals (CBS Sports; Bleacher Report). The Spurs' 14-point first quarter and 38-point first half were their lowest of the season (Express-News); they won the third quarter 30–14 and it was 68–68 after three (CBS Sports; AP). Dylan Harper (hip) and De'Aaron Fox (shin) returned (Express-News). Luka Dončić scored 31 but made 1 of 13 threes (CBS Sports; NY Post). The win sends San Antonio to the NBA Cup knockout round as a wild card and eliminates the Lakers (AP; Yahoo Sports), and it was the Spurs' first win over the Lakers this season (Express-News). Wembanyama: \"It just showed character\" (Express-News). Next: the Spurs host Boston on Sunday and the Lakers play at Memphis on Sunday (AP; Bleacher Report); the Spurs' Cup quarterfinal is at Dallas on Dec. 4 (Express-News; wire.report).",
+  "The play of the game is an original illustration of Stephon Castle's 3-pointer with 43 seconds left that made it 96–90: CBS Sports' play-by-play has \"Stephon Castle makes three point stepback jump shot\" (no assist) for 93–90 to 96–90, after Wembanyama made one of two free throws at 0:57 and De'Aaron Fox rebounded the miss; the AP has the three at 43.4 seconds after Fox's rebound. The Express-News calls it a corner three, so the spot on the floor is not settled and the step-back is drawn with the template's plain pull-up from beyond the arc. The board's Spurs +3 to +6 is 93–90 to 96–90. Castle: \"I had the shot, so I took it\" (Express-News). The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the San Antonio Spurs or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The shooter in the play of the game is drawn to Castle's listed 6-foot-6 and 215 pounds (RealGM); no wingspan was found in the sources read, so his arms are drawn at his height. He wears the Spurs' home white with No. 5 (RealGM). He has no look in kit/looks.json yet, so he is drawn with the default skin tone. It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "CBS Sports: Lakers at Spurs gametracker (Nov 27, 2026)",
+   "https://www.cbssports.com/nba/gametracker/live/NBA_20261127_LAL@SA/",
+   "Player box, team totals, line score, play-by-play (0:43 step-back three, 93–90 to 96–90), biggest leads"
+  ],
+  [
+   "AP via KSAT: Spurs ride second-half surge to earn spot in NBA Cup knockout round with 99-96 victory over Lakers",
+   "https://www.ksat.com/sports/2026/11/28/spurs-ride-second-half-surge-to-earn-spot-in-nba-cup-knockout-round-with-99-96-victory-over-lakers/",
+   "Final, the three at 43.4 seconds, the third quarter, Cup, next games"
+  ],
+  [
+   "Bleacher Report: Wemby, Spurs Beat Lakers After 20-Point Rally",
+   "https://bleacherreport.com/articles/25538351-wemby-spurs-beat-lakers-after-20-point-rally-box-score-stats-highlights-luka-reaves-more",
+   "Player lines cross-check, the 20-point lead, next games"
+  ],
+  [
+   "San Antonio Express-News via Yahoo: 3 takeaways as Stephon Castle keys Spurs' NBA Cup comeback",
+   "https://sports.yahoo.com/nba/articles/3-takeaways-stephon-castle-keys-082346604.html",
+   "Season lows, Harper and Fox back, first win over the Lakers, quotes"
+  ],
+  [
+   "NY Post via Yahoo: Lakers blow 20-point lead in NBA Cup loss to Spurs",
+   "https://sports.yahoo.com/nba/articles/lakers-blow-20-point-lead-062242417.html",
+   "Dončić's 1 of 13, the Spurs' 8-point lead"
+  ],
+  [
+   "Yahoo Sports: Spurs erase 20-point deficit to eliminate Lakers in NBA Cup action",
+   "https://sports.yahoo.com/nba/breaking-news/article/spurs-erase-20-point-deficit-to-eliminate-lakers-in-nba-cup-action-advance-to-knockout-round-as-wild-card-051458498.html",
+   "Wild card, Lakers out"
+  ],
+  [
+   "wire.report: Spurs to face Mavericks in NBA Cup quarterfinals on Dec. 4",
+   "https://wire.report/article/spurs-to-face-mavericks-in-nba-cup-quarterfinals-on-dec-4-2026-11-28",
+   "Quarterfinal date"
+  ],
+  [
+   "RealGM: Stephon Castle bio",
+   "https://basketball.realgm.com/player/Stephon-Castle/Bio/163089",
+   "Height, weight, number for the figure"
+  ]
+ ],
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Lakers at Spurs Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Spurs 99, Lakers 96 · Nov 27, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Lakers at', 'Spurs'] : ['Lakers at Spurs']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Down 20, came all the way back.', 'Castle 26, Wemby 25.'] : ['San Antonio came back from 20 down; Stephon Castle scored 26 and Victor Wembanyama 25.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Spurs improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Into the NBA Cup knockouts'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Spurs down 16 at the half,', 'won the 3rd 30–14'] : ['Spurs down 16 at the half, then won the third quarter 30–14']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Spurs ${D.leadUs}, Lakers ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Spurs’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Castle: 26 points,', '9 assists'] : ['Stephon Castle: 26 points and 9 assists']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['10 of 15 from the floor,', '4 of 7 from three.'] : ['He made 10 of 15 shots, 4 of 7 from three.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Castle and Wembanyama:', '51 of the 99'] : ['Stephon Castle and Victor Wembanyama combined for 51 of 99']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 30;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it on the glass', 'and with the passing'] : ['Won it on the glass and with the passing']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Spurs in silver, Lakers in gray.', 'Dončić made 1 of 13 threes.'] : ['Spurs in silver, Lakers in gray. Luka Dončić made 1 of 13 threes.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'1st in the West'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Celtics’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '12–7';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['14 in the 1st quarter, 38 at the half:', 'both season lows. Then 61.'] : ['A 14-point first quarter and a 38-point first half, both season lows, then 61 after halftime.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Spurs 99 · Lakers 96 · Nov 27'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Castle’s step-back three'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Castle'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 70;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - 360 * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+3', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 160, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 192, ly, D.themName"
+  ]
+ ]
+}

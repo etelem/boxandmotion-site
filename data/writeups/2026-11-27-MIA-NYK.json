@@ -1,0 +1,109 @@
+{
+ "headline": "Heat hold off the Knicks at the Garden",
+ "dek": "Giannis Antetokounmpo had 22 points and a career-high 23 rebounds, and Miami held on at the Garden.",
+ "three": [
+  [
+   "Giannis Antetokounmpo: 22 points, 23 rebounds",
+   "A career high on the glass, and he passed 22,000 career points."
+  ],
+  [
+   "Heat up 16 at the half, then held on after the Knicks took a 92–91 lead",
+   "Bam Adebayo and Giannis Antetokounmpo combined for 47 of 108."
+  ],
+  [
+   "Won it in the paint and with 13 steals to 7",
+   "Points in the paint 46–42; points off turnovers 20–13. Miami scored 20 points off 16 New York turnovers."
+  ]
+ ],
+ "battle": [
+  [
+   "Points in the paint",
+   46,
+   42
+  ],
+  [
+   "Points off turnovers",
+   20,
+   13
+  ],
+  [
+   "Steals",
+   13,
+   7
+  ],
+  [
+   "Threes made",
+   11,
+   8
+  ]
+ ],
+ "battle_labels": [
+  "MIA",
+  "NYK"
+ ],
+ "top": [
+  [
+   "Bam Adebayo",
+   "MIA",
+   "10 of 16, 7 rebounds",
+   25
+  ],
+  [
+   "Giannis Antetokounmpo",
+   "MIA",
+   "23 rebounds, a career high",
+   22
+  ],
+  [
+   "Davion Mitchell",
+   "MIA",
+   "9 assists, 2 steals",
+   12
+  ],
+  [
+   "Pelle Larsson",
+   "MIA",
+   "4 of 8, the last basket",
+   11
+  ]
+ ],
+ "linescore": {
+  "away": [
+   31,
+   29,
+   26,
+   22
+  ],
+  "home": [
+   21,
+   23,
+   35,
+   26
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-27-MIA-at-NYK.json",
+ "loser": {
+  "top": [
+   [
+    "Jalen Brunson",
+    "NYK",
+    "9 of 10 FT · 8 assists",
+    27
+   ],
+   [
+    "Karl-Anthony Towns",
+    "NYK",
+    "10 rebounds · 7 of 12",
+    19
+   ],
+   [
+    "Mikal Bridges",
+    "NYK",
+    "7 of 11",
+    16
+   ]
+  ],
+  "source": "box score"
+ }
+}

@@ -1,0 +1,55 @@
+{
+ "out": "short-2026-11-27-DAL-PHX.html",
+ "team": "DAL",
+ "home": false,
+ "number": "32",
+ "player": "Cooper Flagg",
+ "play_type": "jumper",
+ "three": false,
+ "build": {
+  "tall": 1.0385,
+  "ape": 1.0,
+  "mass": 0.9582,
+  "skin": "#f0d2b6"
+ },
+ "build_note": "Listed 6-9, 205 lb, No. 32 (RealGM); no sourced wingspan",
+ "kicker": "MAVERICKS 113 · SUNS 109 · NOV 27",
+ "hook": [
+  "Cooper Flagg's",
+  "turnaround jumper"
+ ],
+ "clock": "Q4 · 0:23",
+ "us": "DAL",
+ "them": "PHX",
+ "score_before": [
+  107,
+  106
+ ],
+ "score_make": [
+  109,
+  106
+ ],
+ "stamp": "TURNAROUND",
+ "beat": [
+  "109–106 with 23 seconds left.",
+  "Phoenix led by 21 in the third."
+ ],
+ "final": {
+  "label": "FINAL",
+  "us": "Mavericks",
+  "them": "Suns",
+  "us_pts": 113,
+  "them_pts": 109
+ },
+ "star": {
+  "name": "Cooper Flagg",
+  "big": 34,
+  "big_label": "points on 13-of-27 shooting",
+  "lines": [
+   "8 assists, 7 rebounds",
+   "5 steals, 4 blocks"
+  ]
+ },
+ "story": "Dallas won the fourth quarter 35–14 for its fifth straight win and finished 4–0 in NBA Cup group play.",
+ "aria": "Animated Short: Cooper Flagg's 14-foot turnaround jumper with 23 seconds left that made it 109 to 106 for the Mavericks at Phoenix, after trailing by 21. Mavericks win 113 to 109. An original illustration, not traced from footage, not to scale."
+}

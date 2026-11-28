@@ -1,0 +1,227 @@
+{
+ "team": "TOR",
+ "D": "  const D = {\n    date: 'Fri, Nov 27, 2026',\n    us: 124, them: 100, record: '7–11', usName: 'Raptors', themName: 'Nets',\n    quarters: [[31, 27], [32, 28], [39, 24], [22, 21]],\n    leadUs: 26, leadThem: 4,\n    star: {name: 'Immanuel Quickley', stats: [['Points', 24, 25], ['Rebounds', 10, 15], ['Assists', 14, 15]]},\n    scorers: [\n      {name: 'Scottie Barnes', pts: 34, note: '11 of 20 · 10 of 10 FT'},\n      {name: 'Immanuel Quickley', pts: 24, note: '14 assists · 10 rebounds'},\n      {name: 'Collin Murray-Boyles', pts: 19, note: 'off the bench · 10 of 11 FT'},\n      {name: 'Jakob Poeltl', pts: 17, note: '7 of 12 · 9 rebounds'},\n      {name: 'Allen Graves', pts: 9, note: '3 of 6 from three · 9 rebounds'},\n    ],\n    edges: [\n      {label: 'Free throws made', us: 30, them: 18},\n      {label: 'Rebounds', us: 44, them: 30},\n      {label: 'Offensive rebounds', us: 19, them: 8},\n      {label: 'Assists', us: 33, them: 23},\n    ],\n    gaps: [\n      {label: 'Threes made', us: 12, them: 12},\n    ],\n    next: {opp: 'vs Nuggets', when: 'Sun, Nov 29', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Immanuel Quickley's 28-foot three with 5:33 left in the third quarter, his third three in 83 seconds, that made it 85–67. An original illustration from the play-by-play and written accounts; not traced from footage, not to scale.\n",
+  "head": "Quickley from 28 feet",
+  "subP": "Quickley from 28 feet, 5:33 left in the third",
+  "subL": "Immanuel Quickley from 28 feet, 5:33 left in the third, up 82–67",
+  "m0": "Raptors +15",
+  "m1": "Raptors +18",
+  "num": "5",
+  "cap1": "Quickley again. Raptors by 18.",
+  "cap2": "85–67: his third three in 83 seconds.",
+  "clock": [
+   338,
+   333
+  ]
+ },
+ "aria": "Animated recap of the Raptors' 124 to 100 home win over the Nets: Immanuel Quickley's 28-foot three with 5:33 left in the third quarter that made it 85 to 67, quarter-by-quarter scoring, Quickley's triple-double of 24 points, 10 rebounds and 14 assists, the top scorers, how the Raptors won, and the next game.",
+ "figure": {
+  "player": "Immanuel Quickley",
+  "home": true,
+  "tall": 0.9615,
+  "ape": 1.0,
+  "mass": 0.9587,
+  "label": "Immanuel Quickley, listed 6-3, 190 lb, No. 5 (Wikipedia); no sourced wingspan"
+ },
+ "loser_top": [
+  [
+   "Julius Randle",
+   21,
+   "8 of 18 · 5 assists"
+  ],
+  [
+   "Mikel Brown Jr.",
+   21,
+   "4 of 6 from three"
+  ],
+  [
+   "Michael Porter Jr.",
+   17,
+   "6 of 10"
+  ]
+ ],
+ "notes": [
+  "Box score from Digest Sports' game page for the Raptors' 124–100 home win over Brooklyn on Nov 27, 2026, the last NBA Cup group game for both teams: all 124 Toronto points and all 100 Brooklyn points add up from the player lines. Team totals (41 of 84, 12 of 34 from three, 30 of 33 FT for Toronto; 35 of 75, 12 of 35, 18 of 24 for Brooklyn), rebounds (44–30), offensive rebounds (19–8) and assists (33–23) are on Digest Sports; the Canadian Press has Toronto's 41 of 84 and 30 of 33 and Brooklyn's 12 of 35, and Fastbreak Journal (Yardbarker) the 44–30 rebounds, 33 assists and 30 of 33. The quarter scores (31–32–39–22 to 27–28–24–21) are on Digest Sports; 63–55 at the half and 102–79 after three are also in Fastbreak Journal and VAVEL. The biggest leads (Toronto 26 at 124–98, Brooklyn 4 at 11–7) are read off Digest Sports' play-by-play. Points in the paint and bench points are not shown: no page read had them. Records and ranks are from the site's standings after Friday's games.",
+  "Immanuel Quickley had 24 points, 10 rebounds and a season-high 14 assists for a triple-double (Canadian Press; theScore), his first in four seasons with Toronto, with one turnover (Field Level Media). Scottie Barnes scored 34, his second straight 30-point game and third in five (Field Level Media). Quickley scored 16 in the third quarter, with three threes in just over a minute (Field Level Media). The win was Toronto's first at home since Oct. 28, ending a seven-game home losing streak (Field Level Media). Toronto finished 3–1 in NBA Cup group play but did not advance (Field Level Media; Canadian Press). Ja'Kobe Walter left in the third quarter with a right quad contusion; RJ Barrett and Kawhi Leonard were out (Canadian Press). Next: Brooklyn plays at Charlotte on Saturday; Toronto hosts Denver on Sunday (theScore; Canadian Press).",
+  "The play of the game is an original illustration of Immanuel Quickley's 28-foot three-pointer with 5:33 left in the third quarter that made it 85–67: Digest Sports' play-by-play has \"Immanuel Quickley makes 28-foot three pointer\" (no assist) at 5:33 for 82–67 to 85–67, after his threes at 6:56 and 5:57; the Canadian Press: the 28-foot three with 5:33 left capped a 13–3 run and gave Toronto an 18-point lead. So the board's Raptors +15 to +18 is 82–67 to 85–67. The defender and the spot on the floor are not described, so it is drawn with the template's plain pull-up from about 28 feet. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Toronto Raptors or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The shooter in the play of the game is drawn to Quickley's listed 6-foot-3 and 190 pounds (Wikipedia); no wingspan was found in the sources read, so his arms are drawn at his height. He wears the Raptors' home white with No. 5 (Wikipedia). He has no look in kit/looks.json yet, so he is drawn with the default skin tone. It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "Digest Sports: Nets vs Raptors box score (Nov 27, 2026)",
+   "https://digestsports.com/nba/games/nets-vs-raptors-2026-11-27/",
+   "Player box, team totals, line score, play-by-play (5:33 three, 82–67 to 85–67), biggest leads"
+  ],
+  [
+   "Canadian Press via TSN: Raptors beat Nets but are eliminated from NBA Cup",
+   "https://www.tsn.ca/nba/article/barnes-leads-raptors-in-push-to-advance-in-nba-cup-with-win-over-nets/",
+   "Final, the 13–3 run and the 28-foot three, shooting, injuries, next games"
+  ],
+  [
+   "theScore: Raptors beat Nets in final NBA Cup group-stage game for both teams",
+   "https://www.thescore.com/nba/news/3668566/raptors-beat-nets-in-final-nba-cup-group-stage-game-for-both-teams",
+   "Final, Quickley's triple-double, next games"
+  ],
+  [
+   "Field Level Media: Immanuel Quickley registers triple-double as Raptors blitz Nets",
+   "https://fieldlevelmedia.com/nba/immanuel-quickley-registers-triple-double-as-raptors-blitz-nets/",
+   "Quickley's 16 in the third, first triple-double with Toronto, Barnes' 30-point games, home streak"
+  ],
+  [
+   "Fastbreak Journal via Yardbarker: Raptors Beat Nets As Barnes Scores 34 And Quickley Adds 24",
+   "https://www.yardbarker.com/nba/articles/raptors_beat_nets_as_barnes_scores_34_and_quickley_adds_24/s1_17908_44630068",
+   "Quarter scores, rebounds, assists, free throws"
+  ],
+  [
+   "VAVEL USA: Nets 100-124 Raptors",
+   "https://www.vavel.com/en-us/nba/2026/11/27/1280927-nets-vs-raptors-live-score-nba-cup.html",
+   "Halftime and after-three scores"
+  ],
+  [
+   "Wikipedia: Immanuel Quickley",
+   "https://en.wikipedia.org/wiki/Immanuel_Quickley",
+   "Height, weight, number for the figure"
+  ]
+ ],
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Nets at Raptors Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Raptors 124, Nets 100 · Nov 27, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Nets at', 'Raptors'] : ['Nets at Raptors']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Quickley’s triple-double.', 'Barnes 34.'] : ['Immanuel Quickley had a triple-double, and Scottie Barnes scored 34.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Raptors improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'First home win since Oct. 28'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Raptors up 8 at the half,', 'won the 3rd 39–24'] : ['Raptors up 8 at the half, then won the third quarter 39–24']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Raptors ${D.leadUs}, Nets ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Raptors’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Quickley: 24 points,', '14 assists, 10 rebounds'] : ['Immanuel Quickley: 24 points, 14 assists, 10 rebounds']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['His first triple-double', 'as a Raptor. 1 turnover.'] : ['His first triple-double in four seasons with Toronto, with one turnover.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Barnes and Quickley:', '58 of the 124'] : ['Scottie Barnes and Immanuel Quickley combined for 58 of 124']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 40;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it at the line', 'and on the glass'] : ['Won it at the line and on the glass']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Raptors in silver, Nets in gray.', 'Toronto made 30 of 33 free throws.'] : ['Raptors in silver, Nets in gray. Toronto made 30 of 33 free throws.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'9th in the East'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Nuggets’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '11–6';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['Ended a 7-game home skid.', 'Barnes: 30+ for a 2nd straight game.'] : ['It ended a seven-game home losing streak, and Barnes scored 30 or more for a second straight game.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Raptors 124 · Nets 100 · Nov 27'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Quickley from 28 feet'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Quickley'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 60;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - 400 * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+3', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q3', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 160, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 192, ly, D.themName"
+  ]
+ ]
+}

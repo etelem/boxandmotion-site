@@ -21,3 +21,4 @@ games_date,check,result,reason
 2026-11-26,06:40,done,no games Thu Nov 26 (Thanksgiving); FOX/CBS/PTS fetch permission not answered so standings and Sat upcoming not refreshed; no data change
 2026-11-27,06:40,failed,no sports feed; WebFetch permission not answered (unattended) for PTS and FOX; 11 scores unconfirmed, nothing saved
 2026-11-27,07:15,failed,no sports feed; WebFetch permission not answered (unattended) for PTS FOX and CBS; search gives no scores; 11 scores unconfirmed, nothing saved
+2026-11-27,recap-run-1,done,FOX standings current 07:49 (Lakers team page); 7 scores Covers+PTS; ATL-BOS MEM-MIN PTS+AP; NOP-LAC CBS+AP; DEN-UTA PTS+Deseret (Covers stale)

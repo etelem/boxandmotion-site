@@ -1,0 +1,233 @@
+{
+ "team": "DAL",
+ "D": "  const D = {\n    date: 'Fri, Nov 27, 2026',\n    us: 113, them: 109, record: '12–7', usName: 'Mavericks', themName: 'Suns',\n    quarters: [[28, 29], [25, 34], [25, 32], [35, 14]],\n    leadUs: 13, leadThem: 21,\n    star: {name: 'Cooper Flagg', stats: [['Points', 34, 35], ['Assists', 8, 10], ['Steals', 5, 10]]},\n    scorers: [\n      {name: 'Cooper Flagg', pts: 34, note: '13 of 27 · 4 blocks'},\n      {name: 'Max Christie', pts: 16, note: 'off the bench · 5 of 7'},\n      {name: 'Naji Marshall', pts: 14, note: 'off the bench · 5 assists'},\n      {name: 'Zaccharie Risacher', pts: 10, note: '6 rebounds · 2 blocks'},\n      {name: 'Walter Clayton Jr.', pts: 9, note: 'off the bench · 2 steals'},\n    ],\n    edges: [\n      {label: 'Steals', us: 12, them: 3},\n      {label: 'Bench points', us: 49, them: 43},\n      {label: 'Assists', us: 31, them: 26},\n      {label: 'Free throws made', us: 16, them: 12},\n    ],\n    gaps: [\n      {label: 'Threes made', us: 9, them: 15},\n      {label: 'Rebounds', us: 42, them: 43},\n    ],\n    next: {opp: 'vs Celtics', when: 'Mon, Nov 30', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Cooper Flagg's 14-foot turnaround jumper with 23 seconds left that made it 109–106, after Dallas trailed by 21. An original illustration from the play-by-play and written accounts; not traced from footage, not to scale.\n",
+  "head": "Flagg’s turnaround",
+  "subP": "Flagg turns, 23 seconds left",
+  "subL": "Cooper Flagg turns into the shot, 23 seconds left, up 107–106",
+  "m0": "Mavericks +1",
+  "m1": "Mavericks +3",
+  "num": "32",
+  "cap1": "Flagg’s turnaround. Mavericks by 3.",
+  "cap2": "109–106, after trailing by 21 in the third.",
+  "clock": [
+   28,
+   23
+  ]
+ },
+ "aria": "Animated recap of the Mavericks' 113 to 109 win at Phoenix: Cooper Flagg's 14-foot turnaround jumper with 23 seconds left that made it 109 to 106, quarter-by-quarter scoring, Flagg's 34 points, 8 assists and 5 steals, the top scorers, how the Mavericks won, and the next game.",
+ "figure": {
+  "player": "Cooper Flagg",
+  "home": false,
+  "tall": 1.0385,
+  "ape": 1.0,
+  "mass": 0.9582,
+  "label": "Cooper Flagg, listed 6-9, 205 lb, No. 32 (RealGM); no sourced wingspan",
+  "skin": "#f0d2b6"
+ },
+ "loser_top": [
+  [
+   "Devin Booker",
+   31,
+   "11 of 21 · 5 of 10 from three"
+  ],
+  [
+   "Collin Gillespie",
+   14,
+   "off the bench · 9 rebounds"
+  ],
+  [
+   "Miles Bridges",
+   13,
+   "5 of 9"
+  ]
+ ],
+ "notes": [
+  "Box score from StatMuse's game page for the Mavericks' 113–109 win at Phoenix on Nov 27, 2026, the last NBA Cup group game for both teams: all 113 Dallas points and all 109 Phoenix points add up from the player lines, as do the shooting totals (44 of 93, 9 of 30 from three, 16 of 18 FT for Dallas; 41 of 86, 15 of 40, 12 of 14 for Phoenix), rebounds (42–43), assists (31–26) and steals (12–3). The quarter scores (28–25–25–35 to 29–34–32–14) are on StatMuse and Fox Sports. The biggest leads (Dallas 13, Phoenix 21) are on StatMuse; Field Level Media has Phoenix up 21 at 92–71 with 1:49 left in the third. Bench points: Dallas' 49 is the sum of its reserves on StatMuse; Phoenix's 43 is in Field Level Media and adds up on StatMuse. Points in the paint are not shown: no page read had them. Records and ranks are from the site's standings after Friday's games.",
+  "Cooper Flagg had 34 points, 7 rebounds, 8 assists, 5 steals and 4 blocks in just under 42 minutes (StatMuse; AP). Dallas won the fourth quarter 35–14 (StatMuse) and has won five straight, finishing 4–0 in NBA Cup group play (AP; Field Level Media) and clinching a home knockout game (Field Level Media). Max Christie scored 14 of his 16 in the fourth and made all four free throws in the last 7 seconds (Field Level Media; StatMuse). Flagg's tip-in with 56 seconds left gave Dallas its first lead since early in the second quarter, 107–106 (StatMuse; Roundtable Sports). Kyrie Irving sat out (left knee injury management) and Caleb Martin left with a left ankle sprain (Field Level Media; Roundtable Sports). Devin Booker: \"Just a meltdown\" (Arizona Sports). Next: Dallas hosts Boston on Monday; Phoenix plays at Utah on Sunday (AP).",
+  "The play of the game is an original illustration of Cooper Flagg's 14-foot turnaround jumper with 23 seconds left that made it 109–106: StatMuse's play-by-play has \"C. Flagg makes 14' turnaround jump shot\" (no assist) at 0:23 for 107–106 to 109–106; AP: \"Flagg made a turnaround jumper for a 109-106 lead\" (it gives 22.6 seconds; Field Level Media 23.9), after Booker missed a 16-footer. So the board's Mavericks +1 to +3 is 107–106 to 109–106. The defender and the spot on the floor are not described, so it is drawn with the template's plain pull-up from about 14 feet. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Dallas Mavericks or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The shooter in the play of the game is drawn to Flagg's listed 6-foot-9 and 205 pounds (RealGM); no wingspan was found in the sources read, so his arms are drawn at his height. He wears the Mavericks' road blue with No. 32 (RealGM) and his proposed look from kit/looks.json. It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "StatMuse: Mavericks 113-109 Suns (Nov 27, 2026), box score and play-by-play",
+   "https://www.statmuse.com/nba/game/11-27-2026-dal-at-phx-78632",
+   "Player box, team totals, line score, biggest leads, play of the game (0:23, 107–106 to 109–106)"
+  ],
+  [
+   "Fox Sports: Mavericks vs Suns box score (Nov 27, 2026)",
+   "https://www.foxsports.com/nba/in-season-tournament-western-conference-group-play-dallas-mavericks-vs-phoenix-suns-nov-27-2026-game-boxscore-106808",
+   "Final and line score"
+  ],
+  [
+   "AP via News4JAX: Cooper Flagg leads Mavericks' rally to beat Suns, finish 4-0 in NBA Cup group play",
+   "https://www.news4jax.com/news/2026/11/28/cooper-flagg-leads-mavericks-rally-to-beat-suns-finish-4-0-in-nba-cup-group-play/",
+   "The turnaround jumper, Flagg's line, Cup, next games"
+  ],
+  [
+   "Field Level Media: Cooper Flagg scores 34 as Mavericks rally past Suns",
+   "https://fieldlevelmedia.com/nba/cooper-flagg-scores-34-as-mavericks-rally-past-suns/",
+   "21-point deficit, Christie's fourth, Phoenix bench points, knockout game, Irving"
+  ],
+  [
+   "Roundtable Sports via Yahoo: Mavs' 21-Point Comeback Stuns Suns",
+   "https://sports.yahoo.com/nba/articles/mavs-21-point-comeback-stuns-044613592.html",
+   "First lead since the second quarter, Martin's ankle"
+  ],
+  [
+   "Arizona Sports: Suns collapse with 21-point lead in 'meltdown' loss",
+   "https://arizonasports.com/nba/phoenix-suns/suns-meltdown-mavericks-loss",
+   "Booker quote"
+  ],
+  [
+   "SB Nation via Yahoo: Mavericks vs Suns recap, 3 things",
+   "https://sports.yahoo.com/nba/articles/mavericks-vs-suns-recap-3-050424680.html",
+   "Cross-check of the late plays"
+  ],
+  [
+   "RealGM: Cooper Flagg bio",
+   "https://basketball.realgm.com/player/Cooper-Flagg/Bio/196882",
+   "Height, weight, number for the figure"
+  ]
+ ],
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Mavericks at Suns Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Mavericks 113, Suns 109 · Nov 27, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Mavericks at', 'Suns'] : ['Mavericks at Suns']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Down 21, won the 4th 35–14.', 'Flagg 34.'] : ['Dallas came back from 21 down, won the fourth quarter 35–14, and Cooper Flagg scored 34.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Mavericks improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Five straight wins'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Mavericks down 10 at the half,', 'won the 4th 35–14'] : ['Mavericks down 10 at the half, then won the fourth quarter 35–14']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Mavericks ${D.leadUs}, Suns ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Mavericks’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Flagg: 34 points,', '8 assists, 5 steals'] : ['Cooper Flagg: 34 points, 8 assists, 5 steals']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['Plus 7 rebounds and', '4 blocks in 42 minutes.'] : ['He added 7 rebounds and 4 blocks in just under 42 minutes.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Flagg and Christie:', '50 of the 113'] : ['Cooper Flagg and Max Christie combined for 50 of 113']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 40;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it with steals', 'and off the bench'] : ['Won it with 12 steals to 3, and off the bench']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Mavericks in silver, Suns in gray.', 'Phoenix turned it over 18 times.'] : ['Mavericks in silver, Suns in gray. Phoenix turned it over 18 times.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'8th in the West'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Celtics’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '12–7';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['4–0 in NBA Cup group play,', 'with a home knockout game next.'] : ['Dallas finished 4–0 in NBA Cup group play and clinched a home knockout game.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Mavericks 113 · Suns 109 · Nov 27'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Flagg’s turnaround'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Flagg'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 60;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - (P ? 200 : 210) * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+2', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 150 * k, shotX + 105 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 215, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 247, ly, D.themName"
+  ]
+ ]
+}
