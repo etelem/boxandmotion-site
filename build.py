@@ -1359,12 +1359,12 @@ for P in PLAYERS:
 <section style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-end"><div class="sec" style="flex:999 1 480px;gap:12px"><p class="k">Scouting report · {E(P['week'])}</p>
 <h1 class="h1">{E(P['name'])}.</h1><p class="lead" style="font-size:20px">{E(P['lede'])}</p><p class="dim" style="margin:0">{E(P['bio'])}</p></div>
 <div style="flex:1 1 280px;display:grid;grid-template-columns:1fr 1fr;gap:12px">{stats}</div></section>
-<section class="movesec rev"><div class="mvtext"><p class="k">Signature move</p><h2 class="h2">{E(P['move']['title'])}.</h2><p class="lead">{E(P['move']['text'])}</p>
+<section class="movesec rev"><div class="mvtext"><p class="k">{E(P['move'].get('kicker', 'Signature move'))}</p><h2 class="h2">{E(P['move']['title'])}.</h2><p class="lead">{E(P['move']['text'])}</p>
 <ol class="beats">{steps}</ol><div class="row">{short_btn(P["move"].get("youtube"))}</div></div>
 <div class="mvanim">{anim_frame(R, P['move']['anim'], P['name'] + ': ' + P['move']['title'], "reels/soundtrack.mp3")}</div></section>
 <section class="sec"><h2 class="h2">His week.</h2>
 <div class="tbox"><div class="scroll"><table class="otable wk"><tr><th>Date</th><th>Game</th><th class="num">Pts</th><th>Result</th><th class="num hide-sm">Reb</th><th class="num hide-sm">Ast</th><th class="num hide-sm">FG</th><th class="num hide-sm">3PT</th></tr>{logrows}</table></div></div></section>
-{sources_toggle(P["sources"])}'''
+{sources_toggle(P["sources"], note=P.get("note"))}'''
     page(f"players/{P['slug']}/index.html", f"{P['name']} scouting report · Box & Motion Hoops", body, active="Learn", desc=P["lede"])
 
 # ---- signature moves ----

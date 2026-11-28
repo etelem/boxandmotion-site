@@ -1,0 +1,18 @@
+{
+  "out": "victor-wembanyama-fade.html",
+  "team": "SAS",
+  "number": "1",
+  "name": "Victor Wembanyama",
+  "title": "The one-legged fade",
+  "sub": "39.7 points a game, Nov 21–27",
+  "kicker": "Scouting report · Victor Wembanyama",
+  "kit": {"jersey": "#F4F4F2", "number": "#111214"},
+  "build": {"tall": 1.1282, "ape": 1.0909, "mass": 0.9843, "skin": "#7a5038", "hairColor": "#16110d", "hair": "tousled"},
+  "build_note": "Listed 7-4, 235 lb, reported 8-0 wingspan (the same build as his approved look and his signature-move page). His look in kit/looks.json is approved.",
+  "steps": [
+    ["1", "The bump", "Back to the rim. Two bumps for space."],
+    ["2", "The pivot", "Turns on his right foot to face up."],
+    ["3", "The fade", "Off the left foot, knee up, falling away."]
+  ],
+  "aria": "Animated illustration of Victor Wembanyama's one-legged fadeaway: back to the basket on the block, he bumps his defender twice, pivots on his right foot to face the rim, then rises off his left foot with his right knee up, falling away from the basket. Dashed lines at the release mark the defender's highest reach and Wembanyama's release point, well above it. An original drawing, not traced from footage, not to scale."
+}
