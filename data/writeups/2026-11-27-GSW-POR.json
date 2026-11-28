@@ -1,0 +1,109 @@
+{
+ "headline": "Blazers bury the Warriors early",
+ "dek": "Portland led 37–11 after one quarter, and Deni Avdija scored 26.",
+ "three": [
+  [
+   "Deni Avdija: 26 points, 7 rebounds, 7 assists",
+   "He made 8 of 9 free throws and finished the 14–0 run with a three-point play."
+  ],
+  [
+   "Blazers up 26 after the first quarter and 23 at the half, then held off the Warriors",
+   "Avdija and Camara combined for 46 of 116."
+  ],
+  [
+   "Won it in the paint, 58–30, and off the bench",
+   "Points in the paint 58–30; bench points 44–28. Portland made 22 of its 23 free throws."
+  ]
+ ],
+ "battle": [
+  [
+   "Points in the paint",
+   58,
+   30
+  ],
+  [
+   "Bench points",
+   44,
+   28
+  ],
+  [
+   "Second-chance points",
+   23,
+   14
+  ],
+  [
+   "Free throws made",
+   22,
+   16
+  ]
+ ],
+ "battle_labels": [
+  "POR",
+  "GSW"
+ ],
+ "top": [
+  [
+   "Deni Avdija",
+   "POR",
+   "7 rebounds, 7 assists, 8 of 9 FT",
+   26
+  ],
+  [
+   "Toumani Camara",
+   "POR",
+   "4 of 8 from three, 8 rebounds",
+   20
+  ],
+  [
+   "Scoot Henderson",
+   "POR",
+   "off the bench, 7 assists",
+   18
+  ],
+  [
+   "Jrue Holiday",
+   "POR",
+   "6 assists",
+   12
+  ]
+ ],
+ "linescore": {
+  "away": [
+   11,
+   33,
+   34,
+   16
+  ],
+  "home": [
+   37,
+   30,
+   24,
+   25
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-27-GSW-at-POR.json",
+ "loser": {
+  "top": [
+   [
+    "Yaxel Lendeborg",
+    "GSW",
+    "7 of 9 FT · 7 rebounds",
+    18
+   ],
+   [
+    "De’Anthony Melton",
+    "GSW",
+    "5 of 10 from three",
+    17
+   ],
+   [
+    "Brandin Podziemski",
+    "GSW",
+    "5 of 11 · 4 assists",
+    16
+   ]
+  ],
+  "source": "box score"
+ }
+}
