@@ -1,0 +1,103 @@
+{
+ "headline": "Zion and Murphy hold off the Clippers",
+ "dek": "Zion Williamson and Trey Murphy III scored 25 each, and New Orleans ended a four-game losing streak.",
+ "three": [
+  [
+   "Zion Williamson: 25 points on 11 of 15",
+   "7 rebounds, 5 assists, and the pass for Trey Murphy III’s floater with 42 seconds left."
+  ],
+  [
+   "Pelicans up 4 at the half and 3 after three, then held on by one",
+   "Zion Williamson and Trey Murphy III combined for 50 of 105."
+  ],
+  [
+   "Won it in the paint and with steals",
+   "Points in the paint 64–34; steals 12–7. New Orleans scored 64 points in the paint to L.A.’s 34."
+  ]
+ ],
+ "battle": [
+  [
+   "Points in the paint",
+   64,
+   34
+  ],
+  [
+   "Steals",
+   12,
+   7
+  ],
+  [
+   "Fast-break points",
+   18,
+   10
+  ],
+  [
+   "Rebounds",
+   53,
+   46
+  ]
+ ],
+ "battle_labels": [
+  "NOP",
+  "LAC"
+ ],
+ "top": [
+  [
+   "Zion Williamson",
+   "NOP",
+   "11 of 15, 7 rebounds",
+   25
+  ],
+  [
+   "Trey Murphy III",
+   "NOP",
+   "6 steals, 4 of 4 FT",
+   25
+  ],
+  [
+   "Jordan Poole",
+   "NOP",
+   "off the bench, 3 of 5 from three",
+   16
+  ],
+  [
+   "Jeremiah Fears",
+   "NOP",
+   "4 assists, 3 steals",
+   11
+  ]
+ ],
+ "linescore": {
+  "away": [
+   29,
+   25,
+   26,
+   25
+  ],
+  "home": [
+   28,
+   22,
+   27,
+   27
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-27-NOP-at-LAC.json",
+ "loser": {
+  "top": [
+   [
+    "Darius Garland",
+    "LAC",
+    "9 assists · 3 threes",
+    19
+   ],
+   [
+    "Brook Lopez",
+    "LAC",
+    "7 of 7 FT · the three at the horn",
+    17
+   ]
+  ],
+  "source": "box score"
+ }
+}

@@ -1,0 +1,109 @@
+{
+ "headline": "Hawks rally from 17 down to win Group C",
+ "dek": "Jalen Johnson had 24 points and 12 rebounds, and Atlanta won NBA Cup East Group C.",
+ "three": [
+  [
+   "Jalen Johnson: 24 points, 12 rebounds",
+   "6 of 6 at the line, and he blocked Jayson Tatum’s floater with 34 seconds left."
+  ],
+  [
+   "Hawks down 12 at the half, then won the third quarter 31–18",
+   "Jalen Johnson and Nickeil Alexander-Walker scored 44 of the 87."
+  ],
+  [
+   "Won it on turnovers and at the line",
+   "Points off turnovers 26–11; assists 21–14. Atlanta scored 26 points off turnovers to Boston’s 11."
+  ]
+ ],
+ "battle": [
+  [
+   "Points off turnovers",
+   26,
+   11
+  ],
+  [
+   "Assists",
+   21,
+   14
+  ],
+  [
+   "Free throws made",
+   16,
+   11
+  ],
+  [
+   "Bench points",
+   32,
+   25
+  ]
+ ],
+ "battle_labels": [
+  "ATL",
+  "BOS"
+ ],
+ "top": [
+  [
+   "Jalen Johnson",
+   "ATL",
+   "12 rebounds, 6 of 6 FT",
+   24
+  ],
+  [
+   "Nickeil Alexander-Walker",
+   "ATL",
+   "6 of 6 FT, the go-ahead layup",
+   20
+  ],
+  [
+   "Luguentz Dort",
+   "ATL",
+   "off the bench",
+   14
+  ],
+  [
+   "Aaron Wiggins",
+   "ATL",
+   "off the bench, 3 threes",
+   11
+  ]
+ ],
+ "linescore": {
+  "away": [
+   14,
+   25,
+   31,
+   17
+  ],
+  "home": [
+   29,
+   22,
+   18,
+   17
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-27-ATL-at-BOS.json",
+ "loser": {
+  "top": [
+   [
+    "Jayson Tatum",
+    "BOS",
+    "9 rebounds · 4 steals",
+    20
+   ],
+   [
+    "Derrick White",
+    "BOS",
+    "the three at the horn",
+    13
+   ],
+   [
+    "Neemias Queta",
+    "BOS",
+    "22 rebounds, a career high",
+    11
+   ]
+  ],
+  "source": "box score"
+ }
+}

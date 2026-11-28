@@ -1,0 +1,251 @@
+{
+ "team": "ATL",
+ "D": "  const D = {\n    date: 'Fri, Nov 27, 2026',\n    us: 87, them: 86, record: '12–6', usName: 'Hawks', themName: 'Celtics',\n    quarters: [[14, 29], [25, 22], [31, 18], [17, 17]],\n    leadUs: 4, leadThem: 17,\n    star: {name: 'Jalen Johnson', stats: [['Points', 24, 25], ['Rebounds', 12, 15], ['Assists', 3, 5]]},\n    scorers: [\n      {name: 'Jalen Johnson', pts: 24, note: '12 rebounds · 6 of 6 FT'},\n      {name: 'Nickeil Alexander-Walker', pts: 20, note: '6 of 6 FT · the go-ahead layup'},\n      {name: 'Luguentz Dort', pts: 14, note: 'off the bench'},\n      {name: 'Aaron Wiggins', pts: 11, note: 'off the bench · 3 threes'},\n      {name: 'Dyson Daniels', pts: 5, note: '4 steals · 5 assists'},\n    ],\n    edges: [\n      {label: 'Points off turnovers', us: 26, them: 11},\n      {label: 'Assists', us: 21, them: 14},\n      {label: 'Free throws made', us: 16, them: 11},\n      {label: 'Bench points', us: 32, them: 25},\n    ],\n    gaps: [\n      {label: 'Rebounds', us: 37, them: 51},\n      {label: 'Second-chance points', us: 6, them: 18},\n    ],\n    next: {opp: 'at Knicks', when: 'Sun, Nov 29', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Nickeil Alexander-Walker's driving layup with 54.3 seconds left that broke an 83–83 tie; Atlanta never trailed again. An original illustration from the play-by-play and written accounts; not traced from footage, not to scale.\n",
+  "head": "Alexander-Walker’s drive",
+  "subP": "Alexander-Walker drives, 54 seconds left",
+  "subL": "Nickeil Alexander-Walker on the drive, 54 seconds left, tied 83–83",
+  "m0": "Tied",
+  "m1": "Hawks +2",
+  "num": "7",
+  "cap1": "Alexander-Walker’s layup. Hawks by 2.",
+  "cap2": "85–83, and Atlanta never trailed again.",
+  "clock": [
+   57.3,
+   54.3
+  ]
+ },
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Hawks at Celtics Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Hawks 87, Celtics 86 · Nov 27, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Hawks at', 'Celtics'] : ['Hawks at Celtics']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Johnson had 24 and 12.', 'Atlanta won Group C.'] : ['Jalen Johnson had 24 points and 12 rebounds, and Atlanta won NBA Cup East Group C.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Hawks improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Five straight wins'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Hawks down 12 at the half,', 'won the third 31–18'] : ['Hawks down 12 at the half, then won the third quarter 31–18']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Hawks ${D.leadUs}, Celtics ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Hawks’ margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Johnson: 24 points,', '12 rebounds'] : ['Jalen Johnson: 24 points, 12 rebounds']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['6 of 6 at the line, and the', 'block on Tatum at 0:34.'] : ['6 of 6 at the line, and he blocked Jayson Tatum’s floater with 34 seconds left.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Two Hawks scored', '44 of the 87'] : ['Jalen Johnson and Nickeil Alexander-Walker scored 44 of the 87']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 25;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it on turnovers', 'and at the line'] : ['Won it on turnovers and at the line']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Hawks in gold, Celtics in gray.', '26 points off turnovers to 11.'] : ['Hawks in gold, Celtics in gray. Atlanta scored 26 points off turnovers to Boston’s 11.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'2nd in the East'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Knicks’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '12–7';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['Came back from 17 down;', 'Boston scored 35 after the half.'] : ['Atlanta came back from 17 down and held Boston to 35 points after halftime.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Hawks 87 · Celtics 86 · Nov 27'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Alexander-Walker’s drive'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Johnson'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 60;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - (P ? 170 : 200) * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+2', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 165 * k, shotX + 118 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 160, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 192, ly, D.themName"
+  ],
+  [
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;",
+   "const cs = Math.ceil(clk - 1e-6); qClock.textContent = clk < 60 ? clk.toFixed(1) : `${Math.floor(cs / 60)}:${String(cs % 60).padStart(2, '0')}`;"
+  ]
+ ],
+ "aria": "Animated recap of the Hawks' 87 to 86 win at Boston: Nickeil Alexander-Walker's driving layup with 54 seconds left that broke an 83 to 83 tie, quarter-by-quarter scoring, Jalen Johnson's 24 points and 12 rebounds, the top scorers, how the Hawks won, and the next game.",
+ "figure": {
+  "player": "Nickeil Alexander-Walker",
+  "home": false,
+  "label": "Nickeil Alexander-Walker, listed 6-5, 205 lb (Basketball-Reference; Wikipedia); 6-9½ wingspan at the 2019 draft combine (NBADraft.net)",
+  "tall": 0.9872,
+  "ape": 1.0584,
+  "mass": 0.9828
+ },
+ "loser_top": [
+  [
+   "Jayson Tatum",
+   20,
+   "9 rebounds · 4 steals"
+  ],
+  [
+   "Derrick White",
+   13,
+   "the three at the horn"
+  ],
+  [
+   "Neemias Queta",
+   11,
+   "22 rebounds, a career high"
+  ]
+ ],
+ "notes": [
+  "Box score from Hoops Nightly's game page for the Hawks' 87–86 win at Boston on Nov 27, 2026, the last NBA Cup group game for both teams; Digest Sports matches every line. All 87 Atlanta points and all 86 Boston points add up from the player lines, as do the shooting totals (30 of 81, 11 of 45 from three, 16 of 20 FT for Atlanta; 32 of 78, 11 of 37, 11 of 16 for Boston), assists (21–14), steals (12–10) and blocks (3–5). Rebounds (37–51) are the player totals, as on Digest Sports. The quarter scores (14–25–31–17 to 29–22–18–17) are on Hoops Nightly, Digest Sports and FOX Sports; Boston led 51–39 at the half (AP) and Atlanta 70–69 after three (Roundtable Sports). Points off turnovers (26–11) are from Hoops Nightly, Field Level Media and ClutchPoints; bench points (32–25), second-chance points (6–18) and the biggest leads (Atlanta 4, Boston 17) are from Hoops Nightly, and Roundtable Sports and ClutchPoints also have Boston's 17. Boston's turnover total differs between sources (26 or 23), so it isn't used. Records and ranks are from the site's standings after Friday's games.",
+  "Jalen Johnson had 24 points and 12 rebounds (Hoops Nightly; AP). Atlanta shot 28% in the first half and held Boston to 35 points in the second (AP). It was the Hawks' fifth straight win, and both teams finished group play 3–1, with Atlanta winning East Group C on the head-to-head tiebreaker (AP); Boston advanced as the East wild card (Field Level Media; ClutchPoints). Neemias Queta had a career-high 22 rebounds for Boston (AP; Field Level Media). The finish: Jalen Johnson blocked Jayson Tatum's floater with 34.5 seconds left, Dyson Daniels stole Tatum's pass with 3.8 left, Alexander-Walker made two free throws with 2.6 left for 87–83, and Derrick White's 27-foot three at the horn made it 87–86 (Hoops Nightly and Digest Sports play-by-play; AP). Next: Atlanta visits New York and Boston visits San Antonio, both on Sunday (Hoops Nightly; AP).",
+  "The play of the game is an original illustration of Nickeil Alexander-Walker's driving layup with 54.3 seconds left that broke an 83–83 tie, after Derrick White's floater tied it with 1:10 left: Digest Sports' play-by-play has \"makes driving layup\" at 0:54.3 with no assist, Hoops Nightly has the same, and the AP says he \"finished a drive\" with 54.3 seconds left to break the tie. So the board's Tied to Hawks +2 is 83–83 to 85–83. Where the drive started and who defended it are not described, so it is drawn as the template's plain drive to the rim. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Atlanta Hawks or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The player in the play of the game is drawn to Alexander-Walker's listed 6-foot-5 and 205 pounds (Basketball-Reference; Wikipedia), with arms scaled to the 6-foot-9½ wingspan measured at the 2019 draft combine (NBADraft.net), in the Hawks' road kit with No. 7 (Basketball-Reference). He has no approved look on file yet, so he is drawn in the kit with the default skin tone. It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "Hoops Nightly: Hawks at Celtics (Nov 27, 2026)",
+   "https://hoopsnightly.com/games/2026-11-27-atl-at-bos",
+   "Player box, team stats, biggest leads, late play-by-play, next games"
+  ],
+  [
+   "Digest Sports: Hawks vs Celtics NBA Box Score, Nov 27, 2026",
+   "https://digestsports.com/nba/games/hawks-vs-celtics-2026-11-27/",
+   "Second box, rebounds, play-by-play (0:54.3, 83–83 to 85–83)"
+  ],
+  [
+   "FOX Sports: Hawks vs. Celtics box score (Nov 27, 2026)",
+   "https://www.foxsports.com/nba/in-season-tournament-eastern-conference-group-play-atlanta-hawks-vs-boston-celtics-nov-27-2026-game-boxscore-106806",
+   "Quarter scores"
+  ],
+  [
+   "AP via Yahoo Sports: Johnson helps Hawks close out NBA Cup group stage with 87-86 win over Celtics",
+   "https://sports.yahoo.com/nba/articles/johnson-helps-hawks-close-nba-034448007.html",
+   "Halftime, second-half defense, tiebreaker, streak, Queta, the drive at 54.3, next games"
+  ],
+  [
+   "AP via CBS Sports: Hawks edge Celtics to win NBA Cup group, push win streak to five",
+   "https://www.cbssports.com/nba/news/hawks-edge-celtics-to-win-nba-cup-group-push-win-streak-to-five/",
+   "AP cross-check"
+  ],
+  [
+   "Roundtable Sports via Yahoo Sports: Hawks Clinch NBA Cup Group C With 87-86 Win Over Celtics",
+   "https://sports.yahoo.com/nba/articles/hawks-clinch-nba-cup-group-040210717.html",
+   "Score after three, Boston's biggest lead"
+  ],
+  [
+   "ClutchPoints via Yahoo Sports: Celtics still advance in NBA Cup despite one-point loss to Hawks",
+   "https://sports.yahoo.com/nba/articles/celtics-still-advance-nba-cup-044612130.html",
+   "Wild card, points off turnovers"
+  ],
+  [
+   "Field Level Media via Yardbarker: Hawks edge Celtics to claim East Group C in NBA Cup",
+   "https://www.yardbarker.com/nba/articles/hawks_edge_celtics_to_claim_east_group_c_in_nba_cup/s1_17045_44629250",
+   "Wild card, Queta, points off turnovers"
+  ],
+  [
+   "Basketball-Reference: Nickeil Alexander-Walker",
+   "https://www.basketball-reference.com/players/a/alexani01.html",
+   "Height, weight for the figure"
+  ],
+  [
+   "Basketball-Reference: 2026-27 Atlanta Hawks roster",
+   "https://www.basketball-reference.com/teams/ATL/2027.html",
+   "Number for the figure"
+  ],
+  [
+   "NBADraft.net: 2019 NBA Draft Combine measurements",
+   "https://www.nbadraft.net/2019-nba-draft-combine-measurements/",
+   "Wingspan for the figure"
+  ]
+ ]
+}
