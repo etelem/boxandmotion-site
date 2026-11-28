@@ -1,0 +1,242 @@
+{
+ "team": "MIA",
+ "D": "  const D = {\n    date: 'Fri, Nov 27, 2026',\n    us: 108, them: 105, record: '11–7', usName: 'Heat', themName: 'Knicks',\n    quarters: [[31, 21], [29, 23], [26, 35], [22, 26]],\n    leadUs: 23, leadThem: 1,\n    star: {name: 'Giannis Antetokounmpo', stats: [['Points', 22, 25], ['Rebounds', 23, 25], ['Assists', 3, 5]]},\n    scorers: [\n      {name: 'Bam Adebayo', pts: 25, note: '10 of 16 · 7 rebounds'},\n      {name: 'Giannis Antetokounmpo', pts: 22, note: '23 rebounds, a career high'},\n      {name: 'Davion Mitchell', pts: 12, note: '9 assists · 2 steals'},\n      {name: 'Pelle Larsson', pts: 11, note: '4 of 8 · the last basket'},\n      {name: 'Bobby Portis Jr.', pts: 9, note: 'off the bench · 3 of 7'},\n    ],\n    edges: [\n      {label: 'Points in the paint', us: 46, them: 42},\n      {label: 'Points off turnovers', us: 20, them: 13},\n      {label: 'Steals', us: 13, them: 7},\n      {label: 'Threes made', us: 11, them: 8},\n    ],\n    gaps: [\n      {label: 'Fast-break points', us: 10, them: 17},\n      {label: 'Free throws made', us: 19, them: 23},\n    ],\n    next: {opp: 'at Cavaliers', when: 'Sun, Nov 29', pUs: 0},\n  };\n",
+ "play": {
+  "comment": "Pelle Larsson's cutting dunk off Davion Mitchell's pass with 7 seconds left that made it 108–105, out of a Heat timeout. An original illustration from the play-by-play and written accounts; not traced from footage, not to scale.\n",
+  "head": "Larsson cuts for the dunk",
+  "subP": "Larsson cuts, 7 seconds left",
+  "subL": "Pelle Larsson cuts to the rim, 7 seconds left, up 106–105",
+  "m0": "Heat +1",
+  "m1": "Heat +3",
+  "num": "9",
+  "cap1": "Larsson’s dunk. Heat by 3.",
+  "cap2": "108–105 with 7 seconds left.",
+  "clock": [
+   12,
+   7
+  ]
+ },
+ "aria": "Animated recap of the Heat's 108 to 105 win at New York: Pelle Larsson's cutting dunk with 7 seconds left that made it 108 to 105, quarter-by-quarter scoring, Giannis Antetokounmpo's 22 points and career-high 23 rebounds, the top scorers, how the Heat won, and the next game.",
+ "figure": {
+  "player": "Pelle Larsson",
+  "home": false,
+  "tall": 0.9872,
+  "ape": 1.0,
+  "mass": 1.0065,
+  "label": "Pelle Larsson, listed 6-5, 215 lb, No. 9 (Wikipedia); no sourced wingspan"
+ },
+ "loser_top": [
+  [
+   "Jalen Brunson",
+   27,
+   "9 of 10 FT · 8 assists"
+  ],
+  [
+   "Karl-Anthony Towns",
+   19,
+   "10 rebounds · 7 of 12"
+  ],
+  [
+   "Mikal Bridges",
+   16,
+   "7 of 11"
+  ]
+ ],
+ "notes": [
+  "Box score from the Covers matchup page for the Heat's 108–105 win at Madison Square Garden on Nov 27, 2026, an NBA Cup group game: all 108 Miami points and all 105 New York points add up from the player lines, as do the field goals and threes. Team totals (39 of 90, 11 of 45 from three, 19 of 27 FT for Miami; 37 of 79, 8 of 32, 23 of 30 for New York), rebounds (43–42), points in the paint (46–42), fast-break points (10–17) and points off turnovers (20–13) are on Fox Sports' box score; assists (26–29) and steals (13–7) on CBS Sports' gametracker and the Covers player totals. The quarter scores (31–29–26–22 to 21–23–35–26) are on Covers and CBS; 60–44 at the half and 86–79 after three are also in the Sun-Sentinel and Field Level Media. The biggest leads (Miami 23, New York 1) are on Covers; the NY Daily News has the 23 at 54–31 with 3:47 left in the second quarter. Records and ranks are from the site's standings after Friday's games.",
+  "Giannis Antetokounmpo had 22 points and a career-high 23 rebounds (AP) and passed 22,000 career points (Sun-Sentinel). Bam Adebayo led Miami with 25. The Knicks came all the way back and took their first lead, 92–91, on Pacome Dadiet's reverse layup with 6:23 left (Field Level Media). With 9 seconds left Jalen Brunson was fouled on a three and made two of three free throws to cut it to 106–105 (CBS play-by-play; Sun-Sentinel; NY Daily News). The win ended the Knicks' six-game winning streak and their NBA Cup title defense (AP; NY Daily News). Miami finished 3–1 in group play but lost the group tiebreaker to Philadelphia (Yahoo Sports). Miami has won 11 of 14 since an 0–4 start (Field Level Media). OG Anunoby, Andre Drummond, Miles McBride and Jordan Clarkson were out for New York (NY Daily News; Field Level Media). Next: Miami plays at Cleveland on Sunday (Sun-Sentinel); New York hosts Atlanta on Sunday (NY Daily News).",
+  "The play of the game is an original illustration of Pelle Larsson's dunk with 7 seconds left that made it 108–105: CBS Sports' play-by-play has \"Pelle Larsson makes two point cutting dunk (Davion Mitchell assists)\" at 0:07 for 106–105 to 108–105, right after a Heat timeout at 0:09; Field Level Media: \"Larsson inbounded the ball to Mitchell and then darted around Josh Hart ... before taking a feed from Mitchell and dunking\"; the NY Daily News and NY Post give 7.2 seconds. So the board's Heat +1 to +3 is 106–105 to 108–105. Brunson then missed a pull-up three at the buzzer (CBS). The inbound and the pass are not drawn: the play is shown as the template's plain finish at the rim. The figures are stylized and not traced from footage, and the spacing is not to scale.",
+  "The music is an original beat made for this page. No existing recordings or melodies are used. This is an unofficial fan recap, not affiliated with the Miami Heat or the NBA, which is why it carries a plain basketball mark and the team's colors but not the team's logo.",
+  "The player in the play of the game is drawn to Larsson's listed 6-foot-5 and 215 pounds (Wikipedia); no wingspan was found in the sources read, so his arms are drawn at his height. He wears the Heat's road red with No. 9 (Wikipedia) and a proposed look from kit/looks.json. It is an original figure with a featureless face, not a portrait or a trace of footage."
+ ],
+ "sources": [
+  [
+   "Covers: Heat vs Knicks matchup (Nov 27, 2026)",
+   "https://www.covers.com/sport/basketball/nba/matchup/385767",
+   "Player box, line score, biggest leads, paint and fast-break points"
+  ],
+  [
+   "CBS Sports: Heat at Knicks gametracker (Nov 27, 2026)",
+   "https://www.cbssports.com/nba/gametracker/live/NBA_20261127_MIA@NY/",
+   "Fourth-quarter play-by-play (0:07 dunk, 106–105 to 108–105), assists, steals"
+  ],
+  [
+   "Fox Sports: Heat vs Knicks box score (Nov 27, 2026)",
+   "https://www.foxsports.com/nba/in-season-tournament-eastern-conference-group-play-miami-heat-vs-new-york-knicks-nov-27-2026-game-boxscore-106802?tab=boxscore",
+   "Team totals: shooting, rebounds, paint, fast-break, points off turnovers"
+  ],
+  [
+   "AP via Lethbridge Herald: Heat beat Knicks 108-105, ending New York's 6-game win streak",
+   "https://lethbridgeherald.com/sports/national-sports/2026/11/27/heat-beat-knicks-108-105-ending-new-yorks-6-game-win-streak/",
+   "Final, career-high 23 rebounds, the streak"
+  ],
+  [
+   "Field Level Media: Bam Adebayo helps lift Heat to win over Knicks",
+   "https://fieldlevelmedia.com/nba/bam-adebayo-helps-lift-heat-to-win-over-knicks/",
+   "The last play, the Knicks' first lead, 11 of 14, absences"
+  ],
+  [
+   "Sun-Sentinel via Yahoo: Heat hold on for harrowing 108-105 NBA Cup victory over Knicks",
+   "https://sports.yahoo.com/nba/articles/heat-hold-harrowing-108-105-031000036.html",
+   "Final minute, 22,000 points, next game"
+  ],
+  [
+   "NY Daily News via Yahoo: Knicks rage back from down 23, lose to Heat on Brunson missed free throw",
+   "https://sports.yahoo.com/nba/articles/knicks-rage-back-down-23-030300179.html",
+   "Clock and score late, biggest lead, absences, Knicks' next game"
+  ],
+  [
+   "NY Post via Yahoo: Knicks have no late-game magic as they're eliminated from NBA Cup title defense",
+   "https://sports.yahoo.com/nba/articles/knicks-no-game-magic-eliminated-030855840.html",
+   "Cup elimination, 7.2-second dunk"
+  ],
+  [
+   "Yahoo Sports: NBA Cup 2026 knockout-round bracket officially set",
+   "https://sports.yahoo.com/nba/breaking-news/article/nba-cup-2026-piston-sixers-hawks-and-grizzlies-clinch-spot-in-knockout-round-with-group-wins-celtics-take-east-wild-card-040251470.html",
+   "Miami out on the group tiebreaker"
+  ],
+  [
+   "Wikipedia: Pelle Larsson",
+   "https://en.wikipedia.org/wiki/Pelle_Larsson",
+   "Height, weight, number for the figure"
+  ]
+ ],
+ "subs": [
+  [
+   "<title>Lakers vs Blazers Recap</title>",
+   "<title>Heat at Knicks Recap</title>"
+  ],
+  [
+   "<h1 class=\"page-title\">Blazers 136, Lakers 129 · Oct 27, 2026</h1>",
+   "<h1 class=\"page-title\">Heat 108, Knicks 105 · Nov 27, 2026</h1>"
+  ],
+  [
+   "['Lakers vs.', 'Blazers'] : ['Lakers vs. Blazers']",
+   "['Heat at', 'Knicks'] : ['Heat at Knicks']"
+  ],
+  [
+   "['Luka scored 41. Portland', 'had four 20-point scorers.'] : ['Luka scored 41. Portland answered with four 20-point scorers.']",
+   "['Giannis: 22 and 23 boards.', 'Heat hang on at MSG.'] : ['Giannis Antetokounmpo had 22 points and a career-high 23 rebounds, and Miami held on at the Garden.']"
+  ],
+  [
+   "`Lakers fall to ${D.record}`",
+   "`Heat improve to ${D.record}`"
+  ],
+  [
+   "'Portland stays unbeaten at 3–0'",
+   "'Ended New York’s 6-game streak'"
+  ],
+  [
+   "['Up 5 at the half,', 'outscored 68–56 after'] : ['Up 5 at the half, outscored 68–56 after it']",
+   "['Heat up 16 at the half,', 'then held on late'] : ['Heat up 16 at the half, then held on after the Knicks took a 92–91 lead']"
+  ],
+  [
+   "Lakers ${D.leadUs}, Blazers ${D.leadThem}",
+   "Heat ${D.leadUs}, Knicks ${D.leadThem}"
+  ],
+  [
+   "Lakers’ margin in each quarter, then the game score after it.",
+   "Heat’s margin in each quarter, then the game score after it."
+  ],
+  [
+   "['Luka’s 41', 'wasn’t enough'] : ['Luka’s 41 wasn’t enough']",
+   "['Giannis: 22 points,', '23 rebounds'] : ['Giannis Antetokounmpo: 22 points, 23 rebounds']"
+  ],
+  [
+   "['16 in the first quarter,', '24 by halftime.'] : ['16 in the first quarter, 24 by halftime, 41 by the end.']",
+   "['A career high on the glass,', 'and 22,000 career points.'] : ['A career high on the glass, and he passed 22,000 career points.']"
+  ],
+  [
+   "['Luka and Reaves:', '67 of the 129'] : ['Luka and Reaves combined for 67 of 129']",
+   "['Adebayo and Giannis:', '47 of the 108'] : ['Bam Adebayo and Giannis Antetokounmpo combined for 47 of 108']"
+  ],
+  [
+   "th = 18, max = 45;",
+   "th = 18, max = 30;"
+  ],
+  [
+   "['Lost at the line', 'and off the bench'] : ['Lost at the line and off the bench']",
+   "['Won it in the paint', 'and with steals'] : ['Won it in the paint and with 13 steals to 7']"
+  ],
+  [
+   "['Lakers in gold, Blazers in gray. L.A.', 'committed 29 fouls to Portland’s 23.'] : ['Lakers in gold, Blazers in gray. L.A. committed 29 fouls to Portland’s 23.']",
+   "['Heat in orange, Knicks in gray. Miami', 'scored 20 off 16 New York turnovers.'] : ['Heat in orange, Knicks in gray. Miami scored 20 points off 16 New York turnovers.']"
+  ],
+  [
+   "'First loss of the season'",
+   "'6th in the East'"
+  ],
+  [
+   "'Clippers’ record so far'",
+   "'Cavaliers’ record so far'"
+  ],
+  [
+   "oddsNum.textContent = '1–2';",
+   "oddsNum.textContent = '9–10';"
+  ],
+  [
+   "(P ? ['Second night of a back-to-back.', 'L.A. won the first meeting 125–117.'] : ['Second night of a back-to-back. L.A. won the first meeting 125–117.'])",
+   "(P ? ['Up 23 in the second quarter;', 'the Knicks led once, 92–91.'] : ['Miami led by 23 in the second quarter; the Knicks led only once, 92–91.'])"
+  ],
+  [
+   "'Blazers 136 · Lakers 129 · Oct 27'",
+   "'Heat 108 · Knicks 105 · Nov 27'"
+  ],
+  [
+   "{id: 'play', name: 'Dame Time'",
+   "{id: 'play', name: 'Larsson cuts for the dunk'"
+  ],
+  [
+   "{id: 'edge', name: 'How it slipped'",
+   "{id: 'edge', name: 'How they won'"
+  ],
+  [
+   "{id: 'triple', name: 'Luka'",
+   "{id: 'triple', name: 'Giannis'"
+  ],
+  [
+   "const max = 60;",
+   "const max = 60;"
+  ],
+  [
+   "const shotX = hoopX - (P ? 500 : 600) * k, startX = shotX - 90 * k;",
+   "const shotX = hoopX - (P ? 170 : 200) * k, startX = shotX - 90 * k;"
+  ],
+  [
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),",
+   "S('line', {x1: hoopX - 330 * k, x2: hoopX - 330 * k, y1: floor - 6, y2: floor + 14}, court),"
+  ],
+  [
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',",
+   "const tag = T(g, hoopX - 330 * k, floor + 56 * k + 10, '3-pt line',"
+  ],
+  [
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);",
+   "defender.g.style.opacity = 0.75 * prog(lt, 1, 0.6);"
+  ],
+  [
+   "'+3', 'd w', 72, 'end');",
+   "'+2', 'd w', 72, 'end');"
+  ],
+  [
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);",
+   "lift = lt < 6.3 ? 54 * up : 54 * (1 - down * down);"
+  ],
+  [
+   "const defX = (lt) => lerp(shotX + 200 * k, shotX + 145 * k, prog(lt, T_JAB, 1.4));",
+   "const defX = (lt) => lerp(shotX + 165 * k, shotX + 118 * k, prog(lt, T_JAB, 1.4));"
+  ],
+  [
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);",
+   "T(board, bx + 24, by + 38, 'Q4', 'b m', 24);"
+  ],
+  [
+   "S('rect', {x: lx + 160, y: ly - 18,",
+   "S('rect', {x: lx + 160, y: ly - 18,"
+  ],
+  [
+   "T(legend, lx + 192, ly, D.themName",
+   "T(legend, lx + 192, ly, D.themName"
+  ]
+ ]
+}

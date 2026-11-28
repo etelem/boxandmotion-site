@@ -1,0 +1,103 @@
+{
+ "headline": "Spurs erase a 20-point deficit to edge the Lakers",
+ "dek": "San Antonio came back from 20 down; Stephon Castle scored 26 and Victor Wembanyama 25.",
+ "three": [
+  [
+   "Stephon Castle: 26 points and 9 assists",
+   "He made 10 of 15 shots, 4 of 7 from three."
+  ],
+  [
+   "Spurs down 16 at the half, then won the third quarter 30–14",
+   "Stephon Castle and Victor Wembanyama combined for 51 of 99."
+  ],
+  [
+   "Won it on the glass and with the passing",
+   "Rebounds 56–52; assists 23–19. Luka Dončić made 1 of 13 threes."
+  ]
+ ],
+ "battle": [
+  [
+   "Rebounds",
+   56,
+   52
+  ],
+  [
+   "Assists",
+   23,
+   19
+  ],
+  [
+   "Offensive rebounds",
+   13,
+   11
+  ],
+  [
+   "Steals",
+   11,
+   10
+  ]
+ ],
+ "battle_labels": [
+  "SAS",
+  "LAL"
+ ],
+ "top": [
+  [
+   "Stephon Castle",
+   "SAS",
+   "10 of 15, 9 assists",
+   26
+  ],
+  [
+   "Victor Wembanyama",
+   "SAS",
+   "16 rebounds, 4 steals",
+   25
+  ],
+  [
+   "Dylan Harper",
+   "SAS",
+   "off the bench, 6 of 11",
+   14
+  ],
+  [
+   "Julian Champagnie",
+   "SAS",
+   "3 of 4, 2 steals",
+   7
+  ]
+ ],
+ "linescore": {
+  "away": [
+   27,
+   27,
+   14,
+   28
+  ],
+  "home": [
+   14,
+   24,
+   30,
+   31
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-27-LAL-at-SAS.json",
+ "loser": {
+  "top": [
+   [
+    "Luka Dončić",
+    "LAL",
+    "8 assists · 1 of 13 from three",
+    31
+   ],
+   [
+    "Austin Reaves",
+    "LAL",
+    "5 of 9 from three · 8 rebounds",
+    21
+   ]
+  ],
+  "source": "box score"
+ }
+}

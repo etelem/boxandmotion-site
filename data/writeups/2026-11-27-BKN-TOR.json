@@ -1,0 +1,109 @@
+{
+ "headline": "Quickley's triple-double, Barnes' 34 in a Toronto rout",
+ "dek": "Immanuel Quickley had a triple-double, and Scottie Barnes scored 34.",
+ "three": [
+  [
+   "Immanuel Quickley: 24 points, 14 assists, 10 rebounds",
+   "His first triple-double in four seasons with Toronto, with one turnover."
+  ],
+  [
+   "Raptors up 8 at the half, then won the third quarter 39–24",
+   "Scottie Barnes and Immanuel Quickley combined for 58 of 124."
+  ],
+  [
+   "Won it at the line and on the glass",
+   "Free throws made 30–18; rebounds 44–30. Toronto made 30 of 33 free throws."
+  ]
+ ],
+ "battle": [
+  [
+   "Free throws made",
+   30,
+   18
+  ],
+  [
+   "Rebounds",
+   44,
+   30
+  ],
+  [
+   "Offensive rebounds",
+   19,
+   8
+  ],
+  [
+   "Assists",
+   33,
+   23
+  ]
+ ],
+ "battle_labels": [
+  "TOR",
+  "BKN"
+ ],
+ "top": [
+  [
+   "Scottie Barnes",
+   "TOR",
+   "11 of 20, 10 of 10 FT",
+   34
+  ],
+  [
+   "Immanuel Quickley",
+   "TOR",
+   "14 assists, 10 rebounds",
+   24
+  ],
+  [
+   "Collin Murray-Boyles",
+   "TOR",
+   "off the bench, 10 of 11 FT",
+   19
+  ],
+  [
+   "Jakob Poeltl",
+   "TOR",
+   "7 of 12, 9 rebounds",
+   17
+  ]
+ ],
+ "linescore": {
+  "away": [
+   27,
+   28,
+   24,
+   21
+  ],
+  "home": [
+   31,
+   32,
+   39,
+   22
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-27-BKN-at-TOR.json",
+ "loser": {
+  "top": [
+   [
+    "Julius Randle",
+    "BKN",
+    "8 of 18 · 5 assists",
+    21
+   ],
+   [
+    "Mikel Brown Jr.",
+    "BKN",
+    "4 of 6 from three",
+    21
+   ],
+   [
+    "Michael Porter Jr.",
+    "BKN",
+    "6 of 10",
+    17
+   ]
+  ],
+  "source": "box score"
+ }
+}

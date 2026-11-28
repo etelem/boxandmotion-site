@@ -1,0 +1,109 @@
+{
+ "headline": "Flagg's 34 finishes a 21-point comeback",
+ "dek": "Dallas came back from 21 down, won the fourth quarter 35–14, and Cooper Flagg scored 34.",
+ "three": [
+  [
+   "Cooper Flagg: 34 points, 8 assists, 5 steals",
+   "He added 7 rebounds and 4 blocks in just under 42 minutes."
+  ],
+  [
+   "Mavericks down 10 at the half, then won the fourth quarter 35–14",
+   "Cooper Flagg and Max Christie combined for 50 of 113."
+  ],
+  [
+   "Won it with 12 steals to 3, and off the bench",
+   "Steals 12–3; bench points 49–43. Phoenix turned it over 18 times."
+  ]
+ ],
+ "battle": [
+  [
+   "Steals",
+   12,
+   3
+  ],
+  [
+   "Bench points",
+   49,
+   43
+  ],
+  [
+   "Assists",
+   31,
+   26
+  ],
+  [
+   "Free throws made",
+   16,
+   12
+  ]
+ ],
+ "battle_labels": [
+  "DAL",
+  "PHX"
+ ],
+ "top": [
+  [
+   "Cooper Flagg",
+   "DAL",
+   "13 of 27, 4 blocks",
+   34
+  ],
+  [
+   "Max Christie",
+   "DAL",
+   "off the bench, 5 of 7",
+   16
+  ],
+  [
+   "Naji Marshall",
+   "DAL",
+   "off the bench, 5 assists",
+   14
+  ],
+  [
+   "Zaccharie Risacher",
+   "DAL",
+   "6 rebounds, 2 blocks",
+   10
+  ]
+ ],
+ "linescore": {
+  "away": [
+   28,
+   25,
+   25,
+   35
+  ],
+  "home": [
+   29,
+   34,
+   32,
+   14
+  ],
+  "ot": false
+ },
+ "source": "kit/configs/2026-11-27-DAL-at-PHX.json",
+ "loser": {
+  "top": [
+   [
+    "Devin Booker",
+    "PHX",
+    "11 of 21 · 5 of 10 from three",
+    31
+   ],
+   [
+    "Collin Gillespie",
+    "PHX",
+    "off the bench · 9 rebounds",
+    14
+   ],
+   [
+    "Miles Bridges",
+    "PHX",
+    "5 of 9",
+    13
+   ]
+  ],
+  "source": "box score"
+ }
+}
